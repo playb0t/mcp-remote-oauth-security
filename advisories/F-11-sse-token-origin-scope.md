@@ -1,32 +1,31 @@
-# F-11 — SSE authorization injection lacks explicit origin binding
+# F-11 — Explicit token-origin binding as transport hardening
 
 ## Summary
 
-The SSE transport wrapper in `mcp-remote` versions `0.1.16` through `0.1.38`
-adds `Authorization: Bearer <token>` to wrapped requests without independently
-checking that the destination origin matches the server for which the token was
-issued.
+The SSE transport wrapper is present in `mcp-remote` versions `0.0.18` through
+`0.1.38`. The wrapper adds `Authorization: Bearer <token>` to wrapped requests
+without performing its own origin comparison.
 
-## Security impact
+## Current positive controls
 
-If a redirect, SDK behavior change, or substituted transport causes the wrapper
-to receive a cross-origin URL, the bearer token may be sent to an unintended
-destination.
+In the reviewed dependency set, `@modelcontextprotocol/sdk@1.25.3` checks that
+the SSE endpoint origin matches the connection origin. The pinned
+`undici@7.12.0` redirect implementation also removes authorization and cookie
+credentials on a cross-origin redirect. These controls refute the original
+claim of a current token-forwarding exploit path.
 
-## Evidence and limitations
+## Defense-in-depth relevance
 
-- Confirmed by source review.
-- The reviewed SDK normally supplies server-relative transport URLs.
-- Exploitability therefore depends on an additional redirect or transport
-  condition. This is published as a conditional defense-in-depth finding, not as
-  evidence of observed token theft.
+An explicit origin check at the wrapper boundary would protect against a future
+SDK behavior change or a substituted transport that lacks the current positive
+controls. No token theft or current cross-origin bearer forwarding was
+demonstrated.
 
 ## Classification
 
-- CWE-200: Exposure of Sensitive Information
-- CWE-20: Improper Input Validation
-- Suggested CVSS 3.1: `5.3 (AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N)`
-- CVE: pending public-record binding
+- Evidence: defense-in-depth / corrected claim
+- CVSS: not applicable to the current evidence
+- CVE: no public record claimed
 
 ## Remediation
 

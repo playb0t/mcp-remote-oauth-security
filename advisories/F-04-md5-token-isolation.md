@@ -1,28 +1,30 @@
-# F-04 — MD5-based OAuth token-file isolation
+# F-04 — MD5-based storage namespace hardening
 
 ## Summary
 
-`mcp-remote` versions `0.1.16` through `0.1.38` use MD5-derived prefixes to
+`mcp-remote` versions `0.0.14` through `0.1.38` use MD5-derived prefixes to
 separate per-server OAuth state and token files.
 
-## Security impact
+## Security relevance
 
-MD5 does not provide collision resistance. Under a chosen-prefix collision
-scenario, two distinct server identifiers may resolve to the same storage
-namespace, creating a path to token-state confusion, poisoning, or disclosure.
+MD5 does not provide modern collision resistance and is an unsuitable primitive
+for a security-sensitive namespace. Replacing it would reduce the chance of
+future namespace ambiguity and make the construction easier to reason about.
 
-## Preconditions and limitations
+## Correction and limitations
 
-- The attacker must construct a colliding server identifier against a known
-  trusted identifier.
-- The practical complexity is materially higher than the network SSRF findings.
-- This finding is based on source review; no real token was accessed.
+The original `v1.0.0` text overstated the practical mechanism. A chosen-prefix
+collision lets an attacker construct suffixes for two attacker-chosen prefixes;
+it does not demonstrate a practical collision against an already fixed trusted
+identifier. That latter claim would require a second-preimage result. No token
+namespace takeover or real-token access was demonstrated.
 
 ## Classification
 
 - CWE-328: Use of Weak Hash
-- Suggested CVSS 3.1: `5.9 (AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N)`
-- CVE: pending public-record binding
+- Evidence: defense-in-depth / corrected claim
+- CVSS: not applicable to the current evidence
+- CVE: no public record claimed
 
 ## Remediation
 

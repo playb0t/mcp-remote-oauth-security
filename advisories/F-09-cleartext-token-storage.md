@@ -2,7 +2,7 @@
 
 ## Summary
 
-`mcp-remote` versions `0.1.16` through `0.1.38` persist OAuth access tokens,
+`mcp-remote` versions `0.0.11` through `0.1.38` persist OAuth access tokens,
 refresh tokens, client secrets, and PKCE verifier material as cleartext files
 under `~/.mcp-auth/`.
 
@@ -15,14 +15,15 @@ of the profile directory.
 ## Evidence and limitations
 
 - Confirmed by source review.
-- Later versions set restrictive permissions on individual files.
+- Restrictive `0o600` permissions were added in `0.1.37`.
 - The finding concerns encryption and secret-storage boundaries, not a bypass of
   operating-system user isolation.
 
 ## Classification
 
 - CWE-312: Cleartext Storage of Sensitive Information
-- Suggested CVSS 3.1: `5.5 (AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N)`
+- Evidence: source review
+- CVSS: not assigned in this corrective release
 - CVE: pending public-record binding
 
 ## Remediation

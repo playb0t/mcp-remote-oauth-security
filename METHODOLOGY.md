@@ -41,9 +41,24 @@ exploit code.
   request against a localhost-only canary on both verification dates.
 - **Source review:** the path is present in the reviewed source, but no
   real-world target was contacted to demonstrate impact.
-- **Conditional defense-in-depth:** the weakness becomes exploitable only if a
-  named transport or redirect condition routes a request away from the
-  authenticated origin.
+- **Defense-in-depth / corrected:** the stable ID documents a useful hardening
+  boundary, but current evidence does not support the original vulnerability
+  claim.
+
+## Release-history boundary
+
+Full tag history was reviewed to identify the first release containing each
+relevant path. The advisory index therefore uses per-record ranges rather than a
+single package-wide range. For F-04 and F-11, the listed versions identify the
+presence of the construction and do not assert current exploitability.
+
+## Severity policy
+
+`v1.0.1` does not publish researcher-assigned numeric CVSS scores. The
+localhost fixtures establish request behavior for F-01 and F-02, but they do not
+independently establish every confidentiality, integrity, or availability
+metric. Severity assignment and any decision to merge root causes remain with
+the CNA.
 
 ## Duplicate and history check
 
@@ -51,7 +66,7 @@ The reviewed upstream commit and package release have not changed since
 2026-02-05. Public issue searches performed on 2026-07-31 found OAuth
 interoperability reports involving `resource_metadata` and
 `authorization_servers`, but no public issue describing the SSRF, cloud-metadata,
-MD5 collision, or redirect-validation mechanisms disclosed here.
+MD5 namespace, or redirect-validation mechanisms discussed here.
 
 Private reports are not visible, so complete duplicate exclusion is impossible.
 
@@ -64,5 +79,6 @@ scenario. That candidate was downgraded to a defense-in-depth recommendation
 and is not part of this seven-advisory publication.
 
 Three additional low-severity hardening observations were also excluded from
-the CVE set. This disclosure counts only the seven findings listed in the main
-index.
+the original CVE set. The corrective publication retains seven stable advisory
+IDs: two localhost-PoC records, three source-review records, and two
+defense-in-depth/correction records.

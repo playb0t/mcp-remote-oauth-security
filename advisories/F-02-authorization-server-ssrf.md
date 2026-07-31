@@ -2,15 +2,16 @@
 
 ## Summary
 
-`mcp-remote` versions `0.1.16` through `0.1.38` derive an OAuth authorization
+`mcp-remote` versions `0.1.32` through `0.1.38` derive an OAuth authorization
 server origin from server-controlled Protected Resource Metadata and fetch
 `/.well-known/oauth-authorization-server` without validating that origin.
 
 ## Security impact
 
-Because the path is fixed but the origin is attacker-selected, the behavior
-supports blind host discovery and internal service probing. It can be chained
-with F-01 during the same OAuth discovery flow.
+Because the path is fixed but the origin is attacker-selected, the behavior can
+support blind host discovery and internal service probing. It can occur after
+F-01 during the same OAuth discovery flow. No response exfiltration was
+demonstrated.
 
 ## Preconditions
 
@@ -26,7 +27,8 @@ requests during both initial probing and transport setup.
 ## Classification
 
 - CWE-918: Server-Side Request Forgery
-- Suggested CVSS 3.1: `4.3 (AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N)`
+- Evidence: localhost PoC, reverified
+- CVSS: not assigned in this corrective release
 - CVE: pending public-record binding
 
 ## Remediation

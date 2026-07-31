@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use or reference this research, please cite it using this metadata."
-title: "mcp-remote OAuth Trust-Boundary Vulnerabilities"
+title: "mcp-remote OAuth Trust-Boundary Security Advisories"
 type: report
 authors:
   - name: "playb0t"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-07-31
 url: "https://github.com/playb0t/mcp-remote-oauth-security"
 repository-code: "https://github.com/playb0t/mcp-remote-oauth-security"

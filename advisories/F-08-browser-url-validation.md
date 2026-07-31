@@ -25,7 +25,8 @@ appropriate protections.
 
 - CWE-20: Improper Input Validation
 - Related class: CWE-918
-- Suggested CVSS 3.1: `5.4 (AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L)`
+- Evidence: source review
+- CVSS: not assigned in this corrective release
 - CVE: pending public-record binding
 
 ## Remediation

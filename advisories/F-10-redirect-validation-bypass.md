@@ -2,7 +2,7 @@
 
 ## Summary
 
-OAuth discovery requests in `mcp-remote` versions `0.1.16` through `0.1.38`
+OAuth discovery requests in `mcp-remote` versions `0.1.32` through `0.1.38`
 inherit the Fetch API's automatic redirect behavior. Redirect hops are followed
 without an application-level destination check on each hop.
 
@@ -27,7 +27,8 @@ external or cloud target was contacted.
 
 - CWE-918: Server-Side Request Forgery
 - CWE-601: URL Redirection to Untrusted Site
-- Suggested CVSS 3.1: `7.5 (AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N)`
+- Evidence: source review
+- CVSS: not assigned in this corrective release
 - CVE: pending public-record binding
 
 ## Remediation

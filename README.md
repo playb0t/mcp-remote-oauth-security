@@ -1,22 +1,23 @@
 <p align="center">
   <img src="assets/mcp-remote-trust-boundaries.png"
-       alt="Abstract OAuth trust path between a remote MCP server and a local client"
+       alt="Stylized OAuth trust-boundary cover for mcp-remote security research"
        width="100%">
 </p>
 
-<h1 align="center">mcp-remote OAuth Trust-Boundary Vulnerabilities</h1>
+<h1 align="center">mcp-remote OAuth Trust-Boundary Security Advisories</h1>
 
 <p align="center">
-  <strong>Coordinated security disclosure for <code>geelen/mcp-remote</code>
-  versions <code>0.1.16</code> through <code>0.1.38</code>.</strong>
+  <strong>Seven evidence-bounded advisory records for
+  <code>geelen/mcp-remote</code>. Relevant versions differ by finding and extend
+  through the reviewed release, <code>0.1.38</code>.</strong>
 </p>
 
 <p align="center">
   <a href="TIMELINE.md"><img alt="Disclosure date" src="https://img.shields.io/badge/disclosure-2026--07--31-8b5cf6"></a>
   <a href="METHODOLOGY.md"><img alt="Research scope" src="https://img.shields.io/badge/scope-public_source_%2B_local_fixtures-2563eb"></a>
-  <a href="https://github.com/geelen/mcp-remote"><img alt="Upstream status" src="https://img.shields.io/badge/upstream-0.1.38_unpatched-b91c1c"></a>
+  <a href="https://github.com/geelen/mcp-remote"><img alt="Reviewed upstream release" src="https://img.shields.io/badge/reviewed_upstream-0.1.38-b91c1c"></a>
   <img alt="Advisories" src="https://img.shields.io/badge/advisories-7-f59e0b">
-  <img alt="Exploit code" src="https://img.shields.io/badge/weaponized_PoC-not_published-111827">
+  <a href="CORRECTIONS.md"><img alt="Corrective release" src="https://img.shields.io/badge/release-v1.0.1-58a6ff"></a>
 </p>
 
 ```text
@@ -34,40 +35,73 @@ discovery.
 
 The earlier [CVE-2025-6514](https://nvd.nist.gov/vuln/detail/CVE-2025-6514)
 fixed command injection in the browser-launch path in version `0.1.16`.
-Our review found that adjacent OAuth discovery and credential-handling paths
-remained exposed in versions `0.1.16` through the current release, `0.1.38`.
+Our review identified adjacent OAuth discovery, local persistence, browser, and
+transport-boundary concerns in the current release, `0.1.38`. The relevant code
+paths entered the release history at different times; the exact range is stated
+in each advisory.
 
-The headline chain is:
+The trust-boundary map is:
 
 ```mermaid
-flowchart LR
-    A["Attacker-controlled MCP server"] --> B["401 + WWW-Authenticate"]
-    B --> C["Server-selected resource metadata URL"]
-    C --> D["Authorization-server metadata discovery"]
-    D --> E["Automatic redirects / browser launch / SSE transport"]
-    E --> F["Internal network requests or credential-boundary failure"]
+flowchart TB
+    S["Untrusted MCP server"]
+    M["mcp-remote"]
+
+    subgraph D["OAuth discovery"]
+        R["Resource metadata"]
+        A["Authorization metadata"]
+        H["Redirect validation · F-10"]
+        R -->|"F-02"| A
+        R -.-> H
+        A -.-> H
+    end
+
+    subgraph L["Local trust boundary"]
+        B["Browser"]
+        T["Credential store"]
+        C["MCP client"]
+    end
+
+    S -->|"F-01"| R
+    A --> M
+    M -->|"F-08"| B
+    M -.->|"F-04"| T
+    M -->|"F-09"| T
+    M -.->|"F-11"| C
 ```
 
-Two findings were reverified with localhost-only canaries. Four are bounded
-source-review findings. One is explicitly conditional defense-in-depth. These
-evidence classes are intentionally not collapsed.
+The short diagram labels are intentional: full finding names, version ranges,
+and evidence classes remain in the index below so the map stays readable in
+GitHub's Mermaid renderer and on mobile.
+
+Two findings were reverified with localhost-only canaries. Three remain bounded
+source-review findings. Two stable IDs now document defense-in-depth or
+corrected claims. These evidence classes are intentionally not collapsed.
+
+> [!NOTE]
+> `v1.0.1` corrects the blanket version range, removes unsupported provisional
+> severity scores, and narrows F-04 and F-11. See
+> [CORRECTIONS.md](CORRECTIONS.md).
 
 ## Advisory index
 
-The identifiers below are stable research IDs. CVE identifiers will be added to
-the corresponding files when the public CVE records are available.
+The identifiers below are stable research IDs. If a public CVE record is issued
+for an eligible mechanism, it will be added to the corresponding file. F-04 and
+F-11 do not claim current CVE eligibility.
 
-| Research ID | Finding | Suggested CVSS 3.1 | Evidence |
-|---|---|---:|---|
-| [F-01](advisories/F-01-resource-metadata-ssrf.md) | SSRF via unvalidated `resource_metadata` URL | 6.5 | Local PoC, reverified |
-| [F-02](advisories/F-02-authorization-server-ssrf.md) | Blind SSRF via `authorization_servers[]` | 4.3 | Local PoC, reverified |
-| [F-04](advisories/F-04-md5-token-isolation.md) | MD5-based OAuth token-file isolation | 5.9 | Source review |
-| [F-08](advisories/F-08-browser-url-validation.md) | Incomplete internal-address validation before browser launch | 5.4 | Source review |
-| [F-09](advisories/F-09-cleartext-token-storage.md) | OAuth credentials stored in cleartext | 5.5 | Source review |
-| [F-10](advisories/F-10-redirect-validation-bypass.md) | Redirect following bypasses one-time URL validation | 7.5 | Source review |
-| [F-11](advisories/F-11-sse-token-origin-scope.md) | SSE authorization injection lacks explicit origin binding | 5.3 | Conditional defense-in-depth finding |
+| Research ID | Advisory | Relevant versions | Evidence |
+|---|---|---|---|
+| [F-01](advisories/F-01-resource-metadata-ssrf.md) | SSRF via unvalidated `resource_metadata` URL | `0.1.32–0.1.38` | Local PoC, reverified |
+| [F-02](advisories/F-02-authorization-server-ssrf.md) | Blind SSRF via `authorization_servers[]` | `0.1.32–0.1.38` | Local PoC, reverified |
+| [F-04](advisories/F-04-md5-token-isolation.md) | MD5-based storage namespace hardening | `0.0.14–0.1.38` | Defense-in-depth / corrected |
+| [F-08](advisories/F-08-browser-url-validation.md) | Incomplete internal-address validation before browser launch | `0.1.16–0.1.38` | Source review |
+| [F-09](advisories/F-09-cleartext-token-storage.md) | OAuth credentials stored in cleartext | `0.0.11–0.1.38` | Source review |
+| [F-10](advisories/F-10-redirect-validation-bypass.md) | Redirect following bypasses one-time URL validation | `0.1.32–0.1.38` | Source review |
+| [F-11](advisories/F-11-sse-token-origin-scope.md) | Explicit token-origin binding as transport hardening | `0.0.18–0.1.38` | Defense-in-depth / corrected |
 
-These scores were proposed by the researcher. They are not CNA or NVD scores.
+No numeric CVSS score is asserted in this corrective release. A CNA may assign
+or merge records differently after reviewing the demonstrated mechanisms and
+their impact.
 
 > [!IMPORTANT]
 > The `F-*` identifiers are stable research IDs. No new CVE identifier is
@@ -81,7 +115,7 @@ These scores were proposed by the researcher. They are not CNA or NVD scores.
 - Initial verification: 2026-02-17
 - Reverification: 2026-05-03
 - Current-main check: 2026-07-31
-- Fixed release: none known as of disclosure
+- Later upstream release: none known as of disclosure
 - Known exploitation in the wild: none observed or claimed
 
 ## Responsible-disclosure summary
@@ -89,7 +123,7 @@ These scores were proposed by the researcher. They are not CNA or NVD scores.
 The initial private advisory was submitted on 2026-02-17. The findings were
 revalidated on 2026-05-03 after no maintainer response or new release. Public
 disclosure follows an extended coordination period and is intended to give
-users concrete upgrade, isolation, and monitoring guidance.
+users concrete mitigation, isolation, and monitoring guidance.
 
 See [TIMELINE.md](TIMELINE.md) for the complete chronology and
 [METHODOLOGY.md](METHODOLOGY.md) for scope, validation, and limitations.
@@ -102,6 +136,7 @@ See [TIMELINE.md](TIMELINE.md) for the complete chronology and
 ├── METHODOLOGY.md            Scope, evidence classes, and limitations
 ├── TIMELINE.md               Coordinated-disclosure chronology
 ├── SECURITY.md               Publication corrections and upstream routing
+├── CORRECTIONS.md            Changes made after the v1.0.0 audit
 ├── CITATION.cff              Stable research citation
 ├── assets/                   Repository visual identity
 └── advisories/               One bounded technical record per finding

@@ -30,3 +30,6 @@ Each advisory distinguishes:
 Corrections may narrow or withdraw a claim when new evidence refutes its
 mechanism. Research IDs remain stable so downstream references do not silently
 change meaning.
+
+The complete correction record for the current research release is available in
+[`CORRECTIONS.md`](CORRECTIONS.md).
