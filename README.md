@@ -1,11 +1,28 @@
-# mcp-remote OAuth Trust-Boundary Vulnerabilities
+<p align="center">
+  <img src="assets/mcp-remote-trust-boundaries.png"
+       alt="Abstract OAuth trust path between a remote MCP server and a local client"
+       width="100%">
+</p>
 
-> Coordinated security disclosure for `geelen/mcp-remote` versions `0.1.16`
-> through `0.1.38`.
+<h1 align="center">mcp-remote OAuth Trust-Boundary Vulnerabilities</h1>
 
-[![Disclosure date](https://img.shields.io/badge/disclosure-2026--07--31-8b5cf6)](TIMELINE.md)
-[![Research scope](https://img.shields.io/badge/scope-public%20source%20%2B%20local%20fixtures-2563eb)](METHODOLOGY.md)
-[![Upstream status](https://img.shields.io/badge/upstream-0.1.38%20unpatched-b91c1c)](https://github.com/geelen/mcp-remote)
+<p align="center">
+  <strong>Coordinated security disclosure for <code>geelen/mcp-remote</code>
+  versions <code>0.1.16</code> through <code>0.1.38</code>.</strong>
+</p>
+
+<p align="center">
+  <a href="TIMELINE.md"><img alt="Disclosure date" src="https://img.shields.io/badge/disclosure-2026--07--31-8b5cf6"></a>
+  <a href="METHODOLOGY.md"><img alt="Research scope" src="https://img.shields.io/badge/scope-public_source_%2B_local_fixtures-2563eb"></a>
+  <a href="https://github.com/geelen/mcp-remote"><img alt="Upstream status" src="https://img.shields.io/badge/upstream-0.1.38_unpatched-b91c1c"></a>
+  <img alt="Advisories" src="https://img.shields.io/badge/advisories-7-f59e0b">
+  <img alt="Exploit code" src="https://img.shields.io/badge/weaponized_PoC-not_published-111827">
+</p>
+
+```text
+REMOTE METADATA IS NOT PASSIVE DATA.
+Every URL, redirect, origin, and credential handoff is a trust decision.
+```
 
 ## Executive summary
 
@@ -31,6 +48,10 @@ flowchart LR
     E --> F["Internal network requests or credential-boundary failure"]
 ```
 
+Two findings were reverified with localhost-only canaries. Four are bounded
+source-review findings. One is explicitly conditional defense-in-depth. These
+evidence classes are intentionally not collapsed.
+
 ## Advisory index
 
 The identifiers below are stable research IDs. CVE identifiers will be added to
@@ -47,6 +68,10 @@ the corresponding files when the public CVE records are available.
 | [F-11](advisories/F-11-sse-token-origin-scope.md) | SSE authorization injection lacks explicit origin binding | 5.3 | Conditional defense-in-depth finding |
 
 These scores were proposed by the researcher. They are not CNA or NVD scores.
+
+> [!IMPORTANT]
+> The `F-*` identifiers are stable research IDs. No new CVE identifier is
+> claimed until a public CVE record binds it to the corresponding advisory.
 
 ## Current upstream state
 
@@ -68,6 +93,27 @@ users concrete upgrade, isolation, and monitoring guidance.
 
 See [TIMELINE.md](TIMELINE.md) for the complete chronology and
 [METHODOLOGY.md](METHODOLOGY.md) for scope, validation, and limitations.
+
+## Repository map
+
+```text
+.
+├── README.md                 Research overview and advisory index
+├── METHODOLOGY.md            Scope, evidence classes, and limitations
+├── TIMELINE.md               Coordinated-disclosure chronology
+├── SECURITY.md               Publication corrections and upstream routing
+├── CITATION.cff              Stable research citation
+├── assets/                   Repository visual identity
+└── advisories/               One bounded technical record per finding
+```
+
+## Use and citation
+
+Defenders, maintainers, and vulnerability databases may cite the stable
+advisory URLs in this repository. Please preserve the finding ID, affected
+version range, evidence class, and limitations when summarizing a record.
+
+Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff).
 
 ## Researcher
 

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use or reference this research, please cite it using this metadata."
+title: "mcp-remote OAuth Trust-Boundary Vulnerabilities"
+type: report
+authors:
+  - name: "playb0t"
+version: 1.0.0
+date-released: 2026-07-31
+url: "https://github.com/playb0t/mcp-remote-oauth-security"
+repository-code: "https://github.com/playb0t/mcp-remote-oauth-security"
+keywords:
+  - MCP
+  - OAuth
+  - security research
+  - SSRF
+  - responsible disclosure
