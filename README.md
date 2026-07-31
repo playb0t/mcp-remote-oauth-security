@@ -40,39 +40,20 @@ transport-boundary concerns in the current release, `0.1.38`. The relevant code
 paths entered the release history at different times; the exact range is stated
 in each advisory.
 
-The trust-boundary map is:
+The reviewed trust boundaries are summarized below:
 
-```mermaid
-flowchart TB
-    S["Untrusted MCP server"]
-    M["mcp-remote"]
+<p align="center">
+  <a href="assets/mcp-remote-trust-boundary-map.png">
+    <img
+      src="assets/mcp-remote-trust-boundary-map.png"
+      alt="OAuth trust-boundary map for seven mcp-remote security advisory records"
+      width="100%">
+  </a>
+</p>
 
-    subgraph D["OAuth discovery"]
-        R["Resource metadata"]
-        A["Authorization metadata"]
-        H["Redirect validation · F-10"]
-        R -->|"F-02"| A
-        R -.-> H
-        A -.-> H
-    end
-
-    subgraph L["Local trust boundary"]
-        B["Browser"]
-        T["Credential store"]
-        C["MCP client"]
-    end
-
-    S -->|"F-01"| R
-    A --> M
-    M -->|"F-08"| B
-    M -.->|"F-04"| T
-    M -->|"F-09"| T
-    M -.->|"F-11"| C
-```
-
-The short diagram labels are intentional: full finding names, version ranges,
-and evidence classes remain in the index below so the map stays readable in
-GitHub's Mermaid renderer and on mobile.
+The image is a control and data-dependency map, not a packet-level sequence
+diagram. Full finding names, version ranges, and evidence classes remain in the
+index below.
 
 Two findings were reverified with localhost-only canaries. Three remain bounded
 source-review findings. Two stable IDs now document defense-in-depth or
