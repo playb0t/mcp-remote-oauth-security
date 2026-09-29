@@ -36,7 +36,7 @@ discovery.
 The earlier [CVE-2025-6514](https://nvd.nist.gov/vuln/detail/CVE-2025-6514)
 fixed command injection in the browser-launch path in version `0.1.16`.
 Our review identified adjacent OAuth discovery, local persistence, browser, and
-transport-boundary concerns in the current release, `0.1.38`. The relevant code
+transport-boundary concerns in the release current at disclosure, `0.1.38`. The relevant code
 paths entered the release history at different times; the exact range is stated
 in each advisory.
 
@@ -61,7 +61,8 @@ corrected claims. These evidence classes are intentionally not collapsed.
 
 > [!NOTE]
 > `v1.0.1` corrects the blanket version range, removes unsupported provisional
-> severity scores, and narrows F-04 and F-11. See
+> severity scores, and narrows F-04 and F-11. `v1.0.2` (29 September 2026)
+> adds the published CVE records to the advisories and names the author. See
 > [CORRECTIONS.md](CORRECTIONS.md).
 
 ## Advisory index
@@ -82,16 +83,15 @@ one has been assigned.
 | [F-10](advisories/F-10-redirect-validation-bypass.md) | Redirect following bypasses one-time URL validation | `0.1.32–0.1.38` | Source review |
 | [F-11](advisories/F-11-sse-token-origin-scope.md) | Explicit token-origin binding as transport hardening | `0.0.18–0.1.38` | Defense-in-depth / corrected |
 
-No numeric CVSS score is asserted in this corrective release. A CNA may assign
-or merge records differently after reviewing the demonstrated mechanisms and
-their impact.
+The researcher asserts no numeric score of its own. The CVSS 3.1 values on the
+CVE lines are CISA-ADP assessments and are reported as published.
 
 > [!IMPORTANT]
 > The `F-*` identifiers are stable research IDs. A CVE identifier appears in an
 > advisory only once a public CVE record binds it to that advisory; F-09 and F-10
 > carry none.
 
-## Current upstream state
+## Upstream state at disclosure (2026-07-31)
 
 - Reviewed release: `0.1.38`
 - Reviewed and revalidated commit:
@@ -101,6 +101,10 @@ their impact.
 - Current-main check: 2026-07-31
 - Later upstream release: none known as of disclosure
 - Known exploitation in the wild: none observed or claimed
+- Since disclosure: releases `0.1.39` (2026-08-21) through `0.14.3` (2026-09-21),
+  published from `punkpeye/mcp-remote`, where the repository moved after
+  disclosure; the CVE records name it `geelen mcp-remote`, and the `geelen` URLs
+  redirect. Whether the later releases close each finding is not established.
 
 ## Responsible-disclosure summary
 

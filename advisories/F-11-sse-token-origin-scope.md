@@ -12,7 +12,7 @@ In the reviewed dependency set, `@modelcontextprotocol/sdk@1.25.3` checks that
 the SSE endpoint origin matches the connection origin. The pinned
 `undici@7.12.0` redirect implementation also removes authorization and cookie
 credentials on a cross-origin redirect. These controls refute the original
-claim of a current token-forwarding exploit path.
+`v1.0.0` claim of a current token-forwarding exploit path.
 
 ## Defense-in-depth relevance
 

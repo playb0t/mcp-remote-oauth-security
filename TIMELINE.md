@@ -10,6 +10,8 @@
 | 2026-05-18 | Original 90-day disclosure window elapsed. |
 | 2026-07-31 | Upstream release and commit checked again; public disclosure package `v1.0.0` published. |
 | 2026-07-31 | Post-publication audit corrected affected ranges, provisional severity data, F-04/F-11 classifications, and the README diagram for `v1.0.1`. |
+| 2026-09-24 | MITRE published CVE-2026-51994, CVE-2026-51995, CVE-2026-51996, CVE-2026-51997 and CVE-2026-52001, each referencing the `v1.0.1` advisory paths. |
+| 2026-09-29 | Metadata release `v1.0.2`: author named, published records added to the advisories. |
 
 ## Coordination status
 

@@ -55,11 +55,15 @@ exploit is claimed.
 - Replaced the long horizontal “headline chain” with a compact vertical
   trust-boundary map.
 - Replaced the original abstract eight-marker hero with a structured three-zone
-  cover. The cover is visual orientation; the Mermaid map and advisory index
+  cover. The cover is visual orientation; the trust-boundary map and advisory index
   remain the authoritative technical explanation.
 - Replaced “upgrade guidance” with “mitigation guidance” because no later
   upstream release was known at disclosure time.
 
 ## v1.0.2
 
-Metadata release of 29 September 2026. The author is named in CITATION.cff and README.md as Alex Gercog (playb0t), and the five CVE records MITRE published on 24 September 2026 are added to the Classification blocks of F-01, F-02, F-04, F-08 and F-11, with CISA's scores where assigned; the F-04 CVSS line now points to CISA's assessment. No evidence class, version range or correction text changed. The v1.0.1 paths referenced by the CVE records are unchanged.
+Metadata release of 29 September 2026. The author is named in CITATION.cff and README.md as Alex Gercog (playb0t), and the five CVE records MITRE published on 24 September 2026 are added to the Classification blocks of F-01, F-02, F-04, F-08 and F-11, with CISA's scores where assigned; the F-04 CVSS line now points to CISA's assessment. No evidence class, version range or correction text changed. The v1.0.1 paths referenced by the CVE records are unchanged. Between the two tags the README's Mermaid map was also replaced by `assets/mcp-remote-trust-boundary-map.png` with two explanatory sentences (commit 96586453, 31 July 2026), and the advisory-index paragraph and the IMPORTANT note were reworded to state which advisories carry records.
+
+## After v1.0.2 (main, 29 September 2026)
+
+Wording fixes on the main branch after the v1.0.2 tag, none touching evidence, ranges or the tagged paths: the README calls `0.1.38` the release current at disclosure and dates the upstream-state section, adding the later releases `0.1.39` through `0.14.3` and the repository move; the sentence under the advisory index now states that the CVSS values on the CVE lines are CISA-ADP assessments reported as published; CITATION.cff drops the invalid top-level `type: report` (CFF 1.2.0 allows only software or dataset there) and carries the report citation in `preferred-citation`; TIMELINE.md gains the 24 and 29 September rows; METHODOLOGY.md dates its unchanged-upstream statement; the CVSS lines of F-01, F-02 and F-08 use the F-04 wording; F-11 names the `v1.0.0` text as the claim its controls refute.

@@ -62,8 +62,8 @@ the CNA.
 
 ## Duplicate and history check
 
-The reviewed upstream commit and package release have not changed since
-2026-02-05. Public issue searches performed on 2026-07-31 found OAuth
+The reviewed upstream commit and package release had not changed between
+2026-02-05 and 2026-07-31. Public issue searches performed on 2026-07-31 found OAuth
 interoperability reports involving `resource_metadata` and
 `authorization_servers`, but no public issue describing the SSRF, cloud-metadata,
 MD5 namespace, or redirect-validation mechanisms discussed here.
