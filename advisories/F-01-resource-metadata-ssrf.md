@@ -31,7 +31,7 @@ issuance; it did not demonstrate response exfiltration.
 - CWE-918: Server-Side Request Forgery
 - Evidence: localhost PoC, reverified
 - CVSS: not assigned in this corrective release
-- CVE: pending public-record binding
+- CVE: CVE-2026-51994 (published 2026-09-24; CISA-ADP CVSS 3.1 9.1 Critical)
 
 ## Remediation
 

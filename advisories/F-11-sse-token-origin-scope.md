@@ -25,7 +25,7 @@ demonstrated.
 
 - Evidence: defense-in-depth / corrected claim
 - CVSS: not applicable to the current evidence
-- CVE: no public record claimed
+- CVE: CVE-2026-52001 (published 2026-09-24)
 
 ## Remediation
 

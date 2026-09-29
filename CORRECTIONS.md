@@ -59,3 +59,7 @@ exploit is claimed.
   remain the authoritative technical explanation.
 - Replaced “upgrade guidance” with “mitigation guidance” because no later
   upstream release was known at disclosure time.
+
+## v1.0.2
+
+Metadata release of 29 September 2026. The author is named in CITATION.cff and README.md as Alex Gercog (playb0t), and the five CVE records MITRE published on 24 September 2026 are added to the Classification blocks of F-01, F-02, F-04, F-08 and F-11, with CISA's scores where assigned; the F-04 CVSS line now points to CISA's assessment. No evidence class, version range or correction text changed. The v1.0.1 paths referenced by the CVE records are unchanged.

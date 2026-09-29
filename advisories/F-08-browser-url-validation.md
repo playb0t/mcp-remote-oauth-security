@@ -27,7 +27,7 @@ appropriate protections.
 - Related class: CWE-918
 - Evidence: source review
 - CVSS: not assigned in this corrective release
-- CVE: pending public-record binding
+- CVE: CVE-2026-51997 (published 2026-09-24; CISA-ADP CVSS 3.1 8.8 High)
 
 ## Remediation
 

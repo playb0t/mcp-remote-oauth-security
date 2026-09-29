@@ -67,8 +67,10 @@ corrected claims. These evidence classes are intentionally not collapsed.
 ## Advisory index
 
 The identifiers below are stable research IDs. If a public CVE record is issued
-for an eligible mechanism, it will be added to the corresponding file. F-04 and
-F-11 do not claim current CVE eligibility.
+for an eligible mechanism, it is added to the corresponding file. On 24 September
+2026 MITRE published CVE records for F-01, F-02, F-04, F-08 and F-11; each of those
+advisories names its record in its Classification block, with CISA's score where
+one has been assigned.
 
 | Research ID | Advisory | Relevant versions | Evidence |
 |---|---|---|---|
@@ -85,8 +87,9 @@ or merge records differently after reviewing the demonstrated mechanisms and
 their impact.
 
 > [!IMPORTANT]
-> The `F-*` identifiers are stable research IDs. No new CVE identifier is
-> claimed until a public CVE record binds it to the corresponding advisory.
+> The `F-*` identifiers are stable research IDs. A CVE identifier appears in an
+> advisory only once a public CVE record binds it to that advisory; F-09 and F-10
+> carry none.
 
 ## Current upstream state
 
@@ -133,4 +136,4 @@ Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff
 
 ## Researcher
 
-Discovered and reported by [playb0t](https://github.com/playb0t).
+Discovered and reported by Alex Gercog ([playb0t](https://github.com/playb0t)).

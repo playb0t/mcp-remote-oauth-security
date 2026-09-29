@@ -23,8 +23,8 @@ namespace takeover or real-token access was demonstrated.
 
 - CWE-328: Use of Weak Hash
 - Evidence: defense-in-depth / corrected claim
-- CVSS: not applicable to the current evidence
-- CVE: no public record claimed
+- CVSS: not assigned by the researcher; CISA's assessment is on the CVE line
+- CVE: CVE-2026-51996 (published 2026-09-24; CISA-ADP CVSS 3.1 9.8 Critical)
 
 ## Remediation
 
