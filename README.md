@@ -17,7 +17,7 @@
   <a href="METHODOLOGY.md"><img alt="Research scope" src="https://img.shields.io/badge/scope-public_source_%2B_local_fixtures-2563eb"></a>
   <a href="https://github.com/geelen/mcp-remote"><img alt="Reviewed upstream release" src="https://img.shields.io/badge/reviewed_upstream-0.1.38-b91c1c"></a>
   <img alt="Advisories" src="https://img.shields.io/badge/advisories-7-f59e0b">
-  <a href="CORRECTIONS.md"><img alt="Corrective release" src="https://img.shields.io/badge/release-v1.0.1-58a6ff"></a>
+  <a href="CORRECTIONS.md"><img alt="Latest release" src="https://img.shields.io/badge/release-v1.0.2-58a6ff"></a>
 </p>
 
 ```text
