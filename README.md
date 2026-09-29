@@ -91,6 +91,34 @@ CVE lines are CISA-ADP assessments and are reported as published.
 > advisory only once a public CVE record binds it to that advisory; F-09 and F-10
 > carry none.
 
+## Registry status (2026-09-29)
+
+- **CVE records.** Five records published by MITRE as the CNA on 2026-09-24:
+  CVE-2026-51994 (F-01), CVE-2026-51995 (F-02), CVE-2026-51996 (F-04),
+  CVE-2026-51997 (F-08) and CVE-2026-52001 (F-11). Two further identifiers
+  reserved for this request remain unpublished.
+- **CISA-ADP CVSS 3.1.** CVE-2026-51996 9.8 Critical (added 2026-09-29),
+  CVE-2026-51994 9.1 Critical, CVE-2026-51997 8.8 High (user interaction
+  required), CVE-2026-51995 7.5 High; CVE-2026-52001 carries no score. The
+  values are reported as published.
+- **NVD.** All five records are in status Deferred; NVD displays CISA's metrics
+  as secondary and holds none of its own.
+- **GitHub Advisory Database.** The five records appear as unreviewed entries
+  without a package mapping, so Dependabot does not alert on them; the only
+  reviewed advisory mapped to the npm package `mcp-remote` is CVE-2025-6514
+  (2025-07-09).
+- **OSV.** OSV derives version ranges from the description text and currently
+  lists `0.1.38` as fixed; the commit it names as the fix is the `0.1.38`
+  release itself, and the records include `0.1.38`. The records' structured
+  `affected` field reads `n/a`; a request to populate it with the ranges from
+  the descriptions is with the CNA.
+- **CISA KEV.** None of the five records is listed in the Known Exploited
+  Vulnerabilities catalog as of 2026-09-29; CISA's SSVC on the four scored
+  records reads exploitation: none.
+
+Whether later upstream releases close each finding is not established; see the
+next section.
+
 ## Upstream state at disclosure (2026-07-31)
 
 - Reviewed release: `0.1.38`
