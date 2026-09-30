@@ -166,6 +166,8 @@ version range, evidence class, and limitations when summarizing a record.
 
 Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff).
 
+The article of 30 September 2026 that walks through the five CVE records and the checks a client has to enforce is mirrored in [docs/article-2026-09-30.md](docs/article-2026-09-30.md).
+
 ## Researcher
 
 Discovered and reported by Alex Gercog ([playb0t](https://github.com/playb0t)).
