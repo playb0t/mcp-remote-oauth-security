@@ -38,7 +38,7 @@ exploit code.
 ## Evidence classification
 
 - **Local PoC, reverified:** the source-to-sink behavior produced the expected
-  request against a localhost-only canary on both verification dates.
+  request against a localhost-only canary on the dates stated in the advisory.
 - **Source review:** the path is present in the reviewed source, but no
   real-world target was contacted to demonstrate impact.
 - **Defense-in-depth / corrected:** the stable ID documents a useful hardening

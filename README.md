@@ -111,7 +111,7 @@ CVE lines are CISA-ADP assessments and are reported as published.
   lists `0.1.38` as fixed; the commit it names as the fix is the `0.1.38`
   release itself, and the records include `0.1.38`. The records' structured
   `affected` field reads `n/a`; a request to populate it with the ranges from
-  the descriptions is with the CNA.
+  the descriptions was sent to the CNA on 30 September 2026.
 - **CISA KEV.** None of the five records is listed in the Known Exploited
   Vulnerabilities catalog as of 2026-09-29; CISA's SSVC on the four scored
   records reads exploitation: none.
