@@ -71,3 +71,5 @@ Wording fixes on the main branch after the v1.0.2 tag, none touching evidence, r
 Later on 29 September 2026 the README gained a dated «Registry status» section: the CISA-ADP scores with their dates, the NVD status, the state of the five records in the GitHub Advisory Database and in OSV, the empty structured `affected` field, and the KEV check. It is a status snapshot and will be re-dated when it changes.
 
 30 September 2026: METHODOLOGY.md ties the «Local PoC, reverified» class to the dates each advisory states (F-02 received its canary on 3 May, not on both dates); the README «Registry status» section dates the affected-field request to the CNA (sent 30 September) instead of stating it as pending.
+
+7 October 2026: CISA-ADP scored CVE-2026-52001 on 6 October (CVSS 3.1 7.5 High, CWE-200). The README «Registry status» section is re-dated and records the score; its «four scored records» wording is withdrawn, since all five records now carry a CISA score. The F-11 Classification block takes the CVE-line wording the other advisories use. No evidence class, version range or correction text changed.

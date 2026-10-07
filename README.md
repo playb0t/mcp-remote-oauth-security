@@ -91,7 +91,7 @@ CVE lines are CISA-ADP assessments and are reported as published.
 > advisory only once a public CVE record binds it to that advisory; F-09 and F-10
 > carry none.
 
-## Registry status (2026-09-29)
+## Registry status (2026-10-07)
 
 - **CVE records.** Five records published by MITRE as the CNA on 2026-09-24:
   CVE-2026-51994 (F-01), CVE-2026-51995 (F-02), CVE-2026-51996 (F-04),
@@ -99,8 +99,9 @@ CVE lines are CISA-ADP assessments and are reported as published.
   reserved for this request remain unpublished.
 - **CISA-ADP CVSS 3.1.** CVE-2026-51996 9.8 Critical (added 2026-09-29),
   CVE-2026-51994 9.1 Critical, CVE-2026-51997 8.8 High (user interaction
-  required), CVE-2026-51995 7.5 High; CVE-2026-52001 carries no score. The
-  values are reported as published.
+  required), CVE-2026-51995 7.5 High, CVE-2026-52001 7.5 High (added
+  2026-10-06). All five records now carry a CISA score. The values are
+  reported as published.
 - **NVD.** All five records are in status Deferred; NVD displays CISA's metrics
   as secondary and holds none of its own.
 - **GitHub Advisory Database.** The five records appear as unreviewed entries
@@ -113,8 +114,8 @@ CVE lines are CISA-ADP assessments and are reported as published.
   `affected` field reads `n/a`; a request to populate it with the ranges from
   the descriptions was sent to the CNA on 30 September 2026.
 - **CISA KEV.** None of the five records is listed in the Known Exploited
-  Vulnerabilities catalog as of 2026-09-29; CISA's SSVC on the four scored
-  records reads exploitation: none.
+  Vulnerabilities catalog as of 2026-10-04 (catalog of 1,734 entries); CISA's
+  SSVC on all five records reads exploitation: none.
 
 Whether later upstream releases close each finding is not established; see the
 next section.

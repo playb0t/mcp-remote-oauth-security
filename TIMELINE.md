@@ -16,6 +16,7 @@
 | 2026-09-29 | Metadata release `v1.0.2`: author named, published records added to the advisories. |
 | 2026-09-30 | Article published: "The Server Named the URL, the Client Went: Five mcp-remote CVE Records" (LinkedIn, Alex Gercog); mirrored in `docs/article-2026-09-30.md`. |
 | 2026-09-30 | Update request sent to the CNA: researcher credit, the status of the two reserved identifiers, and structured affected data for the five records. |
+| 2026-10-06 | CISA-ADP scored CVE-2026-52001 (CVSS 3.1 7.5 High, CWE-200); all five records now carry a CISA score. |
 
 ## Coordination status
 
