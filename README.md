@@ -172,6 +172,8 @@ Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff
 
 The article of 30 September 2026 that walks through the five CVE records and the checks a client has to enforce is mirrored in [docs/article-2026-09-30.md](docs/article-2026-09-30.md).
 
+Its second edition of 8 October 2026, written after all five records received CISA scores, is mirrored in [docs/article-2026-10-08.md](docs/article-2026-10-08.md).
+
 ## Researcher
 
 Discovered and reported by Alex Gercog ([playb0t](https://github.com/playb0t)).
