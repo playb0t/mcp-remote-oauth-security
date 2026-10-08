@@ -18,12 +18,15 @@
   <a href="https://github.com/geelen/mcp-remote"><img alt="Reviewed upstream release" src="https://img.shields.io/badge/reviewed_upstream-0.1.38-b91c1c"></a>
   <img alt="Advisories" src="https://img.shields.io/badge/advisories-7-f59e0b">
   <a href="CORRECTIONS.md"><img alt="Latest release" src="https://img.shields.io/badge/release-v1.0.2-58a6ff"></a>
+  <a href="https://playb0t.com"><img alt="Impact record" src="https://img.shields.io/badge/impact_record-playb0t.com-0f766e"></a>
 </p>
 
 ```text
 REMOTE METADATA IS NOT PASSIVE DATA.
 Every URL, redirect, origin, and credential handoff is a trust decision.
 ```
+
+The five CVE records published on 24 September 2026, who has picked them up, and what has and has not been fixed are tracked with dated sources at [playb0t.com](https://playb0t.com).
 
 ## Executive summary
 
