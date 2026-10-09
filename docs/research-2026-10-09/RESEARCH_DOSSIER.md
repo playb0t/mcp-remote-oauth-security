@@ -20,6 +20,17 @@ events, 15 local canary events and nine RPC replies**. This establishes discover
 message handling in that configuration. A real OAuth login and desktop UI session
 were not tested.
 
+The local tests of the published mcp-remote 0.14.3 CLI reproduce the server-selected
+resource-metadata request behavior documented in
+[F-01](https://github.com/playb0t/mcp-remote-oauth-security/blob/main/advisories/F-01-resource-metadata-ssrf.md)
+([CVE-2026-51994](https://www.cve.org/CVERecord?id=CVE-2026-51994)), including the
+subsequent authorization-server metadata request documented in
+[F-02](https://github.com/playb0t/mcp-remote-oauth-security/blob/main/advisories/F-02-authorization-server-ssrf.md)
+([CVE-2026-51995](https://www.cve.org/CVERecord?id=CVE-2026-51995)). These results
+establish the recorded request behavior under the stated fixture conditions; they do
+not by themselves establish disclosure of sensitive information or change the
+published CVE ranges.
+
 **History of 58 stable releases.** The selected first-party discovery chain is present
 from **0.1.32 through 0.14.3** in an integrity-checked inventory of **74 stable archives**.
 Selected helpers from each of those 58 releases were executed separately against a

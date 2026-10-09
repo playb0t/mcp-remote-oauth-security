@@ -50,9 +50,19 @@ The [research dossier](docs/research-2026-10-09/RESEARCH_DOSSIER.md) adds three 
   records from Git observations. Renaming a package does not necessarily change
   these fragments, so a search for the original name alone gives incomplete coverage.
 
+The local tests of the published mcp-remote 0.14.3 CLI reproduce the server-selected
+resource-metadata request behavior documented in
+[F-01](advisories/F-01-resource-metadata-ssrf.md)
+([CVE-2026-51994](https://www.cve.org/CVERecord?id=CVE-2026-51994)), including the
+subsequent authorization-server metadata request documented in
+[F-02](advisories/F-02-authorization-server-ssrf.md)
+([CVE-2026-51995](https://www.cve.org/CVERecord?id=CVE-2026-51995)). These results
+establish the recorded request behavior under the stated fixture conditions; they do
+not by themselves establish disclosure of sensitive information or change the
+published CVE ranges.
+
 The selected metadata path is classified as CWE-918 / Missing Defense. These
-results do not automatically revise the original CVE ranges, identify a fixed release
-or establish downstream deployment.
+results identify no fixed release and do not establish downstream deployment.
 
 [Evidence and accounting](docs/research-2026-10-09/EVIDENCE.md) ·
 [Recorded procedures and screening sources](docs/research-2026-10-09/REPRODUCIBILITY.md) ·

@@ -32,4 +32,9 @@ screening cohorts keep their own counting units and method limits.
 - [Package validation](VALIDATION.json) and [checksums](MANIFEST.json)
 
 The observed stable interval belongs to the selected first-party path. It does not
-automatically change the affected range of any original CVE record.
+automatically change the affected range of any original CVE record. The 0.14.3 CLI
+tests reproduce the request behavior documented in
+[F-01](https://github.com/playb0t/mcp-remote-oauth-security/blob/main/advisories/F-01-resource-metadata-ssrf.md)
+(CVE-2026-51994), including the subsequent authorization-server metadata request of
+[F-02](https://github.com/playb0t/mcp-remote-oauth-security/blob/main/advisories/F-02-authorization-server-ssrf.md)
+(CVE-2026-51995), under the stated fixture conditions.

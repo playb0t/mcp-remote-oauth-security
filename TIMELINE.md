@@ -17,6 +17,7 @@
 | 2026-09-30 | Article published: "The Server Named the URL, the Client Went: Five mcp-remote CVE Records" (LinkedIn, Alex Gercog); mirrored in `docs/article-2026-09-30.md`. |
 | 2026-09-30 | Update request sent to the CNA: researcher credit, the status of the two reserved identifiers, and structured affected data for the five records. |
 | 2026-10-06 | CISA-ADP scored CVE-2026-52001 (CVSS 3.1 7.5 High, CWE-200); all five records now carry a CISA score. |
+| 2026-10-09 | Research continuation published in `docs/research-2026-10-09/`: the published `0.14.3` CLI tested in full in three local stdio scenarios (the F-01 / F-02 request path, CVE-2026-51994 / CVE-2026-51995), selected discovery helpers executed across 58 stable releases (`0.1.32` through `0.14.3`), and a code distribution map of matching fragments under other package names; see the [research dossier](docs/research-2026-10-09/RESEARCH_DOSSIER.md). No fixed release identified; published CVE ranges unchanged. |
 
 ## Coordination status
 
