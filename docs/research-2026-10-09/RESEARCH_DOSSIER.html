@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research Dossier</title><style>body{font:16px/1.65 system-ui,sans-serif;margin:0;background:#f4f6f8;color:#172a36}main{max-width:1100px;margin:24px auto;padding:36px;background:white}h1{line-height:1.2}h2{margin-top:2em}a{color:#075f88;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;padding:16px}code{overflow-wrap:anywhere;font-size:.88em}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid #d6dfe5;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}.meta{font-size:12px;color:#465d6d}@media(max-width:650px){main{margin:0;padding:15px}table{display:block;overflow-x:auto}}</style></head><body><main><p class="meta">Research 2026-10-09, revision r3. <a href="RESEARCH_DOSSIER.md">Markdown source</a>. Source SHA-256: beaeb1b6f7bc49b2b08debb8c4eb25e7fca851ff7f5cff8648be531e42861e0f</p><h1>Protected Resource Metadata in mcp-remote</h1>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research Dossier</title><style>body{font:16px/1.65 system-ui,sans-serif;margin:0;background:#f4f6f8;color:#172a36}main{max-width:1100px;margin:24px auto;padding:36px;background:white}h1{line-height:1.2}h2{margin-top:2em}a{color:#075f88;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;padding:16px}code{overflow-wrap:anywhere;font-size:.88em}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid #d6dfe5;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}.meta{font-size:12px;color:#465d6d}@media(max-width:650px){main{margin:0;padding:15px}table{display:block;overflow-x:auto}}</style></head><body><main><p class="meta">Research 2026-10-09, revision r3. <a href="RESEARCH_DOSSIER.md">Markdown source</a>. Source SHA-256: bebff446d4ecf8c9da9cb58647e5f7b54c75090a3f37a9761e43494e6563fcbd</p><h1>Protected Resource Metadata in mcp-remote</h1>
 <p>Researcher: Alex Gercog (playb0t)</p>
 <h2>Author-led security research: Phase 1 evidence baseline</h2>
 <p>Research date: <strong>9 October 2026</strong>. Domain: <strong>Software Supply Chain Security and AppSec</strong>.</p>
@@ -14,6 +14,16 @@ permitted synthetic MCP operations. Three completed scenarios recorded <strong>4
 events, 15 local canary events and nine RPC replies</strong>. This establishes discovery and
 message handling in that configuration. A real OAuth login and desktop UI session
 were not tested.</p>
+<p>The local tests of the published mcp-remote 0.14.3 CLI reproduce the server-selected
+resource-metadata request behavior documented in
+<a href="https://github.com/playb0t/mcp-remote-oauth-security/blob/main/advisories/F-01-resource-metadata-ssrf.md">F-01</a>
+(<a href="https://www.cve.org/CVERecord?id=CVE-2026-51994">CVE-2026-51994</a>), including the
+subsequent authorization-server metadata request documented in
+<a href="https://github.com/playb0t/mcp-remote-oauth-security/blob/main/advisories/F-02-authorization-server-ssrf.md">F-02</a>
+(<a href="https://www.cve.org/CVERecord?id=CVE-2026-51995">CVE-2026-51995</a>). These results
+establish the recorded request behavior under the stated fixture conditions; they do
+not by themselves establish disclosure of sensitive information or change the
+published CVE ranges.</p>
 <p><strong>History of 58 stable releases.</strong> The selected first-party discovery chain is present
 from <strong>0.1.32 through 0.14.3</strong> in an integrity-checked inventory of <strong>74 stable archives</strong>.
 Selected helpers from each of those 58 releases were executed separately against a

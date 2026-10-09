@@ -1,6 +1,8 @@
 """Validate this dated research package offline; never run target procedures."""
 from __future__ import annotations
-import hashlib,json,re,sys
+import sys
+sys.dont_write_bytecode=True  # the r3 check rejects a __pycache__ inside the package; importing validate_r3 must not create one
+import hashlib,json,re
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
@@ -127,6 +129,8 @@ def validate_download_snapshot(root:Path=ROOT)->dict:
 
 def main()->None:
     try:
+        stale=[p for p in ROOT.rglob("__pycache__") if p.is_dir()]
+        require(not stale,"Stale bytecode cache from an earlier run; remove "+", ".join(p.relative_to(ROOT).as_posix() for p in stale)+" and rerun")
         from validate_r3 import validate as validate_r3
         result=validate_content();result["r3"]=validate_r3(ROOT);result["download_snapshot"]=validate_download_snapshot();result.update(validate_manifest());print(json.dumps(result,sort_keys=True))
     except (ValidationError,KeyError,ValueError,OSError) as err:

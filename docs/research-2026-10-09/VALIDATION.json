@@ -16,12 +16,12 @@
     "partial_parsing": 1
   },
   "new_runtime_execution": false,
-  "checked_at_utc": "2026-10-09T17:06:12.551851+00:00",
+  "checked_at_utc": "2026-10-09T17:32:12.240205+00:00",
   "phase": "Phase 1 local evidence baseline",
   "negative_contract_controls_rejected": 9,
   "source_files_syntax_checked": 17,
   "target_procedures_executed": false,
-  "validation_scope": "offline package consistency and saved download/signature snapshot recount",
+  "validation_scope": "offline package consistency and links after the CVE-binding text update and the validate.py bytecode guard",
   "semantic_review": "bounded independent review completed after corrections",
   "host_paths_in_public_payload": 0,
   "r3_checks": {
@@ -34,15 +34,15 @@
     "html_structure": [
       {
         "file": "CODE_DISTRIBUTION.html",
-        "tables": 3,
         "headings": 32,
-        "source_sha256_present": true
+        "source_sha256_present": true,
+        "tables": 3
       },
       {
         "file": "RESEARCH_DOSSIER.html",
-        "tables": 7,
         "headings": 13,
-        "source_sha256_present": true
+        "source_sha256_present": true,
+        "tables": 7
       }
     ],
     "visual_browser_review": false,
@@ -75,15 +75,15 @@
   "html_structure_and_link_labels": [
     {
       "file": "CODE_DISTRIBUTION.html",
-      "tables": 3,
       "headings": 32,
-      "source_sha256_present": true
+      "source_sha256_present": true,
+      "tables": 3
     },
     {
       "file": "RESEARCH_DOSSIER.html",
-      "tables": 7,
       "headings": 13,
-      "source_sha256_present": true
+      "source_sha256_present": true,
+      "tables": 7
     }
   ],
   "visual_layout_review": "not performed",
@@ -161,5 +161,19 @@
     "collector_mocked_missing_response_rejected": true,
     "collector_mocked_success_agrees": true,
     "live_collector_requests": 0
+  },
+  "cve_binding_update": {
+    "date": "2026-10-10",
+    "text_changes": [
+      "RESEARCH_DOSSIER.md and RESEARCH_DOSSIER.html: one paragraph after the lead result binds the 0.14.3 CLI tests to F-01 (CVE-2026-51994) and the subsequent F-02 (CVE-2026-51995) request, with links to the advisories and the CVE records; the HTML Source SHA-256 line now carries the updated Markdown hash",
+      "README.md (this folder): one sentence with the same binding",
+      "repository README.md and TIMELINE.md: the same binding paragraph and a 2026-10-09 timeline row (outside this manifest)"
+    ],
+    "validate_py_change": "sys.dont_write_bytecode is set before validate_r3 is imported, so a plain `python validate.py` no longer writes __pycache__ into the package; a __pycache__ left by an earlier run is now reported as a stale cache with its path instead of surfacing as the r3 cache check's generic failure",
+    "stale_pycache_behavior": "with a __pycache__ directory present inside the package the validator still exits 1 by design (the package must not contain caches or installed runtimes); the message names the directory to remove",
+    "plain_run_results": "python validate.py, no -B flag and no PYTHONDONTWRITEBYTECODE, run twice on two fresh clones: both passed and neither run created __pycache__",
+    "data_and_procedures_changed": false,
+    "behavioral_experiments_repeated": false,
+    "previous_archive_rebuilt": false
   }
 }

@@ -349,8 +349,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2110,
-      "sha256": "415136304f0932b6a4c937d95a8698e838c8f383d099c163133010d4195242ff"
+      "bytes": 2544,
+      "sha256": "e7e3e483a73fb55468a7f97bb05ee35167b1d81ebea6f9bf7d4547ad7f27cfc3"
     },
     {
       "path": "REPRODUCIBILITY.md",
@@ -359,13 +359,13 @@
     },
     {
       "path": "RESEARCH_DOSSIER.html",
-      "bytes": 28728,
-      "sha256": "af0181fba6dca30391da0325c4547ea355d12b57a71f7255fb03d3a980e7df64"
+      "bytes": 29556,
+      "sha256": "074ee5020395e06480255956bcffe0acfcb486ccd53d1c962e3cce8c531fceb3"
     },
     {
       "path": "RESEARCH_DOSSIER.md",
-      "bytes": 22385,
-      "sha256": "beaeb1b6f7bc49b2b08debb8c4eb25e7fca851ff7f5cff8648be531e42861e0f"
+      "bytes": 23163,
+      "sha256": "bebff446d4ecf8c9da9cb58647e5f7b54c75090a3f37a9761e43494e6563fcbd"
     },
     {
       "path": "rules/mcp_shadow_fingerprint.yaml",
@@ -374,8 +374,8 @@
     },
     {
       "path": "validate.py",
-      "bytes": 10762,
-      "sha256": "bc4348d503340d05cafd4649a46144f94a9baa53d8ed23a20da1b05263083633"
+      "bytes": 11114,
+      "sha256": "1a7188508cfaa3b76cdcc825dccdea32e6fc65ef534ac4becb1b9b931b8aa678"
     },
     {
       "path": "validate_r3.py",
@@ -384,8 +384,8 @@
     },
     {
       "path": "VALIDATION.json",
-      "bytes": 5286,
-      "sha256": "9ec324e9718872443087f9c7050ba2ad9d5247fdc183b58f35bcc118b6a857f0"
+      "bytes": 6754,
+      "sha256": "8e8fee38f369457a92c677e744dc3a7fe1ec86a10917ccd1aef33a62ad647544"
     }
   ]
 }
