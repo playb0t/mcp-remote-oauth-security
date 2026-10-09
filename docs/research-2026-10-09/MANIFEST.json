@@ -194,8 +194,8 @@
     },
     {
       "path": "procedures/screening/README.md",
-      "bytes": 10265,
-      "sha256": "9631fec07308a0980b05d1a26d6f247d114f41269ce0dad9ff2feae20c2bdad1"
+      "bytes": 10746,
+      "sha256": "b7b6203ee922ebe40348d586aca22e8b20e06ae1202c6143c7a434abce7a2bf2"
     },
     {
       "path": "procedures/screening/references/baseline-reference-functions.json",
@@ -208,9 +208,24 @@
       "sha256": "5514f48637fa1d8fed2256d12d322009a75962e6111370755fc5b20773db67ad"
     },
     {
+      "path": "procedures/screening/references/LICENSE.pkce-challenge",
+      "bytes": 1057,
+      "sha256": "feb87a2e0c305de3464cc44077da5393c52d8ca6362d37427157d04ec6f4510d"
+    },
+    {
+      "path": "procedures/screening/references/LICENSE.typescript-sdk",
+      "bytes": 1071,
+      "sha256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d"
+    },
+    {
       "path": "procedures/screening/references/source-functions.json",
       "bytes": 22307,
       "sha256": "7a3a8bbebd0a1f78a1fc96a975a42001d9acecd89e9e605ce4158b3e3d178329"
+    },
+    {
+      "path": "procedures/screening/references/THIRD-PARTY-NOTICES.md",
+      "bytes": 1372,
+      "sha256": "c486218a22b47fe7e146e0e4268501fdcef6450b9bb6b180926443d4ad0f27ed"
     },
     {
       "path": "procedures/screening/requirements.txt",
@@ -279,8 +294,8 @@
     },
     {
       "path": "VALIDATION.json",
-      "bytes": 2592,
-      "sha256": "2b17e47978d88df2481df4a985cd5db9a418d2cb241474eee853cd7c9af46481"
+      "bytes": 3735,
+      "sha256": "48d3a24acce71f59f363fa67e082f5983260d60d61d61025a2e8eec30a50dc2f"
     }
   ]
 }
