@@ -383,3 +383,5 @@ changes remain outside this verification.
 
 [Reproduction inputs](REPRODUCIBILITY.md) · [input receipts](data/input-receipts.json) ·
 [validation](VALIDATION.json) · [package manifest](MANIFEST.json).
+
+[Download snapshot and observed code footprint](DOWNLOAD_SNAPSHOT_AND_CODE_FOOTPRINT.md).

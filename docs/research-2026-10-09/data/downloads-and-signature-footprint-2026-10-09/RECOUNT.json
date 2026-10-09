@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "snapshot_date": "2026-10-09",
+  "package": "mcp-remote",
+  "downloads": {
+    "all_versions_available_period": 19060907,
+    "raw_requested_period_sum": 19060907,
+    "point_agrees": true,
+    "first_day": "2026-02-17",
+    "last_available_day": "2026-10-07",
+    "unavailable_dates": [
+      "2026-10-08",
+      "2026-10-09"
+    ],
+    "zero_valued_available_days": 9
+  },
+  "recent_versions": {
+    "all_versions": 602570,
+    "recorded_cve_stable_union": 148814,
+    "studied_58_stable_versions": 562350,
+    "union_intersection_studied": 110258,
+    "dates_supplied_by_version_api": false
+  },
+  "footprint": {
+    "file_occurrences": 24,
+    "unique_file_sha256": 23,
+    "occurrences_by_corpus": {
+      "48-npm-archives": 15,
+      "232-github-file-records": 9
+    },
+    "upstream_control_occurrences": 2,
+    "third_party_file_occurrences": 22,
+    "third_party_unique_file_sha256": 21,
+    "npm_identities_with_matches": 13,
+    "git_repositories_with_selected_md5_matches": 9
+  },
+  "api_payload_receipts_verified": 5,
+  "network_requests": 0,
+  "target_execution": false
+}

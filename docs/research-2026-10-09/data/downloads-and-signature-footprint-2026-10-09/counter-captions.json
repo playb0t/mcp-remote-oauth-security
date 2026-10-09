@@ -1,0 +1,49 @@
+{
+  "status": "proposed wording only; site unchanged",
+  "snapshot_date": "2026-10-09",
+  "cross_counter_note": "Groups overlap. Do not sum them or extrapolate recent version shares to the historical period.",
+  "counters": [
+    {
+      "id": "historical_all_versions",
+      "value": 19060907,
+      "label": "npm downloads, all versions",
+      "caption": "17 Feb–7 Oct 2026. Saved 9 Oct; downloads are not unique installs.",
+      "source": "summary.json#/available_period_snapshot_total"
+    },
+    {
+      "id": "recent_all_versions",
+      "value": 602570,
+      "label": "Recent version snapshot, all versions",
+      "caption": "Saved 9 Oct 2026. The version API does not supply dates.",
+      "source": "recent-version-counts.json#/total_counter"
+    },
+    {
+      "id": "recent_cve_bands",
+      "value": 148814,
+      "label": "Downloads in recorded CVE-description version bands",
+      "caption": "Union of selected stable versions in the same undated snapshot. Overlaps the other counters.",
+      "source": "recent-version-counts.json#/union_published_ranges_stable_downloads"
+    },
+    {
+      "id": "recent_studied_releases",
+      "value": 562350,
+      "label": "Downloads in the 58 studied releases",
+      "caption": "Same undated version snapshot. Overlaps other groups; no historical share is implied.",
+      "source": "recent-version-counts.json#/selected_58_stable_release_downloads"
+    },
+    {
+      "id": "all_file_occurrences",
+      "value": 24,
+      "label": "Matching file occurrences in two samples",
+      "caption": "23 distinct SHA-256 contents; includes two upstream controls. Matches alone do not establish CVE applicability.",
+      "source": "signature-footprint.json#/file_occurrences"
+    },
+    {
+      "id": "third_party_file_occurrences",
+      "value": 22,
+      "label": "Third-party matching file occurrences",
+      "caption": "21 distinct SHA-256 contents in the two samples; upstream controls excluded. Not a product or global-copy count.",
+      "source": "signature-footprint.json#/third_party_file_occurrences"
+    }
+  ]
+}

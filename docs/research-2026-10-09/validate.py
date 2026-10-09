@@ -118,12 +118,21 @@ def validate_manifest(root:Path=ROOT)->dict:
         require(p.stat().st_size==r["bytes"] and digest(p)==r["sha256"],"Manifest mismatch: "+r["path"])
     require((root/"MANIFEST.sha256").read_text().split()[0]==digest(root/"MANIFEST.json"),"Manifest seal")
     return {"manifest_files":len(rows),"manifest_sha256":digest(root/"MANIFEST.json")}
+def validate_download_snapshot(root:Path=ROOT)->dict:
+    import importlib.util
+    path=root/"data/downloads-and-signature-footprint-2026-10-09/summarize_footprint.py"
+    spec=importlib.util.spec_from_file_location("download_snapshot",path)
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    result=module.calculate(path.parent)
+    require(result==read("data/downloads-and-signature-footprint-2026-10-09/RECOUNT.json",root),"Saved download recount mismatch")
+    return result
+
 def main()->None:
     try:
         stale=[p for p in ROOT.rglob("__pycache__") if p.is_dir()]
         require(not stale,"Stale bytecode cache from an earlier run; remove "+", ".join(p.relative_to(ROOT).as_posix() for p in stale)+" and rerun")
         from validate_r3 import validate as validate_r3
-        result=validate_content();result["r3"]=validate_r3(ROOT);result.update(validate_manifest());print(json.dumps(result,sort_keys=True))
+        result=validate_content();result["r3"]=validate_r3(ROOT);result["download_snapshot"]=validate_download_snapshot();result.update(validate_manifest());print(json.dumps(result,sort_keys=True))
     except (ValidationError,KeyError,ValueError,OSError) as err:
         print(json.dumps({"status":"failed","error":str(err)}));raise SystemExit(1)
 if __name__=="__main__":main()

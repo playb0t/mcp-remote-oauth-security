@@ -8,7 +8,7 @@
   "git_file_records": 232,
   "canonical_result_groups": 7,
   "cohort_observations": 63,
-  "local_links_checked": 56,
+  "local_links_checked": 57,
   "timeout_flags": 6,
   "engine_errors": {
     "memory": 1,
@@ -16,7 +16,7 @@
     "partial_parsing": 1
   },
   "new_runtime_execution": false,
-  "checked_at_utc": "2026-10-09T17:15:49.323981+00:00",
+  "checked_at_utc": "2026-10-09T17:32:12.240205+00:00",
   "phase": "Phase 1 local evidence baseline",
   "negative_contract_controls_rejected": 9,
   "source_files_syntax_checked": 17,
@@ -30,7 +30,7 @@
     "git_file_records": 232,
     "cohort_file_instances": 8057,
     "cohort_artifacts": 63,
-    "all_local_document_links": 96,
+    "all_local_document_links": 125,
     "html_structure": [
       {
         "file": "CODE_DISTRIBUTION.html",
@@ -114,6 +114,53 @@
     "behavioral_experiments_repeated": false,
     "screening_controls_reexecuted": false,
     "previous_archive_rebuilt": false
+  },
+  "download_snapshot": {
+    "status": "passed",
+    "snapshot_date": "2026-10-09",
+    "package": "mcp-remote",
+    "downloads": {
+      "all_versions_available_period": 19060907,
+      "raw_requested_period_sum": 19060907,
+      "point_agrees": true,
+      "first_day": "2026-02-17",
+      "last_available_day": "2026-10-07",
+      "unavailable_dates": [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      "zero_valued_available_days": 9
+    },
+    "recent_versions": {
+      "all_versions": 602570,
+      "recorded_cve_stable_union": 148814,
+      "studied_58_stable_versions": 562350,
+      "union_intersection_studied": 110258,
+      "dates_supplied_by_version_api": false
+    },
+    "footprint": {
+      "file_occurrences": 24,
+      "unique_file_sha256": 23,
+      "occurrences_by_corpus": {
+        "48-npm-archives": 15,
+        "232-github-file-records": 9
+      },
+      "upstream_control_occurrences": 2,
+      "third_party_file_occurrences": 22,
+      "third_party_unique_file_sha256": 21,
+      "npm_identities_with_matches": 13,
+      "git_repositories_with_selected_md5_matches": 9
+    },
+    "api_payload_receipts_verified": 5,
+    "network_requests": 0,
+    "target_execution": false,
+    "collector_existing_directory_rejected_before_network": true,
+    "calculator_existing_output_preserved": true,
+    "source_json_copies_verified": 9,
+    "behavioral_experiments_repeated": false,
+    "collector_mocked_missing_response_rejected": true,
+    "collector_mocked_success_agrees": true,
+    "live_collector_requests": 0
   },
   "cve_binding_update": {
     "date": "2026-10-10",
