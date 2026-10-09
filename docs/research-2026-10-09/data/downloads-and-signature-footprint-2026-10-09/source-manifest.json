@@ -1,0 +1,64 @@
+{
+  "files": [
+    {
+      "path": "collect.py",
+      "sha256": "8865188645f1e2105387c4272b38275b8715654bab1a21d6d643c193631632bd",
+      "bytes": 4039
+    },
+    {
+      "path": "daily.json",
+      "sha256": "feb968a9e7d8bd4a6a9f9121bfba0ae432c60af76e2279c5e06125c713396dcb",
+      "bytes": 9239
+    },
+    {
+      "path": "last-day.json",
+      "sha256": "cd87f094b79c57651e5234c201fcc6c57efed0ea354458d434c715b66a11bcd3",
+      "bytes": 83
+    },
+    {
+      "path": "last-week.json",
+      "sha256": "49cca96d8a3e5bbec61c0b77f8c7b17784a0634b1ced81e3d71d0b4213d01356",
+      "bytes": 83
+    },
+    {
+      "path": "point.json",
+      "sha256": "4905eda2628b3db33765f8b172309af6407cd55d19a94cd8746b35a38a328739",
+      "bytes": 85
+    },
+    {
+      "path": "receipts.json",
+      "sha256": "bd18d6dacf42591763d8790fd479e7399b43ac46d6c2c1156d66b2a7161441a5",
+      "bytes": 1470
+    },
+    {
+      "path": "recent-version-counts.json",
+      "sha256": "b21c838e07e2988d9fcfd1f9568aba9fc8e7872f37a1b9c583a7a658d25bf258",
+      "bytes": 914
+    },
+    {
+      "path": "RESULT.txt",
+      "sha256": "be9faa9ee1815547b582f883e9d16619fc570dd98383fc3744b22f9bc08861f5",
+      "bytes": 1112
+    },
+    {
+      "path": "signature-footprint.json",
+      "sha256": "25513f8af9cebc812f909e9c567b89537868a2fd9ad9146438d48d9181190ee2",
+      "bytes": 31367
+    },
+    {
+      "path": "summarize_footprint.py",
+      "sha256": "969287c6966465a0260626c8f8c7968c39f71ac104366e17f4e5e158bbe499c2",
+      "bytes": 6354
+    },
+    {
+      "path": "summary.json",
+      "sha256": "b6e03412d661efd7c2c32f88ce2f6ec90857c192246643985cd0455d79a7e32c",
+      "bytes": 2070
+    },
+    {
+      "path": "versions-week.json",
+      "sha256": "303fff64ac0f74085d312bf2beeaccf2867798176b252531d1105f99c27875f2",
+      "bytes": 1448
+    }
+  ]
+}

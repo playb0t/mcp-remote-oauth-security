@@ -1,0 +1,98 @@
+{
+  "basis": "Stable version intervals encoded in the source snapshot calculation from the published CVE descriptions. These are a saved counting definition, separate from repository advisory intervals and any later catalog changes.",
+  "recorded_cve_description_stable_ranges": {
+    "CVE-2026-51994": {
+      "first": "0.1.32",
+      "last": "0.1.38",
+      "record_url": "https://www.cve.org/CVERecord?id=CVE-2026-51994"
+    },
+    "CVE-2026-51995": {
+      "first": "0.1.32",
+      "last": "0.1.38",
+      "record_url": "https://www.cve.org/CVERecord?id=CVE-2026-51995"
+    },
+    "CVE-2026-51996": {
+      "first": "0.1.16",
+      "last": "0.1.38",
+      "record_url": "https://www.cve.org/CVERecord?id=CVE-2026-51996"
+    },
+    "CVE-2026-51997": {
+      "first": "0.1.16",
+      "last": "0.1.38",
+      "record_url": "https://www.cve.org/CVERecord?id=CVE-2026-51997"
+    },
+    "CVE-2026-52001": {
+      "first": "0.1.18",
+      "last": "0.1.38",
+      "record_url": "https://www.cve.org/CVERecord?id=CVE-2026-52001"
+    }
+  },
+  "studied_stable_versions": [
+    "0.1.32",
+    "0.1.33",
+    "0.1.34",
+    "0.1.35",
+    "0.1.36",
+    "0.1.37",
+    "0.1.38",
+    "0.1.39",
+    "0.1.40",
+    "0.1.41",
+    "0.1.42",
+    "0.1.43",
+    "0.1.44",
+    "0.1.45",
+    "0.1.46",
+    "0.1.47",
+    "0.1.48",
+    "0.1.49",
+    "0.2.0",
+    "0.2.1",
+    "0.2.2",
+    "0.2.3",
+    "0.2.4",
+    "0.2.5",
+    "0.2.6",
+    "0.2.7",
+    "0.3.0",
+    "0.3.1",
+    "0.3.2",
+    "0.3.3",
+    "0.4.0",
+    "0.4.1",
+    "0.5.0",
+    "0.6.0",
+    "0.7.0",
+    "0.8.0",
+    "0.8.1",
+    "0.8.2",
+    "0.8.3",
+    "0.8.4",
+    "0.8.5",
+    "0.8.6",
+    "0.8.7",
+    "0.9.0",
+    "0.10.0",
+    "0.11.0",
+    "0.12.0",
+    "0.12.1",
+    "0.13.0",
+    "0.13.1",
+    "0.13.2",
+    "0.13.3",
+    "0.13.4",
+    "0.13.5",
+    "0.14.0",
+    "0.14.1",
+    "0.14.2",
+    "0.14.3"
+  ],
+  "evidence_inputs": {
+    "release-history.json": "a34f4ad5e06e98735f61fe2a865890317cadc8899c9a599377a8f3176f135e0c",
+    "code-distribution.json": "331b066a7ffaf3c1e3c624925f119b110cbe18cb5fc07101b2a0919803110d9f",
+    "git-232.json": "a3638dea3a8cce136a5da68569f47645b53b2314e782d9989d521faf66d8e122"
+  },
+  "version_api_dates": null,
+  "interval_endpoints": "inclusive",
+  "nonstable_labels": "excluded from the two selected groups; included in the all-version total"
+}
