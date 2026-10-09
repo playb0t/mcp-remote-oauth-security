@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "artifact": {
+    "kind": "npm",
+    "name": "mcp-remote",
+    "version": "0.1.38",
+    "declared_repository": "https://github.com/geelen/mcp-remote"
+  },
+  "member": "package/dist/chunk-65X3S4HB.js",
+  "file_sha256": "d3eb914e687408424476bd8a41eff8d1d47e01772b14158f500f5ecd902fa875",
+  "file_bytes": 755586,
+  "offset_unit": "UTF-16 code units in decoded source",
+  "note": "Source slices for inspection. Reference token fingerprints were obtained in the complete bundle binding context; standalone slices may have different free-identifier bindings. The scanner never executes these functions.",
+  "functions": [
+    {
+      "name": "pkceChallenge",
+      "family": "shared-oauth",
+      "line": 18186,
+      "end_line": 18198,
+      "start_utf16": 632150,
+      "end_utf16": 632515,
+      "source": "async function pkceChallenge(length) {\n  if (!length)\n    length = 43;\n  if (length < 43 || length > 128) {\n    throw `Expected a length between 43 and 128. Received ${length}.`;\n  }\n  const verifier = await generateVerifier(length);\n  const challenge = await generateChallenge(verifier);\n  return {\n    code_verifier: verifier,\n    code_challenge: challenge\n  };\n}",
+      "normalized_sha256": "8fbb08170fc8650648d4e3e1da9d01cd16f77dd6ebbc46c14e0f831772faadb7"
+    },
+    {
+      "name": "selectClientAuthMethod",
+      "family": "shared-oauth",
+      "line": 18470,
+      "end_line": 18488,
+      "start_utf16": 644270,
+      "end_utf16": 645178,
+      "source": "function selectClientAuthMethod(clientInformation, supportedMethods) {\n  const hasClientSecret = clientInformation.client_secret !== void 0;\n  if (supportedMethods.length === 0) {\n    return hasClientSecret ? \"client_secret_post\" : \"none\";\n  }\n  if (\"token_endpoint_auth_method\" in clientInformation && clientInformation.token_endpoint_auth_method && isClientAuthMethod(clientInformation.token_endpoint_auth_method) && supportedMethods.includes(clientInformation.token_endpoint_auth_method)) {\n    return clientInformation.token_endpoint_auth_method;\n  }\n  if (hasClientSecret && supportedMethods.includes(\"client_secret_basic\")) {\n    return \"client_secret_basic\";\n  }\n  if (hasClientSecret && supportedMethods.includes(\"client_secret_post\")) {\n    return \"client_secret_post\";\n  }\n  if (supportedMethods.includes(\"none\")) {\n    return \"none\";\n  }\n  return hasClientSecret ? \"client_secret_post\" : \"none\";\n}",
+      "normalized_sha256": "2cfa3de415a7131dd31b99c27fbdd9e82ebb8ad2e00597f53b3d01cc9b091ce2"
+    },
+    {
+      "name": "authInternal",
+      "family": "shared-oauth",
+      "line": 18548,
+      "end_line": 18637,
+      "start_utf16": 647414,
+      "end_utf16": 650932,
+      "source": "async function authInternal(provider, { serverUrl, authorizationCode, scope, resourceMetadataUrl, fetchFn }) {\n  let resourceMetadata;\n  let authorizationServerUrl;\n  try {\n    resourceMetadata = await discoverOAuthProtectedResourceMetadata(serverUrl, { resourceMetadataUrl }, fetchFn);\n    if (resourceMetadata.authorization_servers && resourceMetadata.authorization_servers.length > 0) {\n      authorizationServerUrl = resourceMetadata.authorization_servers[0];\n    }\n  } catch {\n  }\n  if (!authorizationServerUrl) {\n    authorizationServerUrl = new URL(\"/\", serverUrl);\n  }\n  const resource = await selectResourceURL(serverUrl, provider, resourceMetadata);\n  const metadata = await discoverAuthorizationServerMetadata(authorizationServerUrl, {\n    fetchFn\n  });\n  let clientInformation = await Promise.resolve(provider.clientInformation());\n  if (!clientInformation) {\n    if (authorizationCode !== void 0) {\n      throw new Error(\"Existing OAuth client information is required when exchanging an authorization code\");\n    }\n    const supportsUrlBasedClientId = metadata?.client_id_metadata_document_supported === true;\n    const clientMetadataUrl = provider.clientMetadataUrl;\n    if (clientMetadataUrl && !isHttpsUrl(clientMetadataUrl)) {\n      throw new InvalidClientMetadataError(`clientMetadataUrl must be a valid HTTPS URL with a non-root pathname, got: ${clientMetadataUrl}`);\n    }\n    const shouldUseUrlBasedClientId = supportsUrlBasedClientId && clientMetadataUrl;\n    if (shouldUseUrlBasedClientId) {\n      clientInformation = {\n        client_id: clientMetadataUrl\n      };\n      await provider.saveClientInformation?.(clientInformation);\n    } else {\n      if (!provider.saveClientInformation) {\n        throw new Error(\"OAuth client information must be saveable for dynamic registration\");\n      }\n      const fullInformation = await registerClient(authorizationServerUrl, {\n        metadata,\n        clientMetadata: provider.clientMetadata,\n        fetchFn\n      });\n      await provider.saveClientInformation(fullInformation);\n      clientInformation = fullInformation;\n    }\n  }\n  const nonInteractiveFlow = !provider.redirectUrl;\n  if (authorizationCode !== void 0 || nonInteractiveFlow) {\n    const tokens2 = await fetchToken(provider, authorizationServerUrl, {\n      metadata,\n      resource,\n      authorizationCode,\n      fetchFn\n    });\n    await provider.saveTokens(tokens2);\n    return \"AUTHORIZED\";\n  }\n  const tokens = await provider.tokens();\n  if (tokens?.refresh_token) {\n    try {\n      const newTokens = await refreshAuthorization(authorizationServerUrl, {\n        metadata,\n        clientInformation,\n        refreshToken: tokens.refresh_token,\n        resource,\n        addClientAuthentication: provider.addClientAuthentication,\n        fetchFn\n      });\n      await provider.saveTokens(newTokens);\n      return \"AUTHORIZED\";\n    } catch (error2) {\n      if (!(error2 instanceof OAuthError) || error2 instanceof ServerError) {\n      } else {\n        throw error2;\n      }\n    }\n  }\n  const state = provider.state ? await provider.state() : void 0;\n  const { authorizationUrl, codeVerifier } = await startAuthorization(authorizationServerUrl, {\n    metadata,\n    clientInformation,\n    state,\n    redirectUrl: provider.redirectUrl,\n    scope: scope || resourceMetadata?.scopes_supported?.join(\" \") || provider.clientMetadata.scope,\n    resource\n  });\n  await provider.saveCodeVerifier(codeVerifier);\n  await provider.redirectToAuthorization(authorizationUrl);\n  return \"REDIRECT\";\n}",
+      "normalized_sha256": "3646260e2a6d682cbc6558aa5a01c9ca6262c4a94cb5fbb81cf908a48e71f267"
+    },
+    {
+      "name": "extractWWWAuthenticateParams",
+      "family": "shared-oauth",
+      "line": 18661,
+      "end_line": 18685,
+      "start_utf16": 651752,
+      "end_utf16": 652485,
+      "source": "function extractWWWAuthenticateParams(res) {\n  const authenticateHeader = res.headers.get(\"WWW-Authenticate\");\n  if (!authenticateHeader) {\n    return {};\n  }\n  const [type, scheme] = authenticateHeader.split(\" \");\n  if (type.toLowerCase() !== \"bearer\" || !scheme) {\n    return {};\n  }\n  const resourceMetadataMatch = extractFieldFromWwwAuth(res, \"resource_metadata\") || void 0;\n  let resourceMetadataUrl;\n  if (resourceMetadataMatch) {\n    try {\n      resourceMetadataUrl = new URL(resourceMetadataMatch);\n    } catch {\n    }\n  }\n  const scope = extractFieldFromWwwAuth(res, \"scope\") || void 0;\n  const error2 = extractFieldFromWwwAuth(res, \"error\") || void 0;\n  return {\n    resourceMetadataUrl,\n    scope,\n    error: error2\n  };\n}",
+      "normalized_sha256": "ed14b4b17f9bf5e52027117ed4bf363d33f7284df9f54106600b647a0a0a0f12"
+    },
+    {
+      "name": "startAuthorization",
+      "family": "shared-oauth",
+      "line": 18819,
+      "end_line": 18853,
+      "start_utf16": 657353,
+      "end_utf16": 659113,
+      "source": "async function startAuthorization(authorizationServerUrl, { metadata, clientInformation, redirectUrl, scope, state, resource }) {\n  let authorizationUrl;\n  if (metadata) {\n    authorizationUrl = new URL(metadata.authorization_endpoint);\n    if (!metadata.response_types_supported.includes(AUTHORIZATION_CODE_RESPONSE_TYPE)) {\n      throw new Error(`Incompatible auth server: does not support response type ${AUTHORIZATION_CODE_RESPONSE_TYPE}`);\n    }\n    if (metadata.code_challenge_methods_supported && !metadata.code_challenge_methods_supported.includes(AUTHORIZATION_CODE_CHALLENGE_METHOD)) {\n      throw new Error(`Incompatible auth server: does not support code challenge method ${AUTHORIZATION_CODE_CHALLENGE_METHOD}`);\n    }\n  } else {\n    authorizationUrl = new URL(\"/authorize\", authorizationServerUrl);\n  }\n  const challenge = await pkceChallenge();\n  const codeVerifier = challenge.code_verifier;\n  const codeChallenge = challenge.code_challenge;\n  authorizationUrl.searchParams.set(\"response_type\", AUTHORIZATION_CODE_RESPONSE_TYPE);\n  authorizationUrl.searchParams.set(\"client_id\", clientInformation.client_id);\n  authorizationUrl.searchParams.set(\"code_challenge\", codeChallenge);\n  authorizationUrl.searchParams.set(\"code_challenge_method\", AUTHORIZATION_CODE_CHALLENGE_METHOD);\n  authorizationUrl.searchParams.set(\"redirect_uri\", String(redirectUrl));\n  if (state) {\n    authorizationUrl.searchParams.set(\"state\", state);\n  }\n  if (scope) {\n    authorizationUrl.searchParams.set(\"scope\", scope);\n  }\n  if (scope?.includes(\"offline_access\")) {\n    authorizationUrl.searchParams.append(\"prompt\", \"consent\");\n  }\n  if (resource) {\n    authorizationUrl.searchParams.set(\"resource\", resource.href);\n  }\n  return { authorizationUrl, codeVerifier };\n}",
+      "normalized_sha256": "8dc49d0ab6601e120986450389a43be3bbc95201f1056fdc16699ad019dcda7a"
+    },
+    {
+      "name": "executeTokenRequest",
+      "family": "shared-oauth",
+      "line": 18862,
+      "end_line": 18887,
+      "start_utf16": 659380,
+      "end_utf16": 660533,
+      "source": "async function executeTokenRequest(authorizationServerUrl, { metadata, tokenRequestParams, clientInformation, addClientAuthentication, resource, fetchFn }) {\n  const tokenUrl = metadata?.token_endpoint ? new URL(metadata.token_endpoint) : new URL(\"/token\", authorizationServerUrl);\n  const headers = new Headers({\n    \"Content-Type\": \"application/x-www-form-urlencoded\",\n    Accept: \"application/json\"\n  });\n  if (resource) {\n    tokenRequestParams.set(\"resource\", resource.href);\n  }\n  if (addClientAuthentication) {\n    await addClientAuthentication(headers, tokenRequestParams, tokenUrl, metadata);\n  } else if (clientInformation) {\n    const supportedMethods = metadata?.token_endpoint_auth_methods_supported ?? [];\n    const authMethod = selectClientAuthMethod(clientInformation, supportedMethods);\n    applyClientAuthentication(authMethod, clientInformation, headers, tokenRequestParams);\n  }\n  const response = await (fetchFn ?? fetch)(tokenUrl, {\n    method: \"POST\",\n    headers,\n    body: tokenRequestParams\n  });\n  if (!response.ok) {\n    throw await parseErrorResponse(response);\n  }\n  return OAuthTokensSchema.parse(await response.json());\n}",
+      "normalized_sha256": "017dfdef0933819f6dc2eea526b4a689657690399a27a8fb35877a52ff3d4cd0"
+    },
+    {
+      "name": "parseWWWAuthenticateHeader",
+      "family": "mcp-specific",
+      "line": 20094,
+      "end_line": 20126,
+      "start_utf16": 707431,
+      "end_utf16": 708306,
+      "source": "function parseWWWAuthenticateHeader(header) {\n  const result = {};\n  if (!header) {\n    return result;\n  }\n  const paramString = header.replace(/^Bearer\\s+/i, \"\");\n  const paramRegex = /(\\w+)=(?:\"([^\"]*)\"|([\\w-]+))/g;\n  let match;\n  while ((match = paramRegex.exec(paramString)) !== null) {\n    const key = match[1];\n    const value = match[2] ?? match[3];\n    switch (key) {\n      case \"resource_metadata\":\n        result.resourceMetadataUrl = value;\n        break;\n      case \"scope\":\n        result.scope = value;\n        break;\n      case \"error\":\n        result.error = value;\n        break;\n      case \"error_description\":\n        result.errorDescription = value;\n        break;\n    }\n  }\n  debugLog(\"Parsed WWW-Authenticate header\", {\n    hasResourceMetadata: !!result.resourceMetadataUrl,\n    hasScope: !!result.scope,\n    error: result.error\n  });\n  return result;\n}",
+      "normalized_sha256": "6c4da0197b4d560e12c8a00c19b9f572feff15c066bc62ac72a0b964850d4fdf"
+    },
+    {
+      "name": "fetchProtectedResourceMetadataFromUrl",
+      "family": "mcp-specific",
+      "line": 20138,
+      "end_line": 20172,
+      "start_utf16": 708748,
+      "end_utf16": 709885,
+      "source": "async function fetchProtectedResourceMetadataFromUrl(metadataUrl) {\n  debugLog(\"Fetching Protected Resource Metadata\", { metadataUrl });\n  try {\n    const response = await fetch(metadataUrl, {\n      headers: {\n        Accept: \"application/json\"\n      },\n      signal: AbortSignal.timeout(5e3)\n    });\n    if (!response.ok) {\n      if (response.status === 404) {\n        debugLog(\"Protected Resource Metadata not found (404)\", { metadataUrl });\n      } else {\n        debugLog(\"Failed to fetch Protected Resource Metadata\", {\n          status: response.status,\n          statusText: response.statusText\n        });\n      }\n      return void 0;\n    }\n    const metadata = await response.json();\n    debugLog(\"Successfully fetched Protected Resource Metadata\", {\n      resource: metadata.resource,\n      authorizationServers: metadata.authorization_servers,\n      scopesSupported: metadata.scopes_supported\n    });\n    return metadata;\n  } catch (error2) {\n    debugLog(\"Error fetching Protected Resource Metadata\", {\n      error: error2 instanceof Error ? error2.message : String(error2),\n      metadataUrl\n    });\n    return void 0;\n  }\n}",
+      "normalized_sha256": "10cc8ab96aa9994a36d77b11bd8ce58342c1ebc1552629b8d3d40ddb36ba8c24"
+    },
+    {
+      "name": "discoverProtectedResourceMetadata",
+      "family": "mcp-specific",
+      "line": 20173,
+      "end_line": 20200,
+      "start_utf16": 709886,
+      "end_utf16": 710973,
+      "source": "async function discoverProtectedResourceMetadata(resourceUrl, wwwAuthenticateHeader) {\n  debugLog(\"Starting Protected Resource Metadata discovery\", {\n    resourceUrl,\n    hasWWWAuthenticateHeader: !!wwwAuthenticateHeader\n  });\n  if (wwwAuthenticateHeader) {\n    const params = parseWWWAuthenticateHeader(wwwAuthenticateHeader);\n    if (params.resourceMetadataUrl) {\n      debugLog(\"Using resource_metadata URL from WWW-Authenticate header\", {\n        url: params.resourceMetadataUrl\n      });\n      const metadata = await fetchProtectedResourceMetadataFromUrl(params.resourceMetadataUrl);\n      if (metadata) {\n        return metadata;\n      }\n      debugLog(\"Failed to fetch from WWW-Authenticate URL, falling back to well-known discovery\");\n    }\n  }\n  const wellKnownUrls = buildProtectedResourceMetadataUrls(resourceUrl);\n  for (const url2 of wellKnownUrls) {\n    const metadata = await fetchProtectedResourceMetadataFromUrl(url2);\n    if (metadata) {\n      return metadata;\n    }\n  }\n  debugLog(\"Protected Resource Metadata discovery failed - no metadata found\");\n  return void 0;\n}",
+      "normalized_sha256": "4aa8b3d388bf563ea6d6d370317527ebe9393ec3617646ed410223cbb09ba7b9"
+    },
+    {
+      "name": "getAuthorizationServerUrl",
+      "family": "mcp-specific",
+      "line": 20201,
+      "end_line": 20206,
+      "start_utf16": 710974,
+      "end_utf16": 711174,
+      "source": "function getAuthorizationServerUrl(metadata) {\n  if (metadata.authorization_servers && metadata.authorization_servers.length > 0) {\n    return metadata.authorization_servers[0];\n  }\n  return void 0;\n}",
+      "normalized_sha256": "dea353f39d23559d098d83768b55eedb0cb20a4ff75072c162ad16d1945ac554"
+    },
+    {
+      "name": "fetchAuthorizationServerMetadata",
+      "family": "mcp-specific",
+      "line": 20214,
+      "end_line": 20250,
+      "start_utf16": 711402,
+      "end_utf16": 712647,
+      "source": "async function fetchAuthorizationServerMetadata(serverUrl) {\n  const metadataUrl = getMetadataUrl(serverUrl);\n  debugLog(\"Fetching authorization server metadata\", { serverUrl, metadataUrl });\n  try {\n    const response = await fetch(metadataUrl, {\n      headers: {\n        Accept: \"application/json\"\n      },\n      // Short timeout to avoid blocking\n      signal: AbortSignal.timeout(5e3)\n    });\n    if (!response.ok) {\n      if (response.status === 404) {\n        debugLog(\"Authorization server metadata endpoint not found (404)\", { metadataUrl });\n      } else {\n        debugLog(\"Failed to fetch authorization server metadata\", {\n          status: response.status,\n          statusText: response.statusText\n        });\n      }\n      return void 0;\n    }\n    const metadata = await response.json();\n    debugLog(\"Successfully fetched authorization server metadata\", {\n      issuer: metadata.issuer,\n      scopes_supported: metadata.scopes_supported,\n      scopeCount: metadata.scopes_supported?.length || 0\n    });\n    return metadata;\n  } catch (error2) {\n    debugLog(\"Error fetching authorization server metadata\", {\n      error: error2 instanceof Error ? error2.message : String(error2),\n      metadataUrl\n    });\n    return void 0;\n  }\n}",
+      "normalized_sha256": "f40bde2ded0c817dc5f2d5b646657bb15c32b361113498fd33fa6251b62a6d87"
+    },
+    {
+      "name": "discoverOAuthServerInfo",
+      "family": "shared-oauth",
+      "line": 20417,
+      "end_line": 20479,
+      "start_utf16": 718341,
+      "end_utf16": 720721,
+      "source": "async function discoverOAuthServerInfo(serverUrl, headers = {}) {\n  debugLog(\"Starting OAuth server discovery\", { serverUrl });\n  let wwwAuthenticateHeader;\n  let wwwAuthenticateScope;\n  try {\n    debugLog(\"Probing MCP server for WWW-Authenticate header\");\n    const response = await fetch2(serverUrl, {\n      method: \"GET\",\n      headers: {\n        ...headers,\n        Accept: \"application/json, text/event-stream\"\n      },\n      signal: AbortSignal.timeout(1e4)\n    });\n    if (response.ok) {\n      debugLog(\"Server responded OK without auth, using server URL as authorization server\");\n      const authServerMetadata = await fetchAuthorizationServerMetadata(serverUrl);\n      return {\n        authorizationServerUrl: serverUrl,\n        authorizationServerMetadata: authServerMetadata\n      };\n    }\n    if (response.status === 401) {\n      wwwAuthenticateHeader = response.headers.get(\"WWW-Authenticate\") || void 0;\n      debugLog(\"Received 401 with WWW-Authenticate header\", {\n        hasHeader: !!wwwAuthenticateHeader,\n        header: wwwAuthenticateHeader\n      });\n      if (wwwAuthenticateHeader) {\n        const params = parseWWWAuthenticateHeader(wwwAuthenticateHeader);\n        wwwAuthenticateScope = params.scope;\n      }\n    }\n  } catch (error2) {\n    debugLog(\"Error probing MCP server\", {\n      error: error2 instanceof Error ? error2.message : String(error2)\n    });\n  }\n  const protectedResourceMetadata = await discoverProtectedResourceMetadata(serverUrl, wwwAuthenticateHeader);\n  let authorizationServerUrl;\n  if (protectedResourceMetadata) {\n    const discoveredUrl = getAuthorizationServerUrl(protectedResourceMetadata);\n    if (discoveredUrl) {\n      authorizationServerUrl = discoveredUrl;\n      debugLog(\"Using authorization server from Protected Resource Metadata\", {\n        authorizationServerUrl\n      });\n    } else {\n      authorizationServerUrl = serverUrl;\n      debugLog(\"PRM found but no authorization_servers, falling back to server URL\");\n    }\n  } else {\n    authorizationServerUrl = serverUrl;\n    debugLog(\"No Protected Resource Metadata found, falling back to server URL as authorization server\");\n  }\n  const authorizationServerMetadata = await fetchAuthorizationServerMetadata(authorizationServerUrl);\n  return {\n    authorizationServerUrl,\n    authorizationServerMetadata,\n    protectedResourceMetadata,\n    wwwAuthenticateScope\n  };\n}",
+      "normalized_sha256": "97d0de1d6b8af00298b0698f82307e3e03110d55587bf535bafe362ad2d64412"
+    },
+    {
+      "name": "getServerUrlHash",
+      "family": "mcp-specific",
+      "line": 20890,
+      "end_line": 20898,
+      "start_utf16": 737110,
+      "end_utf16": 737498,
+      "source": "function getServerUrlHash(serverUrl, authorizeResource, headers) {\n  const parts = [serverUrl];\n  if (authorizeResource) parts.push(authorizeResource);\n  if (headers && Object.keys(headers).length > 0) {\n    const sortedKeys = Object.keys(headers).sort();\n    parts.push(JSON.stringify(headers, sortedKeys));\n  }\n  return crypto2.createHash(\"md5\").update(parts.join(\"|\")).digest(\"hex\");\n}",
+      "normalized_sha256": "afb0c05092de933371b5dd32dfaa030d86d7015b3051460fd5efb6f430edb5e3"
+    },
+    {
+      "name": "invalidateCredentials",
+      "family": "shared-oauth",
+      "line": 21163,
+      "end_line": 21191,
+      "start_utf16": 747265,
+      "end_utf16": 748320,
+      "source": "async invalidateCredentials(scope) {\n    debugLog(`Invalidating credentials: ${scope}`);\n    switch (scope) {\n      case \"all\":\n        await Promise.all([\n          deleteConfigFile(this.serverUrlHash, \"client_info.json\"),\n          deleteConfigFile(this.serverUrlHash, \"tokens.json\"),\n          deleteConfigFile(this.serverUrlHash, \"code_verifier.txt\")\n        ]);\n        this._clientInfo = void 0;\n        debugLog(\"All credentials invalidated\");\n        break;\n      case \"client\":\n        await deleteConfigFile(this.serverUrlHash, \"client_info.json\");\n        this._clientInfo = void 0;\n        debugLog(\"Client information invalidated\");\n        break;\n      case \"tokens\":\n        await deleteConfigFile(this.serverUrlHash, \"tokens.json\");\n        debugLog(\"OAuth tokens invalidated\");\n        break;\n      case \"verifier\":\n        await deleteConfigFile(this.serverUrlHash, \"code_verifier.txt\");\n        debugLog(\"Code verifier invalidated\");\n        break;\n      default:\n        throw new Error(`Unknown credential scope: ${scope}`);\n    }\n  }",
+      "normalized_sha256": "52722c2f6781b0ee0e8b44151cf4172d2619808ad85d40499a614055f64e25ef"
+    }
+  ]
+}

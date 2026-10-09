@@ -1,0 +1,551 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research Dossier</title><style>body{font:16px/1.65 system-ui,sans-serif;margin:0;background:#f4f6f8;color:#172a36}main{max-width:1100px;margin:24px auto;padding:36px;background:white}h1{line-height:1.2}h2{margin-top:2em}a{color:#075f88;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;padding:16px}code{overflow-wrap:anywhere;font-size:.88em}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid #d6dfe5;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}.meta{font-size:12px;color:#465d6d}@media(max-width:650px){main{margin:0;padding:15px}table{display:block;overflow-x:auto}}</style></head><body><main><p class="meta">Research 2026-10-09, revision r3. <a href="RESEARCH_DOSSIER.md">Markdown source</a>. Source SHA-256: 3157bfb37167eec7cfa9a64f8fc022a40d7828a0c79a4c823c76e0bc314d81b0</p><h1>Protected Resource Metadata in mcp-remote</h1>
+<p>Researcher: Alex Gercog (playb0t)</p>
+<h2>Author-led security research: Phase 1 evidence baseline</h2>
+<p>Research date: <strong>9 October 2026</strong>. Domain: <strong>Software Supply Chain Security and AppSec</strong>.</p>
+<p>This research connects three results: observed CLI behavior, continuity across releases
+and copies of selected implementation fragments in published code. It combines
+source-level reverse engineering, custom structural matching, distribution-integrity
+verification and isolated dynamic fixtures.</p>
+<p><strong>Published CLI <code>0.14.3</code>.</strong> The unchanged proxy CLI followed a metadata destination
+selected through a synthetic server response, including a controlled HTTP 302 redirect.
+It ran over stdio with <code>http-only</code> transport, <code>client-credentials</code> mode and synthetic
+static client information. Mock GET requests received a challenge; mock POST requests
+permitted synthetic MCP operations. Three completed scenarios recorded <strong>43 HTTP
+events, 15 local canary events and nine RPC replies</strong>. This establishes discovery and
+message handling in that configuration. A real OAuth login and desktop UI session
+were not tested.</p>
+<p><strong>History of 58 stable releases.</strong> The selected first-party discovery chain is present
+from <strong>0.1.32 through 0.14.3</strong> in an integrity-checked inventory of <strong>74 stable archives</strong>.
+Selected helpers from each of those 58 releases were executed separately against a
+researcher-owned local fixture, recording <strong>290 HTTP events</strong>. Full CLI execution
+was tested only at 0.14.3.</p>
+<p><strong>Published code under other names and inside bundles.</strong> Selected implementation
+fragments were found under other package names and within bundled code. Structural
+signatures helped identify these relationships despite renaming and packaging
+differences. Searching only for the original package name therefore gives incomplete
+coverage. The <a href="CODE_DISTRIBUTION.md">code distribution map</a> links each retained
+observation to its package version or commit, file, function or rule, checksum and
+coverage status. These observations establish published code relationships; they do
+not measure propagation speed, installations or execution inside companies.</p>
+<h2>1. Defect qualification</h2>
+<p><strong>CWE-918: Server-Side Request Forgery during Protected Resource Metadata discovery.</strong>
+The trust-boundary failure is the transfer of a server-provided metadata location into
+an outbound request made from the client process without a destination policy at the
+inspected dereferencing boundary.</p>
+<p><strong>Qualification: Missing Defense.</strong> The selected boundary lacks local host/destination
+validation and redirect-policy enforcement. A previously complete repair of this same
+path has not been established; the history therefore supports neither a regression nor a proven Incomplete Fix.
+The later fetch-option change is recorded as a functional change; its presence alone
+does not establish a security repair.</p>
+<p>The demonstrated consequence is a destination-selected client request. Production
+exposure depends on the executed branch, configuration and network policy. Broader
+consequences are not inferred from code presence or from this fixture.</p>
+<p>Cloud credential access was not tested. On AWS instances configured with
+<code>HttpTokens=required</code>, metadata requests require a valid IMDSv2 session token
+obtained through a separate PUT request.
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html">AWS IMDS documentation</a>.
+GCP metadata v1 requires the <code>Metadata-Flavor: Google</code> header.
+<a href="https://docs.cloud.google.com/compute/docs/metadata/querying-metadata">Google Cloud metadata documentation</a>.
+A basic discovery GET lacking these elements does not establish credential access.
+Configurations permitting IMDSv1 and other request conditions require separate evaluation.
+Cloud metadata endpoints were not queried in these experiments. These conditions
+limit the evaluated request scenario; they do not establish universal cloud isolation.</p>
+<p><a href="https://www.rfc-editor.org/rfc/rfc9728.html#section-7.7">RFC 9728 §7.7</a> identifies the
+discovery-related request risk and calls for appropriate precautions.
+<a href="data/standards.json">Standards and classification</a>.</p>
+<h2>2. Published CLI 0.14.3: controlled verification</h2>
+<p>The original execution used Node <code>v24.19.0</code> and the dependency lock retained in this
+package. All <strong>seven dist files</strong> in the runtime copy were compared byte for byte with
+the integrity-checked published distribution. The CLI entry point was <code>dist/proxy.js</code>;
+its SHA-256 and file-parity records are in <a href="data/cli-scenarios.json">cli-scenarios.json</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align:right">HTTP events</th>
+<th style="text-align:right">Local canary events</th>
+<th style="text-align:right">RPC replies</th>
+<th style="text-align:right">Authorization headers observed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header-selected metadata location</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>Header-selected location returning HTTP 302</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>Same-origin control</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align:right">43</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p>Each case completed <code>initialize</code>, <code>tools/list</code> and <code>tools/call</code> through stdio.
+The recorded path was the challenge response, selection of <code>resource_metadata</code>,
+a request to the second local service, reading <code>authorization_servers</code> and an
+authorization-server metadata request. The redirect fixture returned HTTP 302.
+The fifteen canary events occurred within these three scenarios and provide no
+installation count.</p>
+<p>The test-mode conditions stated in the opening result apply to all three cases.
+Observed absence of Authorization headers is confined to these cases. The illustrative
+address <code>http://mock-service.local</code> denotes a local fixture role. The recorded
+procedure binds to loopback; this label supplies no production destination.</p>
+<p>The source procedure and dependency lock are retained for technical review. This
+dossier assembly did not execute the program again.
+<a href="procedures/cve-signature-sweep-20261009/verify_stdio.mjs">Recorded CLI procedure</a>.</p>
+<h2>3. Continuity over 58 releases</h2>
+<p>All <strong>74 stable archives</strong> in the inspected <code>0.1.16–0.14.3</code> interval were acquired
+and integrity-checked. The first-party helper chain occurs in 58 releases.</p>
+<table>
+<thead>
+<tr>
+<th>Stable interval</th>
+<th style="text-align:right">Releases</th>
+<th>Static observation</th>
+<th>Selected-helper execution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.16 through 0.1.31</td>
+<td style="text-align:right">16</td>
+<td>Selected first-party helper set absent</td>
+<td>Not executed with this helper set</td>
+</tr>
+<tr>
+<td>0.1.32 through 0.1.38</td>
+<td style="text-align:right">7</td>
+<td>Selected chain present</td>
+<td>Completed</td>
+</tr>
+<tr>
+<td>0.1.39 through 0.14.3</td>
+<td style="text-align:right">51</td>
+<td>Selected chain persists; fetch option changes</td>
+<td>Completed</td>
+</tr>
+</tbody>
+</table>
+<p>The 58 per-release helper executions recorded <strong>290 local HTTP events</strong>. The fixture
+tested a header-selected location, a redirect and a same-origin control. Its fetch
+wrapper permits only the fixture's local origin; the redirect stays within that origin.
+Full CLI coverage remains limited to 0.14.3. The 58 historical runs executed the
+selected helpers, and the absence of those helpers in the earlier 16 releases leaves
+other SDK paths in those releases unevaluated.</p>
+<p>The first-party file was introduced in commit
+<code>d20f595891a04a31191dbb1640ca529fd6ea8cf2</code>. The author date is 28 November 2025;
+the committer date and npm 0.1.32 publication date are 17 December 2025.
+Version 0.1.39 adds <code>Accept-Encoding: identity</code> to the selected fetch helper without
+adding local destination validation or an explicit redirect override. Authorization-server
+metadata URL construction changes in 0.1.48. An explicitly configured endpoint can
+avoid discovery in some configurations.</p>
+<p>The Git comparison contains 178 commits. Release heads 0.1.23 and 0.1.28 are on
+side branches and were resolved separately. Continuity of the selected path does not
+mean an immutable OAuth architecture or a single linear history for all release heads.</p>
+<p>The matrix preserves release, artifact hash, registry integrity, commit, source member,
+location and function fingerprints. Different normalizers retain distinct semantics.
+<a href="data/release-history.json">JSON matrix</a> · <a href="data/release-history.csv">CSV</a> ·
+<a href="procedures/cve-history-enterprise-20261009/verify_history_runtime.mjs">Recorded historical procedure</a>.</p>
+<h2>4. Comparison cohort and analyzer limits</h2>
+<p>The corporate and Marketplace screening pipeline combines a custom TypeScript 5.9.3
+AST-shingle filter with targeted Semgrep 1.180.0 rules. Function comparisons and
+structural candidate rules select files for Semgrep. Timeouts and engine errors
+remain explicit coverage gaps.</p>
+<p>Similarity uses multiset Sørensen–Dice over five-token AST shingles:
+<code>D(A,B) = 2 * Σ_g min(c_A(g), c_B(g)) / (Σ_g c_A(g) + Σ_g c_B(g))</code>.
+Bound local identifiers are normalized before comparison. Each reported percentage describes one function. Package-wide similarity and
+detection accuracy were not measured. Additional structural routes include combined metadata/network indicators
+and delimiter-MD5 namespace patterns. The comparisons use the strict thresholds <code>&gt;0.85</code> and <code>&gt;0.80</code>. The watchdog
+limits each Semgrep invocation to 15 seconds of elapsed wall-clock time rather than
+CPU time. The 48-archive npm reference-family matcher remains a separate method.
+<a href="data/analysis-limitations.json">Recorded method and limits</a>.</p>
+<p>The <a href="procedures/screening/README.md">portable screening source</a> includes the
+AST-shingle analyzer, candidate filter, Semgrep rules, reference inputs, watchdog and
+small positive and negative controls. It is separate from the retained <code>ast.mjs</code>
+reference-family matcher. Historical procedures remain unchanged. Packaging
+adaptations and the clean-directory control results are recorded in
+<a href="data/screening-toolkit.json">screening-toolkit.json</a>.</p>
+<p>The public corporate comparison cohort contains <strong>33 artifacts / 1,325 source instances</strong>:
+11 npm archives, two VSIX archives and 20 pinned Git repository snapshots.</p>
+<table>
+<thead>
+<tr>
+<th>Publisher grouping</th>
+<th style="text-align:right">Artifacts</th>
+<th style="text-align:right">Source instances</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adobe</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">724</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">191</td>
+</tr>
+<tr>
+<td>Capital One</td>
+<td style="text-align:right">24</td>
+<td style="text-align:right">410</td>
+</tr>
+</tbody>
+</table>
+<p>After targeted provenance review the categories are <strong>A=0, B=1, C=32</strong>. Category A
+requires the specific first-party discovery/request route. Category B records a shared
+component or narrower structure. Category C means the selected indicators were not
+found in the processed scope. Each category applies only to the processed scope. B can coexist with coverage
+gaps; C does not rate the overall security of a product.</p>
+<p><strong>A false-positive rate was not measured.</strong> Zero confirmed Category A results does
+not establish 0% false positives. The cohort lacks independently complete ground-truth
+labels, and one full-bundle analysis gap remains. The AST-shingle filter excluded
+1,324 files from Semgrep selection; Semgrep was invoked for one candidate and did
+not complete its full parse.</p>
+<h3>Azure Resources boundary case</h3>
+<p>For <code>ms-azuretools.vscode-azureresourcegroups@0.13.2</code>, source review localized server-side
+metadata and challenge-response helpers. The extracted <code>buildWwwAuthenticateHeader</code>
+constructs a response header. Four extracted helpers have no direct outbound network
+call in the inspected slices. This supports <strong>Category B</strong> for the extracted server-side helpers. The result
+establishes neither the client-side discovery-to-fetch route nor network isolation
+of the whole extension.</p>
+<p>The full bundle retains a syntax-analysis gap involving class static initialization
+blocks. In the complete forced-control set, <strong>21</strong> controls received partial analysis
+and <strong>three</strong> controls without the construct were scanned. All 24 processes returned
+exit code zero. Nine problematic cases belong only to the narrower minimal-controls
+subset. A successful process exit is not evidence of complete semantic analysis.</p>
+<h3>Additional engine outcomes</h3>
+<p>The Marketplace pass contains 11 Semgrep invocations: one completed scan,
+six timeout flags and four engine-error records. The four errors consist of
+<strong>one Out of memory, two Syntax error and one PartialParsing</strong> classifications.</p>
+<p>Of the six timeout-flagged records, five record exit <code>-9</code> and one records exit <code>0</code>
+for <code>anthropic.claude-code@2.1.89</code>. A timeout flag does not itself prove forced
+termination. Independent signal-delivery receipts and confirmation that all descendant
+processes exited are absent. These distinctions do not change the cohort categories.</p>
+<p><a href="data/analysis-limitations.json">Analysis outcome records</a> ·
+<a href="data/screening-cohorts.json">Cohort details</a>.</p>
+<h2>5. Code distribution and the relationships established</h2>
+<p>The <a href="CODE_DISTRIBUTION.md">code distribution map</a> provides a direct path from
+package or repository identity to file and function evidence. The npm selection
+contains <strong>48 package/version archives</strong> selected from 411 package identities. Its results are <strong>nine reference-function-positive records, four namespace-only
+records, four generic discovery records and 31 unmatched records</strong>. The 13 records in
+the first two groups include upstream <code>mcp-remote</code> as a control.</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Version</th>
+<th>Artifact role</th>
+<th style="text-align:right">Reference matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@abluva/mcp-remote</td>
+<td>2.1.0</td>
+<td>upstream-family-distribution</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>mcp-remote</td>
+<td>0.14.3</td>
+<td>upstream-control</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>@ignatov.dev/mcp-remote</td>
+<td>0.1.40</td>
+<td>upstream-family-distribution</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>@thespeakup/mcp-remote</td>
+<td>0.1.43-thespeakup.0</td>
+<td>upstream-family-distribution</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>@zgeoff/mcp-remote</td>
+<td>0.1.38</td>
+<td>upstream-family-distribution</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>@automattic/mcp-remote</td>
+<td>0.1.50</td>
+<td>upstream-family-distribution</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>@beeper/mcp-remote</td>
+<td>0.0.2</td>
+<td>namespace-pattern-candidate</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>@computec/mcp-remote</td>
+<td>0.1.32</td>
+<td>namespace-pattern-candidate</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>mcp-remote-alibaba-cloud</td>
+<td>0.1.38</td>
+<td>cloud-labelled-distribution</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>@automattic/mcp-wordpress-remote</td>
+<td>0.5.1</td>
+<td>declared-wordpress-adapter</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>@neworange/neworange-mcp-remote</td>
+<td>0.1.39</td>
+<td>upstream-family-distribution</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>mcp-remote-ultra</td>
+<td>1.0.0</td>
+<td>upstream-family-distribution</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>mcp-search-package</td>
+<td>1.0.13</td>
+<td>namespace-pattern-candidate</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p>A repository fork relationship, a renamed distribution, an adapter's declared purpose,
+a package alias and a shared algorithm are different relationships. No alias or formal
+Git fork relationship is assigned solely because code is similar.</p>
+<ul>
+<li>
+<p>The retained GitHub metadata identifies <code>Ashesh3/mcp-remote-entra</code> and
+<code>explorium-ai/mcp-remote</code> as forks with <code>punkpeye/mcp-remote</code> as parent. These
+relationships support the provenance record and add no npm observations.</p>
+</li>
+<li>
+<p><code>@automattic/mcp-remote@0.1.50</code> has nine reference matches.
+<code>@automattic/mcp-wordpress-remote@0.5.1</code> declares a WordPress proxy purpose but
+has zero reference matches and four namespace matches in this selection.
+The latter is not promoted to the same demonstrated discovery lineage.</p>
+</li>
+<li>
+<p><code>mcp-remote-alibaba-cloud@0.1.38</code> is a cloud-labelled distribution with nine
+reference matches. Its name and declared repository do not establish corporate
+ownership, internal deployment or the behavior of an installed product.</p>
+</li>
+<li>
+<p><code>krafton-ai/KIRA</code> at commit
+<code>652dacbf14d29ea93a83c496ee91e0e5ba286721</code> contains a Category B namespace-helper
+match in <code>KiraClaw/apps/desktop/lib/register-ipc.js</code>, starting at line 262.
+Function similarity is 0.907563. This is an observation about one helper;
+the complete discovery route and product exposure remain unestablished.</p>
+</li>
+<li>
+<p><code>mcp-remote-ultra@1.0.0</code> contains normalized reference matches relative to
+<code>0.1.38</code> for <code>getServerUrlHash</code> and <code>fetchAuthorizationServerMetadata</code>,
+alongside one <code>md5-config-namespace</code> structural result. These function-level
+observations support its upstream-family classification. They do not establish
+the package's complete discovery behavior or deployment context, and the remaining
+components may be independently implemented. The inspected member is
+<code>package/dist/chunk-M36YVINN.js</code>, 760,846 bytes, SHA-256
+<code>62c5296bd778c8829280ab2a1a38deb70c193451eb5a0c2710e1ee1ed42f6630</code>.
+The declared <code>cobach/mcp-remote</code> repository is retained as declared provenance metadata.
+<a href="data/ecosystem-lineage.json">Function-level evidence</a>.</p>
+</li>
+</ul>
+<p>The separate Git corpus contains <strong>232 file records, 221 repositories and 225 unique
+Git blobs</strong>. It includes 222 JS/TS files and ten non-runtime records. Categories are
+<strong>A=0, B=9, C=223</strong>. Nine files, including an upstream file, contain the selected
+delimiter-joined namespace structure; six exceeded the function-similarity threshold
+and three were retained by structural rules. These nine file observations do not establish nine downstream defects and must
+not be added to the 13 npm records as a count of unique products.</p>
+<p>The three additional screening cohorts contain <strong>63 distinct pinned artifact identities</strong>:
+21 npm archives, 22 VSIX archives and 20 Git snapshots. They contain <strong>8,057 source
+instances</strong>. Files were not deduplicated globally, and these identities supply no
+count of deployed products.
+Current categories are <strong>A=0, B=4, C=51, UNRESOLVED=8</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Additional cohort</th>
+<th style="text-align:right">Pinned artifacts</th>
+<th style="text-align:right">Source instances</th>
+<th style="text-align:right">A</th>
+<th style="text-align:right">B</th>
+<th style="text-align:right">C</th>
+<th style="text-align:right">UNRESOLVED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Calibration</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">3033</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>Corporate pilot, after targeted review</td>
+<td style="text-align:right">33</td>
+<td style="text-align:right">1325</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">32</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>Marketplace</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">3699</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align:right">63</td>
+<td style="text-align:right">8057</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">51</td>
+<td style="text-align:right">8</td>
+</tr>
+</tbody>
+</table>
+<p>Zero Category A observations in these cohorts do not cancel matching code in the
+separately inspected npm and Git material. All three Marketplace B artifacts retain
+coverage gaps, as does the targeted Azure B result. The Marketplace component
+covers VS Code Marketplace only; Open VSX and separate Cursor-served builds were
+not inspected in that pass.</p>
+<p><a href="data/npm-48.json">48-package map</a> · <a href="data/git-232.json">232-file map</a> ·
+<a href="data/ecosystem-lineage.json">Lineage classification</a>.</p>
+<h2>6. Search-index coverage boundaries</h2>
+<p>Two documented GitHub search surfaces and the local measurement use different limits:</p>
+<table>
+<thead>
+<tr>
+<th>Surface</th>
+<th>Documented or measured condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current web Code Search</td>
+<td>Files over 350 KiB are excluded; generated and vendored code is excluded</td>
+</tr>
+<tr>
+<td>REST Search code</td>
+<td>Files smaller than 384 KB are searchable</td>
+</tr>
+<tr>
+<td>Local inventory counter</td>
+<td>202 Marketplace files exceed 384 KiB, exactly 393,216 bytes</td>
+</tr>
+</tbody>
+</table>
+<p>The first two rows describe indexing policies. Neither defines a physical limit
+of JavaScript analysis. The KB label in the REST documentation is not converted into an
+asserted implementation byte boundary. The local counter is a separate measurement.</p>
+<table>
+<thead>
+<tr>
+<th>Inspected artifact member</th>
+<th style="text-align:right">Bytes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mcp-remote 0.1.38 main bundle</td>
+<td style="text-align:right">755586</td>
+</tr>
+<tr>
+<td>mcp-remote 0.14.3 main bundle</td>
+<td style="text-align:right">1413594</td>
+</tr>
+<tr>
+<td>Cline Chinese 4.1.23 extension bundle</td>
+<td style="text-align:right">26994702</td>
+</tr>
+</tbody>
+</table>
+<p>These particular members exceed both documented search boundaries. An indexed
+negative cannot establish absence of embedded code from the published archive.
+Smaller source files or manifests may remain discoverable. These observations
+establish a gap in the specified indexes, without assessing every available analyzer. Direct artifact acquisition addresses
+this coverage gap while local parsing and engine limits remain explicit.</p>
+<p><a href="https://docs.github.com/en/search-github/github-code-search/about-github-code-search#limitations">Current Code Search documentation</a> ·
+<a href="https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28#search-code">REST Search code documentation</a> ·
+<a href="data/search-scope.json">Recorded scope and units</a>.</p>
+<h2>7. Engineering recommendations</h2>
+<p><strong>Recommended application policy: Operator-Approved Issuer Allowlist, combined with
+resource and destination binding.</strong> Establish approved resource-to-issuer relationships
+out of band or through an explicit administrative decision.</p>
+<p>The policy must also validate the first resource-metadata destination before any
+request: issuer approval alone does not cover a request made before issuer selection.
+Apply the destination policy to each redirect and to the address used by the actual
+connection. Check the declared resource and issuer consistently. Necessary local
+access should be a narrow configured exception. Preserve allowed discovery scenarios
+in regression checks and test compatibility with the intended deployment environment.</p>
+<p><a href="https://www.rfc-editor.org/rfc/rfc9728.html#section-7.6">RFC 9728 §7.6</a> makes
+authorization-server selection application dependent;
+<a href="https://www.rfc-editor.org/rfc/rfc9728.html#section-7.7">RFC 9728 §7.7</a>
+recommends precautions against unwanted internal requests. The proposed allowlist is
+a concrete policy consistent with that context. The RFC permits application-specific
+choices, and this research has not implemented a patch.</p>
+<h2>8. Bounded catalog interval</h2>
+<p>For the specific first-party path, the evidence-supported stable-version interval is
+<strong><code>&gt;=0.1.32, &lt;=0.14.3</code></strong>. The lower bound is material: the earlier 16 inspected
+releases did not contain the selected first-party helper set. An unbounded
+<code>&lt;=0.14.3</code> label would include releases not supported by this observation.</p>
+<p>This is a research recommendation for the evaluated mechanism. It neither modifies
+official affected-version records nor identifies a fixed release. Prereleases and
+versions after 0.14.3 were not evaluated. The interval must not be copied automatically
+to every research finding or published CVE record.</p>
+<h2>9. Evidence accounting and Phase 1 status</h2>
+<p>The package uses seven canonical result groups. Repeated copies or later summaries
+of a source are counted once. A targeted classification update changes an existing
+cohort row rather than adding an artifact. Reuse of the 0.14.3 archive across release,
+CLI and package-selection views is identified explicitly.</p>
+<p><a href="EVIDENCE.md">Evidence accounting</a> and <a href="data/evidence-lineage.json">machine-readable lineage</a>
+separate artifact identity, file-instance counts and execution results. A second source
+review is not relabelled as a new runtime experiment. Global installation and product
+totals are not inferred.</p>
+<p>Revision r3 preserves the recorded experiments and adds portable scanning sources
+and a reviewable code distribution map. Assembly checks cover saved counts, source
+identities, distribution parity, document links and publication consistency. The
+small screening controls parse source as data; they do not execute the target program.
+Fresh installation, external reproduction of the runtime experiments and catalog
+changes remain outside this verification.</p>
+<p><a href="REPRODUCIBILITY.md">Reproduction inputs</a> · <a href="data/input-receipts.json">input receipts</a> ·
+<a href="VALIDATION.json">validation</a> · <a href="MANIFEST.json">package manifest</a>.</p>
+</main></body></html>

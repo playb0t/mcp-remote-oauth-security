@@ -1,0 +1,46 @@
+{
+  "checked_date": "2026-10-09",
+  "source_url": "https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28#search-code",
+  "documentation_unit": "KB",
+  "documented_file_condition": "Files smaller than 384 KB",
+  "scope": "REST Search code; accompanying syntax page is explicitly legacy.",
+  "default_branch_only": true,
+  "maximum_results_per_query": 1000,
+  "local_counter": {
+    "threshold_bytes": 393216,
+    "unit": "384 KiB",
+    "marketplace_files_above_threshold": 202
+  },
+  "inference": "The inspected bundle members exceed both documented search boundaries. Other repository files can remain discoverable; no universal impossibility or scanner-wide limit is asserted.",
+  "schema_version": 2,
+  "modern_web_code_search": {
+    "documentation_url": "https://docs.github.com/en/search-github/github-code-search/about-github-code-search",
+    "excluded_file_condition": "Empty files and files over 350 KiB are excluded",
+    "threshold_bytes": 358400,
+    "unit": "350 KiB",
+    "generated_and_vendored_code_excluded": true,
+    "scope": "Documented indexing policy of the current web code-search surface, not a physical JavaScript analysis ceiling."
+  },
+  "rest_code_search": {
+    "documentation_url": "https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28",
+    "condition": "Files smaller than 384 KB",
+    "byte_equivalent_asserted": null,
+    "default_branch_only": true
+  },
+  "source_receipts": [
+    {
+      "id": "modern_code_search",
+      "url": "https://docs.github.com/en/search-github/github-code-search/about-github-code-search",
+      "checked_at_utc": "2026-10-09T12:54:29.906599+00:00",
+      "http_status": 200,
+      "response_sha256": "9b67281d3f446734000e8cbb469ddcfef77b180b0756c33fa2e3e07bfd647c58"
+    },
+    {
+      "id": "rest_code_search",
+      "url": "https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28",
+      "checked_at_utc": "2026-10-09T12:54:29.906599+00:00",
+      "http_status": 200,
+      "response_sha256": "3c1d3b068d01f98c3ac5a108aa505a1247f802729ee9fe5925ec7fac8e912913"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/hash.js",
+      "member": "hash.js",
+      "sha256": "872007465f5eb4f69094ae4e6bf2ec2c1ced4fc106ef3ea151f95af5d5b8da62"
+    },
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/metadata.js",
+      "member": "metadata.js",
+      "sha256": "3d6960a54df009c02004bb206f9d9c450c66d98f3c58bbfb50a36d511f7ba6d6"
+    },
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/reference-hash.js",
+      "member": "reference-hash.js",
+      "sha256": "3b4672fec91d5a0550f91c994edee64b29287bac88359559425a527c4596dd26"
+    },
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/negative.js",
+      "member": "negative.js",
+      "sha256": "46226c81217cae36cf030a6af35efba0419f65859e1de3d5ef4a2045af7f8553"
+    },
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/malformed.js.txt",
+      "member": "malformed.js.txt",
+      "sha256": "b9ef0f79b7d0a7f693e6177a6702a8ba67b3eba2b7af221e83fe3a333bda0586"
+    }
+  ]
+}

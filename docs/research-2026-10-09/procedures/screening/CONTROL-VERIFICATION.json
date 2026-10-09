@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "scope": "r3 portable toolkit controls only",
+  "passed": true,
+  "environment": {
+    "node": "v24.19.0",
+    "typescript": "5.9.3",
+    "semgrep": "1.180.0",
+    "semgrep_core_sha256": "cd95f3b3838b4830b387af722f9d65831854a415cfee124a8841158a5eb12ff2",
+    "supervisor_python": "3.10.12",
+    "ast_host": "Windows",
+    "semgrep_host": "WSL/Linux"
+  },
+  "separate_clean_directory": true,
+  "ast_controls": {
+    "schema_version": 1,
+    "passed": true,
+    "checks": [
+      {
+        "id": "evaluate-rejects-profile:constructor",
+        "passed": true
+      },
+      {
+        "id": "manifest-gate-rejects-profile:constructor",
+        "passed": true
+      },
+      {
+        "id": "evaluate-rejects-profile:toString",
+        "passed": true
+      },
+      {
+        "id": "manifest-gate-rejects-profile:toString",
+        "passed": true
+      },
+      {
+        "id": "evaluate-rejects-profile:__proto__",
+        "passed": true
+      },
+      {
+        "id": "manifest-gate-rejects-profile:__proto__",
+        "passed": true
+      },
+      {
+        "id": "evaluate-rejects-profile:corproate",
+        "passed": true
+      },
+      {
+        "id": "manifest-gate-rejects-profile:corproate",
+        "passed": true
+      },
+      {
+        "id": "bound-local-rename-invariance",
+        "passed": true
+      },
+      {
+        "id": "selected-reference-exact-match",
+        "passed": true
+      },
+      {
+        "id": "reference-token-digests",
+        "passed": true
+      },
+      {
+        "id": "negative-prefilter",
+        "passed": true
+      },
+      {
+        "id": "corporate-marketplace-threshold-separation",
+        "passed": true
+      },
+      {
+        "id": "malformed-is-unresolved",
+        "passed": true
+      },
+      {
+        "id": "path-traversal-rejected",
+        "passed": true
+      },
+      {
+        "id": "corporate-counts",
+        "passed": true
+      },
+      {
+        "id": "corporate-unclassified",
+        "passed": true
+      },
+      {
+        "id": "marketplace-counts",
+        "passed": true
+      },
+      {
+        "id": "marketplace-unclassified",
+        "passed": true
+      }
+    ],
+    "parser": "typescript@5.9.3",
+    "inputs_executed": false,
+    "control_scope": "five-file pipeline plus a threshold-boundary fixture, local renaming, reference token digests and traversal rejection"
+  },
+  "semgrep_controls": {
+    "passed": true,
+    "checks": [
+      {
+        "id": "exact-semgrep-fixture:hash.js",
+        "passed": true
+      },
+      {
+        "id": "exact-semgrep-fixture:metadata.js",
+        "passed": true
+      },
+      {
+        "id": "exact-semgrep-fixture:reference-hash.js",
+        "passed": true
+      },
+      {
+        "id": "negative-and-unresolved-preserved",
+        "passed": true
+      },
+      {
+        "id": "nested-engine-error-locations-excluded",
+        "passed": true
+      },
+      {
+        "id": "supervisor-normal-exit",
+        "passed": true
+      },
+      {
+        "id": "supervisor-wall-clock-expiry",
+        "passed": true
+      },
+      {
+        "id": "supervisor-budget-contract",
+        "passed": true
+      }
+    ],
+    "normal": {
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.025472043000000166,
+      "budget_seconds": 1,
+      "status": "PROCESS_FINISHED",
+      "termination_scope": "process-group-signal-attempt",
+      "signal_sent": false,
+      "leader_reaped": true,
+      "descendant_exit_confirmed": false
+    },
+    "expired": {
+      "exit_code": -9,
+      "timed_out": true,
+      "wall_seconds": 0.10258474500000014,
+      "budget_seconds": 0.1,
+      "status": "UNRESOLVED_TIMEOUT",
+      "termination_scope": "process-group-signal-attempt",
+      "signal_sent": true,
+      "leader_reaped": true,
+      "descendant_exit_confirmed": false
+    },
+    "scope": "Static source fixtures and synthetic supervisor processes only; no target execution or network collection."
+  },
+  "result_counts": {
+    "files": 5,
+    "candidates": 3,
+    "ast_filtered": 1,
+    "intentionally_unresolved": 1,
+    "semgrep_invocations": 3,
+    "semgrep_rule_matches": 7
+  },
+  "results": [
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/hash.js",
+      "member": "hash.js",
+      "sha256": "872007465f5eb4f69094ae4e6bf2ec2c1ced4fc106ef3ea151f95af5d5b8da62",
+      "ast_status": "CANDIDATE",
+      "ast_matches": [
+        {
+          "candidate_symbol": "renamed",
+          "line": 1,
+          "end_line": 10,
+          "normalized_sha256": "1e2927d579846e6b7ffd037a03d68eff32117e3d5566d75c77128a26daa8789c",
+          "baseline_symbol": "getServerUrlHash",
+          "family": "mcp-specific",
+          "similarity": 0.9572649572649573,
+          "reference_fingerprint": "afb0c05092de933371b5dd32dfaa030d86d7015b3051460fd5efb6f430edb5e3",
+          "exact_normalized": false
+        }
+      ],
+      "candidate_reasons": [
+        "normalized-lineage-above-threshold",
+        "structural-md5-delimited-namespace"
+      ],
+      "classification": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.5203464879999999,
+      "budget_seconds": 15.0,
+      "status": "SCANNED",
+      "termination_scope": "process-group-signal-attempt",
+      "signal_sent": false,
+      "leader_reaped": true,
+      "descendant_exit_confirmed": false,
+      "raw_sha256": "80f7d2504b83ba0f5bdcdb0f2bc5ec2f568aaf550a04bacd3185fb2239250066",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "completeness": "selected-file-complete",
+      "matches": [
+        {
+          "rule_id": "mcp-session-hash-collision",
+          "line": 9,
+          "end_line": 9,
+          "member": "hash.js"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/metadata.js",
+      "member": "metadata.js",
+      "sha256": "3d6960a54df009c02004bb206f9d9c450c66d98f3c58bbfb50a36d511f7ba6d6",
+      "ast_status": "CANDIDATE",
+      "ast_matches": [],
+      "candidate_reasons": [
+        "structural-oauth-discovery-network"
+      ],
+      "classification": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.5187775329999997,
+      "budget_seconds": 15.0,
+      "status": "SCANNED",
+      "termination_scope": "process-group-signal-attempt",
+      "signal_sent": false,
+      "leader_reaped": true,
+      "descendant_exit_confirmed": false,
+      "raw_sha256": "dc1f801633810c22d2444c893891f30706d6ce7a4c78032c908f2ace7320a9ce",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "completeness": "selected-file-complete",
+      "matches": [
+        {
+          "rule_id": "mcp-ssrf-unvalidated-metadata",
+          "line": 4,
+          "end_line": 4,
+          "member": "metadata.js"
+        },
+        {
+          "rule_id": "mcp-ssrf-unvalidated-metadata",
+          "line": 9,
+          "end_line": 9,
+          "member": "metadata.js"
+        },
+        {
+          "rule_id": "mcp-ssrf-unvalidated-metadata",
+          "line": 15,
+          "end_line": 15,
+          "member": "metadata.js"
+        },
+        {
+          "rule_id": "mcp-ssrf-unvalidated-metadata",
+          "line": 20,
+          "end_line": 20,
+          "member": "metadata.js"
+        },
+        {
+          "rule_id": "mcp-resource-discovery-handoff",
+          "line": 32,
+          "end_line": 32,
+          "member": "metadata.js"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/reference-hash.js",
+      "member": "reference-hash.js",
+      "sha256": "3b4672fec91d5a0550f91c994edee64b29287bac88359559425a527c4596dd26",
+      "ast_status": "CANDIDATE",
+      "ast_matches": [
+        {
+          "candidate_symbol": "getServerUrlHash",
+          "line": 3,
+          "end_line": 11,
+          "normalized_sha256": "afb0c05092de933371b5dd32dfaa030d86d7015b3051460fd5efb6f430edb5e3",
+          "baseline_symbol": "getServerUrlHash",
+          "family": "mcp-specific",
+          "similarity": 1,
+          "reference_fingerprint": "afb0c05092de933371b5dd32dfaa030d86d7015b3051460fd5efb6f430edb5e3",
+          "exact_normalized": true
+        }
+      ],
+      "candidate_reasons": [
+        "normalized-lineage-above-threshold",
+        "structural-md5-delimited-namespace"
+      ],
+      "classification": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.4690265440000001,
+      "budget_seconds": 15.0,
+      "status": "SCANNED",
+      "termination_scope": "process-group-signal-attempt",
+      "signal_sent": false,
+      "leader_reaped": true,
+      "descendant_exit_confirmed": false,
+      "raw_sha256": "1247e7932f3076b713779b15263396502f19934dc196b22e40c7ffba6b793a5f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "completeness": "selected-file-complete",
+      "matches": [
+        {
+          "rule_id": "mcp-session-hash-collision",
+          "line": 10,
+          "end_line": 10,
+          "member": "reference-hash.js"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/negative.js",
+      "member": "negative.js",
+      "sha256": "46226c81217cae36cf030a6af35efba0419f65859e1de3d5ef4a2045af7f8553",
+      "ast_status": "AST_NOT_SELECTED",
+      "ast_matches": [],
+      "candidate_reasons": [],
+      "classification": null,
+      "status": "NOT_RUN_AST_FILTERED",
+      "completeness": "ast-only"
+    },
+    {
+      "artifact": {
+        "kind": "synthetic-control",
+        "name": "research-screening-controls",
+        "version": "r3"
+      },
+      "path": "controls/malformed.js.txt",
+      "member": "malformed.js.txt",
+      "sha256": "b9ef0f79b7d0a7f693e6177a6702a8ba67b3eba2b7af221e83fe3a333bda0586",
+      "ast_status": "UNRESOLVED",
+      "ast_matches": [],
+      "candidate_reasons": [
+        "ast-gap"
+      ],
+      "classification": null,
+      "status": "UNRESOLVED_AST",
+      "completeness": "incomplete"
+    }
+  ],
+  "limitations": [
+    "Existing runtime installations were reused; fresh dependency installation was not performed.",
+    "AST ran on Windows; the Semgrep process-group runner ran in WSL/Linux.",
+    "No historical target program, cloud endpoint or network collection was executed.",
+    "These controls do not establish false-positive rate, precision, recall or whole-cohort completeness."
+  ],
+  "corrective_verification": {
+    "change": "Project nested Semgrep error variants to scalar public labels; preserve nested locations only in raw engine output.",
+    "python_syntax_checks": 2,
+    "supervisor_and_projection_checks": 8,
+    "source_screening_rerun": false,
+    "basis": "Existing exact Semgrep fixture report reused; only affected supervisor and error-projection controls rerun."
+  },
+  "profile_validation": {
+    "change": "Both profile admission checks require own properties of PROFILES.",
+    "rejected_profiles": [
+      "constructor",
+      "toString",
+      "__proto__",
+      "corproate"
+    ],
+    "new_rejection_checks": 8,
+    "total_ast_checks": 19,
+    "javascript_syntax_checks": 2,
+    "fresh_directory": true,
+    "semgrep_rerun": false,
+    "historical_inputs_changed": false
+  }
+}

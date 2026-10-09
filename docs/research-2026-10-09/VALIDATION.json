@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "release_rows": 74,
+  "helper_runtime_rows": 58,
+  "cli_http_events_recounted": 43,
+  "helper_events_recounted": 290,
+  "npm_archives": 48,
+  "git_file_records": 232,
+  "canonical_result_groups": 7,
+  "cohort_observations": 63,
+  "local_links_checked": 56,
+  "timeout_flags": 6,
+  "engine_errors": {
+    "memory": 1,
+    "syntax": 2,
+    "partial_parsing": 1
+  },
+  "new_runtime_execution": false,
+  "checked_at_utc": "2026-10-09T16:39:15.770749+00:00",
+  "phase": "Phase 1 local evidence baseline",
+  "negative_contract_controls_rejected": 9,
+  "source_files_syntax_checked": 17,
+  "target_procedures_executed": false,
+  "validation_scope": "offline package consistency and links after third-party notice additions",
+  "semantic_review": "bounded independent review completed after corrections",
+  "host_paths_in_public_payload": 0,
+  "r3_checks": {
+    "status": "passed",
+    "npm_file_records": 1809,
+    "git_file_records": 232,
+    "cohort_file_instances": 8057,
+    "cohort_artifacts": 63,
+    "all_local_document_links": 96,
+    "html_structure": [
+      {
+        "file": "CODE_DISTRIBUTION.html",
+        "tables": 3,
+        "headings": 32,
+        "source_sha256_present": true
+      },
+      {
+        "file": "RESEARCH_DOSSIER.html",
+        "tables": 7,
+        "headings": 13,
+        "source_sha256_present": true
+      }
+    ],
+    "visual_browser_review": false,
+    "target_program_executed": false
+  },
+  "screening_controls": {
+    "receipt": "procedures/screening/CONTROL-VERIFICATION.json",
+    "sha256": "7306b3e01b43996b246c43ff33f3a874716ff4e043be057e064b55a4639bed0e",
+    "passed": true,
+    "fresh_directory": true,
+    "fresh_dependency_install": false,
+    "ast_assertions": 19,
+    "semgrep_and_supervisor_assertions": 8,
+    "result_counts": {
+      "files": 5,
+      "candidates": 3,
+      "ast_filtered": 1,
+      "intentionally_unresolved": 1,
+      "semgrep_invocations": 3,
+      "semgrep_rule_matches": 7
+    },
+    "dependencies_installed": false,
+    "target_execution": false,
+    "network_collection": false,
+    "error_projection_control_passed": true,
+    "profile_rejection_controls_passed": true
+  },
+  "editorial_revision": "r3",
+  "editorial_source_checks": "passed",
+  "html_structure_and_link_labels": [
+    {
+      "file": "CODE_DISTRIBUTION.html",
+      "tables": 3,
+      "headings": 32,
+      "source_sha256_present": true
+    },
+    {
+      "file": "RESEARCH_DOSSIER.html",
+      "tables": 7,
+      "headings": 13,
+      "source_sha256_present": true
+    }
+  ],
+  "visual_layout_review": "not performed",
+  "new_behavioral_experiments": false,
+  "third_party_notice_update": {
+    "prepared_files_copied_byte_for_byte": {
+      "LICENSE.typescript-sdk": {
+        "path": "procedures/screening/references/LICENSE.typescript-sdk",
+        "sha256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d",
+        "bytes": 1071
+      },
+      "LICENSE.pkce-challenge": {
+        "path": "procedures/screening/references/LICENSE.pkce-challenge",
+        "sha256": "feb87a2e0c305de3464cc44077da5393c52d8ca6362d37427157d04ec6f4510d",
+        "bytes": 1057
+      },
+      "THIRD-PARTY-NOTICES.md": {
+        "path": "procedures/screening/references/THIRD-PARTY-NOTICES.md",
+        "sha256": "c486218a22b47fe7e146e0e4268501fdcef6450b9bb6b180926443d4ad0f27ed",
+        "bytes": 1372
+      }
+    },
+    "existing_mcp_remote_license_preserved": true,
+    "source_functions_preserved": true,
+    "sdk_functions": 5,
+    "pkce_functions": 1,
+    "previous_full_validation_at_utc": "2026-10-09T16:02:55.346401+00:00",
+    "behavioral_experiments_repeated": false,
+    "screening_controls_reexecuted": false,
+    "previous_archive_rebuilt": false
+  }
+}
