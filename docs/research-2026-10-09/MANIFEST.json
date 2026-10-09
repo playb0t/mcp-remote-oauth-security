@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 159,
-      "sha256": "0f982325523757fc1a1af3e26eb06887e598d275397f2f61e1208a583d6bfe8a"
+      "bytes": 280,
+      "sha256": "9653b79ab89a1d9b58a92f5f83fa1da8562337dc29e67393933c9989259a47ec"
     },
     {
       "path": "CODE_DISTRIBUTION.html",
@@ -36,6 +36,91 @@
       "path": "data/code-distribution.json",
       "bytes": 6033631,
       "sha256": "331b066a7ffaf3c1e3c624925f119b110cbe18cb5fc07101b2a0919803110d9f"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/collect.py",
+      "bytes": 5175,
+      "sha256": "2d8567529aebad021289f9d17a517ae7da5ec2cf818ebacc1f2a2b9bb4118499"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/counter-captions.json",
+      "bytes": 2085,
+      "sha256": "fa5c0d4b347891ae79aebb5b3c7dc08e45e8feefb90b5f8ed2188acaf85d84f4"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/daily.json",
+      "bytes": 9239,
+      "sha256": "feb968a9e7d8bd4a6a9f9121bfba0ae432c60af76e2279c5e06125c713396dcb"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/last-day.json",
+      "bytes": 83,
+      "sha256": "cd87f094b79c57651e5234c201fcc6c57efed0ea354458d434c715b66a11bcd3"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/last-week.json",
+      "bytes": 83,
+      "sha256": "49cca96d8a3e5bbec61c0b77f8c7b17784a0634b1ced81e3d71d0b4213d01356"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/point.json",
+      "bytes": 85,
+      "sha256": "4905eda2628b3db33765f8b172309af6407cd55d19a94cd8746b35a38a328739"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/provenance.json",
+      "bytes": 2604,
+      "sha256": "40b8d27234ede168581871c1b26035c229c314ab34579f371d42177fd2a25c77"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/README.md",
+      "bytes": 3779,
+      "sha256": "510521a402efb902032c5c7533f57b61a7d0e40a6e6b00bdc45eee484dbf5efe"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/receipts.json",
+      "bytes": 1470,
+      "sha256": "bd18d6dacf42591763d8790fd479e7399b43ac46d6c2c1156d66b2a7161441a5"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/recent-version-counts.json",
+      "bytes": 914,
+      "sha256": "b21c838e07e2988d9fcfd1f9568aba9fc8e7872f37a1b9c583a7a658d25bf258"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/RECOUNT.json",
+      "bytes": 1112,
+      "sha256": "435a9da794ca56b877ed3d062be3c18713102436b96e18d86b24b79a06b28251"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/signature-footprint.json",
+      "bytes": 31367,
+      "sha256": "25513f8af9cebc812f909e9c567b89537868a2fd9ad9146438d48d9181190ee2"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/source-manifest.json",
+      "bytes": 1880,
+      "sha256": "fe1ec776dc529f1a2c074a2ea7b417fbe7087af8c29eff0c3ceea9167cb3e2e6"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/summarize_footprint.py",
+      "bytes": 9178,
+      "sha256": "a17d291bb8626c69952f7c690a7252cc13f5693e1c62e96e0aa1b9e54b341473"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/summary.json",
+      "bytes": 2070,
+      "sha256": "b6e03412d661efd7c2c32f88ce2f6ec90857c192246643985cd0455d79a7e32c"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/version-selection.json",
+      "bytes": 2330,
+      "sha256": "f1a103d2bff5e328633cb6dbea4ece816f2f840d1abdc601a8ce8f3f55f7101d"
+    },
+    {
+      "path": "data/downloads-and-signature-footprint-2026-10-09/versions-week.json",
+      "bytes": 1448,
+      "sha256": "303fff64ac0f74085d312bf2beeaccf2867798176b252531d1105f99c27875f2"
     },
     {
       "path": "data/ecosystem-lineage.json",
@@ -91,6 +176,11 @@
       "path": "data/standards.json",
       "bytes": 2803,
       "sha256": "ef9ff59b8f0712083589d86cf637c9260e65a6c55af80a473b4bfa6edb6fde12"
+    },
+    {
+      "path": "DOWNLOAD_SNAPSHOT_AND_CODE_FOOTPRINT.md",
+      "bytes": 4903,
+      "sha256": "dee17e5a2bedb142d3acf383e75e9db5231727c73a78cca40ac74b92c9ec6c2c"
     },
     {
       "path": "EVIDENCE.md",
@@ -269,13 +359,13 @@
     },
     {
       "path": "RESEARCH_DOSSIER.html",
-      "bytes": 28620,
-      "sha256": "0329316cb4060129cc32ff2497887e7f999e2430b608047a4a899d7e3d0a54ef"
+      "bytes": 28728,
+      "sha256": "af0181fba6dca30391da0325c4547ea355d12b57a71f7255fb03d3a980e7df64"
     },
     {
       "path": "RESEARCH_DOSSIER.md",
-      "bytes": 22294,
-      "sha256": "3157bfb37167eec7cfa9a64f8fc022a40d7828a0c79a4c823c76e0bc314d81b0"
+      "bytes": 22385,
+      "sha256": "beaeb1b6f7bc49b2b08debb8c4eb25e7fca851ff7f5cff8648be531e42861e0f"
     },
     {
       "path": "rules/mcp_shadow_fingerprint.yaml",
@@ -284,8 +374,8 @@
     },
     {
       "path": "validate.py",
-      "bytes": 10190,
-      "sha256": "7ecde50ae56ce45eb6c61d1045f72e1538dd150c45106792d03ae1ae037cd7bb"
+      "bytes": 10762,
+      "sha256": "bc4348d503340d05cafd4649a46144f94a9baa53d8ed23a20da1b05263083633"
     },
     {
       "path": "validate_r3.py",
@@ -294,8 +384,8 @@
     },
     {
       "path": "VALIDATION.json",
-      "bytes": 3735,
-      "sha256": "48d3a24acce71f59f363fa67e082f5983260d60d61d61025a2e8eec30a50dc2f"
+      "bytes": 5286,
+      "sha256": "9ec324e9718872443087f9c7050ba2ad9d5247fdc183b58f35bcc118b6a857f0"
     }
   ]
 }

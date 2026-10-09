@@ -1,3 +1,4 @@
 * -text
 procedures/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 rules/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+data/downloads-and-signature-footprint-2026-10-09/*.json whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

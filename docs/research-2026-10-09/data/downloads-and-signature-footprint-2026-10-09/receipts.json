@@ -1,0 +1,42 @@
+[
+  {
+    "id": "last-day",
+    "url": "https://api.npmjs.org/downloads/point/last-day/mcp-remote",
+    "read_at_utc": "2026-10-09T15:36:34.213947+00:00",
+    "http_status": 200,
+    "sha256": "cd87f094b79c57651e5234c201fcc6c57efed0ea354458d434c715b66a11bcd3",
+    "bytes": 83
+  },
+  {
+    "id": "daily",
+    "url": "https://api.npmjs.org/downloads/range/2026-02-17:2026-10-09/mcp-remote",
+    "read_at_utc": "2026-10-09T15:36:35.548553+00:00",
+    "http_status": 200,
+    "sha256": "feb968a9e7d8bd4a6a9f9121bfba0ae432c60af76e2279c5e06125c713396dcb",
+    "bytes": 9239
+  },
+  {
+    "id": "point",
+    "url": "https://api.npmjs.org/downloads/point/2026-02-17:2026-10-09/mcp-remote",
+    "read_at_utc": "2026-10-09T15:36:36.780435+00:00",
+    "http_status": 200,
+    "sha256": "4905eda2628b3db33765f8b172309af6407cd55d19a94cd8746b35a38a328739",
+    "bytes": 85
+  },
+  {
+    "id": "last-week",
+    "url": "https://api.npmjs.org/downloads/point/last-week/mcp-remote",
+    "read_at_utc": "2026-10-09T15:36:37.600465+00:00",
+    "http_status": 200,
+    "sha256": "49cca96d8a3e5bbec61c0b77f8c7b17784a0634b1ced81e3d71d0b4213d01356",
+    "bytes": 83
+  },
+  {
+    "id": "versions-week",
+    "url": "https://api.npmjs.org/versions/mcp-remote/last-week",
+    "read_at_utc": "2026-10-09T15:36:38.864413+00:00",
+    "http_status": 200,
+    "sha256": "303fff64ac0f74085d312bf2beeaccf2867798176b252531d1105f99c27875f2",
+    "bytes": 1448
+  }
+]

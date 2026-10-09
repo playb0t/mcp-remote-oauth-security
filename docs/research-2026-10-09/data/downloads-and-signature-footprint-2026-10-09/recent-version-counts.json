@@ -1,0 +1,32 @@
+{
+  "scope": "Latest seven-day per-version endpoint snapshot; endpoint does not supply dates. Do not extrapolate to the full research period.",
+  "total_counter": 602570,
+  "daily_week_counter": {
+    "downloads": 602570,
+    "start": "2026-10-01",
+    "end": "2026-10-07",
+    "package": "mcp-remote"
+  },
+  "same_total_as_daily_week": true,
+  "counts_by_published_cve_description_stable_ranges": {
+    "CVE-2026-51994": 110258,
+    "CVE-2026-51995": 110258,
+    "CVE-2026-51996": 148814,
+    "CVE-2026-51997": 148814,
+    "CVE-2026-52001": 146476
+  },
+  "union_published_ranges_stable_downloads": 148814,
+  "selected_58_stable_release_downloads": 562350,
+  "overlapping_ranges_must_not_be_summed": true,
+  "skipped_nonstable_labels": [
+    "0.1.0-2",
+    "0.1.0-1",
+    "0.0.10-3",
+    "0.0.10-1",
+    "0.0.5-0",
+    "0.0.8-0",
+    "0.0.10-0",
+    "0.0.10-2",
+    "0.1.0-0"
+  ]
+}

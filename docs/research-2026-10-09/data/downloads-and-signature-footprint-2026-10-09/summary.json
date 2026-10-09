@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "read_at_utc": "2026-10-09T15:36:40.063527+00:00",
+  "package": "mcp-remote",
+  "start_basis": "First recorded discovery/research date in the case: 2026-02-17; not first vulnerable release date or CVE publication date.",
+  "requested_start": "2026-02-17",
+  "requested_end": "2026-10-09",
+  "api_returned_start": "2026-02-17",
+  "api_returned_end": "2026-10-09",
+  "raw_requested_period_total": 19060907,
+  "last_available_day_from_point_api": "2026-10-07",
+  "last_available_day_downloads": 144188,
+  "days_count": 233,
+  "by_month": {
+    "2026-02": 366248,
+    "2026-03": 1457670,
+    "2026-04": 1307678,
+    "2026-05": 1487197,
+    "2026-06": 1514462,
+    "2026-07": 2036939,
+    "2026-08": 5291030,
+    "2026-09": 4997113,
+    "2026-10": 602570
+  },
+  "since_publication_2026_07_31": 10959750,
+  "since_cve_publication_2026_09_24": 1335530,
+  "point_range_agreement": true,
+  "historical_vulnerable_version_total": null,
+  "interpretation": "All versions of the npm package. Not unique installs, users, affected installations, or a per-CVE version-specific download count. Per-version endpoint is recent-week only.",
+  "as_of_date": "2026-10-09",
+  "availability_note": "Latest available day does not mean finalized historical counts. The response contains zero-valued days; actual zero versus delayed aggregation is not distinguishable from this response.",
+  "zero_valued_dates_in_available_period": [
+    "2026-06-03",
+    "2026-06-04",
+    "2026-07-12",
+    "2026-08-14",
+    "2026-09-03",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-15",
+    "2026-10-06"
+  ],
+  "available_period_snapshot_total": 19060907,
+  "last_available_rows": [
+    {
+      "downloads": 60214,
+      "day": "2026-10-03"
+    },
+    {
+      "downloads": 65477,
+      "day": "2026-10-04"
+    },
+    {
+      "downloads": 101210,
+      "day": "2026-10-05"
+    },
+    {
+      "downloads": 0,
+      "day": "2026-10-06"
+    },
+    {
+      "downloads": 144188,
+      "day": "2026-10-07"
+    }
+  ]
+}
