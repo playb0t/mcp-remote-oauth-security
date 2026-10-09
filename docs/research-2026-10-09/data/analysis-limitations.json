@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "marketplace_file_records": [
+    {
+      "artifact_id": "altimateai.vscode-altimate-mcp-server",
+      "member": "extension/dist/extension.js",
+      "source_sha256": "a86e9065d43b3edd2dad0d205aeb70019dd3e15b78949991912cb394b24045ca",
+      "status": "UNRESOLVED_SEMGREP",
+      "timed_out_flag": false,
+      "exit_code": 0,
+      "error_kind": "PartialParsing",
+      "wall_seconds": 10.645196653,
+      "source_report_sha256": "84e510aafcf8fed7dbbbe88edbe74bcecb436f6a253224ba9f0db38d28fe9509"
+    },
+    {
+      "artifact_id": "anthropic.claude-code",
+      "member": "extension/resources/claude-code/cli.js",
+      "source_sha256": "4542e9127b2ca4896c5c1bfa72994bb3e412964e9e96767da0835515826fa37f",
+      "status": "UNRESOLVED_TIMEOUT",
+      "timed_out_flag": true,
+      "exit_code": 0,
+      "error_kind": null,
+      "wall_seconds": 15.045877633,
+      "source_report_sha256": "7da2d04058bbf490ecda617ef238ef3c688f72ca2ea5ffba2c7058d01aa93530"
+    },
+    {
+      "artifact_id": "augment.vscode-augment",
+      "member": "extension/out/extension.js",
+      "source_sha256": "9050779577b3641d3b02b280ed55401d69ef64d6b08ecb6c0c661dd6270a9670",
+      "status": "UNRESOLVED_SEMGREP",
+      "timed_out_flag": false,
+      "exit_code": 0,
+      "error_kind": "Out of memory",
+      "wall_seconds": 13.259080988999983,
+      "source_report_sha256": "3b32704ca5087fcc437b613253187d4d1a148c5312d6dc1563c9c994b6eb2f6d"
+    },
+    {
+      "artifact_id": "augment.vscode-augment",
+      "member": "extension/out/migration-engine/auggie-v2.mjs",
+      "source_sha256": "9829e1cc88b94ddc249244cde05e7710c49ce9e8c6bdda7b471bf2186be28e7b",
+      "status": "UNRESOLVED_SEMGREP",
+      "timed_out_flag": false,
+      "exit_code": 0,
+      "error_kind": "Syntax error",
+      "wall_seconds": 12.752671299000042,
+      "source_report_sha256": "3b32704ca5087fcc437b613253187d4d1a148c5312d6dc1563c9c994b6eb2f6d"
+    },
+    {
+      "artifact_id": "augment.vscode-augment",
+      "member": null,
+      "source_sha256": "3fb364c6e4fd96b7cb36c423d869980d2af69238aa9dc4868c6cfe36bb2d996e",
+      "status": "SCANNED",
+      "timed_out_flag": false,
+      "exit_code": 0,
+      "error_kind": null,
+      "wall_seconds": 3.0756762149999872,
+      "source_report_sha256": "3b32704ca5087fcc437b613253187d4d1a148c5312d6dc1563c9c994b6eb2f6d"
+    },
+    {
+      "artifact_id": "DBCode.dbcode",
+      "member": "extension/out/extension/extension.js",
+      "source_sha256": "8336e872ed52de8230c1041ffd351503069ddc8e22caa758994d43752b057538",
+      "status": "UNRESOLVED_TIMEOUT",
+      "timed_out_flag": true,
+      "exit_code": -9,
+      "error_kind": null,
+      "wall_seconds": 15.066187704999948,
+      "source_report_sha256": "b297b9d2a78742710cdda38ec5d29c537630ae5eefaf6b7a61aedcac11064a6b"
+    },
+    {
+      "artifact_id": "HybridTalentComputing.cline-chinese",
+      "member": "extension/dist/extension.js",
+      "source_sha256": "750284216b6da065d0bf14f34b7bf85688ad30892b762b74af80599f6186ec21",
+      "status": "UNRESOLVED_TIMEOUT",
+      "timed_out_flag": true,
+      "exit_code": -9,
+      "error_kind": null,
+      "wall_seconds": 15.116790990000027,
+      "source_report_sha256": "b4d10bc055cbbd68d48ebe27a698a28e1ab64d0e7a1c7ff65ec620ce4222cfc7"
+    },
+    {
+      "artifact_id": "moonshot-ai.kimi-code",
+      "member": "extension/dist/extension.js",
+      "source_sha256": "94985f147b84ed6b1eefc996736423cb4978348b6fe2085d212aa14d059e47b2",
+      "status": "UNRESOLVED_TIMEOUT",
+      "timed_out_flag": true,
+      "exit_code": -9,
+      "error_kind": null,
+      "wall_seconds": 15.066888603000052,
+      "source_report_sha256": "bf336200b29c52c0d411de0ff11176986ca1b33e3d0c22bba1fcc50236623fd9"
+    },
+    {
+      "artifact_id": "RooVeterinaryInc.roo-cline",
+      "member": "extension/dist/extension.js",
+      "source_sha256": "f0ee955669d3d2985a09f64cf1d7c86cdab79d940e428ab69af038c61192ded4",
+      "status": "UNRESOLVED_TIMEOUT",
+      "timed_out_flag": true,
+      "exit_code": -9,
+      "error_kind": null,
+      "wall_seconds": 15.168732655999975,
+      "source_report_sha256": "36152310b05f51b12d735b936994522c37ae692e7793bd21445f689a8bfb98b5"
+    },
+    {
+      "artifact_id": "saoudrizwan.claude-dev",
+      "member": "extension/dist/extension.js",
+      "source_sha256": "9251e17d93bb57da24f3e801e1f3e50e58e362286d2eace35b5aec3ab40cad3e",
+      "status": "UNRESOLVED_TIMEOUT",
+      "timed_out_flag": true,
+      "exit_code": -9,
+      "error_kind": null,
+      "wall_seconds": 15.117711018999998,
+      "source_report_sha256": "9a5ab677d98e226e211b9bce493093d3b7456c898b6ad96758f5583fba221af9"
+    },
+    {
+      "artifact_id": "ZooCodeOrganization.zoo-code",
+      "member": "extension/dist/extension.js",
+      "source_sha256": "0ba57958fb1611934bbabdcde800808783b6e811315032d8835e355433c8ec17",
+      "status": "UNRESOLVED_SEMGREP",
+      "timed_out_flag": false,
+      "exit_code": 0,
+      "error_kind": "Syntax error",
+      "wall_seconds": 14.573954868000015,
+      "source_report_sha256": "2a7bd98e073e6dcdba2defcfbc5172de92c62e76445cd87558415da7c70aed2b"
+    }
+  ],
+  "engine_error_breakdown": {
+    "Out of memory": 1,
+    "Syntax error": 2,
+    "PartialParsing": 1
+  },
+  "termination_evidence": {
+    "timeout_flags": 6,
+    "exit_minus_9": 5,
+    "exit_zero": 1,
+    "signal_delivery_independently_confirmed": false,
+    "all_descendants_confirmed_exited": false
+  },
+  "forced_parser_controls": {
+    "total": 24,
+    "partial": 21,
+    "complete": 3,
+    "exit_zero": 24
+  },
+  "corporate_comparison": {
+    "artifacts": 33,
+    "source_instances": 1325,
+    "categories": {
+      "A": 0,
+      "B": 1,
+      "C": 32,
+      "UNRESOLVED": 0
+    },
+    "full_bundle_analysis_gap_artifacts": 1,
+    "false_positive_rate": null,
+    "independent_ground_truth_labels_available": false
+  },
+  "azure_helper_scope": {
+    "artifact": "ms-azuretools.vscode-azureresourcegroups@0.13.2",
+    "classification": "B",
+    "observations": [
+      {
+        "function": "buildWwwAuthenticateHeader",
+        "source_sha256": "3abde4a93bc0285f1c02f517cad886edf5de029c5d525ccc49bfc0828a2b0381",
+        "direct_network_call_present": false
+      },
+      {
+        "function": "bearerAuthChallengeResponse",
+        "source_sha256": "5b32aa8c9ca6e9de7e1f45b4e71548dc8ec20a3cadfdf12a8f1561baa9eab86f",
+        "direct_network_call_present": false
+      },
+      {
+        "function": "requireBearerAuth",
+        "source_sha256": "1d4c90a562034a2033cf696c2e6ff102d2b90e3f9ba7c92f1915fc0dcaa61378",
+        "direct_network_call_present": false
+      },
+      {
+        "function": "buildOAuthProtectedResourceMetadata",
+        "source_sha256": "ee689e6d3efdf566bdd5f32966780f16f127ee9829b343584632e67d2edc02da",
+        "direct_network_call_present": false
+      }
+    ],
+    "whole_extension_network_behavior_established": false,
+    "transitive_calls_excluded": false,
+    "source_sha256": "35fd71e512dcd94d46f81f6a29473d8ebd11c2fe83d5abdc020ffa4a472587f3"
+  },
+  "scope": "Projection of retained analysis records. A timeout flag is not proof of process termination. Classification resolution does not erase an engine coverage gap.",
+  "screening_method": {
+    "scope": [
+      "corporate pilot",
+      "VS Code Marketplace pass"
+    ],
+    "ast_filter": {
+      "implementation": "custom AST-shingle filter",
+      "parser": "TypeScript",
+      "parser_version": "5.9.3",
+      "similarity": "multiset Sorensen-Dice",
+      "shingle_size_tokens": 5,
+      "bound_local_identifiers_normalized": true,
+      "score_unit": "individual function",
+      "formula": "2*sum(min(cA(g),cB(g)))/(sum(cA(g))+sum(cB(g)))"
+    },
+    "thresholds": {
+      "comparison": ">",
+      "corporate": 0.85,
+      "marketplace": 0.8,
+      "inclusive": false
+    },
+    "structural_routes": [
+      "metadata/network",
+      "delimiter-MD5"
+    ],
+    "targeted_engine": {
+      "name": "Semgrep",
+      "version": "1.180.0",
+      "recorded_core_sha256": "cd95f3b3838b4830b387af722f9d65831854a415cfee124a8841158a5eb12ff2"
+    },
+    "watchdog": {
+      "per_file_seconds": 15,
+      "clock": "elapsed wall-clock",
+      "recorded_clock_implementation": "time.monotonic",
+      "cpu_time_budget": false
+    },
+    "measured_precision": null,
+    "measured_recall": null,
+    "separate_npm_48_method": true,
+    "source_receipts": [
+      {
+        "id": "corporate_ast",
+        "file_name": "stream_ast.cjs",
+        "sha256": "30a2661823fffa09c226a6b1ed39922302e2b7f4b894e94144784b6af2eaed92"
+      },
+      {
+        "id": "marketplace_gate",
+        "file_name": "ast80.cjs",
+        "sha256": "905c9eddb378e7fc276a15a40b37f55fc16acceb97e9e62fff3bff6dde50d3d5"
+      },
+      {
+        "id": "semgrep_watchdog",
+        "file_name": "semgrep_candidates.py",
+        "sha256": "2b481c2f9db13534eba4c2eee33322b759016bfc9c42ab6998b2cf6791781698"
+      },
+      {
+        "id": "recorded_engine_version",
+        "file_name": "candidates_batch_analysis.json",
+        "sha256": "bf150d96c194f235fee8fd5659901d7118f8adb88530ccf6c2dbe22481b35840"
+      }
+    ]
+  }
+}

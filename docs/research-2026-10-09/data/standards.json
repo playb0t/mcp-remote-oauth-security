@@ -1,0 +1,72 @@
+{
+  "sources": [
+    {
+      "id": "modern_code_search",
+      "url": "https://docs.github.com/en/search-github/github-code-search/about-github-code-search",
+      "checked_at_utc": "2026-10-09T12:54:29.906599+00:00",
+      "http_status": 200,
+      "response_sha256": "9b67281d3f446734000e8cbb469ddcfef77b180b0756c33fa2e3e07bfd647c58"
+    },
+    {
+      "id": "rest_code_search",
+      "url": "https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28",
+      "checked_at_utc": "2026-10-09T12:54:29.906599+00:00",
+      "http_status": 200,
+      "response_sha256": "3c1d3b068d01f98c3ac5a108aa505a1247f802729ee9fe5925ec7fac8e912913"
+    },
+    {
+      "id": "rfc9728",
+      "url": "https://www.rfc-editor.org/rfc/rfc9728.html",
+      "checked_at_utc": "2026-10-09T12:54:29.906599+00:00",
+      "http_status": 200,
+      "response_sha256": "e395d326c517f89bd926930defb1b4bbd2ea2d5203b692ab582ae457846f700e"
+    },
+    {
+      "id": "aws_imdsv2",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html",
+      "checked_at_utc": "2026-10-09T14:52:41.066850+00:00",
+      "http_status": 200,
+      "response_sha256": "09dd71ced78c0f12a27a21695c6cfbfc5f380ef85b1b7ef5ec387a92a24b568b"
+    },
+    {
+      "id": "gcp_metadata_v1",
+      "url": "https://docs.cloud.google.com/compute/docs/metadata/querying-metadata",
+      "checked_at_utc": "2026-10-09T14:52:41.589671+00:00",
+      "http_status": 200,
+      "response_sha256": "eb57fe17db46d1826f70d34c524321fb95168be200f26e50614c889605e06ce1"
+    }
+  ],
+  "classification": {
+    "cwe": "CWE-918",
+    "qualifier": "Missing Defense",
+    "complete_prior_fix_of_this_path_established": false,
+    "regression_established": false
+  },
+  "policy": {
+    "name": "Operator-Approved Issuer Allowlist",
+    "status": "Research recommendation with resource and destination binding",
+    "rfc_basis": [
+      "RFC 9728 section 7.6 application-dependent authorization-server selection",
+      "RFC 9728 section 7.7 appropriate SSRF precautions"
+    ],
+    "sole_rfc_mandated_implementation": false
+  },
+  "cloud_metadata_conditions": {
+    "credential_access_tested": false,
+    "cloud_metadata_endpoints_queried": false,
+    "aws": {
+      "configuration": "HttpTokens=required",
+      "service": "IMDSv2",
+      "requires_valid_session_token": true,
+      "session_token_method": "PUT",
+      "source_id": "aws_imdsv2",
+      "imds_v1_permitting_configurations_require_separate_evaluation": true
+    },
+    "gcp": {
+      "service": "metadata v1",
+      "required_header": "Metadata-Flavor: Google",
+      "source_id": "gcp_metadata_v1"
+    },
+    "conclusion": "A basic discovery GET without the required elements does not establish credential access. No universal safety conclusion is made."
+  }
+}

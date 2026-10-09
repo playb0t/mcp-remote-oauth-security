@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "npm_records": [
+    {
+      "package": "@abluva/mcp-remote",
+      "version": "2.1.0",
+      "archive_sha256": "685a0b2cdce294873381cfaf05a6004e6086cfed20bf8f5758c85762cd085635",
+      "artifact_role": "upstream-family-distribution",
+      "reference_matches": 8,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "mcp-remote",
+      "version": "0.14.3",
+      "archive_sha256": "f4ab0e33b38b24fff6a8b3234f9d683e47995ca44f3186481716d444836f7254",
+      "artifact_role": "upstream-control",
+      "reference_matches": 10,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": true,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "@ignatov.dev/mcp-remote",
+      "version": "0.1.40",
+      "archive_sha256": "663b54620e960e6f8f1ac1fd0d2669bc4160af7b77929632a838e69eef98c498",
+      "artifact_role": "upstream-family-distribution",
+      "reference_matches": 9,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "@thespeakup/mcp-remote",
+      "version": "0.1.43-thespeakup.0",
+      "archive_sha256": "83c81d1a7f12c409ed583a44c6664052e8730ed6d69c354f48727d17232b9da9",
+      "artifact_role": "upstream-family-distribution",
+      "reference_matches": 9,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "@zgeoff/mcp-remote",
+      "version": "0.1.38",
+      "archive_sha256": "638ca1199ebce22a01aec0bc0357fb16efc7e42304cde91ed0e7011d19188ace",
+      "artifact_role": "upstream-family-distribution",
+      "reference_matches": 9,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "@automattic/mcp-remote",
+      "version": "0.1.50",
+      "archive_sha256": "607cd96ec44ef490eff1529c53c092227a824538960daf708928149b822895d6",
+      "artifact_role": "upstream-family-distribution",
+      "reference_matches": 9,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "@beeper/mcp-remote",
+      "version": "0.0.2",
+      "archive_sha256": "c519cff55b0fe36f7b480e968f13333b2f54672b74990f4dafaa390e31f48bf4",
+      "artifact_role": "namespace-pattern-candidate",
+      "reference_matches": 0,
+      "namespace_matches": 2,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "@computec/mcp-remote",
+      "version": "0.1.32",
+      "archive_sha256": "98e11f2d8e6c770b539e421ade01605d281f635b202b28a945aa2592a44216bd",
+      "artifact_role": "namespace-pattern-candidate",
+      "reference_matches": 0,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "mcp-remote-alibaba-cloud",
+      "version": "0.1.38",
+      "archive_sha256": "bbb9e458f23dc51f39a4b5622e507d891fb09d67173c043bf8e020f52dbb4406",
+      "artifact_role": "cloud-labelled-distribution",
+      "reference_matches": 9,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "@automattic/mcp-wordpress-remote",
+      "version": "0.5.1",
+      "archive_sha256": "dde45e9d6dd82765064e836f1e699794af078424e8a4e8a36c05bdac484f6c9a",
+      "artifact_role": "declared-wordpress-adapter",
+      "reference_matches": 0,
+      "namespace_matches": 4,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "@neworange/neworange-mcp-remote",
+      "version": "0.1.39",
+      "archive_sha256": "3043166ac9606d4963102d05e9ef2d601c507c6dd41ebe9e74418c033333a4cf",
+      "artifact_role": "upstream-family-distribution",
+      "reference_matches": 9,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    },
+    {
+      "package": "mcp-remote-ultra",
+      "version": "1.0.0",
+      "archive_sha256": "fac21cb0582a04abbe6d7cdf6577eb70fad6b2ea8adf6a43533ce83610113937",
+      "artifact_role": "upstream-family-distribution",
+      "reference_matches": 2,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false,
+      "function_evidence": {
+        "reference_version": "0.1.38",
+        "member": "package/dist/chunk-M36YVINN.js",
+        "member_bytes": 760846,
+        "member_sha256": "62c5296bd778c8829280ab2a1a38deb70c193451eb5a0c2710e1ee1ed42f6630",
+        "reference_matches": [
+          {
+            "function": "getServerUrlHash",
+            "line": 20903,
+            "end_line": 20911,
+            "normalized_fingerprint": "c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626",
+            "reference_version": "0.1.38",
+            "reference_git_commit": "02619aff36e79803d7c894e8c8ae7b34b2d11f8c",
+            "reference_function": "getServerUrlHash"
+          },
+          {
+            "function": "fetchAuthorizationServerMetadata",
+            "line": 20937,
+            "end_line": 20973,
+            "normalized_fingerprint": "f4921bb9045fea5a192a9e0fa27ad26802e89600666a91dd6e54669724664a1d",
+            "reference_version": "0.1.38",
+            "reference_git_commit": "02619aff36e79803d7c894e8c8ae7b34b2d11f8c",
+            "reference_function": "fetchAuthorizationServerMetadata"
+          }
+        ],
+        "structural_results": [
+          {
+            "rule": "md5-config-namespace",
+            "function": "getServerUrlHash",
+            "line": 20903,
+            "end_line": 20911
+          }
+        ],
+        "scan_sha256": "41ac37c4e7375e3517e12029625156d0eaa7dec151cc975918ead0c65cd2e3ab",
+        "registry_ledger_sha256": "d06782bcf1f78fbf999c65caa3d795a145cf495acff90bdfa1b1d3551a699b90",
+        "declared_repository": "https://github.com/cobach/mcp-remote",
+        "repository_declaration_establishes_deployment": false,
+        "independent_implementation_of_other_components_excluded": false
+      }
+    },
+    {
+      "package": "mcp-search-package",
+      "version": "1.0.13",
+      "archive_sha256": "719c592d57173cbf928f110687cd65a9938ad7ce58c71748fdff821a85b0774a",
+      "artifact_role": "namespace-pattern-candidate",
+      "reference_matches": 0,
+      "namespace_matches": 1,
+      "complete_downstream_request_route_established": false,
+      "formal_git_fork_status_inferred_from_matching_code": false,
+      "alias_relationship_established": false
+    }
+  ],
+  "recorded_repository_forks": [
+    {
+      "repository": "Ashesh3/mcp-remote-entra",
+      "commit": "4d7b9d75c43e7ed435e868d0f9f002ba61da0a0c",
+      "is_fork": true,
+      "parent_declared": "punkpeye/mcp-remote"
+    },
+    {
+      "repository": "explorium-ai/mcp-remote",
+      "commit": "6eeeeceab1d567787aa1af22d42a927f519d5034",
+      "is_fork": true,
+      "parent_declared": "punkpeye/mcp-remote"
+    }
+  ],
+  "repository_fork_source_sha256": "717057a491e8cae2cdedaa38626015d2c6b9093b744eae20f2c878347453389f",
+  "kira": {
+    "record": {
+      "id": 201,
+      "repository": "krafton-ai/KIRA",
+      "path": "KiraClaw/apps/desktop/lib/register-ipc.js",
+      "blob_sha": "1bf3c642ca7d854a6bbde56665fb737205e6183e",
+      "url": "https://github.com/krafton-ai/KIRA/blob/652dacbf14d29ea93a83c496ee91e0e5ba286721/KiraClaw/apps/desktop/lib/register-ipc.js",
+      "commit": "652dacbf14d29ea93a83c496ee91e0e5ba286721",
+      "bytes": 14171,
+      "sha256": "82d0d1fcc203294f6e8feff4710f494829b8c9da95faa2586506f0b319f4bc6f",
+      "git_blob_verified": true,
+      "ast_status": "complete",
+      "category": "B",
+      "classification_reason": "helper-or-shared-component-match-without-proven-A-routing",
+      "exposure_status": "NOT_ESTABLISHED"
+    },
+    "namespace_match": {
+      "repository": "krafton-ai/KIRA",
+      "declared_package": "@kiraclaw/desktop",
+      "commit": "652dacbf14d29ea93a83c496ee91e0e5ba286721",
+      "path": "KiraClaw/apps/desktop/lib/register-ipc.js",
+      "sha256": "82d0d1fcc203294f6e8feff4710f494829b8c9da95faa2586506f0b319f4bc6f",
+      "md5_function_similarity": 0.907563,
+      "hash_functions": [
+        {
+          "name": "getServerUrlHash",
+          "line": 262,
+          "similarity": 0.907563,
+          "normalized_sha256": "ba33959b630397850178fc800e2789af333b4bb3436ba11610afc3aa08e777d6",
+          "has_push": true
+        }
+      ],
+      "claim": "MD5(delimiter-joined URL/configuration parts) structural match; no takeover, RCE, or novelty claim"
+    },
+    "classification": "shared-namespace-helper",
+    "complete_discovery_route_established": false
+  },
+  "interpretation": "Repository fork metadata, renamed distributions, declared adapter purpose, aliases and structural helper matches are different relationships. Corporate ownership or deployment is not inferred from a package name."
+}

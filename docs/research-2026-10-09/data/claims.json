@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "researcher": "Alex Gercog",
+  "research_date": "2026-10-09",
+  "package": "mcp-remote",
+  "whole_cli_version": "0.14.3",
+  "whole_cli_cases": 3,
+  "cli_http_events": 43,
+  "cli_canary_events": 15,
+  "cli_rpc_replies": 9,
+  "static_releases": 74,
+  "helper_runtime_releases": 58,
+  "helper_http_events": 290,
+  "npm_archives": 48,
+  "npm_signature_candidates_including_upstream": 13,
+  "github_file_records": 232,
+  "git_repositories": 221,
+  "publication_status": "Prepared locally for review",
+  "fresh_runtime_reexecution_during_assembly": false,
+  "independent_final_review": "not asserted completed",
+  "evidence_files": [
+    "analysis-limitations.json",
+    "claims.json",
+    "cli-scenarios.json",
+    "ecosystem-lineage.json",
+    "evidence-lineage.json",
+    "git-232.json",
+    "input-receipts.json",
+    "npm-48.json",
+    "release-history.json",
+    "screening-cohorts.json",
+    "search-scope.json",
+    "standards.json"
+  ],
+  "phase": "Phase 1 local research baseline",
+  "defect_class": "CWE-918",
+  "qualification": "Missing Defense",
+  "observed_stable_versions": {
+    "first": "0.1.32",
+    "last": "0.14.3"
+  },
+  "catalog_assessment_interval": ">=0.1.32, <=0.14.3 (inspected stable releases only)",
+  "official_affected_range_changed": false,
+  "false_positive_rate_established": false,
+  "false_positive_rate": null,
+  "whole_cli_configuration": {
+    "transport": "http-only",
+    "client_credentials": true,
+    "synthetic_static_client_information": true,
+    "mock_get_challenge": true,
+    "mock_post_permitted": true
+  },
+  "researcher_handle": "playb0t",
+  "research_framing": "author-led security research",
+  "editorial_revision": "r3",
+  "external_independent_reproduction_claimed": false,
+  "publication_results": [
+    "published-cli-0.14.3-local-stdio",
+    "selected-discovery-chain-in-58-stable-releases",
+    "selected-implementation-fragments-in-other-published-code"
+  ]
+}

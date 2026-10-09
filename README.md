@@ -28,6 +28,37 @@ Every URL, redirect, origin, and credential handoff is a trust decision.
 
 The five CVE records published on 24 September 2026, who has picked them up, and what has and has not been fixed are tracked with dated sources at [playb0t.com](https://playb0t.com).
 
+
+<!-- research-2026-10-09 -->
+## Research update: 9 October 2026
+
+Researcher: Alex Gercog (playb0t)
+
+The [research dossier](docs/research-2026-10-09/RESEARCH_DOSSIER.md) adds three results:
+
+- **Full CLI 0.14.3:** the unchanged published CLI completed three local stdio scenarios
+  with 43 HTTP events, including a controlled HTTP 302 redirect. The fixture used
+  `http-only`, `client-credentials` and synthetic static client information; mock GET
+  requests were challenged and mock POST requests permitted synthetic MCP operations.
+  Real OAuth login and desktop UI behavior were not tested.
+- **Release history:** selected first-party discovery helpers were traced and executed
+  locally across 58 stable releases, 0.1.32 through 0.14.3. The inventory contains
+  74 integrity-checked archives; the helper runs recorded 290 local HTTP events.
+- **Published code relationships:** selected implementation fragments were found under
+  other package names and inside bundles. The [code distribution map](docs/research-2026-10-09/CODE_DISTRIBUTION.md)
+  identifies versions, commits, files and matching functions, while separating npm
+  records from Git observations. Renaming a package does not necessarily change
+  these fragments, so a search for the original name alone gives incomplete coverage.
+
+The selected metadata path is classified as CWE-918 / Missing Defense. These
+results do not automatically revise the original CVE ranges, identify a fixed release
+or establish downstream deployment.
+
+[Evidence and accounting](docs/research-2026-10-09/EVIDENCE.md) ·
+[Recorded procedures and screening sources](docs/research-2026-10-09/REPRODUCIBILITY.md) ·
+[Data and checksums](docs/research-2026-10-09/README.md)
+<!-- /research-2026-10-09 -->
+
 ## Executive summary
 
 `mcp-remote` bridges stdio-only MCP clients to remote MCP servers and performs
@@ -120,8 +151,9 @@ CVE lines are CISA-ADP assessments and are reported as published.
   Vulnerabilities catalog as of 2026-10-04 (catalog of 1,734 entries); CISA's
   SSVC on all five records reads exploitation: none.
 
-Whether later upstream releases close each finding is not established; see the
-next section.
+The registry snapshot above is dated 7 October. The 9 October
+[research dossier](docs/research-2026-10-09/RESEARCH_DOSSIER.md) adds selected-path
+evidence through 0.14.3; it does not reclassify every original finding.
 
 ## Upstream state at disclosure (2026-07-31)
 
@@ -136,7 +168,7 @@ next section.
 - Since disclosure: releases `0.1.39` (2026-08-21) through `0.14.3` (2026-09-21),
   published from `punkpeye/mcp-remote`, where the repository moved after
   disclosure; the CVE records name it `geelen mcp-remote`, and the `geelen` URLs
-  redirect. Whether the later releases close each finding is not established.
+  redirect. The 9 October follow-up above covers the selected discovery path; the other findings retain their stated evidence limits.
 
 ## Responsible-disclosure summary
 

@@ -1,0 +1,30 @@
+{
+  "hash.js": [
+    [
+      "mcp-session-hash-collision",
+      9
+    ]
+  ],
+  "metadata.js": [
+    [
+      "mcp-resource-discovery-handoff",
+      32
+    ],
+    [
+      "mcp-ssrf-unvalidated-metadata",
+      4
+    ],
+    [
+      "mcp-ssrf-unvalidated-metadata",
+      9
+    ],
+    [
+      "mcp-ssrf-unvalidated-metadata",
+      15
+    ],
+    [
+      "mcp-ssrf-unvalidated-metadata",
+      20
+    ]
+  ]
+}

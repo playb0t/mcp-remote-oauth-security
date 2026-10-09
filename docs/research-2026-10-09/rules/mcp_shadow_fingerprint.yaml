@@ -1,0 +1,79 @@
+rules:
+  - id: mcp-ssrf-unvalidated-metadata
+    languages: [javascript, typescript]
+    mode: taint
+    severity: WARNING
+    message: >-
+      OAuth discovery data reaches a network sink in this function. Review
+      destination policy, callers, redirects and connected-peer validation.
+      This candidate does not establish missing interprocedural controls or CVE exposure.
+    metadata:
+      category: security
+      confidence: MEDIUM
+      cwe: ["CWE-918: Server-Side Request Forgery (SSRF)"]
+      technology: [oauth, mcp]
+      candidate_cves: [CVE-2026-51994, CVE-2026-51995]
+      security_verdict: false
+    pattern-sources:
+      - pattern-either:
+          - pattern: $OBJ.resource_metadata
+          - pattern: $OBJ.resourceMetadataUrl
+          - pattern: $OBJ.authorization_servers[$INDEX]
+          - pattern: $OBJ.headers.get("WWW-Authenticate")
+          - pattern: $OBJ.headers.get("www-authenticate")
+          - pattern: $OBJ["resource_metadata"]
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: fetch($ENDPOINT, ...)
+              - pattern: $HTTP.fetch($ENDPOINT, ...)
+              - pattern: $HTTP.request($ENDPOINT, ...)
+          - focus-metavariable: $ENDPOINT
+    # Intentionally no name-based sanitizers: validateUrl() or new URL() cannot
+    # certify DNS pinning, redirect policy or a strict IP allowlist.
+
+  - id: mcp-session-hash-collision
+    languages: [javascript, typescript]
+    severity: WARNING
+    message: >-
+      mcp-remote-shaped MD5 namespace over delimiter-joined URL/configuration
+      parts. Candidate lineage/hardening marker; neither MD5 use nor URL
+      normalization proves a practical trusted-session collision.
+    metadata:
+      category: security
+      confidence: MEDIUM
+      cwe: ["CWE-328: Use of Weak Hash"]
+      candidate_cves: [CVE-2026-51996]
+      security_verdict: false
+    patterns:
+      - pattern-either:
+          - pattern-inside: |
+              function $FUNC($URL, ...) {
+                ...
+              }
+          - pattern-inside: |
+              const $FUNC = ($URL, ...) => {
+                ...
+              };
+      - pattern-inside: |
+          const $PARTS = [$URL];
+          ...
+      - pattern-either:
+          - pattern: $CRYPTO.createHash("md5").update($PARTS.join("|")).digest("hex")
+          - pattern: createHash("md5").update($PARTS.join("|")).digest("hex")
+
+  - id: mcp-resource-discovery-handoff
+    languages: [javascript, typescript]
+    severity: INFO
+    message: >-
+      resource_metadata is passed to a helper. Inspect the callee for the actual
+      network sink; Semgrep CE does not prove this cross-function flow.
+    metadata:
+      category: security
+      confidence: LOW
+      candidate_cves: [CVE-2026-51994]
+      security_verdict: false
+    patterns:
+      - pattern-either:
+          - pattern: await $HELPER($OBJ.resourceMetadataUrl)
+          - pattern: await $HELPER($OBJ.resource_metadata)

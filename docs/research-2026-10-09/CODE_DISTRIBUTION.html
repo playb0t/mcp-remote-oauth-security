@@ -1,0 +1,494 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Code Distribution</title><style>body{font:16px/1.65 system-ui,sans-serif;margin:0;background:#f4f6f8;color:#172a36}main{max-width:1100px;margin:24px auto;padding:36px;background:white}h1{line-height:1.2}h2{margin-top:2em}a{color:#075f88;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;padding:16px}code{overflow-wrap:anywhere;font-size:.88em}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid #d6dfe5;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}.meta{font-size:12px;color:#465d6d}@media(max-width:650px){main{margin:0;padding:15px}table{display:block;overflow-x:auto}}</style></head><body><main><p class="meta">Research 2026-10-09, revision r3. <a href="CODE_DISTRIBUTION.md">Markdown source</a>. Source SHA-256: e8c8b9075c6ce0e918c005119ec540d334fab75b07508d8d738f8f42049d71c6</p><h1>Code distribution map, 9 October 2026</h1>
+<p>Researcher: Alex Gercog (playb0t)</p>
+<p>Selected implementation fragments were found under other package names and within bundled code. Structural signatures helped identify these relationships despite renaming and packaging differences. These are observations of published artifacts, not measurements of deployment or propagation speed.</p>
+<p>The <a href="data/code-distribution.json">file evidence ledger</a> contains identity, version or commit, member path, function or rule, checksums, recorded result and completeness. The <a href="RESEARCH_DOSSIER.md">dossier</a> explains the method and runtime result.</p>
+<h2>Relationship types</h2>
+<table>
+<thead>
+<tr>
+<th>Relationship</th>
+<th>Evidence needed and limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recorded Git fork</td>
+<td>Repository metadata names a parent. Code similarity alone is insufficient.</td>
+</tr>
+<tr>
+<td>Published package under another name</td>
+<td>Registry identity and selected function matches establish a published code relationship.</td>
+</tr>
+<tr>
+<td>Bundled fragment</td>
+<td>An archive member contains a matching function or structure; the complete product may differ.</td>
+</tr>
+<tr>
+<td>Declared adapter</td>
+<td>Published metadata supplies the stated purpose; it does not prove the full discovery route.</td>
+</tr>
+<tr>
+<td>Shared helper</td>
+<td>A selected utility or algorithm matches; project ancestry and exposure remain unestablished.</td>
+</tr>
+<tr>
+<td>Structural match</td>
+<td>The selected construction is present; origin of the whole project remains unknown.</td>
+</tr>
+</tbody>
+</table>
+<h2>npm selection</h2>
+<p>411 discovered identifiers led to 48 selected published archives. Nine records have reference-function matches, four have namespace-only results, four have generic discovery components and 31 have none of the selected indicators. The first two groups total 13 records, including upstream mcp-remote. This method uses normalized reference-family matching, separately from the Dice scores in the later cohorts. A/B/C was not assigned to this selection.</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Version</th>
+<th style="text-align:right">Reference matches</th>
+<th>Recorded relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@abluva/mcp-remote</td>
+<td>2.1.0</td>
+<td style="text-align:right">8</td>
+<td>upstream-family-distribution</td>
+</tr>
+<tr>
+<td>mcp-remote</td>
+<td>0.14.3</td>
+<td style="text-align:right">10</td>
+<td>upstream-control</td>
+</tr>
+<tr>
+<td>@ignatov.dev/mcp-remote</td>
+<td>0.1.40</td>
+<td style="text-align:right">9</td>
+<td>upstream-family-distribution</td>
+</tr>
+<tr>
+<td>@thespeakup/mcp-remote</td>
+<td>0.1.43-thespeakup.0</td>
+<td style="text-align:right">9</td>
+<td>upstream-family-distribution</td>
+</tr>
+<tr>
+<td>@zgeoff/mcp-remote</td>
+<td>0.1.38</td>
+<td style="text-align:right">9</td>
+<td>upstream-family-distribution</td>
+</tr>
+<tr>
+<td>@automattic/mcp-remote</td>
+<td>0.1.50</td>
+<td style="text-align:right">9</td>
+<td>upstream-family-distribution</td>
+</tr>
+<tr>
+<td>@beeper/mcp-remote</td>
+<td>0.0.2</td>
+<td style="text-align:right">0</td>
+<td>namespace-pattern-candidate</td>
+</tr>
+<tr>
+<td>@computec/mcp-remote</td>
+<td>0.1.32</td>
+<td style="text-align:right">0</td>
+<td>namespace-pattern-candidate</td>
+</tr>
+<tr>
+<td>mcp-remote-alibaba-cloud</td>
+<td>0.1.38</td>
+<td style="text-align:right">9</td>
+<td>cloud-labelled-distribution</td>
+</tr>
+<tr>
+<td>@automattic/mcp-wordpress-remote</td>
+<td>0.5.1</td>
+<td style="text-align:right">0</td>
+<td>declared-wordpress-adapter</td>
+</tr>
+<tr>
+<td>@neworange/neworange-mcp-remote</td>
+<td>0.1.39</td>
+<td style="text-align:right">9</td>
+<td>upstream-family-distribution</td>
+</tr>
+<tr>
+<td>mcp-remote-ultra</td>
+<td>1.0.0</td>
+<td style="text-align:right">2</td>
+<td>upstream-family-distribution</td>
+</tr>
+<tr>
+<td>mcp-search-package</td>
+<td>1.0.13</td>
+<td style="text-align:right">0</td>
+<td>namespace-pattern-candidate</td>
+</tr>
+</tbody>
+</table>
+<h3>@abluva/mcp-remote 2.1.0</h3>
+<p>Archive SHA-256: <code>685a0b2cdce294873381cfaf05a6004e6086cfed20bf8f5758c85762cd085635</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-CLPRK7YI.js</code>. File SHA-256: <code>451804cbf2e6c2fb8dfa149f535bf8ed364393451e25326cb6e797911695d7cd</code>.</p>
+<ul>
+<li><code>parseWWWAuthenticateHeader</code>, lines 358 to 390: <code>reference-function-match</code>; reference 0.1.38 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>parseWWWAuthenticateHeader</code>, lines 358 to 390: <code>reference-function-match</code>; reference 0.14.3 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>fetchProtectedResourceMetadataFromUrl</code>, lines 402 to 437: <code>reference-function-match</code>; reference 0.14.3 / <code>fetchProtectedResourceMetadataFromUrl</code>. Normalized SHA-256: <code>f0dcfbeacba42cf006ebe84703a9d467a392fb33921232b34f02134f5de834ee</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 438 to 465: <code>reference-function-match</code>; reference 0.1.38 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 438 to 465: <code>reference-function-match</code>; reference 0.14.3 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 466 to 471: <code>reference-function-match</code>; reference 0.1.38 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 466 to 471: <code>reference-function-match</code>; reference 0.14.3 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getServerUrlHash</code>, lines 2018 to 2026: <code>md5-config-namespace</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>getServerUrlHash</code>, lines 2018 to 2026: <code>reference-function-match</code>; reference 0.1.38 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>mcp-remote 0.14.3</h3>
+<p>Archive SHA-256: <code>f4ab0e33b38b24fff6a8b3234f9d683e47995ca44f3186481716d444836f7254</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-CGVEK4Z7.js</code>. File SHA-256: <code>c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451</code>.</p>
+<ul>
+<li><code>parseWWWAuthenticateHeader</code>, lines 31912 to 31944: <code>reference-function-match</code>; reference 0.1.38 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>parseWWWAuthenticateHeader</code>, lines 31912 to 31944: <code>reference-function-match</code>; reference 0.14.3 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>fetchProtectedResourceMetadataFromUrl</code>, lines 31956 to 31991: <code>reference-function-match</code>; reference 0.14.3 / <code>fetchProtectedResourceMetadataFromUrl</code>. Normalized SHA-256: <code>f0dcfbeacba42cf006ebe84703a9d467a392fb33921232b34f02134f5de834ee</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 31992 to 32019: <code>reference-function-match</code>; reference 0.1.38 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 31992 to 32019: <code>reference-function-match</code>; reference 0.14.3 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 32020 to 32025: <code>reference-function-match</code>; reference 0.1.38 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 32020 to 32025: <code>reference-function-match</code>; reference 0.14.3 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>fetchAuthorizationServerMetadata</code>, lines 32047 to 32058: <code>reference-function-match</code>; reference 0.14.3 / <code>fetchAuthorizationServerMetadata</code>. Normalized SHA-256: <code>aca793a6da6a5d96055ae64daa34506f6d6ad5b08b620118db57c3450fd82964</code>.</li>
+<li><code>fetchMetadataFrom</code>, lines 32059 to 32094: <code>reference-function-match</code>; reference 0.14.3 / <code>fetchMetadataFrom</code>. Normalized SHA-256: <code>4f81ee3837875c77e03f3b59257e44999f9af461b25648400177cfed23ffc41a</code>.</li>
+<li><code>getServerUrlHash</code>, lines 33955 to 33969: <code>md5-config-namespace</code>. Normalized SHA-256: <code>69d9fd99503468ffb28c976d01eb2885be0e284ef5cc74fbc61b326a723cb2c0</code>.</li>
+<li><code>getServerUrlHash</code>, lines 33955 to 33969: <code>reference-function-match</code>; reference 0.14.3 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>69d9fd99503468ffb28c976d01eb2885be0e284ef5cc74fbc61b326a723cb2c0</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>@ignatov.dev/mcp-remote 0.1.40</h3>
+<p>Archive SHA-256: <code>663b54620e960e6f8f1ac1fd0d2669bc4160af7b77929632a838e69eef98c498</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-H43SVVFU.js</code>. File SHA-256: <code>4874e2952d2d1ce606639589d267ef49a7edee11cc12aa93333e9714cd505b8f</code>.</p>
+<ul>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20141 to 20173: <code>reference-function-match</code>; reference 0.1.38 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20141 to 20173: <code>reference-function-match</code>; reference 0.14.3 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>fetchProtectedResourceMetadataFromUrl</code>, lines 20185 to 20219: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchProtectedResourceMetadataFromUrl</code>. Normalized SHA-256: <code>3f23c7e676e974d3dc938536580ac13d5ad501e4a2481dbdd0350209d994fc31</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20220 to 20247: <code>reference-function-match</code>; reference 0.1.38 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20220 to 20247: <code>reference-function-match</code>; reference 0.14.3 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20248 to 20253: <code>reference-function-match</code>; reference 0.1.38 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20248 to 20253: <code>reference-function-match</code>; reference 0.14.3 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>fetchAuthorizationServerMetadata</code>, lines 20261 to 20297: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchAuthorizationServerMetadata</code>. Normalized SHA-256: <code>f4921bb9045fea5a192a9e0fa27ad26802e89600666a91dd6e54669724664a1d</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20942 to 20950: <code>md5-config-namespace</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20942 to 20950: <code>reference-function-match</code>; reference 0.1.38 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>@thespeakup/mcp-remote 0.1.43-thespeakup.0</h3>
+<p>Archive SHA-256: <code>83c81d1a7f12c409ed583a44c6664052e8730ed6d69c354f48727d17232b9da9</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-PDA27W4O.js</code>. File SHA-256: <code>e65b5155e458f2d14d9e2d34ea2c46a53a45a0343650b3f21492fc01f81885a1</code>.</p>
+<ul>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20094 to 20126: <code>reference-function-match</code>; reference 0.1.38 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20094 to 20126: <code>reference-function-match</code>; reference 0.14.3 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>fetchProtectedResourceMetadataFromUrl</code>, lines 20138 to 20172: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchProtectedResourceMetadataFromUrl</code>. Normalized SHA-256: <code>3f23c7e676e974d3dc938536580ac13d5ad501e4a2481dbdd0350209d994fc31</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20173 to 20200: <code>reference-function-match</code>; reference 0.1.38 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20173 to 20200: <code>reference-function-match</code>; reference 0.14.3 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20201 to 20206: <code>reference-function-match</code>; reference 0.1.38 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20201 to 20206: <code>reference-function-match</code>; reference 0.14.3 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>fetchAuthorizationServerMetadata</code>, lines 20214 to 20250: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchAuthorizationServerMetadata</code>. Normalized SHA-256: <code>f4921bb9045fea5a192a9e0fa27ad26802e89600666a91dd6e54669724664a1d</code>.</li>
+<li><code>getServerUrlHash</code>, lines 21138 to 21146: <code>md5-config-namespace</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>getServerUrlHash</code>, lines 21138 to 21146: <code>reference-function-match</code>; reference 0.1.38 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>@zgeoff/mcp-remote 0.1.38</h3>
+<p>Archive SHA-256: <code>638ca1199ebce22a01aec0bc0357fb16efc7e42304cde91ed0e7011d19188ace</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-7U5DXR5B.js</code>. File SHA-256: <code>5d0c5504871057eeb6feb74b040f754833d615c14099881a06378122d7acfc0d</code>.</p>
+<ul>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20094 to 20126: <code>reference-function-match</code>; reference 0.1.38 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20094 to 20126: <code>reference-function-match</code>; reference 0.14.3 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>fetchProtectedResourceMetadataFromUrl</code>, lines 20138 to 20172: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchProtectedResourceMetadataFromUrl</code>. Normalized SHA-256: <code>3f23c7e676e974d3dc938536580ac13d5ad501e4a2481dbdd0350209d994fc31</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20173 to 20200: <code>reference-function-match</code>; reference 0.1.38 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20173 to 20200: <code>reference-function-match</code>; reference 0.14.3 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20201 to 20206: <code>reference-function-match</code>; reference 0.1.38 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20201 to 20206: <code>reference-function-match</code>; reference 0.14.3 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>fetchAuthorizationServerMetadata</code>, lines 20214 to 20250: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchAuthorizationServerMetadata</code>. Normalized SHA-256: <code>f4921bb9045fea5a192a9e0fa27ad26802e89600666a91dd6e54669724664a1d</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20890 to 20898: <code>md5-config-namespace</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20890 to 20898: <code>reference-function-match</code>; reference 0.1.38 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>@automattic/mcp-remote 0.1.50</h3>
+<p>Archive SHA-256: <code>607cd96ec44ef490eff1529c53c092227a824538960daf708928149b822895d6</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-UCDPRGT4.js</code>. File SHA-256: <code>e312ce4c3035e9999b4641543a8043f57fd4858fdd4f785bebf3b2204b5cd370</code>.</p>
+<ul>
+<li><code>parseWWWAuthenticateHeader</code>, lines 17847 to 17879: <code>reference-function-match</code>; reference 0.1.38 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>parseWWWAuthenticateHeader</code>, lines 17847 to 17879: <code>reference-function-match</code>; reference 0.14.3 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>fetchProtectedResourceMetadataFromUrl</code>, lines 17891 to 17925: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchProtectedResourceMetadataFromUrl</code>. Normalized SHA-256: <code>3f23c7e676e974d3dc938536580ac13d5ad501e4a2481dbdd0350209d994fc31</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 17926 to 17953: <code>reference-function-match</code>; reference 0.1.38 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 17926 to 17953: <code>reference-function-match</code>; reference 0.14.3 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 17954 to 17959: <code>reference-function-match</code>; reference 0.1.38 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 17954 to 17959: <code>reference-function-match</code>; reference 0.14.3 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>fetchAuthorizationServerMetadata</code>, lines 17967 to 18003: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchAuthorizationServerMetadata</code>. Normalized SHA-256: <code>f4921bb9045fea5a192a9e0fa27ad26802e89600666a91dd6e54669724664a1d</code>.</li>
+<li><code>getServerUrlHash</code>, lines 18863 to 18871: <code>md5-config-namespace</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>getServerUrlHash</code>, lines 18863 to 18871: <code>reference-function-match</code>; reference 0.1.38 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>@beeper/mcp-remote 0.0.2</h3>
+<p>Archive SHA-256: <code>c519cff55b0fe36f7b480e968f13333b2f54672b74990f4dafaa390e31f48bf4</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/client.js</code>. File SHA-256: <code>4595da91e09dc136a37326594c3ea27f96c05df7c611884da98842535408d5a4</code>.</p>
+<ul>
+<li>
+<p><code>fp</code>, lines 522 to 522: <code>md5-input-with-oauth-storage-context</code>. Normalized SHA-256: <code>455579b16af0a65cc679121847300568ee42df5bcbf7bc1607e5648a1d98ad12</code>.
+Member: <code>package/dist/proxy.js</code>. File SHA-256: <code>cf96a8e34409a5c8d9045c88f06f818a4861d160b6f20ef65c166397092f5eff</code>.</p>
+</li>
+<li>
+<p><code>mp</code>, lines 523 to 523: <code>md5-input-with-oauth-storage-context</code>. Normalized SHA-256: <code>455579b16af0a65cc679121847300568ee42df5bcbf7bc1607e5648a1d98ad12</code>.</p>
+</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>@computec/mcp-remote 0.1.32</h3>
+<p>Archive SHA-256: <code>98e11f2d8e6c770b539e421ade01605d281f635b202b28a945aa2592a44216bd</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-6O7LDTFM.js</code>. File SHA-256: <code>34047277a190308c1bad50d925fe58f3c10cdcc8ef939f4c5d823722574e21fb</code>.</p>
+<ul>
+<li><code>getServerUrlHash</code>, lines 14281 to 14283: <code>md5-input-with-oauth-storage-context</code>. Normalized SHA-256: <code>455579b16af0a65cc679121847300568ee42df5bcbf7bc1607e5648a1d98ad12</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>mcp-remote-alibaba-cloud 0.1.38</h3>
+<p>Archive SHA-256: <code>bbb9e458f23dc51f39a4b5622e507d891fb09d67173c043bf8e020f52dbb4406</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-7U5DXR5B.js</code>. File SHA-256: <code>5d0c5504871057eeb6feb74b040f754833d615c14099881a06378122d7acfc0d</code>.</p>
+<ul>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20094 to 20126: <code>reference-function-match</code>; reference 0.1.38 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20094 to 20126: <code>reference-function-match</code>; reference 0.14.3 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>fetchProtectedResourceMetadataFromUrl</code>, lines 20138 to 20172: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchProtectedResourceMetadataFromUrl</code>. Normalized SHA-256: <code>3f23c7e676e974d3dc938536580ac13d5ad501e4a2481dbdd0350209d994fc31</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20173 to 20200: <code>reference-function-match</code>; reference 0.1.38 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20173 to 20200: <code>reference-function-match</code>; reference 0.14.3 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20201 to 20206: <code>reference-function-match</code>; reference 0.1.38 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20201 to 20206: <code>reference-function-match</code>; reference 0.14.3 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>fetchAuthorizationServerMetadata</code>, lines 20214 to 20250: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchAuthorizationServerMetadata</code>. Normalized SHA-256: <code>f4921bb9045fea5a192a9e0fa27ad26802e89600666a91dd6e54669724664a1d</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20890 to 20898: <code>md5-config-namespace</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20890 to 20898: <code>reference-function-match</code>; reference 0.1.38 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>@automattic/mcp-wordpress-remote 0.5.1</h3>
+<p>Archive SHA-256: <code>dde45e9d6dd82765064e836f1e699794af078424e8a4e8a36c05bdac484f6c9a</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/lib.js</code>. File SHA-256: <code>89d20226c3287fb2fc9df5d894f169fdcbd992b5837dac367d50d4f3fbffd62e</code>.</p>
+<ul>
+<li>
+<p><code>generateServerUrlHash</code>, lines 75622 to 75624: <code>md5-input-with-oauth-storage-context</code>. Normalized SHA-256: <code>455579b16af0a65cc679121847300568ee42df5bcbf7bc1607e5648a1d98ad12</code>.</p>
+</li>
+<li>
+<p><code>getServerUrlHash</code>, lines 75757 to 75759: <code>md5-input-with-oauth-storage-context</code>. Normalized SHA-256: <code>455579b16af0a65cc679121847300568ee42df5bcbf7bc1607e5648a1d98ad12</code>.
+Member: <code>package/dist/proxy.js</code>. File SHA-256: <code>418cde85b7bef0f2ffbeefb513b417ae4ffae3f1d61bd2f491193e092441c4a4</code>.</p>
+</li>
+<li>
+<p><code>generateServerUrlHash</code>, lines 76323 to 76325: <code>md5-input-with-oauth-storage-context</code>. Normalized SHA-256: <code>455579b16af0a65cc679121847300568ee42df5bcbf7bc1607e5648a1d98ad12</code>.</p>
+</li>
+<li>
+<p><code>getServerUrlHash</code>, lines 76490 to 76492: <code>md5-input-with-oauth-storage-context</code>. Normalized SHA-256: <code>455579b16af0a65cc679121847300568ee42df5bcbf7bc1607e5648a1d98ad12</code>.</p>
+</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>@neworange/neworange-mcp-remote 0.1.39</h3>
+<p>Archive SHA-256: <code>3043166ac9606d4963102d05e9ef2d601c507c6dd41ebe9e74418c033333a4cf</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-U45OMYNK.js</code>. File SHA-256: <code>0e6892bc7262d81c22138ea5e67b13db35b44a4b2bd3bb122ad865e10ceca428</code>.</p>
+<ul>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20094 to 20126: <code>reference-function-match</code>; reference 0.1.38 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>parseWWWAuthenticateHeader</code>, lines 20094 to 20126: <code>reference-function-match</code>; reference 0.14.3 / <code>parseWWWAuthenticateHeader</code>. Normalized SHA-256: <code>ffe2ef0c04d8e1123711754846cafb743c0a084768a0e4355fcb380d12d321dc</code>.</li>
+<li><code>fetchProtectedResourceMetadataFromUrl</code>, lines 20138 to 20172: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchProtectedResourceMetadataFromUrl</code>. Normalized SHA-256: <code>3f23c7e676e974d3dc938536580ac13d5ad501e4a2481dbdd0350209d994fc31</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20173 to 20200: <code>reference-function-match</code>; reference 0.1.38 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>discoverProtectedResourceMetadata</code>, lines 20173 to 20200: <code>reference-function-match</code>; reference 0.14.3 / <code>discoverProtectedResourceMetadata</code>. Normalized SHA-256: <code>0090173fc1722883f7407b2404f667324757829760a19815bad07209d87119ab</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20201 to 20206: <code>reference-function-match</code>; reference 0.1.38 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>getAuthorizationServerUrl</code>, lines 20201 to 20206: <code>reference-function-match</code>; reference 0.14.3 / <code>getAuthorizationServerUrl</code>. Normalized SHA-256: <code>27355ffb99dec7d4729f588fc6a920305d8f175cdab26b27a55c6e0d16f44594</code>.</li>
+<li><code>fetchAuthorizationServerMetadata</code>, lines 20214 to 20250: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchAuthorizationServerMetadata</code>. Normalized SHA-256: <code>f4921bb9045fea5a192a9e0fa27ad26802e89600666a91dd6e54669724664a1d</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20890 to 20898: <code>md5-config-namespace</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20890 to 20898: <code>reference-function-match</code>; reference 0.1.38 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>mcp-remote-ultra 1.0.0</h3>
+<p>Archive SHA-256: <code>fac21cb0582a04abbe6d7cdf6577eb70fad6b2ea8adf6a43533ce83610113937</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/dist/chunk-M36YVINN.js</code>. File SHA-256: <code>62c5296bd778c8829280ab2a1a38deb70c193451eb5a0c2710e1ee1ed42f6630</code>.</p>
+<ul>
+<li><code>getServerUrlHash</code>, lines 20903 to 20911: <code>md5-config-namespace</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>getServerUrlHash</code>, lines 20903 to 20911: <code>reference-function-match</code>; reference 0.1.38 / <code>getServerUrlHash</code>. Normalized SHA-256: <code>c626f1765da978807b9ce0c0d9b2a7149a4f9042a235a5d1767e3b4647d44626</code>.</li>
+<li><code>fetchAuthorizationServerMetadata</code>, lines 20937 to 20973: <code>reference-function-match</code>; reference 0.1.38 / <code>fetchAuthorizationServerMetadata</code>. Normalized SHA-256: <code>f4921bb9045fea5a192a9e0fa27ad26802e89600666a91dd6e54669724664a1d</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<h3>mcp-search-package 1.0.13</h3>
+<p>Archive SHA-256: <code>719c592d57173cbf928f110687cd65a9938ad7ce58c71748fdff821a85b0774a</code>.</p>
+<p>Recorded result: namespace-or-reference-match. Complete within the saved scan scope: true.</p>
+<p>Member: <code>package/node_modules/mcp-remote/dist/chunk-S7ORXPZR.js</code>. File SHA-256: <code>2cf1bc24868216a831458207c80062f806704e2b95da3d6ba41f5792b071f439</code>.</p>
+<ul>
+<li><code>getServerUrlHash</code>, lines 13669 to 13671: <code>md5-input-with-oauth-storage-context</code>. Normalized SHA-256: <code>455579b16af0a65cc679121847300568ee42df5bcbf7bc1607e5648a1d98ad12</code>.</li>
+</ul>
+<p>Selected matches establish code presence at function or structural level. Deployment and complete downstream request behavior remain unestablished.</p>
+<p>Ultra has exactly two normalized reference matches, <code>getServerUrlHash</code> and <code>fetchAuthorizationServerMetadata</code>, plus one namespace result. Other package components may have been implemented independently. Alibaba-labelled and WordPress-adapter roles describe published metadata; corporate ownership and internal use are not inferred.</p>
+<h2>Separate Git file selection</h2>
+<p>The selection contains 232 file records from 221 repositories, with 225 unique Git blobs: 222 JS/TS files and ten other records. Categories are A=0, B=9, C=223. Nine files contain the selected delimiter-MD5 construction, including the upstream file. Six exceed the function threshold; structural rules retain the other three. They are not added to the npm count as unique products.</p>
+<h3>krafton-ai/KIRA</h3>
+<p>Commit: <code>652dacbf14d29ea93a83c496ee91e0e5ba286721</code>. <a href="https://github.com/krafton-ai/KIRA/blob/652dacbf14d29ea93a83c496ee91e0e5ba286721/KiraClaw/apps/desktop/lib/register-ipc.js">Source</a>.
+Member: <code>KiraClaw/apps/desktop/lib/register-ipc.js</code>. SHA-256: <code>82d0d1fcc203294f6e8feff4710f494829b8c9da95faa2586506f0b319f4bc6f</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>getServerUrlHash</code>, line 262; function similarity 0.907563; normalized SHA-256 <code>ba33959b630397850178fc800e2789af333b4bb3436ba11610afc3aa08e777d6</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h3>punkpeye/mcp-remote</h3>
+<p>Commit: <code>6a06aca546a8fd3b7beb040f39761b364893198d</code>. <a href="https://github.com/punkpeye/mcp-remote/blob/6a06aca546a8fd3b7beb040f39761b364893198d/src/lib/utils.ts">Source</a>.
+Member: <code>src/lib/utils.ts</code>. SHA-256: <code>dfaa90fcb51f573ab3960444c5a7eb1167aae64e379f8d37704f5111f27365f0</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>getServerUrlHash</code>, line 3232; function similarity 0.440476; normalized SHA-256 <code>e116b244962eef346e01d355705ac36c3a243e886c363dd46754c0a39a372f3b</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h3>patleeman/neon-pilot</h3>
+<p>Commit: <code>49aa6d404a1ccc4473b79c7b90d55a77f5ea7020</code>. <a href="https://github.com/patleeman/neon-pilot/blob/49aa6d404a1ccc4473b79c7b90d55a77f5ea7020/packages/core/src/mcp-oauth.ts">Source</a>.
+Member: <code>packages/core/src/mcp-oauth.ts</code>. SHA-256: <code>d882b30876a63a16959f04e11569faf5ab9d89ad330d7ea3561bed8822ca376a</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>getMcpServerUrlHash</code>, line 795; function similarity 0.818565; normalized SHA-256 <code>fa3298fa04bc8e03b0980f46f1ab4ee11e7bb8d2e8700925ff627c2a5505b904</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h3>abluva/mcp-remote</h3>
+<p>Commit: <code>9cd1ca1a81d402539825db7f72fc1571502027c1</code>. <a href="https://github.com/abluva/mcp-remote/blob/9cd1ca1a81d402539825db7f72fc1571502027c1/src/lib/utils.ts">Source</a>.
+Member: <code>src/lib/utils.ts</code>. SHA-256: <code>6e99b27825c6efaba4a2417295b46b3286ef3b817360e3339a4a55ab1e4e6e8a</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>getServerUrlHash</code>, line 2209; function similarity 0.92437; normalized SHA-256 <code>7536b518b2e9cd938fa29c92168a2785ca7f48ead23b0801c5b4c1f4c892f252</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h3>ekizilkaya/IntelAgent</h3>
+<p>Commit: <code>da0e6cea742d2a4364dab0dd4fbe7fca9ba7ec7c</code>. <a href="https://github.com/ekizilkaya/IntelAgent/blob/da0e6cea742d2a4364dab0dd4fbe7fca9ba7ec7c/mcp-remote-utils.ts">Source</a>.
+Member: <code>mcp-remote-utils.ts</code>. SHA-256: <code>ba76e708518b0b47ad93cef72d476dade919d5bb35ebfb31d885f6afb690d678</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>getServerUrlHash</code>, line 994; function similarity 0.92437; normalized SHA-256 <code>7536b518b2e9cd938fa29c92168a2785ca7f48ead23b0801c5b4c1f4c892f252</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h3>moneta/mcp-remote</h3>
+<p>Commit: <code>cef0560e5476a1a1f2b0a296240a0b2192e51f99</code>. <a href="https://github.com/moneta/mcp-remote/blob/cef0560e5476a1a1f2b0a296240a0b2192e51f99/src/lib/utils.ts">Source</a>.
+Member: <code>src/lib/utils.ts</code>. SHA-256: <code>9e519820d7857e2b4fb4737cdcfd3ccdf5ce99baacb922a20ba68515ba7231b3</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>getServerUrlHash</code>, line 1098; function similarity 0.92437; normalized SHA-256 <code>7536b518b2e9cd938fa29c92168a2785ca7f48ead23b0801c5b4c1f4c892f252</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h3>michalrokita/MCP-Passport</h3>
+<p>Commit: <code>8dfebb575fb2832238675f3b3e149e7eedc60469</code>. <a href="https://github.com/michalrokita/MCP-Passport/blob/8dfebb575fb2832238675f3b3e149e7eedc60469/src/main/mcpUrlHash.ts">Source</a>.
+Member: <code>src/main/mcpUrlHash.ts</code>. SHA-256: <code>21388e22578908d2b18444d51e7737cd6035a3fb63579b42b1c45fbce27ca0f3</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>mcpUrlHash</code>, line 14; function similarity 0.591195; normalized SHA-256 <code>7c0f6c24193d61ec352ff41eb56e599238e2136e991c896210ec4b46dd6b15e5</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h3>grupoultra/up-mcp-bridge</h3>
+<p>Commit: <code>acc515b94333334ab3408e250832755a311a6d75</code>. <a href="https://github.com/grupoultra/up-mcp-bridge/blob/acc515b94333334ab3408e250832755a311a6d75/src/lib/utils.ts">Source</a>.
+Member: <code>src/lib/utils.ts</code>. SHA-256: <code>01b60c2040d314adea2435bdcc42fd1350053a1b123bb200c7fc56183a9de4c0</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>getServerUrlHash</code>, line 2041; function similarity 0.92437; normalized SHA-256 <code>7536b518b2e9cd938fa29c92168a2785ca7f48ead23b0801c5b4c1f4c892f252</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h3>NerdOutInc/recall-plugins</h3>
+<p>Commit: <code>cc2085f502c6ce016a517c463353e1a2410f14ad</code>. <a href="https://github.com/NerdOutInc/recall-plugins/blob/cc2085f502c6ce016a517c463353e1a2410f14ad/plugins/recall/bridge/build/vendor/mcp-remote/src/lib/utils.ts">Source</a>.
+Member: <code>plugins/recall/bridge/build/vendor/mcp-remote/src/lib/utils.ts</code>. SHA-256: <code>11331e1e33f88bccd3aea04c103aaab2cb4e56444156210126a83c00b9331e33</code>.
+Recorded result: B; AST complete; Semgrep complete.</p>
+<ul>
+<li><code>getServerUrlHash</code>, line 1071; function similarity 0.92437; normalized SHA-256 <code>7536b518b2e9cd938fa29c92168a2785ca7f48ead23b0801c5b4c1f4c892f252</code>.</li>
+</ul>
+<p>This supports a shared namespace helper or selected structural relationship. Full project ancestry, complete discovery behavior and product exposure remain unestablished.</p>
+<h2>Further comparison cohorts</h2>
+<table>
+<thead>
+<tr>
+<th>Cohort</th>
+<th style="text-align:right">Artifacts</th>
+<th style="text-align:right">Source instances</th>
+<th style="text-align:right">A</th>
+<th style="text-align:right">B</th>
+<th style="text-align:right">C</th>
+<th style="text-align:right">UNRESOLVED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Calibration</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">3033</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>Corporate pilot after targeted review</td>
+<td style="text-align:right">33</td>
+<td style="text-align:right">1325</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">32</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>Marketplace</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">3699</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align:right">63</td>
+<td style="text-align:right">8057</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">51</td>
+<td style="text-align:right">8</td>
+</tr>
+</tbody>
+</table>
+<p>These are 63 distinct pinned artifact identities and 8057 source instances. Zero A results here do not cancel the separate npm/Git observations. B can retain coverage gaps; C applies only to the selected indicators in the processed scope. The ledger retains all 8057 file instances, filtered files and incomplete results.</p>
+<h3>ms-azuretools.vscode-azureresourcegroups 0.13.2</h3>
+<p>Archive SHA-256: <code>82a089f7919233cbdba592f2d8f4af99e6b7f5f877a6ed20adb1e54a820506b4</code>.</p>
+<p>Category B with incomplete full-bundle coverage.</p>
+<p>Targeted source review identified server-side metadata and challenge-response helpers, including <code>buildWwwAuthenticateHeader</code>. Four slices contain no direct outbound network call; the full bundle retains its parse gap.</p>
+<h3>anthropic.claude-code 2.1.89</h3>
+<p>Archive SHA-256: <code>f46012808ee27e1c408f82fa5dfd4c1b21ac885702e4d65bd880828cb51fe50c</code>.</p>
+<p>Category B with incomplete full-bundle coverage.</p>
+<p>Member: <code>extension/resources/claude-code/cli.js</code>. SHA-256: <code>4542e9127b2ca4896c5c1bfa72994bb3e412964e9e96767da0835515826fa37f</code>.</p>
+<ul>
+<li><code>uB1</code>: reference <code>pkceChallenge</code>; similarity 0.8625; normalized SHA-256 <code>27d3940b33b8348b8fea44907dffa638ae9e5dba84d00c003c049c91ce1e11c5</code>.</li>
+</ul>
+<h3>augment.vscode-augment 0.904.1</h3>
+<p>Archive SHA-256: <code>f8bc24e3fc434487799220937b41cd4c2f8a50d3070c67de422d7f27b5a9d6ab</code>.</p>
+<p>Category B with incomplete full-bundle coverage.</p>
+<p>Member: <code>extension/out/extension.js</code>. SHA-256: <code>9050779577b3641d3b02b280ed55401d69ef64d6b08ecb6c0c661dd6270a9670</code>.</p>
+<ul>
+<li><code>sF</code>: reference <code>extractWWWAuthenticateParams</code>; similarity 0.807909604519774; normalized SHA-256 <code>1eb46474f5a1687367b994c5b23871253242bf865246622836c00c072219e0b3</code>.</li>
+</ul>
+<p>Member: <code>extension/out/migration-engine/auggie-v2.mjs.d/extensions/mcp/index.js</code>. SHA-256: <code>3fb364c6e4fd96b7cb36c423d869980d2af69238aa9dc4868c6cfe36bb2d996e</code>.</p>
+<ul>
+<li><code>gY</code>: reference <code>pkceChallenge</code>; similarity 0.8625; normalized SHA-256 <code>27d3940b33b8348b8fea44907dffa638ae9e5dba84d00c003c049c91ce1e11c5</code>.</li>
+</ul>
+<h3>moonshot-ai.kimi-code 0.8.1</h3>
+<p>Archive SHA-256: <code>bc4a21d0818d9636dd31a54b36b3cd0d2988e8e862b4999db0549b9e1780c3c8</code>.</p>
+<p>Category B with incomplete full-bundle coverage.</p>
+<p>Member: <code>extension/dist/extension.js</code>. SHA-256: <code>94985f147b84ed6b1eefc996736423cb4978348b6fe2085d212aa14d059e47b2</code>.</p>
+<ul>
+<li><code>extractWWWAuthenticateParams</code>: reference <code>extractWWWAuthenticateParams</code>; similarity 0.8659217877094972; normalized SHA-256 <code>1dc1229d32fa6fe9514f79d9d94ade6c3ce40743a08372c534b3d81d83361f11</code>.</li>
+<li><code>startAuthorization</code>: reference <code>startAuthorization</code>; similarity 0.8819875776397516; normalized SHA-256 <code>3b6ddfd96d57949f0559fe131d30bc80b144c01122c659652ad784a4f30466e8</code>.</li>
+</ul>
+<h2>Repository metadata</h2>
+<p>Two saved Git metadata records identify forks of <code>punkpeye/mcp-remote</code>:</p>
+<ul>
+<li><code>Ashesh3/mcp-remote-entra</code> at <code>4d7b9d75c43e7ed435e868d0f9f002ba61da0a0c</code>.</li>
+<li><code>explorium-ai/mcp-remote</code> at <code>6eeeeceab1d567787aa1af22d42a927f519d5034</code>.</li>
+</ul>
+<p>These metadata observations support the provenance view and add no npm results. No alias relationship is inferred from a matching name or function.</p>
+<p><a href="EVIDENCE.md">Evidence accounting</a> · <a href="data/code-distribution.json">Full ledger</a> · <a href="data/ecosystem-lineage.json">Recorded classifications</a></p>
+</main></body></html>

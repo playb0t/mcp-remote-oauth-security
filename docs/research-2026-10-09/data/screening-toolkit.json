@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "revision": "r3",
+  "method_id": "historical-ast-shingle-semgrep",
+  "separate_from": "48-archive npm matcher in procedures/cve-signature-20261009/ast.mjs",
+  "runtime_versions": {
+    "node_verified": "v24.19.0",
+    "typescript": "5.9.3",
+    "semgrep": "1.180.0",
+    "python_verified": "3.10.12"
+  },
+  "method": {
+    "unit": "function",
+    "normalization": "bound local identifiers; significant property names and literals retained",
+    "comparison": "five-token multiset Sorensen-Dice",
+    "shingle_size": 5,
+    "corporate_threshold_exclusive": 0.85,
+    "marketplace_threshold_exclusive": 0.8,
+    "structural_routes": [
+      "metadata-and-network",
+      "delimiter-MD5"
+    ],
+    "semgrep_budget_seconds": 15,
+    "budget_basis": "wall-clock",
+    "classifications_generated": false,
+    "gap_disposition": "UNRESOLVED",
+    "accuracy_measured": false
+  },
+  "reference_origin": {
+    "schema_version": 1,
+    "artifact": {
+      "kind": "npm",
+      "name": "mcp-remote",
+      "version": "0.1.38",
+      "declared_repository": "https://github.com/geelen/mcp-remote"
+    },
+    "member": "package/dist/chunk-65X3S4HB.js",
+    "file_sha256": "d3eb914e687408424476bd8a41eff8d1d47e01772b14158f500f5ecd902fa875",
+    "file_bytes": 755586,
+    "offset_unit": "UTF-16 code units in decoded source",
+    "note": "Source slices for inspection. Reference token fingerprints were obtained in the complete bundle binding context; standalone slices may have different free-identifier bindings. The scanner never executes these functions."
+  },
+  "sources": [
+    {
+      "source_locator": "artifacts/research/mcp-enterprise-calibration-2026-10-09/stream_ast.cjs",
+      "sha256": "30a2661823fffa09c226a6b1ed39922302e2b7f4b894e94144784b6af2eaed92",
+      "bytes": 9031,
+      "public_paths": [
+        "procedures/screening/stream_ast.cjs"
+      ],
+      "adaptation": "Parser/reference locators and archive-specific entry point replaced; analyze implementation preserved."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-shadow-audit-2026-10-09/batch/baseline-reference-functions.json",
+      "sha256": "5bb660c5888a55c4fa3486a32f27b1c90e3388eeb0545753c59051ff569afe9a",
+      "bytes": 68966,
+      "public_paths": [
+        "procedures/screening/references/baseline-reference-functions.json"
+      ],
+      "adaptation": "Copied byte-for-byte."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-shadow-audit-2026-10-09/tests/semgrep/hash.js",
+      "sha256": "872007465f5eb4f69094ae4e6bf2ec2c1ced4fc106ef3ea151f95af5d5b8da62",
+      "bytes": 691,
+      "public_paths": [
+        "procedures/screening/controls/hash.js"
+      ],
+      "adaptation": "Copied byte-for-byte."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-shadow-audit-2026-10-09/tests/semgrep/metadata.js",
+      "sha256": "3d6960a54df009c02004bb206f9d9c450c66d98f3c58bbfb50a36d511f7ba6d6",
+      "bytes": 1123,
+      "public_paths": [
+        "procedures/screening/controls/metadata.js"
+      ],
+      "adaptation": "Copied byte-for-byte."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-shadow-audit-2026-10-09/batch/rules/mcp_shadow_fingerprint.yaml",
+      "sha256": "761f43ba92a8c9036a3b877c87868a8f33537eb97ff03e9af0e3558c0946fb71",
+      "bytes": 2964,
+      "public_paths": [
+        "rules/mcp_shadow_fingerprint.yaml"
+      ],
+      "adaptation": "Corrected historical rule file copied byte-for-byte."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-shadow-audit-2026-10-09/batch/semgrep-fixture-verification.json",
+      "sha256": "ef02664c739e79d38f14456496436f0f2049f2148b2709e6e24c0c1c5ff77138",
+      "bytes": 1398,
+      "public_paths": [
+        "procedures/screening/controls/expected-semgrep.json"
+      ],
+      "adaptation": "Expected rule IDs and lines projected from the saved check."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-enterprise-pilot-2026-10-09/ast_gate.cjs",
+      "sha256": "6549333750becfa6084ca3ea21f37ff3926c98bb881b73391030b4bd3bb5cac4",
+      "bytes": 4224,
+      "public_paths": [
+        "procedures/screening/structure.cjs",
+        "procedures/screening/candidate_filter.cjs"
+      ],
+      "adaptation": "Structural detector preserved; manifest adapter made relative; corporate strict threshold retained. Portable profile admission accepts only own corporate/marketplace entries; inherited property names and unknown names are rejected."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-shadow-expedition-2026-10-09/ast80.cjs",
+      "sha256": "905c9eddb378e7fc276a15a40b37f55fc16acceb97e9e62fff3bff6dde50d3d5",
+      "bytes": 2319,
+      "public_paths": [
+        "procedures/screening/candidate_filter.cjs"
+      ],
+      "adaptation": "Marketplace strict threshold and structural routes retained in profile selection."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-enterprise-pilot-2026-10-09/semgrep_candidates.py",
+      "sha256": "2b481c2f9db13534eba4c2eee33322b759016bfc9c42ab6998b2cf6791781698",
+      "bytes": 4538,
+      "public_paths": [
+        "procedures/screening/semgrep_candidates.py"
+      ],
+      "adaptation": "Runtime arguments, version checks, safe relative paths, public result projection and explicit termination fields added; scan parameters and budget retained. Nested engine error variants are projected to scalar labels; raw nested locations remain outside the public summary."
+    },
+    {
+      "source_locator": "artifacts/research/mcp-shadow-audit-2026-10-09/evidence/releases/0.1.38/package/dist/chunk-65X3S4HB.js",
+      "sha256": "d3eb914e687408424476bd8a41eff8d1d47e01772b14158f500f5ecd902fa875",
+      "bytes": 755586,
+      "public_paths": [
+        "procedures/screening/references/source-functions.json",
+        "procedures/screening/controls/reference-hash.js"
+      ],
+      "adaptation": "Fourteen original source spans extracted as data; one isolated hash fixture includes a local placeholder binding."
+    }
+  ],
+  "verification": {
+    "receipt": "procedures/screening/CONTROL-VERIFICATION.json",
+    "sha256": "7306b3e01b43996b246c43ff33f3a874716ff4e043be057e064b55a4639bed0e",
+    "passed": true,
+    "fresh_directory": true,
+    "fresh_dependency_install": false,
+    "ast_assertions": 19,
+    "semgrep_and_supervisor_assertions": 8,
+    "result_counts": {
+      "files": 5,
+      "candidates": 3,
+      "ast_filtered": 1,
+      "intentionally_unresolved": 1,
+      "semgrep_invocations": 3,
+      "semgrep_rule_matches": 7
+    },
+    "dependencies_installed": false,
+    "target_execution": false,
+    "network_collection": false,
+    "error_projection_control_passed": true,
+    "profile_rejection_controls_passed": true
+  },
+  "new_cohort_observations": 0,
+  "coverage_note": "Local controls only. Historical classifications and gaps are unchanged; no A/B/C is assigned to new inputs."
+}

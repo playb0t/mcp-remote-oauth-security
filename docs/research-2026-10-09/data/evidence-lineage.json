@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "result_groups": [
+    {
+      "id": "published-cli",
+      "unit": "three configured CLI scenarios",
+      "observations": 3,
+      "counted_occurrences": 1,
+      "source_sha256": [
+        "717057a491e8cae2cdedaa38626015d2c6b9093b744eae20f2c878347453389f"
+      ]
+    },
+    {
+      "id": "release-history",
+      "unit": "74 stable releases with 58 selected-helper executions",
+      "observations": 74,
+      "counted_occurrences": 1,
+      "source_sha256": [
+        "8b2cdf2fa64cc827eba43dfcb4d8fac6c0b0ef3aa7ea7ecb478517a215fec303",
+        "de6d24ffb5df7896844123041936244b39ed208878bd421f9d59c8f75ad2f346",
+        "9a0e0c6bf13d16630f3b1ff5dea6fd650eae001f72c538168cace61e4542f0fc",
+        "7360ee1c74febb1c70d4d3b51fe769991a66fa147ac378b6d17de6743c4490ef"
+      ]
+    },
+    {
+      "id": "npm-selection",
+      "unit": "package/version archives",
+      "observations": 48,
+      "counted_occurrences": 1,
+      "source_sha256": [
+        "d06782bcf1f78fbf999c65caa3d795a145cf495acff90bdfa1b1d3551a699b90",
+        "717057a491e8cae2cdedaa38626015d2c6b9093b744eae20f2c878347453389f",
+        "41ac37c4e7375e3517e12029625156d0eaa7dec151cc975918ead0c65cd2e3ab"
+      ]
+    },
+    {
+      "id": "git-selection",
+      "unit": "file records",
+      "observations": 232,
+      "counted_occurrences": 1,
+      "source_sha256": [
+        "bf150d96c194f235fee8fd5659901d7118f8adb88530ccf6c2dbe22481b35840"
+      ]
+    },
+    {
+      "id": "calibration",
+      "unit": "pinned artifacts",
+      "observations": 10,
+      "counted_occurrences": 1,
+      "source_sha256": [
+        "409ab0d08b3beeea8b63bbfdd24c0bd6d65b5cf3142806a847e5e7e01dd55614"
+      ]
+    },
+    {
+      "id": "corporate",
+      "unit": "pinned artifacts",
+      "observations": 33,
+      "counted_occurrences": 1,
+      "source_sha256": [
+        "eff3d733c700759481d65c9d14d095a622ae82c0f05b44772460631a4055886a",
+        "31f36766763a3939ca4fbc59113099275ef5a4f58520eefd7242ce4660fba502"
+      ]
+    },
+    {
+      "id": "marketplace",
+      "unit": "pinned artifacts",
+      "observations": 20,
+      "counted_occurrences": 1,
+      "source_sha256": [
+        "7484879ac7539855466f2192aa872c8dc2c1fa42f3efbb4db5f1d6c0003fa23d"
+      ]
+    }
+  ],
+  "logical_result_groups": 7,
+  "cohort_artifact_observations": 63,
+  "cohort_artifact_identities": 63,
+  "cohort_archive_sha256_identities": 43,
+  "cohort_git_snapshots": 20,
+  "cohort_source_instances": 8057,
+  "cohort_source_instances_globally_deduplicated": false,
+  "cross_view_shared_archives": [
+    {
+      "archive_sha256": "f4ab0e33b38b24fff6a8b3234f9d683e47995ca44f3186481716d444836f7254",
+      "versions": [
+        "0.14.3"
+      ],
+      "views": [
+        "release-history",
+        "npm-selection",
+        "published-cli"
+      ],
+      "new_independent_execution_implied": false
+    }
+  ],
+  "npm_cohort_archive_reuse": [],
+  "global_product_or_installation_total": null,
+  "rules": [
+    "Source copies with equal SHA-256 are one input, not new experiments.",
+    "A targeted classification update modifies its existing cohort row and does not add an artifact.",
+    "Package archives, repository blobs and runtime cases retain separate denominators.",
+    "Distinct static normalizers retain their own fingerprint semantics."
+  ],
+  "editorial_clarifications": {
+    "revision": "r2",
+    "additional_npm_observations": 0,
+    "ultra_function_evidence": "ecosystem-lineage.json npm_records[mcp-remote-ultra].function_evidence",
+    "screening_method": "analysis-limitations.json screening_method"
+  }
+}

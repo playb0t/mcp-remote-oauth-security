@@ -1,0 +1,807 @@
+{
+  "units": "Distinct pinned artifact identities within these three cohorts; 8057 source instances are not globally deduplicated. These cohorts are not re-added when cited by another report.",
+  "calibration": {
+    "artifacts": 10,
+    "files": 3033,
+    "categories": {
+      "A": 0,
+      "B": 0,
+      "C": 9,
+      "UNRESOLVED": 1
+    },
+    "artifact_records": [
+      {
+        "kind": "npm",
+        "name": "@azure/identity",
+        "version": "4.13.3",
+        "commit": null,
+        "archive_sha256": "73f1a66e60fabc6902d05ef283b26e41a6f3f675cff4977cb5af28a82edd548c",
+        "identity_key": "npm:@azure/identity@4.13.3#sha256:73f1a66e60fabc6902d05ef283b26e41a6f3f675cff4977cb5af28a82edd548c"
+      },
+      {
+        "kind": "npm",
+        "name": "@azure/core-rest-pipeline",
+        "version": "1.25.0",
+        "commit": null,
+        "archive_sha256": "a30ebbee6ac861222deec7398ea217a53e40e39f765c4ce07ff262328b79e318",
+        "identity_key": "npm:@azure/core-rest-pipeline@1.25.0#sha256:a30ebbee6ac861222deec7398ea217a53e40e39f765c4ce07ff262328b79e318"
+      },
+      {
+        "kind": "npm",
+        "name": "@azure/msal-node",
+        "version": "7.0.1",
+        "commit": null,
+        "archive_sha256": "851f36315a4d70c5d8af686f917b42e311948716cd80e9cb7de4b97d66c90bff",
+        "identity_key": "npm:@azure/msal-node@7.0.1#sha256:851f36315a4d70c5d8af686f917b42e311948716cd80e9cb7de4b97d66c90bff"
+      },
+      {
+        "kind": "npm",
+        "name": "@aws-sdk/client-bedrock-runtime",
+        "version": "3.1148.0",
+        "commit": null,
+        "archive_sha256": "a5b7f1ed9ba6dff629a8137026eb1192972fb79a653c3a7bab52bcab9ee33701",
+        "identity_key": "npm:@aws-sdk/client-bedrock-runtime@3.1148.0#sha256:a5b7f1ed9ba6dff629a8137026eb1192972fb79a653c3a7bab52bcab9ee33701"
+      },
+      {
+        "kind": "npm",
+        "name": "@aws-sdk/client-sts",
+        "version": "3.1148.0",
+        "commit": null,
+        "archive_sha256": "d9b706c2d38c2e568f70f358c96fea8e50919fc009bf9a6663e57d45ebc3aef2",
+        "identity_key": "npm:@aws-sdk/client-sts@3.1148.0#sha256:d9b706c2d38c2e568f70f358c96fea8e50919fc009bf9a6663e57d45ebc3aef2"
+      },
+      {
+        "kind": "npm",
+        "name": "@aws-sdk/credential-providers",
+        "version": "3.1148.0",
+        "commit": null,
+        "archive_sha256": "0230989c743339bc08b5ccfe0844aa484e26ed3a0f9b34b8de132e3a524f6171",
+        "identity_key": "npm:@aws-sdk/credential-providers@3.1148.0#sha256:0230989c743339bc08b5ccfe0844aa484e26ed3a0f9b34b8de132e3a524f6171"
+      },
+      {
+        "kind": "npm",
+        "name": "@oracle/oraclejet",
+        "version": "21.0.1",
+        "commit": null,
+        "archive_sha256": "3ccc285069e87c4185e1e417a5bf87a3043fcebac25c0a48558cf6568aa34151",
+        "identity_key": "npm:@oracle/oraclejet@21.0.1#sha256:3ccc285069e87c4185e1e417a5bf87a3043fcebac25c0a48558cf6568aa34151"
+      },
+      {
+        "kind": "npm",
+        "name": "@oracle/oraclejet-tooling",
+        "version": "21.0.1",
+        "commit": null,
+        "archive_sha256": "9b97356a3dc75bdda4fb102d34bd2c234c94e0b92a7ef89cad1ba756630195ab",
+        "identity_key": "npm:@oracle/oraclejet-tooling@21.0.1#sha256:9b97356a3dc75bdda4fb102d34bd2c234c94e0b92a7ef89cad1ba756630195ab"
+      },
+      {
+        "kind": "npm",
+        "name": "@salesforce/core",
+        "version": "9.3.4",
+        "commit": null,
+        "archive_sha256": "85038e452f23827751f8e066bad9563602e5e2cc16ec8ab28c3c146c593ffaf4",
+        "identity_key": "npm:@salesforce/core@9.3.4#sha256:85038e452f23827751f8e066bad9563602e5e2cc16ec8ab28c3c146c593ffaf4"
+      },
+      {
+        "kind": "npm",
+        "name": "@salesforce/mcp",
+        "version": "0.30.15",
+        "commit": null,
+        "archive_sha256": "7cd9f0a3437b5102d01d8d629fd1666487414c1256487fe60245a86b66e831b6",
+        "identity_key": "npm:@salesforce/mcp@0.30.15#sha256:7cd9f0a3437b5102d01d8d629fd1666487414c1256487fe60245a86b66e831b6"
+      }
+    ]
+  },
+  "corporate": {
+    "artifacts": 33,
+    "files": 1325,
+    "categories_after_targeted_triage": {
+      "A": 0,
+      "B": 1,
+      "C": 32,
+      "UNRESOLVED": 0
+    },
+    "semgrep_gap_artifacts": 1,
+    "artifact_records": [
+      {
+        "kind": "npm",
+        "name": "@adobe/aio-cli",
+        "version": "11.1.4",
+        "commit": null,
+        "archive_sha256": "0a45c720fa91174d0911de0639d25f500263bbbff9d5c8a28b45308e79e63118",
+        "identity_key": "npm:@adobe/aio-cli@11.1.4#sha256:0a45c720fa91174d0911de0639d25f500263bbbff9d5c8a28b45308e79e63118"
+      },
+      {
+        "kind": "npm",
+        "name": "@adobe/aio-lib-core-networking",
+        "version": "5.1.0",
+        "commit": null,
+        "archive_sha256": "d12be896e4eab88c87a7bcd3cbf8d9ac3835dfb35925610fbc7465ef4c16c3eb",
+        "identity_key": "npm:@adobe/aio-lib-core-networking@5.1.0#sha256:d12be896e4eab88c87a7bcd3cbf8d9ac3835dfb35925610fbc7465ef4c16c3eb"
+      },
+      {
+        "kind": "npm",
+        "name": "@adobe/aio-lib-ims",
+        "version": "8.1.2",
+        "commit": null,
+        "archive_sha256": "a44d18094cd6ca6f355aa9d9ada1df6205614cb84bdc7e8b8e3f3ed6502a5cb2",
+        "identity_key": "npm:@adobe/aio-lib-ims@8.1.2#sha256:a44d18094cd6ca6f355aa9d9ada1df6205614cb84bdc7e8b8e3f3ed6502a5cb2"
+      },
+      {
+        "kind": "npm",
+        "name": "@adobe/aio-lib-runtime",
+        "version": "7.5.0",
+        "commit": null,
+        "archive_sha256": "38ce1f5cc4cbc8cf0ebb12a432640b6403103775c3d47d1586b02783d84fbcab",
+        "identity_key": "npm:@adobe/aio-lib-runtime@7.5.0#sha256:38ce1f5cc4cbc8cf0ebb12a432640b6403103775c3d47d1586b02783d84fbcab"
+      },
+      {
+        "kind": "npm",
+        "name": "@microsoft/teams.mcp",
+        "version": "2.0.12",
+        "commit": null,
+        "archive_sha256": "8278aed480f30f45caf54768aa68b15982fad5745b918003e76d88a94214086f",
+        "identity_key": "npm:@microsoft/teams.mcp@2.0.12#sha256:8278aed480f30f45caf54768aa68b15982fad5745b918003e76d88a94214086f"
+      },
+      {
+        "kind": "npm",
+        "name": "@microsoft/teams-ai",
+        "version": "1.7.4",
+        "commit": null,
+        "archive_sha256": "eba5b612d8c8b065b9ff9489369cde3136ed9caaed1b5ca31ee7e2bbca2c5df8",
+        "identity_key": "npm:@microsoft/teams-ai@1.7.4#sha256:eba5b612d8c8b065b9ff9489369cde3136ed9caaed1b5ca31ee7e2bbca2c5df8"
+      },
+      {
+        "kind": "npm",
+        "name": "@microsoft/agents-copilotstudio-client",
+        "version": "1.9.1",
+        "commit": null,
+        "archive_sha256": "54d536298200d172c1886e0a85cc0fd6ab5aa70ff75570df24331878dae778ae",
+        "identity_key": "npm:@microsoft/agents-copilotstudio-client@1.9.1#sha256:54d536298200d172c1886e0a85cc0fd6ab5aa70ff75570df24331878dae778ae"
+      },
+      {
+        "kind": "npm",
+        "name": "react-native-pathjs-charts",
+        "version": "0.0.34",
+        "commit": null,
+        "archive_sha256": "c380a544b8f62caeb43972ddcc4343a45d950bfe96f0b1342eaef0b87d1dd2c1",
+        "identity_key": "npm:react-native-pathjs-charts@0.0.34#sha256:c380a544b8f62caeb43972ddcc4343a45d950bfe96f0b1342eaef0b87d1dd2c1"
+      },
+      {
+        "kind": "npm",
+        "name": "jwt-security",
+        "version": "1.1.1",
+        "commit": null,
+        "archive_sha256": "c616bfcfe14f3c4c0bb94fc53fc439955d1d8204418e4d092fe73ca26b327ded",
+        "identity_key": "npm:jwt-security@1.1.1#sha256:c616bfcfe14f3c4c0bb94fc53fc439955d1d8204418e4d092fe73ca26b327ded"
+      },
+      {
+        "kind": "npm",
+        "name": "@capitalone/stratum-observability",
+        "version": "2.0.1",
+        "commit": null,
+        "archive_sha256": "db0463280be4a7769308ed71e2c6d0847731df4adadeb7120168c09fdb49f492",
+        "identity_key": "npm:@capitalone/stratum-observability@2.0.1#sha256:db0463280be4a7769308ed71e2c6d0847731df4adadeb7120168c09fdb49f492"
+      },
+      {
+        "kind": "npm",
+        "name": "context-specs",
+        "version": "0.2.0",
+        "commit": null,
+        "archive_sha256": "cc990a8b8c2c51864ca91a3498fefbd245c43c9c84d1d7b9e6c94398b4ee7ce2",
+        "identity_key": "npm:context-specs@0.2.0#sha256:cc990a8b8c2c51864ca91a3498fefbd245c43c9c84d1d7b9e6c94398b4ee7ce2"
+      },
+      {
+        "kind": "vsix",
+        "name": "com-adobe-coldfusion.adobe-cfml-lsp",
+        "version": "1.0.880",
+        "commit": null,
+        "archive_sha256": "f1199e52f1603b476837fef597b9bb7ca1c7508bccb323ff05dc266dab65091c",
+        "identity_key": "vsix:com-adobe-coldfusion.adobe-cfml-lsp@1.0.880#sha256:f1199e52f1603b476837fef597b9bb7ca1c7508bccb323ff05dc266dab65091c"
+      },
+      {
+        "kind": "vsix",
+        "name": "ms-azuretools.vscode-azureresourcegroups",
+        "version": "0.13.2",
+        "commit": null,
+        "archive_sha256": "82a089f7919233cbdba592f2d8f4af99e6b7f5f877a6ed20adb1e54a820506b4",
+        "identity_key": "vsix:ms-azuretools.vscode-azureresourcegroups@0.13.2#sha256:82a089f7919233cbdba592f2d8f4af99e6b7f5f877a6ed20adb1e54a820506b4"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/Rewards-API-reference-app",
+        "version": null,
+        "commit": "1da0b47d4d38383f4c51f58181b881bd628169a9",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/Rewards-API-reference-app@1da0b47d4d38383f4c51f58181b881bd628169a9"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/CreditOffers-API-reference-app",
+        "version": null,
+        "commit": "3a25e8507239e996b5a1a6fe27562924c2fee6fe",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/CreditOffers-API-reference-app@3a25e8507239e996b5a1a6fe27562924c2fee6fe"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/oas-nodegen",
+        "version": null,
+        "commit": "84cde47ab69a58a8b38ff79c67d5fc3c2c21759b",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/oas-nodegen@84cde47ab69a58a8b38ff79c67d5fc3c2c21759b"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/oas-nodegen-example",
+        "version": null,
+        "commit": "2840e5be81fd7451a372a8b96197b0bd5a449be9",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/oas-nodegen-example@2840e5be81fd7451a372a8b96197b0bd5a449be9"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/react-native-pathjs-charts",
+        "version": null,
+        "commit": "857d4478dbb5d6b1b9f008e252d7be96e21fc390",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/react-native-pathjs-charts@857d4478dbb5d6b1b9f008e252d7be96e21fc390"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/giraffez",
+        "version": null,
+        "commit": "e5e69cb8728f51fc3b3b45f0c140b39bd6d6f752",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/giraffez@e5e69cb8728f51fc3b3b45f0c140b39bd6d6f752"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/BankAccountStarter-API-reference-app",
+        "version": null,
+        "commit": "ca8ff2e2527bd1c77ea01c190389ea52ad5b8774",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/BankAccountStarter-API-reference-app@ca8ff2e2527bd1c77ea01c190389ea52ad5b8774"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/stack-deployment-tool",
+        "version": null,
+        "commit": "1b0671e754b1c2455cf8a924534d00080a6c4fb4",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/stack-deployment-tool@1b0671e754b1c2455cf8a924534d00080a6c4fb4"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/serverless-shell",
+        "version": null,
+        "commit": "80f9e4874a56b6463b4b0956ed92d60312627748",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/serverless-shell@80f9e4874a56b6463b4b0956ed92d60312627748"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/checks-out",
+        "version": null,
+        "commit": "4cbfb343fb1df0a8622adcd89be9a6f90e2b751f",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/checks-out@4cbfb343fb1df0a8622adcd89be9a6f90e2b751f"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/jwt-security",
+        "version": null,
+        "commit": "443e10344beb971550a124cee97d81925d1e315c",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/jwt-security@443e10344beb971550a124cee97d81925d1e315c"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/Credit-Offers-Wordpress-Plugin",
+        "version": null,
+        "commit": "0dc2cc8638b8bdfe9d69d9e6c3f12a15b73db796",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/Credit-Offers-Wordpress-Plugin@0dc2cc8638b8bdfe9d69d9e6c3f12a15b73db796"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/local-crontab",
+        "version": null,
+        "commit": "89bc2c8dd1f2853862127536c26d950a8c630fa8",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/local-crontab@89bc2c8dd1f2853862127536c26d950a8c630fa8"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/acronym-decoder",
+        "version": null,
+        "commit": "6e132a861cfc5d15b596a1f9bc0d7f9e3c69a018",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/acronym-decoder@6e132a861cfc5d15b596a1f9bc0d7f9e3c69a018"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/Particle-Cloud-Framework",
+        "version": null,
+        "commit": "a05713434572d9d528d724855097854c5a56d377",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/Particle-Cloud-Framework@a05713434572d9d528d724855097854c5a56d377"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/grpc-cucumber-js",
+        "version": null,
+        "commit": "4ccd41c4730da20ecca3c0bd6faf6df106a04f5f",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/grpc-cucumber-js@4ccd41c4730da20ecca3c0bd6faf6df106a04f5f"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/architecture-viewer",
+        "version": null,
+        "commit": "70558ccdec3088ef8bd2ba0ed85f337fe2bc0024",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/architecture-viewer@70558ccdec3088ef8bd2ba0ed85f337fe2bc0024"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/federated-model-aggregation",
+        "version": null,
+        "commit": "5a6ae444f7436399f29a3d195cc74fa5a0305b4c",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/federated-model-aggregation@5a6ae444f7436399f29a3d195cc74fa5a0305b4c"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/Stratum-Observability",
+        "version": null,
+        "commit": "bb8d4dd1ce01c8b527d68615e47c424b573261f6",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/Stratum-Observability@bb8d4dd1ce01c8b527d68615e47c424b573261f6"
+      },
+      {
+        "kind": "github",
+        "name": "capitalone/context-specs",
+        "version": null,
+        "commit": "d6538c7859bcab55175ba596dc76d49efb221462",
+        "archive_sha256": null,
+        "identity_key": "github:capitalone/context-specs@d6538c7859bcab55175ba596dc76d49efb221462"
+      }
+    ]
+  },
+  "marketplace": {
+    "artifacts": [
+      {
+        "id": "anthropic.claude-code",
+        "version": "2.1.89",
+        "archive_sha256": "f46012808ee27e1c408f82fa5dfd4c1b21ac885702e4d65bd880828cb51fe50c",
+        "largest_js_member": "extension/resources/claude-code/cli.js",
+        "largest_js_bytes": 13081065,
+        "largest_js_sha256": "4542e9127b2ca4896c5c1bfa72994bb3e412964e9e96767da0835515826fa37f",
+        "max_baseline_function_similarity_percent": 86.25,
+        "category": "B",
+        "coverage_status": "partial",
+        "unresolved_files": 1
+      },
+      {
+        "id": "saoudrizwan.claude-dev",
+        "version": "4.1.23",
+        "archive_sha256": "8d3145e694af56806e0c5f34949cfda645a67a2a4ff93008cb75cb0e606cc7a6",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 25754001,
+        "largest_js_sha256": "9251e17d93bb57da24f3e801e1f3e50e58e362286d2eace35b5aec3ab40cad3e",
+        "max_baseline_function_similarity_percent": 77.14285714285715,
+        "category": "UNRESOLVED",
+        "coverage_status": "partial",
+        "unresolved_files": 1
+      },
+      {
+        "id": "Blackboxapp.blackboxagent",
+        "version": "3.7.0",
+        "archive_sha256": "1513183746b1f04c29c1801c68fc15facebd07c831549143fefc01c2f4ba8bbc",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 13751918,
+        "largest_js_sha256": "790346af4947d05bcf1bfecaa6b98acaa79e6199165ba334895b5a0121ca6726",
+        "max_baseline_function_similarity_percent": 25.563909774436087,
+        "category": "UNRESOLVED",
+        "coverage_status": "partial",
+        "unresolved_files": 3
+      },
+      {
+        "id": "RooVeterinaryInc.roo-cline",
+        "version": "3.54.0",
+        "archive_sha256": "caf96d596d69cb3427f00c3ca60492693135cc6b9f621aa062202903aa652735",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 14806332,
+        "largest_js_sha256": "f0ee955669d3d2985a09f64cf1d7c86cdab79d940e428ab69af038c61192ded4",
+        "max_baseline_function_similarity_percent": 67.90123456790124,
+        "category": "UNRESOLVED",
+        "coverage_status": "partial",
+        "unresolved_files": 1
+      },
+      {
+        "id": "ms-azuretools.vscode-azure-mcp-server",
+        "version": "2.0.46",
+        "archive_sha256": "aae910361fa07def7cefdbda44c3cb1dbf3ad116aafeacc19d8a814b3c3ea272",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 3031,
+        "largest_js_sha256": "0ca8af320c78d7cf5bfa865f2ac04946e84275e364152e375ad56ee132eb4d6b",
+        "max_baseline_function_similarity_percent": 14.012738853503185,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "augment.vscode-augment",
+        "version": "0.904.1",
+        "archive_sha256": "f8bc24e3fc434487799220937b41cd4c2f8a50d3070c67de422d7f27b5a9d6ab",
+        "largest_js_member": "extension/out/migration-engine/auggie-v2.mjs",
+        "largest_js_bytes": 13767630,
+        "largest_js_sha256": "9829e1cc88b94ddc249244cde05e7710c49ce9e8c6bdda7b471bf2186be28e7b",
+        "max_baseline_function_similarity_percent": 86.25,
+        "category": "B",
+        "coverage_status": "partial",
+        "unresolved_files": 2
+      },
+      {
+        "id": "ms-ossdata.vscode-pgsql",
+        "version": "1.30.1",
+        "archive_sha256": "6d47369ccebafa3d8365f5617b627c8855f66b0e8b212f3dd98efac7bf32251e",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 6280443,
+        "largest_js_sha256": "819b793c147b1149f1129f272b7c170332f09eb0cb4be20edcd40066fe07925a",
+        "max_baseline_function_similarity_percent": 33.33333333333333,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "moonshot-ai.kimi-code",
+        "version": "0.8.1",
+        "archive_sha256": "bc4a21d0818d9636dd31a54b36b3cd0d2988e8e862b4999db0549b9e1780c3c8",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 8794369,
+        "largest_js_sha256": "94985f147b84ed6b1eefc996736423cb4978348b6fe2085d212aa14d059e47b2",
+        "max_baseline_function_similarity_percent": 88.19875776397515,
+        "category": "B",
+        "coverage_status": "partial",
+        "unresolved_files": 1
+      },
+      {
+        "id": "Google.google-antigravity",
+        "version": "1.7.0",
+        "archive_sha256": "1c4f16d24cdbcd9c698c2d88e37e18116d53d03677717199aafa3f17b93e84c2",
+        "largest_js_member": "extension/extension.js",
+        "largest_js_bytes": 13180021,
+        "largest_js_sha256": "bdae3f9573417e7806db598fdadea9d0db6a2106b589548354d47f26cdd356ea",
+        "max_baseline_function_similarity_percent": 24.242424242424242,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "Sixth.sixth-ai",
+        "version": "0.3.9",
+        "archive_sha256": "304279266a3230ae15cac61a57fb1bd7640c4ffcf5eac116b2caa3d9c1b86a3d",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 17312486,
+        "largest_js_sha256": "51397faaaed6a2f908db9c9acb3eb78a037a5128ec4ed4a7c6335d3b8918b211",
+        "max_baseline_function_similarity_percent": 67.90123456790124,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "HybridTalentComputing.cline-chinese",
+        "version": "4.1.23",
+        "archive_sha256": "dc7964348e71621a74a6b362e7a40f0962ee24326ed6891f53183344677c8d2b",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 26994702,
+        "largest_js_sha256": "750284216b6da065d0bf14f34b7bf85688ad30892b762b74af80599f6186ec21",
+        "max_baseline_function_similarity_percent": 77.14285714285715,
+        "category": "UNRESOLVED",
+        "coverage_status": "partial",
+        "unresolved_files": 1
+      },
+      {
+        "id": "analysis-services.powerbi-modeling-mcp",
+        "version": "1.0.0",
+        "archive_sha256": "0f35c3bee1c893a4fe9517dcebdca9f55bf7097e416058992f920608eb4553f4",
+        "largest_js_member": "extension/out/mcpServerManager.js",
+        "largest_js_bytes": 5635,
+        "largest_js_sha256": "615d304babeb88ee41ec7fd54e26646898d7920b9a02b578bfa5a3bf4483f402",
+        "max_baseline_function_similarity_percent": 20.32967032967033,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "DBCode.dbcode",
+        "version": "1.38.9",
+        "archive_sha256": "8da43be8574176f1a858afa44e14901bbb14088dbdb90b80671721f28117c28e",
+        "largest_js_member": "extension/out/extension/extension.js",
+        "largest_js_bytes": 15296197,
+        "largest_js_sha256": "8336e872ed52de8230c1041ffd351503069ddc8e22caa758994d43752b057538",
+        "max_baseline_function_similarity_percent": 28.57142857142857,
+        "category": "UNRESOLVED",
+        "coverage_status": "partial",
+        "unresolved_files": 3
+      },
+      {
+        "id": "altimateai.vscode-altimate-mcp-server",
+        "version": "0.5.5",
+        "archive_sha256": "1e1f9e4e884a85fcf555e1fc7b52842379c1103f3dbbcb9342d33d84908978ba",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 5798429,
+        "largest_js_sha256": "a86e9065d43b3edd2dad0d205aeb70019dd3e15b78949991912cb394b24045ca",
+        "max_baseline_function_similarity_percent": 67.90123456790124,
+        "category": "UNRESOLVED",
+        "coverage_status": "partial",
+        "unresolved_files": 1
+      },
+      {
+        "id": "Upstash.context7-mcp",
+        "version": "1.1.0",
+        "archive_sha256": "ad2c6c17216ba1f17bdab30b910fcd6243c86739210e73fa600d310f02321a86",
+        "largest_js_member": "extension/out/extension.js",
+        "largest_js_bytes": 1435,
+        "largest_js_sha256": "67143a3bbb59772df97a491dfa1773899e10d3f32a4f450d3278120a8b53fd25",
+        "max_baseline_function_similarity_percent": 13.043478260869565,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "AutomataLabs.copilot-mcp",
+        "version": "0.0.97",
+        "archive_sha256": "6d4c3a612c07a6560730f881cdd55b5705f264abcde7d2be9777b4aea2e8a962",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 1899660,
+        "largest_js_sha256": "588c4fe4d74ec90ab9655303ddff0818f4218905c329fb37009ba8650b37327a",
+        "max_baseline_function_similarity_percent": 25.396825396825395,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "Datadog.datadog-vscode",
+        "version": "2.38.0",
+        "archive_sha256": "65edcce9b47fdd1e2684cae052b3a2a42efddbd4200349257574ada79e6790fc",
+        "largest_js_member": "extension/.output.bundle/desktop/extension.js",
+        "largest_js_bytes": 8094006,
+        "largest_js_sha256": "ad4a746b3100b97a0a64e075598bf6fa44aff8efc00b0ead294da2cb6c761d45",
+        "max_baseline_function_similarity_percent": 25.396825396825395,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "ZooCodeOrganization.zoo-code",
+        "version": "3.86.0",
+        "archive_sha256": "25c338c866bf7dacde840d8039093de867c2b0f70070d68d50031a04fe3b5f73",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 14991363,
+        "largest_js_sha256": "0ba57958fb1611934bbabdcde800808783b6e811315032d8835e355433c8ec17",
+        "max_baseline_function_similarity_percent": 77.14285714285715,
+        "category": "UNRESOLVED",
+        "coverage_status": "partial",
+        "unresolved_files": 1
+      },
+      {
+        "id": "TalDennis-UnfoldAI-ChatGPT-Copilot.unfoldai",
+        "version": "3.3.2",
+        "archive_sha256": "5a92aed77f4145127bdf2fc509d6be653eaaf0df482a1fb53e191bf5e4667f90",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 1944595,
+        "largest_js_sha256": "c7ed505c451ad516ec31ae19a5f83a35b3f9828e794dc9f0af51cf75de903e00",
+        "max_baseline_function_similarity_percent": 28.865979381443296,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      },
+      {
+        "id": "shengsuan-cloud.cline-shengsuan",
+        "version": "4.2.8",
+        "archive_sha256": "a2325e9cbc9e8f9c10b327f1b6be841c3e26a778e41e1ee53784e33e519f6719",
+        "largest_js_member": "extension/dist/extension.js",
+        "largest_js_bytes": 90926,
+        "largest_js_sha256": "e12e096c5cb986cd9a274b1d1c9effd0df7e1a0c825cd3cead57d00f15ff6787",
+        "max_baseline_function_similarity_percent": 22.78481012658228,
+        "category": "C",
+        "coverage_status": "complete-for-declared-gate",
+        "unresolved_files": 0
+      }
+    ],
+    "files": 3699,
+    "categories": {
+      "A": 0,
+      "B": 3,
+      "C": 10,
+      "UNRESOLVED": 7
+    },
+    "totals": {
+      "source_bytes": 572888391,
+      "files_over_384KiB": 202,
+      "files_over_500KB": 153,
+      "source_files": 3699,
+      "ast_candidates": 11,
+      "ast_filtered": 3683,
+      "ast_gaps": 5,
+      "semgrep_invocations": 11,
+      "semgrep_timeouts": 6,
+      "semgrep_parser_or_engine_gaps": 4,
+      "semgrep_complete_files": 1,
+      "semgrep_matches": 0,
+      "md5_signals": 0,
+      "artifacts": 20,
+      "unique_source_hashes": 3408,
+      "duplicate_source_instances": 291,
+      "coverage_gap_artifacts": 10,
+      "unresolved_files": 15,
+      "shared_function_matches": 5
+    },
+    "artifact_count": 20,
+    "artifact_records": [
+      {
+        "kind": "vsix",
+        "name": "anthropic.claude-code",
+        "version": "2.1.89",
+        "commit": null,
+        "archive_sha256": "f46012808ee27e1c408f82fa5dfd4c1b21ac885702e4d65bd880828cb51fe50c",
+        "identity_key": "vsix:anthropic.claude-code@2.1.89#sha256:f46012808ee27e1c408f82fa5dfd4c1b21ac885702e4d65bd880828cb51fe50c"
+      },
+      {
+        "kind": "vsix",
+        "name": "saoudrizwan.claude-dev",
+        "version": "4.1.23",
+        "commit": null,
+        "archive_sha256": "8d3145e694af56806e0c5f34949cfda645a67a2a4ff93008cb75cb0e606cc7a6",
+        "identity_key": "vsix:saoudrizwan.claude-dev@4.1.23#sha256:8d3145e694af56806e0c5f34949cfda645a67a2a4ff93008cb75cb0e606cc7a6"
+      },
+      {
+        "kind": "vsix",
+        "name": "Blackboxapp.blackboxagent",
+        "version": "3.7.0",
+        "commit": null,
+        "archive_sha256": "1513183746b1f04c29c1801c68fc15facebd07c831549143fefc01c2f4ba8bbc",
+        "identity_key": "vsix:Blackboxapp.blackboxagent@3.7.0#sha256:1513183746b1f04c29c1801c68fc15facebd07c831549143fefc01c2f4ba8bbc"
+      },
+      {
+        "kind": "vsix",
+        "name": "RooVeterinaryInc.roo-cline",
+        "version": "3.54.0",
+        "commit": null,
+        "archive_sha256": "caf96d596d69cb3427f00c3ca60492693135cc6b9f621aa062202903aa652735",
+        "identity_key": "vsix:RooVeterinaryInc.roo-cline@3.54.0#sha256:caf96d596d69cb3427f00c3ca60492693135cc6b9f621aa062202903aa652735"
+      },
+      {
+        "kind": "vsix",
+        "name": "ms-azuretools.vscode-azure-mcp-server",
+        "version": "2.0.46",
+        "commit": null,
+        "archive_sha256": "aae910361fa07def7cefdbda44c3cb1dbf3ad116aafeacc19d8a814b3c3ea272",
+        "identity_key": "vsix:ms-azuretools.vscode-azure-mcp-server@2.0.46#sha256:aae910361fa07def7cefdbda44c3cb1dbf3ad116aafeacc19d8a814b3c3ea272"
+      },
+      {
+        "kind": "vsix",
+        "name": "augment.vscode-augment",
+        "version": "0.904.1",
+        "commit": null,
+        "archive_sha256": "f8bc24e3fc434487799220937b41cd4c2f8a50d3070c67de422d7f27b5a9d6ab",
+        "identity_key": "vsix:augment.vscode-augment@0.904.1#sha256:f8bc24e3fc434487799220937b41cd4c2f8a50d3070c67de422d7f27b5a9d6ab"
+      },
+      {
+        "kind": "vsix",
+        "name": "ms-ossdata.vscode-pgsql",
+        "version": "1.30.1",
+        "commit": null,
+        "archive_sha256": "6d47369ccebafa3d8365f5617b627c8855f66b0e8b212f3dd98efac7bf32251e",
+        "identity_key": "vsix:ms-ossdata.vscode-pgsql@1.30.1#sha256:6d47369ccebafa3d8365f5617b627c8855f66b0e8b212f3dd98efac7bf32251e"
+      },
+      {
+        "kind": "vsix",
+        "name": "moonshot-ai.kimi-code",
+        "version": "0.8.1",
+        "commit": null,
+        "archive_sha256": "bc4a21d0818d9636dd31a54b36b3cd0d2988e8e862b4999db0549b9e1780c3c8",
+        "identity_key": "vsix:moonshot-ai.kimi-code@0.8.1#sha256:bc4a21d0818d9636dd31a54b36b3cd0d2988e8e862b4999db0549b9e1780c3c8"
+      },
+      {
+        "kind": "vsix",
+        "name": "Google.google-antigravity",
+        "version": "1.7.0",
+        "commit": null,
+        "archive_sha256": "1c4f16d24cdbcd9c698c2d88e37e18116d53d03677717199aafa3f17b93e84c2",
+        "identity_key": "vsix:Google.google-antigravity@1.7.0#sha256:1c4f16d24cdbcd9c698c2d88e37e18116d53d03677717199aafa3f17b93e84c2"
+      },
+      {
+        "kind": "vsix",
+        "name": "Sixth.sixth-ai",
+        "version": "0.3.9",
+        "commit": null,
+        "archive_sha256": "304279266a3230ae15cac61a57fb1bd7640c4ffcf5eac116b2caa3d9c1b86a3d",
+        "identity_key": "vsix:Sixth.sixth-ai@0.3.9#sha256:304279266a3230ae15cac61a57fb1bd7640c4ffcf5eac116b2caa3d9c1b86a3d"
+      },
+      {
+        "kind": "vsix",
+        "name": "HybridTalentComputing.cline-chinese",
+        "version": "4.1.23",
+        "commit": null,
+        "archive_sha256": "dc7964348e71621a74a6b362e7a40f0962ee24326ed6891f53183344677c8d2b",
+        "identity_key": "vsix:HybridTalentComputing.cline-chinese@4.1.23#sha256:dc7964348e71621a74a6b362e7a40f0962ee24326ed6891f53183344677c8d2b"
+      },
+      {
+        "kind": "vsix",
+        "name": "analysis-services.powerbi-modeling-mcp",
+        "version": "1.0.0",
+        "commit": null,
+        "archive_sha256": "0f35c3bee1c893a4fe9517dcebdca9f55bf7097e416058992f920608eb4553f4",
+        "identity_key": "vsix:analysis-services.powerbi-modeling-mcp@1.0.0#sha256:0f35c3bee1c893a4fe9517dcebdca9f55bf7097e416058992f920608eb4553f4"
+      },
+      {
+        "kind": "vsix",
+        "name": "DBCode.dbcode",
+        "version": "1.38.9",
+        "commit": null,
+        "archive_sha256": "8da43be8574176f1a858afa44e14901bbb14088dbdb90b80671721f28117c28e",
+        "identity_key": "vsix:DBCode.dbcode@1.38.9#sha256:8da43be8574176f1a858afa44e14901bbb14088dbdb90b80671721f28117c28e"
+      },
+      {
+        "kind": "vsix",
+        "name": "altimateai.vscode-altimate-mcp-server",
+        "version": "0.5.5",
+        "commit": null,
+        "archive_sha256": "1e1f9e4e884a85fcf555e1fc7b52842379c1103f3dbbcb9342d33d84908978ba",
+        "identity_key": "vsix:altimateai.vscode-altimate-mcp-server@0.5.5#sha256:1e1f9e4e884a85fcf555e1fc7b52842379c1103f3dbbcb9342d33d84908978ba"
+      },
+      {
+        "kind": "vsix",
+        "name": "Upstash.context7-mcp",
+        "version": "1.1.0",
+        "commit": null,
+        "archive_sha256": "ad2c6c17216ba1f17bdab30b910fcd6243c86739210e73fa600d310f02321a86",
+        "identity_key": "vsix:Upstash.context7-mcp@1.1.0#sha256:ad2c6c17216ba1f17bdab30b910fcd6243c86739210e73fa600d310f02321a86"
+      },
+      {
+        "kind": "vsix",
+        "name": "AutomataLabs.copilot-mcp",
+        "version": "0.0.97",
+        "commit": null,
+        "archive_sha256": "6d4c3a612c07a6560730f881cdd55b5705f264abcde7d2be9777b4aea2e8a962",
+        "identity_key": "vsix:AutomataLabs.copilot-mcp@0.0.97#sha256:6d4c3a612c07a6560730f881cdd55b5705f264abcde7d2be9777b4aea2e8a962"
+      },
+      {
+        "kind": "vsix",
+        "name": "Datadog.datadog-vscode",
+        "version": "2.38.0",
+        "commit": null,
+        "archive_sha256": "65edcce9b47fdd1e2684cae052b3a2a42efddbd4200349257574ada79e6790fc",
+        "identity_key": "vsix:Datadog.datadog-vscode@2.38.0#sha256:65edcce9b47fdd1e2684cae052b3a2a42efddbd4200349257574ada79e6790fc"
+      },
+      {
+        "kind": "vsix",
+        "name": "ZooCodeOrganization.zoo-code",
+        "version": "3.86.0",
+        "commit": null,
+        "archive_sha256": "25c338c866bf7dacde840d8039093de867c2b0f70070d68d50031a04fe3b5f73",
+        "identity_key": "vsix:ZooCodeOrganization.zoo-code@3.86.0#sha256:25c338c866bf7dacde840d8039093de867c2b0f70070d68d50031a04fe3b5f73"
+      },
+      {
+        "kind": "vsix",
+        "name": "TalDennis-UnfoldAI-ChatGPT-Copilot.unfoldai",
+        "version": "3.3.2",
+        "commit": null,
+        "archive_sha256": "5a92aed77f4145127bdf2fc509d6be653eaaf0df482a1fb53e191bf5e4667f90",
+        "identity_key": "vsix:TalDennis-UnfoldAI-ChatGPT-Copilot.unfoldai@3.3.2#sha256:5a92aed77f4145127bdf2fc509d6be653eaaf0df482a1fb53e191bf5e4667f90"
+      },
+      {
+        "kind": "vsix",
+        "name": "shengsuan-cloud.cline-shengsuan",
+        "version": "4.2.8",
+        "commit": null,
+        "archive_sha256": "a2325e9cbc9e8f9c10b327f1b6be841c3e26a778e41e1ee53784e33e519f6719",
+        "identity_key": "vsix:shengsuan-cloud.cline-shengsuan@4.2.8#sha256:a2325e9cbc9e8f9c10b327f1b6be841c3e26a778e41e1ee53784e33e519f6719"
+      }
+    ]
+  }
+}
