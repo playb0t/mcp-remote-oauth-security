@@ -77,7 +77,7 @@ The selected metadata path is classified as CWE-918 / Missing Defense. These run
 
 </details>
 
-Picked up: [agent-audit-kit v0.6.18](https://github.com/sattyamjjain/agent-audit-kit/releases/tag/v0.6.18) added CVE-2026-52001 to its mcp-remote rule within eight hours of the issue and credited the report. [UltraRAG](https://github.com/OpenBMB/UltraRAG/pull/538) fixed the remote-MCP launch reported in issue #537 within 27 hours and credited the report; the fixed path starts an unpinned `npx -y mcp-remote`, and [issue #541](https://github.com/OpenBMB/UltraRAG/issues/541) put the five records to the project the same day.
+Picked up: [agent-audit-kit v0.6.18](https://github.com/sattyamjjain/agent-audit-kit/releases/tag/v0.6.18) added CVE-2026-52001 to its mcp-remote rule within eight hours of the issue and credited the report. [UltraRAG](https://github.com/OpenBMB/UltraRAG/pull/538) fixed the remote-MCP launch reported in issue #537 within 27 hours and credited the report; the fixed path starts an unpinned `npx -y mcp-remote`, and [issue #541](https://github.com/OpenBMB/UltraRAG/issues/541) put the five records to the project the same day. [Supabase](https://github.com/supabase/supabase/pull/51646) merged the pull request that moves its Devin preset off the bridge to the client's native HTTP path, seven hours from opening to merge; the records went to the thread after the merge.
 
 ## Responsible-disclosure summary
 
