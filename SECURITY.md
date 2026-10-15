@@ -1,7 +1,8 @@
 # Security and correction policy
 
 This repository publishes defensive research about
-[`geelen/mcp-remote`](https://github.com/geelen/mcp-remote). It is not the
+[`geelen/mcp-remote`](https://github.com/geelen/mcp-remote), now
+`punkpeye/mcp-remote` (the `geelen` URL redirects). It is not the
 upstream project and cannot ship a product fix.
 
 ## Reporting a factual correction

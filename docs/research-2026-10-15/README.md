@@ -4,7 +4,7 @@ Researcher: Alex Gercog (playb0t). The bench run and its report are the work of 
 
 ## What happened upstream
 
-On 14 October 2026 the maintainer of `punkpeye/mcp-remote` published four releases within four hours. They are the first since 0.14.3 of 21 September: 0.14.4 (npm 18:27 UTC), 0.14.5 (18:35), 0.15.0 (18:41) and 0.15.1 (22:36). Six commits sit between the tags v0.14.3 and v0.15.1, touching 19 files. Five of them are contributor pull requests (#370, #372, #373, #375, #376); one is the maintainer's own.
+On 14 October 2026 the maintainer of `punkpeye/mcp-remote` published four releases between 18:27 and 22:36 UTC. They are the first since 0.14.3 of 21 September: 0.14.4 (npm 18:27 UTC), 0.14.5 (18:35), 0.15.0 (18:41) and 0.15.1 (22:36). Six commits sit between the tags v0.14.3 and v0.15.1, touching 19 files. Five of them are contributor pull requests (#370, #372, #373, #375, #376); one is the maintainer's own.
 
 The changes are these. The OAuth error callback is served as plain text (#375). That fixes a reflected XSS reported by another researcher in issue #369. OAuth discovery state is persisted for the callback leg (#376). The callback port is released once a sign-in has finished (#372). OAuth retries stop after the follower timeout (#370). A `--auth-success-url` completion page was added (#373). The static OAuth client and its secret are no longer written to the credential store (commit b529ea1).
 
@@ -49,7 +49,9 @@ Each scenario completed `initialize`, `tools/list` and `tools/call`. The recorde
 
 The address-selection paths are present in every completed scenario of every version run. The count varies between 42 and 44 HTTP events, and the token request falls inside or outside a snapshot. Both happen on 0.14.3 as well as on the later releases. With two samples per intermediate version, no causal link to a particular commit is claimed.
 
-**Helper functions.** The ten helper declarations selected on 9 October, `parseWWWAuthenticateHeader` through `getServerUrlHash`, are byte-identical between the 0.14.3 and 0.15.1 bundles. They sit at the same line numbers ([data/helper-continuity.json](data/helper-continuity.json)). The six helper-level checks of 9 October ran twice on each version: 24 of 24 passed ([data/release-checks-0.15.1.json](data/release-checks-0.15.1.json)).
+**Helper functions.** The ten helper declarations selected on 9 October, `parseWWWAuthenticateHeader` through `getServerUrlHash`, are byte-identical between the 0.14.3 and 0.15.1 bundles. Nine of them sit at the same line numbers. `getServerUrlHash` moved fifty lines down, from 33955 to 34005, with the same hash ([data/helper-continuity.json](data/helper-continuity.json)). The six helper-level checks of 9 October ran twice on each version. 24 of 24 passed ([data/release-checks-0.15.1.json](data/release-checks-0.15.1.json)).
+
+With the four releases of 14 October, the discovery path is recorded in all 62 stable releases from 0.1.32 to 0.15.1. Fifty-eight come from the executed helpers of the 9 October dossier. Four come from the full CLI runs above.
 
 ## The five records in 0.15.1
 
@@ -71,7 +73,7 @@ Client 2.2.0 added issuer binding (GHSA-6qxp-vccf-f47h). In the bundle, the dire
 
 ## What the diff changes and what it does not
 
-The 19 changed files between the tags do not touch `authorization-server-metadata.ts`, the browser opener or the SSE transport. Pull request #376 writes the discovery the SDK resolved to `discovery_state_<state>.json` under the configuration directory: the authorization server URL, the resource metadata URL and both metadata documents. It writes them when the code verifier is saved and reads them back on the callback leg, so the SDK reuses the saved authorization server instead of discovering again. That is a consistency repair of the callback leg, not an allow-list of destinations. The maintainer's commit b529ea1 returns the configured static client with the issuer the SDK resolved, and removes an earlier saved copy of that client from `client_info.json`. It compares against no separately configured expected issuer. Pull request #375 serves the callback error page as `text/plain`; it first shipped in 0.14.4. The finding behind it, issue #369, is another researcher's.
+The 19 changed files between the tags do not change `authorization-server-metadata.ts` or `open-browser.ts`. `utils.ts` changes in the callback server and the authorization-code leg; its SSE fetch wrapper is byte-identical in both bundles ([data/code-regions.json](data/code-regions.json)). Pull request #376 writes the discovery the SDK resolved to `discovery_state_<state>.json` under the configuration directory: the authorization server URL, the resource metadata URL and both metadata documents. It writes them when the code verifier is saved and reads them back on the callback leg, so the SDK reuses the saved authorization server instead of discovering again. That is a consistency repair of the callback leg, not an allow-list of destinations. The maintainer's commit b529ea1 returns the configured static client with the issuer the SDK resolved, and removes an earlier saved copy of that client from `client_info.json`. It compares against no separately configured expected issuer. Pull request #375 serves the callback error page as `text/plain`; it first shipped in 0.14.4. The finding behind it, issue #369, is another researcher's.
 
 ## Not verified here
 

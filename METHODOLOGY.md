@@ -2,7 +2,7 @@
 
 ## Target lock
 
-- Repository: `geelen/mcp-remote`
+- Repository: `geelen/mcp-remote` (now `punkpeye/mcp-remote`; the `geelen` URL redirects)
 - Canonical URL: <https://github.com/geelen/mcp-remote>
 - Reviewed version: `0.1.38`
 - Reviewed commit: `02619aff36e79803d7c894e8c8ae7b34b2d11f8c`
