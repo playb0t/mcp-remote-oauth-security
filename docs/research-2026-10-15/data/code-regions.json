@@ -1,0 +1,778 @@
+{
+  "schema_version": 1,
+  "parser": "5.9.3",
+  "regions": [
+    {
+      "version": "0.14.3",
+      "kind": "SSE-endpoint",
+      "name": "listener",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 30872,
+      "end_line": 30884,
+      "sha256": "92ab958b3fdcb51319e89b0e71df88e5d8e6b8973435f1b370ea9f035b64cc16",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.SSE-endpoint.listener.1.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "getConfigDir",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 31763,
+      "end_line": 31766,
+      "sha256": "147f853343c57daa1f5e8042c9a1e785c14eabdb3559b9c84af13b998b93001d",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.getConfigDir.2.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "getConfigFilePath",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 31776,
+      "end_line": 31779,
+      "sha256": "f6ef3b139a1a02462fc78f20f93573a641726e8590433c6cca0478fafac42832",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.getConfigFilePath.3.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "readJsonFile",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 31811,
+      "end_line": 31825,
+      "sha256": "fdddeda0e536d5b95ba3c3d093744e35b45b9089dea487351b926e2e985ea909",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.readJsonFile.4.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "writeJsonFile",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 31826,
+      "end_line": 31849,
+      "sha256": "7a777819c2652e0d04fd119dfbc10903ab8c0e340b1481a125e96bd608fdae0c",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.writeJsonFile.5.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "parseWWWAuthenticateHeader",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 31912,
+      "end_line": 31944,
+      "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.parseWWWAuthenticateHeader.6.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "buildProtectedResourceMetadataUrls",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 31945,
+      "end_line": 31955,
+      "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.buildProtectedResourceMetadataUrls.7.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "fetchProtectedResourceMetadataFromUrl",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 31956,
+      "end_line": 31991,
+      "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.fetchProtectedResourceMetadataFromUrl.8.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "discoverProtectedResourceMetadata",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 31992,
+      "end_line": 32019,
+      "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.discoverProtectedResourceMetadata.9.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "getAuthorizationServerUrl",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 32020,
+      "end_line": 32025,
+      "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.getAuthorizationServerUrl.10.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "getMetadataUrls",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 32028,
+      "end_line": 32046,
+      "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.getMetadataUrls.11.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "fetchAuthorizationServerMetadata",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 32047,
+      "end_line": 32058,
+      "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.fetchAuthorizationServerMetadata.12.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "fetchMetadataFrom",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 32059,
+      "end_line": 32094,
+      "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.fetchMetadataFrom.13.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "discoverOAuthServerInfo2",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 33102,
+      "end_line": 33177,
+      "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.discoverOAuthServerInfo2.14.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "SSE-wrapper",
+      "name": "eventSourceInit",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 33216,
+      "end_line": 33241,
+      "sha256": "77ae4be70083867082e71b048955a527e81e2aaa58a22b4ab069d8e04a6cbf8e",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.SSE-wrapper.eventSourceInit.15.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "getServerUrlHash",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 33955,
+      "end_line": 33969,
+      "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.getServerUrlHash.16.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "function",
+      "name": "openBrowser",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 34020,
+      "end_line": 34048,
+      "sha256": "39f3d997ebbab4afdcf0969aeb2c165066edced5e7a8e2c412afcdc7ab42e0e5",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.function.openBrowser.17.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "browser-call",
+      "name": "open",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 34028,
+      "end_line": 34028,
+      "sha256": "e9eecb80320994c9002c056b17f9ef7407df45db3e9372c3c8c534b496817201",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.browser-call.open.18.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "provider-method",
+      "name": "discoveryState",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 34369,
+      "end_line": 34384,
+      "sha256": "237246e14399012cd05c67602312a229379d956e263559ea3d040f899c06f64a",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.provider-method.discoveryState.19.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "provider-method",
+      "name": "clientInformation",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 34601,
+      "end_line": 34627,
+      "sha256": "c77e434feec00bea5521d1bdf371121e0e00800c2999fdd8209677ffdf16ff8e",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.provider-method.clientInformation.20.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "provider-method",
+      "name": "saveClientInformation",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 34657,
+      "end_line": 34670,
+      "sha256": "57635dacf480ff2a213d927f4138187ed5a5c2ae78eb30d9b5fb2fbe4ef0101e",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.provider-method.saveClientInformation.21.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "provider-method",
+      "name": "doRefreshTokens",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 34896,
+      "end_line": 34928,
+      "sha256": "50b1bbd5cbaaaa89098f871161b3968f9d55f866acdaacd46e76c35b57fe414b",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.provider-method.doRefreshTokens.22.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "browser-call",
+      "name": "openBrowser",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 35049,
+      "end_line": 35049,
+      "sha256": "e7a0a4b43b958c0c01cc86e9251a3da24fc89e17b8898c7b688e291636ef71fa",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.browser-call.openBrowser.23.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "provider-method",
+      "name": "saveCodeVerifier",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 35223,
+      "end_line": 35232,
+      "sha256": "aa0bc9fa7c78826b6fa2e7aba7aa9fc7ef45d9888002ae29f2f30d70598b4023",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.provider-method.saveCodeVerifier.24.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "provider-method",
+      "name": "useAuthorizationState",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 35238,
+      "end_line": 35245,
+      "sha256": "b279f14cef880daba4d68d18b36f8e4f1e5edf4f680ba63c5f5cd46d1c3d5593",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.provider-method.useAuthorizationState.25.txt"
+    },
+    {
+      "version": "0.14.3",
+      "kind": "provider-method",
+      "name": "flowState",
+      "file": "evidence/baseline-package/package/dist/chunk-CGVEK4Z7.js",
+      "line": 35247,
+      "end_line": 35249,
+      "sha256": "c6e650103631bdad192028b7b92475e878fa7129de7a51711e8e40e237855ffc",
+      "snippet": "evidence/regions/0.14.3/chunk-CGVEK4Z7.js.provider-method.flowState.26.txt"
+    },
+    {
+      "version": "0.14.3-tag",
+      "kind": "provider-method",
+      "name": "discoveryState",
+      "file": "evidence/github/source/v0.14.3/src/lib/node-oauth-client-provider.ts",
+      "line": 319,
+      "end_line": 334,
+      "sha256": "81e0664e1e150fa6fff90979f1cbbab3a1b90cfeafa57f2458273ec83dbf8177",
+      "snippet": "evidence/regions/0.14.3-tag/node-oauth-client-provider.ts.provider-method.discoveryState.1.txt"
+    },
+    {
+      "version": "0.14.3-tag",
+      "kind": "provider-method",
+      "name": "clientInformation",
+      "file": "evidence/github/source/v0.14.3/src/lib/node-oauth-client-provider.ts",
+      "line": 585,
+      "end_line": 615,
+      "sha256": "f012b67ae62e38a9e46408aa34b9f4028ba75476dcb5b9d5c38d3a957ac5c6bb",
+      "snippet": "evidence/regions/0.14.3-tag/node-oauth-client-provider.ts.provider-method.clientInformation.2.txt"
+    },
+    {
+      "version": "0.14.3-tag",
+      "kind": "provider-method",
+      "name": "saveClientInformation",
+      "file": "evidence/github/source/v0.14.3/src/lib/node-oauth-client-provider.ts",
+      "line": 649,
+      "end_line": 674,
+      "sha256": "7f3202549725254d87eee3f71bb4b5eb97280e49def7d979b2d819b474c2d9a8",
+      "snippet": "evidence/regions/0.14.3-tag/node-oauth-client-provider.ts.provider-method.saveClientInformation.3.txt"
+    },
+    {
+      "version": "0.14.3-tag",
+      "kind": "provider-method",
+      "name": "doRefreshTokens",
+      "file": "evidence/github/source/v0.14.3/src/lib/node-oauth-client-provider.ts",
+      "line": 952,
+      "end_line": 998,
+      "sha256": "83b2e984897765509407af947ef088233e4cba890d5932cde957f10047aa6912",
+      "snippet": "evidence/regions/0.14.3-tag/node-oauth-client-provider.ts.provider-method.doRefreshTokens.4.txt"
+    },
+    {
+      "version": "0.14.3-tag",
+      "kind": "browser-call",
+      "name": "openBrowser",
+      "file": "evidence/github/source/v0.14.3/src/lib/node-oauth-client-provider.ts",
+      "line": 1171,
+      "end_line": 1171,
+      "sha256": "e7a0a4b43b958c0c01cc86e9251a3da24fc89e17b8898c7b688e291636ef71fa",
+      "snippet": "evidence/regions/0.14.3-tag/node-oauth-client-provider.ts.browser-call.openBrowser.5.txt"
+    },
+    {
+      "version": "0.14.3-tag",
+      "kind": "provider-method",
+      "name": "saveCodeVerifier",
+      "file": "evidence/github/source/v0.14.3/src/lib/node-oauth-client-provider.ts",
+      "line": 1371,
+      "end_line": 1381,
+      "sha256": "be40e47aaf760c7fed037db0d6a741f2ea1b6f51405dba09c8d3de85102a0679",
+      "snippet": "evidence/regions/0.14.3-tag/node-oauth-client-provider.ts.provider-method.saveCodeVerifier.6.txt"
+    },
+    {
+      "version": "0.14.3-tag",
+      "kind": "provider-method",
+      "name": "useAuthorizationState",
+      "file": "evidence/github/source/v0.14.3/src/lib/node-oauth-client-provider.ts",
+      "line": 1388,
+      "end_line": 1395,
+      "sha256": "95b5835478d21372e518894ade31367fbc6933fed73cd068fab0435b6ee32002",
+      "snippet": "evidence/regions/0.14.3-tag/node-oauth-client-provider.ts.provider-method.useAuthorizationState.7.txt"
+    },
+    {
+      "version": "0.14.3-tag",
+      "kind": "provider-method",
+      "name": "flowState",
+      "file": "evidence/github/source/v0.14.3/src/lib/node-oauth-client-provider.ts",
+      "line": 1398,
+      "end_line": 1400,
+      "sha256": "48a5885a7613e87b535ab761c335cb3faf1cc3f5c7db08d2781fa2ca4f5b9b24",
+      "snippet": "evidence/regions/0.14.3-tag/node-oauth-client-provider.ts.provider-method.flowState.8.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "SSE-endpoint",
+      "name": "listener",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 30872,
+      "end_line": 30884,
+      "sha256": "92ab958b3fdcb51319e89b0e71df88e5d8e6b8973435f1b370ea9f035b64cc16",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.SSE-endpoint.listener.1.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "getConfigDir",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 31763,
+      "end_line": 31766,
+      "sha256": "147f853343c57daa1f5e8042c9a1e785c14eabdb3559b9c84af13b998b93001d",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.getConfigDir.2.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "getConfigFilePath",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 31776,
+      "end_line": 31779,
+      "sha256": "f6ef3b139a1a02462fc78f20f93573a641726e8590433c6cca0478fafac42832",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.getConfigFilePath.3.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "readJsonFile",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 31811,
+      "end_line": 31825,
+      "sha256": "fdddeda0e536d5b95ba3c3d093744e35b45b9089dea487351b926e2e985ea909",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.readJsonFile.4.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "writeJsonFile",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 31826,
+      "end_line": 31849,
+      "sha256": "7a777819c2652e0d04fd119dfbc10903ab8c0e340b1481a125e96bd608fdae0c",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.writeJsonFile.5.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "parseWWWAuthenticateHeader",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 31912,
+      "end_line": 31944,
+      "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.parseWWWAuthenticateHeader.6.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "buildProtectedResourceMetadataUrls",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 31945,
+      "end_line": 31955,
+      "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.buildProtectedResourceMetadataUrls.7.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "fetchProtectedResourceMetadataFromUrl",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 31956,
+      "end_line": 31991,
+      "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.fetchProtectedResourceMetadataFromUrl.8.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "discoverProtectedResourceMetadata",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 31992,
+      "end_line": 32019,
+      "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.discoverProtectedResourceMetadata.9.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "getAuthorizationServerUrl",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 32020,
+      "end_line": 32025,
+      "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.getAuthorizationServerUrl.10.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "getMetadataUrls",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 32028,
+      "end_line": 32046,
+      "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.getMetadataUrls.11.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "fetchAuthorizationServerMetadata",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 32047,
+      "end_line": 32058,
+      "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.fetchAuthorizationServerMetadata.12.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "fetchMetadataFrom",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 32059,
+      "end_line": 32094,
+      "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.fetchMetadataFrom.13.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "discoverOAuthServerInfo2",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 33102,
+      "end_line": 33177,
+      "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.discoverOAuthServerInfo2.14.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "SSE-wrapper",
+      "name": "eventSourceInit",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 33216,
+      "end_line": 33241,
+      "sha256": "77ae4be70083867082e71b048955a527e81e2aaa58a22b4ab069d8e04a6cbf8e",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.SSE-wrapper.eventSourceInit.15.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "getServerUrlHash",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 34005,
+      "end_line": 34019,
+      "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.getServerUrlHash.16.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "function",
+      "name": "openBrowser",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 34070,
+      "end_line": 34098,
+      "sha256": "39f3d997ebbab4afdcf0969aeb2c165066edced5e7a8e2c412afcdc7ab42e0e5",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.function.openBrowser.17.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "browser-call",
+      "name": "open",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 34078,
+      "end_line": 34078,
+      "sha256": "e9eecb80320994c9002c056b17f9ef7407df45db3e9372c3c8c534b496817201",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.browser-call.open.18.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "discoveryState",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 34448,
+      "end_line": 34470,
+      "sha256": "0c92e2a951b6172b72badf96a10f7fc734eab7f497c38d9ce384215cbc32ca15",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.discoveryState.19.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "saveDiscoveryState",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 34481,
+      "end_line": 34484,
+      "sha256": "67f3d5df7246363be55920a5c05c9679d8e8c51eb450bf2e3197e9b5e8c8d189",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.saveDiscoveryState.20.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "clientInformation",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 34702,
+      "end_line": 34729,
+      "sha256": "76574e1e79ee6482ed1bbb8da04d48149f0a30a787cec64935b0717deac0b45d",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.clientInformation.21.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "forgetSavedStaticClient",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 34762,
+      "end_line": 34774,
+      "sha256": "650b4bf5176dc133daf74301b1cea503360dfa9965b72d2a069b7de031714a93",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.forgetSavedStaticClient.22.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "saveClientInformation",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 34779,
+      "end_line": 34796,
+      "sha256": "c9934036ba41c1140e77b95c56c7c95b1359bced325fbc63859fbd6c508f6ab3",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.saveClientInformation.23.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "doRefreshTokens",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 35022,
+      "end_line": 35054,
+      "sha256": "50b1bbd5cbaaaa89098f871161b3968f9d55f866acdaacd46e76c35b57fe414b",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.doRefreshTokens.24.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "browser-call",
+      "name": "openBrowser",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 35177,
+      "end_line": 35177,
+      "sha256": "e7a0a4b43b958c0c01cc86e9251a3da24fc89e17b8898c7b688e291636ef71fa",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.browser-call.openBrowser.25.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "saveCodeVerifier",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 35351,
+      "end_line": 35365,
+      "sha256": "7589f861621dcecb582702f225f774fcd38d702669994dfad4f48ad2d9cedb21",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.saveCodeVerifier.26.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "useAuthorizationState",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 35371,
+      "end_line": 35378,
+      "sha256": "b279f14cef880daba4d68d18b36f8e4f1e5edf4f680ba63c5f5cd46d1c3d5593",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.useAuthorizationState.27.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "flowState",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 35380,
+      "end_line": 35382,
+      "sha256": "c6e650103631bdad192028b7b92475e878fa7129de7a51711e8e40e237855ffc",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.flowState.28.txt"
+    },
+    {
+      "version": "0.15.1",
+      "kind": "provider-method",
+      "name": "discoveryStateFile",
+      "file": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "line": 35399,
+      "end_line": 35401,
+      "sha256": "2565af156dc51fcdebfc48aa9f2a5fd3fbd8773225814e7b65f0b0b566c6a318",
+      "snippet": "evidence/regions/0.15.1/chunk-KJCT2FXL.js.provider-method.discoveryStateFile.29.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "discoveryState",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 373,
+      "end_line": 397,
+      "sha256": "809754f2dcc1f68fb291af700723297a23704cf685c9eaf1619d64eff31f72d9",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.discoveryState.1.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "saveDiscoveryState",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 409,
+      "end_line": 412,
+      "sha256": "d1c56640944c9da7d34813f06b90c0564d9b5df9fe777541e3cd345218cb32ab",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.saveDiscoveryState.2.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "clientInformation",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 664,
+      "end_line": 698,
+      "sha256": "e2a1cab034f561286a290a7f47831d86ef4d5acdb43c540ccedd02fd81b0de33",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.clientInformation.3.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "forgetSavedStaticClient",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 735,
+      "end_line": 748,
+      "sha256": "0484c3ee19633f30bfb87658f6ad630f6af7397e14cda9b87d103f6b95ae284b",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.forgetSavedStaticClient.4.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "saveClientInformation",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 754,
+      "end_line": 787,
+      "sha256": "0147e783ed54c859f6095d81972b7fa96907b21fa476a36da9ed604f6289a357",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.saveClientInformation.5.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "doRefreshTokens",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 1065,
+      "end_line": 1111,
+      "sha256": "83b2e984897765509407af947ef088233e4cba890d5932cde957f10047aa6912",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.doRefreshTokens.6.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "browser-call",
+      "name": "openBrowser",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 1286,
+      "end_line": 1286,
+      "sha256": "e7a0a4b43b958c0c01cc86e9251a3da24fc89e17b8898c7b688e291636ef71fa",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.browser-call.openBrowser.7.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "saveCodeVerifier",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 1486,
+      "end_line": 1503,
+      "sha256": "230245834b7890bb4cd33908fbfc012480522cb5aab1c1b751707ccf68b26823",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.saveCodeVerifier.8.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "useAuthorizationState",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 1510,
+      "end_line": 1517,
+      "sha256": "95b5835478d21372e518894ade31367fbc6933fed73cd068fab0435b6ee32002",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.useAuthorizationState.9.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "flowState",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 1520,
+      "end_line": 1522,
+      "sha256": "48a5885a7613e87b535ab761c335cb3faf1cc3f5c7db08d2781fa2ca4f5b9b24",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.flowState.10.txt"
+    },
+    {
+      "version": "0.15.1-tag",
+      "kind": "provider-method",
+      "name": "discoveryStateFile",
+      "file": "evidence/github/source/v0.15.1/src/lib/node-oauth-client-provider.ts",
+      "line": 1542,
+      "end_line": 1544,
+      "sha256": "17f13b3aa57843e8f6ae1eed49347a01f813c0a8ee1a1a18ec5b908cea470193",
+      "snippet": "evidence/regions/0.15.1-tag/node-oauth-client-provider.ts.provider-method.discoveryStateFile.11.txt"
+    }
+  ],
+  "tag_file_comparisons": [
+    {
+      "file": "src/lib/authorization-server-metadata.ts",
+      "old_sha256": "cd3db8627a9781ed40546ee50819aa616340413cd785778c1696c78760e791f8",
+      "new_sha256": "cd3db8627a9781ed40546ee50819aa616340413cd785778c1696c78760e791f8",
+      "identical": true
+    },
+    {
+      "file": "src/lib/open-browser.ts",
+      "old_sha256": "349a5664da2038fde476dfe9f7b64aba1d40f6c841538c333c4f24a159dabb27",
+      "new_sha256": "349a5664da2038fde476dfe9f7b64aba1d40f6c841538c333c4f24a159dabb27",
+      "identical": true
+    },
+    {
+      "file": "pnpm-lock.yaml",
+      "old_sha256": "79d3b4329c773bf6fccaf87b6d81574e2fbd6d1e6137dd07b5648e17a6239b51",
+      "new_sha256": "79d3b4329c773bf6fccaf87b6d81574e2fbd6d1e6137dd07b5648e17a6239b51",
+      "identical": true
+    },
+    {
+      "file": "src/lib/utils.ts",
+      "old_sha256": "dfaa90fcb51f573ab3960444c5a7eb1167aae64e379f8d37704f5111f27365f0",
+      "new_sha256": "af53143d281d5f9c6947c9085893bcd8e348db51a36bbb706347349576f2f07e",
+      "identical": false
+    },
+    {
+      "file": "src/lib/node-oauth-client-provider.ts",
+      "old_sha256": "48c2fb4963820c8a1c9cc24c64a86cb3cd86b6c295afe7086613f66eb28dc42a",
+      "new_sha256": "d8f609344a27ac3b3209f20ce4c8c98cb8d60fb11bf95150936d638ddcd50190",
+      "identical": false
+    }
+  ]
+}

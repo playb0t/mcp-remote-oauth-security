@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "node": "v24.20.0",
+  "parser": "5.9.3",
+  "sanitizer": {
+    "version": "0.0.1",
+    "sha256": "6a45b869cd15501e796b91b516fb79ff9d77c87db13c33c0efb00c7fbe4951c3",
+    "accepted_without_network": [
+      "http://127.0.0.1/canary",
+      "http://10.0.0.1/canary",
+      "http://169.254.169.254/canary"
+    ],
+    "script_scheme_rejected": true,
+    "mapped_ipv6_rejected": true,
+    "browser_opened": false
+  },
+  "runs": [
+    {
+      "version": "0.14.3",
+      "run": 1,
+      "file": "<bench-root>\\evidence\\releases\\0.14.3\\package\\dist\\chunk-CGVEK4Z7.js",
+      "sha256": "c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451",
+      "execution_scope": "Exact extracted functions only, actual loopback HTTP, injected logging/fetch; NOT full installed CLI.",
+      "source_ranges": {
+        "parseWWWAuthenticateHeader": {
+          "line": 31912,
+          "end_line": 31944,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+        },
+        "buildProtectedResourceMetadataUrls": {
+          "line": 31945,
+          "end_line": 31955,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+        },
+        "fetchProtectedResourceMetadataFromUrl": {
+          "line": 31956,
+          "end_line": 31991,
+          "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+        },
+        "discoverProtectedResourceMetadata": {
+          "line": 31992,
+          "end_line": 32019,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+        },
+        "getAuthorizationServerUrl": {
+          "line": 32020,
+          "end_line": 32025,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+        },
+        "getMetadataUrls": {
+          "line": 32028,
+          "end_line": 32046,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+        },
+        "fetchAuthorizationServerMetadata": {
+          "line": 32047,
+          "end_line": 32058,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+        },
+        "fetchMetadataFrom": {
+          "line": 32059,
+          "end_line": 32094,
+          "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+        },
+        "discoverOAuthServerInfo2": {
+          "line": 33102,
+          "end_line": 33177,
+          "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+        },
+        "getServerUrlHash": {
+          "line": 33955,
+          "end_line": 33969,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+        }
+      },
+      "checks": [
+        {
+          "id": "F01-F02-direct-loopback",
+          "passed": true,
+          "hits": [
+            {
+              "server": "canary",
+              "path": "/prm",
+              "authorization_present": false
+            },
+            {
+              "server": "canary",
+              "path": "/.well-known/oauth-authorization-server",
+              "authorization_present": false
+            }
+          ]
+        },
+        {
+          "id": "F01-302-cross-origin-loopback",
+          "passed": true,
+          "hits": [
+            {
+              "server": "fixture",
+              "path": "/mcp"
+            },
+            {
+              "server": "fixture",
+              "path": "/redirect"
+            },
+            {
+              "server": "canary",
+              "path": "/redirected",
+              "authorization_present": false
+            },
+            {
+              "server": "canary",
+              "path": "/.well-known/oauth-authorization-server",
+              "authorization_present": false
+            }
+          ]
+        },
+        {
+          "id": "F01-F02-negative-control",
+          "passed": true,
+          "canary_hits": 0
+        },
+        {
+          "id": "F04-raw-URL-normalization-does-not-collide",
+          "passed": true,
+          "pairs": [
+            [
+              "https://server.example/foo/../bar",
+              "https://server.example/bar"
+            ],
+            [
+              "https://SERVER.example/mcp",
+              "https://server.example/mcp"
+            ],
+            [
+              "https://server.example/mcp?a=1&b=2",
+              "https://server.example/mcp?b=2&a=1"
+            ]
+          ]
+        },
+        {
+          "id": "F04-ambiguous-delimiter-preimage",
+          "passed": true,
+          "left": [
+            "https://server.example/x|https://resource.example/a",
+            "https://resource.example/b"
+          ],
+          "right": [
+            "https://server.example/x",
+            "https://resource.example/a|https://resource.example/b"
+          ],
+          "hash": "f886a10d3be9d87f05c8c07fcf4f5794",
+          "limitation": "Two chosen configurations, identical serialization; NOT MD5 cryptanalysis, fixed-victim takeover or RCE."
+        },
+        {
+          "id": "F11-SSE-endpoint-origin-control",
+          "passed": true,
+          "line": 30872,
+          "cross_origin_rejected": true,
+          "same_origin_accepted": true
+        }
+      ]
+    },
+    {
+      "version": "0.15.1",
+      "run": 1,
+      "file": "<bench-root>\\evidence\\releases\\0.15.1\\package\\dist\\chunk-KJCT2FXL.js",
+      "sha256": "bd626c01947857ba2cb5f347659f8d6db7d99827732a187660bd2582741e4bf0",
+      "execution_scope": "Exact extracted functions only, actual loopback HTTP, injected logging/fetch; NOT full installed CLI.",
+      "source_ranges": {
+        "parseWWWAuthenticateHeader": {
+          "line": 31912,
+          "end_line": 31944,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+        },
+        "buildProtectedResourceMetadataUrls": {
+          "line": 31945,
+          "end_line": 31955,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+        },
+        "fetchProtectedResourceMetadataFromUrl": {
+          "line": 31956,
+          "end_line": 31991,
+          "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+        },
+        "discoverProtectedResourceMetadata": {
+          "line": 31992,
+          "end_line": 32019,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+        },
+        "getAuthorizationServerUrl": {
+          "line": 32020,
+          "end_line": 32025,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+        },
+        "getMetadataUrls": {
+          "line": 32028,
+          "end_line": 32046,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+        },
+        "fetchAuthorizationServerMetadata": {
+          "line": 32047,
+          "end_line": 32058,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+        },
+        "fetchMetadataFrom": {
+          "line": 32059,
+          "end_line": 32094,
+          "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+        },
+        "discoverOAuthServerInfo2": {
+          "line": 33102,
+          "end_line": 33177,
+          "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+        },
+        "getServerUrlHash": {
+          "line": 34005,
+          "end_line": 34019,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+        }
+      },
+      "checks": [
+        {
+          "id": "F01-F02-direct-loopback",
+          "passed": true,
+          "hits": [
+            {
+              "server": "canary",
+              "path": "/prm",
+              "authorization_present": false
+            },
+            {
+              "server": "canary",
+              "path": "/.well-known/oauth-authorization-server",
+              "authorization_present": false
+            }
+          ]
+        },
+        {
+          "id": "F01-302-cross-origin-loopback",
+          "passed": true,
+          "hits": [
+            {
+              "server": "fixture",
+              "path": "/mcp"
+            },
+            {
+              "server": "fixture",
+              "path": "/redirect"
+            },
+            {
+              "server": "canary",
+              "path": "/redirected",
+              "authorization_present": false
+            },
+            {
+              "server": "canary",
+              "path": "/.well-known/oauth-authorization-server",
+              "authorization_present": false
+            }
+          ]
+        },
+        {
+          "id": "F01-F02-negative-control",
+          "passed": true,
+          "canary_hits": 0
+        },
+        {
+          "id": "F04-raw-URL-normalization-does-not-collide",
+          "passed": true,
+          "pairs": [
+            [
+              "https://server.example/foo/../bar",
+              "https://server.example/bar"
+            ],
+            [
+              "https://SERVER.example/mcp",
+              "https://server.example/mcp"
+            ],
+            [
+              "https://server.example/mcp?a=1&b=2",
+              "https://server.example/mcp?b=2&a=1"
+            ]
+          ]
+        },
+        {
+          "id": "F04-ambiguous-delimiter-preimage",
+          "passed": true,
+          "left": [
+            "https://server.example/x|https://resource.example/a",
+            "https://resource.example/b"
+          ],
+          "right": [
+            "https://server.example/x",
+            "https://resource.example/a|https://resource.example/b"
+          ],
+          "hash": "f886a10d3be9d87f05c8c07fcf4f5794",
+          "limitation": "Two chosen configurations, identical serialization; NOT MD5 cryptanalysis, fixed-victim takeover or RCE."
+        },
+        {
+          "id": "F11-SSE-endpoint-origin-control",
+          "passed": true,
+          "line": 30872,
+          "cross_origin_rejected": true,
+          "same_origin_accepted": true
+        }
+      ]
+    },
+    {
+      "version": "0.14.3",
+      "run": 2,
+      "file": "<bench-root>\\evidence\\releases\\0.14.3\\package\\dist\\chunk-CGVEK4Z7.js",
+      "sha256": "c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451",
+      "execution_scope": "Exact extracted functions only, actual loopback HTTP, injected logging/fetch; NOT full installed CLI.",
+      "source_ranges": {
+        "parseWWWAuthenticateHeader": {
+          "line": 31912,
+          "end_line": 31944,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+        },
+        "buildProtectedResourceMetadataUrls": {
+          "line": 31945,
+          "end_line": 31955,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+        },
+        "fetchProtectedResourceMetadataFromUrl": {
+          "line": 31956,
+          "end_line": 31991,
+          "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+        },
+        "discoverProtectedResourceMetadata": {
+          "line": 31992,
+          "end_line": 32019,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+        },
+        "getAuthorizationServerUrl": {
+          "line": 32020,
+          "end_line": 32025,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+        },
+        "getMetadataUrls": {
+          "line": 32028,
+          "end_line": 32046,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+        },
+        "fetchAuthorizationServerMetadata": {
+          "line": 32047,
+          "end_line": 32058,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+        },
+        "fetchMetadataFrom": {
+          "line": 32059,
+          "end_line": 32094,
+          "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+        },
+        "discoverOAuthServerInfo2": {
+          "line": 33102,
+          "end_line": 33177,
+          "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+        },
+        "getServerUrlHash": {
+          "line": 33955,
+          "end_line": 33969,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+        }
+      },
+      "checks": [
+        {
+          "id": "F01-F02-direct-loopback",
+          "passed": true,
+          "hits": [
+            {
+              "server": "canary",
+              "path": "/prm",
+              "authorization_present": false
+            },
+            {
+              "server": "canary",
+              "path": "/.well-known/oauth-authorization-server",
+              "authorization_present": false
+            }
+          ]
+        },
+        {
+          "id": "F01-302-cross-origin-loopback",
+          "passed": true,
+          "hits": [
+            {
+              "server": "fixture",
+              "path": "/mcp"
+            },
+            {
+              "server": "fixture",
+              "path": "/redirect"
+            },
+            {
+              "server": "canary",
+              "path": "/redirected",
+              "authorization_present": false
+            },
+            {
+              "server": "canary",
+              "path": "/.well-known/oauth-authorization-server",
+              "authorization_present": false
+            }
+          ]
+        },
+        {
+          "id": "F01-F02-negative-control",
+          "passed": true,
+          "canary_hits": 0
+        },
+        {
+          "id": "F04-raw-URL-normalization-does-not-collide",
+          "passed": true,
+          "pairs": [
+            [
+              "https://server.example/foo/../bar",
+              "https://server.example/bar"
+            ],
+            [
+              "https://SERVER.example/mcp",
+              "https://server.example/mcp"
+            ],
+            [
+              "https://server.example/mcp?a=1&b=2",
+              "https://server.example/mcp?b=2&a=1"
+            ]
+          ]
+        },
+        {
+          "id": "F04-ambiguous-delimiter-preimage",
+          "passed": true,
+          "left": [
+            "https://server.example/x|https://resource.example/a",
+            "https://resource.example/b"
+          ],
+          "right": [
+            "https://server.example/x",
+            "https://resource.example/a|https://resource.example/b"
+          ],
+          "hash": "f886a10d3be9d87f05c8c07fcf4f5794",
+          "limitation": "Two chosen configurations, identical serialization; NOT MD5 cryptanalysis, fixed-victim takeover or RCE."
+        },
+        {
+          "id": "F11-SSE-endpoint-origin-control",
+          "passed": true,
+          "line": 30872,
+          "cross_origin_rejected": true,
+          "same_origin_accepted": true
+        }
+      ]
+    },
+    {
+      "version": "0.15.1",
+      "run": 2,
+      "file": "<bench-root>\\evidence\\releases\\0.15.1\\package\\dist\\chunk-KJCT2FXL.js",
+      "sha256": "bd626c01947857ba2cb5f347659f8d6db7d99827732a187660bd2582741e4bf0",
+      "execution_scope": "Exact extracted functions only, actual loopback HTTP, injected logging/fetch; NOT full installed CLI.",
+      "source_ranges": {
+        "parseWWWAuthenticateHeader": {
+          "line": 31912,
+          "end_line": 31944,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+        },
+        "buildProtectedResourceMetadataUrls": {
+          "line": 31945,
+          "end_line": 31955,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+        },
+        "fetchProtectedResourceMetadataFromUrl": {
+          "line": 31956,
+          "end_line": 31991,
+          "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+        },
+        "discoverProtectedResourceMetadata": {
+          "line": 31992,
+          "end_line": 32019,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+        },
+        "getAuthorizationServerUrl": {
+          "line": 32020,
+          "end_line": 32025,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+        },
+        "getMetadataUrls": {
+          "line": 32028,
+          "end_line": 32046,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+        },
+        "fetchAuthorizationServerMetadata": {
+          "line": 32047,
+          "end_line": 32058,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+        },
+        "fetchMetadataFrom": {
+          "line": 32059,
+          "end_line": 32094,
+          "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+        },
+        "discoverOAuthServerInfo2": {
+          "line": 33102,
+          "end_line": 33177,
+          "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+        },
+        "getServerUrlHash": {
+          "line": 34005,
+          "end_line": 34019,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+        }
+      },
+      "checks": [
+        {
+          "id": "F01-F02-direct-loopback",
+          "passed": true,
+          "hits": [
+            {
+              "server": "canary",
+              "path": "/prm",
+              "authorization_present": false
+            },
+            {
+              "server": "canary",
+              "path": "/.well-known/oauth-authorization-server",
+              "authorization_present": false
+            }
+          ]
+        },
+        {
+          "id": "F01-302-cross-origin-loopback",
+          "passed": true,
+          "hits": [
+            {
+              "server": "fixture",
+              "path": "/mcp"
+            },
+            {
+              "server": "fixture",
+              "path": "/redirect"
+            },
+            {
+              "server": "canary",
+              "path": "/redirected",
+              "authorization_present": false
+            },
+            {
+              "server": "canary",
+              "path": "/.well-known/oauth-authorization-server",
+              "authorization_present": false
+            }
+          ]
+        },
+        {
+          "id": "F01-F02-negative-control",
+          "passed": true,
+          "canary_hits": 0
+        },
+        {
+          "id": "F04-raw-URL-normalization-does-not-collide",
+          "passed": true,
+          "pairs": [
+            [
+              "https://server.example/foo/../bar",
+              "https://server.example/bar"
+            ],
+            [
+              "https://SERVER.example/mcp",
+              "https://server.example/mcp"
+            ],
+            [
+              "https://server.example/mcp?a=1&b=2",
+              "https://server.example/mcp?b=2&a=1"
+            ]
+          ]
+        },
+        {
+          "id": "F04-ambiguous-delimiter-preimage",
+          "passed": true,
+          "left": [
+            "https://server.example/x|https://resource.example/a",
+            "https://resource.example/b"
+          ],
+          "right": [
+            "https://server.example/x",
+            "https://resource.example/a|https://resource.example/b"
+          ],
+          "hash": "f886a10d3be9d87f05c8c07fcf4f5794",
+          "limitation": "Two chosen configurations, identical serialization; NOT MD5 cryptanalysis, fixed-victim takeover or RCE."
+        },
+        {
+          "id": "F11-SSE-endpoint-origin-control",
+          "passed": true,
+          "line": 30872,
+          "cross_origin_rejected": true,
+          "same_origin_accepted": true
+        }
+      ]
+    }
+  ]
+}

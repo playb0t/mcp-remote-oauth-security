@@ -1,0 +1,19 @@
+--- release_checks.original.cjs
++++ release_checks.cjs
+@@ -8,8 +8,14 @@
+ const assert = require('node:assert/strict');
+ const {parser} = require('../scanner/normalize_ast.cjs');
+ const PINS = {
+-  '0.1.38': {file: 'chunk-65X3S4HB.js', sha: 'd3eb914e687408424476bd8a41eff8d1d47e01772b14158f500f5ecd902fa875'},
+-  '0.14.3': {file: 'chunk-CGVEK4Z7.js', sha: 'c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451'},
++  "0.14.3": {
++    "file": "chunk-CGVEK4Z7.js",
++    "sha": "c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451"
++  },
++  "0.15.1": {
++    "file": "chunk-KJCT2FXL.js",
++    "sha": "bd626c01947857ba2cb5f347659f8d6db7d99827732a187660bd2582741e4bf0"
++  }
+ };
+ const sha = raw => crypto.createHash('sha256').update(raw).digest('hex');
+ 

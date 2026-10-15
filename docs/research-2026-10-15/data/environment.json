@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-15T06:39:46.763619+00:00",
+  "node": "v24.20.0",
+  "npm": "11.19.0",
+  "python": "Python 3.12.10",
+  "runtime_lock_sha256": "67cff1cf9aa853e97dd612645169f153ee8621586bfcdf41039c102b39d47684",
+  "install": "npm install --ignore-scripts --omit=dev --no-audit --no-fund --loglevel=warn",
+  "dependencies": {
+    "express": "4.22.3",
+    "open": "10.2.0",
+    "strict-url-sanitise": "0.0.1",
+    "undici": "7.30.0"
+  }
+}

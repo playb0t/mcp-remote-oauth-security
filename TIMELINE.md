@@ -19,6 +19,8 @@
 | 2026-10-06 | CISA-ADP scored CVE-2026-52001 (CVSS 3.1 7.5 High, CWE-200); all five records now carry a CISA score. |
 | 2026-10-09 | Research continuation published in `docs/research-2026-10-09/`: the published `0.14.3` CLI tested in full in three local stdio scenarios (the F-01 / F-02 request path, CVE-2026-51994 / CVE-2026-51995), selected discovery helpers executed across 58 stable releases (`0.1.32` through `0.14.3`), and a code distribution map of matching fragments under other package names; see the [research dossier](docs/research-2026-10-09/RESEARCH_DOSSIER.md). No fixed release identified; published CVE ranges unchanged. |
 | 2026-10-13 | UltraRAG merged PR #538, fixing the remote HTTP MCP launch reported in issue #537 (12 October), with credit to the researcher. The fixed path starts an unpinned `npx -y mcp-remote`; issue #541 put the five records to the project the same day. |
+| 2026-10-14 | Supabase merged the researcher's PR #51646, moving its Devin MCP preset from the bridge to a native HTTP connection; the records were posted to the merged thread. Upstream published `0.14.4`, `0.14.5`, `0.15.0` and `0.15.1` within four hours, the first releases since 21 September; none names a record, no fixed release is stated. |
+| 2026-10-15 | The 9 October procedure repeated on `0.15.1` (`docs/research-2026-10-15/`): the same F-01 / F-02 request paths recorded, a token request with an Authorization header to the server-named authorization server in the full trace, the ten helper functions byte-identical to `0.14.3`, the bundled SDK still client 2.0.0. Published CVE ranges unchanged; no fixed release identified. |
 
 ## Coordination status
 

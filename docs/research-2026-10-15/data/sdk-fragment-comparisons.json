@@ -1,0 +1,278 @@
+{
+  "parser": "typescript@5.9.3",
+  "procedure": "Extract original AST node, tokenize without trivia. Only explicit numeric identifier suffix renames tolerated; properties and literals preserved.",
+  "results": [
+    {
+      "label": "runtime",
+      "source": {
+        "path": "evidence/sdk/client-2.0.0/package/dist/chunk-Br0eD_fh.mjs",
+        "name": "__commonJSMin",
+        "start": 318,
+        "end": 399,
+        "line": 8,
+        "end_line": 8,
+        "sha256": "7b3119c447f0ef6ee474fd4b6f53caf184c082b1f28fd98214fd9edcb222a719"
+      },
+      "embedded": {
+        "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+        "name": "__commonJSMin",
+        "start": 465,
+        "end": 546,
+        "line": 12,
+        "end_line": 12,
+        "sha256": "7b3119c447f0ef6ee474fd4b6f53caf184c082b1f28fd98214fd9edcb222a719"
+      },
+      "comparison": {
+        "equal_after_comments_whitespace_and_numeric_suffix_renames": true,
+        "renames": {},
+        "differences": [],
+        "token_count": [
+          34,
+          34
+        ]
+      }
+    },
+    {
+      "label": "dialect",
+      "source": {
+        "path": "evidence/sdk/client-2.0.0/package/dist/dialects-BOhdv1Fc.mjs",
+        "name": "declaredDialect",
+        "start": 1399,
+        "end": 1985,
+        "line": 23,
+        "end_line": 30,
+        "sha256": "eadfa431d915fd928c4794d37e2c788c86405c3a6844b420ea3410ef6ba9546d"
+      },
+      "embedded": {
+        "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+        "name": "declaredDialect",
+        "start": 2369,
+        "end": 2961,
+        "line": 53,
+        "end_line": 60,
+        "sha256": "e3c533bdd0b943bb942f33ebf5da33b478cbf8fc3522bcd140d682e1fba11976"
+      },
+      "comparison": {
+        "equal_after_comments_whitespace_and_numeric_suffix_renames": true,
+        "renames": {},
+        "differences": [],
+        "token_count": [
+          104,
+          104
+        ]
+      }
+    },
+    {
+      "label": "core_protocols",
+      "source": {
+        "path": "evidence/sdk/core-2.0.0/package/dist/auth-CUe6YdwF.mjs",
+        "name": "SUPPORTED_PROTOCOL_VERSIONS",
+        "start": 197,
+        "end": 285,
+        "line": 6,
+        "end_line": 12,
+        "sha256": "03f14c4c2e1fb1b0d69625046c31739aee44de2cfbad132563c2ec38fbb8ec15"
+      },
+      "embedded": {
+        "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+        "name": "SUPPORTED_PROTOCOL_VERSIONS",
+        "start": 546754,
+        "end": 546847,
+        "line": 14578,
+        "end_line": 14584,
+        "sha256": "b13ce1a883f1542cd8478bd7f647418a54cbbb8f99b4628b19924d2adea2f4dc"
+      },
+      "comparison": {
+        "equal_after_comments_whitespace_and_numeric_suffix_renames": true,
+        "renames": {},
+        "differences": [],
+        "token_count": [
+          11,
+          11
+        ]
+      }
+    },
+    {
+      "label": "client_core_fetch",
+      "source": {
+        "path": "evidence/sdk/client-2.0.0/package/dist/src-D_zzAWoS.mjs",
+        "name": "createFetchWithInit",
+        "start": 285883,
+        "end": 286208,
+        "line": 6701,
+        "end_line": 6713,
+        "sha256": "456ee3e222f5946b60ebe96f1d23bc354a6ff71a8c113182d840b1acbadb2cbd"
+      },
+      "embedded": {
+        "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+        "name": "createFetchWithInit",
+        "start": 777666,
+        "end": 778020,
+        "line": 20147,
+        "end_line": 20159,
+        "sha256": "4536def820fa380f71a6efe5103352bb711d85ee8224d46f9dcf1fe4469d5200"
+      },
+      "comparison": {
+        "equal_after_comments_whitespace_and_numeric_suffix_renames": true,
+        "renames": {
+          "url": "url2"
+        },
+        "differences": [],
+        "token_count": [
+          72,
+          72
+        ]
+      }
+    },
+    {
+      "label": "ajv",
+      "source": {
+        "path": "evidence/sdk/client-2.0.0/package/dist/ajvProvider-97rDpkRx.mjs",
+        "name": "normalizeId",
+        "start": 73149,
+        "end": 73234,
+        "line": 2004,
+        "end_line": 2006,
+        "sha256": "62035255843379e7f11d2ec277753ff754adccf59140076efbe066d5cb841440"
+      },
+      "embedded": {
+        "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+        "name": "normalizeId",
+        "start": 853644,
+        "end": 853732,
+        "line": 22119,
+        "end_line": 22121,
+        "sha256": "d03ea8884ef243e760285bbbd8dcf034f784fc0b58b46161b46031078d47bf64"
+      },
+      "comparison": {
+        "equal_after_comments_whitespace_and_numeric_suffix_renames": true,
+        "renames": {},
+        "differences": [],
+        "token_count": [
+          21,
+          21
+        ]
+      }
+    },
+    {
+      "label": "oauth",
+      "source": {
+        "path": "evidence/sdk/client-2.0.0/package/dist/index.mjs",
+        "name": "fetchToken",
+        "start": 63082,
+        "end": 64319,
+        "line": 1293,
+        "end_line": 1316,
+        "sha256": "d155b29850160c664ac7225ac7961b7f518ec59468abd88df0279e2988dde757"
+      },
+      "embedded": {
+        "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+        "name": "fetchToken",
+        "start": 1103783,
+        "end": 1105054,
+        "line": 28370,
+        "end_line": 28393,
+        "sha256": "52526eea3cb98b6c70e5dbe60d0c4ae89bdee2599b89ac3fb7122d04466a9d38"
+      },
+      "comparison": {
+        "equal_after_comments_whitespace_and_numeric_suffix_renames": true,
+        "renames": {},
+        "differences": [],
+        "token_count": [
+          186,
+          186
+        ]
+      }
+    },
+    {
+      "label": "OAuthTokensSchema",
+      "source": {
+        "path": "evidence/sdk/core-2.0.0/package/dist/auth-CUe6YdwF.mjs",
+        "name": "OAuthTokensSchema",
+        "start": 59284,
+        "end": 59503,
+        "line": 1592,
+        "end_line": 1599,
+        "sha256": "4e75c9c9446281acfbb9db8ebdb5a5701242f84e3c313ba7ada9f0d8b925c9d1"
+      },
+      "embedded": {
+        "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+        "name": "OAuthTokensSchema",
+        "start": 579546,
+        "end": 579770,
+        "line": 15458,
+        "end_line": 15465,
+        "sha256": "930863f6e525bd4d61bae70de70afb4016c2cceb652af9cbbfde0ee84eadabc9"
+      },
+      "patched": {
+        "path": "evidence/sdk/core-2.2.0/package/dist/auth-BNDyLTqp.mjs",
+        "name": "OAuthTokensSchema",
+        "start": 59352,
+        "end": 59617,
+        "line": 1593,
+        "end_line": 1601,
+        "sha256": "139953d51f51ee79ac454e270d9c3dcdca878d0ad83e33d16a3409061a4c76fd"
+      },
+      "comparison": {
+        "equal_after_comments_whitespace_and_numeric_suffix_renames": true,
+        "renames": {},
+        "differences": [],
+        "token_count": [
+          62,
+          62
+        ],
+        "explicit_namespace_aliases": {
+          "z.coerce": "coerce_exports",
+          "z.object": "object",
+          "z.string": "string2",
+          "z.number": "number2"
+        }
+      }
+    },
+    {
+      "label": "OAuthClientInformationSchema",
+      "source": {
+        "path": "evidence/sdk/core-2.0.0/package/dist/auth-CUe6YdwF.mjs",
+        "name": "OAuthClientInformationSchema",
+        "start": 61378,
+        "end": 61556,
+        "line": 1651,
+        "end_line": 1656,
+        "sha256": "5219398a742a88a4d0465f8767a6699f631cc896ebd0f691ab2952cf62f76ddf"
+      },
+      "embedded": {
+        "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+        "name": "OAuthClientInformationSchema",
+        "start": 581021,
+        "end": 581197,
+        "line": 15498,
+        "end_line": 15503,
+        "sha256": "9705c2b5eb700719668e118d1ecc5e0d5a6834a344dca9f46085c5cb73219310"
+      },
+      "patched": {
+        "path": "evidence/sdk/core-2.2.0/package/dist/auth-BNDyLTqp.mjs",
+        "name": "OAuthClientInformationSchema",
+        "start": 61492,
+        "end": 61716,
+        "line": 1653,
+        "end_line": 1659,
+        "sha256": "46d8257aeb86125532cd2600c5b45c6e7fff15edbb76c1cdc092399f1c81f6ad"
+      },
+      "comparison": {
+        "equal_after_comments_whitespace_and_numeric_suffix_renames": true,
+        "renames": {},
+        "differences": [],
+        "token_count": [
+          44,
+          44
+        ],
+        "explicit_namespace_aliases": {
+          "z.coerce": "coerce_exports",
+          "z.object": "object",
+          "z.string": "string2",
+          "z.number": "number2"
+        }
+      }
+    }
+  ]
+}

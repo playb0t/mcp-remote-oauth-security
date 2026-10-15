@@ -1,0 +1,86 @@
+{
+ "schema_version": 1,
+ "research_date": "2026-10-15",
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 13336,
+   "sha256": "32976dbe88c509d9691425a1a67c8f3a6fca881d752b81f158abf3a9cbe94988"
+  },
+  {
+   "path": "data/acquisition-receipts.json",
+   "bytes": 30795,
+   "sha256": "7d8ed0538c215e6614b05eb30a28a78e69477ef85de6dc14979608d0e2afda28"
+  },
+  {
+   "path": "data/all-cli-runs.json",
+   "bytes": 6010,
+   "sha256": "3f28f9d9b88d5d8b5717b364356e908805d0b8f64a43c3124d18df89cc9f997b"
+  },
+  {
+   "path": "data/cli-scenarios-0.15.1.json",
+   "bytes": 23809,
+   "sha256": "cddcce09d47036dab9de2ccc2c9e03245133851af600d11352046696ee4f0c7c"
+  },
+  {
+   "path": "data/code-regions.json",
+   "bytes": 31879,
+   "sha256": "11f14fa1c8b3e7076bc628a8d224d483685ef96810c668bc5a612932e74e1b44"
+  },
+  {
+   "path": "data/environment.json",
+   "bytes": 445,
+   "sha256": "18cccfbb0faed21bd344c5e0b8de357acb018c535d00002f95aa32e9b1da93e6"
+  },
+  {
+   "path": "data/five-path-statuses.json",
+   "bytes": 2372,
+   "sha256": "6248a2325ba5c8416813b00a4b9455bb8016d11759a2c62ade4aadd7a35bf281"
+  },
+  {
+   "path": "data/helper-continuity.json",
+   "bytes": 4245,
+   "sha256": "f017662faf0345916ad93a8b4b64828736a25ca8c9b772b0fede42b333e10651"
+  },
+  {
+   "path": "data/npm-view-time.txt",
+   "bytes": 33,
+   "sha256": "bda4f444989b17f5214216d6b0e57cc72e6f3c57edc7407c9be673f92f4e81da"
+  },
+  {
+   "path": "data/npm-view.json",
+   "bytes": 92,
+   "sha256": "aa0477e8e015f3416804cda6e96f242a3a019e87597e437e625ed5dcef449a62"
+  },
+  {
+   "path": "data/release-checks-0.15.1.json",
+   "bytes": 19683,
+   "sha256": "87ac70246466bb2b1c83219c2222b63c6b71fdaa609636022395abede0506a03"
+  },
+  {
+   "path": "data/sdk-analysis.json",
+   "bytes": 19086,
+   "sha256": "d58c74118a4f13971babc4abb3ca5fe393d3b3a89b5d2a99ad003cfd8f0ac778"
+  },
+  {
+   "path": "data/sdk-fragment-comparisons.json",
+   "bytes": 8409,
+   "sha256": "5b5a32630c6ac1392b2f63876084170fc50a6ca0417e4463c2d20f4ed20221f4"
+  },
+  {
+   "path": "data/sdk-protective-code-locations.json",
+   "bytes": 3276,
+   "sha256": "aa5ab77a2d3b249fd978df85baa7f021b6d23e143acac8c0da0947dc8f60889b"
+  },
+  {
+   "path": "procedures/release_checks.pins.diff",
+   "bytes": 772,
+   "sha256": "4c5468d54e19fdeb5578f72b01477d5f45d17e7d7d1d7dbae1e51877e988e26b"
+  },
+  {
+   "path": "procedures/verify_stdio.path-version.diff",
+   "bytes": 2530,
+   "sha256": "16a139540f646081550984c62cb3745a15db37ea9c66104ace76ebb061c88001"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+--- verify_stdio.original.mjs
++++ runs/cli-0.15.1/verify_stdio.mjs
+@@ -7,7 +7,7 @@
+ import {fileURLToPath} from 'node:url';
+ import assert from 'node:assert/strict';
+ const root=dirname(fileURLToPath(import.meta.url));
+-const baseline=join(root,'../cve-signature-20261009');
++const baseline=resolve(root,'../..');
+ const cli=join(baseline,'runtime-install/dist/proxy.js');
+ for(const name of readdirSync(join(baseline,'runtime-install/dist'))) assert.deepEqual(readFileSync(join(baseline,'runtime-install/dist',name)),readFileSync(join(baseline,'evidence/latest/package/dist',name)));
+ const events=[];const captures=[];const cases=[];
+@@ -86,7 +86,7 @@
+ try{
+  sinkOrigin=await listen(canary);remoteOrigin=await listen(remote);
+  for(const name of ['header-selected-canary','header-redirect','same-origin-control'])await runCase(name);
+- const output={version:'0.14.3',fixture:{mcp_origin:remoteOrigin,canary_origin:sinkOrigin},node:process.version,cli_sha256:createHash('sha256').update(readFileSync(cli)).digest('hex'),cases,scope:'Actual unmodified npm proxy CLI, stdio initialize + tools/list + tools/call, loopback-only fixture. Mock GET issues an auth challenge; mock POST permits synthetic MCP requests. No real OAuth authorization, credentials, cloud endpoint, remote public server or desktop-host UI was tested.'};
++ const output={version:'0.15.1',fixture:{mcp_origin:remoteOrigin,canary_origin:sinkOrigin},node:process.version,cli_sha256:createHash('sha256').update(readFileSync(cli)).digest('hex'),cases,scope:'Actual unmodified npm proxy CLI, stdio initialize + tools/list + tools/call, loopback-only fixture. Mock GET issues an auth challenge; mock POST permits synthetic MCP requests. No real OAuth authorization, credentials, cloud endpoint, remote public server or desktop-host UI was tested.'};
+  const tracePath=join(root,'logs/raw_trace.log');
+  appendFileSync(tracePath, `\n=== stdio execution ${new Date().toISOString()} ===\n` + JSON.stringify({version:output.version,node:output.node,cli_sha256:output.cli_sha256,cases,events,captures},null,2) + '\n', 'utf8');
+  const summary={version:output.version,node:output.node,cli_sha256:output.cli_sha256,raw_trace:'logs/raw_trace.log',cases:cases.map(c=>({name:c.name,passed:c.passed,exitCode:c.exit?.code,stdioReplies:c.stdio_replies.length,requestCount:c.trace.length,canaryRequests:c.trace.filter(e=>e.role==='canary').length,schemaErrors:(c.stderr.match(/ZodError/g)||[]).length,authorizationHeadersSent:c.trace.filter(e=>e.authorization_present).length}))};

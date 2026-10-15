@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-10-15T06:43:49.218181+00:00",
+  "version": "0.15.1",
+  "range_policy": "No official affected-range expansion or fixed/unfixed CVE verdict",
+  "statuses": [
+    {
+      "cve": "CVE-2026-51994",
+      "finding": "F-01",
+      "status": "путь есть",
+      "evidence": "cli-scenarios-0.15.1.json: cases header-selected-canary/header-redirect; GET resource metadata and controlled302 observed",
+      "class": "full CLI and extracted helpers",
+      "limits": "Two loopback origins; third distinct origin not measured; no response exfiltration"
+    },
+    {
+      "cve": "CVE-2026-51995",
+      "finding": "F-02",
+      "status": "путь есть",
+      "evidence": "CLI canary GET /.well-known/oauth-authorization-server after PRM.authorization_servers; release-checks direct/redirect",
+      "class": "full CLI and extracted helpers",
+      "limits": "Real OAuth login and production credentials not tested"
+    },
+    {
+      "cve": "CVE-2026-51996",
+      "finding": "F-04",
+      "status": "путь есть",
+      "evidence": "evidence/latest/package/dist/chunk-KJCT2FXL.js:34005–34019 (SHA-256 6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27); original F04 normalization/delimiter checks pass twice",
+      "class": "executed exact helper plus code",
+      "limits": "Chosen serialization ambiguity only; no MD5 cryptanalysis, fixed-victim takeover or RCE"
+    },
+    {
+      "cve": "CVE-2026-51997",
+      "finding": "F-08",
+      "status": "путь есть в коде",
+      "evidence": "evidence/latest/package/dist/chunk-KJCT2FXL.js:34070–34098 (SHA-256 39f3d997ebbab4afdcf0969aeb2c165066edced5e7a8e2c412afcdc7ab42e0e5); sanitizeUrl(authorizationUrl.toString()) call at35177",
+      "class": "source only, sanitizer fixture",
+      "limits": "Browser/open not executed, no RCE claim"
+    },
+    {
+      "cve": "CVE-2026-52001",
+      "finding": "F-11",
+      "status": "путь есть в коде",
+      "evidence": "evidence/latest/package/dist/chunk-KJCT2FXL.js:33216–33241 (SHA-256 77ae4be70083867082e71b048955a527e81e2aaa58a22b4ab069d8e04a6cbf8e); SSE endpoint positive control rejects cross-origin and accepts same-origin",
+      "class": "source wrapper and exact endpoint listener",
+      "limits": "No SSE bearer redirection/credential transfer runtime measured in this bench"
+    }
+  ]
+}

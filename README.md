@@ -8,19 +8,20 @@
 
 <p align="center">
   <strong>Five published CVE records, all scored by CISA-ADP, up to 9.8 Critical.<br>
-  The current published CLI, <code>0.14.3</code>, still follows the server-selected request paths of CVE-2026-51994 and CVE-2026-51995.</strong>
+  The current published CLI, <code>0.15.1</code> of 14 October 2026, still follows the server-selected request paths of CVE-2026-51994 and CVE-2026-51995.</strong>
 </p>
 
 <p align="center">
   <a href="#advisory-index"><img alt="CVE records" src="https://img.shields.io/badge/CVE_records-5-b91c1c"></a>
   <a href="#advisory-index"><img alt="CISA-ADP score" src="https://img.shields.io/badge/CISA--ADP-up_to_9.8_Critical-f59e0b"></a>
-  <a href="docs/research-2026-10-09/RESEARCH_DOSSIER.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.14.3_(9_Oct_2026)-8b5cf6"></a>
+  <a href="docs/research-2026-10-15/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.15.1_(15_Oct_2026)-8b5cf6"></a>
   <a href="CORRECTIONS.md"><img alt="Latest release" src="https://img.shields.io/badge/release-v1.0.2-58a6ff"></a>
   <a href="https://playb0t.com"><img alt="Impact record" src="https://img.shields.io/badge/impact_record-playb0t.com-0f766e"></a>
 </p>
 
 <p align="center">
   <a href="docs/research-2026-10-09/RESEARCH_DOSSIER.md">Research dossier, 9 October 2026</a> ·
+  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> ·
   <a href="#advisory-index">Advisory index</a> ·
   <a href="https://playb0t.com">Impact ledger</a>
 </p>
@@ -29,7 +30,7 @@
 
 `mcp-remote` bridges stdio-only MCP clients to remote MCP servers and runs OAuth discovery on their behalf. That makes remote-server metadata a security boundary: a server-selected URL, redirect or credential destination must not become trusted because it appeared during discovery.
 
-Seven advisories document the review of the release current at disclosure, `0.1.38`: two localhost-canary reproductions, three bounded source reviews, two hardening records corrected in `v1.0.1`. The private report went to the maintainer on 17 February 2026; the public disclosure followed on 31 July after no acknowledgement; MITRE published five CVE records on 24 September 2026, and CISA-ADP scored all five. On 9 October 2026 the published `0.14.3` CLI, run in full in three local stdio scenarios, reproduced the F-01 / F-02 request path, HTTP 302 redirect included, and the discovery helpers executed in all 58 stable releases from `0.1.32` to `0.14.3`. Between the private report and 7 October 2026 npm served 19,060,907 downloads of the package. No fixed release has been stated.
+Seven advisories document the review of the release current at disclosure, `0.1.38`: two localhost-canary reproductions, three bounded source reviews, two hardening records corrected in `v1.0.1`. The private report went to the maintainer on 17 February 2026; the public disclosure followed on 31 July after no acknowledgement; MITRE published five CVE records on 24 September 2026, and CISA-ADP scored all five. On 9 October 2026 the published `0.14.3` CLI, run in full in three local stdio scenarios, reproduced the F-01 / F-02 request path, HTTP 302 redirect included, and the discovery helpers executed in all 58 stable releases from `0.1.32` to `0.14.3`. Between the private report and 7 October 2026 npm served 19,060,907 downloads of the package. No fixed release has been stated. On 14 October 2026 the maintainer published four releases, `0.14.4` through `0.15.1`; none of them names a record. On 15 October the 9 October procedure was repeated on `0.15.1`. It recorded the same F-01 / F-02 request paths. In the full trace it also recorded a token request, carrying an Authorization header, to the authorization server named by the server's own metadata.
 
 [Methodology](METHODOLOGY.md) · [Disclosure timeline](TIMELINE.md) · [Corrections](CORRECTIONS.md) · [Trust-boundary map](assets/mcp-remote-trust-boundary-map.png)
 
@@ -62,6 +63,20 @@ The selected metadata path is classified as CWE-918 / Missing Defense. These run
 
 [Evidence and accounting](docs/research-2026-10-09/EVIDENCE.md) · [Recorded procedures](docs/research-2026-10-09/REPRODUCIBILITY.md) · [Data and checksums](docs/research-2026-10-09/README.md)
 <!-- /research-2026-10-09 -->
+
+<!-- research-2026-10-15 -->
+## Research update: 15 October 2026
+
+Researcher: Alex Gercog (playb0t). The [0.15.1 follow-up](docs/research-2026-10-15/README.md) repeats the 9 October procedure on the release published the day before.
+
+- **Upstream moved.** On 14 October 2026 the maintainer published `0.14.4`, `0.14.5`, `0.15.0` and `0.15.1` within four hours. They are the first releases since `0.14.3` of 21 September. They carry five contributor pull requests and one commit of his own, all on the OAuth callback, the coordination and the credential store. One of them fixes a callback XSS reported by another researcher. No release note, commit or pull request names any of the five records. No fixed release is stated.
+- **Published CLI 0.15.1.** The unchanged 9 October procedure ran on the SRI-verified `0.15.1` package. It gave the same three scenario snapshots as `0.14.3`: 43 HTTP events, 15 canary events, a controlled HTTP 302 followed. The client fetched the server-selected `resource_metadata` destination of [F-01](advisories/F-01-resource-metadata-ssrf.md) (CVE-2026-51994) and made the authorization-server metadata request of [F-02](advisories/F-02-authorization-server-ssrf.md) (CVE-2026-51995). The full trace of the run also holds a `POST /token` carrying an `Authorization` header to the loopback canary, the authorization server the server's metadata named. The same event appears in `0.14.3` runs; it sits outside the 9 October snapshot. Twelve runs across the five versions are kept. Three of them were stopped by the procedure's own no-Authorization assertion.
+- **Code and SDK.** The ten helper functions behind the five records are byte-identical between `0.14.3` and `0.15.1`. The 24 helper-level checks pass. The bundle still carries `@modelcontextprotocol/client` 2.0.0. The issuer-binding change of client 2.2.0 and the redirect policy of client 2.3.0 are absent from it.
+
+F-08 and F-11 are confirmed in code and by extracted functions, not by a full run. A third distinct origin in the redirect chain was not measured. The follow-up establishes that these request paths are present in `0.15.1` under the stated fixture. It does not extend any official affected range, and it identifies no fixed release.
+
+[Follow-up report, data and checksums](docs/research-2026-10-15/README.md)
+<!-- /research-2026-10-15 -->
 
 ## Registries and pickup
 

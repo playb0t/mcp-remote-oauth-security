@@ -1,0 +1,104 @@
+{
+  "proofs": [
+    {
+      "label": "bundle_discard",
+      "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "name": "discardIfIssuerMismatch",
+      "start": 1075176,
+      "end": 1075680,
+      "line": 27740,
+      "end_line": 27747,
+      "sha256": "40dd4dfd04499688ea6dbd1af6e98cd80deaca54766e686c472ff03c74518b08"
+    },
+    {
+      "label": "patched22_discard",
+      "path": "evidence/sdk/client-2.2.0/package/dist/index.mjs",
+      "name": "discardIfIssuerMismatch",
+      "start": 13053,
+      "end": 13615,
+      "line": 215,
+      "end_line": 225,
+      "sha256": "2e54db933e1847f7c2aace819cd6699239dac905a7a21be093ad0c3b126d33fb"
+    },
+    {
+      "label": "patched22_fetchToken",
+      "path": "evidence/sdk/client-2.2.0/package/dist/index.mjs",
+      "name": "fetchToken",
+      "start": 67625,
+      "end": 69275,
+      "line": 1373,
+      "end_line": 1405,
+      "sha256": "71e5740a08a1f2ec471e1eb9437091595bb8956172789c1c7a01eda67138989a"
+    },
+    {
+      "label": "patched22_expectedIssuer",
+      "path": "evidence/sdk/client-2.2.0/package/dist/index.mjs",
+      "name": "checkedExpectedIssuer",
+      "start": 74001,
+      "end": 74512,
+      "line": 1505,
+      "end_line": 1509,
+      "sha256": "533da493c8a5e685a520f2fff0bfca607d9da68466975df262949f43b48f2283"
+    },
+    {
+      "label": "bundle_corsfetch",
+      "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "name": "fetchWithCorsRetry",
+      "start": 1095006,
+      "end": 1095415,
+      "line": 28187,
+      "end_line": 28200,
+      "sha256": "671eea16fa224da186314c740a329efa52b1c966cc953912d15082bdb89b9f84"
+    },
+    {
+      "label": "patched23_corsfetch",
+      "path": "evidence/sdk/client-2.3.0/package/dist/index.mjs",
+      "name": "fetchWithCorsRetry",
+      "start": 50084,
+      "end": 50520,
+      "line": 991,
+      "end_line": 1005,
+      "sha256": "24d3f00359c74ee6c0cd0c933ebd277242ce134121517114dfc108d86972a4a6"
+    },
+    {
+      "label": "bundle_tokenRequest",
+      "path": "evidence/latest/package/dist/chunk-KJCT2FXL.js",
+      "name": "executeTokenRequest",
+      "start": 1102041,
+      "end": 1103279,
+      "line": 28331,
+      "end_line": 28353,
+      "sha256": "ea62d39e22280ff2ea3f91332a3e76e33f5299bd301c78233fcc6af903e1c59a"
+    },
+    {
+      "label": "patched23_tokenRequest",
+      "path": "evidence/sdk/client-2.3.0/package/dist/index.mjs",
+      "name": "executeTokenRequest",
+      "start": 62460,
+      "end": 64246,
+      "line": 1252,
+      "end_line": 1289,
+      "sha256": "16a469f87df4fb77d8966bb54bf43f120ba3d3aa7d64e9599cff0e4c1aecffa6"
+    },
+    {
+      "label": "patched23_redirectWrapper",
+      "path": "evidence/sdk/client-2.3.0/package/dist/src-WCy6ifGf.mjs",
+      "name": "fetchWithinOrigin",
+      "start": 292949,
+      "end": 293918,
+      "line": 6843,
+      "end_line": 6864,
+      "sha256": "3a41fef5ecac05b0402e748fc9eb52021d95ec3f1a591bdf27659b8219bd8f4e"
+    },
+    {
+      "label": "patched23_originCheck",
+      "path": "evidence/sdk/client-2.3.0/package/dist/src-WCy6ifGf.mjs",
+      "name": "isWithinOrigin",
+      "start": 291964,
+      "end": 292197,
+      "line": 6821,
+      "end_line": 6824,
+      "sha256": "6ed591bb70ec27268ee82e9763145bdf993ec43b65f477b9c4c0fc12e8e2d02c"
+    }
+  ]
+}
