@@ -7,6 +7,7 @@ authors:
     alias: "playb0t"
 version: 1.0.2
 date-released: 2026-09-29
+license: CC-BY-4.0
 url: "https://github.com/playb0t/mcp-remote-oauth-security"
 repository-code: "https://github.com/playb0t/mcp-remote-oauth-security"
 preferred-citation:

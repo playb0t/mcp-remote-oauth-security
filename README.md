@@ -119,4 +119,6 @@ The private advisory was submitted on 17 February 2026 and the findings revalida
 
 Discovered and reported by **Alex Gercog ([playb0t](https://github.com/playb0t))**. Defenders, maintainers and vulnerability databases may cite the stable advisory URLs in this repository; when citing a finding, preserve its ID, version range, evidence class and limitations. Machine-readable citation metadata: [`CITATION.cff`](CITATION.cff).
 
+Text and data are licensed under [CC BY 4.0](LICENSE). The research tools, the `*.py`, `*.js`, `*.cjs` and `*.mjs` files under `docs/`, are licensed under [MIT](LICENSE-CODE). Third-party code excerpts in `docs/research-2026-10-09/procedures/screening/references/` keep their original licenses, listed in its [notices](docs/research-2026-10-09/procedures/screening/references/THIRD-PARTY-NOTICES.md).
+
 Articles: [Five mcp-remote CVE records, five CISA scores, no stated fix](docs/article-2026-10-08.md) (8 October 2026, second edition) · [The Server Named the URL, the Client Went](docs/article-2026-09-30.md) (30 September 2026, first edition).
