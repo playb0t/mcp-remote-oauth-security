@@ -22,6 +22,7 @@
 <p align="center">
   <a href="docs/research-2026-10-09/RESEARCH_DOSSIER.md">Research dossier, 9 October 2026</a> ·
   <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> ·
+  <a href="https://github.com/playb0t/mcp-host-matrix">MCP Host Matrix, 25 October 2026</a> ·
   <a href="#advisory-index">Advisory index</a> ·
   <a href="https://playb0t.com">Impact ledger</a>
 </p>
@@ -77,6 +78,20 @@ F-08 is confirmed in source only, F-11 in source plus the executed endpoint list
 
 [Follow-up report, data and checksums](docs/research-2026-10-15/README.md)
 <!-- /research-2026-10-15 -->
+
+<!-- research-2026-10-25 -->
+## Research update: 25 October 2026
+
+Researcher: Alex Gercog (playb0t). [MCP Host Matrix](https://github.com/playb0t/mcp-host-matrix), a separate repository, compares what MCP hosts document with what they do on a bench. It covers five native hosts (VS Code, Claude Code, Cursor, Zed, Cascade) and the `mcp-remote` bridge across six directions. Pinned versions, controls and limits sit beside every result.
+
+- **Disconnecting.** Selected disconnect actions did not revoke in 12 of 12 base windows. No revocation request reached the provider, and the prior refresh token still worked in a separate replay with the client's own credentials. Claude Code logout and Clear authentication did revoke.
+- **Updating.** Prior authority survived a build replacement in 8 of 8 cells. In the bridge rows, 0.1.38 to 0.15.2, the launch selection changed before access expiry. The new version asked for a new authorization. The old grant stayed alive at the provider.
+- **The bridge, 0.15.2.** Three more directions were measured on the bridge. Credentials stayed usable after `claude mcp remove` deleted the configuration entry (R02). An authorization URL reached an executable boundary (R04). An HTTP 307 carried the refresh body to a second origin (R05).
+
+The matrix assigns no severity and extends no CVE record. The records on the package stay here.
+
+[R01 to R06 evidence](https://github.com/playb0t/mcp-host-matrix/blob/main/matrix/MATRIX.en.md) · [Disconnection page](https://github.com/playb0t/mcp-host-matrix/blob/main/disconnect/MATRIX.en.md) · [Connectivity page](https://github.com/playb0t/mcp-host-matrix/blob/main/hosts/MATRIX.en.md)
+<!-- /research-2026-10-25 -->
 
 ## Registries and pickup
 
