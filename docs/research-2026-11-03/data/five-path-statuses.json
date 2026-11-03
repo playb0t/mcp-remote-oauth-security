@@ -1,0 +1,90 @@
+{
+  "recorded_at": "2026-11-03T13:39:22.633783+00:00",
+  "range_policy": "No official affected-range expansion or fixed/unfixed CVE verdict",
+  "versions": [
+    {
+      "version": "0.15.2",
+      "statuses": [
+        {
+          "finding": "F-01",
+          "cve": "CVE-2026-51994",
+          "status": "request path present",
+          "class": "Full official CLI and exact extracted helper; local direct/redirect controls",
+          "limits": "Two loopback origins; third distinct origin and response exfiltration not measured."
+        },
+        {
+          "finding": "F-02",
+          "cve": "CVE-2026-51995",
+          "status": "request path present",
+          "class": "Full CLI authorization-server metadata fetch selected by PRM; local token POST observed",
+          "limits": "Synthetic client credentials only; real OAuth login or credential acceptance not measured."
+        },
+        {
+          "finding": "F-04",
+          "cve": "CVE-2026-51996",
+          "status": "code path present",
+          "class": "Exact executed hash helper and serialization/normalization checks",
+          "limits": "Chosen tuple serialization ambiguity, not MD5 cryptanalysis, fixed-victim takeover or session reuse."
+        },
+        {
+          "finding": "F-08",
+          "cve": "CVE-2026-51997",
+          "status": "code path present",
+          "class": "Full official CLI to installed sanitizer/open and controlled OS child recorder",
+          "runtime_observation": "Route from metadata URL to opener process reproduced; code execution not shown.",
+          "limits": "No browser, actual link-local request, browser-mediated impact or arbitrary code execution."
+        },
+        {
+          "finding": "F-11",
+          "cve": "CVE-2026-52001",
+          "status": "code path present",
+          "class": "Published exported connection function, actual bundled SSE/EventSource, synthetic provider",
+          "runtime_observation": "Bearer transfer to a different origin not reproduced on tested dependency graph; foreign endpoint rejected.",
+          "limits": "Not full CLI OAuth sign-in; other redirect conditions, providers and dependency graphs not measured."
+        }
+      ]
+    },
+    {
+      "version": "0.16.0",
+      "statuses": [
+        {
+          "finding": "F-01",
+          "cve": "CVE-2026-51994",
+          "status": "request path present",
+          "class": "Full official CLI and exact extracted helper; local direct/redirect controls",
+          "limits": "Two loopback origins; third distinct origin and response exfiltration not measured."
+        },
+        {
+          "finding": "F-02",
+          "cve": "CVE-2026-51995",
+          "status": "request path present",
+          "class": "Full CLI authorization-server metadata fetch selected by PRM; local token POST observed",
+          "limits": "Synthetic client credentials only; real OAuth login or credential acceptance not measured."
+        },
+        {
+          "finding": "F-04",
+          "cve": "CVE-2026-51996",
+          "status": "code path present",
+          "class": "Exact executed hash helper and serialization/normalization checks",
+          "limits": "Chosen tuple serialization ambiguity, not MD5 cryptanalysis, fixed-victim takeover or session reuse."
+        },
+        {
+          "finding": "F-08",
+          "cve": "CVE-2026-51997",
+          "status": "code path present",
+          "class": "Full official CLI to installed sanitizer/open and controlled OS child recorder",
+          "runtime_observation": "Route from metadata URL to opener process reproduced; code execution not shown.",
+          "limits": "No browser, actual link-local request, browser-mediated impact or arbitrary code execution."
+        },
+        {
+          "finding": "F-11",
+          "cve": "CVE-2026-52001",
+          "status": "code path present",
+          "class": "Published exported connection function, actual bundled SSE/EventSource, synthetic provider",
+          "runtime_observation": "Bearer transfer to a different origin not reproduced on tested dependency graph; foreign endpoint rejected.",
+          "limits": "Not full CLI OAuth sign-in; other redirect conditions, providers and dependency graphs not measured."
+        }
+      ]
+    }
+  ]
+}

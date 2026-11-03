@@ -1,0 +1,146 @@
+{
+  "functions": [
+    {
+      "name": "parseWWWAuthenticateHeader",
+      "baseline": {
+        "line": 31912,
+        "end_line": 31944,
+        "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+      },
+      "latest": {
+        "line": 31912,
+        "end_line": 31944,
+        "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+      },
+      "identical": true
+    },
+    {
+      "name": "buildProtectedResourceMetadataUrls",
+      "baseline": {
+        "line": 31945,
+        "end_line": 31955,
+        "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+      },
+      "latest": {
+        "line": 31945,
+        "end_line": 31955,
+        "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+      },
+      "identical": true
+    },
+    {
+      "name": "fetchProtectedResourceMetadataFromUrl",
+      "baseline": {
+        "line": 31956,
+        "end_line": 31991,
+        "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+      },
+      "latest": {
+        "line": 31956,
+        "end_line": 31991,
+        "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+      },
+      "identical": true
+    },
+    {
+      "name": "discoverProtectedResourceMetadata",
+      "baseline": {
+        "line": 31992,
+        "end_line": 32019,
+        "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+      },
+      "latest": {
+        "line": 31992,
+        "end_line": 32019,
+        "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+      },
+      "identical": true
+    },
+    {
+      "name": "getAuthorizationServerUrl",
+      "baseline": {
+        "line": 32020,
+        "end_line": 32025,
+        "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+      },
+      "latest": {
+        "line": 32020,
+        "end_line": 32025,
+        "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+      },
+      "identical": true
+    },
+    {
+      "name": "getMetadataUrls",
+      "baseline": {
+        "line": 32028,
+        "end_line": 32046,
+        "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+      },
+      "latest": {
+        "line": 32028,
+        "end_line": 32046,
+        "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+      },
+      "identical": true
+    },
+    {
+      "name": "fetchAuthorizationServerMetadata",
+      "baseline": {
+        "line": 32047,
+        "end_line": 32058,
+        "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+      },
+      "latest": {
+        "line": 32047,
+        "end_line": 32058,
+        "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+      },
+      "identical": true
+    },
+    {
+      "name": "fetchMetadataFrom",
+      "baseline": {
+        "line": 32059,
+        "end_line": 32094,
+        "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+      },
+      "latest": {
+        "line": 32059,
+        "end_line": 32094,
+        "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+      },
+      "identical": true
+    },
+    {
+      "name": "discoverOAuthServerInfo2",
+      "baseline": {
+        "line": 33102,
+        "end_line": 33177,
+        "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+      },
+      "latest": {
+        "line": 33102,
+        "end_line": 33177,
+        "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+      },
+      "identical": true
+    },
+    {
+      "name": "getServerUrlHash",
+      "baseline": {
+        "line": 33955,
+        "end_line": 33969,
+        "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+      },
+      "latest": {
+        "line": 34005,
+        "end_line": 34019,
+        "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+      },
+      "identical": true
+    }
+  ],
+  "original_harness_logic": "PINS table only changed; old0.1.38 replaced with0.15.1;0.14.3 retained; six checks run twice per version",
+  "passed": 24
+}

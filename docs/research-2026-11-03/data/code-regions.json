@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "function_regions": [
+    {
+      "name": "parseWWWAuthenticateHeader",
+      "published_15oct": {
+        "line": 31912,
+        "end_line": 31944,
+        "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 31912,
+          "end_line": 31944,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 31912,
+          "end_line": 31944,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 31912,
+          "end_line": 31944,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "buildProtectedResourceMetadataUrls",
+      "published_15oct": {
+        "line": 31945,
+        "end_line": 31955,
+        "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 31945,
+          "end_line": 31955,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 31945,
+          "end_line": 31955,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 31945,
+          "end_line": 31955,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "fetchProtectedResourceMetadataFromUrl",
+      "published_15oct": {
+        "line": 31956,
+        "end_line": 31991,
+        "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 31956,
+          "end_line": 31991,
+          "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 31956,
+          "end_line": 31991,
+          "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 31956,
+          "end_line": 31991,
+          "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "discoverProtectedResourceMetadata",
+      "published_15oct": {
+        "line": 31992,
+        "end_line": 32019,
+        "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 31992,
+          "end_line": 32019,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 31992,
+          "end_line": 32019,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 31992,
+          "end_line": 32019,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "getAuthorizationServerUrl",
+      "published_15oct": {
+        "line": 32020,
+        "end_line": 32025,
+        "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 32020,
+          "end_line": 32025,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 32020,
+          "end_line": 32025,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 32020,
+          "end_line": 32025,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "getMetadataUrls",
+      "published_15oct": {
+        "line": 32028,
+        "end_line": 32046,
+        "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 32028,
+          "end_line": 32046,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 32028,
+          "end_line": 32046,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 32028,
+          "end_line": 32046,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "fetchAuthorizationServerMetadata",
+      "published_15oct": {
+        "line": 32047,
+        "end_line": 32058,
+        "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 32047,
+          "end_line": 32058,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 32047,
+          "end_line": 32058,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 32047,
+          "end_line": 32058,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "fetchMetadataFrom",
+      "published_15oct": {
+        "line": 32059,
+        "end_line": 32094,
+        "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 32059,
+          "end_line": 32094,
+          "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 32059,
+          "end_line": 32094,
+          "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 32059,
+          "end_line": 32094,
+          "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "discoverOAuthServerInfo2",
+      "published_15oct": {
+        "line": 33102,
+        "end_line": 33177,
+        "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 33102,
+          "end_line": 33177,
+          "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 33102,
+          "end_line": 33177,
+          "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 33102,
+          "end_line": 33177,
+          "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed"
+        }
+      },
+      "identical": true
+    },
+    {
+      "name": "getServerUrlHash",
+      "published_15oct": {
+        "line": 34005,
+        "end_line": 34019,
+        "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+      },
+      "versions": {
+        "0.15.1": {
+          "file": "chunk-KJCT2FXL.js",
+          "line": 34005,
+          "end_line": 34019,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+        },
+        "0.15.2": {
+          "file": "chunk-UZ6Y4QJH.js",
+          "line": 34005,
+          "end_line": 34019,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+        },
+        "0.16.0": {
+          "file": "chunk-K6DREQAS.js",
+          "line": 34016,
+          "end_line": 34030,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27"
+        }
+      },
+      "identical": true
+    }
+  ],
+  "additional_regions": {
+    "0.15.1": {
+      "SSE-wrapper": {
+        "file": "chunk-KJCT2FXL.js",
+        "line": 33216,
+        "end_line": 33241,
+        "sha256": "5e8ac1997e5c174daf1a6b35d27ff527354d5c87a59a6e428d3a24d5d25184bc",
+        "source": "  const eventSourceInit = {\n    fetch: (requestUrl, init) => {\n      return Promise.resolve(authProvider?.tokens?.()).then((tokens) => {\n        const cookie = cookieHeaderFor(requestUrl);\n        return fetch2(requestUrl, {\n          ...init,\n          headers: mergeHeaders(\n            init?.headers,\n            // The stream is usually where a balancer plants its cookie, and always where it\n            // has to be sent back, or the POSTs land on a node that never saw this session.\n            cookie ? { Cookie: cookie } : void 0,\n            headers,\n            tokens?.access_token ? { Authorization: `Bearer ${tokens.access_token}` } : void 0,\n            { Accept: \"text/event-stream\" }\n          )\n        });\n      }).then((response) => {\n        captureCookies(requestUrl, response);\n        if (response.ok && ++sseStreamOpened > 1) {\n          log(\"Remote SSE stream reconnected\");\n          transport.onStreamReconnect?.();\n        }\n        return response;\n      });\n    }\n  };"
+      },
+      "SSE-endpoint": {
+        "file": "chunk-KJCT2FXL.js",
+        "line": 30872,
+        "end_line": 30884,
+        "sha256": "caaad83a3bcb6a6f86be1baa29edd23c037b1d2ed92f96bde478e32911c43fee",
+        "source": "      this._eventSource.addEventListener(\"endpoint\", (event) => {\n        const messageEvent = event;\n        try {\n          this._endpoint = new URL(messageEvent.data, this._url);\n          if (this._endpoint.origin !== this._url.origin) throw new Error(`Endpoint origin does not match connection origin: ${this._endpoint.origin}`);\n        } catch (error51) {\n          reject(error51);\n          this.onerror?.(error51);\n          this.close();\n          return;\n        }\n        resolve();\n      });"
+      },
+      "browser-call": {
+        "file": "chunk-KJCT2FXL.js",
+        "line": 35177,
+        "end_line": 35177,
+        "sha256": "420e6ea9ad59de8f235a610a1bbed4d8489fb2bb81003ce04c896f2e0e8ebc59",
+        "source": "    if (await openBrowser(sanitizeUrl(authorizationUrl.toString()))) {"
+      }
+    },
+    "0.15.2": {
+      "SSE-wrapper": {
+        "file": "chunk-UZ6Y4QJH.js",
+        "line": 33216,
+        "end_line": 33241,
+        "sha256": "5e8ac1997e5c174daf1a6b35d27ff527354d5c87a59a6e428d3a24d5d25184bc",
+        "source": "  const eventSourceInit = {\n    fetch: (requestUrl, init) => {\n      return Promise.resolve(authProvider?.tokens?.()).then((tokens) => {\n        const cookie = cookieHeaderFor(requestUrl);\n        return fetch2(requestUrl, {\n          ...init,\n          headers: mergeHeaders(\n            init?.headers,\n            // The stream is usually where a balancer plants its cookie, and always where it\n            // has to be sent back, or the POSTs land on a node that never saw this session.\n            cookie ? { Cookie: cookie } : void 0,\n            headers,\n            tokens?.access_token ? { Authorization: `Bearer ${tokens.access_token}` } : void 0,\n            { Accept: \"text/event-stream\" }\n          )\n        });\n      }).then((response) => {\n        captureCookies(requestUrl, response);\n        if (response.ok && ++sseStreamOpened > 1) {\n          log(\"Remote SSE stream reconnected\");\n          transport.onStreamReconnect?.();\n        }\n        return response;\n      });\n    }\n  };"
+      },
+      "SSE-endpoint": {
+        "file": "chunk-UZ6Y4QJH.js",
+        "line": 30872,
+        "end_line": 30884,
+        "sha256": "caaad83a3bcb6a6f86be1baa29edd23c037b1d2ed92f96bde478e32911c43fee",
+        "source": "      this._eventSource.addEventListener(\"endpoint\", (event) => {\n        const messageEvent = event;\n        try {\n          this._endpoint = new URL(messageEvent.data, this._url);\n          if (this._endpoint.origin !== this._url.origin) throw new Error(`Endpoint origin does not match connection origin: ${this._endpoint.origin}`);\n        } catch (error51) {\n          reject(error51);\n          this.onerror?.(error51);\n          this.close();\n          return;\n        }\n        resolve();\n      });"
+      },
+      "browser-call": {
+        "file": "chunk-UZ6Y4QJH.js",
+        "line": 35177,
+        "end_line": 35177,
+        "sha256": "420e6ea9ad59de8f235a610a1bbed4d8489fb2bb81003ce04c896f2e0e8ebc59",
+        "source": "    if (await openBrowser(sanitizeUrl(authorizationUrl.toString()))) {"
+      }
+    },
+    "0.16.0": {
+      "SSE-wrapper": {
+        "file": "chunk-K6DREQAS.js",
+        "line": 33216,
+        "end_line": 33241,
+        "sha256": "5e8ac1997e5c174daf1a6b35d27ff527354d5c87a59a6e428d3a24d5d25184bc",
+        "source": "  const eventSourceInit = {\n    fetch: (requestUrl, init) => {\n      return Promise.resolve(authProvider?.tokens?.()).then((tokens) => {\n        const cookie = cookieHeaderFor(requestUrl);\n        return fetch2(requestUrl, {\n          ...init,\n          headers: mergeHeaders(\n            init?.headers,\n            // The stream is usually where a balancer plants its cookie, and always where it\n            // has to be sent back, or the POSTs land on a node that never saw this session.\n            cookie ? { Cookie: cookie } : void 0,\n            headers,\n            tokens?.access_token ? { Authorization: `Bearer ${tokens.access_token}` } : void 0,\n            { Accept: \"text/event-stream\" }\n          )\n        });\n      }).then((response) => {\n        captureCookies(requestUrl, response);\n        if (response.ok && ++sseStreamOpened > 1) {\n          log(\"Remote SSE stream reconnected\");\n          transport.onStreamReconnect?.();\n        }\n        return response;\n      });\n    }\n  };"
+      },
+      "SSE-endpoint": {
+        "file": "chunk-K6DREQAS.js",
+        "line": 30872,
+        "end_line": 30884,
+        "sha256": "caaad83a3bcb6a6f86be1baa29edd23c037b1d2ed92f96bde478e32911c43fee",
+        "source": "      this._eventSource.addEventListener(\"endpoint\", (event) => {\n        const messageEvent = event;\n        try {\n          this._endpoint = new URL(messageEvent.data, this._url);\n          if (this._endpoint.origin !== this._url.origin) throw new Error(`Endpoint origin does not match connection origin: ${this._endpoint.origin}`);\n        } catch (error51) {\n          reject(error51);\n          this.onerror?.(error51);\n          this.close();\n          return;\n        }\n        resolve();\n      });"
+      },
+      "browser-call": {
+        "file": "chunk-K6DREQAS.js",
+        "line": 35188,
+        "end_line": 35188,
+        "sha256": "420e6ea9ad59de8f235a610a1bbed4d8489fb2bb81003ce04c896f2e0e8ebc59",
+        "source": "    if (await openBrowser(sanitizeUrl(authorizationUrl.toString()))) {"
+      }
+    }
+  },
+  "hash_note": "Function hashes use TypeScript FunctionDeclaration.getText; additional range hashes use SHA256(trim(range text)); do not conflate these schemes."
+}

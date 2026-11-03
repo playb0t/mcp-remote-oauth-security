@@ -1,0 +1,114 @@
+[
+  {
+    "version": "0.15.2",
+    "role": "MAIN",
+    "identical": false,
+    "baseline_sha256": "bd626c01947857ba2cb5f347659f8d6db7d99827732a187660bd2582741e4bf0",
+    "sha256": "0e90204dfcf5f7892e119cf3d2ef451531a56355e1785f9b575dd8d8d58a883d"
+  },
+  {
+    "version": "0.15.2",
+    "role": "client.js",
+    "identical": false,
+    "baseline_sha256": "6c805d1402139e9db0e76b572ed932adf01ef894165b016002b33a6f18eeb183",
+    "sha256": "f594f2d55b0e705fd3b13f24e8a58a573dce61d18baf25e45d1eebe842dac48c"
+  },
+  {
+    "version": "0.15.2",
+    "role": "proxy.js",
+    "identical": false,
+    "baseline_sha256": "4548f6f908477c5609ced817a2301b77fcda94cd154a4b9ca764cfd49fbf691c",
+    "sha256": "975e794543db003faa54dd2c7b58ecfbdf2df9c6078e2d5aa077fce3f373dd59"
+  },
+  {
+    "version": "0.15.2",
+    "role": "chunk-MLKGABMK.js",
+    "identical": true,
+    "baseline_sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03",
+    "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+  },
+  {
+    "version": "0.15.2",
+    "role": "webapi-WW3GGD26.js",
+    "identical": true,
+    "baseline_sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6",
+    "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+  },
+  {
+    "version": "0.15.2",
+    "role": "client.d.ts",
+    "identical": true,
+    "baseline_sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+    "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+  },
+  {
+    "version": "0.15.2",
+    "role": "proxy.d.ts",
+    "identical": true,
+    "baseline_sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+    "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+  },
+  {
+    "version": "0.15.2",
+    "role": "package.json",
+    "identical": false,
+    "baseline_sha256": "0cfe09a27a6ba612bf9404c81ccccb31ea96ddcab7467ab428274d08b0756211",
+    "sha256": "18346a61cbf130f304985abb3e7e461560a29a04d3f7ae6436a2cc3965b30a5b"
+  },
+  {
+    "version": "0.16.0",
+    "role": "MAIN",
+    "identical": false,
+    "baseline_sha256": "bd626c01947857ba2cb5f347659f8d6db7d99827732a187660bd2582741e4bf0",
+    "sha256": "8b429f3fbbbba7471249d70f8ff8637c1b0c1f3766a4ae0412ffeaf26c82ccac"
+  },
+  {
+    "version": "0.16.0",
+    "role": "client.js",
+    "identical": false,
+    "baseline_sha256": "6c805d1402139e9db0e76b572ed932adf01ef894165b016002b33a6f18eeb183",
+    "sha256": "f202d1341a8e8ac21be2a00d8df481797b768d2ad6c427fa2a9124c3a3c17571"
+  },
+  {
+    "version": "0.16.0",
+    "role": "proxy.js",
+    "identical": false,
+    "baseline_sha256": "4548f6f908477c5609ced817a2301b77fcda94cd154a4b9ca764cfd49fbf691c",
+    "sha256": "9f4e2f293f41df6869aa91af0095f06cd36ac8480f828b77473dea220f044943"
+  },
+  {
+    "version": "0.16.0",
+    "role": "chunk-MLKGABMK.js",
+    "identical": true,
+    "baseline_sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03",
+    "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+  },
+  {
+    "version": "0.16.0",
+    "role": "webapi-WW3GGD26.js",
+    "identical": true,
+    "baseline_sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6",
+    "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+  },
+  {
+    "version": "0.16.0",
+    "role": "client.d.ts",
+    "identical": true,
+    "baseline_sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+    "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+  },
+  {
+    "version": "0.16.0",
+    "role": "proxy.d.ts",
+    "identical": true,
+    "baseline_sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+    "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+  },
+  {
+    "version": "0.16.0",
+    "role": "package.json",
+    "identical": false,
+    "baseline_sha256": "0cfe09a27a6ba612bf9404c81ccccb31ea96ddcab7467ab428274d08b0756211",
+    "sha256": "7dec5bbf69f7ecab39b11e13ab3c32ac19ffc0f1956a3fa04a594831fc1b0d5d"
+  }
+]

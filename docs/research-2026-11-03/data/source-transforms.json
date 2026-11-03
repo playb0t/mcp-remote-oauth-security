@@ -1,0 +1,25 @@
+{
+  "scope": "Recorded publication-only normalization; source evidence remains immutable.",
+  "source_manifests": {
+    "bench": "a5d68b091e7cf4ee621eb3d4d0ff750f5bf9427c5c0005b9d56b844f40cb54ba",
+    "runtime_followup": "c78780e12c04aeb97bbb9701e24207f5aad3d2c6f9301a9e1f87cc3be812e25a",
+    "static_comparison": "ef56c571f5732b5bfab4feb14f0626032336fce42865ba41132a9aa356bab111"
+  },
+  "path_normalization_count": 16,
+  "raw_traces": [
+    {
+      "public_file": "data/raw/raw_trace-0.15.2.log",
+      "input_sha256": "f06a0e161fb4a2ce2656539daa5c051dc3fd6dd25deb8fdb03c86f9b1975d565",
+      "output_sha256": "afaeb49d96c1802e40c4e9c44aa53d9898179c583642020feb4828a992a3402e",
+      "transformation": "Normalize machine-specific filesystem paths only; preserve loopback origins, synthetic OAuth parameters, booleans and counts. No Authorization value was logged by the fixture."
+    },
+    {
+      "public_file": "data/raw/raw_trace-0.16.0.log",
+      "input_sha256": "515db2b162b698e7f7f57491844bba39c248f4b3709449cb6ec11ed394022411",
+      "output_sha256": "c85b9f0e413905267acab6cbed95418bb8af130a78e24c14a2f28a60e47f1b90",
+      "transformation": "Normalize machine-specific filesystem paths only; preserve loopback origins, synthetic OAuth parameters, booleans and counts. No Authorization value was logged by the fixture."
+    }
+  ],
+  "secret_redactions": 0,
+  "secret_note": "No Authorization header values were captured; OAuth parameters and marker credentials in these fixtures are synthetic. Machine-specific filesystem paths are normalized."
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scope": "Static continuity from0.15.1, not a new npm SDK-archive identification run",
+  "baseline_reference": "docs/research-2026-10-15/data/sdk-analysis.json",
+  "baseline_identification": "Published15Octidentified bundledclient/core2.0.0; see original evidence there",
+  "observation": "Full dist diff changes version/pendingFlow and callback bind-host wiring; measured SDK regions and guards unchanged.",
+  "evidence": [
+    "all-dist-comparison.json",
+    "all-dist.diff",
+    "helper-continuity.json",
+    "code-regions.json"
+  ],
+  "runtime_dependency_graph": {
+    "express": "4.22.3",
+    "open": "10.2.0",
+    "strict-url-sanitise": "0.0.1",
+    "undici": "7.30.0"
+  },
+  "limits": "No SDK advisory applicability or new fixed/unfixed CVE determination."
+}

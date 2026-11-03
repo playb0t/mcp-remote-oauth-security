@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "validation": "Packaging and syntax/parse checks only; public path-adapted copies were not independently rerun against target packages",
+  "source_labels": "Logical accepted-package locators; no machine-specific local paths",
+  "files": [
+    {
+      "file": "verify_stdio.mjs",
+      "source": "bench216/runs/0.15.2-cli/verify_stdio.mjs",
+      "source_sha256": "57b8ede92249a04886de181db4d63ceb91b10cc9c7d16de50afa773eadb80a6a",
+      "published_sha256": "4de5e0f41f56a857e593da30d0a44e8983d883b7761682c57997c13216a4a863",
+      "adaptation": "Runtime/source/output directories and version label become explicit environment bindings; portable text uses LF; logic outside declared bindings unchanged"
+    },
+    {
+      "file": "inspect.cjs",
+      "source": "source216/inspect.cjs",
+      "source_sha256": "4e85d3779e267fde29cadc5d4bb074a7741484a2e86152d02c8f199a7699a074",
+      "published_sha256": "2b8d2fe19eff4fa4d789cbad70c6a19e70a5ca52364a5a162367963921c0ce08",
+      "adaptation": "Explicit trusted parser/source/baseline inputs replace machine-specific bindings; parser version checked; portable text uses LF; logic outside declared bindings unchanged"
+    },
+    {
+      "file": "f08-cli.mjs",
+      "source": "f08-f11-runtime216/procedures/f08-cli.mjs",
+      "source_sha256": "f8f38140862621c08d76590013760e5530f904c896e52d3830cdfcac772c01ae",
+      "published_sha256": "af44d21b444c2f219f068f1fd78c6435f606d235a397b500100c8e8e9b08a6f8",
+      "adaptation": "Explicit case/runtime/optional Node and fake-recorder roots; preload beside script; Windows recorder prerequisite prevents real opener fallback; portable text uses LF; logic outside declared bindings unchanged"
+    },
+    {
+      "file": "f08-method.mjs",
+      "source": "f08-f11-runtime216/procedures/f08-method.mjs",
+      "source_sha256": "00658b796f51cad84e98f6e0746e1b2808a6b40b61abc60919ebb4c40a2a72cb",
+      "published_sha256": "c975fa6e4ba260f3c231fa0c06a6190790dc2e432fce8345a404589e46763b33",
+      "adaptation": "Explicit case/runtime/optional Node and fake-recorder roots; preload beside script; Windows recorder prerequisite prevents real opener fallback; portable text uses LF; logic outside declared bindings unchanged"
+    },
+    {
+      "file": "f11.mjs",
+      "source": "f08-f11-runtime216/procedures/f11.mjs",
+      "source_sha256": "1ff9fef8cb32193b8e2bce0ea11046529fc1c0f1965d4d3982df7be3ba047378",
+      "published_sha256": "e1b7009c16193441501630ebdff14cdf977cf36f32b2ab51d656b930dc24be62",
+      "adaptation": "Explicit case/runtime/optional Node and fake-recorder roots; preload beside script; Windows recorder prerequisite prevents real opener fallback; portable text uses LF; logic outside declared bindings unchanged"
+    },
+    {
+      "file": "f08-preload.cjs",
+      "source": "f08-f11-runtime216/procedures/f08-preload.cjs",
+      "source_sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648",
+      "published_sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "opener-recorder.rs",
+      "source": "f08-f11-runtime216/procedures/opener-recorder.rs",
+      "source_sha256": "9dd39519d2e904a0628b0712506c63e02391500c57db5091967cb3f9ed0083e4",
+      "published_sha256": "9dd39519d2e904a0628b0712506c63e02391500c57db5091967cb3f9ed0083e4",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "runtime/package.json",
+      "source": "runtime216/runtime/package.json",
+      "source_sha256": "d502568105c5c1247404750df5ed9600ef00252d05e90ee5ea8ae257dfe75ec0",
+      "published_sha256": "d502568105c5c1247404750df5ed9600ef00252d05e90ee5ea8ae257dfe75ec0",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "runtime/package-lock.json",
+      "source": "runtime216/runtime/package-lock.json",
+      "source_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677",
+      "published_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "release_checks.original.cjs",
+      "source": "recovered-20261009/audit/release_checks.original.cjs",
+      "source_sha256": "8822838d9f323534e20fae80ed3657bc44c2b4533b0d1a647c85e5d3ffec7b1f",
+      "published_sha256": "8822838d9f323534e20fae80ed3657bc44c2b4533b0d1a647c85e5d3ffec7b1f",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "release_checks.applied.cjs",
+      "source": "recovered-20261009/audit/release_checks.cjs",
+      "source_sha256": "2f95fc42e899b8058844ef62432c02d8eef54cb6eb50ae11058fa9c26211044c",
+      "published_sha256": "2f95fc42e899b8058844ef62432c02d8eef54cb6eb50ae11058fa9c26211044c",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "normalize_ast.cjs",
+      "source": "recovered-20261009/scanner/normalize_ast.cjs",
+      "source_sha256": "9be72ab286d3766931dce03595c04b915b7e100e75ecf24cc0613b75c91ad248",
+      "published_sha256": "9be72ab286d3766931dce03595c04b915b7e100e75ecf24cc0613b75c91ad248",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "fixtures/strict-url-sanitise-0.0.1.js",
+      "source": "recovered-20261009/audit/fixtures/strict-url-sanitise-0.0.1.js",
+      "source_sha256": "6a45b869cd15501e796b91b516fb79ff9d77c87db13c33c0efb00c7fbe4951c3",
+      "published_sha256": "6a45b869cd15501e796b91b516fb79ff9d77c87db13c33c0efb00c7fbe4951c3",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "baseline-helper-continuity-2026-10-15.json",
+      "source": "published15Oct/data/helper-continuity.json",
+      "source_sha256": "f017662faf0345916ad93a8b4b64828736a25ca8c9b772b0fede42b333e10651",
+      "published_sha256": "f017662faf0345916ad93a8b4b64828736a25ca8c9b772b0fede42b333e10651",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "verify_stdio.original.mjs",
+      "source": "published9Oct/procedures/cve-signature-sweep-20261009/verify_stdio.mjs",
+      "source_sha256": "d82211661f331ac7a1c1b46d0b57a486256c73323e0c4e699da53d613327f3bc",
+      "published_sha256": "d82211661f331ac7a1c1b46d0b57a486256c73323e0c4e699da53d613327f3bc",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "recorded/verify_stdio-0.15.2.mjs",
+      "source": "bench216/runs/0.15.2-cli/verify_stdio.mjs",
+      "source_sha256": "57b8ede92249a04886de181db4d63ceb91b10cc9c7d16de50afa773eadb80a6a",
+      "published_sha256": "57b8ede92249a04886de181db4d63ceb91b10cc9c7d16de50afa773eadb80a6a",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "recorded/verify_stdio-0.16.0.mjs",
+      "source": "bench216/runs/0.16.0-cli/verify_stdio.mjs",
+      "source_sha256": "97a82a03622df3066181f3727f596e01824807caff38e17b552086a185f50055",
+      "published_sha256": "97a82a03622df3066181f3727f596e01824807caff38e17b552086a185f50055",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "file": "release_checks.cjs",
+      "source": "recovered-20261009/audit/release_checks.cjs",
+      "source_sha256": "2f95fc42e899b8058844ef62432c02d8eef54cb6eb50ae11058fa9c26211044c",
+      "published_sha256": "8bb9f738917b24226a6dc51348f46bbde52c2c632f7fc60cec2e1a3d33b9692d",
+      "adaptation": "Relative normalizer require only; four-version PINS and assertions unchanged"
+    }
+  ],
+  "generated_packaging_files": [
+    {
+      "file": "README.md",
+      "role": "Instructions, binding layout, commands and limits",
+      "sha256": "3f55e16596fea3def865ec1e7fd19148543c92d0f07e219357ce0ee774fe7312"
+    },
+    {
+      "file": "prepare_runtime.cjs",
+      "role": "Filesystem-only byte-copy preparation; syntax-checked, not run",
+      "sha256": "6477b49155e4ad38f32abd7a05b21299da1f248370ddbb6aa5d2ea0a31edf39f"
+    },
+    {
+      "file": "tooling/package.json",
+      "role": "Exact trusted TypeScript 5.9.3 preparation manifest",
+      "sha256": "aeb25e976ab8632159b07fbcbe4c1c7e51acedba036eb9bfc0a7664b5b1154c1"
+    }
+  ],
+  "diff_policy": "Recorded path/version diffs remain exact text diffs. release_checks.pins-2026-11-03.diff and portable diffs compare normalized-LF text projections; exact originals are retained. inspect.cjs original machine bindings are represented by source SHA and explicit input descriptions, not republished as private paths.",
+  "pin_diff_projection": {
+    "file": "release_checks.pins-2026-11-03.diff",
+    "projection": "Both inputs decoded as UTF-8 and CRLF normalized to LF for unified diff only; distributed originals are untouched",
+    "single_PINS_hunk": true,
+    "outside_PINS_equal_after_newline_normalization": true,
+    "source_original_sha256": "8822838d9f323534e20fae80ed3657bc44c2b4533b0d1a647c85e5d3ffec7b1f",
+    "source_applied_sha256": "2f95fc42e899b8058844ef62432c02d8eef54cb6eb50ae11058fa9c26211044c",
+    "diff_sha256": "a9d601d347fc265c0bd4a2a1cbc6a197cc022c2afb982bf1695d799a2a5b12eb"
+  }
+}

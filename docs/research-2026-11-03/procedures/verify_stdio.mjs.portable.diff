@@ -1,0 +1,31 @@
+--- recorded/verify_stdio.mjs
++++ portable/verify_stdio.mjs
+@@ -6,10 +6,15 @@
+ import {join,dirname,resolve,sep} from 'node:path';
+ import {fileURLToPath} from 'node:url';
+ import assert from 'node:assert/strict';
+-const root=dirname(fileURLToPath(import.meta.url));
+-const baseline=resolve(root,'../..');
+-const cli=join(baseline,'runtime-install/dist/proxy.js');
+-for(const name of readdirSync(join(baseline,'runtime-install/dist'))) assert.deepEqual(readFileSync(join(baseline,'runtime-install/dist',name)),readFileSync(join(baseline,'evidence/latest/package/dist',name)));
++const required=(name)=>{const value=process.env[name];assert.ok(value,`Missing ${name}`);return resolve(value);};
++const root=required('MCP_STDIO_RUN_ROOT');
++const runtimeDist=required('MCP_STDIO_RUNTIME_DIST');
++const expectedDist=required('MCP_STDIO_EXPECTED_DIST');
++const version=process.env.MCP_VERSION;
++assert.ok(['0.15.2','0.16.0'].includes(version),'Set MCP_VERSION to 0.15.2 or 0.16.0');
++mkdirSync(join(root,'logs'),{recursive:true});
++const cli=join(runtimeDist,'proxy.js');
++for(const name of readdirSync(runtimeDist)) assert.deepEqual(readFileSync(join(runtimeDist,name)),readFileSync(join(expectedDist,name)));
+ const events=[];const captures=[];const cases=[];
+ let mode,remoteOrigin,sinkOrigin;
+ const listen=s=>new Promise((resolve,reject)=>{s.once('error',reject);s.listen(0,'127.0.0.1',()=>resolve(`http://127.0.0.1:${s.address().port}`));});
+@@ -86,7 +91,7 @@
+ try{
+  sinkOrigin=await listen(canary);remoteOrigin=await listen(remote);
+  for(const name of ['header-selected-canary','header-redirect','same-origin-control'])await runCase(name);
+- const output={version:'0.15.2',fixture:{mcp_origin:remoteOrigin,canary_origin:sinkOrigin},node:process.version,cli_sha256:createHash('sha256').update(readFileSync(cli)).digest('hex'),cases,scope:'Actual unmodified npm proxy CLI, stdio initialize + tools/list + tools/call, loopback-only fixture. Mock GET issues an auth challenge; mock POST permits synthetic MCP requests. No real OAuth authorization, credentials, cloud endpoint, remote public server or desktop-host UI was tested.'};
++ const output={version,fixture:{mcp_origin:remoteOrigin,canary_origin:sinkOrigin},node:process.version,cli_sha256:createHash('sha256').update(readFileSync(cli)).digest('hex'),cases,scope:'Actual unmodified npm proxy CLI, stdio initialize + tools/list + tools/call, loopback-only fixture. Mock GET issues an auth challenge; mock POST permits synthetic MCP requests. No real OAuth authorization, credentials, cloud endpoint, remote public server or desktop-host UI was tested.'};
+  const tracePath=join(root,'logs/raw_trace.log');
+  appendFileSync(tracePath, `\n=== stdio execution ${new Date().toISOString()} ===\n` + JSON.stringify({version:output.version,node:output.node,cli_sha256:output.cli_sha256,cases,events,captures},null,2) + '\n', 'utf8');
+  const summary={version:output.version,node:output.node,cli_sha256:output.cli_sha256,raw_trace:'logs/raw_trace.log',cases:cases.map(c=>({name:c.name,passed:c.passed,exitCode:c.exit?.code,stdioReplies:c.stdio_replies.length,requestCount:c.trace.length,canaryRequests:c.trace.filter(e=>e.role==='canary').length,schemaErrors:(c.stderr.match(/ZodError/g)||[]).length,authorizationHeadersSent:c.trace.filter(e=>e.authorization_present).length}))};

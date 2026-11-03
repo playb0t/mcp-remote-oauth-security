@@ -1,0 +1,25 @@
+{
+  "scope": "Preparation failures attributed to the accepted source report, separate from execution-record totals. Not every setup error has a complete standalone payload; no process count or runtime total is invented for it.",
+  "events": [
+    {
+      "kind": "missing logs directory",
+      "result": "ENOENT before trace persistence",
+      "excluded_from_version_results": true
+    },
+    {
+      "kind": "wrong target staged under version label",
+      "result": "CLI hash revealed0.16.0 under0.15.2label; invalidated",
+      "excluded_from_version_results": true
+    },
+    {
+      "kind": "wrong baseline script directory",
+      "result": "ENOENT while reading runtime dist; invalidated",
+      "excluded_from_version_results": true
+    },
+    {
+      "kind": "import-only rearrangement in earlier capture",
+      "result": "No assertion logic changed; final public source separately publishes the original and configuration diffs.",
+      "excluded_from_final_three_attempt_series": true
+    }
+  ]
+}

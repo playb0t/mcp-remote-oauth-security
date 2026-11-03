@@ -1,0 +1,131 @@
+{
+  "syntax_checks": [
+    {
+      "file": "f08-cli.mjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "f08-method.mjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "f08-preload.cjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "f11.mjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "fixtures/strict-url-sanitise-0.0.1.js",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "inspect.cjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "normalize_ast.cjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "prepare_runtime.cjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "recorded/verify_stdio-0.15.2.mjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "recorded/verify_stdio-0.16.0.mjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "release_checks.applied.cjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "release_checks.cjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "release_checks.original.cjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "verify_stdio.mjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "verify_stdio.original.mjs",
+      "command": "node --check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "JSON_parse": [
+    "baseline-helper-continuity-2026-10-15.json",
+    "PROVENANCE.json",
+    "runtime/package-lock.json",
+    "runtime/package.json",
+    "tooling/package.json"
+  ],
+  "private_path_email_scan": [],
+  "release_diff_only_PINS": true,
+  "portable_release_only_require_path": true,
+  "source_provenance_SHA_checked": true,
+  "target_runtime_rerun": false,
+  "dependencies_installed": false,
+  "recorder_compiled": false,
+  "public_binary_files": [],
+  "pin_diff_projection": {
+    "LF_normalized": true,
+    "hunks": 1,
+    "only_PINS": true,
+    "original_applied_bytes_preserved": true,
+    "bytes": 1102
+  }
+}

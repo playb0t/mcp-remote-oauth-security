@@ -1,0 +1,406 @@
+--- 0.15.1/chunk-KJCT2FXL.js
+
++++ 0.15.2/chunk-UZ6Y4QJH.js
+
+@@ -31556,7 +31556,7 @@
+
+ };
+ 
+ // package.json
+-var version2 = "0.15.1";
++var version2 = "0.15.2";
+ 
+ // src/lib/protocol-era.ts
+ var FIRST_MODERN_PROTOCOL_VERSION2 = "2026-07-28";
+@@ -35433,6 +35433,7 @@
+
+         await deleteConfigFile(this.serverUrlHash, "client_info.json");
+         this._clientInfo = void 0;
+         this.clientRegistrationSource = void 0;
++        this.pendingFlow = null;
+         debugLog("Client information invalidated");
+         break;
+       case "tokens":
+--- 0.15.1/client.js
+
++++ 0.15.2/client.js
+
+@@ -14,7 +14,7 @@
+
+   serverIssuesAuthChallenge,
+   setupSignalHandlers,
+   version
+-} from "./chunk-KJCT2FXL.js";
++} from "./chunk-UZ6Y4QJH.js";
+ import "./chunk-MLKGABMK.js";
+ 
+ // src/client.ts
+--- 0.15.1/proxy.js
+
++++ 0.15.2/proxy.js
+
+@@ -221,7 +221,7 @@
+
+   union,
+   unknown,
+   url
+-} from "./chunk-KJCT2FXL.js";
++} from "./chunk-UZ6Y4QJH.js";
+ import "./chunk-MLKGABMK.js";
+ 
+ // src/proxy.ts
+
+
+
+
+--- 0.15.1/package.json
+
++++ 0.15.2/package.json
+
+@@ -1,6 +1,6 @@
+
+ {
+   "name": "mcp-remote",
+-  "version": "0.15.1",
++  "version": "0.15.2",
+   "description": "Remote proxy for Model Context Protocol, allowing local-only clients to connect to remote servers using oAuth",
+   "keywords": [
+     "mcp",
+--- 0.15.1/chunk-KJCT2FXL.js
+
++++ 0.16.0/chunk-K6DREQAS.js
+
+@@ -31556,7 +31556,7 @@
+
+ };
+ 
+ // package.json
+-var version2 = "0.15.1";
++var version2 = "0.16.0";
+ 
+ // src/lib/protocol-era.ts
+ var FIRST_MODERN_PROTOCOL_VERSION2 = "2026-07-28";
+@@ -33525,7 +33525,7 @@
+
+     options.events.emit("auth-code-received", code, state);
+   });
+   const { server, actualPort } = await new Promise((resolve, reject) => {
+-    const httpServer = app.listen(options.port, "127.0.0.1");
++    const httpServer = app.listen(options.port, options.bindHost ?? DEFAULT_BIND_HOST);
+     httpServer.once("error", (err) => {
+       if (err.code === "EADDRINUSE") {
+         reject(
+@@ -33537,7 +33537,7 @@
+
+     });
+     httpServer.once("listening", () => {
+       const addr = httpServer.address();
+-      log(`OAuth callback server running at http://127.0.0.1:${addr.port}`);
++      log(`OAuth callback server running at http://${formatHostForUrl(addr.address)}:${addr.port}`);
+       resolve({ server: httpServer, actualPort: addr.port });
+     });
+   });
+@@ -33568,6 +33568,10 @@
+
+ var DEFAULT_CALLBACK_PATH = "/oauth/callback";
+ var MCP_REMOTE_ID_PATH = "/.mcp-remote/id";
+ var LONG_POLL_PATH = "/wait-for-auth";
++var DEFAULT_BIND_HOST = "127.0.0.1";
++function formatHostForUrl(address) {
++  return address.includes(":") && !address.startsWith("[") ? `[${address}]` : address;
++}
+ function buildRedirectUrl(host, port, callbackPath = DEFAULT_CALLBACK_PATH) {
+   return `http://${host}:${port}${callbackPath}`;
+ }
+@@ -33763,6 +33767,12 @@
+
+   if (hostIndex !== -1 && hostIndex < args.length - 1) {
+     host = args[hostIndex + 1];
+     log(`Using callback hostname: ${host}`);
++  }
++  let bindHost = DEFAULT_BIND_HOST;
++  const bindHostIndex = args.indexOf("--bind-host");
++  if (bindHostIndex !== -1 && bindHostIndex < args.length - 1) {
++    bindHost = args[bindHostIndex + 1].replace(/^\[(.*)\]$/, "$1");
++    log(`Binding the OAuth callback server to: ${bindHost}`);
+   }
+   let callbackPath = DEFAULT_CALLBACK_PATH;
+   const callbackPathIndex = args.indexOf("--callback-path");
+@@ -33986,7 +33996,8 @@
+
+     serverUrlHash,
+     keepAlive,
+     protocolMode,
+-    authSuccessUrl
++    authSuccessUrl,
++    bindHost
+   };
+ }
+ function setupSignalHandlers(cleanup) {
+@@ -35433,6 +35444,7 @@
+
+         await deleteConfigFile(this.serverUrlHash, "client_info.json");
+         this._clientInfo = void 0;
+         this.clientRegistrationSource = void 0;
++        this.pendingFlow = null;
+         debugLog("Client information invalidated");
+         break;
+       case "tokens":
+@@ -35461,7 +35473,7 @@
+
+ import express2 from "express";
+ var FOLLOWER_PATIENCE_MS = 3 * 6e4;
+ var REFRESH_FOLLOWER_PATIENCE_MS = 1e4;
+-function createLazyAuthCoordinator(serverUrlHash, callbackPath, callbackPort, events, authTimeoutMs, strictPort = false, authSuccessUrl) {
++function createLazyAuthCoordinator(serverUrlHash, callbackPath, callbackPort, events, authTimeoutMs, strictPort = false, authSuccessUrl, bindHost = DEFAULT_BIND_HOST) {
+   let authState = null;
+   const closeHeld = async () => {
+     const held = authState;
+@@ -35492,7 +35504,8 @@
+
+         authTimeoutMs,
+         strictPort,
+         refreshed ? REFRESH_FOLLOWER_PATIENCE_MS : void 0,
+-        authSuccessUrl
++        authSuccessUrl,
++        bindHost
+       );
+       try {
+         const resolved = await authState;
+@@ -35508,9 +35521,12 @@
+
+ var PORT_CANDIDATES = 8;
+ var FOLLOWER_POLL_INTERVAL_MS = 250;
+ var loopbackDispatcher = new Agent2();
+-async function portHeldBySiblingFor(port, serverUrlHash) {
++function probeHostFor(bindHost) {
++  return bindHost === "0.0.0.0" || bindHost === "::" ? "127.0.0.1" : formatHostForUrl(bindHost);
++}
++async function portHeldBySiblingFor(port, serverUrlHash, bindHost) {
+   try {
+-    const response = await fetch(`http://127.0.0.1:${port}${MCP_REMOTE_ID_PATH}`, {
++    const response = await fetch(`http://${probeHostFor(bindHost)}:${port}${MCP_REMOTE_ID_PATH}`, {
+       signal: AbortSignal.timeout(1e3),
+       dispatcher: loopbackDispatcher
+     });
+@@ -35548,7 +35564,7 @@
+
+   return true;
+ }
+ var TOKEN_EXPIRY_MARGIN_MS2 = 6e4;
+-async function coordinateAuth(serverUrlHash, callbackPath, callbackPort, events, authTimeoutMs, strictPort = false, followerPatienceMs = FOLLOWER_PATIENCE_MS, authSuccessUrl) {
++async function coordinateAuth(serverUrlHash, callbackPath, callbackPort, events, authTimeoutMs, strictPort = false, followerPatienceMs = FOLLOWER_PATIENCE_MS, authSuccessUrl, bindHost = DEFAULT_BIND_HOST) {
+   debugLog("Coordinating authentication", { serverUrlHash, callbackPath, callbackPort });
+   const candidates = strictPort ? [callbackPort] : Array.from({ length: PORT_CANDIDATES }, (_, i) => callbackPort + i);
+   for (const port of candidates) {
+@@ -35559,13 +35575,23 @@
+
+         events,
+         authTimeoutMs,
+         serverUrlHash,
+-        authSuccessUrl
++        authSuccessUrl,
++        bindHost
+       });
+-      const established = await firstSiblingBefore(candidates, port, serverUrlHash);
++      const established = await firstSiblingBefore(candidates, port, serverUrlHash, bindHost);
+       if (established !== void 0) {
+         debugLog("Yielding to a sibling established on an earlier candidate", { ours: actualPort, theirs: established });
+         await new Promise((resolve) => server.close(() => resolve()));
+-        return followUntilTokensOrPort(serverUrlHash, callbackPath, established, events, authTimeoutMs, followerPatienceMs, authSuccessUrl);
++        return followUntilTokensOrPort(
++          serverUrlHash,
++          callbackPath,
++          established,
++          events,
++          authTimeoutMs,
++          followerPatienceMs,
++          authSuccessUrl,
++          bindHost
++        );
+       }
+       log(`This instance is running the sign-in for this server (callback port ${actualPort})`);
+       return { server, actualPort, waitForAuthCode, skipBrowserAuth: false };
+@@ -35577,9 +35603,18 @@
+
+         if (strictPort) throw error51;
+         continue;
+       }
+-      if (await portHeldBySiblingFor(port, serverUrlHash)) {
++      if (await portHeldBySiblingFor(port, serverUrlHash, bindHost)) {
+         log(`Another instance is running the sign-in for this server on port ${port}`);
+-        return followUntilTokensOrPort(serverUrlHash, callbackPath, port, events, authTimeoutMs, followerPatienceMs, authSuccessUrl);
++        return followUntilTokensOrPort(
++          serverUrlHash,
++          callbackPath,
++          port,
++          events,
++          authTimeoutMs,
++          followerPatienceMs,
++          authSuccessUrl,
++          bindHost
++        );
+       }
+       debugLog(`Port ${port} is held by an unrelated process`, { serverUrlHash });
+       if (strictPort) throw error51;
+@@ -35589,14 +35624,14 @@
+
+     `Could not find a free callback port for this server (tried ${candidates[0]}-${candidates[candidates.length - 1]}). Close whatever is holding those ports, or pass a port as the second argument to choose one.`
+   );
+ }
+-async function firstSiblingBefore(candidates, port, serverUrlHash) {
++async function firstSiblingBefore(candidates, port, serverUrlHash, bindHost) {
+   for (const candidate of candidates) {
+     if (candidate === port) return void 0;
+-    if (await portHeldBySiblingFor(candidate, serverUrlHash)) return candidate;
++    if (await portHeldBySiblingFor(candidate, serverUrlHash, bindHost)) return candidate;
+   }
+   return void 0;
+ }
+-async function followUntilTokensOrPort(serverUrlHash, callbackPath, port, events, authTimeoutMs, followerPatienceMs, authSuccessUrl) {
++async function followUntilTokensOrPort(serverUrlHash, callbackPath, port, events, authTimeoutMs, followerPatienceMs, authSuccessUrl, bindHost = DEFAULT_BIND_HOST) {
+   const deadline = Date.now() + Math.max(authTimeoutMs, followerPatienceMs);
+   while (Date.now() < deadline) {
+     if (await hasUsableTokens(serverUrlHash)) {
+@@ -35610,7 +35645,8 @@
+
+         events,
+         authTimeoutMs,
+         serverUrlHash,
+-        authSuccessUrl
++        authSuccessUrl,
++        bindHost
+       });
+       log(`The instance running the sign-in exited; taking it over on port ${actualPort}`);
+       return { server, actualPort, waitForAuthCode, skipBrowserAuth: false };
+--- 0.15.1/client.js
+
++++ 0.16.0/client.js
+
+@@ -14,7 +14,7 @@
+
+   serverIssuesAuthChallenge,
+   setupSignalHandlers,
+   version
+-} from "./chunk-KJCT2FXL.js";
++} from "./chunk-K6DREQAS.js";
+ import "./chunk-MLKGABMK.js";
+ 
+ // src/client.ts
+@@ -37,7 +37,7 @@
+
+ }
+ 
+ // src/client.ts
+-async function runClient(serverUrl, callbackPath, callbackPort, specifiedPort, headers, transportStrategy = "http-first", host, staticOAuthClientMetadata, staticOAuthClientInfo, clientMetadataUrl, useIdToken, useDeviceCode, useClientCredentials, tokenEndpoint, authorizeResource, skipResourceParameter, authorizeParams, authTimeoutMs, serverUrlHash, authSuccessUrl) {
++async function runClient(serverUrl, callbackPath, callbackPort, specifiedPort, headers, transportStrategy = "http-first", host, staticOAuthClientMetadata, staticOAuthClientInfo, clientMetadataUrl, useIdToken, useDeviceCode, useClientCredentials, tokenEndpoint, authorizeResource, skipResourceParameter, authorizeParams, authTimeoutMs, serverUrlHash, authSuccessUrl, bindHost) {
+   const events = new EventEmitter();
+   const strictPort = !!specifiedPort || !!staticOAuthClientInfo || !!clientMetadataUrl;
+   const authCoordinator = createLazyAuthCoordinator(
+@@ -47,7 +47,8 @@
+
+     events,
+     authTimeoutMs,
+     strictPort,
+-    authSuccessUrl
++    authSuccessUrl,
++    bindHost
+   );
+   log("Discovering OAuth server configuration...");
+   const discoveryResult = await discoverOAuthServerInfo(serverUrl, headers, tokenEndpoint);
+@@ -169,7 +170,8 @@
+
+     authorizeParams,
+     authTimeoutMs,
+     serverUrlHash,
+-    authSuccessUrl
++    authSuccessUrl,
++    bindHost
+   }) => {
+     return runClient(
+       serverUrl,
+@@ -191,7 +193,8 @@
+
+       authorizeParams,
+       authTimeoutMs,
+       serverUrlHash,
+-      authSuccessUrl
++      authSuccessUrl,
++      bindHost
+     );
+   }
+ ).catch((error) => {
+--- 0.15.1/proxy.js
+
++++ 0.16.0/proxy.js
+
+@@ -221,7 +221,7 @@
+
+   union,
+   unknown,
+   url
+-} from "./chunk-KJCT2FXL.js";
++} from "./chunk-K6DREQAS.js";
+ import "./chunk-MLKGABMK.js";
+ 
+ // src/proxy.ts
+@@ -12546,7 +12546,7 @@
+
+ 
+ // src/proxy.ts
+ var canFinishAuth = (transport) => typeof transport.finishAuth === "function";
+-async function runProxy(serverUrl, callbackPath, callbackPort, specifiedPort, headers, transportStrategy = "http-first", host, staticOAuthClientMetadata, staticOAuthClientInfo, clientMetadataUrl, useIdToken, useDeviceCode, useClientCredentials, tokenEndpoint, authorizeResource, skipResourceParameter, authorizeParams, ignoredTools, authTimeoutMs, serverUrlHash, keepAlive, protocolMode, authSuccessUrl) {
++async function runProxy(serverUrl, callbackPath, callbackPort, specifiedPort, headers, transportStrategy = "http-first", host, staticOAuthClientMetadata, staticOAuthClientInfo, clientMetadataUrl, useIdToken, useDeviceCode, useClientCredentials, tokenEndpoint, authorizeResource, skipResourceParameter, authorizeParams, ignoredTools, authTimeoutMs, serverUrlHash, keepAlive, protocolMode, authSuccessUrl, bindHost) {
+   const events = new EventEmitter();
+   const strictPort = !!specifiedPort || !!staticOAuthClientInfo || !!clientMetadataUrl;
+   const authCoordinator = createLazyAuthCoordinator(
+@@ -12556,7 +12556,8 @@
+
+     events,
+     authTimeoutMs,
+     strictPort,
+-    authSuccessUrl
++    authSuccessUrl,
++    bindHost
+   );
+   log("Discovering OAuth server configuration...");
+   const discoveryResult = await discoverOAuthServerInfo(serverUrl, headers, tokenEndpoint);
+@@ -12740,7 +12741,8 @@
+
+     serverUrlHash,
+     keepAlive,
+     protocolMode,
+-    authSuccessUrl
++    authSuccessUrl,
++    bindHost
+   }) => {
+     return runProxy(
+       serverUrl,
+@@ -12765,7 +12767,8 @@
+
+       serverUrlHash,
+       keepAlive,
+       protocolMode,
+-      authSuccessUrl
++      authSuccessUrl,
++      bindHost
+     );
+   }
+ ).catch((error) => {
+
+
+
+
+--- 0.15.1/package.json
+
++++ 0.16.0/package.json
+
+@@ -1,6 +1,6 @@
+
+ {
+   "name": "mcp-remote",
+-  "version": "0.15.1",
++  "version": "0.16.0",
+   "description": "Remote proxy for Model Context Protocol, allowing local-only clients to connect to remote servers using oAuth",
+   "keywords": [
+     "mcp",

@@ -14,14 +14,14 @@
 <p align="center">
   <a href="#advisory-index"><img alt="CVE records" src="https://img.shields.io/badge/CVE_records-5-b91c1c"></a>
   <a href="#advisory-index"><img alt="CISA-ADP score" src="https://img.shields.io/badge/CISA--ADP-up_to_9.8_Critical-f59e0b"></a>
-  <a href="docs/research-2026-10-15/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.15.1_(15_Oct_2026)-8b5cf6"></a>
+  <a href="docs/research-2026-11-03/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.16.0_(3_Nov_2026)-8b5cf6"></a>
   <a href="CORRECTIONS.md"><img alt="Latest release" src="https://img.shields.io/badge/release-v1.0.2-58a6ff"></a>
   <a href="https://playb0t.com"><img alt="Impact record" src="https://img.shields.io/badge/impact_record-playb0t.com-0f766e"></a>
 </p>
 
 <p align="center">
   <a href="docs/research-2026-10-09/RESEARCH_DOSSIER.md">Research dossier, 9 October 2026</a> ·
-  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> ·
+  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> · <a href="docs/research-2026-11-03/README.md">0.15.2 / 0.16.0 follow-up, 3 November 2026</a> ·
   <a href="https://github.com/playb0t/mcp-host-matrix">MCP Host Matrix, 25 October 2026</a> ·
   <a href="#advisory-index">Advisory index</a> ·
   <a href="https://playb0t.com">Impact ledger</a>

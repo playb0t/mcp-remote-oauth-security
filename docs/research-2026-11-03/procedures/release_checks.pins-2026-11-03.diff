@@ -1,0 +1,27 @@
+--- release_checks.original.cjs (LF-normalized projection)
++++ release_checks.applied.cjs (LF-normalized projection)
+@@ -8,8 +8,22 @@
+ const assert = require('node:assert/strict');
+ const {parser} = require('../scanner/normalize_ast.cjs');
+ const PINS = {
+-  '0.1.38': {file: 'chunk-65X3S4HB.js', sha: 'd3eb914e687408424476bd8a41eff8d1d47e01772b14158f500f5ecd902fa875'},
+-  '0.14.3': {file: 'chunk-CGVEK4Z7.js', sha: 'c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451'},
++  "0.14.3": {
++    "file": "chunk-CGVEK4Z7.js",
++    "sha": "c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451"
++  },
++  "0.15.1": {
++    "file": "chunk-KJCT2FXL.js",
++    "sha": "bd626c01947857ba2cb5f347659f8d6db7d99827732a187660bd2582741e4bf0"
++  },
++  "0.15.2": {
++    "file": "chunk-UZ6Y4QJH.js",
++    "sha": "0e90204dfcf5f7892e119cf3d2ef451531a56355e1785f9b575dd8d8d58a883d"
++  },
++  "0.16.0": {
++    "file": "chunk-K6DREQAS.js",
++    "sha": "8b429f3fbbbba7471249d70f8ff8637c1b0c1f3766a4ae0412ffeaf26c82ccac"
++  }
+ };
+ const sha = raw => crypto.createHash('sha256').update(raw).digest('hex');
+ 

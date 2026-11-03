@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-11-03T13:39:22.633783+00:00",
+  "node": "v24.20.0",
+  "npm": "11.19.0",
+  "os": {
+    "family": "Windows",
+    "architecture": "x64"
+  },
+  "python_packaging": "3.12.10",
+  "runtime_lock_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677",
+  "install": "npm install --ignore-scripts --omit=dev --no-audit --no-fund; exact dependencies shared between versions",
+  "dependencies": {
+    "express": "4.22.3",
+    "open": "10.2.0",
+    "strict-url-sanitise": "0.0.1",
+    "undici": "7.30.0"
+  },
+  "typescript": "5.9.3",
+  "bind_host": "default; --bind-host not exercised",
+  "recorder": {
+    "source": "procedures/opener-recorder.rs",
+    "original_binary_sha256": "1cf4dd9cbe6f3162633601962034e736f2aa939bd55f20b939cc04566cea86e5",
+    "binary_distributed": false
+  },
+  "F08": "Actual package open; local SYSTEMROOT redirection to recorder only after Node starts",
+  "F11": "Actual bundled transport; public synthetic provider interface; no CLI sign-in"
+}

@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "scope": "Official npm metadata and archive receipts saved during static acquisition; SRI recomputed during publication assembly.",
+  "versions": [
+    {
+      "version": "0.15.1",
+      "metadata_url": "https://registry.npmjs.org/mcp-remote/0.15.1",
+      "tarball_url": "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.15.1.tgz",
+      "observed_at_utc": "2026-11-03T11:13:41.439728+00:00",
+      "integrity": "sha512-znJhxnoQZTDx9AieHZrRYs8YqWKpyH1SKyFEFnMTMDUPpx6r9dSc/L4lKf18DdWMQqKpbwWbfIZfyiVg2RSXzg==",
+      "SRI_matches": true,
+      "tarball_sha256": "45aa7ae3c2ad1b51383c1ddce67f6fd26efbbe6637669e8f4597abe37bb87c05",
+      "files": [
+        {
+          "path": "package/dist/chunk-KJCT2FXL.js",
+          "bytes": 1420822,
+          "sha256": "bd626c01947857ba2cb5f347659f8d6db7d99827732a187660bd2582741e4bf0"
+        },
+        {
+          "path": "package/dist/chunk-MLKGABMK.js",
+          "bytes": 191,
+          "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+        },
+        {
+          "path": "package/dist/client.js",
+          "bytes": 5945,
+          "sha256": "6c805d1402139e9db0e76b572ed932adf01ef894165b016002b33a6f18eeb183"
+        },
+        {
+          "path": "package/dist/proxy.js",
+          "bytes": 516333,
+          "sha256": "4548f6f908477c5609ced817a2301b77fcda94cd154a4b9ca764cfd49fbf691c"
+        },
+        {
+          "path": "package/dist/webapi-WW3GGD26.js",
+          "bytes": 125387,
+          "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+        },
+        {
+          "path": "package/package.json",
+          "bytes": 2161,
+          "sha256": "0cfe09a27a6ba612bf9404c81ccccb31ea96ddcab7467ab428274d08b0756211"
+        },
+        {
+          "path": "package/dist/client.d.ts",
+          "bytes": 20,
+          "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+        },
+        {
+          "path": "package/dist/proxy.d.ts",
+          "bytes": 20,
+          "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+        }
+      ],
+      "target_execution": false
+    },
+    {
+      "version": "0.15.2",
+      "metadata_url": "https://registry.npmjs.org/mcp-remote/0.15.2",
+      "tarball_url": "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.15.2.tgz",
+      "observed_at_utc": "2026-11-03T11:13:42.049261+00:00",
+      "integrity": "sha512-3PrXMgjJew6xbZH21D7AbtOoHwhvjWt1IY6wepHjKTZLPSkTPifdMVBFuoxsuF6WK6nUlZIgpSj5o5NscJ+XXw==",
+      "SRI_matches": true,
+      "tarball_sha256": "364a418993680ee0385baafe807f4f74ce72a4d6165dfe96c2d39dd08a8d74ff",
+      "files": [
+        {
+          "path": "package/dist/chunk-MLKGABMK.js",
+          "bytes": 191,
+          "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+        },
+        {
+          "path": "package/dist/chunk-UZ6Y4QJH.js",
+          "bytes": 1420855,
+          "sha256": "0e90204dfcf5f7892e119cf3d2ef451531a56355e1785f9b575dd8d8d58a883d"
+        },
+        {
+          "path": "package/dist/client.js",
+          "bytes": 5945,
+          "sha256": "f594f2d55b0e705fd3b13f24e8a58a573dce61d18baf25e45d1eebe842dac48c"
+        },
+        {
+          "path": "package/dist/proxy.js",
+          "bytes": 516333,
+          "sha256": "975e794543db003faa54dd2c7b58ecfbdf2df9c6078e2d5aa077fce3f373dd59"
+        },
+        {
+          "path": "package/dist/webapi-WW3GGD26.js",
+          "bytes": 125387,
+          "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+        },
+        {
+          "path": "package/package.json",
+          "bytes": 2161,
+          "sha256": "18346a61cbf130f304985abb3e7e461560a29a04d3f7ae6436a2cc3965b30a5b"
+        },
+        {
+          "path": "package/dist/client.d.ts",
+          "bytes": 20,
+          "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+        },
+        {
+          "path": "package/dist/proxy.d.ts",
+          "bytes": 20,
+          "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+        }
+      ],
+      "target_execution": false
+    },
+    {
+      "version": "0.16.0",
+      "metadata_url": "https://registry.npmjs.org/mcp-remote/0.16.0",
+      "tarball_url": "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.16.0.tgz",
+      "observed_at_utc": "2026-11-03T11:13:42.677241+00:00",
+      "integrity": "sha512-LvEbfF8fEjDKPoD+9ELThgaBPAThiq/pEBUfUXmlAZ1oxRiduP+dJ3NQvsaiFbWSoNqfKFoan49i3x9HYvD27g==",
+      "SRI_matches": true,
+      "tarball_sha256": "72564c80fcfe6e15c459900ec796a7dc9ed7887f2c915076e3bd050e62ed27ea",
+      "files": [
+        {
+          "path": "package/dist/chunk-K6DREQAS.js",
+          "bytes": 1421913,
+          "sha256": "8b429f3fbbbba7471249d70f8ff8637c1b0c1f3766a4ae0412ffeaf26c82ccac"
+        },
+        {
+          "path": "package/dist/chunk-MLKGABMK.js",
+          "bytes": 191,
+          "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+        },
+        {
+          "path": "package/dist/client.js",
+          "bytes": 5999,
+          "sha256": "f202d1341a8e8ac21be2a00d8df481797b768d2ad6c427fa2a9124c3a3c17571"
+        },
+        {
+          "path": "package/dist/proxy.js",
+          "bytes": 516387,
+          "sha256": "9f4e2f293f41df6869aa91af0095f06cd36ac8480f828b77473dea220f044943"
+        },
+        {
+          "path": "package/dist/webapi-WW3GGD26.js",
+          "bytes": 125387,
+          "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+        },
+        {
+          "path": "package/package.json",
+          "bytes": 2161,
+          "sha256": "7dec5bbf69f7ecab39b11e13ab3c32ac19ffc0f1956a3fa04a594831fc1b0d5d"
+        },
+        {
+          "path": "package/dist/client.d.ts",
+          "bytes": 20,
+          "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+        },
+        {
+          "path": "package/dist/proxy.d.ts",
+          "bytes": 20,
+          "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+        }
+      ],
+      "target_execution": false
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "node": "v24.20.0",
+  "scope": "Full unmodified published CLI, local MCP/PRM/AS metadata, synthetic client and fake PowerShell recorder via test-only preload environment; no browser or internal network request.",
+  "results": [
+    {
+      "version": "0.15.2",
+      "mode": "loopback",
+      "cli": "<bench-root>\\mcp-remote-runtime-216-20261103\\runtime\\f08-f11\\0.15.2\\dist\\proxy.js",
+      "resourceOrigin": "http://127.0.0.1:56213",
+      "asOrigin": "http://127.0.0.1:56214",
+      "requests": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "resource",
+          "method": "POST",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        }
+      ],
+      "recorded": true,
+      "decoded": "Start \"http://127.0.0.1:56214/authorize?response_type=code&client_id=synthetic-browser-client&code_challenge=rugojmlNoeVszegVh2Mo7wp6e2lGSgL-1pnnIKgNPx0&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A11151%2Foauth%2Fcallback&state=d1d463dc-aa6f-443d-bc9c-155416fb7c3e&scope=openid%20email%20profile&resource=http%3A%2F%2F127.0.0.1%3A56213%2Fmcp\"",
+      "stop": {
+        "code": null,
+        "signal": "SIGTERM"
+      },
+      "stderr_tail": "[25816] Using transport strategy: http-only\n[25816] Using static OAuth client information from string\n[25816] Using callback port derived from the server URL: 11151\n[25816] Discovering OAuth server configuration...\n[25816] Discovered authorization server: http://127.0.0.1:56214\n[25816] Initializing auth coordination on-demand\n[25816] OAuth callback server running at http://127.0.0.1:11151\n[25816] This instance is running the sign-in for this server (callback port 11151)\n[25816] [25816] Connecting to remote server: http://127.0.0.1:56213/mcp\n[25816] Using transport strategy: http-only\n[25816] \nPlease authorize this client by visiting:\nhttp://127.0.0.1:56214/authorize?response_type=code&client_id=synthetic-browser-client&code_challenge=rugojmlNoeVszegVh2Mo7wp6e2lGSgL-1pnnIKgNPx0&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A11151%2Foauth%2Fcallback&state=d1d463dc-aa6f-443d-bc9c-155416fb7c3e&scope=openid+email+profile&resource=http%3A%2F%2F127.0.0.1%3A56213%2Fmcp\n\n",
+      "stdout_tail": ""
+    },
+    {
+      "version": "0.15.2",
+      "mode": "link-local",
+      "cli": "<bench-root>\\mcp-remote-runtime-216-20261103\\runtime\\f08-f11\\0.15.2\\dist\\proxy.js",
+      "resourceOrigin": "http://127.0.0.1:56219",
+      "asOrigin": "http://127.0.0.1:56220",
+      "requests": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "resource",
+          "method": "POST",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        }
+      ],
+      "recorded": true,
+      "decoded": "Start \"http://169.254.169.254/latest/meta-data?response_type=code&client_id=synthetic-browser-client&code_challenge=khkt_yQbFUNxWXAW3O5YRyqP49-gKvFi9BCZjLLV0f0&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A38838%2Foauth%2Fcallback&state=e6e16de5-6e19-4693-bf04-a4b6f41640a3&scope=openid%20email%20profile&resource=http%3A%2F%2F127.0.0.1%3A56219%2Fmcp\"",
+      "stop": {
+        "code": null,
+        "signal": "SIGTERM"
+      },
+      "stderr_tail": "[27820] Using transport strategy: http-only\n[27820] Using static OAuth client information from string\n[27820] Using callback port derived from the server URL: 38838\n[27820] Discovering OAuth server configuration...\n[27820] Discovered authorization server: http://127.0.0.1:56220\n[27820] Initializing auth coordination on-demand\n[27820] OAuth callback server running at http://127.0.0.1:38838\n[27820] This instance is running the sign-in for this server (callback port 38838)\n[27820] [27820] Connecting to remote server: http://127.0.0.1:56219/mcp\n[27820] Using transport strategy: http-only\n[27820] \nPlease authorize this client by visiting:\nhttp://169.254.169.254/latest/meta-data?response_type=code&client_id=synthetic-browser-client&code_challenge=khkt_yQbFUNxWXAW3O5YRyqP49-gKvFi9BCZjLLV0f0&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A38838%2Foauth%2Fcallback&state=e6e16de5-6e19-4693-bf04-a4b6f41640a3&scope=openid+email+profile&resource=http%3A%2F%2F127.0.0.1%3A56219%2Fmcp\n\n[27820] Browser opened automatically.\n[27820] Authentication required. Initializing auth...\n[27820] Authentication required. Waiting for authorization...\n",
+      "stdout_tail": ""
+    },
+    {
+      "version": "0.15.2",
+      "mode": "script",
+      "cli": "<bench-root>\\mcp-remote-runtime-216-20261103\\runtime\\f08-f11\\0.15.2\\dist\\proxy.js",
+      "resourceOrigin": "http://127.0.0.1:56224",
+      "asOrigin": "http://127.0.0.1:56225",
+      "requests": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "resource",
+          "method": "POST",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        }
+      ],
+      "recorded": false,
+      "decoded": null,
+      "stop": {
+        "code": 1,
+        "signal": null
+      },
+      "stderr_tail": "\": \"custom\",\n    \"path\": [\n      \"authorization_endpoint\"\n    ],\n    \"message\": \"URL cannot use javascript:, data:, or vbscript: scheme\"\n  }\n]\n    at discoverAuthorizationServerMetadata (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:28271:59)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async discoverOAuthServerInfo (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:28289:39)\n    at async authInternal (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:27989:24)\n    at async auth (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:27940:12)\n    at async handleOAuthUnauthorized (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:27758:7)\n    at async StreamableHTTPClientTransport._send (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:31421:15)\n[29264] Fatal error: ZodError: [\n  {\n    \"code\": \"custom\",\n    \"path\": [\n      \"authorization_endpoint\"\n    ],\n    \"message\": \"URL cannot use javascript:, data:, or vbscript: scheme\"\n  }\n]\n    at discoverAuthorizationServerMetadata (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:28271:59)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async discoverOAuthServerInfo (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:28289:39)\n    at async authInternal (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:27989:24)\n    at async auth (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:27940:12)\n    at async handleOAuthUnauthorized (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:27758:7)\n    at async StreamableHTTPClientTransport._send (<runtime-install-root>/runtime/f08-f11/0.15.2/dist/chunk-UZ6Y4QJH.js:31421:15)\n",
+      "stdout_tail": ""
+    },
+    {
+      "version": "0.16.0",
+      "mode": "loopback",
+      "cli": "<bench-root>\\mcp-remote-runtime-216-20261103\\runtime\\f08-f11\\0.16.0\\dist\\proxy.js",
+      "resourceOrigin": "http://127.0.0.1:56229",
+      "asOrigin": "http://127.0.0.1:56230",
+      "requests": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "resource",
+          "method": "POST",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        }
+      ],
+      "recorded": true,
+      "decoded": "Start \"http://127.0.0.1:56230/authorize?response_type=code&client_id=synthetic-browser-client&code_challenge=4sKQnnGa9Aqyhc78k2h6y4LB8ujOLcsHzbXmAt3isNU&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A21060%2Foauth%2Fcallback&state=55af153f-336b-483b-977c-0f741fe2cdbf&scope=openid%20email%20profile&resource=http%3A%2F%2F127.0.0.1%3A56229%2Fmcp\"",
+      "stop": {
+        "code": null,
+        "signal": "SIGTERM"
+      },
+      "stderr_tail": "[19780] Using transport strategy: http-only\n[19780] Using static OAuth client information from string\n[19780] Using callback port derived from the server URL: 21060\n[19780] Discovering OAuth server configuration...\n[19780] Discovered authorization server: http://127.0.0.1:56230\n[19780] Initializing auth coordination on-demand\n[19780] OAuth callback server running at http://127.0.0.1:21060\n[19780] This instance is running the sign-in for this server (callback port 21060)\n[19780] [19780] Connecting to remote server: http://127.0.0.1:56229/mcp\n[19780] Using transport strategy: http-only\n[19780] \nPlease authorize this client by visiting:\nhttp://127.0.0.1:56230/authorize?response_type=code&client_id=synthetic-browser-client&code_challenge=4sKQnnGa9Aqyhc78k2h6y4LB8ujOLcsHzbXmAt3isNU&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A21060%2Foauth%2Fcallback&state=55af153f-336b-483b-977c-0f741fe2cdbf&scope=openid+email+profile&resource=http%3A%2F%2F127.0.0.1%3A56229%2Fmcp\n\n[19780] Browser opened automatically.\n",
+      "stdout_tail": ""
+    },
+    {
+      "version": "0.16.0",
+      "mode": "link-local",
+      "cli": "<bench-root>\\mcp-remote-runtime-216-20261103\\runtime\\f08-f11\\0.16.0\\dist\\proxy.js",
+      "resourceOrigin": "http://127.0.0.1:56234",
+      "asOrigin": "http://127.0.0.1:56235",
+      "requests": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "resource",
+          "method": "POST",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        }
+      ],
+      "recorded": true,
+      "decoded": "Start \"http://169.254.169.254/latest/meta-data?response_type=code&client_id=synthetic-browser-client&code_challenge=hr7CxcHKXHdPd-dRJVSY-XmpR3GSZrLm9a9TBASVPdw&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A14813%2Foauth%2Fcallback&state=e79720dd-2b8e-4c30-a579-f4fa4d882fc3&scope=openid%20email%20profile&resource=http%3A%2F%2F127.0.0.1%3A56234%2Fmcp\"",
+      "stop": {
+        "code": null,
+        "signal": "SIGTERM"
+      },
+      "stderr_tail": "[4336] Using transport strategy: http-only\n[4336] Using static OAuth client information from string\n[4336] Using callback port derived from the server URL: 14813\n[4336] Discovering OAuth server configuration...\n[4336] Discovered authorization server: http://127.0.0.1:56235\n[4336] Initializing auth coordination on-demand\n[4336] OAuth callback server running at http://127.0.0.1:14813\n[4336] This instance is running the sign-in for this server (callback port 14813)\n[4336] [4336] Connecting to remote server: http://127.0.0.1:56234/mcp\n[4336] Using transport strategy: http-only\n[4336] \nPlease authorize this client by visiting:\nhttp://169.254.169.254/latest/meta-data?response_type=code&client_id=synthetic-browser-client&code_challenge=hr7CxcHKXHdPd-dRJVSY-XmpR3GSZrLm9a9TBASVPdw&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A14813%2Foauth%2Fcallback&state=e79720dd-2b8e-4c30-a579-f4fa4d882fc3&scope=openid+email+profile&resource=http%3A%2F%2F127.0.0.1%3A56234%2Fmcp\n\n[4336] Browser opened automatically.\n[4336] Authentication required. Initializing auth...\n[4336] Authentication required. Waiting for authorization...\n",
+      "stdout_tail": ""
+    },
+    {
+      "version": "0.16.0",
+      "mode": "script",
+      "cli": "<bench-root>\\mcp-remote-runtime-216-20261103\\runtime\\f08-f11\\0.16.0\\dist\\proxy.js",
+      "resourceOrigin": "http://127.0.0.1:56239",
+      "asOrigin": "http://127.0.0.1:56240",
+      "requests": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/mcp"
+        },
+        {
+          "role": "resource",
+          "method": "POST",
+          "path": "/mcp"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/prm"
+        },
+        {
+          "role": "as",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server"
+        }
+      ],
+      "recorded": false,
+      "decoded": null,
+      "stop": {
+        "code": 1,
+        "signal": null
+      },
+      "stderr_tail": "e\": \"custom\",\n    \"path\": [\n      \"authorization_endpoint\"\n    ],\n    \"message\": \"URL cannot use javascript:, data:, or vbscript: scheme\"\n  }\n]\n    at discoverAuthorizationServerMetadata (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:28271:59)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async discoverOAuthServerInfo (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:28289:39)\n    at async authInternal (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:27989:24)\n    at async auth (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:27940:12)\n    at async handleOAuthUnauthorized (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:27758:7)\n    at async StreamableHTTPClientTransport._send (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:31421:15)\n[3208] Fatal error: ZodError: [\n  {\n    \"code\": \"custom\",\n    \"path\": [\n      \"authorization_endpoint\"\n    ],\n    \"message\": \"URL cannot use javascript:, data:, or vbscript: scheme\"\n  }\n]\n    at discoverAuthorizationServerMetadata (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:28271:59)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async discoverOAuthServerInfo (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:28289:39)\n    at async authInternal (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:27989:24)\n    at async auth (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:27940:12)\n    at async handleOAuthUnauthorized (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:27758:7)\n    at async StreamableHTTPClientTransport._send (<runtime-install-root>/runtime/f08-f11/0.16.0/dist/chunk-K6DREQAS.js:31421:15)\n",
+      "stdout_tail": ""
+    }
+  ]
+}

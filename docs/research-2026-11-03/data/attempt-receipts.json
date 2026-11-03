@@ -1,0 +1,68 @@
+[
+  {
+    "source_path": "runs/0.15.2-cli/attempts/attempt-1/ATTEMPT.json",
+    "receipt": {
+      "version": "0.15.2",
+      "attempt": 1,
+      "cli_sha256_expected": "975e794543db003faa54dd2c7b58ecfbdf2df9c6078e2d5aa077fce3f373dd59",
+      "exit_code": 1,
+      "raw_trace_bytes": 0
+    },
+    "note": "Attempt1 of0.15.2 has empty standalone log; its failure record is retained in the cumulative trace (record index1)."
+  },
+  {
+    "source_path": "runs/0.15.2-cli/attempts/attempt-2/ATTEMPT.json",
+    "receipt": {
+      "version": "0.15.2",
+      "attempt": 2,
+      "cli_sha256_expected": "975e794543db003faa54dd2c7b58ecfbdf2df9c6078e2d5aa077fce3f373dd59",
+      "exit_code": 1,
+      "raw_trace_bytes": 6035
+    },
+    "note": "Source receipt; do not add again to cumulative-record totals."
+  },
+  {
+    "source_path": "runs/0.15.2-cli/attempts/attempt-3/ATTEMPT.json",
+    "receipt": {
+      "version": "0.15.2",
+      "attempt": 3,
+      "cli_sha256_expected": "975e794543db003faa54dd2c7b58ecfbdf2df9c6078e2d5aa077fce3f373dd59",
+      "exit_code": 0,
+      "raw_trace_bytes": 34716
+    },
+    "note": "Source receipt; do not add again to cumulative-record totals."
+  },
+  {
+    "source_path": "runs/0.16.0-cli/attempts/attempt-1/ATTEMPT.json",
+    "receipt": {
+      "version": "0.16.0",
+      "attempt": 1,
+      "cli_sha256_expected": "9f4e2f293f41df6869aa91af0095f06cd36ac8480f828b77473dea220f044943",
+      "exit_code": 1,
+      "raw_trace_bytes": 20782
+    },
+    "note": "Source receipt; do not add again to cumulative-record totals."
+  },
+  {
+    "source_path": "runs/0.16.0-cli/attempts/attempt-2/ATTEMPT.json",
+    "receipt": {
+      "version": "0.16.0",
+      "attempt": 2,
+      "cli_sha256_expected": "9f4e2f293f41df6869aa91af0095f06cd36ac8480f828b77473dea220f044943",
+      "exit_code": 1,
+      "raw_trace_bytes": 6035
+    },
+    "note": "Source receipt; do not add again to cumulative-record totals."
+  },
+  {
+    "source_path": "runs/0.16.0-cli/attempts/attempt-3/ATTEMPT.json",
+    "receipt": {
+      "version": "0.16.0",
+      "attempt": 3,
+      "cli_sha256_expected": "9f4e2f293f41df6869aa91af0095f06cd36ac8480f828b77473dea220f044943",
+      "exit_code": 0,
+      "raw_trace_bytes": 36851
+    },
+    "note": "Source receipt; do not add again to cumulative-record totals."
+  }
+]
