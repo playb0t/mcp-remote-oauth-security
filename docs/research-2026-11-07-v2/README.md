@@ -42,6 +42,40 @@ The settled traces contain **53 Authorization receipts** and **63 HTTP requests 
 
 This is separate: one fixed run of each predeclared case per version. Scenarios, HTTP responses and credential setup are retained; only version/runtime/output bindings differ. The case expected field is the 0.16.5 reference, not an oracle forcing older versions to match.
 
+### Scenario definitions and observed recipients
+
+A is the predeclared expected authorization server; B is a different loopback origin not permitted to receive A's credentials; R is the separately permitted MCP resource origin. Each case uses synthetic client information and generated fixture credentials. The policy permits client authentication on the named A token/device routes and resource Bearer on R/mcp; selecting B in discovery or a redirect does not extend that policy. Concrete per-run addresses and policies remain in the linked data.
+
+- `expected-token-basic`: The CLI sends a client-credentials token POST to A/token with the A-bound client ID and secret in Basic authentication; PASS because that client-auth recipient and method are permitted.
+- `foreign-issuer-basic`: MCP discovery selects B while the configured client ID and secret belong to A; Basic client authentication reaches B/token on 0.15.1 through 0.16.5, giving FAIL for the unapproved recipient; 0.14.3 stops before token receipt and is INCONCLUSIVE.
+- `foreign-issuer-post`: MCP discovery selects B for the A-bound client; the CLI sends client_id and client_secret in the token POST body to B/token on 0.15.1 through 0.16.5, giving FAIL; 0.14.3 stops before token receipt and is INCONCLUSIVE.
+- `redirect-secret-post307`: The CLI first posts A-bound client_id/client_secret to permitted A/token; its 307 response redirects the POST and secret-bearing body to B/receipt-token, giving FAIL because B is not an approved credential receiver.
+- `redirect-basic-header-stripped`: The CLI authenticates with A-bound Basic credentials at A/token, then follows 307 to B/receipt-token without Authorization or policy-classified body credentials; PASS for the destination criterion despite the request reaching B.
+- `redirect-post302-no-body`: The CLI posts the A-bound client secret to A/token; following 302 reaches B/receipt-token as GET without the credential body or Authorization, giving PASS because no protected credential is received by B.
+- `SDK-issuer-block`: The SDK control is supplied A-bound client information with client_secret_post while discovery selects B; it rejects the mismatch before a token POST, so no A credentials reach B and the observed destination verdict is PASS.
+- `SDK-redirect-block`: The SDK control posts the A-bound client secret to A/token, which returns 307 to B/receipt-token; 0.14.3 through 0.16.3 forward the secret body and FAIL, while 0.16.4/0.16.5 stop before B receives it and PASS.
+- `same-origin-basic307`: The CLI sends A-bound Basic client credentials to A/token and retains them after 307 to A/receipt-token; PASS because both exact POST routes are predeclared recipients for client authentication.
+- `device-code-body307-basic`: Device flow uses A-bound Basic client authentication at A/device and A/token; 307 forwards the device_code body to B/receipt-token after Basic is stripped, giving FAIL for the code receipt at B even though later resource Bearer is permitted.
+- `resource-bearer-legitimate`: Device flow sends A-bound Basic client authentication to A/device and A/token, with device_code in the token body, then sends the issued Bearer to R/mcp; PASS because those OAuth routes and the distinct resource-Bearer recipient are separately permitted.
+
+### Scenario-by-version verdicts
+
+The scenario order is taken from [oauth-cases.json](data/oauth-cases.json); every verdict below is copied from [oauth-comparison.json](data/oauth-comparison.json), not from the 0.16.5 reference expected field. PASS concerns observed credential destinations; it does not mean that the OAuth exchange completed successfully.
+
+| Scenario | 0.14.3 | 0.15.1 | 0.15.2 | 0.16.0 | 0.16.3 | 0.16.4 | 0.16.5 |
+|---|---|---|---|---|---|---|---|
+| `expected-token-basic` | PASS | PASS | PASS | PASS | PASS | PASS | PASS |
+| `foreign-issuer-basic` | INCONCLUSIVE | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL |
+| `foreign-issuer-post` | INCONCLUSIVE | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL |
+| `redirect-secret-post307` | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL |
+| `redirect-basic-header-stripped` | PASS | PASS | PASS | PASS | PASS | PASS | PASS |
+| `redirect-post302-no-body` | PASS | PASS | PASS | PASS | PASS | PASS | PASS |
+| `SDK-issuer-block` | PASS | PASS | PASS | PASS | PASS | PASS | PASS |
+| `SDK-redirect-block` | FAIL | FAIL | FAIL | FAIL | FAIL | PASS | PASS |
+| `same-origin-basic307` | PASS | PASS | PASS | PASS | PASS | PASS | PASS |
+| `device-code-body307-basic` | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL |
+| `resource-bearer-legitimate` | PASS | PASS | PASS | PASS | PASS | PASS | PASS |
+
 | Version | OAuth cases | PASS | FAIL | INCONCLUSIVE | Cases with recorded stop |
 |---|---:|---:|---:|---:|---:|
 | 0.14.3 | 11 | 6 | 3 | 2 | 9 |
