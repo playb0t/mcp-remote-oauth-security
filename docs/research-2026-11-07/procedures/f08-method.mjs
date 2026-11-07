@@ -10,7 +10,7 @@ if(process.platform!=='win32')throw Error('F08 fake PowerShell recorder procedur
 if(!existsSync(join(fakeRoot,'System32','WindowsPowerShell','v1.0','powershell.exe')))throw Error('Compile the recorder source into MCP_FAKE_SYSTEMROOT first');
 const results=[];
 function provider(){return {inTokenStorm:()=>false,ownsPendingFlow:()=>true,useDeviceCode:false,useClientCredentials:false,getAuthorizationServerMetadata:async()=>({}),applyScope:()=>{},applyAuthorizeParams:()=>{},preflightCachedDynamicClientRegistration:async()=>{},guardAgainstAuthorizationStorm:()=>{}}}
-for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js']]){
+for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js'],['0.16.5','chunk-EL3EX2HH.js']]){
  const {NodeOAuthClientProvider}=await import(pathToFileURL(join(runtime,v,'dist',file)).href);
  for(const [id,url] of [['loopback-http','http://127.0.0.1:37331/authorize?state=SYNTHETIC'],['link-local-http','http://169.254.169.254/latest/meta-data?state=SYNTHETIC'],['script-negative','javascript:alert(1)'],['mapped-ipv6-negative','http://[::ffff:127.0.0.1]/authorize']]){
   const capture=join(root,'runs',`F08-${v}-${id}.argv.txt`);if(existsSync(capture))unlinkSync(capture);

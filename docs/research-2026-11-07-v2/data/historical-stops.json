@@ -1,0 +1,2086 @@
+{
+  "scope": "Pre-review cohorts, excluded from final table denominators. Full historical source/HTTP evidence remains in local delivery history.",
+  "stops": [
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.15.1",
+      "attempt": "attempt-1",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.15.1",
+      "attempt": "attempt-2",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.15.2",
+      "attempt": "attempt-1",
+      "case": "header-selected-canary",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.16.0",
+      "attempt": "attempt-1",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.16.3",
+      "attempt": "attempt-2",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.16.3",
+      "attempt": "attempt-3",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.16.4",
+      "attempt": "attempt-2",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.16.4",
+      "attempt": "attempt-3",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.16.5",
+      "attempt": "attempt-1",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.16.5",
+      "attempt": "attempt-2",
+      "case": "header-selected-canary",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "cli216",
+      "version": "0.16.5",
+      "attempt": "attempt-3",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        },
+        {
+          "phase": "scenario",
+          "code": "postcondition_not_reached"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        },
+        {
+          "phase": "scenario",
+          "code": "postcondition_not_reached"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:63268\", callback resolved \"http://127.0.0.1:63269\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:63352\", callback resolved \"http://127.0.0.1:63353\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:63434\", callback resolved \"http://127.0.0.1:63435\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:63526\", callback resolved \"http://127.0.0.1:63527\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:63610\", callback resolved \"http://127.0.0.1:63611\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server mismatch: credentials are bound to \"http://127.0.0.1:63712\" but this call resolved \"http://127.0.0.1:63713\"; refusing to present them to a different authorization server"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "HTTP 307: Invalid OAuth error response: SyntaxError: Unexpected end of JSON input. Raw body: "
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server mismatch: credentials are bound to \"http://127.0.0.1:54488\" but this call resolved \"http://127.0.0.1:54489\"; refusing to present them to a different authorization server"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-close-callback-review",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "HTTP 307: Invalid OAuth error response: SyntaxError: Unexpected end of JSON input. Raw body: "
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.15.1",
+      "attempt": "attempt-2",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.15.2",
+      "attempt": "attempt-2",
+      "case": "header-selected-canary",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.15.2",
+      "attempt": "attempt-3",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.16.0",
+      "attempt": "attempt-1",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.16.0",
+      "attempt": "attempt-2",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.16.0",
+      "attempt": "attempt-3",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.16.3",
+      "attempt": "attempt-3",
+      "case": "header-selected-canary",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.16.4",
+      "attempt": "attempt-2",
+      "case": "header-selected-canary",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "cli216",
+      "version": "0.16.5",
+      "attempt": "attempt-3",
+      "case": "header-redirect",
+      "stops": [
+        {
+          "phase": "final_validation",
+          "code": "original_schema_assertion",
+          "detail": "fixture metadata/token response surfaced ZodError"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "Incompatible auth server: does not support dynamic client registration"
+        },
+        {
+          "phase": "scenario",
+          "code": "postcondition_not_reached"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "Incompatible auth server: does not support dynamic client registration"
+        },
+        {
+          "phase": "scenario",
+          "code": "postcondition_not_reached"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:56843\", callback resolved \"http://127.0.0.1:56844\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.14.3",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:57054\", callback resolved \"http://127.0.0.1:57055\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.1",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:57273\", callback resolved \"http://127.0.0.1:57274\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.15.2",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:53175\", callback resolved \"http://127.0.0.1:53176\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.0",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:50264\", callback resolved \"http://127.0.0.1:50265\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.3",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server mismatch: credentials are bound to \"http://127.0.0.1:50342\" but this call resolved \"http://127.0.0.1:50343\"; refusing to present them to a different authorization server"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.4",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "HTTP 307: Invalid OAuth error response: SyntaxError: Unexpected end of JSON input. Raw body: "
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "expected-token-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "foreign-issuer-basic",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "foreign-issuer-post",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "redirect-basic-header-stripped",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "redirect-post302-no-body",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "redirect-secret-post307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "same-origin-basic307",
+      "stops": [
+        {
+          "phase": "target_exit",
+          "code": "target_nonzero",
+          "exit": 1,
+          "signal": null,
+          "reason": "fixture terminal refusal"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "SDK-issuer-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "AuthorizationServerMismatchError",
+          "reason": "Authorization server mismatch: credentials are bound to \"http://127.0.0.1:50425\" but this call resolved \"http://127.0.0.1:50426\"; refusing to present them to a different authorization server"
+        }
+      ]
+    },
+    {
+      "cohort": "pre-forced-child-guard",
+      "series": "oauth11",
+      "version": "0.16.5",
+      "case": "SDK-redirect-block",
+      "stops": [
+        {
+          "phase": "SDK_control",
+          "code": "OAuthError2",
+          "reason": "HTTP 307: Invalid OAuth error response: SyntaxError: Unexpected end of JSON input. Raw body: "
+        }
+      ]
+    }
+  ]
+}

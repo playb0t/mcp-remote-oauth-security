@@ -1,0 +1,38 @@
+{
+  "late_HTTP_subprocess_cases": 3,
+  "barrier_negative_controls": 15,
+  "real_close_timeout_controls": 2,
+  "all_passed": true,
+  "results": [
+    {
+      "mode": "allowed-basic",
+      "early_snapshot_events": 0,
+      "legacy_early_header_absence": true,
+      "early_v2": "INCONCLUSIVE",
+      "final_events": 1,
+      "final_verdict": "PASS",
+      "expected": "PASS",
+      "incomplete_state_controls": 5
+    },
+    {
+      "mode": "foreign-basic",
+      "early_snapshot_events": 0,
+      "legacy_early_header_absence": true,
+      "early_v2": "INCONCLUSIVE",
+      "final_events": 1,
+      "final_verdict": "FAIL",
+      "expected": "FAIL",
+      "incomplete_state_controls": 5
+    },
+    {
+      "mode": "foreign-body",
+      "early_snapshot_events": 0,
+      "legacy_early_header_absence": true,
+      "early_v2": "INCONCLUSIVE",
+      "final_events": 1,
+      "final_verdict": "FAIL",
+      "expected": "FAIL",
+      "incomplete_state_controls": 5
+    }
+  ]
+}

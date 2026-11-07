@@ -1,0 +1,2431 @@
+[
+  {
+    "procedure": "216-v2",
+    "version": "0.15.1",
+    "case": "header-selected-canary",
+    "cli_sha256": "4548f6f908477c5609ced817a2301b77fcda94cd154a4b9ca764cfd49fbf691c",
+    "node": "v24.20.0",
+    "fixture": {
+      "mcp_origin": "http://127.0.0.1:59918",
+      "canary_origin": "http://127.0.0.1:59917"
+    },
+    "policy_sha256": "261a551d54e14b9be4e6926b98fe1fcb7934dd28c876a4c2151d3c79a18d069e",
+    "events": [
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59917/resource-metadata",
+        "case": "header-selected-canary",
+        "role": "canary",
+        "method": "GET",
+        "path": "/resource-metadata",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59917/.well-known/oauth-authorization-server",
+        "case": "header-selected-canary",
+        "role": "canary",
+        "method": "GET",
+        "path": "/.well-known/oauth-authorization-server",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "initialize"
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "notifications/initialized"
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "initialize"
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59917/resource-metadata",
+        "case": "header-selected-canary",
+        "role": "canary",
+        "method": "GET",
+        "path": "/resource-metadata",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59917/.well-known/oauth-authorization-server",
+        "case": "header-selected-canary",
+        "role": "canary",
+        "method": "GET",
+        "path": "/.well-known/oauth-authorization-server",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "notifications/initialized"
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "tools/list"
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59917/resource-metadata",
+        "case": "header-selected-canary",
+        "role": "canary",
+        "method": "GET",
+        "path": "/resource-metadata",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59918/mcp",
+        "case": "header-selected-canary",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "tools/call"
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59917/.well-known/oauth-authorization-server",
+        "case": "header-selected-canary",
+        "role": "canary",
+        "method": "GET",
+        "path": "/.well-known/oauth-authorization-server",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-selected-canary",
+        "address": "http://127.0.0.1:59917/token",
+        "case": "header-selected-canary",
+        "role": "canary",
+        "method": "POST",
+        "path": "/token",
+        "authorization_present": true,
+        "authorization_scheme": "Basic",
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": true,
+          "client_secret": false
+        }
+      }
+    ],
+    "captures": [
+      {
+        "kind": "challenge",
+        "header": "Bearer resource_metadata=\"http://127.0.0.1:59917/resource-metadata\""
+      },
+      {
+        "kind": "PRM",
+        "body": {
+          "resource": "http://127.0.0.1:59918/mcp",
+          "authorization_servers": [
+            "http://127.0.0.1:59917"
+          ]
+        }
+      },
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59917",
+          "authorization_endpoint": "http://127.0.0.1:59917/authorize",
+          "token_endpoint": "http://127.0.0.1:59917/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      },
+      {
+        "kind": "challenge",
+        "header": "Bearer resource_metadata=\"http://127.0.0.1:59917/resource-metadata\""
+      },
+      {
+        "kind": "PRM",
+        "body": {
+          "resource": "http://127.0.0.1:59918/mcp",
+          "authorization_servers": [
+            "http://127.0.0.1:59917"
+          ]
+        }
+      },
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59917",
+          "authorization_endpoint": "http://127.0.0.1:59917/authorize",
+          "token_endpoint": "http://127.0.0.1:59917/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      },
+      {
+        "kind": "challenge",
+        "header": "Bearer resource_metadata=\"http://127.0.0.1:59917/resource-metadata\""
+      },
+      {
+        "kind": "PRM",
+        "body": {
+          "resource": "http://127.0.0.1:59918/mcp",
+          "authorization_servers": [
+            "http://127.0.0.1:59917"
+          ]
+        }
+      },
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59917",
+          "authorization_endpoint": "http://127.0.0.1:59917/authorize",
+          "token_endpoint": "http://127.0.0.1:59917/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      },
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59917",
+          "authorization_endpoint": "http://127.0.0.1:59917/authorize",
+          "token_endpoint": "http://127.0.0.1:59917/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      }
+    ],
+    "stdio_replies": [
+      {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "protocolVersion": "2025-11-25",
+          "capabilities": {
+            "tools": {}
+          },
+          "serverInfo": {
+            "name": "synthetic-fixture",
+            "version": "1"
+          }
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": {
+          "tools": [
+            {
+              "name": "fixture_probe",
+              "inputSchema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "fixture-ok"
+            }
+          ]
+        }
+      }
+    ],
+    "first_rpc_snapshot_http": 15,
+    "settled_http": 16,
+    "late_http_after_rpc": 1,
+    "child": {
+      "code": 0,
+      "signal": null
+    },
+    "child_close_observed": true,
+    "natural_close_after_EOF": true,
+    "preclose_quiet": true,
+    "postclose_quiet": true,
+    "pending_handlers_at_verdict": 0,
+    "server_close_callbacks_observed": 2,
+    "forced_fixture_shutdown": false,
+    "servers_closed": true,
+    "coverage": {
+      "target_started": true,
+      "observation_complete": true,
+      "stimulus_observed": true
+    },
+    "stops": [],
+    "execution_status": "completed",
+    "security": {
+      "criterion": "oauth-credential-destination-v2",
+      "verdict": "PASS",
+      "policy_id": "216-v2-header-selected-canary",
+      "policy_sha256": "261a551d54e14b9be4e6926b98fe1fcb7934dd28c876a4c2151d3c79a18d069e",
+      "expected_issuer": "http://127.0.0.1:59917",
+      "coverage_healthy": true,
+      "coverage": {
+        "target_started": true,
+        "observation_complete": true,
+        "stimulus_observed": true
+      },
+      "unknown": [],
+      "audit": [
+        {
+          "event": 0,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 1,
+          "recipient": "http://127.0.0.1:59917/resource-metadata",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 2,
+          "recipient": "http://127.0.0.1:59917/.well-known/oauth-authorization-server",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 3,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 4,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 5,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 6,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 7,
+          "recipient": "http://127.0.0.1:59917/resource-metadata",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 8,
+          "recipient": "http://127.0.0.1:59917/.well-known/oauth-authorization-server",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 9,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 10,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 11,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 12,
+          "recipient": "http://127.0.0.1:59917/resource-metadata",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 13,
+          "recipient": "http://127.0.0.1:59918/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 14,
+          "recipient": "http://127.0.0.1:59917/.well-known/oauth-authorization-server",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 15,
+          "recipient": "http://127.0.0.1:59917/token",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": true,
+          "authorization_scheme": "Basic",
+          "credential_kinds": [
+            "client_auth"
+          ],
+          "expected_issuer": "http://127.0.0.1:59917",
+          "context_id": "header-selected-canary",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": true,
+            "client_secret": false
+          }
+        }
+      ],
+      "violations": [],
+      "redirects": [],
+      "limits": "PASS applies only to observed credential destination rules. A cross-origin request without credentials is recorded, not called credential disclosure. Policy provenance and observer health are caller responsibilities; hash is not authority.",
+      "finalization_ready": true
+    },
+    "legacy_header_absence_on_settled_trace": false,
+    "limits": "Original response fixtures retained, including AS-shaped /token response. Per-case server/process isolation and post-close evaluation are v2 observer changes; security verdict does not erase execution stops."
+  },
+  {
+    "procedure": "216-v2",
+    "version": "0.15.1",
+    "case": "header-redirect",
+    "cli_sha256": "4548f6f908477c5609ced817a2301b77fcda94cd154a4b9ca764cfd49fbf691c",
+    "node": "v24.20.0",
+    "fixture": {
+      "mcp_origin": "http://127.0.0.1:59924",
+      "canary_origin": "http://127.0.0.1:59923"
+    },
+    "policy_sha256": "554c2f910442b8497cfcd501892762d707cb749ab95379c47a2bd528d56a6acd",
+    "events": [
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/redirect",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/redirect",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "redirect",
+        "from": "http://127.0.0.1:59923/redirect",
+        "to": "http://127.0.0.1:59923/resource-metadata",
+        "status": 302
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/resource-metadata",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/resource-metadata",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/.well-known/oauth-authorization-server",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/.well-known/oauth-authorization-server",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "initialize"
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "notifications/initialized"
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "initialize"
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/redirect",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/redirect",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "redirect",
+        "from": "http://127.0.0.1:59923/redirect",
+        "to": "http://127.0.0.1:59923/resource-metadata",
+        "status": 302
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/resource-metadata",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/resource-metadata",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "notifications/initialized"
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/.well-known/oauth-authorization-server",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/.well-known/oauth-authorization-server",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "tools/list"
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/redirect",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/redirect",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "redirect",
+        "from": "http://127.0.0.1:59923/redirect",
+        "to": "http://127.0.0.1:59923/resource-metadata",
+        "status": 302
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59924/mcp",
+        "case": "header-redirect",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "tools/call"
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/resource-metadata",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/resource-metadata",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/.well-known/oauth-authorization-server",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "GET",
+        "path": "/.well-known/oauth-authorization-server",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "header-redirect",
+        "address": "http://127.0.0.1:59923/token",
+        "case": "header-redirect",
+        "role": "canary",
+        "method": "POST",
+        "path": "/token",
+        "authorization_present": true,
+        "authorization_scheme": "Basic",
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": true,
+          "client_secret": false
+        }
+      }
+    ],
+    "captures": [
+      {
+        "kind": "challenge",
+        "header": "Bearer resource_metadata=\"http://127.0.0.1:59923/redirect\""
+      },
+      {
+        "kind": "PRM",
+        "body": {
+          "resource": "http://127.0.0.1:59924/mcp",
+          "authorization_servers": [
+            "http://127.0.0.1:59923"
+          ]
+        }
+      },
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59923",
+          "authorization_endpoint": "http://127.0.0.1:59923/authorize",
+          "token_endpoint": "http://127.0.0.1:59923/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      },
+      {
+        "kind": "challenge",
+        "header": "Bearer resource_metadata=\"http://127.0.0.1:59923/redirect\""
+      },
+      {
+        "kind": "PRM",
+        "body": {
+          "resource": "http://127.0.0.1:59924/mcp",
+          "authorization_servers": [
+            "http://127.0.0.1:59923"
+          ]
+        }
+      },
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59923",
+          "authorization_endpoint": "http://127.0.0.1:59923/authorize",
+          "token_endpoint": "http://127.0.0.1:59923/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      },
+      {
+        "kind": "challenge",
+        "header": "Bearer resource_metadata=\"http://127.0.0.1:59923/redirect\""
+      },
+      {
+        "kind": "PRM",
+        "body": {
+          "resource": "http://127.0.0.1:59924/mcp",
+          "authorization_servers": [
+            "http://127.0.0.1:59923"
+          ]
+        }
+      },
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59923",
+          "authorization_endpoint": "http://127.0.0.1:59923/authorize",
+          "token_endpoint": "http://127.0.0.1:59923/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      },
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59923",
+          "authorization_endpoint": "http://127.0.0.1:59923/authorize",
+          "token_endpoint": "http://127.0.0.1:59923/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      }
+    ],
+    "stdio_replies": [
+      {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "protocolVersion": "2025-11-25",
+          "capabilities": {
+            "tools": {}
+          },
+          "serverInfo": {
+            "name": "synthetic-fixture",
+            "version": "1"
+          }
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": {
+          "tools": [
+            {
+              "name": "fixture_probe",
+              "inputSchema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "fixture-ok"
+            }
+          ]
+        }
+      }
+    ],
+    "first_rpc_snapshot_http": 17,
+    "settled_http": 19,
+    "late_http_after_rpc": 2,
+    "child": {
+      "code": 0,
+      "signal": null
+    },
+    "child_close_observed": true,
+    "natural_close_after_EOF": true,
+    "preclose_quiet": true,
+    "postclose_quiet": true,
+    "pending_handlers_at_verdict": 0,
+    "server_close_callbacks_observed": 2,
+    "forced_fixture_shutdown": false,
+    "servers_closed": true,
+    "coverage": {
+      "target_started": true,
+      "observation_complete": true,
+      "stimulus_observed": true
+    },
+    "stops": [],
+    "execution_status": "completed",
+    "security": {
+      "criterion": "oauth-credential-destination-v2",
+      "verdict": "PASS",
+      "policy_id": "216-v2-header-redirect",
+      "policy_sha256": "554c2f910442b8497cfcd501892762d707cb749ab95379c47a2bd528d56a6acd",
+      "expected_issuer": "http://127.0.0.1:59923",
+      "coverage_healthy": true,
+      "coverage": {
+        "target_started": true,
+        "observation_complete": true,
+        "stimulus_observed": true
+      },
+      "unknown": [],
+      "audit": [
+        {
+          "event": 0,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 1,
+          "recipient": "http://127.0.0.1:59923/redirect",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 3,
+          "recipient": "http://127.0.0.1:59923/resource-metadata",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 4,
+          "recipient": "http://127.0.0.1:59923/.well-known/oauth-authorization-server",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 5,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 6,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 7,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 8,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 9,
+          "recipient": "http://127.0.0.1:59923/redirect",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 11,
+          "recipient": "http://127.0.0.1:59923/resource-metadata",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 12,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 13,
+          "recipient": "http://127.0.0.1:59923/.well-known/oauth-authorization-server",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 14,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 15,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 16,
+          "recipient": "http://127.0.0.1:59923/redirect",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 18,
+          "recipient": "http://127.0.0.1:59924/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 19,
+          "recipient": "http://127.0.0.1:59923/resource-metadata",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 20,
+          "recipient": "http://127.0.0.1:59923/.well-known/oauth-authorization-server",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 21,
+          "recipient": "http://127.0.0.1:59923/token",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": true,
+          "authorization_scheme": "Basic",
+          "credential_kinds": [
+            "client_auth"
+          ],
+          "expected_issuer": "http://127.0.0.1:59923",
+          "context_id": "header-redirect",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": true,
+            "client_secret": false
+          }
+        }
+      ],
+      "violations": [],
+      "redirects": [
+        {
+          "event": 2,
+          "from": "http://127.0.0.1:59923/redirect",
+          "to": "http://127.0.0.1:59923/resource-metadata",
+          "status": 302,
+          "cross_origin": false,
+          "target_preapproved": false,
+          "credential_violation_observed_at_target": false,
+          "request_observed_at_target": true
+        },
+        {
+          "event": 10,
+          "from": "http://127.0.0.1:59923/redirect",
+          "to": "http://127.0.0.1:59923/resource-metadata",
+          "status": 302,
+          "cross_origin": false,
+          "target_preapproved": false,
+          "credential_violation_observed_at_target": false,
+          "request_observed_at_target": true
+        },
+        {
+          "event": 17,
+          "from": "http://127.0.0.1:59923/redirect",
+          "to": "http://127.0.0.1:59923/resource-metadata",
+          "status": 302,
+          "cross_origin": false,
+          "target_preapproved": false,
+          "credential_violation_observed_at_target": false,
+          "request_observed_at_target": true
+        }
+      ],
+      "limits": "PASS applies only to observed credential destination rules. A cross-origin request without credentials is recorded, not called credential disclosure. Policy provenance and observer health are caller responsibilities; hash is not authority.",
+      "finalization_ready": true
+    },
+    "legacy_header_absence_on_settled_trace": false,
+    "limits": "Original response fixtures retained, including AS-shaped /token response. Per-case server/process isolation and post-close evaluation are v2 observer changes; security verdict does not erase execution stops."
+  },
+  {
+    "procedure": "216-v2",
+    "version": "0.15.1",
+    "case": "same-origin-control",
+    "cli_sha256": "4548f6f908477c5609ced817a2301b77fcda94cd154a4b9ca764cfd49fbf691c",
+    "node": "v24.20.0",
+    "fixture": {
+      "mcp_origin": "http://127.0.0.1:59930",
+      "canary_origin": "http://127.0.0.1:59929"
+    },
+    "policy_sha256": "d2c2e1ca0830900551c9278557510d2feb188c341b38e9b7a19ae918064f3eb7",
+    "events": [
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/.well-known/oauth-authorization-server/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/.well-known/oauth-authorization-server/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "initialize"
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "notifications/initialized"
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "initialize"
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "notifications/initialized"
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "GET",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        }
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "tools/list"
+      },
+      {
+        "type": "request",
+        "context_id": "same-origin-control",
+        "address": "http://127.0.0.1:59930/mcp",
+        "case": "same-origin-control",
+        "role": "mock-MCP",
+        "method": "POST",
+        "path": "/mcp",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_observation_complete": true,
+        "credential_fields": {
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "code": false,
+          "code_verifier": false,
+          "access_token": false
+        },
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false
+        },
+        "rpc_method": "tools/call"
+      }
+    ],
+    "captures": [
+      {
+        "kind": "AS",
+        "body": {
+          "issuer": "http://127.0.0.1:59930",
+          "authorization_endpoint": "http://127.0.0.1:59930/authorize",
+          "token_endpoint": "http://127.0.0.1:59930/token",
+          "response_types_supported": [
+            "code"
+          ],
+          "grant_types_supported": [
+            "authorization_code"
+          ]
+        }
+      }
+    ],
+    "stdio_replies": [
+      {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "protocolVersion": "2025-11-25",
+          "capabilities": {
+            "tools": {}
+          },
+          "serverInfo": {
+            "name": "synthetic-fixture",
+            "version": "1"
+          }
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": {
+          "tools": [
+            {
+              "name": "fixture_probe",
+              "inputSchema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "fixture-ok"
+            }
+          ]
+        }
+      }
+    ],
+    "first_rpc_snapshot_http": 10,
+    "settled_http": 10,
+    "late_http_after_rpc": 0,
+    "child": {
+      "code": 0,
+      "signal": null
+    },
+    "child_close_observed": true,
+    "natural_close_after_EOF": true,
+    "preclose_quiet": true,
+    "postclose_quiet": true,
+    "pending_handlers_at_verdict": 0,
+    "server_close_callbacks_observed": 2,
+    "forced_fixture_shutdown": false,
+    "servers_closed": true,
+    "coverage": {
+      "target_started": true,
+      "observation_complete": true,
+      "stimulus_observed": true
+    },
+    "stops": [],
+    "execution_status": "completed",
+    "security": {
+      "criterion": "oauth-credential-destination-v2",
+      "verdict": "PASS",
+      "policy_id": "216-v2-same-origin-control",
+      "policy_sha256": "d2c2e1ca0830900551c9278557510d2feb188c341b38e9b7a19ae918064f3eb7",
+      "expected_issuer": "http://127.0.0.1:59930",
+      "coverage_healthy": true,
+      "coverage": {
+        "target_started": true,
+        "observation_complete": true,
+        "stimulus_observed": true
+      },
+      "unknown": [],
+      "audit": [
+        {
+          "event": 0,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 1,
+          "recipient": "http://127.0.0.1:59930/.well-known/oauth-authorization-server/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 2,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 3,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 4,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 5,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 6,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 7,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "GET",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 8,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        },
+        {
+          "event": 9,
+          "recipient": "http://127.0.0.1:59930/mcp",
+          "query_count": 0,
+          "sensitive_query_fields": [],
+          "method": "POST",
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "credential_kinds": [],
+          "expected_issuer": "http://127.0.0.1:59930",
+          "context_id": "same-origin-control",
+          "context_matches_policy": true,
+          "fixture_matches": {
+            "client_auth": false,
+            "client_secret": false
+          }
+        }
+      ],
+      "violations": [],
+      "redirects": [],
+      "limits": "PASS applies only to observed credential destination rules. A cross-origin request without credentials is recorded, not called credential disclosure. Policy provenance and observer health are caller responsibilities; hash is not authority.",
+      "finalization_ready": true
+    },
+    "legacy_header_absence_on_settled_trace": true,
+    "limits": "Original response fixtures retained, including AS-shaped /token response. Per-case server/process isolation and post-close evaluation are v2 observer changes; security verdict does not erase execution stops."
+  }
+]

@@ -1,0 +1,294 @@
+[
+  {
+    "version": "0.14.3",
+    "v1_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 35,
+        "full_Authorization": 2,
+        "completed_cases": 1
+      },
+      {
+        "attempt": 2,
+        "outcome": "execution",
+        "error": null,
+        "full_HTTP": 43,
+        "full_Authorization": 0,
+        "completed_cases": 3
+      },
+      {
+        "attempt": 3,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 34,
+        "full_Authorization": 1,
+        "completed_cases": 1
+      }
+    ],
+    "v1_complete": 1,
+    "v1_stops": 2,
+    "v2_cases": 9,
+    "v2_security": {
+      "PASS": 9
+    },
+    "v2_execution_stops": 0,
+    "v2_stop_reasons": {},
+    "v2_Authorization_receipts": 6,
+    "v2_late_HTTP_after_RPC": 6,
+    "v2_finalization_ready_all": true
+  },
+  {
+    "version": "0.15.1",
+    "v1_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      },
+      {
+        "attempt": 2,
+        "outcome": "execution",
+        "error": null,
+        "full_HTTP": 42,
+        "full_Authorization": 2,
+        "completed_cases": 3
+      },
+      {
+        "attempt": 3,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      }
+    ],
+    "v1_complete": 1,
+    "v1_stops": 2,
+    "v2_cases": 9,
+    "v2_security": {
+      "PASS": 9
+    },
+    "v2_execution_stops": 1,
+    "v2_stop_reasons": {
+      "original_schema_assertion": 1
+    },
+    "v2_Authorization_receipts": 7,
+    "v2_late_HTTP_after_RPC": 9,
+    "v2_finalization_ready_all": true
+  },
+  {
+    "version": "0.15.2",
+    "v1_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "execution",
+        "error": null,
+        "full_HTTP": 43,
+        "full_Authorization": 0,
+        "completed_cases": 3
+      },
+      {
+        "attempt": 2,
+        "outcome": "execution",
+        "error": null,
+        "full_HTTP": 44,
+        "full_Authorization": 1,
+        "completed_cases": 3
+      },
+      {
+        "attempt": 3,
+        "outcome": "execution",
+        "error": null,
+        "full_HTTP": 44,
+        "full_Authorization": 1,
+        "completed_cases": 3
+      }
+    ],
+    "v1_complete": 3,
+    "v1_stops": 0,
+    "v2_cases": 9,
+    "v2_security": {
+      "PASS": 9
+    },
+    "v2_execution_stops": 3,
+    "v2_stop_reasons": {
+      "original_schema_assertion": 3
+    },
+    "v2_Authorization_receipts": 9,
+    "v2_late_HTTP_after_RPC": 11,
+    "v2_finalization_ready_all": true
+  },
+  {
+    "version": "0.16.0",
+    "v1_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      },
+      {
+        "attempt": 2,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 34,
+        "full_Authorization": 1,
+        "completed_cases": 1
+      },
+      {
+        "attempt": 3,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 34,
+        "full_Authorization": 1,
+        "completed_cases": 1
+      }
+    ],
+    "v1_complete": 0,
+    "v1_stops": 3,
+    "v2_cases": 9,
+    "v2_security": {
+      "PASS": 9
+    },
+    "v2_execution_stops": 2,
+    "v2_stop_reasons": {
+      "original_schema_assertion": 2
+    },
+    "v2_Authorization_receipts": 8,
+    "v2_late_HTTP_after_RPC": 10,
+    "v2_finalization_ready_all": true
+  },
+  {
+    "version": "0.16.3",
+    "v1_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      },
+      {
+        "attempt": 2,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      },
+      {
+        "attempt": 3,
+        "outcome": "execution",
+        "error": null,
+        "full_HTTP": 42,
+        "full_Authorization": 0,
+        "completed_cases": 3
+      }
+    ],
+    "v1_complete": 1,
+    "v1_stops": 2,
+    "v2_cases": 9,
+    "v2_security": {
+      "PASS": 9
+    },
+    "v2_execution_stops": 2,
+    "v2_stop_reasons": {
+      "original_schema_assertion": 2
+    },
+    "v2_Authorization_receipts": 8,
+    "v2_late_HTTP_after_RPC": 11,
+    "v2_finalization_ready_all": true
+  },
+  {
+    "version": "0.16.4",
+    "v1_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      },
+      {
+        "attempt": 2,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      },
+      {
+        "attempt": 3,
+        "outcome": "execution",
+        "error": null,
+        "full_HTTP": 42,
+        "full_Authorization": 1,
+        "completed_cases": 3
+      }
+    ],
+    "v1_complete": 1,
+    "v1_stops": 2,
+    "v2_cases": 9,
+    "v2_security": {
+      "PASS": 9
+    },
+    "v2_execution_stops": 2,
+    "v2_stop_reasons": {
+      "original_schema_assertion": 2
+    },
+    "v2_Authorization_receipts": 8,
+    "v2_late_HTTP_after_RPC": 9,
+    "v2_finalization_ready_all": true
+  },
+  {
+    "version": "0.16.5",
+    "v1_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      },
+      {
+        "attempt": 2,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      },
+      {
+        "attempt": 3,
+        "outcome": "failure",
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+        "full_HTTP": 16,
+        "full_Authorization": 1,
+        "completed_cases": 0
+      }
+    ],
+    "v1_complete": 0,
+    "v1_stops": 3,
+    "v2_cases": 9,
+    "v2_security": {
+      "PASS": 9
+    },
+    "v2_execution_stops": 1,
+    "v2_stop_reasons": {
+      "original_schema_assertion": 1
+    },
+    "v2_Authorization_receipts": 7,
+    "v2_late_HTTP_after_RPC": 7,
+    "v2_finalization_ready_all": true
+  }
+]

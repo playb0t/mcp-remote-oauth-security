@@ -1,0 +1,179 @@
+{
+  "sources": [
+    {
+      "file": "auth-destination-v2.cjs",
+      "sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "published_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "adaptation": "none; exact tested source bytes"
+    },
+    {
+      "file": "settle-trace-v2.cjs",
+      "sha256": "4d620c65429ae30d8644be863f6163e51fca3065d6039bba424bbc8de719065b",
+      "published_sha256": "4d620c65429ae30d8644be863f6163e51fca3065d6039bba424bbc8de719065b",
+      "adaptation": "none; exact tested source bytes"
+    },
+    {
+      "file": "verify_stdio_v2.mjs",
+      "sha256": "c5ece77226b55566e1dd06098178b87a63cbe05a799b7da9ca6c7ba54f4fe2ff",
+      "published_sha256": "c5ece77226b55566e1dd06098178b87a63cbe05a799b7da9ca6c7ba54f4fe2ff",
+      "adaptation": "none; exact tested source bytes"
+    },
+    {
+      "file": "oauth-controls-v2.mjs",
+      "sha256": "d58a1bdc87d4cb9b0549059608bc8d9c764dfcdf3364063021a07a40224142a4",
+      "published_sha256": "d58a1bdc87d4cb9b0549059608bc8d9c764dfcdf3364063021a07a40224142a4",
+      "adaptation": "none; exact tested source bytes"
+    },
+    {
+      "file": "driver.mjs",
+      "sha256": "d3e2cdee3e1d1a4a425473f5eb3dca01d683a980f3dbfc661b060241d31306f5",
+      "published_sha256": "d3e2cdee3e1d1a4a425473f5eb3dca01d683a980f3dbfc661b060241d31306f5",
+      "adaptation": "none; exact tested source bytes"
+    },
+    {
+      "file": "test-criterion-v2.cjs",
+      "sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "published_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "adaptation": "none; exact tested source bytes"
+    },
+    {
+      "file": "test-settlement-v2.mjs",
+      "sha256": "e2f51f92e080063a5a0db8966619fbdb8c830fb139a22ffa86e53075b28f81d9",
+      "published_sha256": "e2f51f92e080063a5a0db8966619fbdb8c830fb139a22ffa86e53075b28f81d9",
+      "adaptation": "none; exact tested source bytes"
+    },
+    {
+      "file": "verify_stdio_v1.original.mjs",
+      "sha256": "97a82a03622df3066181f3727f596e01824807caff38e17b552086a185f50055",
+      "adaptation": "none; original216 CRLF bytes"
+    }
+  ],
+  "original216_version_bound_scripts": [
+    {
+      "version": "0.14.3",
+      "attempt": 1,
+      "sha256": "03d8b4b3d2e8ac50dd0f014cdc660a2b8fb61b6b0eba0ea4035f7496b31251f0",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.14.3",
+      "attempt": 2,
+      "sha256": "03d8b4b3d2e8ac50dd0f014cdc660a2b8fb61b6b0eba0ea4035f7496b31251f0",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.14.3",
+      "attempt": 3,
+      "sha256": "03d8b4b3d2e8ac50dd0f014cdc660a2b8fb61b6b0eba0ea4035f7496b31251f0",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.15.1",
+      "attempt": 1,
+      "sha256": "9856d076592b1690654df96ad078d95376faae77f59a0e2d958285a49e3945bd",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.15.1",
+      "attempt": 2,
+      "sha256": "9856d076592b1690654df96ad078d95376faae77f59a0e2d958285a49e3945bd",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.15.1",
+      "attempt": 3,
+      "sha256": "9856d076592b1690654df96ad078d95376faae77f59a0e2d958285a49e3945bd",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.15.2",
+      "attempt": 1,
+      "sha256": "22f73d80209e4779a17104546964de80a834a404a539a8a55d94a572a56aab53",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.15.2",
+      "attempt": 2,
+      "sha256": "22f73d80209e4779a17104546964de80a834a404a539a8a55d94a572a56aab53",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.15.2",
+      "attempt": 3,
+      "sha256": "22f73d80209e4779a17104546964de80a834a404a539a8a55d94a572a56aab53",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.0",
+      "attempt": 1,
+      "sha256": "97a82a03622df3066181f3727f596e01824807caff38e17b552086a185f50055",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.0",
+      "attempt": 2,
+      "sha256": "97a82a03622df3066181f3727f596e01824807caff38e17b552086a185f50055",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.0",
+      "attempt": 3,
+      "sha256": "97a82a03622df3066181f3727f596e01824807caff38e17b552086a185f50055",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.3",
+      "attempt": 1,
+      "sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.3",
+      "attempt": 2,
+      "sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.3",
+      "attempt": 3,
+      "sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.4",
+      "attempt": 1,
+      "sha256": "b9975a4ea2db4aa29d54e2951f248891780ed76f07a9a2194fba3b833decac04",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.4",
+      "attempt": 2,
+      "sha256": "b9975a4ea2db4aa29d54e2951f248891780ed76f07a9a2194fba3b833decac04",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.4",
+      "attempt": 3,
+      "sha256": "b9975a4ea2db4aa29d54e2951f248891780ed76f07a9a2194fba3b833decac04",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.5",
+      "attempt": 1,
+      "sha256": "1caddff0839847aa58d51df13c4f8b674224fd5a96bba457763d960adde3723b",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.5",
+      "attempt": 2,
+      "sha256": "1caddff0839847aa58d51df13c4f8b674224fd5a96bba457763d960adde3723b",
+      "inverse_version_recovers_original216_bytes": true
+    },
+    {
+      "version": "0.16.5",
+      "attempt": 3,
+      "sha256": "1caddff0839847aa58d51df13c4f8b674224fd5a96bba457763d960adde3723b",
+      "inverse_version_recovers_original216_bytes": true
+    }
+  ]
+}

@@ -5,10 +5,10 @@ Complete sources accompany the recorded data. Original and applied files documen
 ## Files and identities
 
 - `release_checks.original.cjs`: exact 9 October source, SHA-256 `8822838d9f323534e20fae80ed3657bc44c2b4533b0d1a647c85e5d3ffec7b1f`.
-- `release_checks.applied.cjs`: exact six-version applied checker. Only PINS differs from the original after newline normalization. `release_checks.pins-2026-11-07.diff` is the normalized-LF projection; original/applied bytes are preserved.
+- `release_checks.applied.cjs`: exact seven-version applied checker. Only PINS differs from the original after newline normalization. `release_checks.pins-2026-11-07.diff` is the normalized-LF projection; original/applied bytes are preserved.
 - `release_checks.cjs`: normalizer require changed to the sibling file; separate portable diff.
 - `normalize_ast.cjs` and `fixtures/strict-url-sanitise-0.0.1.js`: exact retained tooling/fixture; trusted TypeScript 5.9.3 required.
-- `verify_stdio.original.mjs`: exact October source. `recorded/verify_stdio-0.16.3.mjs` and `-0.16.4.mjs`: exact version copies used in the accepted runs. Path/version diffs are supplied separately and together.
+- `verify_stdio.original.mjs`: exact October source. `recorded/verify_stdio-0.16.3.mjs`, `-0.16.4.mjs` and `-0.16.5.mjs`: exact executed version copies; the 0.16.5 attempts stopped at the original assertion. Path/version diffs are supplied separately and together.
 - `verify_stdio.mjs`: explicit version, runtime, expected-source and output inputs; same scenario body and original assertions. Use a fresh run directory per attempt.
 - `inspect.recorded.cjs`: exact static extractor used for the accepted source analysis. `inspect.cjs` adds explicit source/parser inputs; its scanner/AST function extraction and normalization are retained. It parses target JS as data and never imports it.
 - `f08-cli.mjs`, `f08-method.mjs`, `f08-preload.cjs`, `f11.mjs`: portable path/version bindings for the recorded runtime procedures, with diffs.
@@ -35,12 +35,12 @@ work/
   fake-systemroot/
 ```
 
-The helper needs 0.14.3, 0.15.1, 0.15.2, 0.16.0, 0.16.3 and 0.16.4. The static extractor needs 0.16.0, 0.16.3 and 0.16.4; runtime targets are 0.16.3/0.16.4. Older helper archive pins are retained in the checker and prior published receipts.
+The helper needs 0.14.3, 0.15.1, 0.15.2, 0.16.0, 0.16.3, 0.16.4 and 0.16.5. The static extractor needs 0.16.0, 0.16.3, 0.16.4 and 0.16.5; runtime targets are 0.16.3/0.16.4/0.16.5. Older helper archive pins are retained in the checker and prior published receipts.
 
 Copy runtime/package*.json into work/runtime and run `npm ci --ignore-scripts --omit=dev --no-audit --no-fund` there. Prepare the parser in a separate fresh directory with tooling/package.json and scripts disabled. These are reproduction instructions; packaging did not perform these installations.
 
 ```sh
-"$NODE" "$PROCEDURES/prepare_runtime.cjs" "$WORK/source" "$WORK/runtime" 0.16.3 0.16.4
+"$NODE" "$PROCEDURES/prepare_runtime.cjs" "$WORK/source" "$WORK/runtime" 0.16.3 0.16.4 0.16.5
 "$NODE" "$PROCEDURES/release_checks.cjs" "$WORK" "$WORK/parser/node_modules/typescript/lib/typescript.js" "$WORK/output/release-checks.json"
 mkdir -p "$WORK/source/evidence"
 MCP_TYPESCRIPT_MODULE="$WORK/parser/node_modules/typescript/lib/typescript.js" MCP_SOURCE_ROOT="$WORK/source" "$NODE" "$PROCEDURES/inspect.cjs"
@@ -54,7 +54,7 @@ The TypeScript parser must be trusted tooling, not JavaScript obtained from a sc
 MCP_VERSION=0.16.3 MCP_STDIO_RUN_ROOT="$WORK/output/stdio-0.16.3-attempt-1" MCP_STDIO_RUNTIME_DIST="$WORK/runtime/0.16.3/dist" MCP_STDIO_EXPECTED_DIST="$WORK/source/0.16.3/package/dist"   "$NODE" "$PROCEDURES/verify_stdio.mjs"
 ```
 
-Repeat with 0.16.4 and fresh attempt paths. Runtime/source dist parity is checked first. Traces append and audit is replaced, so preserve attempt identity. Retain original assertion failures. No observer alteration or different token response belongs to this published result.
+Repeat with 0.16.4/0.16.5 and fresh attempt paths. Runtime/source dist parity is checked first. Traces append and audit is replaced, so preserve attempt identity. Retain original assertion failures. No observer alteration or different token response belongs to this published result.
 
 ## F08: Windows recorder only
 
@@ -99,4 +99,6 @@ Node syntax checks, JSON parsing, source hashes and configuration diffs are reco
 "$NODE" "$PROCEDURES/compare_distribution.cjs" "$WORK/parser/node_modules/typescript/lib/typescript.js" "$WORK/source/0.16.4" "$WORK/source/0.16.5" "$WORK/output/distribution-0.16.5.json"
 ```
 
-This static comparison is separate from the original five-record CLI procedure, which was not run on 0.16.5 in this folder. No 0.16.5 pin was added to the six-version runtime helper checker.
+This static comparison is separate from the original five-record CLI procedure, which was subsequently executed on 0.16.5 using retained original scripts. The seven-version helper checker now includes the verified 0.16.5 pin; all three original CLI attempts stopped at the unchanged assertion. The static comparison itself executes no target code.
+
+The 0.16.5 original F-08 controller first encountered a missing test-state parent before target spawn. That setup failure and the unchanged-script retry are retained separately; portable copies already prepare their output directories. The .0165-portable.diff files show configuration-only differences from that recorded target version. No original assertion was removed to obtain a complete run.

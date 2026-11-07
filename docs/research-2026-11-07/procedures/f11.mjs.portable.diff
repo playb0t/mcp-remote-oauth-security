@@ -12,11 +12,13 @@
  const listen=(s)=>new Promise((ok,no)=>{s.once('error',no);s.listen(0,'127.0.0.1',()=>ok(`http://127.0.0.1:${s.address().port}`));});
  async function caseRun(connect,version,mode){
   const events=[];let resourceOrigin,canaryOrigin;const token='SYNTHETIC-F11-'+version;
-@@ -27,7 +28,7 @@
+@@ -26,8 +27,8 @@
+  return {version,mode,resource_origin:resourceOrigin,canary_origin:canaryOrigin,result,error,events};
  }
  const all=[];
- for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js']]){
+-for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js']]){
 - const mod=await import(pathToFileURL(join(runtime,'f08-f11',v,'dist',file)).href);assert.equal(typeof mod.connectToRemoteServer,'function');
++for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js'],['0.16.5','chunk-EL3EX2HH.js']]){
 + const mod=await import(pathToFileURL(join(runtime,v,'dist',file)).href);assert.equal(typeof mod.connectToRemoteServer,'function');
   for(const mode of ['redirect-cross','redirect-same','endpoint-cross','no-token'])all.push(await caseRun(mod.connectToRemoteServer,v,mode));
  }

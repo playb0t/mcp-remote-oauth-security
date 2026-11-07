@@ -11,7 +11,7 @@ const root=required('MCP_STDIO_RUN_ROOT');
 const runtimeDist=required('MCP_STDIO_RUNTIME_DIST');
 const expectedDist=required('MCP_STDIO_EXPECTED_DIST');
 const version=process.env.MCP_VERSION;
-assert.ok(['0.16.3','0.16.4'].includes(version),'Set MCP_VERSION to 0.16.3 or 0.16.4');
+assert.ok(['0.16.3','0.16.4','0.16.5'].includes(version),'Set MCP_VERSION to 0.16.3, 0.16.4 or 0.16.5');
 mkdirSync(join(root,'logs'),{recursive:true});
 const cli=join(runtimeDist,'proxy.js');
 for(const name of readdirSync(runtimeDist)) assert.deepEqual(readFileSync(join(runtimeDist,name)),readFileSync(join(expectedDist,name)));

@@ -1,0 +1,341 @@
+{
+  "bindings": [
+    {
+      "file": "data/cli-v1/0.14.3/attempt-1.json",
+      "source_sha256": "64ed8cc2138add992c2c539465b5550230aef891851d9d86f5b06e0645218b46",
+      "published_sha256": "96046b4ec58e118cb141947143767de73c282cb4b05aa55275a810d223bf4c09",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.14.3/attempt-1.json",
+      "source_sha256": "8a5cf8320baba4bd3baa4af32922c3878c4816e4732eb1b3db97f0f2a76e3b51",
+      "published_sha256": "cf19cb6ff2c1ac955ebce9bb54885053f95dc4a6e5c03f321051b1ec041c7ee1",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.14.3/attempt-2.json",
+      "source_sha256": "47806392cf0c644bb0a64187f70fcae19509fb09ca45e31bc88298856d250bca",
+      "published_sha256": "5f52b37d02d0422fa028c9734e09b29d1941d18005d7ff051fb57520234c5e0b",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.14.3/attempt-2.json",
+      "source_sha256": "f5dce2db5beaaf11d02f8dd4e9870c02329be8193497440936d5795e57dd985e",
+      "published_sha256": "6e9c3d0114c8e0eb3e6a4cbf26b299f8ffa0d7ecb9ee158f59f519cdeb14a5e1",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.14.3/attempt-3.json",
+      "source_sha256": "e4ea41a736e9134131e788c7b80f65be1290b83d0123e4c10471be8d1d9061c6",
+      "published_sha256": "4cf9d5fe0fa73d2453dc1ec340770457314fb0cf90572d6e9682803eb639540a",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.14.3/attempt-3.json",
+      "source_sha256": "102614b3b48999ffac967a1bf7525c9cbef2b70b0fae1204a2cc250bace6003b",
+      "published_sha256": "5d5fbf006d9abad0fc710220dd62ca190d96d9c14f21b48f596fc99564ea2e44",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth-v2/0.14.3.json",
+      "source_sha256": "3b54b2923cf61d6f6a80c25a7b7de759fffd5430b5fad40c300215983df0a3bc",
+      "published_sha256": "694886a6234ec8a7c7f5586398f7f751d5c9b962bf26643230d637e54caae019",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.15.1/attempt-1.json",
+      "source_sha256": "3136b85c6eab996744c893186f1656bd6807b893fa0e53bc186de2546b5fc7e6",
+      "published_sha256": "225a44073557306d1ace8bdc18aad32742589c6d49f9a5edd98927e1bb7c933f",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.15.1/attempt-1.json",
+      "source_sha256": "014fb4c2ab923d4d7abcc5b89a7c93ba272417bc7dd7c3d25be7472d5c9e9001",
+      "published_sha256": "b03bd1cbeb740cd5b677ef40a613cf7a67fac1dab8344ee442310c7b8af1a93f",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.15.1/attempt-2.json",
+      "source_sha256": "a9fc77e0a4661eeba7bf4124c211ba85c43753107fb05bd314bf29222dc98ad6",
+      "published_sha256": "87d8799c2ab56f2cdfa8f6225c352d46c4fec444c384de06f2ffb5e4f178f4f4",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.15.1/attempt-2.json",
+      "source_sha256": "34f38c50217f1809d498ad7610c6af65120bda9c53eecfa18c205dbefa483a1f",
+      "published_sha256": "7bf0c6a1719f5dcb7c51ae155cfff4d250f210fde30685e801a0a003c1949360",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.15.1/attempt-3.json",
+      "source_sha256": "e6e00a284e52f930bb2af49bcd2b21829caf450a31fab1870bd0cfcaf10b01ae",
+      "published_sha256": "dddc5e9898dea37aa8f3f3dc9356cb9a2c5faf6cc460afc386864366419bc2ca",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.15.1/attempt-3.json",
+      "source_sha256": "4d989aa7b96cfa00df68ccb749a113f60e2ffbe29d470dff17450eefadd46bad",
+      "published_sha256": "4ef0047a413ba5079e8be977e84cd6ffad3fe3c958a1dc82603e2d150a4b4392",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth-v2/0.15.1.json",
+      "source_sha256": "366ef6dc3612b74f6c48b36b28dfc70ac2fd02902c78fe4b5373ec6a6b787e41",
+      "published_sha256": "0bba585ce6e978acd8303d60c8ffbc5bdb9b01287efce12d198dcdeae73bdd78",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.15.2/attempt-1.json",
+      "source_sha256": "f052cfe8f938495222298844b60ff247e3aa2a2bb1dd8e5432f32bcc78ef3f5e",
+      "published_sha256": "ca816780aab0ce3aa302dd8e72752155121c9647074583ca51121b05349abfe5",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.15.2/attempt-1.json",
+      "source_sha256": "63c41d5b8d307b7739d225e519bfb8cf1faecbc89da51499a3e5ffa435790726",
+      "published_sha256": "6702f1157a6218925249e2dbf60265e2595b3d7b4fa72cb6cb345501b68712e5",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.15.2/attempt-2.json",
+      "source_sha256": "63d86ef61fabefe6a734c2fa48a62d3266d1e23940cd7db0034c3b02a9624d38",
+      "published_sha256": "7d706c5d660e30fa210b93b11fc5a17c035447b8b19e5617849f8ab95a25a2e0",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.15.2/attempt-2.json",
+      "source_sha256": "d14e09fef4616cadc9378562548167ca6b4fd7eaa369230d8e19d5aaa087a19c",
+      "published_sha256": "7366f3503bff0caaf28c1f15fcad6f604eb6ca3d1cb088a6165d5601a6e468cb",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.15.2/attempt-3.json",
+      "source_sha256": "cc035c3e152915bd67b591111dfc5469630cabd0b2b4b468bba3bce4ea07c7ce",
+      "published_sha256": "71b3304bf15e5a6019f9bda494dc29dff52d6a346449c32f8049b0db444afe02",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.15.2/attempt-3.json",
+      "source_sha256": "c323a9bdb6e6bd6d864178bfd3c553cb4a0dace41cac68a141994ee8a73350c9",
+      "published_sha256": "1fd86339603160cab477e06f418e17f94b3f8054a365131cf0e4310ced8f8293",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth-v2/0.15.2.json",
+      "source_sha256": "f0b9fbb6dcbd5e6eba214c9fe4d03404c6e34de35da8d594ec1fff6ccf3947cc",
+      "published_sha256": "a0bf08a93992a598dcdbf41f286b532ddbe11cb98752d3fb4117df5084f5b4b4",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.0/attempt-1.json",
+      "source_sha256": "65ee598e080d880be00a9c51730384d22b4cf13e2ed74a18c2b9f5684372ba15",
+      "published_sha256": "cd80a07180aee57698f2e3004341565be648311e3a0de0d03cb567fd6bbcfbe3",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.0/attempt-1.json",
+      "source_sha256": "856e8db292681fd16e4101bf135803f37a66c4b848380858cf45c333b29d0ae5",
+      "published_sha256": "11da04c6d13c2adc98f4d7f115be0ad17f0e3e95a13688eaec6b67c02e0940d3",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.0/attempt-2.json",
+      "source_sha256": "5ed45bf19bbfb0704ab1e75228a5474f20bef73e8a33584bd9e7dd98d922d107",
+      "published_sha256": "e1280c7c606f63299def65ed608e34571856edb997b57ca78bf9104f0e6d34bb",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.0/attempt-2.json",
+      "source_sha256": "1263bca714e12dbf066f2151cc635ce8b2f4d83cc4696de98707d1cc0bc929a3",
+      "published_sha256": "f4eebd8248bd58bd925eafb245aa84217f317be620b4015535e4b8b2538c32ce",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.0/attempt-3.json",
+      "source_sha256": "5812751ad003d5af008b4f45cdc50555a13d782d52331a487c518b0e443c54a8",
+      "published_sha256": "a458bcbbbc3394fb0c48bbbced0f5e8a5b436e4639b76042b166fc80342505ae",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.0/attempt-3.json",
+      "source_sha256": "a275e39bc3de78c03394cc8d309f87873ede675e6a373f18e89949ac7c783655",
+      "published_sha256": "c7bc2dd12a64f29ca8d1d9ebbf8f79fd85c568556fd81207097d379037b571ae",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth-v2/0.16.0.json",
+      "source_sha256": "06a347f2f2be3db1e6ec169a6bac6224bcdf6c0ac91db1ed364205291bd47019",
+      "published_sha256": "d95d3aeff6e4d90b9909a99c2036c620c4e31cf692e463df8da0e7cd6d32aa65",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.3/attempt-1.json",
+      "source_sha256": "831bfd3c792989c6a03a5080cf3cc9b498d49a03c520d92664cd53fb361557a9",
+      "published_sha256": "6336a471b01051e17c63a088011cf9c100911db07a22cb2e744601fe5182e7b7",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.3/attempt-1.json",
+      "source_sha256": "3bc70fe92c1fa3ce4ebcebd29613f7ab37cd1ad9079df18327584c80d7591896",
+      "published_sha256": "8b63ad8298a96fd8ad48530831b6970b8a78826ec442f19b70462d51cf4731e5",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.3/attempt-2.json",
+      "source_sha256": "5794d3fb36a160869df5d4157977e949ddcaaf90c99677626a5e574369848609",
+      "published_sha256": "ae85dca667815d9bba00fec51a594f549a6be8b0637096418ea017ec5ed5dd42",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.3/attempt-2.json",
+      "source_sha256": "00c5b880fbad1f231137ba725c7934bb2495898a47045ccbacabf673b64d820d",
+      "published_sha256": "61bc8a2a2613dde053d679efe9d27d84385b25c3a5b61d96f63a92827a335f9f",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.3/attempt-3.json",
+      "source_sha256": "6b69d3c9e6ce1a8273cddce0d5ea30b49ec99fad07c2366f46d902925e025e34",
+      "published_sha256": "0a48c5c48de169aada68bf89217e7af4e68382afe67c9cc7b653e6e250e0b343",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.3/attempt-3.json",
+      "source_sha256": "a67117cf8c9a5ea28ee32c2baf5c2d62eb19714658e0ccdc1abe06f3e1f42e75",
+      "published_sha256": "1e04f6d4294feeb077c4fd523a42ff3e36f36a7053d304fac88861b6f3b3bf30",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth-v2/0.16.3.json",
+      "source_sha256": "02f2305025d117503aab8c852f04fbd1429f5836c9e5b390f7b7deaf263786cf",
+      "published_sha256": "de12a8aa974eefc689238b27a3c7f688b4ec91dd5325c6d03699a907a26e1409",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.4/attempt-1.json",
+      "source_sha256": "77ab29b07d1431874c9c731d20ae164aecf22f5e1cd86e7b9f67130771b32eb9",
+      "published_sha256": "959ba5d616fa8cb833b7886e38469a0fdfadeca2e673aec89de022b038280b0b",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.4/attempt-1.json",
+      "source_sha256": "1f5bcaaf80939dc7bdc8ee345c953423cb3f810ddeda1d7c53d6c1583be906ff",
+      "published_sha256": "c79cb30c0d65b1b90c5df901f7ee190c3a40fed8a81b5298582f9ad08ca2cdf5",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.4/attempt-2.json",
+      "source_sha256": "73783ef6705030a82bd775f7969b88257cad27041d8b1df5ce18bee288b7b1bf",
+      "published_sha256": "b6ed71ed13a4fbafc9c48f6beecf5bc8622a6e21268da62e59e23e6bba7daafb",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.4/attempt-2.json",
+      "source_sha256": "6a53fe25f4bf2989d8ecf0e3dcfe05c40ace280f9be94f8b3a6acc781eff11d3",
+      "published_sha256": "68d39c0c9313272d33f0329a3c799d3b7f6601e13d6c53e651a755a06660fccd",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.4/attempt-3.json",
+      "source_sha256": "a97cc758e57b3f6839a6bf18632d0221310d4e86ba2b5c8d114304e4d262bfe0",
+      "published_sha256": "675516a641562cb6c9a15f85cc89a8262babb63901e00de4f740de48c9541841",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.4/attempt-3.json",
+      "source_sha256": "155ac3ddb53b853283b97819cb7414fd943cd386b40db4ccf73e98381fcb8d65",
+      "published_sha256": "b289bd8853020c6fa1017c029ea9ebfeec20b7bbb1585b9daf9022706394543c",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth-v2/0.16.4.json",
+      "source_sha256": "9107ff9bd9da53b8219e30317434f21a84d3a7c3c6bb9bf24ce4270321a1ed4e",
+      "published_sha256": "657e40d2573057e6cdfe776931b05ea253cc42f115cde0e696579dc469ccb9a0",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.5/attempt-1.json",
+      "source_sha256": "e7a6786c5a2beb7de7cce10c6e7eebbf095e76a5aca19e3196186a61ef6c2639",
+      "published_sha256": "ce9bda97a224b1f73925ea089735b0417698f265cee6f0ac4086809e43a524fe",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.5/attempt-1.json",
+      "source_sha256": "98090fa0301ee7c993136f33bf73f713ff3dd533495ce9f95d244c92971ab82c",
+      "published_sha256": "2e228431c0b21a7976dd9c147c42c04c8501bec39bfe15e9b715dbc8cf2b2946",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.5/attempt-2.json",
+      "source_sha256": "ba1aee6a511233007ebf220d7a5daca3a0eafacb25d3285acbf945b8a511b47b",
+      "published_sha256": "683a76716c0d9f30101a9fb3720cdec815b9d680155893b71843688f4ff83085",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.5/attempt-2.json",
+      "source_sha256": "da36790a4d27b075d12701ead5c11f27c23f44667830c2f8a75a7c0fb3a6ac9e",
+      "published_sha256": "135a29c55184bc7624d4a1694490598a88fb27dba15e0dc3d1ad9d47407b8d5c",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v1/0.16.5/attempt-3.json",
+      "source_sha256": "f275ac4bd758ad1910463257115aa644dfaf8a9c843ec72795f274303e7a3441",
+      "published_sha256": "0044bed6e1d8d3c9ca1939600c2520d82c8d4ed517a178368fbad65330ddd91c",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/cli-v2/0.16.5/attempt-3.json",
+      "source_sha256": "3a35d3b0c2369f0361aaeee1105871fa189b80fda32c029237ff655575704daa",
+      "published_sha256": "54ead7080f363d1ed95df0ce8927634ee04849df817da4ce952f7f98b67e1400",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth-v2/0.16.5.json",
+      "source_sha256": "61cb34c04d7ed92b0f3e10d6ffe4a1805b5979494b2dc340eb962469708d93b8",
+      "published_sha256": "82f0be4d44f4ea04feb297bc5f7a24547be8b61af9b7ae41593a50e8437c4cb6",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/detector-controls.json",
+      "source_sha256": "f382ba013e869de73834b50cc16ade50b30f606ecc37beb59855818c0f30129b",
+      "published_sha256": "cdae8520682438fef5a410a8c5c014699348041ef0510981b1f1b620e5887af5",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/settlement-controls.json",
+      "source_sha256": "f215ad3124ea3d4da4cb64361e525ffd448fc60ea7a33ffb8aba004b12f45e39",
+      "published_sha256": "07ec04b26b1320f41dde04f2c272d9622316c7d90729791e76eecdb73eb9870c",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth-cases.json",
+      "source_sha256": "043aa637fd5732801a321342f3d7ef50db9e1b7707f380ba412ba3b05853b0cf",
+      "published_sha256": "043aa637fd5732801a321342f3d7ef50db9e1b7707f380ba412ba3b05853b0cf",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/setup-failure.json",
+      "source_sha256": "8b120fa92085f89c7884bfce91e552dba76333aacdcf4e24a80ca44216ccfe18",
+      "published_sha256": "8b120fa92085f89c7884bfce91e552dba76333aacdcf4e24a80ca44216ccfe18",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/v1-executions.json",
+      "source_sha256": "ae79a58b6c303931e0e06e0a3a2bfd012375260a5789614ff1d65a2eab3ca5c4",
+      "published_sha256": "ae79a58b6c303931e0e06e0a3a2bfd012375260a5789614ff1d65a2eab3ca5c4",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/v2-cli-executions.json",
+      "source_sha256": "c4e351186789eb820bdbdde2b4ae91d77c0c4885254110678abec855980e618f",
+      "published_sha256": "c4e351186789eb820bdbdde2b4ae91d77c0c4885254110678abec855980e618f",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    },
+    {
+      "file": "data/oauth11-executions.json",
+      "source_sha256": "b3a99ef9a9f71829f646328e4185d9761d7a138a3ca59c2415cc26bc58c42af9",
+      "published_sha256": "b3a99ef9a9f71829f646328e4185d9761d7a138a3ca59c2415cc26bc58c42af9",
+      "transform": "Filesystem paths only; numbers, booleans and HTTP(S) URLs unchanged."
+    }
+  ],
+  "scope": "Canonical corrected series only. Pre-review measurements and source versions retained in local delivery history; not substituted into tables."
+}

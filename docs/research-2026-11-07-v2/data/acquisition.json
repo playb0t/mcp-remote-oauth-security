@@ -1,0 +1,352 @@
+[
+  {
+    "version": "0.14.3",
+    "registry_snapshot_sha256": "7edef2f3edfce962597adf88596ac07f6127dd524e373709ef075ab409ec946c",
+    "dist_integrity": "sha512-M8eMA+LQIYbVNpntDhbCzFYNxwF9O9KozOuDxOrGTtRXbHRq/m4NuFZ6892hmJcU4Zhv4qPfpxrXyG2FPWNMKg==",
+    "integrity_matches": true,
+    "tarball_sha256": "f4ab0e33b38b24fff6a8b3234f9d683e47995ca44f3186481716d444836f7254",
+    "source_read_only": "<verified-local-archive>/0.14.3/package.tgz",
+    "files": [
+      {
+        "path": "dist/chunk-CGVEK4Z7.js",
+        "bytes": 1413594,
+        "sha256": "c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451"
+      },
+      {
+        "path": "dist/chunk-MLKGABMK.js",
+        "bytes": 191,
+        "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+      },
+      {
+        "path": "dist/client.js",
+        "bytes": 5839,
+        "sha256": "f49f609ffb1be8889934e00326101836298f34deaa78c2cb55057b2030b939bb"
+      },
+      {
+        "path": "dist/proxy.js",
+        "bytes": 515850,
+        "sha256": "db2c09216a1d394d425ecdebb6386b5c435ef8c51c08a8db19a15360f60c3b4a"
+      },
+      {
+        "path": "dist/webapi-WW3GGD26.js",
+        "bytes": 125387,
+        "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2161,
+        "sha256": "7f1705bd2699b69515127ae3a140ad5d24d7d17ec0cbfe8c1fd3d8d9e12a22b0"
+      },
+      {
+        "path": "dist/client.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      },
+      {
+        "path": "dist/proxy.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      }
+    ]
+  },
+  {
+    "version": "0.15.1",
+    "registry_snapshot_sha256": "7edef2f3edfce962597adf88596ac07f6127dd524e373709ef075ab409ec946c",
+    "dist_integrity": "sha512-znJhxnoQZTDx9AieHZrRYs8YqWKpyH1SKyFEFnMTMDUPpx6r9dSc/L4lKf18DdWMQqKpbwWbfIZfyiVg2RSXzg==",
+    "integrity_matches": true,
+    "tarball_sha256": "45aa7ae3c2ad1b51383c1ddce67f6fd26efbbe6637669e8f4597abe37bb87c05",
+    "source_read_only": "<verified-local-archive>/0.15.1/package.tgz",
+    "files": [
+      {
+        "path": "dist/chunk-KJCT2FXL.js",
+        "bytes": 1420822,
+        "sha256": "bd626c01947857ba2cb5f347659f8d6db7d99827732a187660bd2582741e4bf0"
+      },
+      {
+        "path": "dist/chunk-MLKGABMK.js",
+        "bytes": 191,
+        "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+      },
+      {
+        "path": "dist/client.js",
+        "bytes": 5945,
+        "sha256": "6c805d1402139e9db0e76b572ed932adf01ef894165b016002b33a6f18eeb183"
+      },
+      {
+        "path": "dist/proxy.js",
+        "bytes": 516333,
+        "sha256": "4548f6f908477c5609ced817a2301b77fcda94cd154a4b9ca764cfd49fbf691c"
+      },
+      {
+        "path": "dist/webapi-WW3GGD26.js",
+        "bytes": 125387,
+        "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2161,
+        "sha256": "0cfe09a27a6ba612bf9404c81ccccb31ea96ddcab7467ab428274d08b0756211"
+      },
+      {
+        "path": "dist/client.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      },
+      {
+        "path": "dist/proxy.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      }
+    ]
+  },
+  {
+    "version": "0.15.2",
+    "registry_snapshot_sha256": "7edef2f3edfce962597adf88596ac07f6127dd524e373709ef075ab409ec946c",
+    "dist_integrity": "sha512-3PrXMgjJew6xbZH21D7AbtOoHwhvjWt1IY6wepHjKTZLPSkTPifdMVBFuoxsuF6WK6nUlZIgpSj5o5NscJ+XXw==",
+    "integrity_matches": true,
+    "tarball_sha256": "364a418993680ee0385baafe807f4f74ce72a4d6165dfe96c2d39dd08a8d74ff",
+    "source_read_only": "<verified-local-archive>/0.15.2/package.tgz",
+    "files": [
+      {
+        "path": "dist/chunk-MLKGABMK.js",
+        "bytes": 191,
+        "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+      },
+      {
+        "path": "dist/chunk-UZ6Y4QJH.js",
+        "bytes": 1420855,
+        "sha256": "0e90204dfcf5f7892e119cf3d2ef451531a56355e1785f9b575dd8d8d58a883d"
+      },
+      {
+        "path": "dist/client.js",
+        "bytes": 5945,
+        "sha256": "f594f2d55b0e705fd3b13f24e8a58a573dce61d18baf25e45d1eebe842dac48c"
+      },
+      {
+        "path": "dist/proxy.js",
+        "bytes": 516333,
+        "sha256": "975e794543db003faa54dd2c7b58ecfbdf2df9c6078e2d5aa077fce3f373dd59"
+      },
+      {
+        "path": "dist/webapi-WW3GGD26.js",
+        "bytes": 125387,
+        "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2161,
+        "sha256": "18346a61cbf130f304985abb3e7e461560a29a04d3f7ae6436a2cc3965b30a5b"
+      },
+      {
+        "path": "dist/client.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      },
+      {
+        "path": "dist/proxy.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      }
+    ]
+  },
+  {
+    "version": "0.16.0",
+    "registry_snapshot_sha256": "7edef2f3edfce962597adf88596ac07f6127dd524e373709ef075ab409ec946c",
+    "dist_integrity": "sha512-LvEbfF8fEjDKPoD+9ELThgaBPAThiq/pEBUfUXmlAZ1oxRiduP+dJ3NQvsaiFbWSoNqfKFoan49i3x9HYvD27g==",
+    "integrity_matches": true,
+    "tarball_sha256": "72564c80fcfe6e15c459900ec796a7dc9ed7887f2c915076e3bd050e62ed27ea",
+    "source_read_only": "<verified-local-archive>/0.16.0/package.tgz",
+    "files": [
+      {
+        "path": "dist/chunk-K6DREQAS.js",
+        "bytes": 1421913,
+        "sha256": "8b429f3fbbbba7471249d70f8ff8637c1b0c1f3766a4ae0412ffeaf26c82ccac"
+      },
+      {
+        "path": "dist/chunk-MLKGABMK.js",
+        "bytes": 191,
+        "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+      },
+      {
+        "path": "dist/client.js",
+        "bytes": 5999,
+        "sha256": "f202d1341a8e8ac21be2a00d8df481797b768d2ad6c427fa2a9124c3a3c17571"
+      },
+      {
+        "path": "dist/proxy.js",
+        "bytes": 516387,
+        "sha256": "9f4e2f293f41df6869aa91af0095f06cd36ac8480f828b77473dea220f044943"
+      },
+      {
+        "path": "dist/webapi-WW3GGD26.js",
+        "bytes": 125387,
+        "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2161,
+        "sha256": "7dec5bbf69f7ecab39b11e13ab3c32ac19ffc0f1956a3fa04a594831fc1b0d5d"
+      },
+      {
+        "path": "dist/client.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      },
+      {
+        "path": "dist/proxy.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      }
+    ]
+  },
+  {
+    "version": "0.16.3",
+    "registry_snapshot_sha256": "7edef2f3edfce962597adf88596ac07f6127dd524e373709ef075ab409ec946c",
+    "dist_integrity": "sha512-tI77rAor67nYU++kT9+d3p67ndMuWNiep8Gc3rvRsM5WU7Ie0jiXWC4vHX9kuJXB7NaJOd+tdUSUeH+eK2lyQg==",
+    "integrity_matches": true,
+    "tarball_sha256": "3aa2cd2271b4d06a58b43cc0c16d843d999ffe8bc3ec38f4ec81a3fae87eb134",
+    "source_read_only": "<verified-local-archive>/0.16.3/package.tgz",
+    "files": [
+      {
+        "path": "dist/chunk-MLKGABMK.js",
+        "bytes": 191,
+        "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+      },
+      {
+        "path": "dist/chunk-VBHEG6AN.js",
+        "bytes": 1636640,
+        "sha256": "9694ce58c4fe3cb7c825f6e56ce0bbe9120351d10339e1459a8081dec076ef63"
+      },
+      {
+        "path": "dist/client.js",
+        "bytes": 5999,
+        "sha256": "5402947819be45d329f34b66d8559382cc40b346acdcc727ea6ec4745b423b3f"
+      },
+      {
+        "path": "dist/proxy.js",
+        "bytes": 516387,
+        "sha256": "08174a5c750f3b791f7872483888b52473472376776b8a241a8e8783cfa79c2b"
+      },
+      {
+        "path": "dist/webapi-WW3GGD26.js",
+        "bytes": 125387,
+        "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2161,
+        "sha256": "c6af5fef1effad2155efe0cc5a74cdbf6ed65e51d381233f609becf8d2daeb06"
+      },
+      {
+        "path": "dist/client.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      },
+      {
+        "path": "dist/proxy.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      }
+    ]
+  },
+  {
+    "version": "0.16.4",
+    "registry_snapshot_sha256": "7edef2f3edfce962597adf88596ac07f6127dd524e373709ef075ab409ec946c",
+    "dist_integrity": "sha512-0SEmhyLkV8qgDc1li1rpWtUaV0jn3D8+ykg/DY7CRwb2J8fMLursxMXOVay7eb7A51wPQJTDtUefkvPajzIhFA==",
+    "integrity_matches": true,
+    "tarball_sha256": "989a7376157c6023496b0dda954cf9a00486431161e250d89774dfa2fb51b2d5",
+    "source_read_only": "<verified-local-archive>/0.16.4/package.tgz",
+    "files": [
+      {
+        "path": "dist/chunk-DFL3QVEJ.js",
+        "bytes": 1673634,
+        "sha256": "b0a3bac69721649db5509aaaf204dacf4343a1cf88599e28ae62025ed494d08a"
+      },
+      {
+        "path": "dist/chunk-MLKGABMK.js",
+        "bytes": 191,
+        "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+      },
+      {
+        "path": "dist/client.js",
+        "bytes": 5999,
+        "sha256": "60b629a115e4da06a0f0b7cdd4c30b3f64cdd21a829b440db4be968023a85b10"
+      },
+      {
+        "path": "dist/proxy.js",
+        "bytes": 546326,
+        "sha256": "34e64aea823b449f980aa7a358cc4a02371230d1d767bbeaa6036a8eb9557e0b"
+      },
+      {
+        "path": "dist/webapi-WW3GGD26.js",
+        "bytes": 125387,
+        "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2161,
+        "sha256": "dfa480040056902d7879f89a895dbe88e22b4c674a73802bb01c2dee1eb1a76e"
+      },
+      {
+        "path": "dist/client.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      },
+      {
+        "path": "dist/proxy.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      }
+    ]
+  },
+  {
+    "version": "0.16.5",
+    "registry_snapshot_sha256": "7edef2f3edfce962597adf88596ac07f6127dd524e373709ef075ab409ec946c",
+    "dist_integrity": "sha512-HOvAySIYs9hojTHDWUJtKpx1RFi9OHLdJewdkwtOPuybq0uNmYrfeWGBH4mZ1rrIxwkFLJ+7823/96+KbC/4Og==",
+    "integrity_matches": true,
+    "tarball_sha256": "82ef9cc8c2aca21f60a7551374315d281cf428b4389d7f179fb5893ddf425b2b",
+    "source_read_only": "<verified-local-archive>/0.16.5/package.tgz",
+    "files": [
+      {
+        "path": "dist/chunk-EL3EX2HH.js",
+        "bytes": 1687433,
+        "sha256": "98dff907124c7d353d6717dcb351383aaacb0a3a063cd4114cc64191e4550d26"
+      },
+      {
+        "path": "dist/chunk-MLKGABMK.js",
+        "bytes": 191,
+        "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+      },
+      {
+        "path": "dist/client.js",
+        "bytes": 5999,
+        "sha256": "a7305056ef08fa7b3320cfb3190bcacee1b02b54c2acdfabf7a09cffa8d83564"
+      },
+      {
+        "path": "dist/proxy.js",
+        "bytes": 546326,
+        "sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61"
+      },
+      {
+        "path": "dist/webapi-WW3GGD26.js",
+        "bytes": 125387,
+        "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2161,
+        "sha256": "b9a655eea1b90b9ba0cc8e4e938c1d4c537202aa0260e6abe54ce0e7c0e6cac4"
+      },
+      {
+        "path": "dist/client.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      },
+      {
+        "path": "dist/proxy.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      }
+    ]
+  }
+]

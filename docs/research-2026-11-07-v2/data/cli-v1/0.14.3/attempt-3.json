@@ -1,0 +1,717 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+  "events": [
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "GET",
+      "path": "/mcp",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "canary",
+      "method": "GET",
+      "path": "/resource-metadata",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "canary",
+      "method": "GET",
+      "path": "/.well-known/oauth-authorization-server",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "initialize"
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "notifications/initialized"
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "GET",
+      "path": "/mcp",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "initialize"
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "canary",
+      "method": "GET",
+      "path": "/resource-metadata",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "canary",
+      "method": "GET",
+      "path": "/.well-known/oauth-authorization-server",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "notifications/initialized"
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "GET",
+      "path": "/mcp",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "tools/list"
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "canary",
+      "method": "GET",
+      "path": "/resource-metadata",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "canary",
+      "method": "GET",
+      "path": "/.well-known/oauth-authorization-server",
+      "authorization_present": false
+    },
+    {
+      "case": "header-selected-canary",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "tools/call"
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "GET",
+      "path": "/mcp",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/redirect",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/resource-metadata",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/.well-known/oauth-authorization-server",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "initialize"
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "notifications/initialized"
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "GET",
+      "path": "/mcp",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/redirect",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "initialize"
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/resource-metadata",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/.well-known/oauth-authorization-server",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "notifications/initialized"
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "GET",
+      "path": "/mcp",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "tools/list"
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/redirect",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/resource-metadata",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "GET",
+      "path": "/.well-known/oauth-authorization-server",
+      "authorization_present": false
+    },
+    {
+      "case": "header-redirect",
+      "role": "mock-MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "rpc_method": "tools/call"
+    },
+    {
+      "case": "header-redirect",
+      "role": "canary",
+      "method": "POST",
+      "path": "/token",
+      "authorization_present": true
+    }
+  ],
+  "captures": [
+    {
+      "case": "header-selected-canary",
+      "kind": "challenge",
+      "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/resource-metadata\""
+    },
+    {
+      "case": "header-selected-canary",
+      "kind": "PRM",
+      "body": {
+        "resource": "http://127.0.0.1:64500/mcp",
+        "authorization_servers": [
+          "http://127.0.0.1:64499"
+        ]
+      }
+    },
+    {
+      "case": "header-selected-canary",
+      "kind": "AS",
+      "body": {
+        "issuer": "http://127.0.0.1:64499",
+        "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+        "token_endpoint": "http://127.0.0.1:64499/token",
+        "response_types_supported": [
+          "code"
+        ],
+        "grant_types_supported": [
+          "authorization_code"
+        ]
+      }
+    },
+    {
+      "case": "header-selected-canary",
+      "kind": "challenge",
+      "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/resource-metadata\""
+    },
+    {
+      "case": "header-selected-canary",
+      "kind": "PRM",
+      "body": {
+        "resource": "http://127.0.0.1:64500/mcp",
+        "authorization_servers": [
+          "http://127.0.0.1:64499"
+        ]
+      }
+    },
+    {
+      "case": "header-selected-canary",
+      "kind": "AS",
+      "body": {
+        "issuer": "http://127.0.0.1:64499",
+        "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+        "token_endpoint": "http://127.0.0.1:64499/token",
+        "response_types_supported": [
+          "code"
+        ],
+        "grant_types_supported": [
+          "authorization_code"
+        ]
+      }
+    },
+    {
+      "case": "header-selected-canary",
+      "kind": "challenge",
+      "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/resource-metadata\""
+    },
+    {
+      "case": "header-selected-canary",
+      "kind": "PRM",
+      "body": {
+        "resource": "http://127.0.0.1:64500/mcp",
+        "authorization_servers": [
+          "http://127.0.0.1:64499"
+        ]
+      }
+    },
+    {
+      "case": "header-selected-canary",
+      "kind": "AS",
+      "body": {
+        "issuer": "http://127.0.0.1:64499",
+        "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+        "token_endpoint": "http://127.0.0.1:64499/token",
+        "response_types_supported": [
+          "code"
+        ],
+        "grant_types_supported": [
+          "authorization_code"
+        ]
+      }
+    },
+    {
+      "case": "header-redirect",
+      "kind": "challenge",
+      "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/redirect\""
+    },
+    {
+      "case": "header-redirect",
+      "kind": "PRM",
+      "body": {
+        "resource": "http://127.0.0.1:64500/mcp",
+        "authorization_servers": [
+          "http://127.0.0.1:64499"
+        ]
+      }
+    },
+    {
+      "case": "header-redirect",
+      "kind": "AS",
+      "body": {
+        "issuer": "http://127.0.0.1:64499",
+        "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+        "token_endpoint": "http://127.0.0.1:64499/token",
+        "response_types_supported": [
+          "code"
+        ],
+        "grant_types_supported": [
+          "authorization_code"
+        ]
+      }
+    },
+    {
+      "case": "header-redirect",
+      "kind": "challenge",
+      "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/redirect\""
+    },
+    {
+      "case": "header-redirect",
+      "kind": "PRM",
+      "body": {
+        "resource": "http://127.0.0.1:64500/mcp",
+        "authorization_servers": [
+          "http://127.0.0.1:64499"
+        ]
+      }
+    },
+    {
+      "case": "header-redirect",
+      "kind": "AS",
+      "body": {
+        "issuer": "http://127.0.0.1:64499",
+        "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+        "token_endpoint": "http://127.0.0.1:64499/token",
+        "response_types_supported": [
+          "code"
+        ],
+        "grant_types_supported": [
+          "authorization_code"
+        ]
+      }
+    },
+    {
+      "case": "header-redirect",
+      "kind": "challenge",
+      "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/redirect\""
+    },
+    {
+      "case": "header-redirect",
+      "kind": "PRM",
+      "body": {
+        "resource": "http://127.0.0.1:64500/mcp",
+        "authorization_servers": [
+          "http://127.0.0.1:64499"
+        ]
+      }
+    },
+    {
+      "case": "header-redirect",
+      "kind": "AS",
+      "body": {
+        "issuer": "http://127.0.0.1:64499",
+        "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+        "token_endpoint": "http://127.0.0.1:64499/token",
+        "response_types_supported": [
+          "code"
+        ],
+        "grant_types_supported": [
+          "authorization_code"
+        ]
+      }
+    },
+    {
+      "case": "header-redirect",
+      "kind": "AS",
+      "body": {
+        "issuer": "http://127.0.0.1:64499",
+        "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+        "token_endpoint": "http://127.0.0.1:64499/token",
+        "response_types_supported": [
+          "code"
+        ],
+        "grant_types_supported": [
+          "authorization_code"
+        ]
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "header-selected-canary",
+      "passed": true,
+      "trace": [
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "GET",
+          "path": "/mcp",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/resource-metadata",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "initialize"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "notifications/initialized"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "GET",
+          "path": "/mcp",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "initialize"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/resource-metadata",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "notifications/initialized"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "GET",
+          "path": "/mcp",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "tools/list"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/resource-metadata",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "tools/call"
+        }
+      ],
+      "stdio_replies": [
+        {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "result": {
+            "protocolVersion": "2025-11-25",
+            "capabilities": {
+              "tools": {}
+            },
+            "serverInfo": {
+              "name": "synthetic-fixture",
+              "version": "1"
+            }
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "id": 2,
+          "result": {
+            "tools": [
+              {
+                "name": "fixture_probe",
+                "inputSchema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            ]
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "id": 3,
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "fixture-ok"
+              }
+            ]
+          }
+        }
+      ],
+      "captures": [
+        {
+          "case": "header-selected-canary",
+          "kind": "challenge",
+          "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/resource-metadata\""
+        },
+        {
+          "case": "header-selected-canary",
+          "kind": "PRM",
+          "body": {
+            "resource": "http://127.0.0.1:64500/mcp",
+            "authorization_servers": [
+              "http://127.0.0.1:64499"
+            ]
+          }
+        },
+        {
+          "case": "header-selected-canary",
+          "kind": "AS",
+          "body": {
+            "issuer": "http://127.0.0.1:64499",
+            "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+            "token_endpoint": "http://127.0.0.1:64499/token",
+            "response_types_supported": [
+              "code"
+            ],
+            "grant_types_supported": [
+              "authorization_code"
+            ]
+          }
+        },
+        {
+          "case": "header-selected-canary",
+          "kind": "challenge",
+          "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/resource-metadata\""
+        },
+        {
+          "case": "header-selected-canary",
+          "kind": "PRM",
+          "body": {
+            "resource": "http://127.0.0.1:64500/mcp",
+            "authorization_servers": [
+              "http://127.0.0.1:64499"
+            ]
+          }
+        },
+        {
+          "case": "header-selected-canary",
+          "kind": "AS",
+          "body": {
+            "issuer": "http://127.0.0.1:64499",
+            "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+            "token_endpoint": "http://127.0.0.1:64499/token",
+            "response_types_supported": [
+              "code"
+            ],
+            "grant_types_supported": [
+              "authorization_code"
+            ]
+          }
+        },
+        {
+          "case": "header-selected-canary",
+          "kind": "challenge",
+          "header": "Bearer resource_metadata=\"http://127.0.0.1:64499/resource-metadata\""
+        },
+        {
+          "case": "header-selected-canary",
+          "kind": "PRM",
+          "body": {
+            "resource": "http://127.0.0.1:64500/mcp",
+            "authorization_servers": [
+              "http://127.0.0.1:64499"
+            ]
+          }
+        },
+        {
+          "case": "header-selected-canary",
+          "kind": "AS",
+          "body": {
+            "issuer": "http://127.0.0.1:64499",
+            "authorization_endpoint": "http://127.0.0.1:64499/authorize",
+            "token_endpoint": "http://127.0.0.1:64499/token",
+            "response_types_supported": [
+              "code"
+            ],
+            "grant_types_supported": [
+              "authorization_code"
+            ]
+          }
+        }
+      ],
+      "stderr": "[30104] Using transport strategy: http-only\n[30104] Using static OAuth client information from string\n[30104] Using the OAuth client_credentials grant; no browser will be opened and no user will be asked\n[30104] Using callback port derived from the server URL: 28860\n[30104] Discovering OAuth server configuration...\n[30104] Discovered authorization server: http://127.0.0.1:64499\n[30104] [30104] Connecting to remote server: http://127.0.0.1:64500/mcp\n[30104] Using transport strategy: http-only\n[30104] Connected to remote server using StreamableHTTPClientTransport\n[30104] Local STDIO server running\n[30104] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport\n[30104] Press Ctrl+C to exit\n[30104] [Local→Remote] initialize\n[30104] {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"initialize\",\n  \"params\": {\n    \"protocolVersion\": \"2025-11-25\",\n    \"capabilities\": {},\n    \"clientInfo\": {\n      \"name\": \"evidence-stdio-client (via mcp-remote 0.14.3)\",\n      \"version\": \"1\"\n    }\n  }\n}\n[30104] [Remote→Local] 1\n[30104] [Local→Remote] notifications/initialized\n[30104] [Local→Remote] tools/list\n[mcp-sdk] SEP-2352: stored OAuth credential has no 'issuer' stamp (pre-upgrade storage or provider not round-tripping the value). SEP-2352 isolation is inactive for this read; ensure your provider round-trips the issuer field.\n[30104] [Remote→Local] 2\n[30104] [Local→Remote] tools/call\n[mcp-sdk] SEP-2352: stored OAuth credential has no 'issuer' stamp (pre-upgrade storage or provider not round-tripping the value). SEP-2352 isolation is inactive for this read; ensure your provider round-trips the issuer field.\n[30104] [Remote→Local] 3\n",
+      "child_environment": "Minimal fixture-only environment; no operator credentials inherited",
+      "configuration": {
+        "transport": "http-only",
+        "client_credentials": true,
+        "synthetic_client_info": true
+      },
+      "exit": {
+        "code": 0,
+        "signal": null
+      }
+    }
+  ]
+}

@@ -75,16 +75,16 @@
     },
     {
       "file": "release_checks.applied.cjs",
-      "source": "accepted-bench/recovered/audit/release_checks.cjs",
-      "source_sha256": "3fa416da426ffa3cbb9ccdeddb11c0112d423f57a7e58fe07b4df69a4d0b8999",
-      "published_sha256": "3fa416da426ffa3cbb9ccdeddb11c0112d423f57a7e58fe07b4df69a4d0b8999",
-      "adaptation": "none; exact six-version applied checker"
+      "source": "recorded-0.16.5/recovered/audit/release_checks.cjs",
+      "source_sha256": "0087efe59031b2597f4ac25d5771060610d960d6d5f40b3fa467e9c5efe2cc9d",
+      "published_sha256": "0087efe59031b2597f4ac25d5771060610d960d6d5f40b3fa467e9c5efe2cc9d",
+      "adaptation": "exact seven-version applied checker"
     },
     {
       "file": "release_checks.cjs",
-      "source": "accepted-bench/recovered/audit/release_checks.cjs",
-      "source_sha256": "3fa416da426ffa3cbb9ccdeddb11c0112d423f57a7e58fe07b4df69a4d0b8999",
-      "published_sha256": "8b34e28340af770d80d7ef2377bae03b611cf4479f9dcf60fac8d920fd23f11b",
+      "source": "recorded-0.16.5/recovered/audit/release_checks.cjs",
+      "source_sha256": "0087efe59031b2597f4ac25d5771060610d960d6d5f40b3fa467e9c5efe2cc9d",
+      "published_sha256": "ec296e3a19787d10861ce250d13c3307af26f352bc9f48479d48cc760fff76b5",
       "adaptation": "normalizer require path only"
     },
     {
@@ -105,29 +105,29 @@
       "file": "verify_stdio.mjs",
       "source": "accepted-bench/cli/0.16.3/verify_stdio.mjs",
       "source_sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
-      "published_sha256": "61876f04452bce0aa90060523c69b601616b33f5b420ba07fc8dc7db60405284",
-      "adaptation": "explicit runtime/expected/output/version bindings and output directory preparation; body/assertions retained"
+      "published_sha256": "60aa30a61a6e259c1f08ae4325daee97425e1733e8f8fc3c77a5180c43cc4e6f",
+      "adaptation": "explicit runtime/expected/output/version bindings and output directory preparation; body/assertions retained; target version input set extended to0.16.5, assertions and fixture logic retained"
     },
     {
       "file": "f08-cli.mjs",
       "source": "accepted-bench/procedures/f08-cli.mjs",
       "source_sha256": "d29a24d2aa654d9db0decf971fe6134e17899e549cec929c0343fd3e17f1b5c3",
-      "published_sha256": "720743acdec6d147beaaf3f449bfea836bb99cf4a84aada5784801593e16528c",
-      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246"
+      "published_sha256": "cc602f58c3bb2d0f0a20e5272fb86a7f706855c73081ce6495720aad66d494c4",
+      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246; target version input set extended to0.16.5, assertions and fixture logic retained"
     },
     {
       "file": "f08-method.mjs",
       "source": "accepted-bench/procedures/f08-method.mjs",
       "source_sha256": "d7f57d7b482bd0f23430ac14582f7c12c5e1b53532bff2d3dbd891024b33e6db",
-      "published_sha256": "054c770f551d0930e794be72274877b2cc04736a9d0cbe5d4de28c6e90be9fef",
-      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246"
+      "published_sha256": "ac742eac306e8d4cbae520938ee2d75a0c13930722b68541959b21a49fa890e6",
+      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246; target version input set extended to0.16.5, assertions and fixture logic retained"
     },
     {
       "file": "f11.mjs",
       "source": "accepted-bench/procedures/f11.mjs",
       "source_sha256": "fe0b8d4dc4089baa1fb9e041c9deece629b90f31db2bfa284f681ead848280f1",
-      "published_sha256": "d2cd0321f02b2eec48c13accd1c61e593eb3311e07144a1c8334c0551972792b",
-      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246"
+      "published_sha256": "344e5cb2886b7afbddb8b3a5de570df7b1677aabc5138098cae8e77a97081a65",
+      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246; target version input set extended to0.16.5, assertions and fixture logic retained"
     },
     {
       "file": "inspect.recorded.cjs",
@@ -140,15 +140,22 @@
       "file": "inspect.cjs",
       "source": "accepted-bench/procedures/inspect.cjs",
       "source_sha256": "3e7f59c8ffa2b8d025e145a9dae5d357c18cecac249600721b67042579812ba1",
-      "published_sha256": "1aa63fca36afe637eae411b3fc28f352784dca2283215fbf9f6348758991d886",
-      "adaptation": "explicit trusted TypeScript/source root; source-parsing algorithm and function list retained"
+      "published_sha256": "8a9b6a2ef7c316a928d67747d10ea6bff29344bba44b833fe408c5c21d0ee85b",
+      "adaptation": "explicit trusted TypeScript/source root; source-parsing algorithm and function list retained; target version input set extended to0.16.5, assertions and fixture logic retained"
     },
     {
       "file": "prepare_runtime.cjs",
       "source": "published-2026-11-03/procedures/prepare_runtime.cjs",
       "source_sha256": "6477b49155e4ad38f32abd7a05b21299da1f248370ddbb6aa5d2ea0a31edf39f",
-      "published_sha256": "177964e599fb32fa71064fb49b2e084d85699c1f3c3f870df768896ed06e7b04",
-      "adaptation": "version allowlist only; filesystem preparation does not execute target code"
+      "published_sha256": "b4ce2d54abfa139df98151a5793797202051da4daa0bb2baa3d744c603a2381d",
+      "adaptation": "version allowlist only; filesystem preparation does not execute target code; target version input set extended to0.16.5, assertions and fixture logic retained"
+    },
+    {
+      "file": "recorded/verify_stdio-0.16.5.mjs",
+      "source": "recorded-0.16.5/cli/attempt-1/verify_stdio.mjs",
+      "source_sha256": "1caddff0839847aa58d51df13c4f8b674224fd5a96bba457763d960adde3723b",
+      "published_sha256": "1caddff0839847aa58d51df13c4f8b674224fd5a96bba457763d960adde3723b",
+      "adaptation": "none; exact version copy; all three actual attempts stopped at original assertion"
     }
   ],
   "diff_policy": "Unified diffs compare normalized-LF text projections; distributed recorded/original bytes remain unchanged.",
@@ -159,7 +166,28 @@
     {
       "file": "compare_distribution.cjs",
       "role": "Static five-helper and SDK section comparison; no target evaluation",
-      "sha256": "ba3234d729a3a4c7aa8c17b0262265a5e5d33993e7a500a898af402b705686b2"
+      "sha256": "38034f632d31552fc22ac5b3478731c020f193a8db550eeb4a4759ec1b09224d"
     }
-  ]
+  ],
+  "additional_recorded_sources": [
+    {
+      "procedure": "f08-cli.mjs",
+      "source_sha256": "cf9777ed8a6f21ae699ba9d952b608efad204a7f6dec77e35874d66257b356fd",
+      "portable_diff": "f08-cli.mjs.0165-portable.diff",
+      "adaptation": "path/version/bundle bindings only; input loop set extended in portable variant"
+    },
+    {
+      "procedure": "f08-method.mjs",
+      "source_sha256": "910732d72998cceb7ada4cb322bd951f16ec773a40f27ba317a32cc0ba0d815d",
+      "portable_diff": "f08-method.mjs.0165-portable.diff",
+      "adaptation": "path/version/bundle bindings only; input loop set extended in portable variant"
+    },
+    {
+      "procedure": "f11.mjs",
+      "source_sha256": "aa3eb71914a53047e34726c8c40385d99b1e617083e584169c6baf0c592b1146",
+      "portable_diff": "f11.mjs.0165-portable.diff",
+      "adaptation": "path/version/bundle bindings only; input loop set extended in portable variant"
+    }
+  ],
+  "latest_original_runtime_scope": "0.16.5 originalCLI3assertion stops; seven-version helper84checks; F08/F11 controls; portable runtime copies remain syntax-checked, not used as measured original scripts."
 }

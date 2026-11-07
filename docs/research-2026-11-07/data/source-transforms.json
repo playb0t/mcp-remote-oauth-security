@@ -50,6 +50,30 @@
       "public_record_index": 1,
       "transformation": "Parse JSON record, normalize machine filesystem paths, preserve timestamp/HTTP URLs/numbers/booleans/fixture parameters. Authorization values were not captured.",
       "public_sha256": "3880ca7443d29e56e201f9709d56bf10767f3b3e984ca4da3f7f6bd8ede67954"
+    },
+    {
+      "source": "<recorded-0.16.5-root>/cli/attempt-1/runs/cli/logs/raw_trace.log",
+      "source_sha256": "203c6b1c6c34298fa90408fa1841c18f09c58fd663268c145b90b9b4f32a8ae6",
+      "public_file": "data/raw/raw_trace-0.16.5.log",
+      "public_record_index": 0,
+      "transformation": "JSON projection and machine-path normalization only; all HTTP URLs/numbers/booleans preserved.",
+      "public_sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
+    },
+    {
+      "source": "<recorded-0.16.5-root>/cli/attempt-2/runs/cli/logs/raw_trace.log",
+      "source_sha256": "818592db64072a01fb9e377cd3358d0d978e0554d54db8e7d7da8710f1eb1b16",
+      "public_file": "data/raw/raw_trace-0.16.5.log",
+      "public_record_index": 1,
+      "transformation": "JSON projection and machine-path normalization only; all HTTP URLs/numbers/booleans preserved.",
+      "public_sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
+    },
+    {
+      "source": "<recorded-0.16.5-root>/cli/attempt-3/runs/cli/logs/raw_trace.log",
+      "source_sha256": "08dc0603279e155b59711e7087bec1fa89d62c1b1ce6b3e48a20a19fd920b799",
+      "public_file": "data/raw/raw_trace-0.16.5.log",
+      "public_record_index": 2,
+      "transformation": "JSON projection and machine-path normalization only; all HTTP URLs/numbers/booleans preserved.",
+      "public_sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
     }
   ],
   "authorization_value_redactions": 0,
@@ -58,24 +82,77 @@
   "runtime_result_bindings": [
     {
       "public_file": "data/f08-cli-results.json",
-      "source": "<accepted-bench>/runs/F08-CLI-RESULTS.json",
-      "source_sha256": "c38edb513b2493c1fd9a52c9f177a0c6247ad3a6b29bb13db163ebceacdb3529",
-      "public_sha256": "9f1fc874bcd3f19e96fc0a0d9dd486ee3505045c0de22e98caf0b95f45b3f65b",
-      "selection": "The exact named hash in brief246; CLI/helper replay source remains separate."
+      "sources": [
+        {
+          "versions": [
+            "0.16.3",
+            "0.16.4"
+          ],
+          "source": "<accepted-bench>/runs/F08-CLI-RESULTS.json",
+          "source_sha256": "c38edb513b2493c1fd9a52c9f177a0c6247ad3a6b29bb13db163ebceacdb3529"
+        },
+        {
+          "versions": [
+            "0.16.5"
+          ],
+          "source": "<recorded-0.16.5-root>/runs/F08-CLI-RESULTS.json",
+          "source_sha256": "6a2f463b18950222cdc7fc79a9f40af6b0a6e4dc72e0f589817f22d3e4f13dc5"
+        }
+      ],
+      "public_sha256": "9074b1ac2a6b37ba9c599eaf5aca2cc471422b56fb3d4e63ef599849459a61a6",
+      "transformation": "Concatenate separately recorded per-version observations; only machine path normalization, no field/count/HTTP-URL changes."
     },
     {
       "public_file": "data/f08-method-results.json",
-      "source": "<accepted-bench>/runs/F08-METHOD-RESULTS.json",
-      "source_sha256": "9ee25546a671f67ddf07f72ea3cb0dfc64351ac3747979baf1a2a3f1d0beef77",
-      "public_sha256": "a9ec9992addf3231ace013a7be2943eba800b4d14c2966e4f8e90917e49b13d5",
-      "selection": "The exact named hash in brief246; CLI/helper replay source remains separate."
+      "sources": [
+        {
+          "versions": [
+            "0.16.3",
+            "0.16.4"
+          ],
+          "source": "<accepted-bench>/runs/F08-METHOD-RESULTS.json",
+          "source_sha256": "9ee25546a671f67ddf07f72ea3cb0dfc64351ac3747979baf1a2a3f1d0beef77"
+        },
+        {
+          "versions": [
+            "0.16.5"
+          ],
+          "source": "<recorded-0.16.5-root>/runs/F08-METHOD-RESULTS.json",
+          "source_sha256": "b4be10fd1b29d4ec817d745eadffe0e7be38974968ea9df2d2ad9958e3c0dea3"
+        }
+      ],
+      "public_sha256": "99d6e0e869d663e5af7228cd0ac0850d5b9e94fb9cdad025210cce79035bcfa9",
+      "transformation": "Concatenate separately recorded per-version observations; only machine path normalization, no field/count/HTTP-URL changes."
     },
     {
       "public_file": "data/f11-results.json",
-      "source": "<accepted-bench>/runs/F11-RESULTS.json",
-      "source_sha256": "e3c835730f6467d028ead4b4e922e33a69043e8867db480a209a16e78acb4054",
-      "public_sha256": "56ecd1a6234b14b89c2728849811a90d17466f5571519c735f4b925b4fdec6c3",
-      "selection": "The exact named hash in brief246; CLI/helper replay source remains separate."
+      "sources": [
+        {
+          "versions": [
+            "0.16.3",
+            "0.16.4"
+          ],
+          "source": "<accepted-bench>/runs/F11-RESULTS.json",
+          "source_sha256": "e3c835730f6467d028ead4b4e922e33a69043e8867db480a209a16e78acb4054"
+        },
+        {
+          "versions": [
+            "0.16.5"
+          ],
+          "source": "<recorded-0.16.5-root>/runs/F11-RESULTS.json",
+          "source_sha256": "6c4ea1567e13ed666027d511f1fe3202b3963690aefc525b91035b3d7581713e"
+        }
+      ],
+      "public_sha256": "5ccf59aeea7b7c2c77479c116d1bcb62dbbe57fc2cc473e8e871e195c0aba6b4",
+      "transformation": "Concatenate separately recorded per-version observations; only machine path normalization, no field/count/HTTP-URL changes."
     }
-  ]
+  ],
+  "runtime0165": {
+    "source": "<recorded-0.16.5-root>",
+    "procedure_adaptation_sha256": "36d566e147f169c9d025264d123a3a38dca9cf185458e27b47173e02d4c814e4",
+    "helper_source_sha256": "e317f4dc4367770b94353bcc79ca420ed3a8e797076452e2afb5ee5ae28da67f",
+    "setup_failure_source_sha256": "9d7e4d103561629f2cd2f6cc211ef783dcead0092d4b00b5682121383dd949ca",
+    "setup_failure_public_sha256": "1fee3d4121c9edb2ea339a51f6c4f36cd84fabcb4cfcc522bdeecb812e15d402",
+    "scope": "Original216+3Nov F08/F11 only; separate double-token follow-up excluded."
+  }
 }

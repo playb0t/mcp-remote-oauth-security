@@ -6,6 +6,26 @@
       "exit": 0
     },
     {
+      "file": "credential-destination-v2/auth-destination-v2.cjs",
+      "command": "node --check",
+      "exit": 0
+    },
+    {
+      "file": "credential-destination-v2/driver.mjs",
+      "command": "node --check",
+      "exit": 0
+    },
+    {
+      "file": "credential-destination-v2/harness-v2.mjs",
+      "command": "node --check",
+      "exit": 0
+    },
+    {
+      "file": "credential-destination-v2/test-criterion-v2.cjs",
+      "command": "node --check",
+      "exit": 0
+    },
+    {
       "file": "f08-cli.mjs",
       "command": "node --check",
       "exit": 0
@@ -61,6 +81,11 @@
       "exit": 0
     },
     {
+      "file": "recorded/verify_stdio-0.16.5.mjs",
+      "command": "node --check",
+      "exit": 0
+    },
+    {
       "file": "release_checks.applied.cjs",
       "command": "node --check",
       "exit": 0
@@ -96,7 +121,7 @@
   ],
   "release_outside_PINS_equal": true,
   "stdio_body_equal": true,
-  "static_inspect_function_hashes_matched": 48,
+  "static_inspect_function_hashes_matched": 64,
   "portable_target_runtime_rerun": false,
   "dependencies_installed": false,
   "recorder_compiled": false,

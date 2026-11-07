@@ -158,6 +158,81 @@
           "synthetic_bearer_received": false
         }
       ]
+    },
+    {
+      "version": "0.16.5",
+      "mode": "redirect-cross",
+      "resource_origin": "http://127.0.0.1:52867",
+      "canary_origin": "http://127.0.0.1:52866",
+      "result": "rejected",
+      "error": "Error: SSE error: Redirect to http://127.0.0.1:52866/sse not followed; use that URL as the endpoint if it is the intended server (redirectPolicy: 'same-origin')",
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.5",
+      "mode": "redirect-same",
+      "resource_origin": "http://127.0.0.1:52870",
+      "canary_origin": "http://127.0.0.1:52869",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/stream",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.5",
+      "mode": "endpoint-cross",
+      "resource_origin": "http://127.0.0.1:52874",
+      "canary_origin": "http://127.0.0.1:52873",
+      "result": "rejected",
+      "error": "Error: Endpoint origin does not match connection origin: http://127.0.0.1:52873",
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.5",
+      "mode": "no-token",
+      "resource_origin": "http://127.0.0.1:52878",
+      "canary_origin": "http://127.0.0.1:52877",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": false,
+          "synthetic_bearer_received": false
+        }
+      ]
     }
   ]
 }

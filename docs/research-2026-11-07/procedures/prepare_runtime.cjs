@@ -7,7 +7,7 @@ const [sourceArg,runtimeArg,...versions]=process.argv.slice(2);
 assert.ok(sourceArg&&runtimeArg&&versions.length,'Usage: node prepare_runtime.cjs SOURCE_ROOT RUNTIME_ROOT VERSION...');
 const sourceRoot=path.resolve(sourceArg),runtimeRoot=path.resolve(runtimeArg);
 for(const version of versions){
- assert.ok(['0.14.3','0.15.1','0.15.2','0.16.0','0.16.3','0.16.4'].includes(version),'Unsupported package version');
+ assert.ok(['0.14.3','0.15.1','0.15.2','0.16.0','0.16.3','0.16.4','0.16.5'].includes(version),'Unsupported package version');
  const src=path.join(sourceRoot,version,'package','dist');
  const dest=path.join(runtimeRoot,version);
  assert.ok(fs.statSync(src).isDirectory(),'Missing extracted package/dist');

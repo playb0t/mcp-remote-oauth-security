@@ -61,7 +61,8 @@
       "client_markers": 7,
       "identity_basis": "Verified0.16.5 archive markers, unchanged source dependency lock and explicit9-section distribution comparison",
       "distribution_comparison": "distribution-0.16.5.json",
-      "original_five_record_runtime_run": false
+      "original_five_record_runtime_run": true,
+      "runtime_outcome": "Three original CLI assertion stops; separate exact helper/F08/F11 results retained."
     }
   },
   "metadata_fallback": {

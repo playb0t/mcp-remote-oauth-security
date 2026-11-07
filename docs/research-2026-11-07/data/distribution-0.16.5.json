@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Source/distribution parsing only; original five-record runtime procedure not executed on candidate",
+  "scope": "Source/distribution comparison; original five-record runtime supplement recorded separately.",
   "baseline": "0.16.4",
   "version": "0.16.5",
   "baseline_summary": {
@@ -305,7 +305,16 @@
         "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
       }
     ],
-    "runtime_procedure216_executed": false,
-    "runtime_scope": "original five-record procedure, not separate private research"
+    "runtime_scope": "original five-record procedure, not separate private research",
+    "acquisition_preceded_runtime": true
+  },
+  "runtime_supplement": {
+    "original_cli_attempts": 3,
+    "completed_cli_attempts": 0,
+    "original_assertion_stops": 3,
+    "helper_checks_on_version": 12,
+    "F08_CLI_cases": 3,
+    "F08_method_cases": 4,
+    "F11_modes": 4
   }
 }

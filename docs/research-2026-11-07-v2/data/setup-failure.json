@@ -1,0 +1,6 @@
+{
+  "scope": "own new close-timeout control only; not target run",
+  "cause": "HTTP request used literal backslash CRLF escapes, so handler never received a valid request",
+  "action": "Stopped exact own test Node process; corrected CRLF and added bounded request deadline",
+  "target_series_started_after_fix": false
+}

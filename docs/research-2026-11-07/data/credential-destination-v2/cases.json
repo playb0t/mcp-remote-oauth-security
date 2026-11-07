@@ -1,0 +1,79 @@
+[
+  {
+    "id": "expected-token-basic",
+    "mode": "cli",
+    "method": "client_secret_basic",
+    "expected": "PASS"
+  },
+  {
+    "id": "foreign-issuer-basic",
+    "mode": "cli",
+    "method": "client_secret_basic",
+    "selectB": true,
+    "expected": "FAIL"
+  },
+  {
+    "id": "foreign-issuer-post",
+    "mode": "cli",
+    "selectB": true,
+    "expected": "FAIL"
+  },
+  {
+    "id": "redirect-secret-post307",
+    "mode": "cli",
+    "redirect": 307,
+    "cross": true,
+    "expected": "FAIL"
+  },
+  {
+    "id": "redirect-basic-header-stripped",
+    "mode": "cli",
+    "method": "client_secret_basic",
+    "redirect": 307,
+    "cross": true,
+    "expected": "PASS"
+  },
+  {
+    "id": "redirect-post302-no-body",
+    "mode": "cli",
+    "redirect": 302,
+    "cross": true,
+    "expected": "PASS"
+  },
+  {
+    "id": "SDK-issuer-block",
+    "mode": "sdk",
+    "selectB": true,
+    "expected": "PASS"
+  },
+  {
+    "id": "SDK-redirect-block",
+    "mode": "sdk",
+    "redirect": 307,
+    "cross": true,
+    "expected": "PASS"
+  },
+  {
+    "id": "same-origin-basic307",
+    "mode": "cli",
+    "method": "client_secret_basic",
+    "redirect": 307,
+    "cross": false,
+    "expected": "PASS"
+  },
+  {
+    "id": "device-code-body307-basic",
+    "mode": "cli-device",
+    "method": "client_secret_basic",
+    "redirect": 307,
+    "cross": true,
+    "expected": "FAIL"
+  },
+  {
+    "id": "resource-bearer-legitimate",
+    "mode": "cli-device",
+    "method": "client_secret_basic",
+    "requireResource": true,
+    "expected": "PASS"
+  }
+]

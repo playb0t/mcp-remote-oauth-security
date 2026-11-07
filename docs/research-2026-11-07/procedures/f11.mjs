@@ -27,7 +27,7 @@ async function caseRun(connect,version,mode){
  return {version,mode,resource_origin:resourceOrigin,canary_origin:canaryOrigin,result,error,events};
 }
 const all=[];
-for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js']]){
+for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js'],['0.16.5','chunk-EL3EX2HH.js']]){
  const mod=await import(pathToFileURL(join(runtime,v,'dist',file)).href);assert.equal(typeof mod.connectToRemoteServer,'function');
  for(const mode of ['redirect-cross','redirect-same','endpoint-cross','no-token'])all.push(await caseRun(mod.connectToRemoteServer,v,mode));
 }

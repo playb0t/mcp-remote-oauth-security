@@ -1,0 +1,893 @@
+[
+  {
+    "case_id": "expected-token-basic",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-expected-token-basic",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54155",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54155",
+          "address": "http://127.0.0.1:54155/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54155",
+          "address": "http://127.0.0.1:54155/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54155",
+          "address": "http://127.0.0.1:54155/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54155",
+          "address": "http://127.0.0.1:54155/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54155",
+          "address": "http://127.0.0.1:54157/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "002e111e99b821b6ea9014f37c192e897dce0eb4410cefc3dad20f3598bc75e3",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:57:57.421Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "foreign-issuer-basic",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-foreign-issuer-basic",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54162",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54162",
+          "address": "http://127.0.0.1:54162/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54162",
+          "address": "http://127.0.0.1:54162/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54162",
+          "address": "http://127.0.0.1:54162/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54162",
+          "address": "http://127.0.0.1:54162/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54162",
+          "address": "http://127.0.0.1:54164/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "34d2cdd6c840e4b840e2a504b571cc44b54b62d25f2f298f0e0e7ecd164e0b8d",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:57:57.875Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "foreign-issuer-post",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-foreign-issuer-post",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54168",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54168",
+          "address": "http://127.0.0.1:54168/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54168",
+          "address": "http://127.0.0.1:54168/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54168",
+          "address": "http://127.0.0.1:54168/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54168",
+          "address": "http://127.0.0.1:54168/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54168",
+          "address": "http://127.0.0.1:54170/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "407d8aa675628040c45d976c3a349f2befe91b75579f4a47e383daf827967de9",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:57:58.325Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "redirect-secret-post307",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-redirect-secret-post307",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54175",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54175",
+          "address": "http://127.0.0.1:54175/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54175",
+          "address": "http://127.0.0.1:54175/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54175",
+          "address": "http://127.0.0.1:54175/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54175",
+          "address": "http://127.0.0.1:54175/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54175",
+          "address": "http://127.0.0.1:54177/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "e6ed23bf406b2f7f6ea8a3137a92ad9fb5c024b134f5fbf0efee793efc7af069",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:57:58.781Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "redirect-basic-header-stripped",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-redirect-basic-header-stripped",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54182",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54182",
+          "address": "http://127.0.0.1:54182/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54182",
+          "address": "http://127.0.0.1:54182/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54182",
+          "address": "http://127.0.0.1:54182/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54182",
+          "address": "http://127.0.0.1:54182/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54182",
+          "address": "http://127.0.0.1:54184/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "4bd1bcbcbcbbe312131a042528a782c50e1f7bdcb3abccc99a2aa278cb4b389f",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:57:59.236Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "redirect-post302-no-body",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-redirect-post302-no-body",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54189",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54189",
+          "address": "http://127.0.0.1:54189/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54189",
+          "address": "http://127.0.0.1:54189/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54189",
+          "address": "http://127.0.0.1:54189/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54189",
+          "address": "http://127.0.0.1:54189/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54189",
+          "address": "http://127.0.0.1:54191/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "53e51a4eeb67850725b45456d8851d86434b12c0675a0d6c3e4d33841092b65a",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:57:59.692Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "SDK-issuer-block",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-SDK-issuer-block",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54196",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54196",
+          "address": "http://127.0.0.1:54196/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54196",
+          "address": "http://127.0.0.1:54196/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54196",
+          "address": "http://127.0.0.1:54196/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54196",
+          "address": "http://127.0.0.1:54196/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54196",
+          "address": "http://127.0.0.1:54198/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "070bbc0a93c4f508b367ad1d673dbcdf398c7f58f97506f5dd835b2e0630dfd8",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:58:00.163Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "SDK-redirect-block",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-SDK-redirect-block",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54202",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54202",
+          "address": "http://127.0.0.1:54202/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54202",
+          "address": "http://127.0.0.1:54202/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54202",
+          "address": "http://127.0.0.1:54202/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54202",
+          "address": "http://127.0.0.1:54202/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54202",
+          "address": "http://127.0.0.1:54204/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "1620bd33259818645b9230451c2986f9a0c141089830c186bd5aaff005b2c902",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:58:00.430Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "same-origin-basic307",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-same-origin-basic307",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54208",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54208",
+          "address": "http://127.0.0.1:54208/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54208",
+          "address": "http://127.0.0.1:54208/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54208",
+          "address": "http://127.0.0.1:54208/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54208",
+          "address": "http://127.0.0.1:54208/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54208",
+          "address": "http://127.0.0.1:54210/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "7dde87b659059ae14bbd9012177cb33ae8bd6b6bee9ae5930406aeddd524932d",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:58:00.698Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "device-code-body307-basic",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-device-code-body307-basic",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54214",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54214",
+          "address": "http://127.0.0.1:54214/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54214",
+          "address": "http://127.0.0.1:54214/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54214",
+          "address": "http://127.0.0.1:54214/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54214",
+          "address": "http://127.0.0.1:54214/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54214",
+          "address": "http://127.0.0.1:54216/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "3bc529973f93d503acdc0d23a489c7e4ec427d739dfad6e58d2313e674687f74",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:58:01.152Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  },
+  {
+    "case_id": "resource-bearer-legitimate",
+    "policy": {
+      "schema_version": 2,
+      "id": "predeclared-resource-bearer-legitimate",
+      "context_id": "fixture-owner-A",
+      "expected_issuer": "http://127.0.0.1:54223",
+      "receivers": [
+        {
+          "issuer": "http://127.0.0.1:54223",
+          "address": "http://127.0.0.1:54223/token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54223",
+          "address": "http://127.0.0.1:54223/receipt-token",
+          "kinds": [
+            "client_auth",
+            "client_secret",
+            "refresh_token",
+            "device_code",
+            "authorization_code",
+            "code_verifier"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54223",
+          "address": "http://127.0.0.1:54223/device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54223",
+          "address": "http://127.0.0.1:54223/receipt-device",
+          "kinds": [
+            "client_auth",
+            "client_secret"
+          ],
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "issuer": "http://127.0.0.1:54223",
+          "address": "http://127.0.0.1:54225/mcp",
+          "kinds": [
+            "access_token"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "policy_sha256": "fca8e07c30c669adad9e9503bbadfd7f0c87448fa2da844259b2182a9bd627b0",
+      "recorded_before_target": true,
+      "at": "2026-11-07T09:58:01.598Z",
+      "authority": "Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication."
+    }
+  }
+]

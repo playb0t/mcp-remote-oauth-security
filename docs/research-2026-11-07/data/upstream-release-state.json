@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Source tag comparisons; candidate distribution is separately inspected; original five-record runtime procedure not executed on0.16.5",
+  "scope": "Source tag comparison plus links to separately recorded runtime attempts.",
   "selected_first_party_helpers": [
     {
       "name": "parseWWWAuthenticateHeader",
@@ -537,8 +537,8 @@
     ],
     "package_json_unchanged": true,
     "lock_unchanged": true,
-    "runtime_executed": false,
-    "runtime_scope": "original five-record CLI procedure",
+    "runtime_executed": true,
+    "runtime_scope": "Original216 CLI attempted3times, no full completion; exact helper/F08/F11 also executed.",
     "distribution_comparison": "distribution-0.16.5.json"
   },
   "source_lock_markers": {

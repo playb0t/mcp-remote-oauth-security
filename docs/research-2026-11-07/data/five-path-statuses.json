@@ -84,6 +84,47 @@
           "limits": "Specific graph/redirect profile; not full CLI OAuth sign-in."
         }
       ]
+    },
+    {
+      "version": "0.16.5",
+      "statuses": [
+        {
+          "finding": "F-01",
+          "cve": "CVE-2026-51994",
+          "status": "request path present before original assertion stop",
+          "class": "Full CLI recorded direct metadata route in three attempts and redirect route before attempt3 stop; exact helpers executed.",
+          "limits": "No completed three-scenario CLI run; same-origin CLI control not reached."
+        },
+        {
+          "finding": "F-02",
+          "cve": "CVE-2026-51995",
+          "status": "request path present before original assertion stop",
+          "class": "AS metadata and token POST with Authorization recorded in failed original attempts.",
+          "limits": "Synthetic local credentials only; no completed CLI run or real OAuth sign-in."
+        },
+        {
+          "finding": "F-04",
+          "cve": "CVE-2026-51996",
+          "status": "code path present",
+          "class": "Original exact-helper normalization/serialization controls passed twice.",
+          "limits": "No actual cache takeover."
+        },
+        {
+          "finding": "F-08",
+          "cve": "CVE-2026-51997",
+          "status": "code path present; opener route measured",
+          "class": "Original full CLI and provider method reached recorder on HTTP inputs; script/mapped-IP negatives retained.",
+          "limits": "No real browser or link-local request."
+        },
+        {
+          "finding": "F-11",
+          "cve": "CVE-2026-52001",
+          "status": "code path present; transport behavior measured",
+          "class": "Actual bundled SSE transport with original synthetic-provider controls.",
+          "runtime_observation": "Cross-origin302 refused before canary, like0.16.4; same-origin bearer retained, endpoint-cross rejected, no-token has noAuthorization.",
+          "limits": "Not full CLI OAuth sign-in or all transport profiles."
+        }
+      ]
     }
   ],
   "interpretation": "Scoped path/code/transport observations; official affected ranges unchanged."

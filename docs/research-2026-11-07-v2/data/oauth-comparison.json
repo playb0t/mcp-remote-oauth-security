@@ -1,0 +1,1062 @@
+[
+  {
+    "version": "0.14.3",
+    "cases": 11,
+    "security": {
+      "PASS": 6,
+      "INCONCLUSIVE": 2,
+      "FAIL": 3
+    },
+    "cases_with_stops": 9,
+    "stop_reasons": {
+      "target_nonzero": 7,
+      "postcondition_not_reached": 2,
+      "AuthorizationServerMismatchError": 1,
+      "OAuthError2": 1
+    },
+    "results": [
+      {
+        "case": "expected-token-basic",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-basic",
+        "verdict": "INCONCLUSIVE",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "Incompatible auth server: does not support dynamic client registration"
+          },
+          {
+            "phase": "scenario",
+            "code": "postcondition_not_reached"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-post",
+        "verdict": "INCONCLUSIVE",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "Incompatible auth server: does not support dynamic client registration"
+          },
+          {
+            "phase": "scenario",
+            "code": "postcondition_not_reached"
+          }
+        ]
+      },
+      {
+        "case": "redirect-secret-post307",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-basic-header-stripped",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-post302-no-body",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "SDK-issuer-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "AuthorizationServerMismatchError",
+            "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:56620\", callback resolved \"http://127.0.0.1:56621\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+          }
+        ]
+      },
+      {
+        "case": "SDK-redirect-block",
+        "verdict": "FAIL",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "OAuthError2",
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "same-origin-basic307",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "device-code-body307-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": []
+      },
+      {
+        "case": "resource-bearer-legitimate",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": []
+      }
+    ]
+  },
+  {
+    "version": "0.15.1",
+    "cases": 11,
+    "security": {
+      "PASS": 6,
+      "FAIL": 5
+    },
+    "cases_with_stops": 9,
+    "stop_reasons": {
+      "target_nonzero": 7,
+      "AuthorizationServerMismatchError": 1,
+      "OAuthError2": 1
+    },
+    "results": [
+      {
+        "case": "expected-token-basic",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-post",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-secret-post307",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-basic-header-stripped",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-post302-no-body",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "SDK-issuer-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "AuthorizationServerMismatchError",
+            "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:60062\", callback resolved \"http://127.0.0.1:60063\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+          }
+        ]
+      },
+      {
+        "case": "SDK-redirect-block",
+        "verdict": "FAIL",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "OAuthError2",
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "same-origin-basic307",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "device-code-body307-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": []
+      },
+      {
+        "case": "resource-bearer-legitimate",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": []
+      }
+    ]
+  },
+  {
+    "version": "0.15.2",
+    "cases": 11,
+    "security": {
+      "PASS": 6,
+      "FAIL": 5
+    },
+    "cases_with_stops": 9,
+    "stop_reasons": {
+      "target_nonzero": 7,
+      "AuthorizationServerMismatchError": 1,
+      "OAuthError2": 1
+    },
+    "results": [
+      {
+        "case": "expected-token-basic",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-post",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-secret-post307",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-basic-header-stripped",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-post302-no-body",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "SDK-issuer-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "AuthorizationServerMismatchError",
+            "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:49758\", callback resolved \"http://127.0.0.1:49759\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+          }
+        ]
+      },
+      {
+        "case": "SDK-redirect-block",
+        "verdict": "FAIL",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "OAuthError2",
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "same-origin-basic307",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "device-code-body307-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": []
+      },
+      {
+        "case": "resource-bearer-legitimate",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": []
+      }
+    ]
+  },
+  {
+    "version": "0.16.0",
+    "cases": 11,
+    "security": {
+      "PASS": 6,
+      "FAIL": 5
+    },
+    "cases_with_stops": 9,
+    "stop_reasons": {
+      "target_nonzero": 7,
+      "AuthorizationServerMismatchError": 1,
+      "OAuthError2": 1
+    },
+    "results": [
+      {
+        "case": "expected-token-basic",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-post",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-secret-post307",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-basic-header-stripped",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-post302-no-body",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "SDK-issuer-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "AuthorizationServerMismatchError",
+            "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:62334\", callback resolved \"http://127.0.0.1:62335\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+          }
+        ]
+      },
+      {
+        "case": "SDK-redirect-block",
+        "verdict": "FAIL",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "OAuthError2",
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "same-origin-basic307",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "device-code-body307-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": []
+      },
+      {
+        "case": "resource-bearer-legitimate",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": []
+      }
+    ]
+  },
+  {
+    "version": "0.16.3",
+    "cases": 11,
+    "security": {
+      "PASS": 6,
+      "FAIL": 5
+    },
+    "cases_with_stops": 9,
+    "stop_reasons": {
+      "target_nonzero": 7,
+      "AuthorizationServerMismatchError": 1,
+      "OAuthError2": 1
+    },
+    "results": [
+      {
+        "case": "expected-token-basic",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-post",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-secret-post307",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-basic-header-stripped",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-post302-no-body",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "SDK-issuer-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "AuthorizationServerMismatchError",
+            "reason": "Authorization server changed between redirect and callback (redirected to \"http://127.0.0.1:53943\", callback resolved \"http://127.0.0.1:53944\"); refusing to send authorization_code/code_verifier to a different token endpoint"
+          }
+        ]
+      },
+      {
+        "case": "SDK-redirect-block",
+        "verdict": "FAIL",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "OAuthError2",
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "same-origin-basic307",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "device-code-body307-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": []
+      },
+      {
+        "case": "resource-bearer-legitimate",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": []
+      }
+    ]
+  },
+  {
+    "version": "0.16.4",
+    "cases": 11,
+    "security": {
+      "PASS": 7,
+      "FAIL": 4
+    },
+    "cases_with_stops": 9,
+    "stop_reasons": {
+      "target_nonzero": 7,
+      "AuthorizationServerMismatchError": 1,
+      "OAuthError2": 1
+    },
+    "results": [
+      {
+        "case": "expected-token-basic",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-post",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-secret-post307",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-basic-header-stripped",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-post302-no-body",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "SDK-issuer-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "AuthorizationServerMismatchError",
+            "reason": "Authorization server mismatch: credentials are bound to \"http://127.0.0.1:54024\" but this call resolved \"http://127.0.0.1:54025\"; refusing to present them to a different authorization server"
+          }
+        ]
+      },
+      {
+        "case": "SDK-redirect-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "OAuthError2",
+            "reason": "HTTP 307: Invalid OAuth error response: SyntaxError: Unexpected end of JSON input. Raw body: "
+          }
+        ]
+      },
+      {
+        "case": "same-origin-basic307",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "device-code-body307-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": []
+      },
+      {
+        "case": "resource-bearer-legitimate",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": []
+      }
+    ]
+  },
+  {
+    "version": "0.16.5",
+    "cases": 11,
+    "security": {
+      "PASS": 7,
+      "FAIL": 4
+    },
+    "cases_with_stops": 9,
+    "stop_reasons": {
+      "target_nonzero": 7,
+      "AuthorizationServerMismatchError": 1,
+      "OAuthError2": 1
+    },
+    "results": [
+      {
+        "case": "expected-token-basic",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "foreign-issuer-post",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-secret-post307",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-basic-header-stripped",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "redirect-post302-no-body",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "SDK-issuer-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "AuthorizationServerMismatchError",
+            "reason": "Authorization server mismatch: credentials are bound to \"http://127.0.0.1:56905\" but this call resolved \"http://127.0.0.1:56906\"; refusing to present them to a different authorization server"
+          }
+        ]
+      },
+      {
+        "case": "SDK-redirect-block",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "SDK_control",
+            "code": "OAuthError2",
+            "reason": "HTTP 307: Invalid OAuth error response: SyntaxError: Unexpected end of JSON input. Raw body: "
+          }
+        ]
+      },
+      {
+        "case": "same-origin-basic307",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": [
+          {
+            "phase": "target_exit",
+            "code": "target_nonzero",
+            "exit": 1,
+            "signal": null,
+            "reason": "fixture terminal refusal"
+          }
+        ]
+      },
+      {
+        "case": "device-code-body307-basic",
+        "verdict": "FAIL",
+        "reference_0165_expected": "FAIL",
+        "stops": []
+      },
+      {
+        "case": "resource-bearer-legitimate",
+        "verdict": "PASS",
+        "reference_0165_expected": "PASS",
+        "stops": []
+      }
+    ]
+  }
+]

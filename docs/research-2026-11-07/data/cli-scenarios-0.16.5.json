@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "version": "0.16.5",
+  "node": "v24.20.0",
+  "cli_sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61",
+  "projection_status": "no completed CLI attempt",
+  "selected_attempt": null,
+  "selected_record_index": null,
+  "public_raw_trace": "data/raw/raw_trace-0.16.5.log",
+  "cases": [],
+  "full_run_http_events": null,
+  "full_run_totals": null,
+  "attempts": [
+    {
+      "run": "0.16.5-attempt-1",
+      "version": "0.16.5",
+      "attempt": 1,
+      "raw_log": "data/raw/raw_trace-0.16.5.log",
+      "record_index": 0,
+      "recorded_at": "2026-11-07T08:58:26.824Z",
+      "complete": false,
+      "exit_code": 1,
+      "cli_sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61",
+      "full_http_events": 16,
+      "full_canary_events": 7,
+      "full_authorization_events": 1,
+      "completed_cases": 0,
+      "case_http_events": 0,
+      "case_canary_events": 0,
+      "case_authorization_events": 0,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+      "source_record_sha256": "486183be9665af561da2406cf382f2daa79ce5f0e51d07866331dd2b62fe80cf",
+      "sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
+    },
+    {
+      "run": "0.16.5-attempt-2",
+      "version": "0.16.5",
+      "attempt": 2,
+      "raw_log": "data/raw/raw_trace-0.16.5.log",
+      "record_index": 1,
+      "recorded_at": "2026-11-07T08:58:27.838Z",
+      "complete": false,
+      "exit_code": 1,
+      "cli_sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61",
+      "full_http_events": 16,
+      "full_canary_events": 7,
+      "full_authorization_events": 1,
+      "completed_cases": 0,
+      "case_http_events": 0,
+      "case_canary_events": 0,
+      "case_authorization_events": 0,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+      "source_record_sha256": "89563ff759d72fded07cf43858bac70a33637d87d8fb107ad014cc2c0dac2883",
+      "sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
+    },
+    {
+      "run": "0.16.5-attempt-3",
+      "version": "0.16.5",
+      "attempt": 3,
+      "raw_log": "data/raw/raw_trace-0.16.5.log",
+      "record_index": 2,
+      "recorded_at": "2026-11-07T08:58:29.682Z",
+      "complete": false,
+      "exit_code": 1,
+      "cli_sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61",
+      "full_http_events": 35,
+      "full_canary_events": 17,
+      "full_authorization_events": 2,
+      "completed_cases": 1,
+      "case_http_events": 15,
+      "case_canary_events": 6,
+      "case_authorization_events": 0,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(trace.every(e=>!e.authorization_present))\n",
+      "source_record_sha256": "8ee4ab7777369d6604d4414bdb20bd86cedf64cd7abcaddd9f983c10d943e11c",
+      "sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
+    }
+  ],
+  "partial_scenarios": [
+    {
+      "attempt": 3,
+      "name": "header-selected-canary",
+      "passed": true,
+      "http_events": [
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "GET",
+          "path": "/mcp",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/resource-metadata",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "initialize"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "notifications/initialized"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "GET",
+          "path": "/mcp",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "initialize"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/resource-metadata",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "notifications/initialized"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "GET",
+          "path": "/mcp",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "tools/list"
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/resource-metadata",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "canary",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "authorization_present": false
+        },
+        {
+          "case": "header-selected-canary",
+          "role": "mock-MCP",
+          "method": "POST",
+          "path": "/mcp",
+          "authorization_present": false,
+          "rpc_method": "tools/call"
+        }
+      ],
+      "rpc_replies": [
+        {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "result": {
+            "protocolVersion": "2025-11-25",
+            "capabilities": {
+              "tools": {}
+            },
+            "serverInfo": {
+              "name": "synthetic-fixture",
+              "version": "1"
+            }
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "id": 2,
+          "result": {
+            "tools": [
+              {
+                "name": "fixture_probe",
+                "inputSchema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            ]
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "id": 3,
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "fixture-ok"
+              }
+            ]
+          }
+        }
+      ],
+      "http_event_count": 15,
+      "canary_event_count": 6,
+      "authorization_header_count": 0,
+      "exit": {
+        "code": 0,
+        "signal": null
+      }
+    }
+  ],
+  "scope": "All three original CLI attempts stopped at the original no-Authorization assertion; no completed-run projection is invented. Direct/redirect events reached before failure are retained; same-origin CLI control was not reached."
+}

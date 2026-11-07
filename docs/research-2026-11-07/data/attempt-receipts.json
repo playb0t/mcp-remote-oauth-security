@@ -70,5 +70,41 @@
       "index": 1
     },
     "scope": "Original unchanged-assertion procedure; no observer pass substitution."
+  },
+  {
+    "version": "0.16.5",
+    "attempt": 1,
+    "exit_code": 1,
+    "script_sha256": "1caddff0839847aa58d51df13c4f8b674224fd5a96bba457763d960adde3723b",
+    "raw_trace_source_sha256": "203c6b1c6c34298fa90408fa1841c18f09c58fd663268c145b90b9b4f32a8ae6",
+    "raw_record": {
+      "file": "data/raw/raw_trace-0.16.5.log",
+      "index": 0
+    },
+    "scope": "Original procedure/assertions; partial or failed results retained."
+  },
+  {
+    "version": "0.16.5",
+    "attempt": 2,
+    "exit_code": 1,
+    "script_sha256": "1caddff0839847aa58d51df13c4f8b674224fd5a96bba457763d960adde3723b",
+    "raw_trace_source_sha256": "818592db64072a01fb9e377cd3358d0d978e0554d54db8e7d7da8710f1eb1b16",
+    "raw_record": {
+      "file": "data/raw/raw_trace-0.16.5.log",
+      "index": 1
+    },
+    "scope": "Original procedure/assertions; partial or failed results retained."
+  },
+  {
+    "version": "0.16.5",
+    "attempt": 3,
+    "exit_code": 1,
+    "script_sha256": "1caddff0839847aa58d51df13c4f8b674224fd5a96bba457763d960adde3723b",
+    "raw_trace_source_sha256": "08dc0603279e155b59711e7087bec1fa89d62c1b1ce6b3e48a20a19fd920b799",
+    "raw_record": {
+      "file": "data/raw/raw_trace-0.16.5.log",
+      "index": 2
+    },
+    "scope": "Original procedure/assertions; partial or failed results retained."
   }
 ]

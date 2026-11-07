@@ -31,6 +31,10 @@ const PINS = {
   "0.16.4": {
     "file": "chunk-DFL3QVEJ.js",
     "sha": "b0a3bac69721649db5509aaaf204dacf4343a1cf88599e28ae62025ed494d08a"
+  },
+  "0.16.5": {
+    "file": "chunk-EL3EX2HH.js",
+    "sha": "98dff907124c7d353d6717dcb351383aaacb0a3a063cd4114cc64191e4550d26"
   }
 };
 const sha = raw => crypto.createHash('sha256').update(raw).digest('hex');

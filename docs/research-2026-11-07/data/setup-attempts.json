@@ -1,5 +1,15 @@
 {
-  "scope": "Accepted exact replay only; earlier observer/staging and separate research lines are excluded.",
-  "events": [],
+  "scope": "Recorded original-procedure preparation failures, separate from target CLI attempts.",
+  "events": [
+    {
+      "kind": "missing F08 test-state parent",
+      "version": "0.16.5",
+      "controller_exit": 1,
+      "stage": "mkdtemp before target child spawn/HTTP fixture creation",
+      "public_log": "data/setup/f08-cli-0.16.5-preparation-failure.log",
+      "recovery": "Created parent directory; reran identical script once, exit0.",
+      "source_script_unchanged": true
+    }
+  ],
   "note": "Three original-assertion stops are execution attempts in all-cli-runs, not setup failures."
 }

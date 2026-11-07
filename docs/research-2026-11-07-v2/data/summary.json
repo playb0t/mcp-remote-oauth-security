@@ -1,0 +1,24 @@
+{
+  "CLI_v1_attempts": 21,
+  "CLI_v1_complete": 7,
+  "CLI_v1_stops": 14,
+  "CLI_v2_cases": 63,
+  "CLI_v2_security": {
+    "PASS": 63
+  },
+  "CLI_v2_execution_stops": 11,
+  "CLI_v2_Authorization": 53,
+  "CLI_v2_late_HTTP": 63,
+  "OAuth_cases": 77,
+  "OAuth_security": {
+    "PASS": 44,
+    "INCONCLUSIVE": 2,
+    "FAIL": 31
+  },
+  "OAuth_cases_with_stops": 63,
+  "detector_controls": 35,
+  "late_HTTP_controls": 3,
+  "barrier_state_controls": 15,
+  "real_close_controls": 2,
+  "all_finalization_ready": true
+}

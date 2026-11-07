@@ -46,5 +46,29 @@
     "public_record_index": 1,
     "transformation": "Parse JSON record, normalize machine filesystem paths, preserve timestamp/HTTP URLs/numbers/booleans/fixture parameters. Authorization values were not captured.",
     "public_sha256": "3880ca7443d29e56e201f9709d56bf10767f3b3e984ca4da3f7f6bd8ede67954"
+  },
+  {
+    "source": "<recorded-0.16.5-root>/cli/attempt-1/runs/cli/logs/raw_trace.log",
+    "source_sha256": "203c6b1c6c34298fa90408fa1841c18f09c58fd663268c145b90b9b4f32a8ae6",
+    "public_file": "data/raw/raw_trace-0.16.5.log",
+    "public_record_index": 0,
+    "transformation": "JSON projection and machine-path normalization only; all HTTP URLs/numbers/booleans preserved.",
+    "public_sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
+  },
+  {
+    "source": "<recorded-0.16.5-root>/cli/attempt-2/runs/cli/logs/raw_trace.log",
+    "source_sha256": "818592db64072a01fb9e377cd3358d0d978e0554d54db8e7d7da8710f1eb1b16",
+    "public_file": "data/raw/raw_trace-0.16.5.log",
+    "public_record_index": 1,
+    "transformation": "JSON projection and machine-path normalization only; all HTTP URLs/numbers/booleans preserved.",
+    "public_sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
+  },
+  {
+    "source": "<recorded-0.16.5-root>/cli/attempt-3/runs/cli/logs/raw_trace.log",
+    "source_sha256": "08dc0603279e155b59711e7087bec1fa89d62c1b1ce6b3e48a20a19fd920b799",
+    "public_file": "data/raw/raw_trace-0.16.5.log",
+    "public_record_index": 2,
+    "transformation": "JSON projection and machine-path normalization only; all HTTP URLs/numbers/booleans preserved.",
+    "public_sha256": "52561c97c18ce8af7373aa8bd5d1c969175dd721e2ba806975993408b8673aa7"
   }
 ]

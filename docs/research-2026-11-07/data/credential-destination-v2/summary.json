@@ -1,0 +1,52 @@
+{
+  "criterion": "oauth-credential-destination-v2",
+  "detector_controls": {
+    "unit_cases": 35,
+    "all_expectations_met": true,
+    "scope": "Synthetic unit positive/negative/unknown controls exercise the oracle; not product behavior."
+  },
+  "product_observations": [
+    {
+      "version": "0.16.5",
+      "runtime_cases": 11,
+      "pass": 7,
+      "fail": 4,
+      "inconclusive": 0,
+      "all_predeclared_expectations_met": true,
+      "scope": "Owned loopback fixtures; positive matching credentials at actual receivers. No universal/CVE-range conclusion."
+    }
+  ],
+  "original216_replaced": false,
+  "old_assertion_failures_reclassified": false,
+  "source_bindings": [
+    {
+      "file": "procedures/credential-destination-v2/auth-destination-v2.cjs",
+      "source_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "published_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "adaptation": "none; exact tested bytes"
+    },
+    {
+      "file": "procedures/credential-destination-v2/test-criterion-v2.cjs",
+      "source_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "published_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "adaptation": "none; exact tested bytes"
+    },
+    {
+      "file": "procedures/credential-destination-v2/driver.mjs",
+      "source_sha256": "d3e2cdee3e1d1a4a425473f5eb3dca01d683a980f3dbfc661b060241d31306f5",
+      "published_sha256": "d3e2cdee3e1d1a4a425473f5eb3dca01d683a980f3dbfc661b060241d31306f5",
+      "adaptation": "none; exact tested bytes"
+    },
+    {
+      "file": "procedures/credential-destination-v2/harness-v2.mjs",
+      "source_sha256": "8e2d2756ea8673b210245a0f9d96a79db5d02a5aeadb9012feb7f20dcda35825",
+      "published_sha256": "9dba0d306b7cea72ef27702200b573cd6a1a318d91675c7669ddd9bb05f829ae",
+      "adaptation": "Explicit runtime/output/process.execPath and sibling driver bindings; fresh output, recorded Node version and target file SHA256 prerequisites. Scenario, body-observation and evaluator logic retained. Portable copy syntax-checked, not target-run."
+    }
+  ],
+  "data_source_sha256": {
+    "unit-controls.json": "f382ba013e869de73834b50cc16ade50b30f606ecc37beb59855818c0f30129b",
+    "runtime-0.16.5.json": "b9c24f26533da7b8079d3b2e1bbe81e8a048c775e3305b115982555fdcd0bba0",
+    "cases.json": "043aa637fd5732801a321342f3d7ef50db9e1b7707f380ba412ba3b05853b0cf"
+  }
+}
