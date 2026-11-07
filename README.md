@@ -8,7 +8,7 @@
 
 <p align="center">
   <strong>Five published CVE records, all scored by CISA-ADP, up to 9.8 Critical.<br>
-  In the 7 November 2026 loopback runs, published CLI <code>0.16.3</code>, <code>0.16.4</code> and <code>0.16.5</code> reach the server-selected metadata paths of CVE-2026-51994 and CVE-2026-51995; all three original CLI attempts on <code>0.16.5</code> stop at the unchanged no-Authorization assertion.</strong>
+  In the 7 November 2026 loopback runs, published CLI <code>0.16.3</code>, <code>0.16.4</code> and <code>0.16.5</code> reach the server-selected metadata paths of CVE-2026-51994 and CVE-2026-51995.</strong>
 </p>
 
 <p align="center">

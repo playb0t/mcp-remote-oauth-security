@@ -60,7 +60,7 @@ The six stops retain the original `trace.every(e => !e.authorization_present)` a
 
 For `0.16.5` there is no completed-run projection. Attempts 1/2 stop in the first scenario. Attempt 3 retains a completed header-selected snapshot of **15/6/3/0**, reaches the metadata redirect and then stops in that scenario. Its full saved event list is **35/17/2**. The same-origin CLI control was not reached. No successful scenario or total is copied from an earlier version. [All 0.16.5 attempts and partial snapshot](data/cli-scenarios-0.16.5.json).
 
-The three stopped 0.16.5 full event lists contain **1,1,2** synthetic token POSTs with Authorization presence. These are saved counts under the original procedure, not a frequency or causal claim. They do not alter the one-event statement for the three completed 0.16.3/0.16.4 traces.
+The three stopped 0.16.5 full event lists contain **1, 1, 2** synthetic token POSTs with Authorization presence. These are saved counts under the original procedure, not a frequency or causal claim. They do not alter the one-event statement for the three completed 0.16.3/0.16.4 traces.
 
 The published `0.16.0` baseline has snapshots 15/6, 18/9 and 10/0 (HTTP/canary) and a full trace of 44/16/1. The `0.16.4` completed traces have those same counts; `0.16.3` has 14/5, 17/8 and 10/0 with a full trace of 43/15/1. The difference is recorded without assigning a cause. Snapshot and full-trace totals remain separate.
 
