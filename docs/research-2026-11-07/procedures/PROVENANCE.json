@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-11-07",
+  "scope": "Recorded original/applied files remain exact bytes; portable variants are declared configuration adaptations, not new runtime observations.",
+  "files": [
+    {
+      "file": "normalize_ast.cjs",
+      "source": "published-2026-11-03/procedures/normalize_ast.cjs",
+      "source_sha256": "9be72ab286d3766931dce03595c04b915b7e100e75ecf24cc0613b75c91ad248",
+      "published_sha256": "9be72ab286d3766931dce03595c04b915b7e100e75ecf24cc0613b75c91ad248",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "fixtures/strict-url-sanitise-0.0.1.js",
+      "source": "published-2026-11-03/procedures/fixtures/strict-url-sanitise-0.0.1.js",
+      "source_sha256": "6a45b869cd15501e796b91b516fb79ff9d77c87db13c33c0efb00c7fbe4951c3",
+      "published_sha256": "6a45b869cd15501e796b91b516fb79ff9d77c87db13c33c0efb00c7fbe4951c3",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "opener-recorder.rs",
+      "source": "published-2026-11-03/procedures/opener-recorder.rs",
+      "source_sha256": "9dd39519d2e904a0628b0712506c63e02391500c57db5091967cb3f9ed0083e4",
+      "published_sha256": "9dd39519d2e904a0628b0712506c63e02391500c57db5091967cb3f9ed0083e4",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "f08-preload.cjs",
+      "source": "published-2026-11-03/procedures/f08-preload.cjs",
+      "source_sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648",
+      "published_sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "runtime/package.json",
+      "source": "published-2026-11-03/procedures/runtime/package.json",
+      "source_sha256": "d502568105c5c1247404750df5ed9600ef00252d05e90ee5ea8ae257dfe75ec0",
+      "published_sha256": "d502568105c5c1247404750df5ed9600ef00252d05e90ee5ea8ae257dfe75ec0",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "runtime/package-lock.json",
+      "source": "published-2026-11-03/procedures/runtime/package-lock.json",
+      "source_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677",
+      "published_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "tooling/package.json",
+      "source": "published-2026-11-03/procedures/tooling/package.json",
+      "source_sha256": "aeb25e976ab8632159b07fbcbe4c1c7e51acedba036eb9bfc0a7664b5b1154c1",
+      "published_sha256": "aeb25e976ab8632159b07fbcbe4c1c7e51acedba036eb9bfc0a7664b5b1154c1",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "release_checks.original.cjs",
+      "source": "published-2026-11-03/procedures/release_checks.original.cjs",
+      "source_sha256": "8822838d9f323534e20fae80ed3657bc44c2b4533b0d1a647c85e5d3ffec7b1f",
+      "published_sha256": "8822838d9f323534e20fae80ed3657bc44c2b4533b0d1a647c85e5d3ffec7b1f",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "verify_stdio.original.mjs",
+      "source": "published-2026-11-03/procedures/verify_stdio.original.mjs",
+      "source_sha256": "d82211661f331ac7a1c1b46d0b57a486256c73323e0c4e699da53d613327f3bc",
+      "published_sha256": "d82211661f331ac7a1c1b46d0b57a486256c73323e0c4e699da53d613327f3bc",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "baseline-helper-continuity-2026-10-15.json",
+      "source": "published-2026-11-03/procedures/baseline-helper-continuity-2026-10-15.json",
+      "source_sha256": "f017662faf0345916ad93a8b4b64828736a25ca8c9b772b0fede42b333e10651",
+      "published_sha256": "f017662faf0345916ad93a8b4b64828736a25ca8c9b772b0fede42b333e10651",
+      "adaptation": "none; byte-identical source"
+    },
+    {
+      "file": "release_checks.applied.cjs",
+      "source": "accepted-bench/recovered/audit/release_checks.cjs",
+      "source_sha256": "3fa416da426ffa3cbb9ccdeddb11c0112d423f57a7e58fe07b4df69a4d0b8999",
+      "published_sha256": "3fa416da426ffa3cbb9ccdeddb11c0112d423f57a7e58fe07b4df69a4d0b8999",
+      "adaptation": "none; exact six-version applied checker"
+    },
+    {
+      "file": "release_checks.cjs",
+      "source": "accepted-bench/recovered/audit/release_checks.cjs",
+      "source_sha256": "3fa416da426ffa3cbb9ccdeddb11c0112d423f57a7e58fe07b4df69a4d0b8999",
+      "published_sha256": "8b34e28340af770d80d7ef2377bae03b611cf4479f9dcf60fac8d920fd23f11b",
+      "adaptation": "normalizer require path only"
+    },
+    {
+      "file": "recorded/verify_stdio-0.16.3.mjs",
+      "source": "accepted-bench/cli/0.16.3/verify_stdio.mjs",
+      "source_sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+      "published_sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+      "adaptation": "none; exact accepted version copy"
+    },
+    {
+      "file": "recorded/verify_stdio-0.16.4.mjs",
+      "source": "accepted-bench/cli/0.16.4/verify_stdio.mjs",
+      "source_sha256": "b9975a4ea2db4aa29d54e2951f248891780ed76f07a9a2194fba3b833decac04",
+      "published_sha256": "b9975a4ea2db4aa29d54e2951f248891780ed76f07a9a2194fba3b833decac04",
+      "adaptation": "none; exact accepted version copy"
+    },
+    {
+      "file": "verify_stdio.mjs",
+      "source": "accepted-bench/cli/0.16.3/verify_stdio.mjs",
+      "source_sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+      "published_sha256": "61876f04452bce0aa90060523c69b601616b33f5b420ba07fc8dc7db60405284",
+      "adaptation": "explicit runtime/expected/output/version bindings and output directory preparation; body/assertions retained"
+    },
+    {
+      "file": "f08-cli.mjs",
+      "source": "accepted-bench/procedures/f08-cli.mjs",
+      "source_sha256": "d29a24d2aa654d9db0decf971fe6134e17899e549cec929c0343fd3e17f1b5c3",
+      "published_sha256": "720743acdec6d147beaaf3f449bfea836bb99cf4a84aada5784801593e16528c",
+      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246"
+    },
+    {
+      "file": "f08-method.mjs",
+      "source": "accepted-bench/procedures/f08-method.mjs",
+      "source_sha256": "d7f57d7b482bd0f23430ac14582f7c12c5e1b53532bff2d3dbd891024b33e6db",
+      "published_sha256": "054c770f551d0930e794be72274877b2cc04736a9d0cbe5d4de28c6e90be9fef",
+      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246"
+    },
+    {
+      "file": "f11.mjs",
+      "source": "accepted-bench/procedures/f11.mjs",
+      "source_sha256": "fe0b8d4dc4089baa1fb9e041c9deece629b90f31db2bfa284f681ead848280f1",
+      "published_sha256": "d2cd0321f02b2eec48c13accd1c61e593eb3311e07144a1c8334c0551972792b",
+      "adaptation": "explicit portable case/runtime/Node/recorder paths; Windows recorder prerequisite; same original scenarios; recorded JSON source is the top-level runs hash named in246"
+    },
+    {
+      "file": "inspect.recorded.cjs",
+      "source": "accepted-bench/procedures/inspect.cjs",
+      "source_sha256": "3e7f59c8ffa2b8d025e145a9dae5d357c18cecac249600721b67042579812ba1",
+      "published_sha256": "3e7f59c8ffa2b8d025e145a9dae5d357c18cecac249600721b67042579812ba1",
+      "adaptation": "none; actual static source extractor"
+    },
+    {
+      "file": "inspect.cjs",
+      "source": "accepted-bench/procedures/inspect.cjs",
+      "source_sha256": "3e7f59c8ffa2b8d025e145a9dae5d357c18cecac249600721b67042579812ba1",
+      "published_sha256": "1aa63fca36afe637eae411b3fc28f352784dca2283215fbf9f6348758991d886",
+      "adaptation": "explicit trusted TypeScript/source root; source-parsing algorithm and function list retained"
+    },
+    {
+      "file": "prepare_runtime.cjs",
+      "source": "published-2026-11-03/procedures/prepare_runtime.cjs",
+      "source_sha256": "6477b49155e4ad38f32abd7a05b21299da1f248370ddbb6aa5d2ea0a31edf39f",
+      "published_sha256": "177964e599fb32fa71064fb49b2e084d85699c1f3c3f870df768896ed06e7b04",
+      "adaptation": "version allowlist only; filesystem preparation does not execute target code"
+    }
+  ],
+  "diff_policy": "Unified diffs compare normalized-LF text projections; distributed recorded/original bytes remain unchanged.",
+  "only_PINS_after_newline_normalization": true,
+  "portable_runtime_reexecuted": false,
+  "new_dependencies_installed": false,
+  "generated_packaging_files": [
+    {
+      "file": "compare_distribution.cjs",
+      "role": "Static five-helper and SDK section comparison; no target evaluation",
+      "sha256": "ba3234d729a3a4c7aa8c17b0262265a5e5d33993e7a500a898af402b705686b2"
+    }
+  ]
+}

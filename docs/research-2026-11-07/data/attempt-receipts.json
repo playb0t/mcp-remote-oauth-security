@@ -1,0 +1,74 @@
+[
+  {
+    "version": "0.16.3",
+    "attempt": 1,
+    "exit_code": 0,
+    "script_sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+    "raw_trace_source_sha256": "c27dd97a63c21291f9cd4221d523f15ada118120925bb316bf330123f0c80654",
+    "raw_record": {
+      "file": "data/raw/raw_trace-0.16.3.log",
+      "index": 0
+    },
+    "scope": "Original unchanged-assertion procedure; no observer pass substitution."
+  },
+  {
+    "version": "0.16.3",
+    "attempt": 2,
+    "exit_code": 1,
+    "script_sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+    "raw_trace_source_sha256": "49e7cbc09ecc2b5546118a1092957f1260e9ec0f1f7457a9df9ea335f802cade",
+    "raw_record": {
+      "file": "data/raw/failed/raw_trace-0.16.3-attempt-2.log",
+      "index": 0
+    },
+    "scope": "Original unchanged-assertion procedure; no observer pass substitution."
+  },
+  {
+    "version": "0.16.3",
+    "attempt": 3,
+    "exit_code": 1,
+    "script_sha256": "db64b37170fa6ef0204deb8382029a3ce557936a02fdc4fb7efeb357a4a6e395",
+    "raw_trace_source_sha256": "9381beec9b5862c64e26908f832a4f9470cf91a34123e007997f4c1e8da015b3",
+    "raw_record": {
+      "file": "data/raw/failed/raw_trace-0.16.3-attempt-3.log",
+      "index": 0
+    },
+    "scope": "Original unchanged-assertion procedure; no observer pass substitution."
+  },
+  {
+    "version": "0.16.4",
+    "attempt": 1,
+    "exit_code": 1,
+    "script_sha256": "b9975a4ea2db4aa29d54e2951f248891780ed76f07a9a2194fba3b833decac04",
+    "raw_trace_source_sha256": "9b9c61fe761d2f311d46d91c926d0960191c7c8a902727a5a5a2efc53b7abfb9",
+    "raw_record": {
+      "file": "data/raw/failed/raw_trace-0.16.4-attempt-1.log",
+      "index": 0
+    },
+    "scope": "Original unchanged-assertion procedure; no observer pass substitution."
+  },
+  {
+    "version": "0.16.4",
+    "attempt": 2,
+    "exit_code": 0,
+    "script_sha256": "b9975a4ea2db4aa29d54e2951f248891780ed76f07a9a2194fba3b833decac04",
+    "raw_trace_source_sha256": "942af97cfd360d1f6b1fb1987890950a807ec6726a4491865a9c62a4a4e7384f",
+    "raw_record": {
+      "file": "data/raw/raw_trace-0.16.4.log",
+      "index": 0
+    },
+    "scope": "Original unchanged-assertion procedure; no observer pass substitution."
+  },
+  {
+    "version": "0.16.4",
+    "attempt": 3,
+    "exit_code": 0,
+    "script_sha256": "b9975a4ea2db4aa29d54e2951f248891780ed76f07a9a2194fba3b833decac04",
+    "raw_trace_source_sha256": "b2406bea7ecee7871c7b8ef1780f922479940b5cdf8590d6b228de0202213fef",
+    "raw_record": {
+      "file": "data/raw/raw_trace-0.16.4.log",
+      "index": 1
+    },
+    "scope": "Original unchanged-assertion procedure; no observer pass substitution."
+  }
+]

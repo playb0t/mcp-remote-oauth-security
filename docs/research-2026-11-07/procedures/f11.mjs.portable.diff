@@ -1,0 +1,23 @@
+--- recorded/f11.mjs
++++ portable/f11.mjs
+@@ -3,8 +3,9 @@
+ import {resolve,dirname,join} from 'node:path';
+ import {fileURLToPath,pathToFileURL} from 'node:url';
+ import assert from 'node:assert/strict';
+-const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+-const runtime=resolve(root,'runtime');
++const required=(name)=>{const value=process.env[name];if(!value)throw Error(`Missing ${name}`);return resolve(value);};
++const root=required('MCP_CASE_ROOT');
++const runtime=required('MCP_RUNTIME_ROOT');
+ const listen=(s)=>new Promise((ok,no)=>{s.once('error',no);s.listen(0,'127.0.0.1',()=>ok(`http://127.0.0.1:${s.address().port}`));});
+ async function caseRun(connect,version,mode){
+  const events=[];let resourceOrigin,canaryOrigin;const token='SYNTHETIC-F11-'+version;
+@@ -27,7 +28,7 @@
+ }
+ const all=[];
+ for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js']]){
+- const mod=await import(pathToFileURL(join(runtime,'f08-f11',v,'dist',file)).href);assert.equal(typeof mod.connectToRemoteServer,'function');
++ const mod=await import(pathToFileURL(join(runtime,v,'dist',file)).href);assert.equal(typeof mod.connectToRemoteServer,'function');
+  for(const mode of ['redirect-cross','redirect-same','endpoint-cross','no-token'])all.push(await caseRun(mod.connectToRemoteServer,v,mode));
+ }
+ const output={node:process.version,scope:'Actual published bundle connectToRemoteServer + bundled SSEClientTransport/EventSource + installed dependencies; synthetic provider and loopback servers.',results:all};

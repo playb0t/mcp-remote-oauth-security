@@ -1,0 +1,74 @@
+--- 0.16.4/node_modules/@modelcontextprotocol/client/dist/public-CvV4ZHkX.mjs
++++ 0.16.5/node_modules/@modelcontextprotocol/client/dist/public-CvV4ZHkX.mjs
+@@ -711,17 +711,17 @@
+     redirect_uri: String(redirectUri)
+   });
+ }
+-async function executeTokenRequest(authorizationServerUrl, { metadata, tokenRequestParams, clientInformation, addClientAuthentication, resource, dpop, fetchFn }) {
++async function executeTokenRequest(authorizationServerUrl, { metadata, tokenRequestParams: tokenRequestParams2, clientInformation, addClientAuthentication, resource, dpop, fetchFn }) {
+   const tokenUrl = assertSecureTokenEndpoint(metadata?.token_endpoint ?? new URL("/token", authorizationServerUrl));
+   const headers = new Headers({
+     "Content-Type": "application/x-www-form-urlencoded",
+     Accept: "application/json"
+   });
+-  if (resource) tokenRequestParams.set("resource", resourceIndicatorToString(resource));
+-  if (!addClientAuthentication && clientInformation) applyClientAuthentication(selectClientAuthMethod(clientInformation, metadata?.token_endpoint_auth_methods_supported ?? []), clientInformation, headers, tokenRequestParams);
++  if (resource) tokenRequestParams2.set("resource", resourceIndicatorToString(resource));
++  if (!addClientAuthentication && clientInformation) applyClientAuthentication(selectClientAuthMethod(clientInformation, metadata?.token_endpoint_auth_methods_supported ?? []), clientInformation, headers, tokenRequestParams2);
+   const requestOnce = async () => {
+     const requestHeaders = new Headers(headers);
+-    if (addClientAuthentication) await addClientAuthentication(requestHeaders, tokenRequestParams, tokenUrl, metadata);
++    if (addClientAuthentication) await addClientAuthentication(requestHeaders, tokenRequestParams2, tokenUrl, metadata);
+     if (dpop) requestHeaders.set("DPoP", await dpop.buildProof({
+       htm: "POST",
+       htu: tokenUrl
+@@ -729,7 +729,7 @@
+     return fetchWithinOrigin(fetchFn ?? fetch)(tokenUrl, {
+       method: "POST",
+       headers: requestHeaders,
+-      body: tokenRequestParams
++      body: tokenRequestParams2
+     });
+   };
+   let response = await requestOnce();
+@@ -751,14 +751,14 @@
+   }
+ }
+ async function refreshAuthorization(authorizationServerUrl, { metadata, clientInformation, refreshToken, scope, resource, addClientAuthentication, dpop, fetchFn }) {
+-  const tokenRequestParams = new URLSearchParams({
++  const tokenRequestParams2 = new URLSearchParams({
+     grant_type: "refresh_token",
+     refresh_token: refreshToken
+   });
+-  if (scope) tokenRequestParams.set("scope", scope);
++  if (scope) tokenRequestParams2.set("scope", scope);
+   const tokens = await executeTokenRequest(authorizationServerUrl, {
+     metadata,
+-    tokenRequestParams,
++    tokenRequestParams: tokenRequestParams2,
+     clientInformation,
+     addClientAuthentication,
+     resource,
+@@ -786,17 +786,17 @@
+   };
+   let clientInformation = await readClientInformation();
+   const effectiveScope = scope ?? provider.clientMetadata.scope;
+-  let tokenRequestParams;
+-  if (provider.prepareTokenRequest) tokenRequestParams = await provider.prepareTokenRequest(effectiveScope);
+-  if (!tokenRequestParams) {
++  let tokenRequestParams2;
++  if (provider.prepareTokenRequest) tokenRequestParams2 = await provider.prepareTokenRequest(effectiveScope);
++  if (!tokenRequestParams2) {
+     if (!authorizationCode) throw new Error("Either provider.prepareTokenRequest() or authorizationCode is required");
+     if (!provider.redirectUrl) throw new Error("redirectUrl is required for authorization_code flow");
+-    tokenRequestParams = prepareAuthorizationCodeRequest(authorizationCode, await provider.codeVerifier(), provider.redirectUrl);
++    tokenRequestParams2 = prepareAuthorizationCodeRequest(authorizationCode, await provider.codeVerifier(), provider.redirectUrl);
+   }
+   clientInformation ??= await readClientInformation();
+   return executeTokenRequest(authorizationServerUrl, {
+     metadata,
+-    tokenRequestParams,
++    tokenRequestParams: tokenRequestParams2,
+     clientInformation,
+     addClientAuthentication: provider.addClientAuthentication,
+     resource,

@@ -1,0 +1,11 @@
+--- recorded/release_checks.applied.cjs
++++ portable/release_checks.cjs
+@@ -6,7 +6,7 @@
+ const crypto = require('node:crypto');
+ const http = require('node:http');
+ const assert = require('node:assert/strict');
+-const {parser} = require('../scanner/normalize_ast.cjs');
++const {parser} = require('./normalize_ast.cjs');
+ const PINS = {
+   "0.14.3": {
+     "file": "chunk-CGVEK4Z7.js",

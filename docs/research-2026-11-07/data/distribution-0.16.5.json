@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "scope": "Source/distribution parsing only; original five-record runtime procedure not executed on candidate",
+  "baseline": "0.16.4",
+  "version": "0.16.5",
+  "baseline_summary": {
+    "main_bundle": "chunk-DFL3QVEJ.js",
+    "main_sha256": "b0a3bac69721649db5509aaaf204dacf4343a1cf88599e28ae62025ed494d08a",
+    "proxy_sha256": "34e64aea823b449f980aa7a358cc4a02371230d1d767bbeaa6036a8eb9557e0b",
+    "client_marker_count": 7
+  },
+  "candidate_summary": {
+    "main_bundle": "chunk-EL3EX2HH.js",
+    "main_sha256": "98dff907124c7d353d6717dcb351383aaacb0a3a063cd4114cc64191e4550d26",
+    "proxy_sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61",
+    "client_marker_count": 7
+  },
+  "five_helpers": [
+    {
+      "name": "getServerUrlHash",
+      "baseline": {
+        "line": 39979,
+        "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27",
+        "identifier_suffix_normalized_sha256": "6e29e15a75da4ce9d692a9ef0db64ecfab1d076b57621e0dda12d7ff1bebcb79"
+      },
+      "candidate": {
+        "line": 40034,
+        "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27",
+        "identifier_suffix_normalized_sha256": "6e29e15a75da4ce9d692a9ef0db64ecfab1d076b57621e0dda12d7ff1bebcb79"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "name": "discoverOAuthProtectedResourceMetadata",
+      "baseline": {
+        "line": 33457,
+        "sha256": "6144ee54369c957947e65be586dce934d2797245107d8bcdc96a8f8de1e2cecf",
+        "identifier_suffix_normalized_sha256": "84b4de87367727fc6a6873b730ca95c02e74a979f1284693cd195f95ed36bad3"
+      },
+      "candidate": {
+        "line": 33457,
+        "sha256": "6144ee54369c957947e65be586dce934d2797245107d8bcdc96a8f8de1e2cecf",
+        "identifier_suffix_normalized_sha256": "84b4de87367727fc6a6873b730ca95c02e74a979f1284693cd195f95ed36bad3"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "name": "discoverAuthorizationServerMetadata",
+      "baseline": {
+        "line": 33543,
+        "sha256": "f8aa652247b39464362d0e226995a9d99532615b049fd2b54e5a152ff1f4f60e",
+        "identifier_suffix_normalized_sha256": "528f8ef620bd47aa45de9a7126753877ead025973f61b8dc32306450b9cf2964"
+      },
+      "candidate": {
+        "line": 33543,
+        "sha256": "f8aa652247b39464362d0e226995a9d99532615b049fd2b54e5a152ff1f4f60e",
+        "identifier_suffix_normalized_sha256": "528f8ef620bd47aa45de9a7126753877ead025973f61b8dc32306450b9cf2964"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "name": "selectResourceURL",
+      "baseline": {
+        "line": 33414,
+        "sha256": "08d2d33820e62ab227477f2cff7ee8887d8a69c156eaf32e1699930a891baeca",
+        "identifier_suffix_normalized_sha256": "fdd5e0738146522484efbb24451f778afa825c8b59ae311967781ffe251e1301"
+      },
+      "candidate": {
+        "line": 33414,
+        "sha256": "08d2d33820e62ab227477f2cff7ee8887d8a69c156eaf32e1699930a891baeca",
+        "identifier_suffix_normalized_sha256": "fdd5e0738146522484efbb24451f778afa825c8b59ae311967781ffe251e1301"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "name": "setupOAuthCallbackServerWithLongPoll",
+      "baseline": {
+        "line": 39376,
+        "sha256": "b958a5ea752fb598572d040388d13f04c648e2a9b702dbebbe5df5232701b003",
+        "identifier_suffix_normalized_sha256": "a3e9a195fca4a313de65c5e712adf8d68896b32f341b9ce5a395b7de0589e035"
+      },
+      "candidate": {
+        "line": 39431,
+        "sha256": "b958a5ea752fb598572d040388d13f04c648e2a9b702dbebbe5df5232701b003",
+        "identifier_suffix_normalized_sha256": "a3e9a195fca4a313de65c5e712adf8d68896b32f341b9ce5a395b7de0589e035"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    }
+  ],
+  "sdk_sections": [
+    {
+      "section": "node_modules/@modelcontextprotocol/client/dist/ajvProvider-BIwGVY6G.mjs",
+      "baseline": {
+        "sha256": "314dc65bb82fa943fea00a58c225a9a2e6442e9d3982f4ded07479d34b3fc6b8",
+        "identifier_suffix_normalized_sha256": "08f1f40e91eee448fe6a9a5cd7f339a5ed58ba8e27101c808c0ec37f34a7f567"
+      },
+      "candidate": {
+        "sha256": "314dc65bb82fa943fea00a58c225a9a2e6442e9d3982f4ded07479d34b3fc6b8",
+        "identifier_suffix_normalized_sha256": "08f1f40e91eee448fe6a9a5cd7f339a5ed58ba8e27101c808c0ec37f34a7f567"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "section": "node_modules/@modelcontextprotocol/client/dist/chunk-DYPzFuB5.mjs",
+      "baseline": {
+        "sha256": "8a152718513001556887497d9f7c8f6a7fe7c1d4444d5c25f5e24d3d2271f362",
+        "identifier_suffix_normalized_sha256": "1ea7ff17b30dc7ac7412b98305c0e8294112904e01a96e325ac8613ab5b7d668"
+      },
+      "candidate": {
+        "sha256": "8a152718513001556887497d9f7c8f6a7fe7c1d4444d5c25f5e24d3d2271f362",
+        "identifier_suffix_normalized_sha256": "1ea7ff17b30dc7ac7412b98305c0e8294112904e01a96e325ac8613ab5b7d668"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "section": "node_modules/@modelcontextprotocol/client/dist/dialects-BAIiebX0.mjs",
+      "baseline": {
+        "sha256": "4846b67be1763da0cd1f2c18f486037d53ed482e904ed46b9e3cfa64da1e37b3",
+        "identifier_suffix_normalized_sha256": "44cba0479f3d879188c66ffc47ee19b8a78ea9649f9e75836014759fb0fa6317"
+      },
+      "candidate": {
+        "sha256": "4846b67be1763da0cd1f2c18f486037d53ed482e904ed46b9e3cfa64da1e37b3",
+        "identifier_suffix_normalized_sha256": "44cba0479f3d879188c66ffc47ee19b8a78ea9649f9e75836014759fb0fa6317"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "section": "node_modules/@modelcontextprotocol/client/dist/index.mjs",
+      "baseline": {
+        "sha256": "dcb6e800046c27b2b5184c1034a9f7f96ee0c30c123f2d0fd610238fff5d66f4",
+        "identifier_suffix_normalized_sha256": "9971d33989d81af3d9404eb4afff24f87a2f537277ee18015f8c8c3b1d237d54"
+      },
+      "candidate": {
+        "sha256": "dcb6e800046c27b2b5184c1034a9f7f96ee0c30c123f2d0fd610238fff5d66f4",
+        "identifier_suffix_normalized_sha256": "9971d33989d81af3d9404eb4afff24f87a2f537277ee18015f8c8c3b1d237d54"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "section": "node_modules/@modelcontextprotocol/client/dist/public-CvV4ZHkX.mjs",
+      "baseline": {
+        "sha256": "e3c6b2759d175706b9356f68d2e321bdc433d57c14097878de8ac72b192750e4",
+        "identifier_suffix_normalized_sha256": "2246c9d047c0fafb795dcfd48e44f9b458bd98ef915ae0973164f48d4a16f9d4"
+      },
+      "candidate": {
+        "sha256": "79541c9952974f2a8473f1463dadd3f392a21a7520d59e782da8b6fd5734853a",
+        "identifier_suffix_normalized_sha256": "2bc0d8a8b256bfaa529b95bfb236222d97521f2a3360d6ae8a1ddbecde28f2cd"
+      },
+      "raw_equal": false,
+      "identifier_suffix_normalized_equal": false
+    },
+    {
+      "section": "node_modules/@modelcontextprotocol/client/dist/shimsNode.mjs",
+      "baseline": {
+        "sha256": "92ab0d2886281a539343d689dcd403f3751444cc6aa993805dbb9bb87f29b333",
+        "identifier_suffix_normalized_sha256": "0dad8b6a5bc425320f4e82f1817ff337cdfeb06dfe34c5503fcfa86651505a2f"
+      },
+      "candidate": {
+        "sha256": "92ab0d2886281a539343d689dcd403f3751444cc6aa993805dbb9bb87f29b333",
+        "identifier_suffix_normalized_sha256": "0dad8b6a5bc425320f4e82f1817ff337cdfeb06dfe34c5503fcfa86651505a2f"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "section": "node_modules/@modelcontextprotocol/client/dist/src-CeKsbNLO.mjs",
+      "baseline": {
+        "sha256": "e8a8a42a9036290976ed1770551579fe26e9fc896c144a40fe4562925e4a8575",
+        "identifier_suffix_normalized_sha256": "dbc884a4b51000d0f1d2f568949e9fd019a7bb4b7d429ffba592bdc92be4dd4d"
+      },
+      "candidate": {
+        "sha256": "e8a8a42a9036290976ed1770551579fe26e9fc896c144a40fe4562925e4a8575",
+        "identifier_suffix_normalized_sha256": "dbc884a4b51000d0f1d2f568949e9fd019a7bb4b7d429ffba592bdc92be4dd4d"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "section": "node_modules/@modelcontextprotocol/core/dist/auth-UMQCo-ad.mjs",
+      "baseline": {
+        "sha256": "197b40b1bdab9bc264b39d41c657c8065b904348793e213195f93bc50ecd33df",
+        "identifier_suffix_normalized_sha256": "8f8063e845a3fbc537674ddd2c6b39f791a8014cdb9d95619076f654a88be594"
+      },
+      "candidate": {
+        "sha256": "197b40b1bdab9bc264b39d41c657c8065b904348793e213195f93bc50ecd33df",
+        "identifier_suffix_normalized_sha256": "8f8063e845a3fbc537674ddd2c6b39f791a8014cdb9d95619076f654a88be594"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    },
+    {
+      "section": "node_modules/@modelcontextprotocol/core/dist/schemas-DscsoNZN.mjs",
+      "baseline": {
+        "sha256": "8feb5746d3462959126b0f9c5fb3f1384a48da03f76a925b5b0522cb9ae47f70",
+        "identifier_suffix_normalized_sha256": "ff34e28e581f3772eacd89e32fc52de645bd6289b8b38789de888b050d633138"
+      },
+      "candidate": {
+        "sha256": "8feb5746d3462959126b0f9c5fb3f1384a48da03f76a925b5b0522cb9ae47f70",
+        "identifier_suffix_normalized_sha256": "ff34e28e581f3772eacd89e32fc52de645bd6289b8b38789de888b050d633138"
+      },
+      "raw_equal": true,
+      "identifier_suffix_normalized_equal": true
+    }
+  ],
+  "all_five_helpers_equal_after_labeled_normalization": true,
+  "all_compared_sdk_sections_equal_after_labeled_normalization": false,
+  "limits": "Identifier suffix normalization is not whole-program equivalence; SDK version/source-lock and section identity are separate fields.",
+  "sdk_emission_projection": [
+    {
+      "section": "node_modules/@modelcontextprotocol/client/dist/public-CvV4ZHkX.mjs",
+      "original_raw_equal": false,
+      "identifier_suffix_normalization_alone_equal": false,
+      "declared_projection": [
+        {
+          "from": "tokenRequestParams2 identifier",
+          "to": "tokenRequestParams",
+          "occurrences": 13
+        },
+        {
+          "from": "tokenRequestParams: tokenRequestParams property shorthand expansion",
+          "to": "tokenRequestParams",
+          "occurrences": 3
+        }
+      ],
+      "after_declared_projection_exact_text_equal": true,
+      "classification": "explicit emitted binding/shorthand difference; not silently counted as raw identity"
+    }
+  ],
+  "sdk_version_identity": {
+    "client": "2.4.0",
+    "core": "2.4.0",
+    "source_manifest_and_lock_unchanged": true,
+    "raw_equal_sections": 8,
+    "compared_sections": 9,
+    "interpretation": "Same source dependency identity; eight raw-equal SDK sections and one declared emitted binding/shorthand difference. Not a claim of whole-program byte identity."
+  },
+  "receipt": {
+    "version": "0.16.5",
+    "registry_url": "https://registry.npmjs.org/mcp-remote/0.16.5",
+    "tarball_url": "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.16.5.tgz",
+    "observed_at": "2026-11-07T08:10:20.204588+00:00",
+    "integrity": "sha512-HOvAySIYs9hojTHDWUJtKpx1RFi9OHLdJewdkwtOPuybq0uNmYrfeWGBH4mZ1rrIxwkFLJ+7823/96+KbC/4Og==",
+    "integrity_verified": true,
+    "tarball_sha256": "82ef9cc8c2aca21f60a7551374315d281cf428b4389d7f179fb5893ddf425b2b",
+    "git_head": "533159a925e964055b4b0cb3877285e33041a566",
+    "proxy_sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61",
+    "files": [
+      {
+        "path": "package/LICENSE",
+        "bytes": 1073,
+        "sha256": "5514f48637fa1d8fed2256d12d322009a75962e6111370755fc5b20773db67ad"
+      },
+      {
+        "path": "package/dist/chunk-EL3EX2HH.js",
+        "bytes": 1687433,
+        "sha256": "98dff907124c7d353d6717dcb351383aaacb0a3a063cd4114cc64191e4550d26"
+      },
+      {
+        "path": "package/dist/chunk-MLKGABMK.js",
+        "bytes": 191,
+        "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+      },
+      {
+        "path": "package/dist/client.js",
+        "bytes": 5999,
+        "sha256": "a7305056ef08fa7b3320cfb3190bcacee1b02b54c2acdfabf7a09cffa8d83564"
+      },
+      {
+        "path": "package/dist/proxy.js",
+        "bytes": 546326,
+        "sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61"
+      },
+      {
+        "path": "package/dist/webapi-WW3GGD26.js",
+        "bytes": 125387,
+        "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+      },
+      {
+        "path": "package/package.json",
+        "bytes": 2161,
+        "sha256": "b9a655eea1b90b9ba0cc8e4e938c1d4c537202aa0260e6abe54ce0e7c0e6cac4"
+      },
+      {
+        "path": "package/README.md",
+        "bytes": 32875,
+        "sha256": "a9b077393dc1a85561b034a92b42b2cf5ffef9e47360a3452d92fd5c2642f14c"
+      },
+      {
+        "path": "package/dist/client.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      },
+      {
+        "path": "package/dist/proxy.d.ts",
+        "bytes": 20,
+        "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+      }
+    ],
+    "runtime_procedure216_executed": false,
+    "runtime_scope": "original five-record procedure, not separate private research"
+  }
+}

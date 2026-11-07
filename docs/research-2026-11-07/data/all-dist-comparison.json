@@ -1,0 +1,107 @@
+{
+  "baseline": "0.16.0",
+  "version": "0.16.4",
+  "scope": "All regular published archive files; renamed main chunks paired by unique source anchor.",
+  "files": [
+    {
+      "role": "MAIN",
+      "baseline_path": "package/dist/chunk-K6DREQAS.js",
+      "path": "package/dist/chunk-DFL3QVEJ.js",
+      "baseline_bytes": 1421913,
+      "bytes": 1673634,
+      "baseline_sha256": "8b429f3fbbbba7471249d70f8ff8637c1b0c1f3766a4ae0412ffeaf26c82ccac",
+      "sha256": "b0a3bac69721649db5509aaaf204dacf4343a1cf88599e28ae62025ed494d08a",
+      "identical": false
+    },
+    {
+      "role": "package/LICENSE",
+      "baseline_path": "package/LICENSE",
+      "path": "package/LICENSE",
+      "baseline_bytes": 1073,
+      "bytes": 1073,
+      "baseline_sha256": "5514f48637fa1d8fed2256d12d322009a75962e6111370755fc5b20773db67ad",
+      "sha256": "5514f48637fa1d8fed2256d12d322009a75962e6111370755fc5b20773db67ad",
+      "identical": true
+    },
+    {
+      "role": "package/README.md",
+      "baseline_path": "package/README.md",
+      "path": "package/README.md",
+      "baseline_bytes": 32429,
+      "bytes": 32875,
+      "baseline_sha256": "c9eed91126e8d31781991aeebba117ec3e8e5e8367075bda2167556986cc8264",
+      "sha256": "a9b077393dc1a85561b034a92b42b2cf5ffef9e47360a3452d92fd5c2642f14c",
+      "identical": false
+    },
+    {
+      "role": "package/dist/chunk-MLKGABMK.js",
+      "baseline_path": "package/dist/chunk-MLKGABMK.js",
+      "path": "package/dist/chunk-MLKGABMK.js",
+      "baseline_bytes": 191,
+      "bytes": 191,
+      "baseline_sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03",
+      "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03",
+      "identical": true
+    },
+    {
+      "role": "package/dist/client.d.ts",
+      "baseline_path": "package/dist/client.d.ts",
+      "path": "package/dist/client.d.ts",
+      "baseline_bytes": 20,
+      "bytes": 20,
+      "baseline_sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+      "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+      "identical": true
+    },
+    {
+      "role": "package/dist/client.js",
+      "baseline_path": "package/dist/client.js",
+      "path": "package/dist/client.js",
+      "baseline_bytes": 5999,
+      "bytes": 5999,
+      "baseline_sha256": "f202d1341a8e8ac21be2a00d8df481797b768d2ad6c427fa2a9124c3a3c17571",
+      "sha256": "60b629a115e4da06a0f0b7cdd4c30b3f64cdd21a829b440db4be968023a85b10",
+      "identical": false
+    },
+    {
+      "role": "package/dist/proxy.d.ts",
+      "baseline_path": "package/dist/proxy.d.ts",
+      "path": "package/dist/proxy.d.ts",
+      "baseline_bytes": 20,
+      "bytes": 20,
+      "baseline_sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+      "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+      "identical": true
+    },
+    {
+      "role": "package/dist/proxy.js",
+      "baseline_path": "package/dist/proxy.js",
+      "path": "package/dist/proxy.js",
+      "baseline_bytes": 516387,
+      "bytes": 546326,
+      "baseline_sha256": "9f4e2f293f41df6869aa91af0095f06cd36ac8480f828b77473dea220f044943",
+      "sha256": "34e64aea823b449f980aa7a358cc4a02371230d1d767bbeaa6036a8eb9557e0b",
+      "identical": false
+    },
+    {
+      "role": "package/dist/webapi-WW3GGD26.js",
+      "baseline_path": "package/dist/webapi-WW3GGD26.js",
+      "path": "package/dist/webapi-WW3GGD26.js",
+      "baseline_bytes": 125387,
+      "bytes": 125387,
+      "baseline_sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6",
+      "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6",
+      "identical": true
+    },
+    {
+      "role": "package/package.json",
+      "baseline_path": "package/package.json",
+      "path": "package/package.json",
+      "baseline_bytes": 2161,
+      "bytes": 2161,
+      "baseline_sha256": "7dec5bbf69f7ecab39b11e13ab3c32ac19ffc0f1956a3fa04a594831fc1b0d5d",
+      "sha256": "dfa480040056902d7879f89a895dbe88e22b4c674a73802bb01c2dee1eb1a76e",
+      "identical": false
+    }
+  ]
+}

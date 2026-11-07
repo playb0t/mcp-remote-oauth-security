@@ -1,0 +1,7 @@
+{
+  "name": "mcp-research-parser-tooling",
+  "private": true,
+  "dependencies": {
+    "typescript": "5.9.3"
+  }
+}

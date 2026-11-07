@@ -1,0 +1,533 @@
+--- 0.16.4/package/dist/chunk-DFL3QVEJ.js
++++ 0.16.5/package/dist/chunk-EL3EX2HH.js
+@@ -33619,17 +33619,17 @@
+     redirect_uri: String(redirectUri)
+   });
+ }
+-async function executeTokenRequest(authorizationServerUrl, { metadata, tokenRequestParams, clientInformation, addClientAuthentication, resource, dpop, fetchFn }) {
++async function executeTokenRequest(authorizationServerUrl, { metadata, tokenRequestParams: tokenRequestParams2, clientInformation, addClientAuthentication, resource, dpop, fetchFn }) {
+   const tokenUrl = assertSecureTokenEndpoint(metadata?.token_endpoint ?? new URL("/token", authorizationServerUrl));
+   const headers = new Headers({
+     "Content-Type": "application/x-www-form-urlencoded",
+     Accept: "application/json"
+   });
+-  if (resource) tokenRequestParams.set("resource", resourceIndicatorToString(resource));
+-  if (!addClientAuthentication && clientInformation) applyClientAuthentication(selectClientAuthMethod(clientInformation, metadata?.token_endpoint_auth_methods_supported ?? []), clientInformation, headers, tokenRequestParams);
++  if (resource) tokenRequestParams2.set("resource", resourceIndicatorToString(resource));
++  if (!addClientAuthentication && clientInformation) applyClientAuthentication(selectClientAuthMethod(clientInformation, metadata?.token_endpoint_auth_methods_supported ?? []), clientInformation, headers, tokenRequestParams2);
+   const requestOnce = async () => {
+     const requestHeaders = new Headers(headers);
+-    if (addClientAuthentication) await addClientAuthentication(requestHeaders, tokenRequestParams, tokenUrl, metadata);
++    if (addClientAuthentication) await addClientAuthentication(requestHeaders, tokenRequestParams2, tokenUrl, metadata);
+     if (dpop) requestHeaders.set("DPoP", await dpop.buildProof({
+       htm: "POST",
+       htu: tokenUrl
+@@ -33637,7 +33637,7 @@
+     return fetchWithinOrigin(fetchFn ?? fetch)(tokenUrl, {
+       method: "POST",
+       headers: requestHeaders,
+-      body: tokenRequestParams
++      body: tokenRequestParams2
+     });
+   };
+   let response = await requestOnce();
+@@ -33659,14 +33659,14 @@
+   }
+ }
+ async function refreshAuthorization(authorizationServerUrl, { metadata, clientInformation, refreshToken, scope, resource, addClientAuthentication, dpop, fetchFn }) {
+-  const tokenRequestParams = new URLSearchParams({
++  const tokenRequestParams2 = new URLSearchParams({
+     grant_type: "refresh_token",
+     refresh_token: refreshToken
+   });
+-  if (scope) tokenRequestParams.set("scope", scope);
++  if (scope) tokenRequestParams2.set("scope", scope);
+   const tokens = await executeTokenRequest(authorizationServerUrl, {
+     metadata,
+-    tokenRequestParams,
++    tokenRequestParams: tokenRequestParams2,
+     clientInformation,
+     addClientAuthentication,
+     resource,
+@@ -33694,17 +33694,17 @@
+   };
+   let clientInformation = await readClientInformation();
+   const effectiveScope = scope ?? provider.clientMetadata.scope;
+-  let tokenRequestParams;
+-  if (provider.prepareTokenRequest) tokenRequestParams = await provider.prepareTokenRequest(effectiveScope);
+-  if (!tokenRequestParams) {
++  let tokenRequestParams2;
++  if (provider.prepareTokenRequest) tokenRequestParams2 = await provider.prepareTokenRequest(effectiveScope);
++  if (!tokenRequestParams2) {
+     if (!authorizationCode) throw new Error("Either provider.prepareTokenRequest() or authorizationCode is required");
+     if (!provider.redirectUrl) throw new Error("redirectUrl is required for authorization_code flow");
+-    tokenRequestParams = prepareAuthorizationCodeRequest(authorizationCode, await provider.codeVerifier(), provider.redirectUrl);
++    tokenRequestParams2 = prepareAuthorizationCodeRequest(authorizationCode, await provider.codeVerifier(), provider.redirectUrl);
+   }
+   clientInformation ??= await readClientInformation();
+   return executeTokenRequest(authorizationServerUrl, {
+     metadata,
+-    tokenRequestParams,
++    tokenRequestParams: tokenRequestParams2,
+     clientInformation,
+     addClientAuthentication: provider.addClientAuthentication,
+     resource,
+@@ -37509,7 +37509,7 @@
+ };
+ 
+ // package.json
+-var version2 = "0.16.4";
++var version2 = "0.16.5";
+ 
+ // src/lib/protocol-era.ts
+ var FIRST_MODERN_PROTOCOL_VERSION2 = "2026-07-28";
+@@ -37740,6 +37740,55 @@
+     }
+   }
+ }
++async function deleteJsonFileIf(serverUrlHash, filename, schema, shouldDelete) {
++  const filePath = getConfigFilePath(serverUrlHash, filename);
++  const judge = (raw) => {
++    let content;
++    try {
++      content = schema.parse(JSON.parse(raw));
++    } catch {
++      content = void 0;
++    }
++    return shouldDelete(content);
++  };
++  let checked;
++  try {
++    checked = await fs.readFile(filePath, "utf-8");
++  } catch (error62) {
++    if (error62.code !== "ENOENT") log(`Error reading ${filename}:`, error62);
++    return false;
++  }
++  if (!judge(checked)) return false;
++  const aside = `${filePath}.${process.pid}.${randomUUID()}.discard`;
++  try {
++    await fs.rename(filePath, aside);
++  } catch (error62) {
++    if (error62.code === "ENOENT") return false;
++    debugLog(`Could not set ${filename} aside; deleting it in place`, error62);
++    await deleteConfigFile(serverUrlHash, filename);
++    return true;
++  }
++  try {
++    const setAside = await fs.readFile(aside, "utf-8").catch(() => void 0);
++    if (setAside !== void 0 && (setAside === checked || judge(setAside))) return true;
++    debugLog(`Kept ${filename}, which changed after it was checked`);
++    await restoreConfigFile(aside, filePath);
++    return false;
++  } finally {
++    await fs.unlink(aside).catch(() => {
++    });
++  }
++}
++async function restoreConfigFile(aside, filePath) {
++  try {
++    await fs.link(aside, filePath);
++  } catch (error62) {
++    if (error62.code === "EEXIST") return;
++    await fs.copyFile(aside, filePath, fs.constants.COPYFILE_EXCL).catch((copyError) => {
++      if (copyError.code !== "EEXIST") log(`Error restoring ${path.basename(filePath)}:`, copyError);
++    });
++  }
++}
+ async function deleteStaleConfigFiles(serverUrlHash, prefix, maxAgeMs) {
+   try {
+     const configDir = getConfigDir();
+@@ -37781,7 +37830,7 @@
+     await ensureConfigDir();
+     const filePath = getConfigFilePath(serverUrlHash, filename);
+     const serialized = JSON.stringify(data, null, 2);
+-    const tempPath = `${filePath}.${process.pid}.${Date.now()}.tmp`;
++    const tempPath = `${filePath}.${process.pid}.${randomUUID()}.tmp`;
+     try {
+       await fs.writeFile(tempPath, serialized, { encoding: "utf-8", mode: 384 });
+       await fs.rename(tempPath, filePath);
+@@ -38182,6 +38231,10 @@
+   captureCookies(url2, response);
+   return response.ok ? response : asGlobalResponse(response);
+ };
++function coordinatedFetch(authProvider, fetchFn) {
++  const coordinator = authProvider;
++  return typeof coordinator?.coordinateTokenRequests === "function" ? coordinator.coordinateTokenRequests(fetchFn) : fetchFn;
++}
+ var NULL_BODY_STATUSES = /* @__PURE__ */ new Set([101, 103, 204, 205, 304]);
+ function asGlobalResponse(response) {
+   const body = NULL_BODY_STATUSES.has(response.status) ? null : response.body;
+@@ -39165,12 +39218,14 @@
+ async function connectToRemoteServer(client, serverUrl, authProvider, headers, authInitializer, transportStrategy = "http-first", protocolMode = "legacy", recursionReasons = /* @__PURE__ */ new Set()) {
+   log(`[${pid}] Connecting to remote server: ${serverUrl}`);
+   const url2 = new URL(serverUrl);
++  const transportFetch = coordinatedFetch(authProvider, fetchWithMcpHeaders);
++  const eventStreamFetch = coordinatedFetch(authProvider, fetch2);
+   let sseStreamOpened = 0;
+   const eventSourceInit = {
+     fetch: (requestUrl, init) => {
+       return Promise.resolve(authProvider?.tokens?.()).then((tokens) => {
+         const cookie = cookieHeaderFor(requestUrl);
+-        return fetch2(requestUrl, {
++        return eventStreamFetch(requestUrl, {
+           ...init,
+           headers: mergeHeaders(
+             init?.headers,
+@@ -39199,11 +39254,11 @@
+     authProvider,
+     requestInit: { headers },
+     eventSourceInit,
+-    fetch: fetchWithMcpHeaders
++    fetch: transportFetch
+   }) : new StreamableHTTPClientTransport(url2, {
+     authProvider,
+     requestInit: { headers },
+-    fetch: fetchWithMcpHeaders
++    fetch: transportFetch
+   });
+   let authChallengeTransport;
+   try {
+@@ -39219,7 +39274,7 @@
+         const testTransport = new StreamableHTTPClientTransport(url2, {
+           authProvider,
+           requestInit: { headers },
+-          fetch: fetchWithMcpHeaders
++          fetch: transportFetch
+         });
+         authChallengeTransport = testTransport;
+         const testClient = new Client(
+@@ -40270,6 +40325,13 @@
+ var DISCOVERY_STATE_PREFIX = "discovery_state_";
+ var REFRESH_LEASE_MS = 3e4;
+ var REFRESH_POLL_MS = 200;
++var REFRESH_LEASE_WAIT_MS = 2 * REFRESH_LEASE_MS;
++var REFUSING_ERRORS = /* @__PURE__ */ new Set([
++  OAuthErrorCode.InvalidGrant,
++  OAuthErrorCode.InvalidClient,
++  OAuthErrorCode.UnauthorizedClient
++]);
++var REFUSALS_REMEMBERED = 16;
+ var UNCOORDINATED = "";
+ var ABANDONED_FLOW_AGE_MS = 10 * 60 * 1e3;
+ var CONCURRENT_FLOW_WINDOW_MS = 1e4;
+@@ -40300,6 +40362,37 @@
+     return new OAuthError(OAuthErrorCode.UnauthorizedClient, message);
+   }
+   return void 0;
++}
++function tokenRequestParams(init) {
++  if (init?.method?.toUpperCase() !== "POST") return void 0;
++  if (init.body instanceof URLSearchParams) return init.body;
++  if (typeof init.body === "string" && new Headers(init.headers).get("Content-Type")?.startsWith("application/x-www-form-urlencoded")) {
++    return new URLSearchParams(init.body);
++  }
++  return void 0;
++}
++function refreshTokenRedeemedBy(init) {
++  const params = tokenRequestParams(init);
++  return params?.get("grant_type") === "refresh_token" ? params.get("refresh_token") ?? void 0 : void 0;
++}
++function withRefreshToken(init, refreshToken) {
++  const params = tokenRequestParams(init);
++  if (!params || params.get("refresh_token") === refreshToken) return init;
++  const body = new URLSearchParams(params);
++  body.set("refresh_token", refreshToken);
++  return { ...init, body };
++}
++function answerWithStoredTokens(stored) {
++  const expiresIn = stored.expires_at === void 0 ? stored.expires_in : Math.max(1, Math.floor((stored.expires_at - Date.now()) / 1e3));
++  const body = {
++    access_token: stored.access_token,
++    token_type: stored.token_type,
++    refresh_token: stored.refresh_token,
++    scope: stored.scope,
++    id_token: stored.id_token,
++    expires_in: expiresIn
++  };
++  return new Response(JSON.stringify(body), { status: 200, headers: { "Content-Type": "application/json", "Cache-Control": "no-store" } });
+ }
+ var NodeOAuthClientProvider = class {
+   /**
+@@ -40383,6 +40476,13 @@
+   recentAuthorizations = [];
+   /** In-flight proactive refresh, so concurrent requests share one refresh_token use */
+   refreshInFlight = null;
++  /**
++   * Refresh tokens the authorization server refused, and bearer credentials the MCP server answered
++   * with 401: what "the refused token" means when this instance is asked to discard it, rather than
++   * whatever the shared store happens to hold by then. See {@link discardRefusedTokens}.
++   */
++  refusedRefreshTokens = /* @__PURE__ */ new Set();
++  rejectedBearers = /* @__PURE__ */ new Set();
+   /** Concurrent requests share one client_credentials renewal, which has no refresh token. */
+   clientCredentialsInFlight = null;
+   /**
+@@ -40785,7 +40885,12 @@
+         obtainedFor: tokens.requested_scope,
+         nowRequesting: this.getEffectiveScope()
+       });
+-      await this.invalidateCredentials("tokens");
++      await deleteJsonFileIf(
++        this.serverUrlHash,
++        "tokens.json",
++        OAuthTokensWithExpiresAtSchema,
++        (stored) => stored === void 0 || stored.access_token === tokens.access_token
++      );
+       return void 0;
+     }
+     if (tokens) {
+@@ -41025,9 +41130,198 @@
+         expires_at: refreshed.expires_in ? Date.now() + refreshed.expires_in * 1e3 : void 0
+       });
+     } catch (error62) {
++      if (error62 instanceof OAuthError && REFUSING_ERRORS.has(error62.code)) this.rememberRefusal(this.refusedRefreshTokens, refreshToken);
+       debugLog("Proactive token refresh failed", error62);
+       return void 0;
+     }
++  }
++  /**
++   * Wraps the fetch the transports send with, so the SDK's own refresh is held to one use per host
++   * as well.
++   *
++   * {@link tokens} renews a token about to expire under the refresh lease, but that is not the only
++   * redemption. A token the MCP server refuses before it expires - revoked, say, or after a sleep
++   * the clock did not notice - comes back as a 401, and the SDK's `auth()` answers that by redeeming
++   * the refresh token itself, outside any lease. Instances that meet the 401 together each spend
++   * the same refresh token. A server that rotates refuses all but the first with `invalid_grant`,
++   * and the SDK answers that by discarding the stored token - by then, the fresh one the first
++   * instance saved (issues #389, #380).
++   *
++   * The SDK sends that request through the transport's fetch, which is what this wraps. Anything
++   * other than a `refresh_token` grant passes straight through, noting on the way any bearer
++   * credential the MCP server answered with 401. See {@link discardRefusedTokens}.
++   *
++   * @param fetchFn The fetch to send requests with
++   * @returns The same fetch, with refresh token redemptions coordinated across the host
++   */
++  coordinateTokenRequests(fetchFn) {
++    return async (url2, init) => {
++      const refreshToken = refreshTokenRedeemedBy(init);
++      if (refreshToken !== void 0) return this.redeemForSdk(refreshToken, (sent) => fetchFn(url2, withRefreshToken(init, sent)));
++      const response = await fetchFn(url2, init);
++      if (response.status === 401) this.noteRejectedBearer(init);
++      return response;
++    };
++  }
++  /**
++   * Sends the SDK's refresh only while holding the refresh lease, and not at all once another
++   * instance has redeemed the same refresh token.
++   *
++   * With the lease held the store is read again. A token there that already answers the refresh -
++   * typically one a sibling saved after redeeming the same refresh token first - is the answer:
++   * spending the old refresh token again earns `invalid_grant`, or under reuse detection (RFC 9700
++   * §4.14.2) costs the whole grant. See {@link alreadyAnswers}. Otherwise the request goes out,
++   * redeeming whatever refresh token is on disk now, and what it brings back is saved before the
++   * lease is let go, so the next instance in line finds it rather than redeeming the same token.
++   *
++   * @param requested The refresh token the SDK set out to redeem
++   * @param send Sends the request, redeeming the given refresh token
++   * @returns The token endpoint's response, or one carrying the token already on disk
++   */
++  async redeemForSdk(requested, send) {
++    const seen = (await this.readStoredTokens())?.access_token;
++    const deadline = Date.now() + REFRESH_LEASE_WAIT_MS;
++    let lease = await this.takeRefreshLease();
++    while (lease === void 0) {
++      const replacement = await this.awaitRedemptionBySibling(requested, seen);
++      if (replacement) {
++        debugLog("Another instance already redeemed this refresh token; answering with the token it saved");
++        return answerWithStoredTokens(replacement);
++      }
++      lease = await this.takeRefreshLease();
++      if (lease === void 0 && Date.now() >= deadline) {
++        debugLog("Could not take the refresh lease in time; refreshing without coordinating");
++        lease = UNCOORDINATED;
++      }
++    }
++    try {
++      const stored = await this.readStoredTokens();
++      if (stored && this.alreadyAnswers(stored, requested, seen)) {
++        debugLog("Another instance already redeemed this refresh token; answering with the token it saved");
++        return answerWithStoredTokens(stored);
++      }
++      const redeemed = stored?.refresh_token ?? requested;
++      const response = await send(redeemed);
++      await this.recordRedemption(redeemed, response, stored);
++      return response;
++    } finally {
++      if (lease !== UNCOORDINATED) await releaseConfigLease(this.serverUrlHash, REFRESH_LEASE_FILE, lease);
++    }
++  }
++  /**
++   * Waits on the instance holding the refresh lease, until it saves a replacement for the token the
++   * SDK set out to refresh or lets the lease go without one.
++   *
++   * @returns The replacement, or undefined once the lease is there to take - released, or abandoned by an owner that died or stalled
++   */
++  async awaitRedemptionBySibling(requested, seen) {
++    for (; ; ) {
++      await new Promise((resolve) => setTimeout(resolve, REFRESH_POLL_MS));
++      const stored = await this.readStoredTokens();
++      if (stored && this.alreadyAnswers(stored, requested, seen)) return stored;
++      const holder = await readConfigLease(this.serverUrlHash, REFRESH_LEASE_FILE, REFRESH_LEASE_MS);
++      if (!holder?.live) return void 0;
++    }
++  }
++  /**
++   * Whether the stored token already answers the SDK's refresh, so redeeming would only rotate
++   * again.
++   *
++   * It does when it replaced the token the SDK set out to refresh - another refresh token, or from
++   * a server that does not rotate them, another access token than was on disk when the SDK asked.
++   * It also does when the SDK is reacting to a 401 on an older token: the SDK refreshes whatever
++   * `tokens()` hands it, and by the time it asks, that may already be the token a sibling, or this
++   * instance's own proactive refresh, saved in its place. Rotating again then gains nothing, and a
++   * server that revokes the previous access token on rotation would refuse every request already
++   * carrying the new one.
++   *
++   * A token known to be refused, or already expired, answers nothing.
++   *
++   * @param stored What the store holds now
++   * @param requested The refresh token the SDK set out to redeem
++   * @param seen The access token on disk when it did
++   */
++  alreadyAnswers(stored, requested, seen) {
++    const expiresAt = this.bearerExpiresAt(stored);
++    if (expiresAt !== void 0 && Date.now() >= expiresAt) return false;
++    if (this.wasRefused(stored)) return false;
++    if (stored.refresh_token !== requested || stored.access_token !== seen) return true;
++    return this.rejectedBearers.size > 0;
++  }
++  /**
++   * Saves what the token endpoint issued while the lease is still held, or notes the refresh token
++   * it refused.
++   *
++   * The SDK saves the tokens too, but only once the response is back in its hands - after the lease
++   * is gone, when the next instance in line would already have redeemed the old refresh token
++   * again. A save that fails here is left to the SDK's: failing the response for it would turn a
++   * refresh that worked into a sign-in.
++   */
++  async recordRedemption(redeemed, response, stored) {
++    const body = await response.clone().json().catch(() => void 0);
++    if (!response.ok) {
++      const error62 = body?.error;
++      if (typeof error62 === "string" && REFUSING_ERRORS.has(error62)) this.rememberRefusal(this.refusedRefreshTokens, redeemed);
++      return;
++    }
++    const issued = OAuthTokensSchema.safeParse(body);
++    if (!issued.success) return;
++    try {
++      await writeJsonFile(
++        this.serverUrlHash,
++        "tokens.json",
++        // A server that does not rotate leaves the refresh token out of its response
++        this.storedForm({ ...issued.data, refresh_token: issued.data.refresh_token ?? redeemed, issuer: stored?.issuer })
++      );
++    } catch (error62) {
++      debugLog("Could not save the refreshed token before releasing the lease", error62);
++    }
++  }
++  /** Notes the bearer credential a 401 answered, so that token counts as refused. */
++  noteRejectedBearer(init) {
++    const bearer = new Headers(init?.headers).get("Authorization")?.match(/^Bearer\s+(\S+)/i)?.[1];
++    if (bearer) this.rememberRefusal(this.rejectedBearers, bearer);
++  }
++  rememberRefusal(refusals, credential) {
++    refusals.add(credential);
++    for (const oldest of refusals) {
++      if (refusals.size <= REFUSALS_REMEMBERED) break;
++      refusals.delete(oldest);
++    }
++  }
++  /** Whether this instance has seen the token refused: its refresh token turned down, or its bearer answered with 401. */
++  wasRefused(tokens) {
++    return tokens.refresh_token !== void 0 && this.refusedRefreshTokens.has(tokens.refresh_token) || this.rejectedBearers.has(tokens.access_token) || tokens.id_token !== void 0 && this.rejectedBearers.has(tokens.id_token);
++  }
++  /**
++   * Deletes the stored token if it is one this instance has seen refused, and only then.
++   *
++   * A request to invalidate the tokens means the token that was refused: the SDK asks after a
++   * refresh comes back `invalid_grant`, this package after the MCP server rejects a token it was
++   * just issued. But the store is shared, and by the time the request arrives it may hold another
++   * token - the one a sibling saved after redeeming the same refresh token first. Deleting by name
++   * threw that away and sent every instance to the browser (issues #389, #380). A file that cannot
++   * be read is no use to anyone, and goes either way.
++   */
++  async discardRefusedTokens() {
++    const deleted = await deleteJsonFileIf(
++      this.serverUrlHash,
++      "tokens.json",
++      OAuthTokensWithExpiresAtSchema,
++      (stored) => stored === void 0 || this.wasRefused(stored)
++    );
++    debugLog(deleted ? "OAuth tokens invalidated" : "Kept the stored token, which is not the one that was refused");
++  }
++  readStoredTokens() {
++    return readJsonFile(this.serverUrlHash, "tokens.json", OAuthTokensWithExpiresAtSchema);
++  }
++  /** The tokens as they are kept on disk: with an absolute expiry, and the scope request they answer. */
++  storedForm(tokens) {
++    return {
++      ...tokens,
++      expires_at: tokens.expires_at ?? (tokens.expires_in ? Date.now() + tokens.expires_in * 1e3 : void 0),
++      requested_scope: this.getEffectiveScope()
++    };
+   }
+   /**
+    * Saves OAuth tokens
+@@ -41109,12 +41403,7 @@
+       expiresIn: `${timeLeft} seconds`,
+       expiresInValue: tokens.expires_in
+     });
+-    const tokensToSave = {
+-      ...tokens,
+-      expires_at: tokens.expires_at ?? (tokens.expires_in ? Date.now() + tokens.expires_in * 1e3 : void 0),
+-      requested_scope: this.getEffectiveScope()
+-    };
+-    await writeJsonFile(this.serverUrlHash, "tokens.json", tokensToSave);
++    await writeJsonFile(this.serverUrlHash, "tokens.json", this.storedForm(tokens));
+     await deleteConfigFile(this.serverUrlHash, this.codeVerifierFile(this.flowState));
+     await deleteConfigFile(this.serverUrlHash, this.discoveryStateFile(this.flowState));
+     await deleteStaleConfigFiles(this.serverUrlHash, CODE_VERIFIER_PREFIX, ABANDONED_FLOW_AGE_MS);
+@@ -41414,8 +41703,7 @@
+         debugLog("Client information invalidated");
+         break;
+       case "tokens":
+-        await deleteConfigFile(this.serverUrlHash, "tokens.json");
+-        debugLog("OAuth tokens invalidated");
++        await this.discardRefusedTokens();
+         break;
+       case "verifier":
+         await deleteConfigFile(this.serverUrlHash, this.codeVerifierFile(this.flowState));
+--- 0.16.4/package/dist/client.js
++++ 0.16.5/package/dist/client.js
+@@ -14,7 +14,7 @@
+   serverIssuesAuthChallenge,
+   setupSignalHandlers,
+   version
+-} from "./chunk-DFL3QVEJ.js";
++} from "./chunk-EL3EX2HH.js";
+ import "./chunk-MLKGABMK.js";
+ 
+ // src/client.ts
+--- 0.16.4/package/dist/proxy.js
++++ 0.16.5/package/dist/proxy.js
+@@ -221,7 +221,7 @@
+   union,
+   unknown,
+   url
+-} from "./chunk-DFL3QVEJ.js";
++} from "./chunk-EL3EX2HH.js";
+ import "./chunk-MLKGABMK.js";
+ 
+ // src/proxy.ts
+--- 0.16.4/package/package.json
++++ 0.16.5/package/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "mcp-remote",
+-  "version": "0.16.4",
++  "version": "0.16.5",
+   "description": "Remote proxy for Model Context Protocol, allowing local-only clients to connect to remote servers using oAuth",
+   "keywords": [
+     "mcp",

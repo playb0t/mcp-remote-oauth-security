@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-11-07T07:44:13.337530+00:00",
+  "node": "v24.20.0",
+  "os": {
+    "family": "Windows",
+    "architecture": "x64"
+  },
+  "python_packaging": "3.12.10",
+  "dependencies": {
+    "express": "4.22.3",
+    "open": "10.2.0",
+    "strict-url-sanitise": "0.0.1",
+    "undici": "7.30.0"
+  },
+  "runtime_lock_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677",
+  "typescript": "5.9.3",
+  "install": "Existing locked runtime reused; no installation during publication preparation.",
+  "bind_host": "default; no --bind-host argument",
+  "recorder": {
+    "source": "procedures/opener-recorder.rs",
+    "source_sha256": "9dd39519d2e904a0628b0712506c63e02391500c57db5091967cb3f9ed0083e4",
+    "binary_distributed": false
+  },
+  "F08": "Original controlled Windows recorder/preload, not actual browser.",
+  "F11": "Actual bundled transport, synthetic provider through public parameter."
+}

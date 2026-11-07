@@ -8,20 +8,20 @@
 
 <p align="center">
   <strong>Five published CVE records, all scored by CISA-ADP, up to 9.8 Critical.<br>
-  The current published CLI, <code>0.15.1</code> of 14 October 2026, still follows the server-selected request paths of CVE-2026-51994 and CVE-2026-51995.</strong>
+  In the 7 November 2026 loopback runs, the published CLI releases <code>0.16.3</code> and <code>0.16.4</code> still follow the server-selected request paths of CVE-2026-51994 and CVE-2026-51995; <code>0.16.5</code> is compared in source and distribution in this follow-up.</strong>
 </p>
 
 <p align="center">
   <a href="#advisory-index"><img alt="CVE records" src="https://img.shields.io/badge/CVE_records-5-b91c1c"></a>
   <a href="#advisory-index"><img alt="CISA-ADP score" src="https://img.shields.io/badge/CISA--ADP-up_to_9.8_Critical-f59e0b"></a>
-  <a href="docs/research-2026-11-03/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.16.0_(3_Nov_2026)-8b5cf6"></a>
+  <a href="docs/research-2026-11-07/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.16.4_(7_Nov_2026)-8b5cf6"></a>
   <a href="CORRECTIONS.md"><img alt="Latest release" src="https://img.shields.io/badge/release-v1.0.2-58a6ff"></a>
   <a href="https://playb0t.com"><img alt="Impact record" src="https://img.shields.io/badge/impact_record-playb0t.com-0f766e"></a>
 </p>
 
 <p align="center">
   <a href="docs/research-2026-10-09/RESEARCH_DOSSIER.md">Research dossier, 9 October 2026</a> ·
-  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> · <a href="docs/research-2026-11-03/README.md">0.15.2 / 0.16.0 follow-up, 3 November 2026</a> ·
+  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> · <a href="docs/research-2026-11-03/README.md">0.15.2 / 0.16.0 follow-up, 3 November 2026</a> · <a href="docs/research-2026-11-07/README.md">0.16.3 / 0.16.4 follow-up, 7 November 2026</a> ·
   <a href="https://github.com/playb0t/mcp-host-matrix">MCP Host Matrix, 25 October 2026</a> ·
   <a href="#advisory-index">Advisory index</a> ·
   <a href="https://playb0t.com">Impact ledger</a>
@@ -31,7 +31,7 @@
 
 `mcp-remote` bridges stdio-only MCP clients to remote MCP servers and runs OAuth discovery on their behalf. That makes remote-server metadata a security boundary: a server-selected URL, redirect or credential destination must not become trusted because it appeared during discovery.
 
-Seven advisories document the review of the release current at disclosure, `0.1.38`: two localhost-canary reproductions, three bounded source reviews, two hardening records corrected in `v1.0.1`. The private report went to the maintainer on 17 February 2026; the public disclosure followed on 31 July after no acknowledgement; MITRE published five CVE records on 24 September 2026, and CISA-ADP scored all five. On 9 October 2026 the published `0.14.3` CLI, run in full in three local stdio scenarios, reproduced the F-01 / F-02 request path, HTTP 302 redirect included, and the discovery helpers executed in all 58 stable releases from `0.1.32` to `0.14.3`. Between the private report and 7 October 2026 npm served 19,060,907 downloads of the package. No fixed release has been stated. On 14 October 2026 the maintainer published four releases, `0.14.4` through `0.15.1`; none of them names a record. On 15 October the 9 October procedure was repeated on `0.15.1`. It recorded the same F-01 / F-02 request paths. In the full trace it also recorded a token request, carrying an Authorization header, to the authorization server named by the server's own metadata, as it does in `0.14.3` runs under the same environment.
+Seven advisories document the review of the release current at disclosure, `0.1.38`: two localhost-canary reproductions, three bounded source reviews, two hardening records corrected in `v1.0.1`. The private report went to the maintainer on 17 February 2026; the public disclosure followed on 31 July after no acknowledgement; MITRE published five CVE records on 24 September 2026, and CISA-ADP scored all five. On 9 October 2026 the published `0.14.3` CLI, run in full in three local stdio scenarios, reproduced the F-01 / F-02 request path, HTTP 302 redirect included, and the discovery helpers executed in all 58 stable releases from `0.1.32` to `0.14.3`. Between the private report and 7 October 2026 npm served 19,060,907 downloads of the package. The five follow-up releases `0.16.1` to `0.16.5` do not name the five records or announce a release addressing them; the ten selected first-party helpers are unchanged in the source comparisons, and `0.16.5` was compared in source and distribution, without running the original five-record CLI procedure. On 14 October 2026 the maintainer published four releases, `0.14.4` through `0.15.1`; none of them names a record. On 15 October the 9 October procedure was repeated on `0.15.1`. It recorded the same F-01 / F-02 request paths. In the full trace it also recorded a token request, carrying an Authorization header, to the authorization server named by the server's own metadata, as it does in `0.14.3` runs under the same environment.
 
 [Methodology](METHODOLOGY.md) · [Disclosure timeline](TIMELINE.md) · [Corrections](CORRECTIONS.md) · [Trust-boundary map](assets/mcp-remote-trust-boundary-map.png)
 

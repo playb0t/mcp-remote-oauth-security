@@ -1,0 +1,163 @@
+{
+  "node": "v24.20.0",
+  "scope": "Actual published bundle connectToRemoteServer + bundled SSEClientTransport/EventSource + installed dependencies; synthetic provider and loopback servers.",
+  "results": [
+    {
+      "version": "0.16.3",
+      "mode": "redirect-cross",
+      "resource_origin": "http://127.0.0.1:57310",
+      "canary_origin": "http://127.0.0.1:57309",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        },
+        {
+          "role": "canary",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": false,
+          "synthetic_bearer_received": false
+        }
+      ]
+    },
+    {
+      "version": "0.16.3",
+      "mode": "redirect-same",
+      "resource_origin": "http://127.0.0.1:57314",
+      "canary_origin": "http://127.0.0.1:57313",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/stream",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.3",
+      "mode": "endpoint-cross",
+      "resource_origin": "http://127.0.0.1:57319",
+      "canary_origin": "http://127.0.0.1:57318",
+      "result": "rejected",
+      "error": "Error: Endpoint origin does not match connection origin: http://127.0.0.1:57318",
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.3",
+      "mode": "no-token",
+      "resource_origin": "http://127.0.0.1:57323",
+      "canary_origin": "http://127.0.0.1:57322",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": false,
+          "synthetic_bearer_received": false
+        }
+      ]
+    },
+    {
+      "version": "0.16.4",
+      "mode": "redirect-cross",
+      "resource_origin": "http://127.0.0.1:57328",
+      "canary_origin": "http://127.0.0.1:57327",
+      "result": "rejected",
+      "error": "Error: SSE error: Redirect to http://127.0.0.1:57327/sse not followed; use that URL as the endpoint if it is the intended server (redirectPolicy: 'same-origin')",
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.4",
+      "mode": "redirect-same",
+      "resource_origin": "http://127.0.0.1:57332",
+      "canary_origin": "http://127.0.0.1:57331",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/stream",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.4",
+      "mode": "endpoint-cross",
+      "resource_origin": "http://127.0.0.1:57336",
+      "canary_origin": "http://127.0.0.1:57335",
+      "result": "rejected",
+      "error": "Error: Endpoint origin does not match connection origin: http://127.0.0.1:57335",
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.4",
+      "mode": "no-token",
+      "resource_origin": "http://127.0.0.1:57340",
+      "canary_origin": "http://127.0.0.1:57339",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": false,
+          "synthetic_bearer_received": false
+        }
+      ]
+    }
+  ]
+}

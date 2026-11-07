@@ -1,0 +1,554 @@
+{
+  "schema_version": 1,
+  "scope": "Source tag comparisons; candidate distribution is separately inspected; original five-record runtime procedure not executed on0.16.5",
+  "selected_first_party_helpers": [
+    {
+      "name": "parseWWWAuthenticateHeader",
+      "baseline": {
+        "module": "src/lib/protected-resource-metadata.ts",
+        "line": 49,
+        "sha256": "a4556f73a3e2706e4b5af2ecf58bd398ab0ce8f8f0c434a296e64fa0ba6c1d3b"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 49,
+          "sha256": "a4556f73a3e2706e4b5af2ecf58bd398ab0ce8f8f0c434a296e64fa0ba6c1d3b",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 49,
+          "sha256": "a4556f73a3e2706e4b5af2ecf58bd398ab0ce8f8f0c434a296e64fa0ba6c1d3b",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 49,
+          "sha256": "a4556f73a3e2706e4b5af2ecf58bd398ab0ce8f8f0c434a296e64fa0ba6c1d3b",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 49,
+          "sha256": "a4556f73a3e2706e4b5af2ecf58bd398ab0ce8f8f0c434a296e64fa0ba6c1d3b",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 49,
+          "sha256": "a4556f73a3e2706e4b5af2ecf58bd398ab0ce8f8f0c434a296e64fa0ba6c1d3b",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "buildProtectedResourceMetadataUrls",
+      "baseline": {
+        "module": "src/lib/protected-resource-metadata.ts",
+        "line": 103,
+        "sha256": "523ff175eea60a2312ce3322cfa22c069ad854e4fb81cca73fa3ddb93b4b90c3"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 103,
+          "sha256": "523ff175eea60a2312ce3322cfa22c069ad854e4fb81cca73fa3ddb93b4b90c3",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 103,
+          "sha256": "523ff175eea60a2312ce3322cfa22c069ad854e4fb81cca73fa3ddb93b4b90c3",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 103,
+          "sha256": "523ff175eea60a2312ce3322cfa22c069ad854e4fb81cca73fa3ddb93b4b90c3",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 103,
+          "sha256": "523ff175eea60a2312ce3322cfa22c069ad854e4fb81cca73fa3ddb93b4b90c3",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 103,
+          "sha256": "523ff175eea60a2312ce3322cfa22c069ad854e4fb81cca73fa3ddb93b4b90c3",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "fetchProtectedResourceMetadataFromUrl",
+      "baseline": {
+        "module": "src/lib/protected-resource-metadata.ts",
+        "line": 129,
+        "sha256": "b9ebb3844b2b4bf455713ae3bbe9d9fbb7b42869e70920e34dfb292ecde24ffd"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 129,
+          "sha256": "b9ebb3844b2b4bf455713ae3bbe9d9fbb7b42869e70920e34dfb292ecde24ffd",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 129,
+          "sha256": "b9ebb3844b2b4bf455713ae3bbe9d9fbb7b42869e70920e34dfb292ecde24ffd",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 129,
+          "sha256": "b9ebb3844b2b4bf455713ae3bbe9d9fbb7b42869e70920e34dfb292ecde24ffd",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 129,
+          "sha256": "b9ebb3844b2b4bf455713ae3bbe9d9fbb7b42869e70920e34dfb292ecde24ffd",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 129,
+          "sha256": "b9ebb3844b2b4bf455713ae3bbe9d9fbb7b42869e70920e34dfb292ecde24ffd",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "discoverProtectedResourceMetadata",
+      "baseline": {
+        "module": "src/lib/protected-resource-metadata.ts",
+        "line": 183,
+        "sha256": "e50c864e15ebff20d4470410302db97fd27d6282175c2997bbc47f113b8eb329"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 183,
+          "sha256": "e50c864e15ebff20d4470410302db97fd27d6282175c2997bbc47f113b8eb329",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 183,
+          "sha256": "e50c864e15ebff20d4470410302db97fd27d6282175c2997bbc47f113b8eb329",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 183,
+          "sha256": "e50c864e15ebff20d4470410302db97fd27d6282175c2997bbc47f113b8eb329",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 183,
+          "sha256": "e50c864e15ebff20d4470410302db97fd27d6282175c2997bbc47f113b8eb329",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 183,
+          "sha256": "e50c864e15ebff20d4470410302db97fd27d6282175c2997bbc47f113b8eb329",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "getAuthorizationServerUrl",
+      "baseline": {
+        "module": "src/lib/protected-resource-metadata.ts",
+        "line": 227,
+        "sha256": "2bb622c01a3db75293f63d1a25205451a20fa4fa8bb89ff3adc924b10063ec01"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 227,
+          "sha256": "2bb622c01a3db75293f63d1a25205451a20fa4fa8bb89ff3adc924b10063ec01",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 227,
+          "sha256": "2bb622c01a3db75293f63d1a25205451a20fa4fa8bb89ff3adc924b10063ec01",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 227,
+          "sha256": "2bb622c01a3db75293f63d1a25205451a20fa4fa8bb89ff3adc924b10063ec01",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 227,
+          "sha256": "2bb622c01a3db75293f63d1a25205451a20fa4fa8bb89ff3adc924b10063ec01",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/protected-resource-metadata.ts",
+          "line": 227,
+          "sha256": "2bb622c01a3db75293f63d1a25205451a20fa4fa8bb89ff3adc924b10063ec01",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "getMetadataUrls",
+      "baseline": {
+        "module": "src/lib/authorization-server-metadata.ts",
+        "line": 50,
+        "sha256": "215a78dc5318c325817e89f5278deb7bee6a126f98c4bb76305e7c7b37aad1bc"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 50,
+          "sha256": "215a78dc5318c325817e89f5278deb7bee6a126f98c4bb76305e7c7b37aad1bc",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 50,
+          "sha256": "215a78dc5318c325817e89f5278deb7bee6a126f98c4bb76305e7c7b37aad1bc",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 50,
+          "sha256": "215a78dc5318c325817e89f5278deb7bee6a126f98c4bb76305e7c7b37aad1bc",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 50,
+          "sha256": "215a78dc5318c325817e89f5278deb7bee6a126f98c4bb76305e7c7b37aad1bc",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 50,
+          "sha256": "215a78dc5318c325817e89f5278deb7bee6a126f98c4bb76305e7c7b37aad1bc",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "fetchAuthorizationServerMetadata",
+      "baseline": {
+        "module": "src/lib/authorization-server-metadata.ts",
+        "line": 79,
+        "sha256": "46905cf731a39c8850597ec07039cf7594dc06f574fe84e043c8c890030e867a"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 79,
+          "sha256": "46905cf731a39c8850597ec07039cf7594dc06f574fe84e043c8c890030e867a",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 79,
+          "sha256": "46905cf731a39c8850597ec07039cf7594dc06f574fe84e043c8c890030e867a",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 79,
+          "sha256": "46905cf731a39c8850597ec07039cf7594dc06f574fe84e043c8c890030e867a",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 79,
+          "sha256": "46905cf731a39c8850597ec07039cf7594dc06f574fe84e043c8c890030e867a",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 79,
+          "sha256": "46905cf731a39c8850597ec07039cf7594dc06f574fe84e043c8c890030e867a",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "fetchMetadataFrom",
+      "baseline": {
+        "module": "src/lib/authorization-server-metadata.ts",
+        "line": 100,
+        "sha256": "1b4948d375e8ad2ee1a0fdb46dcf5a75c39ef725342193152bca11c4ebb512db"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 100,
+          "sha256": "1b4948d375e8ad2ee1a0fdb46dcf5a75c39ef725342193152bca11c4ebb512db",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 100,
+          "sha256": "1b4948d375e8ad2ee1a0fdb46dcf5a75c39ef725342193152bca11c4ebb512db",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 100,
+          "sha256": "1b4948d375e8ad2ee1a0fdb46dcf5a75c39ef725342193152bca11c4ebb512db",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 100,
+          "sha256": "1b4948d375e8ad2ee1a0fdb46dcf5a75c39ef725342193152bca11c4ebb512db",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/authorization-server-metadata.ts",
+          "line": 100,
+          "sha256": "1b4948d375e8ad2ee1a0fdb46dcf5a75c39ef725342193152bca11c4ebb512db",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "discoverOAuthServerInfo",
+      "baseline": {
+        "module": "src/lib/utils.ts",
+        "line": 1872,
+        "sha256": "6d241a61a1cd4bca55cff55bf91f5259618bd8c73569869a2267e322b1a8c696"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/utils.ts",
+          "line": 1872,
+          "sha256": "6d241a61a1cd4bca55cff55bf91f5259618bd8c73569869a2267e322b1a8c696",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/utils.ts",
+          "line": 1872,
+          "sha256": "6d241a61a1cd4bca55cff55bf91f5259618bd8c73569869a2267e322b1a8c696",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/utils.ts",
+          "line": 1872,
+          "sha256": "6d241a61a1cd4bca55cff55bf91f5259618bd8c73569869a2267e322b1a8c696",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/utils.ts",
+          "line": 1872,
+          "sha256": "6d241a61a1cd4bca55cff55bf91f5259618bd8c73569869a2267e322b1a8c696",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/utils.ts",
+          "line": 1882,
+          "sha256": "6d241a61a1cd4bca55cff55bf91f5259618bd8c73569869a2267e322b1a8c696",
+          "identical": true
+        }
+      }
+    },
+    {
+      "name": "getServerUrlHash",
+      "baseline": {
+        "module": "src/lib/utils.ts",
+        "line": 3315,
+        "sha256": "cb57098aaafedf00718af0a83e76c8b01bbebfbb3f0f26e682098b6573d8f580"
+      },
+      "versions": {
+        "0.16.1": {
+          "module": "src/lib/utils.ts",
+          "line": 3315,
+          "sha256": "cb57098aaafedf00718af0a83e76c8b01bbebfbb3f0f26e682098b6573d8f580",
+          "identical": true
+        },
+        "0.16.2": {
+          "module": "src/lib/utils.ts",
+          "line": 3326,
+          "sha256": "cb57098aaafedf00718af0a83e76c8b01bbebfbb3f0f26e682098b6573d8f580",
+          "identical": true
+        },
+        "0.16.3": {
+          "module": "src/lib/utils.ts",
+          "line": 3338,
+          "sha256": "cb57098aaafedf00718af0a83e76c8b01bbebfbb3f0f26e682098b6573d8f580",
+          "identical": true
+        },
+        "0.16.4": {
+          "module": "src/lib/utils.ts",
+          "line": 3338,
+          "sha256": "cb57098aaafedf00718af0a83e76c8b01bbebfbb3f0f26e682098b6573d8f580",
+          "identical": true
+        },
+        "0.16.5": {
+          "module": "src/lib/utils.ts",
+          "line": 3355,
+          "sha256": "cb57098aaafedf00718af0a83e76c8b01bbebfbb3f0f26e682098b6573d8f580",
+          "identical": true
+        }
+      }
+    }
+  ],
+  "all_ten_identical_in_five_followups": true,
+  "callback_comparison": {
+    "0.16.0": {
+      "module": "src/lib/utils.ts",
+      "line": 2423,
+      "sha256": "136b5f9e276d80b0402ad1b1ae0c0c857933be90c129ab547daffeb82ab971d7"
+    },
+    "0.16.1": {
+      "module": "src/lib/utils.ts",
+      "line": 2423,
+      "sha256": "136b5f9e276d80b0402ad1b1ae0c0c857933be90c129ab547daffeb82ab971d7"
+    },
+    "0.16.2": {
+      "module": "src/lib/utils.ts",
+      "line": 2423,
+      "sha256": "b615e49246c6466b6b481c836901aa8259dad950a1c52c680dcf217b328f6f61"
+    },
+    "0.16.3": {
+      "module": "src/lib/utils.ts",
+      "line": 2423,
+      "sha256": "b615e49246c6466b6b481c836901aa8259dad950a1c52c680dcf217b328f6f61"
+    },
+    "0.16.4": {
+      "module": "src/lib/utils.ts",
+      "line": 2423,
+      "sha256": "b615e49246c6466b6b481c836901aa8259dad950a1c52c680dcf217b328f6f61"
+    },
+    "0.16.5": {
+      "module": "src/lib/utils.ts",
+      "line": 2440,
+      "sha256": "b615e49246c6466b6b481c836901aa8259dad950a1c52c680dcf217b328f6f61"
+    }
+  },
+  "releases": [
+    {
+      "version": "0.16.1",
+      "tag_name": "v0.16.1",
+      "github_published_at": "2026-11-05T20:42:05Z",
+      "html_url": "https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.1",
+      "name": "v0.16.1",
+      "body": "## [0.16.1](https://github.com/punkpeye/mcp-remote/compare/v0.16.0...v0.16.1) (2026-11-05)\n\n\n### Bug Fixes\n\n* build against zod 4.6.6 or later, outside GHSA-mrhx-c7xc-m3w5 ([#387](https://github.com/punkpeye/mcp-remote/issues/387)) ([5e407e5](https://github.com/punkpeye/mcp-remote/commit/5e407e516af22fb78263dbd556368a243179a3f0))\n",
+      "npm_published_at": "2026-11-05T20:45:11.485Z",
+      "npm_gitHead": "5e407e516af22fb78263dbd556368a243179a3f0"
+    },
+    {
+      "version": "0.16.2",
+      "tag_name": "v0.16.2",
+      "github_published_at": "2026-11-06T22:30:06Z",
+      "html_url": "https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.2",
+      "name": "v0.16.2",
+      "body": "## [0.16.2](https://github.com/punkpeye/mcp-remote/compare/v0.16.1...v0.16.2) (2026-11-06)\n\n\n### Bug Fixes\n\n* ignore an empty --bind-host and keep the loopback default ([#391](https://github.com/punkpeye/mcp-remote/issues/391)) ([3b02df6](https://github.com/punkpeye/mcp-remote/commit/3b02df6c4ec95520a5b32efabecc69acdc22da3b))\n* load the cached client registration before comparing the requested scope ([#392](https://github.com/punkpeye/mcp-remote/issues/392)) ([3b5f639](https://github.com/punkpeye/mcp-remote/commit/3b5f639603b72de4d3e1f0b63343eb9b7c0b136d))\n",
+      "npm_published_at": "2026-11-06T22:31:21.094Z",
+      "npm_gitHead": "3b5f639603b72de4d3e1f0b63343eb9b7c0b136d"
+    },
+    {
+      "version": "0.16.3",
+      "tag_name": "v0.16.3",
+      "github_published_at": "2026-11-06T22:38:12Z",
+      "html_url": "https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.3",
+      "name": "v0.16.3",
+      "body": "## [0.16.3](https://github.com/punkpeye/mcp-remote/compare/v0.16.2...v0.16.3) (2026-11-06)\n\n\n### Bug Fixes\n\n* use the IPv6 loopback callback host when --bind-host is ::1 ([#390](https://github.com/punkpeye/mcp-remote/issues/390)) ([c000b39](https://github.com/punkpeye/mcp-remote/commit/c000b39f86b5f0a4e64b4f1eaee4fd6c37557946))\n",
+      "npm_published_at": "2026-11-06T22:40:18.606Z",
+      "npm_gitHead": "c000b39f86b5f0a4e64b4f1eaee4fd6c37557946"
+    },
+    {
+      "version": "0.16.4",
+      "tag_name": "v0.16.4",
+      "github_published_at": "2026-11-06T22:54:07Z",
+      "html_url": "https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.4",
+      "name": "v0.16.4",
+      "body": "## [0.16.4](https://github.com/punkpeye/mcp-remote/compare/v0.16.3...v0.16.4) (2026-11-06)\n\n\n### Bug Fixes\n\n* build against MCP SDK 2.4.0, which bundles fast-uri 3.1.8 ([1b08d86](https://github.com/punkpeye/mcp-remote/commit/1b08d861e5c759beff32b9f2bc0ea863ca99f6d8))\n",
+      "npm_published_at": "2026-11-06T22:55:22.622Z",
+      "npm_gitHead": "1b08d861e5c759beff32b9f2bc0ea863ca99f6d8"
+    },
+    {
+      "version": "0.16.5",
+      "tag_name": "v0.16.5",
+      "github_published_at": "2026-11-07T04:48:34Z",
+      "html_url": "https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.5",
+      "name": "v0.16.5",
+      "body": "## [0.16.5](https://github.com/punkpeye/mcp-remote/compare/v0.16.4...v0.16.5) (2026-11-07)\n\n\n### Bug Fixes\n\n* redeem a refresh token once per host after a 401, and discard only the token that was refused ([533159a](https://github.com/punkpeye/mcp-remote/commit/533159a925e964055b4b0cb3877285e33041a566))\n",
+      "npm_published_at": "2026-11-07T04:49:49.299Z",
+      "npm_gitHead": "533159a925e964055b4b0cb3877285e33041a566"
+    }
+  ],
+  "source_comparison_0165": {
+    "base": "1b08d861e5c759beff32b9f2bc0ea863ca99f6d8",
+    "head": "533159a925e964055b4b0cb3877285e33041a566",
+    "total_commits": 1,
+    "commits": [
+      {
+        "sha": "533159a925e964055b4b0cb3877285e33041a566",
+        "message": "fix: redeem a refresh token once per host after a 401, and discard only the token that was refused"
+      }
+    ],
+    "changed_files": [
+      {
+        "path": "src/lib/connect-to-remote-server.test.ts",
+        "additions": 18,
+        "deletions": 0
+      },
+      {
+        "path": "src/lib/mcp-auth-config.test.ts",
+        "additions": 61,
+        "deletions": 0
+      },
+      {
+        "path": "src/lib/mcp-auth-config.ts",
+        "additions": 87,
+        "deletions": 1
+      },
+      {
+        "path": "src/lib/node-oauth-client-provider.test.ts",
+        "additions": 246,
+        "deletions": 9
+      },
+      {
+        "path": "src/lib/node-oauth-client-provider.ts",
+        "additions": 311,
+        "deletions": 11
+      },
+      {
+        "path": "src/lib/refresh-coordination.test.ts",
+        "additions": 191,
+        "deletions": 0
+      },
+      {
+        "path": "src/lib/utils.ts",
+        "additions": 21,
+        "deletions": 4
+      }
+    ],
+    "package_json_unchanged": true,
+    "lock_unchanged": true,
+    "runtime_executed": false,
+    "runtime_scope": "original five-record CLI procedure",
+    "distribution_comparison": "distribution-0.16.5.json"
+  },
+  "source_lock_markers": {
+    "0.16.3": {
+      "client2": true,
+      "core2": true
+    },
+    "0.16.4": {
+      "client24": true,
+      "core24": true
+    }
+  }
+}

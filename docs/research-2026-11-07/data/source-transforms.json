@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "accepted_source_manifest_sha256": "5c6fa7bada2278c0e6cefa06329f31e43fd09829b3f67bc4efb4d9403da93f8e",
+  "publication_form_manifest_sha256": "1e1ad866a7a519a5a05c43889c8d6722ab63ae72a4c339b41c341abf30f53a75",
+  "raw_traces": [
+    {
+      "source": "<recorded-bench>/cli/0.16.3/attempt-1/runs/cli/logs/raw_trace.log",
+      "source_sha256": "c27dd97a63c21291f9cd4221d523f15ada118120925bb316bf330123f0c80654",
+      "public_file": "data/raw/raw_trace-0.16.3.log",
+      "public_record_index": 0,
+      "transformation": "Parse JSON record, normalize machine filesystem paths, preserve timestamp/HTTP URLs/numbers/booleans/fixture parameters. Authorization values were not captured.",
+      "public_sha256": "2ea9125b4446870c2c9ff274f1942d4140cc5e7af335935c1d92fd91a7ea71c6"
+    },
+    {
+      "source": "<recorded-bench>/cli/0.16.3/attempt-2/runs/cli/logs/raw_trace.log",
+      "source_sha256": "49e7cbc09ecc2b5546118a1092957f1260e9ec0f1f7457a9df9ea335f802cade",
+      "public_file": "data/raw/failed/raw_trace-0.16.3-attempt-2.log",
+      "public_record_index": 0,
+      "transformation": "Parse JSON record, normalize machine filesystem paths, preserve timestamp/HTTP URLs/numbers/booleans/fixture parameters. Authorization values were not captured.",
+      "public_sha256": "488800277835edf7976f93a5886828772d088a8639843a0f47d2f740c7e823a2"
+    },
+    {
+      "source": "<recorded-bench>/cli/0.16.3/attempt-3/runs/cli/logs/raw_trace.log",
+      "source_sha256": "9381beec9b5862c64e26908f832a4f9470cf91a34123e007997f4c1e8da015b3",
+      "public_file": "data/raw/failed/raw_trace-0.16.3-attempt-3.log",
+      "public_record_index": 0,
+      "transformation": "Parse JSON record, normalize machine filesystem paths, preserve timestamp/HTTP URLs/numbers/booleans/fixture parameters. Authorization values were not captured.",
+      "public_sha256": "95b456fce504ae62162529d1782904e4d2b4b0a8d08de1824e5afa67d227b305"
+    },
+    {
+      "source": "<recorded-bench>/cli/0.16.4/attempt-1/runs/cli/logs/raw_trace.log",
+      "source_sha256": "9b9c61fe761d2f311d46d91c926d0960191c7c8a902727a5a5a2efc53b7abfb9",
+      "public_file": "data/raw/failed/raw_trace-0.16.4-attempt-1.log",
+      "public_record_index": 0,
+      "transformation": "Parse JSON record, normalize machine filesystem paths, preserve timestamp/HTTP URLs/numbers/booleans/fixture parameters. Authorization values were not captured.",
+      "public_sha256": "3018a66e5b64738d235abdf82a91ddec66e30d8e1c744340f03e39ab8406e749"
+    },
+    {
+      "source": "<recorded-bench>/cli/0.16.4/attempt-2/runs/cli/logs/raw_trace.log",
+      "source_sha256": "942af97cfd360d1f6b1fb1987890950a807ec6726a4491865a9c62a4a4e7384f",
+      "public_file": "data/raw/raw_trace-0.16.4.log",
+      "public_record_index": 0,
+      "transformation": "Parse JSON record, normalize machine filesystem paths, preserve timestamp/HTTP URLs/numbers/booleans/fixture parameters. Authorization values were not captured.",
+      "public_sha256": "3880ca7443d29e56e201f9709d56bf10767f3b3e984ca4da3f7f6bd8ede67954"
+    },
+    {
+      "source": "<recorded-bench>/cli/0.16.4/attempt-3/runs/cli/logs/raw_trace.log",
+      "source_sha256": "b2406bea7ecee7871c7b8ef1780f922479940b5cdf8590d6b228de0202213fef",
+      "public_file": "data/raw/raw_trace-0.16.4.log",
+      "public_record_index": 1,
+      "transformation": "Parse JSON record, normalize machine filesystem paths, preserve timestamp/HTTP URLs/numbers/booleans/fixture parameters. Authorization values were not captured.",
+      "public_sha256": "3880ca7443d29e56e201f9709d56bf10767f3b3e984ca4da3f7f6bd8ede67954"
+    }
+  ],
+  "authorization_value_redactions": 0,
+  "scope": "Authorization presence booleans only in source; filesystem paths normalized; HTTP URLs/parameters/numbers/booleans preserved.",
+  "path_normalization_scope": "Declared per-file input/output projections; no aggregate replacement count asserted.",
+  "runtime_result_bindings": [
+    {
+      "public_file": "data/f08-cli-results.json",
+      "source": "<accepted-bench>/runs/F08-CLI-RESULTS.json",
+      "source_sha256": "c38edb513b2493c1fd9a52c9f177a0c6247ad3a6b29bb13db163ebceacdb3529",
+      "public_sha256": "9f1fc874bcd3f19e96fc0a0d9dd486ee3505045c0de22e98caf0b95f45b3f65b",
+      "selection": "The exact named hash in brief246; CLI/helper replay source remains separate."
+    },
+    {
+      "public_file": "data/f08-method-results.json",
+      "source": "<accepted-bench>/runs/F08-METHOD-RESULTS.json",
+      "source_sha256": "9ee25546a671f67ddf07f72ea3cb0dfc64351ac3747979baf1a2a3f1d0beef77",
+      "public_sha256": "a9ec9992addf3231ace013a7be2943eba800b4d14c2966e4f8e90917e49b13d5",
+      "selection": "The exact named hash in brief246; CLI/helper replay source remains separate."
+    },
+    {
+      "public_file": "data/f11-results.json",
+      "source": "<accepted-bench>/runs/F11-RESULTS.json",
+      "source_sha256": "e3c835730f6467d028ead4b4e922e33a69043e8867db480a209a16e78acb4054",
+      "public_sha256": "56ecd1a6234b14b89c2728849811a90d17466f5571519c735f4b925b4fdec6c3",
+      "selection": "The exact named hash in brief246; CLI/helper replay source remains separate."
+    }
+  ]
+}

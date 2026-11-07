@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "baseline": "0.16.0",
+  "compared_helpers": 10,
+  "functions": [
+    {
+      "name": "parseWWWAuthenticateHeader",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 31912,
+        "end_line": 31944,
+        "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4",
+        "normalized_sha256": "d41872608d288b463c569dd62648a7ef17e927e038b59834cd5748be62095199"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 37115,
+          "end_line": 37147,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4",
+          "normalized_sha256": "d41872608d288b463c569dd62648a7ef17e927e038b59834cd5748be62095199",
+          "raw_identical": true,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 37865,
+          "end_line": 37897,
+          "sha256": "a0219b68b5f76ddf85ad5654fd22a65099a856dfb14722e195eba3203cb569f4",
+          "normalized_sha256": "d41872608d288b463c569dd62648a7ef17e927e038b59834cd5748be62095199",
+          "raw_identical": true,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "buildProtectedResourceMetadataUrls",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 31945,
+        "end_line": 31955,
+        "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3",
+        "normalized_sha256": "cc5e2331d678062ec0c6a4e579ab3e8a308a12f6f724bb95e1c4abd804f0bce7"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 37148,
+          "end_line": 37158,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3",
+          "normalized_sha256": "cc5e2331d678062ec0c6a4e579ab3e8a308a12f6f724bb95e1c4abd804f0bce7",
+          "raw_identical": true,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 37898,
+          "end_line": 37908,
+          "sha256": "ba87339531a0d336a2ebd3c7ec63bf651376f72557d6f75263c4c96b232602c3",
+          "normalized_sha256": "cc5e2331d678062ec0c6a4e579ab3e8a308a12f6f724bb95e1c4abd804f0bce7",
+          "raw_identical": true,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "fetchProtectedResourceMetadataFromUrl",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 31956,
+        "end_line": 31991,
+        "sha256": "012a5b295f6844504d435110c726098458624a8ed1c5498b933ad94d4eb16883",
+        "normalized_sha256": "15371a201c98e58dc1840d0c6d4198d2e70863f20e17c557071d5ece630ce5e0"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 37159,
+          "end_line": 37194,
+          "sha256": "e80991dbb51b8aff3be987e33db557a9a393f232f35d087770e52dc7ea6bc135",
+          "normalized_sha256": "15371a201c98e58dc1840d0c6d4198d2e70863f20e17c557071d5ece630ce5e0",
+          "raw_identical": false,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 37909,
+          "end_line": 37944,
+          "sha256": "e80991dbb51b8aff3be987e33db557a9a393f232f35d087770e52dc7ea6bc135",
+          "normalized_sha256": "15371a201c98e58dc1840d0c6d4198d2e70863f20e17c557071d5ece630ce5e0",
+          "raw_identical": false,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "discoverProtectedResourceMetadata",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 31992,
+        "end_line": 32019,
+        "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8",
+        "normalized_sha256": "d322522af68a10548ddb0b51e0a1203c032c68ffd39521885397d635e0f3f9a5"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 37195,
+          "end_line": 37222,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8",
+          "normalized_sha256": "d322522af68a10548ddb0b51e0a1203c032c68ffd39521885397d635e0f3f9a5",
+          "raw_identical": true,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 37945,
+          "end_line": 37972,
+          "sha256": "d68e12af49da8cb88a975e27d27ff1be00e3bcd4ae3996776e642e9bee9065f8",
+          "normalized_sha256": "d322522af68a10548ddb0b51e0a1203c032c68ffd39521885397d635e0f3f9a5",
+          "raw_identical": true,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "getAuthorizationServerUrl",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 32020,
+        "end_line": 32025,
+        "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61",
+        "normalized_sha256": "443a84b8a9bd57a7f39d074c84f54e8eb4c2b92ae4cc7638688fa3a55398e339"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 37223,
+          "end_line": 37228,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61",
+          "normalized_sha256": "443a84b8a9bd57a7f39d074c84f54e8eb4c2b92ae4cc7638688fa3a55398e339",
+          "raw_identical": true,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 37973,
+          "end_line": 37978,
+          "sha256": "63ab3c4f4cb220dfd5f384e425e9681c4ff4479337f0f463312853d0eb2e2b61",
+          "normalized_sha256": "443a84b8a9bd57a7f39d074c84f54e8eb4c2b92ae4cc7638688fa3a55398e339",
+          "raw_identical": true,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "getMetadataUrls",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 32028,
+        "end_line": 32046,
+        "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee",
+        "normalized_sha256": "7967a16f7de16f9b48662f9795ebfc4e57f33babfd03554c9745ce71acea2521"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 37231,
+          "end_line": 37249,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee",
+          "normalized_sha256": "7967a16f7de16f9b48662f9795ebfc4e57f33babfd03554c9745ce71acea2521",
+          "raw_identical": true,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 37981,
+          "end_line": 37999,
+          "sha256": "14d66d9761dfcbbba30c8473889ac6292b65c132ba142524f260dbc400deafee",
+          "normalized_sha256": "7967a16f7de16f9b48662f9795ebfc4e57f33babfd03554c9745ce71acea2521",
+          "raw_identical": true,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "fetchAuthorizationServerMetadata",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 32047,
+        "end_line": 32058,
+        "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7",
+        "normalized_sha256": "a0800bc2f03ddcccbbe8edb04d077530c8a86964ec032bcd1284307d12dac7fa"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 37250,
+          "end_line": 37261,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7",
+          "normalized_sha256": "a0800bc2f03ddcccbbe8edb04d077530c8a86964ec032bcd1284307d12dac7fa",
+          "raw_identical": true,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 38000,
+          "end_line": 38011,
+          "sha256": "0882857a57e17f98f68fa99f2d8dc60a8f04cf21df64d45f1e9622eddb4831e7",
+          "normalized_sha256": "a0800bc2f03ddcccbbe8edb04d077530c8a86964ec032bcd1284307d12dac7fa",
+          "raw_identical": true,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "fetchMetadataFrom",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 32059,
+        "end_line": 32094,
+        "sha256": "42b3aa8183bbf573d66b2befb8574ec189c181c79161b6e5770eb73e7336fd1e",
+        "normalized_sha256": "a8badb6e176f3e28d127ddbb50117fbb4f9094c2b711d54cc9ea49815d8bc7de"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 37262,
+          "end_line": 37297,
+          "sha256": "2cdb1550dc5e6418e8da1829221e33f7bcdbeb2d8f50f6b6f8eaaf2e1af4a6a8",
+          "normalized_sha256": "a8badb6e176f3e28d127ddbb50117fbb4f9094c2b711d54cc9ea49815d8bc7de",
+          "raw_identical": false,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 38012,
+          "end_line": 38047,
+          "sha256": "2cdb1550dc5e6418e8da1829221e33f7bcdbeb2d8f50f6b6f8eaaf2e1af4a6a8",
+          "normalized_sha256": "a8badb6e176f3e28d127ddbb50117fbb4f9094c2b711d54cc9ea49815d8bc7de",
+          "raw_identical": false,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "discoverOAuthServerInfo2",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 33102,
+        "end_line": 33177,
+        "sha256": "c68204444fc104a9dddcf956aaa39486e811071f18889c5656512a63d3c8e8ed",
+        "normalized_sha256": "1942434500578ce5c7e8db3745dcdcf32e4218367ea3c226fd4b495c4688ed61"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 38305,
+          "end_line": 38380,
+          "sha256": "6a933714d30f7646114a8622b679cd2db8cddcdf758dae0ada35dc1ef0a21f14",
+          "normalized_sha256": "1942434500578ce5c7e8db3745dcdcf32e4218367ea3c226fd4b495c4688ed61",
+          "raw_identical": false,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 39055,
+          "end_line": 39130,
+          "sha256": "6a933714d30f7646114a8622b679cd2db8cddcdf758dae0ada35dc1ef0a21f14",
+          "normalized_sha256": "1942434500578ce5c7e8db3745dcdcf32e4218367ea3c226fd4b495c4688ed61",
+          "raw_identical": false,
+          "normalized_identical": true
+        }
+      }
+    },
+    {
+      "name": "getServerUrlHash",
+      "baseline_version": "0.16.0",
+      "baseline": {
+        "line": 34016,
+        "end_line": 34030,
+        "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27",
+        "normalized_sha256": "6e29e15a75da4ce9d692a9ef0db64ecfab1d076b57621e0dda12d7ff1bebcb79"
+      },
+      "versions": {
+        "0.16.3": {
+          "bundle": "chunk-VBHEG6AN.js",
+          "line": 39229,
+          "end_line": 39243,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27",
+          "normalized_sha256": "6e29e15a75da4ce9d692a9ef0db64ecfab1d076b57621e0dda12d7ff1bebcb79",
+          "raw_identical": true,
+          "normalized_identical": true
+        },
+        "0.16.4": {
+          "bundle": "chunk-DFL3QVEJ.js",
+          "line": 39979,
+          "end_line": 39993,
+          "sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27",
+          "normalized_sha256": "6e29e15a75da4ce9d692a9ef0db64ecfab1d076b57621e0dda12d7ff1bebcb79",
+          "raw_identical": true,
+          "normalized_identical": true
+        }
+      }
+    }
+  ],
+  "sdk_condition_separate": {
+    "name": "discoverAuthorizationServerMetadata",
+    "kind": "bundled SDK metadata fallback condition",
+    "baseline_source": "async function discoverAuthorizationServerMetadata(authorizationServerUrl, { fetchFn = fetch, protocolVersion = LATEST_PROTOCOL_VERSION, skipIssuerValidation = false } = {}) {\n  const headers = {\n    \"MCP-Protocol-Version\": protocolVersion,\n    Accept: \"application/json\"\n  };\n  const urlsToTry = buildDiscoveryUrls(authorizationServerUrl);\n  for (const { url: endpointUrl, type } of urlsToTry) {\n    const response = await fetchWithCorsRetry(endpointUrl, headers, fetchFn);\n    if (!response)\n      continue;\n    if (!response.ok) {\n      await response.text?.().catch(() => {\n      });\n      if (response.status >= 400 && response.status < 500 || response.status === 502) continue;\n      throw new Error(`HTTP ${response.status} trying to load ${type === \"oauth\" ? \"OAuth\" : \"OpenID provider\"} metadata from ${endpointUrl}`);\n    }\n    const parsed = type === \"oauth\" ? OAuthMetadataSchema.parse(await response.json()) : OpenIdProviderDiscoveryMetadataSchema.parse(await response.json());\n    if (!skipIssuerValidation) {\n      const expectedIssuer = typeof authorizationServerUrl === \"string\" ? authorizationServerUrl : authorizationServerUrl.href;\n      if (!(parsed.issuer === expectedIssuer || expectedIssuer.endsWith(\"/\") && parsed.issuer === expectedIssuer.slice(0, -1))) throw new IssuerMismatchError(\"metadata\", expectedIssuer, parsed.issuer);\n    }\n    return parsed;\n  }\n}",
+    "versions": {
+      "0.16.3": {
+        "source": "async function discoverAuthorizationServerMetadata(authorizationServerUrl, { fetchFn = fetch, protocolVersion = LATEST_PROTOCOL_VERSION, skipIssuerValidation = false } = {}) {\n  const headers = {\n    \"MCP-Protocol-Version\": protocolVersion,\n    Accept: \"application/json\"\n  };\n  const urlsToTry = buildDiscoveryUrls(authorizationServerUrl);\n  for (const { url: endpointUrl, type } of urlsToTry) {\n    const response = await fetchWithCorsRetry(endpointUrl, headers, fetchFn);\n    if (!response)\n      continue;\n    if (!response.ok) {\n      await response.text?.().catch(() => {\n      });\n      if (response.status >= 400 && response.status < 500 || response.status === 502) continue;\n      throw new Error(`HTTP ${response.status} trying to load ${type === \"oauth\" ? \"OAuth\" : \"OpenID provider\"} metadata from ${endpointUrl}`);\n    }\n    const parsed = type === \"oauth\" ? OAuthMetadataSchema.parse(await response.json()) : OpenIdProviderDiscoveryMetadataSchema.parse(await response.json());\n    if (!skipIssuerValidation) {\n      const expectedIssuer = typeof authorizationServerUrl === \"string\" ? authorizationServerUrl : authorizationServerUrl.href;\n      if (!(parsed.issuer === expectedIssuer || expectedIssuer.endsWith(\"/\") && parsed.issuer === expectedIssuer.slice(0, -1))) throw new IssuerMismatchError(\"metadata\", expectedIssuer, parsed.issuer);\n    }\n    return parsed;\n  }\n}",
+        "sha256": "091f8c4a60fcc1d9b4bc3b54cf491f6b79f61020a9a3479c939904e55441f7bb",
+        "normalized_sha256": "fea69e724c95fe727e4042d2fc8f3a347c6aa3f5777ef4610aea770779ab1881"
+      },
+      "0.16.4": {
+        "source": "async function discoverAuthorizationServerMetadata(authorizationServerUrl, { fetchFn = fetch, protocolVersion = LATEST_PROTOCOL_VERSION, skipIssuerValidation = false } = {}) {\n  const headers = {\n    \"MCP-Protocol-Version\": protocolVersion,\n    Accept: \"application/json\"\n  };\n  const urlsToTry = buildDiscoveryUrls(authorizationServerUrl);\n  for (const { url: endpointUrl, type } of urlsToTry) {\n    const response = await fetchWithCorsRetry(endpointUrl, headers, fetchFn);\n    if (!response)\n      continue;\n    if (!response.ok) {\n      await response.text?.().catch(() => {\n      });\n      if (response.status < 500 || response.status === 502) continue;\n      throw new Error(`HTTP ${response.status} trying to load ${type === \"oauth\" ? \"OAuth\" : \"OpenID provider\"} metadata from ${endpointUrl}`);\n    }\n    const parsed = type === \"oauth\" ? OAuthMetadataSchema.parse(await response.json()) : OpenIdProviderDiscoveryMetadataSchema.parse(await response.json());\n    if (!skipIssuerValidation) {\n      const expectedIssuer = typeof authorizationServerUrl === \"string\" ? authorizationServerUrl : authorizationServerUrl.href;\n      if (!(parsed.issuer === expectedIssuer || expectedIssuer.endsWith(\"/\") && parsed.issuer === expectedIssuer.slice(0, -1))) throw new IssuerMismatchError(\"metadata\", expectedIssuer, parsed.issuer);\n    }\n    return parsed;\n  }\n}",
+        "sha256": "f8aa652247b39464362d0e226995a9d99532615b049fd2b54e5a152ff1f4f60e",
+        "normalized_sha256": "528f8ef620bd47aa45de9a7126753877ead025973f61b8dc32306450b9cf2964"
+      }
+    }
+  },
+  "hash_note": "Raw FunctionDeclaration.getText hashes and separately normalized identifier-suffix hashes are not whole-program equivalence. Executed helper assertions are unchanged apart from PINS."
+}

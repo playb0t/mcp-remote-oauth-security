@@ -1,0 +1,114 @@
+{
+  "node": "v24.20.0",
+  "source": "Unmodified official NodeOAuthClientProvider.redirectToAuthorization/openBrowser + installed sanitizer/open; fake SystemRoot only after Node startup routes package open child spawn to compiled local recorder, no browser/network",
+  "results": [
+    {
+      "version": "0.16.3",
+      "case": "loopback-http",
+      "input": "http://127.0.0.1:37331/authorize?state=SYNTHETIC",
+      "result": "returned",
+      "error": null,
+      "actual_child_recorder_executed": true,
+      "encoded_command_decoded": "Start \"http://127.0.0.1:37331/authorize?state=SYNTHETIC\"",
+      "recorder_argv": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-EncodedCommand",
+        "UwB0AGEAcgB0ACAAIgBoAHQAdABwADoALwAvADEAMgA3AC4AMAAuADAALgAxADoAMwA3ADMAMwAxAC8AYQB1AHQAaABvAHIAaQB6AGUAPwBzAHQAYQB0AGUAPQBTAFkATgBUAEgARQBUAEkAQwAiAA=="
+      ]
+    },
+    {
+      "version": "0.16.3",
+      "case": "link-local-http",
+      "input": "http://169.254.169.254/latest/meta-data?state=SYNTHETIC",
+      "result": "returned",
+      "error": null,
+      "actual_child_recorder_executed": true,
+      "encoded_command_decoded": "Start \"http://169.254.169.254/latest/meta-data?state=SYNTHETIC\"",
+      "recorder_argv": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-EncodedCommand",
+        "UwB0AGEAcgB0ACAAIgBoAHQAdABwADoALwAvADEANgA5AC4AMgA1ADQALgAxADYAOQAuADIANQA0AC8AbABhAHQAZQBzAHQALwBtAGUAdABhAC0AZABhAHQAYQA/AHMAdABhAHQAZQA9AFMAWQBOAFQASABFAFQASQBDACIA"
+      ]
+    },
+    {
+      "version": "0.16.3",
+      "case": "script-negative",
+      "input": "javascript:alert(1)",
+      "result": "rejected",
+      "error": "Error: Invalid url to pass to open(): javascript:alert(1)",
+      "actual_child_recorder_executed": false,
+      "encoded_command_decoded": null,
+      "recorder_argv": []
+    },
+    {
+      "version": "0.16.3",
+      "case": "mapped-ipv6-negative",
+      "input": "http://[::ffff:127.0.0.1]/authorize",
+      "result": "rejected",
+      "error": "Error: Invalid url to pass to open(): http://[::ffff:7f00:1]/authorize",
+      "actual_child_recorder_executed": false,
+      "encoded_command_decoded": null,
+      "recorder_argv": []
+    },
+    {
+      "version": "0.16.4",
+      "case": "loopback-http",
+      "input": "http://127.0.0.1:37331/authorize?state=SYNTHETIC",
+      "result": "returned",
+      "error": null,
+      "actual_child_recorder_executed": true,
+      "encoded_command_decoded": "Start \"http://127.0.0.1:37331/authorize?state=SYNTHETIC\"",
+      "recorder_argv": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-EncodedCommand",
+        "UwB0AGEAcgB0ACAAIgBoAHQAdABwADoALwAvADEAMgA3AC4AMAAuADAALgAxADoAMwA3ADMAMwAxAC8AYQB1AHQAaABvAHIAaQB6AGUAPwBzAHQAYQB0AGUAPQBTAFkATgBUAEgARQBUAEkAQwAiAA=="
+      ]
+    },
+    {
+      "version": "0.16.4",
+      "case": "link-local-http",
+      "input": "http://169.254.169.254/latest/meta-data?state=SYNTHETIC",
+      "result": "returned",
+      "error": null,
+      "actual_child_recorder_executed": true,
+      "encoded_command_decoded": "Start \"http://169.254.169.254/latest/meta-data?state=SYNTHETIC\"",
+      "recorder_argv": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-EncodedCommand",
+        "UwB0AGEAcgB0ACAAIgBoAHQAdABwADoALwAvADEANgA5AC4AMgA1ADQALgAxADYAOQAuADIANQA0AC8AbABhAHQAZQBzAHQALwBtAGUAdABhAC0AZABhAHQAYQA/AHMAdABhAHQAZQA9AFMAWQBOAFQASABFAFQASQBDACIA"
+      ]
+    },
+    {
+      "version": "0.16.4",
+      "case": "script-negative",
+      "input": "javascript:alert(1)",
+      "result": "rejected",
+      "error": "Error: Invalid url to pass to open(): javascript:alert(1)",
+      "actual_child_recorder_executed": false,
+      "encoded_command_decoded": null,
+      "recorder_argv": []
+    },
+    {
+      "version": "0.16.4",
+      "case": "mapped-ipv6-negative",
+      "input": "http://[::ffff:127.0.0.1]/authorize",
+      "result": "rejected",
+      "error": "Error: Invalid url to pass to open(): http://[::ffff:7f00:1]/authorize",
+      "actual_child_recorder_executed": false,
+      "encoded_command_decoded": null,
+      "recorder_argv": []
+    }
+  ]
+}

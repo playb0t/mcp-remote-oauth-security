@@ -1,0 +1,90 @@
+{
+  "recorded_at": "2026-11-07T07:44:13.337530+00:00",
+  "versions": [
+    {
+      "version": "0.16.3",
+      "statuses": [
+        {
+          "finding": "F-01",
+          "cve": "CVE-2026-51994",
+          "status": "request path present",
+          "class": "Full official CLI and exact helpers; owned loopback direct/redirect controls",
+          "limits": "Third distinct origin and response disclosure not measured."
+        },
+        {
+          "finding": "F-02",
+          "cve": "CVE-2026-51995",
+          "status": "request path present",
+          "class": "Full CLI AS metadata selected by PRM; synthetic token POST in completed full traces",
+          "limits": "No real OAuth sign-in or production credentials."
+        },
+        {
+          "finding": "F-04",
+          "cve": "CVE-2026-51996",
+          "status": "code path present",
+          "class": "Exact executed hash helper; chosen serialization/normalization checks",
+          "limits": "No fixed-victim cache takeover, cross-user session reuse or MD5 cryptanalysis."
+        },
+        {
+          "finding": "F-08",
+          "cve": "CVE-2026-51997",
+          "status": "code path present; opener route measured",
+          "class": "Full CLI and direct provider-method control to installed opener and OS child recorder",
+          "limits": "No actual browser, link-local request or arbitrary code execution in this replay."
+        },
+        {
+          "finding": "F-11",
+          "cve": "CVE-2026-52001",
+          "status": "code path present; transport behavior measured",
+          "class": "Bundled SSE/EventSource with public synthetic provider",
+          "runtime_observation": "Cross-origin302 followed without bearer at canary.",
+          "controls": "Same-origin bearer retained; foreign endpoint rejected; no-token request has no Authorization.",
+          "limits": "Specific graph/redirect profile; not full CLI OAuth sign-in."
+        }
+      ]
+    },
+    {
+      "version": "0.16.4",
+      "statuses": [
+        {
+          "finding": "F-01",
+          "cve": "CVE-2026-51994",
+          "status": "request path present",
+          "class": "Full official CLI and exact helpers; owned loopback direct/redirect controls",
+          "limits": "Third distinct origin and response disclosure not measured."
+        },
+        {
+          "finding": "F-02",
+          "cve": "CVE-2026-51995",
+          "status": "request path present",
+          "class": "Full CLI AS metadata selected by PRM; synthetic token POST in completed full traces",
+          "limits": "No real OAuth sign-in or production credentials."
+        },
+        {
+          "finding": "F-04",
+          "cve": "CVE-2026-51996",
+          "status": "code path present",
+          "class": "Exact executed hash helper; chosen serialization/normalization checks",
+          "limits": "No fixed-victim cache takeover, cross-user session reuse or MD5 cryptanalysis."
+        },
+        {
+          "finding": "F-08",
+          "cve": "CVE-2026-51997",
+          "status": "code path present; opener route measured",
+          "class": "Full CLI and direct provider-method control to installed opener and OS child recorder",
+          "limits": "No actual browser, link-local request or arbitrary code execution in this replay."
+        },
+        {
+          "finding": "F-11",
+          "cve": "CVE-2026-52001",
+          "status": "code path present; transport behavior measured",
+          "class": "Bundled SSE/EventSource with public synthetic provider",
+          "runtime_observation": "Cross-origin302 refused before canary request.",
+          "controls": "Same-origin bearer retained; foreign endpoint rejected; no-token request has no Authorization.",
+          "limits": "Specific graph/redirect profile; not full CLI OAuth sign-in."
+        }
+      ]
+    }
+  ],
+  "interpretation": "Scoped path/code/transport observations; official affected ranges unchanged."
+}

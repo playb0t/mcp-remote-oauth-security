@@ -1,0 +1,23 @@
+--- recorded/f08-method.mjs
++++ portable/f08-method.mjs
+@@ -2,13 +2,16 @@
+ import {resolve,dirname,join} from 'node:path';
+ import {fileURLToPath,pathToFileURL} from 'node:url';
+ import assert from 'node:assert/strict';
+-const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+-const runtime=resolve(root,'runtime');
+-const fakeRoot=join(root,'fake-systemroot');
++const required=(name)=>{const value=process.env[name];if(!value)throw Error(`Missing ${name}`);return resolve(value);};
++const root=required('MCP_CASE_ROOT');
++const runtime=required('MCP_RUNTIME_ROOT');
++const fakeRoot=required('MCP_FAKE_SYSTEMROOT');
++if(process.platform!=='win32')throw Error('F08 fake PowerShell recorder procedure requires Windows');
++if(!existsSync(join(fakeRoot,'System32','WindowsPowerShell','v1.0','powershell.exe')))throw Error('Compile the recorder source into MCP_FAKE_SYSTEMROOT first');
+ const results=[];
+ function provider(){return {inTokenStorm:()=>false,ownsPendingFlow:()=>true,useDeviceCode:false,useClientCredentials:false,getAuthorizationServerMetadata:async()=>({}),applyScope:()=>{},applyAuthorizeParams:()=>{},preflightCachedDynamicClientRegistration:async()=>{},guardAgainstAuthorizationStorm:()=>{}}}
+ for(const [v,file] of [['0.16.3','chunk-VBHEG6AN.js'],['0.16.4','chunk-DFL3QVEJ.js']]){
+- const {NodeOAuthClientProvider}=await import(pathToFileURL(join(runtime,'f08-f11',v,'dist',file)).href);
++ const {NodeOAuthClientProvider}=await import(pathToFileURL(join(runtime,v,'dist',file)).href);
+  for(const [id,url] of [['loopback-http','http://127.0.0.1:37331/authorize?state=SYNTHETIC'],['link-local-http','http://169.254.169.254/latest/meta-data?state=SYNTHETIC'],['script-negative','javascript:alert(1)'],['mapped-ipv6-negative','http://[::ffff:127.0.0.1]/authorize']]){
+   const capture=join(root,'runs',`F08-${v}-${id}.argv.txt`);if(existsSync(capture))unlinkSync(capture);
+   const oldRoot=process.env.SYSTEMROOT,oldOut=process.env.MCP_RECORDER_OUTPUT;process.env.SYSTEMROOT=fakeRoot;process.env.MCP_RECORDER_OUTPUT=capture;
