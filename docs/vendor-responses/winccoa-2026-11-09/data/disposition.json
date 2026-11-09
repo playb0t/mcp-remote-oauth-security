@@ -1,0 +1,78 @@
+{
+  "schema": "vendor-response-disposition/1",
+  "recorded_date": "2026-11-09",
+  "vendor_project": "WinCC OA MCP Server",
+  "issue": {
+    "number": 40,
+    "state": "closed",
+    "closed_at": "2026-11-09T14:00:38Z",
+    "url": "https://github.com/winccoa/winccoa-ae-js-mcpserver/issues/40"
+  },
+  "release": {
+    "tag_name": "v1.5.3",
+    "published_at": "2026-11-09T13:57:12Z",
+    "html_url": "https://github.com/winccoa/winccoa-ae-js-mcpserver/releases/tag/v1.5.3",
+    "draft": false,
+    "prerelease": false
+  },
+  "pull_request": {
+    "merged": true,
+    "merged_at": "2026-11-09T13:56:24Z",
+    "merge_commit_sha": "71c6246f7ea42ee751fbbf5c41023524c21d5545",
+    "html_url": "https://github.com/winccoa/winccoa-ae-js-mcpserver/pull/41"
+  },
+  "release_assets_metadata": [
+    {
+      "name": "winccoa-mcp-server-1.5.3-sbom.json",
+      "size": 185649
+    },
+    {
+      "name": "winccoa-mcp-server-1.5.3-sios.zip",
+      "size": 400984
+    },
+    {
+      "name": "winccoa-mcp-server-1.5.3.tgz",
+      "size": 277254
+    }
+  ],
+  "asset_verification_scope": "Publication metadata only; releaseassets notinstalled/executed",
+  "dependency_map_unchanged_from_v1_5_2": true,
+  "changed_paths": [
+    "CHANGELOG.md",
+    "OSS.md",
+    "README.md",
+    "SECURITY.md",
+    "docs/TROUBLESHOOTING.md",
+    "mcpWinCCOA/QUICKSTART.md",
+    "mcpWinCCOA/package-lock.json",
+    "mcpWinCCOA/package.json",
+    "mcpWinCCOA/sbom.json",
+    "package.winccoa.json"
+  ],
+  "mcp_remote_pin": "0.14.3",
+  "vendor_case_status": "closed_after_documentation_release",
+  "upstream_mcp_remote_fix_status": "no_verified_fix_for_reported_metadata_and_static_Bearer_behavior",
+  "latest_upstream_version_observed": "0.16.5",
+  "latest_tested_version": "0.16.5",
+  "CVE_status_scope": "Vendorassessment/OSS documentation; noCNA/CVE.orgaffectedrangechange claimed",
+  "CVE-2026-51995": {
+    "vendor_assessment": "no_longer_treated_as_resolved",
+    "previous_notice": "Siemens SVM236904 lists0.1.39 asfix",
+    "maintainer_explanation": "UpstreamPR240 changes scopehandling only",
+    "reassessment": "announced;completion not independentlyverified"
+  },
+  "CVE-2026-51994": {
+    "vendor_assessment": "notcovered bynotice236904;noverifiedfixedrelease",
+    "reassessment": "announced;completion not independentlyverified"
+  },
+  "independent_vendor_reproduction": "README states they have not independentlyverified reporterresults",
+  "future_security_reporting": "Siemens ProductCERT via publishedSECURITY.md; no newreport sent bythisrecord",
+  "source_urls": {
+    "comment": "https://github.com/winccoa/winccoa-ae-js-mcpserver/issues/40#issuecomment-6741767385",
+    "closure": "https://github.com/winccoa/winccoa-ae-js-mcpserver/issues/40#issuecomment-6741905167",
+    "release": "https://github.com/winccoa/winccoa-ae-js-mcpserver/releases/tag/v1.5.3",
+    "OSS": "https://github.com/winccoa/winccoa-ae-js-mcpserver/blob/v1.5.3/OSS.md",
+    "README": "https://github.com/winccoa/winccoa-ae-js-mcpserver/blob/v1.5.3/README.md#mcp-remote-security-note",
+    "SECURITY": "https://github.com/winccoa/winccoa-ae-js-mcpserver/blob/v1.5.3/SECURITY.md"
+  }
+}

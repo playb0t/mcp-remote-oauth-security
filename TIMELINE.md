@@ -40,3 +40,7 @@ evaluate exposure while giving upstream a concrete remediation baseline.
 ## 9 November 2026 — static Bearer profile
 
 Published CLI 0.14.3 retained evidence and a new 0.16.5 run show initial metadata requests without Authorization followed, after MCP POST/401, by requests to the selected second origin carrying the configured Bearer. No-resource_metadata controls made no selected-origin requests. [Profile, traces and limits](docs/research-2026-11-09-static-bearer/README.md).
+
+## 9 November 2026 — WinCC OA documentation closeout
+
+WinCC OA states that notification 236904 maps to CVE-2026-51995 and no longer treats it as resolved; CVE-2026-51994 is outside that notification. PR #41/v1.5.3 delivered revised guidance and OSS status, and issue #40 closed after release. The mcp-remote pin remains 0.14.3 pending a verified upstream repair. [Source-backed vendor record](docs/vendor-responses/winccoa-2026-11-09/README.md).

@@ -31,6 +31,10 @@
 
 In the static Bearer profile, published CLI 0.14.3 and 0.16.5 followed 401-selected metadata to a second loopback origin and, after the MCP POST was challenged, repeated the metadata requests carrying the configured Bearer. The no-resource_metadata controls did not contact the selected endpoints. [Two-version static-header results](docs/research-2026-11-09-static-bearer/README.md) are separate from earlier client-credentials profiles and do not change official CVE ranges.
 
+## Vendor response: WinCC OA, 9 November 2026
+
+WinCC OA revised its assessment of CVE-2026-51995, published v1.5.3 documentation and closed issue #40 after release. The bridge remains pinned to 0.14.3 until a verified upstream fix; **this vendor-case closure does not mean mcp-remote is fixed**. [Vendor statements, release and limits](docs/vendor-responses/winccoa-2026-11-09/README.md).
+
 ## Executive summary
 
 `mcp-remote` bridges stdio-only MCP clients to remote MCP servers and runs OAuth discovery on their behalf. That makes remote-server metadata a security boundary: a server-selected URL, redirect or credential destination must not become trusted because it appeared during discovery.

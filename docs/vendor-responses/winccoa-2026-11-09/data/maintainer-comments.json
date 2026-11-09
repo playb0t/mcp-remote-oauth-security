@@ -1,0 +1,25 @@
+{
+  "source": "GitHubpublicissue40",
+  "scope": "Source locators, brief quote and paraphrased summaries; complete replies retained privately in case",
+  "statements": [
+    {
+      "id": 6741767385,
+      "user": "m-stadt",
+      "author_association": "COLLABORATOR",
+      "created_at": "2026-11-09T13:54:02Z",
+      "updated_at": "2026-11-09T13:54:02Z",
+      "url": "https://github.com/winccoa/winccoa-ae-js-mcpserver/issues/40#issuecomment-6741767385",
+      "summary": "Maps notification236904 to CVE-2026-51995, withdraws the resolved assessment, says CVE-2026-51994 is outside that notice, and announces reassessment and documentation mitigations.",
+      "short_quote": "we no longer treat CVE-2026-51995 as resolved"
+    },
+    {
+      "id": 6741905167,
+      "user": "m-stadt",
+      "author_association": "COLLABORATOR",
+      "created_at": "2026-11-09T14:00:37Z",
+      "updated_at": "2026-11-09T14:00:37Z",
+      "url": "https://github.com/winccoa/winccoa-ae-js-mcpserver/issues/40#issuecomment-6741905167",
+      "summary": "Confirms v1.5.3 documentation delivery and closes the issue; keeps the bridge pin until a verified upstream fix."
+    }
+  ]
+}
