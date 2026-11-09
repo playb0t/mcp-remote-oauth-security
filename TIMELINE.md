@@ -36,3 +36,7 @@
 The extended interval beyond the original 90-day window was used for CVE
 coordination and publication preparation. Disclosure is intended to help users
 evaluate exposure while giving upstream a concrete remediation baseline.
+
+## 9 November 2026 — static Bearer profile
+
+Published CLI 0.14.3 retained evidence and a new 0.16.5 run show initial metadata requests without Authorization followed, after MCP POST/401, by requests to the selected second origin carrying the configured Bearer. No-resource_metadata controls made no selected-origin requests. [Profile, traces and limits](docs/research-2026-11-09-static-bearer/README.md).

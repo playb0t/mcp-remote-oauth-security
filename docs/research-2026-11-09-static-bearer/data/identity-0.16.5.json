@@ -1,0 +1,43 @@
+{
+  "schema": "npm-distribution-identity/1",
+  "package": "mcp-remote",
+  "version": "0.16.5",
+  "registry_url": "https://registry.npmjs.org/mcp-remote/0.16.5",
+  "dist_integrity": "sha512-HOvAySIYs9hojTHDWUJtKpx1RFi9OHLdJewdkwtOPuybq0uNmYrfeWGBH4mZ1rrIxwkFLJ+7823/96+KbC/4Og==",
+  "archive_integrity_verified": true,
+  "runtime_members_match_archive": true,
+  "members": [
+    {
+      "member": "package/dist/chunk-EL3EX2HH.js",
+      "sha256": "98dff907124c7d353d6717dcb351383aaacb0a3a063cd4114cc64191e4550d26"
+    },
+    {
+      "member": "package/dist/chunk-MLKGABMK.js",
+      "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03"
+    },
+    {
+      "member": "package/dist/client.js",
+      "sha256": "a7305056ef08fa7b3320cfb3190bcacee1b02b54c2acdfabf7a09cffa8d83564"
+    },
+    {
+      "member": "package/dist/proxy.js",
+      "sha256": "63b850ea6e9c1717d26c081f5c8f13b9c56e15e46b4ccab739d66b309241fa61"
+    },
+    {
+      "member": "package/dist/webapi-WW3GGD26.js",
+      "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6"
+    },
+    {
+      "member": "package/package.json",
+      "sha256": "b9a655eea1b90b9ba0cc8e4e938c1d4c537202aa0260e6abe54ce0e7c0e6cac4"
+    },
+    {
+      "member": "package/dist/client.d.ts",
+      "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+    },
+    {
+      "member": "package/dist/proxy.d.ts",
+      "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "version": "0.14.3",
+    "evidence_origin": "retained earlier9Nov run; not rerun",
+    "positive_cases": 1,
+    "negative_cases": 1,
+    "selected_metadata_requests": 4,
+    "initial_metadata_without_Authorization": 2,
+    "metadata_receipts_with_exact_static_Bearer": 2,
+    "no_challenge_selected_requests": 0,
+    "CLI_exit_codes": [
+      1,
+      1
+    ],
+    "forced_stops": [
+      false,
+      false
+    ],
+    "server_close_callbacks": 4
+  },
+  {
+    "version": "0.16.5",
+    "evidence_origin": "new9Nov run using same scenario function",
+    "positive_cases": 1,
+    "negative_cases": 1,
+    "selected_metadata_requests": 4,
+    "initial_metadata_without_Authorization": 2,
+    "metadata_receipts_with_exact_static_Bearer": 2,
+    "no_challenge_selected_requests": 0,
+    "CLI_exit_codes": [
+      1,
+      1
+    ],
+    "forced_stops": [
+      false,
+      false
+    ],
+    "server_close_callbacks": 4
+  }
+]

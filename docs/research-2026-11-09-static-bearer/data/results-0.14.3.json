@@ -1,0 +1,403 @@
+{
+  "schema": "static-bearer-metadata-observations/1",
+  "version": "0.14.3",
+  "recorded_date": "2026-11-09",
+  "profile": "static resource Bearer; --allow-http --header, no extra OAuth flags",
+  "cases": [
+    {
+      "name": "bearer-with-resource-metadata",
+      "challenge": true,
+      "node": "v26.13.0",
+      "node_executable": "node",
+      "cli": "npm:mcp-remote@0.14.3/dist/proxy.js",
+      "cli_sha256": "db2c09216a1d394d425ecdebb6386b5c435ef8c51c08a8db19a15360f60c3b4a",
+      "argv_profile": [
+        "proxy.js",
+        "http://127.0.0.1:57190/mcp",
+        "--allow-http",
+        "--header",
+        "Authorization: Bearer [synthetic]"
+      ],
+      "extra_oauth_flags": [],
+      "remote_origin": "http://127.0.0.1:57190",
+      "metadata_origin": "http://127.0.0.1:57189",
+      "events": [
+        {
+          "seq": 1,
+          "at": "2026-11-09T11:07:16.825Z",
+          "role": "controller-health",
+          "method": "GET",
+          "path": "/observer-health",
+          "status": 200,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 2,
+          "at": "2026-11-09T11:07:17.112Z",
+          "role": "MCP-resource",
+          "method": "GET",
+          "path": "/mcp",
+          "status": 401,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 3,
+          "at": "2026-11-09T11:07:17.118Z",
+          "role": "selected-resource-metadata",
+          "method": "GET",
+          "path": "/resource-metadata",
+          "status": 200,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 4,
+          "at": "2026-11-09T11:07:17.121Z",
+          "role": "selected-AS-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "status": 200,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 5,
+          "at": "2026-11-09T11:07:17.125Z",
+          "role": "MCP-resource",
+          "method": "GET",
+          "path": "/mcp",
+          "status": 401,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 6,
+          "at": "2026-11-09T11:07:17.142Z",
+          "role": "MCP-resource",
+          "method": "POST",
+          "path": "/mcp",
+          "status": 401,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 7,
+          "at": "2026-11-09T11:07:17.144Z",
+          "role": "selected-resource-metadata",
+          "method": "GET",
+          "path": "/resource-metadata",
+          "status": 200,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 8,
+          "at": "2026-11-09T11:07:17.146Z",
+          "role": "selected-AS-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "status": 200,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        }
+      ],
+      "exit": {
+        "pid": 5948,
+        "code": 1,
+        "signal": null
+      },
+      "forced": false,
+      "server_close_callbacks": 2,
+      "metadata_request_observed": true,
+      "AS_metadata_observed": true,
+      "bearer_on_MCP_observed": true,
+      "bearer_on_selected_metadata_observed": true,
+      "terminal_guard": "DCR unsupported",
+      "limits": [
+        "Syntheticloopback401, no realWinCCOA/desktop/TLS/login",
+        "No registrationendpoint inASfixture, so auth shouldstop beforebrowser",
+        "NonzeroCLIexit afterdiscovery is retained separately from requestreceipt"
+      ],
+      "terminal_error": "Error: Incompatible auth server: does not support dynamic client registration"
+    },
+    {
+      "name": "bearer-without-resource-metadata",
+      "challenge": false,
+      "node": "v26.13.0",
+      "node_executable": "node",
+      "cli": "npm:mcp-remote@0.14.3/dist/proxy.js",
+      "cli_sha256": "db2c09216a1d394d425ecdebb6386b5c435ef8c51c08a8db19a15360f60c3b4a",
+      "argv_profile": [
+        "proxy.js",
+        "http://127.0.0.1:57198/mcp",
+        "--allow-http",
+        "--header",
+        "Authorization: Bearer [synthetic]"
+      ],
+      "extra_oauth_flags": [],
+      "remote_origin": "http://127.0.0.1:57198",
+      "metadata_origin": "http://127.0.0.1:57197",
+      "events": [
+        {
+          "seq": 1,
+          "at": "2026-11-09T11:07:17.317Z",
+          "role": "controller-health",
+          "method": "GET",
+          "path": "/observer-health",
+          "status": 200,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 2,
+          "at": "2026-11-09T11:07:17.506Z",
+          "role": "MCP-resource",
+          "method": "GET",
+          "path": "/mcp",
+          "status": 401,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 3,
+          "at": "2026-11-09T11:07:17.511Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-protected-resource/mcp",
+          "status": 404,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 4,
+          "at": "2026-11-09T11:07:17.513Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-protected-resource",
+          "status": 404,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 5,
+          "at": "2026-11-09T11:07:17.514Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server/mcp",
+          "status": 404,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 6,
+          "at": "2026-11-09T11:07:17.514Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "status": 404,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 7,
+          "at": "2026-11-09T11:07:17.515Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/openid-configuration/mcp",
+          "status": 404,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 8,
+          "at": "2026-11-09T11:07:17.515Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/mcp/.well-known/openid-configuration",
+          "status": 404,
+          "authorization_present": false,
+          "authorization_scheme": null,
+          "synthetic_bearer_matches": false
+        },
+        {
+          "seq": 9,
+          "at": "2026-11-09T11:07:17.518Z",
+          "role": "MCP-resource",
+          "method": "GET",
+          "path": "/mcp",
+          "status": 401,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 10,
+          "at": "2026-11-09T11:07:17.535Z",
+          "role": "MCP-resource",
+          "method": "POST",
+          "path": "/mcp",
+          "status": 401,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 11,
+          "at": "2026-11-09T11:07:17.537Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-protected-resource/mcp",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 12,
+          "at": "2026-11-09T11:07:17.537Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-protected-resource",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 13,
+          "at": "2026-11-09T11:07:17.539Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 14,
+          "at": "2026-11-09T11:07:17.539Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/openid-configuration",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 15,
+          "at": "2026-11-09T11:07:17.540Z",
+          "role": "resource-default-metadata",
+          "method": "POST",
+          "path": "/register",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 16,
+          "at": "2026-11-09T11:07:17.543Z",
+          "role": "MCP-resource",
+          "method": "GET",
+          "path": "/mcp",
+          "status": 401,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 17,
+          "at": "2026-11-09T11:07:17.544Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-protected-resource/mcp",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 18,
+          "at": "2026-11-09T11:07:17.544Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-protected-resource",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 19,
+          "at": "2026-11-09T11:07:17.545Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/oauth-authorization-server",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 20,
+          "at": "2026-11-09T11:07:17.545Z",
+          "role": "resource-default-metadata",
+          "method": "GET",
+          "path": "/.well-known/openid-configuration",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        },
+        {
+          "seq": 21,
+          "at": "2026-11-09T11:07:17.546Z",
+          "role": "resource-default-metadata",
+          "method": "POST",
+          "path": "/register",
+          "status": 404,
+          "authorization_present": true,
+          "authorization_scheme": "Bearer",
+          "synthetic_bearer_matches": true
+        }
+      ],
+      "exit": {
+        "pid": 26320,
+        "code": 1,
+        "signal": null
+      },
+      "forced": false,
+      "server_close_callbacks": 2,
+      "metadata_request_observed": false,
+      "AS_metadata_observed": false,
+      "bearer_on_MCP_observed": true,
+      "bearer_on_selected_metadata_observed": false,
+      "terminal_guard": null,
+      "limits": [
+        "Syntheticloopback401, no realWinCCOA/desktop/TLS/login",
+        "No registrationendpoint inASfixture, so auth shouldstop beforebrowser",
+        "NonzeroCLIexit afterdiscovery is retained separately from requestreceipt"
+      ],
+      "terminal_error": "RegistrationRejectedError: Dynamic Client Registration rejected (HTTP 404): {\"error\":\"fixture-no-default-metadata\"}"
+    }
+  ]
+}

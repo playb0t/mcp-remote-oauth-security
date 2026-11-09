@@ -1,0 +1,51 @@
+{
+  "schema": "npm-distribution-identity/1",
+  "package": "mcp-remote",
+  "version": "0.14.3",
+  "registry_url": "https://registry.npmjs.org/mcp-remote/0.14.3",
+  "dist_integrity": "sha512-M8eMA+LQIYbVNpntDhbCzFYNxwF9O9KozOuDxOrGTtRXbHRq/m4NuFZ6892hmJcU4Zhv4qPfpxrXyG2FPWNMKg==",
+  "archive_integrity_verified": true,
+  "runtime_members_match_archive": true,
+  "members": [
+    {
+      "member": "package/dist/chunk-CGVEK4Z7.js",
+      "sha256": "c2317039772cf79bdba4da9349bde030c7e7f83cef702321600f3cf2be755451",
+      "runtime_matches": true
+    },
+    {
+      "member": "package/dist/chunk-MLKGABMK.js",
+      "sha256": "30c77128186890ab8043f3a2502ab91c7d9dec358dd35ee0d89835189b1caa03",
+      "runtime_matches": true
+    },
+    {
+      "member": "package/dist/client.js",
+      "sha256": "f49f609ffb1be8889934e00326101836298f34deaa78c2cb55057b2030b939bb",
+      "runtime_matches": true
+    },
+    {
+      "member": "package/dist/proxy.js",
+      "sha256": "db2c09216a1d394d425ecdebb6386b5c435ef8c51c08a8db19a15360f60c3b4a",
+      "runtime_matches": true
+    },
+    {
+      "member": "package/dist/webapi-WW3GGD26.js",
+      "sha256": "ec84e09fb4aeb7b465796cc8e9f7788d8e4365d4c63bc5bbcb52876247cb6bc6",
+      "runtime_matches": true
+    },
+    {
+      "member": "package/package.json",
+      "sha256": "7f1705bd2699b69515127ae3a140ad5d24d7d17ec0cbfe8c1fd3d8d9e12a22b0",
+      "runtime_matches": true
+    },
+    {
+      "member": "package/dist/client.d.ts",
+      "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+      "runtime_matches": true
+    },
+    {
+      "member": "package/dist/proxy.d.ts",
+      "sha256": "a59c47872b71f12589942892464e764c0db350c20b72228645615cc36e0a0725",
+      "runtime_matches": true
+    }
+  ]
+}

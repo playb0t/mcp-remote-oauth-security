@@ -1,0 +1,18 @@
+{
+  "positive": {
+    "outcome": "none",
+    "healthy": true,
+    "metadata_requests": 0,
+    "bearer_receipts": 0
+  },
+  "negative": {
+    "outcome": "forbidden",
+    "healthy": true,
+    "metadata_requests": 4,
+    "bearer_receipts": 2
+  },
+  "fault": {
+    "outcome": "unknown",
+    "healthy": false
+  }
+}

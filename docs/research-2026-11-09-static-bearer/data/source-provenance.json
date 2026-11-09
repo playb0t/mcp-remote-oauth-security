@@ -1,0 +1,26 @@
+{
+  "old_0143_scenario_sha256_LF": "e4f7b80ff1b371f5ef38a4baa86d055cf6f3db2aac59fca188af4f39a5af869d",
+  "new_0165_same_scenario_function": true,
+  "normalization_for_comparison": "CRLF to LF only",
+  "outside_scenario_adaptations": [
+    "Parameterize version, CLI entry and output path",
+    "Record either outcome rather than asserting metadata traversal; control/cleanup still mandatory",
+    "Keep original HTTP responses, header token marker, noOAuthflags, initialize input and process lifecycle"
+  ],
+  "projections": [
+    {
+      "version": "0.14.3",
+      "public_results": "data/results-0.14.3.json",
+      "raw_result_sha256": "c413b888e0a2588cabfcba71cadfa5dd248d214baa58f254acdceccf343cc69a",
+      "projection": "cli/node_executable filesystem values replaced with logical identifiers; top-level legacy workflow fields omitted; additive terminal_error extracted from CLI stderr without stack paths. Every original non-location per-case value and all network events unchanged."
+    },
+    {
+      "version": "0.16.5",
+      "public_results": "data/results-0.16.5.json",
+      "raw_result_sha256": "e8b84b506551fd3a0987963e1ab878516a29a198bc432a952a3ec1e7d867d67b",
+      "projection": "cli/node_executable filesystem values replaced with logical identifiers; top-level legacy workflow fields omitted; additive terminal_error extracted from CLI stderr without stack paths. Every original non-location per-case value and all network events unchanged."
+    }
+  ],
+  "public_procedure_sha256": "63cfa3d0567e21eb68eb772cddfd3c3aeeeb8baf15dc357950958117e2c02086",
+  "procedure_portability": "Same published probe source used for the new0.16.5 run; CLI path/output/version passed as arguments. Old0.14.3 source remains retained separately; same scenario function, no replay claimed."
+}
