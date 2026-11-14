@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "scope": "Portable configuration projections. Recorded source hashes identify private preserved inputs. No target execution during packaging.",
+  "files": [
+    {
+      "path": "credential-v2/initial/auth-destination-v2.cjs",
+      "recorded_source_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "projection_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/driver.mjs",
+      "recorded_source_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "projection_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/cache-child.mjs",
+      "recorded_source_sha256": "df204e661832aeb6f555588618baba8a41b49f0710f1cdac39134eb04eac182d",
+      "projection_sha256": "df204e661832aeb6f555588618baba8a41b49f0710f1cdac39134eb04eac182d",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/test-criterion-v2.cjs",
+      "recorded_source_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "projection_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/harness-v2.mjs",
+      "recorded_source_sha256": "085989e0ff96e175a648078d5363cc9f6e742e2c82d8b536b91fda0edd6c3c16",
+      "projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
+      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>"
+    },
+    {
+      "path": "credential-v2/initial/detector-controls.mjs",
+      "recorded_source_sha256": "665e4ad2f6f5fce97bf3e6516f30c8a0d5c5d2139fb0824ee4c529a1c560e000",
+      "projection_sha256": "d95df9bba7fb10eb61b9662e8ae9c3c5df2ef21e38bd62dd88635af1b55184b3",
+      "transformations": "Explicit inputs and fresh detector output directories"
+    },
+    {
+      "path": "credential-v2/initial/inputs/cases.json",
+      "recorded_source_sha256": "2d601d0c56327f61179234c8a08f14aecfe6d0c79f5ebb54e332091cc96aab09",
+      "projection_sha256": "2d601d0c56327f61179234c8a08f14aecfe6d0c79f5ebb54e332091cc96aab09",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/cache-expired-bound-owner-A.json",
+      "recorded_source_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "projection_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/cache-expired-legacy-noissuer.json",
+      "recorded_source_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "projection_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/cache-expired-same-issuer-control.json",
+      "recorded_source_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "projection_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/cache-static-old-sameclient.json",
+      "recorded_source_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "projection_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/cache-static-otherclient-control.json",
+      "recorded_source_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "projection_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/cache-valid-legacy-noissuer.json",
+      "recorded_source_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "projection_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/device-code-body307-basic.json",
+      "recorded_source_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "projection_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/expected-token-basic.json",
+      "recorded_source_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "projection_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/explicit-token-endpoint-control.json",
+      "recorded_source_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "projection_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/foreign-issuer-basic.json",
+      "recorded_source_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "projection_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/foreign-issuer-post.json",
+      "recorded_source_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "projection_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/redirect-basic-header-stripped.json",
+      "recorded_source_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "projection_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/redirect-post302-no-body.json",
+      "recorded_source_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "projection_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/redirect-secret-post307.json",
+      "recorded_source_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "projection_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/resource-bearer-legitimate.json",
+      "recorded_source_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "projection_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/same-origin-basic307.json",
+      "recorded_source_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "projection_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/SDK-issuer-block.json",
+      "recorded_source_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "projection_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/initial/inputs/policies/SDK-redirect-block.json",
+      "recorded_source_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "projection_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/auth-destination-v2.cjs",
+      "recorded_source_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "projection_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/driver.mjs",
+      "recorded_source_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "projection_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/cache-child.mjs",
+      "recorded_source_sha256": "6f380688af578c62c780ca024431752be39d27d478cce5ba04d9360a28eb66ee",
+      "projection_sha256": "6f380688af578c62c780ca024431752be39d27d478cce5ba04d9360a28eb66ee",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/test-criterion-v2.cjs",
+      "recorded_source_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "projection_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/harness-v2.mjs",
+      "recorded_source_sha256": "085989e0ff96e175a648078d5363cc9f6e742e2c82d8b536b91fda0edd6c3c16",
+      "projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
+      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>"
+    },
+    {
+      "path": "credential-v2/cache-r2/detector-controls.mjs",
+      "recorded_source_sha256": "665e4ad2f6f5fce97bf3e6516f30c8a0d5c5d2139fb0824ee4c529a1c560e000",
+      "projection_sha256": "d95df9bba7fb10eb61b9662e8ae9c3c5df2ef21e38bd62dd88635af1b55184b3",
+      "transformations": "Explicit inputs and fresh detector output directories"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/cases.json",
+      "recorded_source_sha256": "9f6dc393bcdad0589da2194f864d0f21d3c92558d30d770727c2d421d9ac2a92",
+      "projection_sha256": "9f6dc393bcdad0589da2194f864d0f21d3c92558d30d770727c2d421d9ac2a92",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/cache-expired-bound-owner-A.json",
+      "recorded_source_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "projection_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/cache-expired-legacy-noissuer.json",
+      "recorded_source_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "projection_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/cache-expired-same-issuer-control.json",
+      "recorded_source_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "projection_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/cache-static-old-sameclient.json",
+      "recorded_source_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "projection_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/cache-static-otherclient-control.json",
+      "recorded_source_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "projection_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/cache-valid-legacy-noissuer.json",
+      "recorded_source_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "projection_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/device-code-body307-basic.json",
+      "recorded_source_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "projection_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/expected-token-basic.json",
+      "recorded_source_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "projection_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/explicit-token-endpoint-control.json",
+      "recorded_source_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "projection_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/foreign-issuer-basic.json",
+      "recorded_source_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "projection_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/foreign-issuer-post.json",
+      "recorded_source_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "projection_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/redirect-basic-header-stripped.json",
+      "recorded_source_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "projection_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/redirect-post302-no-body.json",
+      "recorded_source_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "projection_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/redirect-secret-post307.json",
+      "recorded_source_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "projection_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/resource-bearer-legitimate.json",
+      "recorded_source_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "projection_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/same-origin-basic307.json",
+      "recorded_source_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "projection_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/SDK-issuer-block.json",
+      "recorded_source_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "projection_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r2/inputs/policies/SDK-redirect-block.json",
+      "recorded_source_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "projection_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/auth-destination-v2.cjs",
+      "recorded_source_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "projection_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/driver.mjs",
+      "recorded_source_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "projection_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/cache-child.mjs",
+      "recorded_source_sha256": "6f380688af578c62c780ca024431752be39d27d478cce5ba04d9360a28eb66ee",
+      "projection_sha256": "6f380688af578c62c780ca024431752be39d27d478cce5ba04d9360a28eb66ee",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/test-criterion-v2.cjs",
+      "recorded_source_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "projection_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/harness-v2.mjs",
+      "recorded_source_sha256": "085989e0ff96e175a648078d5363cc9f6e742e2c82d8b536b91fda0edd6c3c16",
+      "projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
+      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>"
+    },
+    {
+      "path": "credential-v2/cache-r3/detector-controls.mjs",
+      "recorded_source_sha256": "665e4ad2f6f5fce97bf3e6516f30c8a0d5c5d2139fb0824ee4c529a1c560e000",
+      "projection_sha256": "d95df9bba7fb10eb61b9662e8ae9c3c5df2ef21e38bd62dd88635af1b55184b3",
+      "transformations": "Explicit inputs and fresh detector output directories"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/cases.json",
+      "recorded_source_sha256": "10fdcab9f2078c0162f225262ef3a0dd1c744c15e7c54fb2eea94230d6ce5f79",
+      "projection_sha256": "10fdcab9f2078c0162f225262ef3a0dd1c744c15e7c54fb2eea94230d6ce5f79",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/cache-expired-bound-owner-A.json",
+      "recorded_source_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "projection_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/cache-expired-legacy-noissuer.json",
+      "recorded_source_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "projection_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/cache-expired-same-issuer-control.json",
+      "recorded_source_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "projection_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/cache-static-old-sameclient.json",
+      "recorded_source_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "projection_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/cache-static-otherclient-control.json",
+      "recorded_source_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "projection_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/cache-valid-legacy-noissuer.json",
+      "recorded_source_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "projection_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/device-code-body307-basic.json",
+      "recorded_source_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "projection_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/expected-token-basic.json",
+      "recorded_source_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "projection_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/explicit-token-endpoint-control.json",
+      "recorded_source_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "projection_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/foreign-issuer-basic.json",
+      "recorded_source_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "projection_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/foreign-issuer-post.json",
+      "recorded_source_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "projection_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/redirect-basic-header-stripped.json",
+      "recorded_source_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "projection_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/redirect-post302-no-body.json",
+      "recorded_source_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "projection_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/redirect-secret-post307.json",
+      "recorded_source_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "projection_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/resource-bearer-legitimate.json",
+      "recorded_source_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "projection_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/same-origin-basic307.json",
+      "recorded_source_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "projection_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/SDK-issuer-block.json",
+      "recorded_source_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "projection_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "credential-v2/cache-r3/inputs/policies/SDK-redirect-block.json",
+      "recorded_source_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "projection_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "components/extras.mjs",
+      "recorded_source_sha256": "d2fbead21949ab380c32e128f35a25ca006b1d4ff4a513a905dbcd82cd7dfd33",
+      "projection_sha256": "d2fbead21949ab380c32e128f35a25ca006b1d4ff4a513a905dbcd82cd7dfd33",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "components/criterion.mjs",
+      "recorded_source_sha256": "447b49b4a9b94f810575c2e4a802df3a940ffa8343a69431460789369c9f2e92",
+      "projection_sha256": "447b49b4a9b94f810575c2e4a802df3a940ffa8343a69431460789369c9f2e92",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "components/runner.mjs",
+      "recorded_source_sha256": "eacc5aef6f56820f6a7fd20f858a0e030b442715f7afcb2a5457562c5093155b",
+      "projection_sha256": "8189d44d8743af19f5ae5f7f288408a405335c140548781f5babd8810529b030",
+      "transformations": "Explicit MCP_COMPONENT_OUTPUT/MCP_RUNTIME_DIST/MCP_FAKE_SYSTEMROOT; narrow scope text"
+    },
+    {
+      "path": "legacy/f11.mjs",
+      "recorded_source_sha256": "b153ef3d3b7400a2771837ba1ad2b78cba15f8ad619c9ed0d95b84ccfe2f7c85",
+      "projection_sha256": "b153ef3d3b7400a2771837ba1ad2b78cba15f8ad619c9ed0d95b84ccfe2f7c85",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "legacy/f08-cli.mjs",
+      "recorded_source_sha256": "506c3818dc3cac82526afa9baf440b5da479b998065f4175fff5f02b0410bc74",
+      "projection_sha256": "506c3818dc3cac82526afa9baf440b5da479b998065f4175fff5f02b0410bc74",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "legacy/f08-preload.cjs",
+      "recorded_source_sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648",
+      "projection_sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "legacy/opener-recorder.rs",
+      "recorded_source_sha256": "9dd39519d2e904a0628b0712506c63e02391500c57db5091967cb3f9ed0083e4",
+      "projection_sha256": "9dd39519d2e904a0628b0712506c63e02391500c57db5091967cb3f9ed0083e4",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "legacy/collector.py",
+      "recorded_source_sha256": "3608eb87a1e38cacc56b43ebfaf54a7144873d5b2a7ab36dff54057995bba9b0",
+      "projection_sha256": "81244649c655d58e8ed5c8c5609fafbe4ee4a66d8aef769fed12773f9b6b84ae",
+      "transformations": "Absolute host Node/runtime/output/recorder paths replaced by explicit environment bindings; original F08/F11 predicates and partial states retained"
+    },
+    {
+      "path": "runtime/0.16.6/package.json",
+      "recorded_source_sha256": "d502568105c5c1247404750df5ed9600ef00252d05e90ee5ea8ae257dfe75ec0",
+      "projection_sha256": "d502568105c5c1247404750df5ed9600ef00252d05e90ee5ea8ae257dfe75ec0",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "runtime/0.16.6/package-lock.json",
+      "recorded_source_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677",
+      "projection_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677",
+      "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "runtime/0.1.38/pnpm-lock.yaml",
+      "recorded_source_sha256": "598f60becf15b3197fce5c4e38e8158f3db2f774d218a443e50b3b5e2b098542",
+      "projection_sha256": "598f60becf15b3197fce5c4e38e8158f3db2f774d218a443e50b3b5e2b098542",
+      "transformations": "Exact procedure bytes"
+    }
+  ]
+}

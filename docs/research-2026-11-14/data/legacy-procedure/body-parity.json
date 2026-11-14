@@ -1,0 +1,6 @@
+{
+  "F08_once_body_equal": true,
+  "F11_caseRun_body_equal": true,
+  "adaptations": "version, bundle filename and environment paths only",
+  "historical_F11_entry": "bundled connectToRemoteServer, synthetic provider, actual SSE transport; not full CLI"
+}

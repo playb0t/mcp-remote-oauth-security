@@ -1,0 +1,47 @@
+{
+  "checks": [
+    {
+      "id": "ambiguous_tuple",
+      "passed": true
+    },
+    {
+      "id": "distinct_control",
+      "passed": true
+    },
+    {
+      "id": "header_order_control",
+      "passed": true
+    }
+  ],
+  "effects": [
+    {
+      "outcome": "forbidden",
+      "property": "namespace serialization ambiguity, not second-preimage or cache takeover"
+    }
+  ],
+  "hashes": [
+    "92ed26d70d0387aa05cdf8296529e40f",
+    "92ed26d70d0387aa05cdf8296529e40f"
+  ],
+  "extracted_sha256": "6c1686d8cfec52cf5a442da3efdda2dfd34bd615647d806da36c249efecf2e27",
+  "completed": true,
+  "forced": false,
+  "id": "f04",
+  "measurement_context": {
+    "entry_point": "exact getServerUrlHash extracted from official bundle",
+    "variant": "f04",
+    "validated_field": "original advisory property",
+    "effective_resource": "owned fixture files, recorder or HTTP receivers",
+    "auth_profile": "synthetic local fixture",
+    "principal": "test process under current OS principal",
+    "grants": "own fixture only",
+    "consumer": "controlled recorder, local filesystem or loopback server",
+    "state": "fresh isolated fixture",
+    "component": "mcp-remote 0.16.6",
+    "backend": "Windows local filesystem and loopback HTTP",
+    "platform": "win32 / Node v24.20.0"
+  },
+  "artifact_sha256": "8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638",
+  "observer_sha256": "eacc5aef6f56820f6a7fd20f858a0e030b442715f7afcb2a5457562c5093155b",
+  "assessment": "FAIL"
+}

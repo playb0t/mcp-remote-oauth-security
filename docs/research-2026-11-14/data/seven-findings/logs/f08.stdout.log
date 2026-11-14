@@ -1,0 +1,1 @@
+{"id":"f08","assessment":"FAIL","completed":true,"checks":[{"id":"https-positive","passed":true},{"id":"loopback-http","passed":true},{"id":"link-local-http","passed":true},{"id":"script-negative","passed":true},{"id":"mapped-ipv6-negative","passed":true}]}

@@ -1,0 +1,74 @@
+{
+  "trust_source": "operator",
+  "provenance": "Alex authorized owned loopback credential test, controller declares A before target spawn",
+  "schema_version": 2,
+  "id": "predeclared-same-origin-basic307",
+  "context_id": "fixture-owner-A",
+  "expected_issuer": "http://127.0.0.1:27124",
+  "receivers": [
+    {
+      "issuer": "http://127.0.0.1:27124",
+      "address": "http://127.0.0.1:27124/token",
+      "kinds": [
+        "client_auth",
+        "client_secret",
+        "refresh_token",
+        "device_code",
+        "authorization_code",
+        "code_verifier"
+      ],
+      "methods": [
+        "POST"
+      ]
+    },
+    {
+      "issuer": "http://127.0.0.1:27124",
+      "address": "http://127.0.0.1:27124/receipt-token",
+      "kinds": [
+        "client_auth",
+        "client_secret",
+        "refresh_token",
+        "device_code",
+        "authorization_code",
+        "code_verifier"
+      ],
+      "methods": [
+        "POST"
+      ]
+    },
+    {
+      "issuer": "http://127.0.0.1:27124",
+      "address": "http://127.0.0.1:27124/device",
+      "kinds": [
+        "client_auth",
+        "client_secret"
+      ],
+      "methods": [
+        "POST"
+      ]
+    },
+    {
+      "issuer": "http://127.0.0.1:27124",
+      "address": "http://127.0.0.1:27124/receipt-device",
+      "kinds": [
+        "client_auth",
+        "client_secret"
+      ],
+      "methods": [
+        "POST"
+      ]
+    },
+    {
+      "issuer": "http://127.0.0.1:27124",
+      "address": "http://127.0.0.1:27126/mcp",
+      "kinds": [
+        "access_token"
+      ],
+      "methods": [
+        "GET",
+        "POST",
+        "DELETE"
+      ]
+    }
+  ]
+}

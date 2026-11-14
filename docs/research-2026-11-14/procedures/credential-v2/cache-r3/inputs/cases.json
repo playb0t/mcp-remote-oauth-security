@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cache-expired-legacy-noissuer",
+    "selectB": true,
+    "cache": {
+      "expired": true
+    },
+    "expected": "FAIL",
+    "facts": {
+      "tokens_returned": true,
+      "token_file_unchanged": false
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27136,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "cache-expired-bound-owner-A",
+    "selectB": true,
+    "cache": {
+      "expired": true,
+      "bound": true
+    },
+    "expected": "FAIL",
+    "facts": {
+      "tokens_returned": true,
+      "token_file_unchanged": false
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27139,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "cache-expired-same-issuer-control",
+    "cache": {
+      "expired": true,
+      "bound": true
+    },
+    "expected": "PASS",
+    "facts": {
+      "tokens_returned": true,
+      "token_file_unchanged": false
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27142,
+    "gateProfile": "credential_destination"
+  }
+]

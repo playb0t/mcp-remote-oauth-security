@@ -44,3 +44,7 @@ Published CLI 0.14.3 retained evidence and a new 0.16.5 run show initial metadat
 ## 9 November 2026 — WinCC OA documentation closeout
 
 WinCC OA states that notification 236904 maps to CVE-2026-51995 and no longer treats it as resolved; CVE-2026-51994 is outside that notification. PR #41/v1.5.3 delivered revised guidance and OSS status, and issue #40 closed after release. The mcp-remote pin remains 0.14.3 pending a verified upstream repair. [Source-backed vendor record](docs/vendor-responses/winccoa-2026-11-09/README.md).
+
+## 14 November 2026 — mcp-remote 0.16.6 assessment
+
+All seven original findings remain in their recorded states and evidence classes. The eleven OAuth cases record 9 PASS / 2 FAIL, compared with 7 / 4 on 0.16.5, with two cross-origin 307 credential-body cases now stopped before the foreign recipient. Separate synthetic legacy-cache observations and retained fixture/postcondition errors accompany the series. Paired F-11 transport checks observe no Bearer transfer on 0.1.38 or 0.16.6; the F-08 full-CLI repeat reaches the inert recorder for internal HTTP destinations and records earlier SDK scheme rejection. [Results, redacted traces and limits](docs/research-2026-11-14/README.md).

@@ -1,0 +1,19 @@
+{
+  "version": "0.1.38",
+  "registry_url": "https://registry.npmjs.org/mcp-remote/0.1.38",
+  "tarball_url": "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.1.38.tgz",
+  "dist_integrity": "sha512-w+JU4U3CfG29TawXR4JLNQ9d1Un5nT8AGI65f/juCaqUdF/V6fS7wE4o7xNPbB8X58o46hRXEJgYglQMAKQs4w==",
+  "tarball_sha256": "d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa",
+  "main_bundle": "chunk-65X3S4HB.js",
+  "main_bundle_sha256": "d3eb914e687408424476bd8a41eff8d1d47e01772b14158f500f5ecd902fa875",
+  "sdk_component": "@modelcontextprotocol/sdk 1.25.3",
+  "dependencies": {
+    "undici": "7.12.0",
+    "express": "4.21.2",
+    "open": "10.1.0",
+    "strict-url-sanitise": "0.0.1"
+  },
+  "original_source_commit": "02619aff36e79803d7c894e8c8ae7b34b2d11f8c",
+  "original_pnpm_lock_sha256": "598f60becf15b3197fce5c4e38e8158f3db2f774d218a443e50b3b5e2b098542",
+  "node_version": "24.20.0"
+}

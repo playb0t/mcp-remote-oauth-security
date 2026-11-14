@@ -1,0 +1,71 @@
+{
+  "id": "expected-token-basic-positive",
+  "detector_only": true,
+  "events": [
+    {
+      "type": "request",
+      "address": "http://127.0.0.1:27100/token",
+      "method": "POST",
+      "context_id": "fixture-owner-A",
+      "authorization_present": true,
+      "authorization_scheme": "Basic",
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "credential_observation_complete": true,
+      "fixture_matches": {
+        "client_auth": true,
+        "client_secret": false
+      }
+    }
+  ],
+  "security": {
+    "criterion": "oauth-credential-destination-v2",
+    "verdict": "PASS",
+    "policy_id": "predeclared-expected-token-basic",
+    "policy_sha256": "3c7b0eb64c89ffd78a679eb849b547af15b22175f0a2b18b72b0ab8e350713ad",
+    "expected_issuer": "http://127.0.0.1:27100",
+    "coverage_healthy": true,
+    "coverage": {
+      "target_started": true,
+      "observation_complete": true,
+      "stimulus_observed": true
+    },
+    "unknown": [],
+    "audit": [
+      {
+        "event": 0,
+        "recipient": "http://127.0.0.1:27100/token",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": true,
+        "authorization_scheme": "Basic",
+        "credential_kinds": [
+          "client_auth"
+        ],
+        "expected_issuer": "http://127.0.0.1:27100",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": true,
+          "client_secret": false
+        }
+      }
+    ],
+    "violations": [],
+    "redirects": [],
+    "limits": "PASS applies only to observed credential destination rules. A cross-origin request without credentials is recorded, not called credential disclosure. Policy provenance and observer health are caller responsibilities; hash is not authority."
+  },
+  "coverage": {
+    "target_started": true,
+    "observation_complete": true,
+    "stimulus_observed": true
+  },
+  "effect_outcome": "allowed"
+}

@@ -1,0 +1,12 @@
+{
+  "version": "0.16.6",
+  "registry_url": "https://registry.npmjs.org/mcp-remote/0.16.6",
+  "tarball_url": "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.16.6.tgz",
+  "dist_integrity": "sha512-QqlBqut/oeDUFwrB/Igs5vGikWSn6h5iM+7TCmiTGJAIuS3OJjzThWGjKLLtAz+NnLozvs2c2wGDkAXpzHepqw==",
+  "tarball_sha256": "9b701b6522d3a513db99eeb7fc4f04cb261fbb08487645209482eef4408a529e",
+  "tarball_bytes": 462413,
+  "main_bundle": "chunk-MKB2ICYW.js",
+  "main_bundle_sha256": "8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638",
+  "node_version": "24.20.0",
+  "node_sha256": "5c976096e04e5c2c1f091938926234cc9fbebfe9787ddd149351b3b0ecc707b5"
+}

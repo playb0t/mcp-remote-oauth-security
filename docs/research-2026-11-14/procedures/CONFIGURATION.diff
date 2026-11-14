@@ -1,0 +1,304 @@
+--- recorded/credential-v2/initial/harness-v2.mjs
++++ credential-v2/initial/harness-v2.mjs
+@@ -8,13 +8,14 @@
+ import assert from 'node:assert/strict';
+ import oracle from './auth-destination-v2.cjs';
+ const procedureRoot=dirname(fileURLToPath(import.meta.url));
++const inputRoot=resolve(process.env.MCP_SECURITY_INPUTS??join(procedureRoot,'inputs'));
+ assert.equal(process.version,'v24.20.0','Use the recorded Node version');
+ assert.ok(process.env.MCP_SECURITY_RUNTIME_DIST&&process.env.MCP_SECURITY_OUTPUT,'Explicit verified runtime dist and fresh output required');
+ const root=resolve(process.env.MCP_SECURITY_OUTPUT),runtimeDist=resolve(process.env.MCP_SECURITY_RUNTIME_DIST);
+ assert.ok(!existsSync(root),'Output must be a fresh directory');mkdirSync(root,{recursive:true});
+ const node=process.execPath,bundle=join(runtimeDist,'chunk-MKB2ICYW.js'),cli=join(runtimeDist,'proxy.js');
+ for(const [file,wanted]of [[bundle,'8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638'],[cli,'e8b0fdaedfb3655714b4ad7f6c95790224059e22765ce854ea057f8c7225b619']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
+-const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('htt<recorded-local-path>'+s.address().port));});
++const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+ const send=(s,o,status=200)=>s.writeHead(status,{'Content-Type':'application/json'}).end(JSON.stringify(o));
+ const save=(p,o)=>writeFileSync(p,JSON.stringify(o,null,2)+'\n');
+ async function run(c){
+@@ -38,7 +39,7 @@
+   return {raw,params,fields,observed};
+  };
+  const endpoint=(role)=>async(q,s)=>{
+-  const {params,fields,observed}=await captureBody(q),path=new URL(q.url,'htt<recorded-local-path>').pathname;
++  const {params,fields,observed}=await captureBody(q),path=new URL(q.url,'http://fixture').pathname;
+   const origin=role==='A'?a:b;
+   const matches={client_auth:q.headers.authorization==='Basic '+Buffer.from('fixture-client:'+secret).toString('base64'),client_secret:params.get('client_secret')===secret,refresh_token:params.get('refresh_token')===rt,device_code:params.get('device_code')===dc,access_token:q.headers.authorization==='Bearer '+at};
+   const ev={type:'request',context_id:'fixture-owner-A',address:receiver(origin,q),authorization_scheme:scheme(q),credential_observation_complete:observed,credential_fields:fields,fixture_matches:matches,role,path,method:q.method,secret_in_body:params.get('client_secret')===secret,refresh_in_body:params.get('refresh_token')===rt,device_in_body:params.get('device_code')===dc,authorization_present:!!q.headers.authorization,fixture_basic:q.headers.authorization==='Basic '+Buffer.from('fixture-client:'+secret).toString('base64'),grant:params.get('grant_type')};events.push(ev);
+@@ -75,7 +76,7 @@
+    ...['/device','/receipt-device'].map(path=>({issuer:a,address:a+path,kinds:['client_auth','client_secret'],methods:['POST']})),
+    {issuer:a,address:resource,kinds:['access_token'],methods:['GET','POST','DELETE']}
+   ]};
+-  const admittedPolicy=JSON.parse(readFileSync(join(procedureRoot,'../inputs/policies',c.id+'.json'),'utf8'));assert.deepEqual(trustedPolicy,admittedPolicy);pinnedPolicyHash=oracle.policyHash(trustedPolicy);
++  const admittedPolicy=JSON.parse(readFileSync(join(inputRoot,'policies',c.id+'.json'),'utf8'));assert.deepEqual(trustedPolicy,admittedPolicy);pinnedPolicyHash=oracle.policyHash(trustedPolicy);
+   save(join(d,'POLICY.json'),trustedPolicy);
+   save(join(d,'POLICY-BINDING.json'),{policy_sha256:pinnedPolicyHash,recorded_before_target:true,at:new Date().toISOString(),authority:'Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication.'});
+   const cfg={mode:c.mode,method:c.method??'client_secret_post',owner:a,selected:c.selectB?b:a,resource,bundle,cache:c.cache,hash:createHash('sha256').update(c.id).digest('hex')};
+@@ -101,7 +102,7 @@
+   const scenarioReached=c.explicitToken?events.some(x=>x.role==='A'&&x.path==='/token'):c.cache?!!driver?.returned&&Object.entries(c.facts).every(([k,v])=>driver.cache?.[k]===v):oracle.scenarioObserved(c,events,driver);
+   const coverage={target_started:typeof child.pid==='number',observation_complete:closedEvent&&captureErrors===0&&!sa.listening&&!sb.listening&&!sm.listening,stimulus_observed:(c.cache||c.explicitToken)?scenarioReached:scenarioReached&&events.some(x=>x.role==='MCP')&&events.some(x=>x.path==='/prm'||x.path?.startsWith('/.well-known/'))};
+   const security=oracle.evaluate(trustedPolicy,events,coverage,pinnedPolicyHash);
+-  const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('[FIXTURE-CREDENTIAL]'),s);
++  const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('<redacted>'),s);
+   writeFileSync(join(d,'stdout.log'),sanitize(stdout));writeFileSync(join(d,'stderr.log'),sanitize(stderr));
+   const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.6',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
+   save(join(d,'RESULT.json'),result);
+--- recorded/credential-v2/initial/detector-controls.mjs
++++ credential-v2/initial/detector-controls.mjs
+@@ -1,13 +1,14 @@
+ import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
+-import {dirname,join} from 'node:path';
++import {dirname,join,resolve} from 'node:path';
+ import {fileURLToPath} from 'node:url';
+ import oracle from './auth-destination-v2.cjs';
+-const root=join(dirname(fileURLToPath(import.meta.url)),'..');
+-const cases=JSON.parse(readFileSync(join(root,'inputs/cases.json'),'utf8'));
+-const output=join(root,'detector');mkdirSync(output,{recursive:false});
++const root=resolve(process.env.MCP_SECURITY_INPUTS??join(dirname(fileURLToPath(import.meta.url)),'inputs'));
++const cases=JSON.parse(readFileSync(join(root,'cases.json'),'utf8'));
++if(!process.env.MCP_DETECTOR_OUTPUT)throw Error('MCP_DETECTOR_OUTPUT required');
++const output=resolve(process.env.MCP_DETECTOR_OUTPUT);mkdirSync(output,{recursive:false});
+ for(const c of cases){
+- const policy=JSON.parse(readFileSync(join(root,'inputs/policies',c.id+'.json'),'utf8'));
+- const a=policy.expected_issuer,b='htt<recorded-local-path>'+(c.portBase+1);
++ const policy=JSON.parse(readFileSync(join(root,'policies',c.id+'.json'),'utf8'));
++ const a=policy.expected_issuer,b='http://127.0.0.1:'+(c.portBase+1);
+  for(const [kind,expected]of [['positive','PASS'],['negative','FAIL'],['fault','INCONCLUSIVE']]){
+   const fields=Object.fromEntries(['client_secret','refresh_token','device_code','code','code_verifier','access_token'].map(k=>[k,k==='client_secret'&&kind==='negative']));
+   const events=[{type:'request',address:(kind==='negative'?b:a)+'/token',method:'POST',context_id:'fixture-owner-A',authorization_present:kind!=='negative',authorization_scheme:kind==='negative'?null:'Basic',credential_fields:fields,credential_observation_complete:kind!=='fault',fixture_matches:{client_auth:kind!=='negative',client_secret:kind==='negative'}}];
+--- recorded/credential-v2/cache-r2/harness-v2.mjs
++++ credential-v2/cache-r2/harness-v2.mjs
+@@ -8,13 +8,14 @@
+ import assert from 'node:assert/strict';
+ import oracle from './auth-destination-v2.cjs';
+ const procedureRoot=dirname(fileURLToPath(import.meta.url));
++const inputRoot=resolve(process.env.MCP_SECURITY_INPUTS??join(procedureRoot,'inputs'));
+ assert.equal(process.version,'v24.20.0','Use the recorded Node version');
+ assert.ok(process.env.MCP_SECURITY_RUNTIME_DIST&&process.env.MCP_SECURITY_OUTPUT,'Explicit verified runtime dist and fresh output required');
+ const root=resolve(process.env.MCP_SECURITY_OUTPUT),runtimeDist=resolve(process.env.MCP_SECURITY_RUNTIME_DIST);
+ assert.ok(!existsSync(root),'Output must be a fresh directory');mkdirSync(root,{recursive:true});
+ const node=process.execPath,bundle=join(runtimeDist,'chunk-MKB2ICYW.js'),cli=join(runtimeDist,'proxy.js');
+ for(const [file,wanted]of [[bundle,'8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638'],[cli,'e8b0fdaedfb3655714b4ad7f6c95790224059e22765ce854ea057f8c7225b619']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
+-const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('htt<recorded-local-path>'+s.address().port));});
++const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+ const send=(s,o,status=200)=>s.writeHead(status,{'Content-Type':'application/json'}).end(JSON.stringify(o));
+ const save=(p,o)=>writeFileSync(p,JSON.stringify(o,null,2)+'\n');
+ async function run(c){
+@@ -38,7 +39,7 @@
+   return {raw,params,fields,observed};
+  };
+  const endpoint=(role)=>async(q,s)=>{
+-  const {params,fields,observed}=await captureBody(q),path=new URL(q.url,'htt<recorded-local-path>').pathname;
++  const {params,fields,observed}=await captureBody(q),path=new URL(q.url,'http://fixture').pathname;
+   const origin=role==='A'?a:b;
+   const matches={client_auth:q.headers.authorization==='Basic '+Buffer.from('fixture-client:'+secret).toString('base64'),client_secret:params.get('client_secret')===secret,refresh_token:params.get('refresh_token')===rt,device_code:params.get('device_code')===dc,access_token:q.headers.authorization==='Bearer '+at};
+   const ev={type:'request',context_id:'fixture-owner-A',address:receiver(origin,q),authorization_scheme:scheme(q),credential_observation_complete:observed,credential_fields:fields,fixture_matches:matches,role,path,method:q.method,secret_in_body:params.get('client_secret')===secret,refresh_in_body:params.get('refresh_token')===rt,device_in_body:params.get('device_code')===dc,authorization_present:!!q.headers.authorization,fixture_basic:q.headers.authorization==='Basic '+Buffer.from('fixture-client:'+secret).toString('base64'),grant:params.get('grant_type')};events.push(ev);
+@@ -75,7 +76,7 @@
+    ...['/device','/receipt-device'].map(path=>({issuer:a,address:a+path,kinds:['client_auth','client_secret'],methods:['POST']})),
+    {issuer:a,address:resource,kinds:['access_token'],methods:['GET','POST','DELETE']}
+   ]};
+-  const admittedPolicy=JSON.parse(readFileSync(join(procedureRoot,'../inputs/policies',c.id+'.json'),'utf8'));assert.deepEqual(trustedPolicy,admittedPolicy);pinnedPolicyHash=oracle.policyHash(trustedPolicy);
++  const admittedPolicy=JSON.parse(readFileSync(join(inputRoot,'policies',c.id+'.json'),'utf8'));assert.deepEqual(trustedPolicy,admittedPolicy);pinnedPolicyHash=oracle.policyHash(trustedPolicy);
+   save(join(d,'POLICY.json'),trustedPolicy);
+   save(join(d,'POLICY-BINDING.json'),{policy_sha256:pinnedPolicyHash,recorded_before_target:true,at:new Date().toISOString(),authority:'Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication.'});
+   const cfg={mode:c.mode,method:c.method??'client_secret_post',owner:a,selected:c.selectB?b:a,resource,bundle,cache:c.cache,hash:createHash('sha256').update(c.id).digest('hex')};
+@@ -101,7 +102,7 @@
+   const scenarioReached=c.explicitToken?events.some(x=>x.role==='A'&&x.path==='/token'):c.cache?!!driver?.returned&&Object.entries(c.facts).every(([k,v])=>driver.cache?.[k]===v):oracle.scenarioObserved(c,events,driver);
+   const coverage={target_started:typeof child.pid==='number',observation_complete:closedEvent&&captureErrors===0&&!sa.listening&&!sb.listening&&!sm.listening,stimulus_observed:(c.cache||c.explicitToken)?scenarioReached:scenarioReached&&events.some(x=>x.role==='MCP')&&events.some(x=>x.path==='/prm'||x.path?.startsWith('/.well-known/'))};
+   const security=oracle.evaluate(trustedPolicy,events,coverage,pinnedPolicyHash);
+-  const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('[FIXTURE-CREDENTIAL]'),s);
++  const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('<redacted>'),s);
+   writeFileSync(join(d,'stdout.log'),sanitize(stdout));writeFileSync(join(d,'stderr.log'),sanitize(stderr));
+   const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.6',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
+   save(join(d,'RESULT.json'),result);
+--- recorded/credential-v2/cache-r2/detector-controls.mjs
++++ credential-v2/cache-r2/detector-controls.mjs
+@@ -1,13 +1,14 @@
+ import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
+-import {dirname,join} from 'node:path';
++import {dirname,join,resolve} from 'node:path';
+ import {fileURLToPath} from 'node:url';
+ import oracle from './auth-destination-v2.cjs';
+-const root=join(dirname(fileURLToPath(import.meta.url)),'..');
+-const cases=JSON.parse(readFileSync(join(root,'inputs/cases.json'),'utf8'));
+-const output=join(root,'detector');mkdirSync(output,{recursive:false});
++const root=resolve(process.env.MCP_SECURITY_INPUTS??join(dirname(fileURLToPath(import.meta.url)),'inputs'));
++const cases=JSON.parse(readFileSync(join(root,'cases.json'),'utf8'));
++if(!process.env.MCP_DETECTOR_OUTPUT)throw Error('MCP_DETECTOR_OUTPUT required');
++const output=resolve(process.env.MCP_DETECTOR_OUTPUT);mkdirSync(output,{recursive:false});
+ for(const c of cases){
+- const policy=JSON.parse(readFileSync(join(root,'inputs/policies',c.id+'.json'),'utf8'));
+- const a=policy.expected_issuer,b='htt<recorded-local-path>'+(c.portBase+1);
++ const policy=JSON.parse(readFileSync(join(root,'policies',c.id+'.json'),'utf8'));
++ const a=policy.expected_issuer,b='http://127.0.0.1:'+(c.portBase+1);
+  for(const [kind,expected]of [['positive','PASS'],['negative','FAIL'],['fault','INCONCLUSIVE']]){
+   const fields=Object.fromEntries(['client_secret','refresh_token','device_code','code','code_verifier','access_token'].map(k=>[k,k==='client_secret'&&kind==='negative']));
+   const events=[{type:'request',address:(kind==='negative'?b:a)+'/token',method:'POST',context_id:'fixture-owner-A',authorization_present:kind!=='negative',authorization_scheme:kind==='negative'?null:'Basic',credential_fields:fields,credential_observation_complete:kind!=='fault',fixture_matches:{client_auth:kind!=='negative',client_secret:kind==='negative'}}];
+--- recorded/credential-v2/cache-r3/harness-v2.mjs
++++ credential-v2/cache-r3/harness-v2.mjs
+@@ -8,13 +8,14 @@
+ import assert from 'node:assert/strict';
+ import oracle from './auth-destination-v2.cjs';
+ const procedureRoot=dirname(fileURLToPath(import.meta.url));
++const inputRoot=resolve(process.env.MCP_SECURITY_INPUTS??join(procedureRoot,'inputs'));
+ assert.equal(process.version,'v24.20.0','Use the recorded Node version');
+ assert.ok(process.env.MCP_SECURITY_RUNTIME_DIST&&process.env.MCP_SECURITY_OUTPUT,'Explicit verified runtime dist and fresh output required');
+ const root=resolve(process.env.MCP_SECURITY_OUTPUT),runtimeDist=resolve(process.env.MCP_SECURITY_RUNTIME_DIST);
+ assert.ok(!existsSync(root),'Output must be a fresh directory');mkdirSync(root,{recursive:true});
+ const node=process.execPath,bundle=join(runtimeDist,'chunk-MKB2ICYW.js'),cli=join(runtimeDist,'proxy.js');
+ for(const [file,wanted]of [[bundle,'8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638'],[cli,'e8b0fdaedfb3655714b4ad7f6c95790224059e22765ce854ea057f8c7225b619']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
+-const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('htt<recorded-local-path>'+s.address().port));});
++const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+ const send=(s,o,status=200)=>s.writeHead(status,{'Content-Type':'application/json'}).end(JSON.stringify(o));
+ const save=(p,o)=>writeFileSync(p,JSON.stringify(o,null,2)+'\n');
+ async function run(c){
+@@ -38,7 +39,7 @@
+   return {raw,params,fields,observed};
+  };
+  const endpoint=(role)=>async(q,s)=>{
+-  const {params,fields,observed}=await captureBody(q),path=new URL(q.url,'htt<recorded-local-path>').pathname;
++  const {params,fields,observed}=await captureBody(q),path=new URL(q.url,'http://fixture').pathname;
+   const origin=role==='A'?a:b;
+   const matches={client_auth:q.headers.authorization==='Basic '+Buffer.from('fixture-client:'+secret).toString('base64'),client_secret:params.get('client_secret')===secret,refresh_token:params.get('refresh_token')===rt,device_code:params.get('device_code')===dc,access_token:q.headers.authorization==='Bearer '+at};
+   const ev={type:'request',context_id:'fixture-owner-A',address:receiver(origin,q),authorization_scheme:scheme(q),credential_observation_complete:observed,credential_fields:fields,fixture_matches:matches,role,path,method:q.method,secret_in_body:params.get('client_secret')===secret,refresh_in_body:params.get('refresh_token')===rt,device_in_body:params.get('device_code')===dc,authorization_present:!!q.headers.authorization,fixture_basic:q.headers.authorization==='Basic '+Buffer.from('fixture-client:'+secret).toString('base64'),grant:params.get('grant_type')};events.push(ev);
+@@ -75,7 +76,7 @@
+    ...['/device','/receipt-device'].map(path=>({issuer:a,address:a+path,kinds:['client_auth','client_secret'],methods:['POST']})),
+    {issuer:a,address:resource,kinds:['access_token'],methods:['GET','POST','DELETE']}
+   ]};
+-  const admittedPolicy=JSON.parse(readFileSync(join(procedureRoot,'../inputs/policies',c.id+'.json'),'utf8'));assert.deepEqual(trustedPolicy,admittedPolicy);pinnedPolicyHash=oracle.policyHash(trustedPolicy);
++  const admittedPolicy=JSON.parse(readFileSync(join(inputRoot,'policies',c.id+'.json'),'utf8'));assert.deepEqual(trustedPolicy,admittedPolicy);pinnedPolicyHash=oracle.policyHash(trustedPolicy);
+   save(join(d,'POLICY.json'),trustedPolicy);
+   save(join(d,'POLICY-BINDING.json'),{policy_sha256:pinnedPolicyHash,recorded_before_target:true,at:new Date().toISOString(),authority:'Supplied by trusted fixture controller/operator; not inferred from MCP discovery. Hash is integrity, not authentication.'});
+   const cfg={mode:c.mode,method:c.method??'client_secret_post',owner:a,selected:c.selectB?b:a,resource,bundle,cache:c.cache,hash:createHash('sha256').update(c.id).digest('hex')};
+@@ -101,7 +102,7 @@
+   const scenarioReached=c.explicitToken?events.some(x=>x.role==='A'&&x.path==='/token'):c.cache?!!driver?.returned&&Object.entries(c.facts).every(([k,v])=>driver.cache?.[k]===v):oracle.scenarioObserved(c,events,driver);
+   const coverage={target_started:typeof child.pid==='number',observation_complete:closedEvent&&captureErrors===0&&!sa.listening&&!sb.listening&&!sm.listening,stimulus_observed:(c.cache||c.explicitToken)?scenarioReached:scenarioReached&&events.some(x=>x.role==='MCP')&&events.some(x=>x.path==='/prm'||x.path?.startsWith('/.well-known/'))};
+   const security=oracle.evaluate(trustedPolicy,events,coverage,pinnedPolicyHash);
+-  const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('[FIXTURE-CREDENTIAL]'),s);
++  const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('<redacted>'),s);
+   writeFileSync(join(d,'stdout.log'),sanitize(stdout));writeFileSync(join(d,'stderr.log'),sanitize(stderr));
+   const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.6',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
+   save(join(d,'RESULT.json'),result);
+--- recorded/credential-v2/cache-r3/detector-controls.mjs
++++ credential-v2/cache-r3/detector-controls.mjs
+@@ -1,13 +1,14 @@
+ import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
+-import {dirname,join} from 'node:path';
++import {dirname,join,resolve} from 'node:path';
+ import {fileURLToPath} from 'node:url';
+ import oracle from './auth-destination-v2.cjs';
+-const root=join(dirname(fileURLToPath(import.meta.url)),'..');
+-const cases=JSON.parse(readFileSync(join(root,'inputs/cases.json'),'utf8'));
+-const output=join(root,'detector');mkdirSync(output,{recursive:false});
++const root=resolve(process.env.MCP_SECURITY_INPUTS??join(dirname(fileURLToPath(import.meta.url)),'inputs'));
++const cases=JSON.parse(readFileSync(join(root,'cases.json'),'utf8'));
++if(!process.env.MCP_DETECTOR_OUTPUT)throw Error('MCP_DETECTOR_OUTPUT required');
++const output=resolve(process.env.MCP_DETECTOR_OUTPUT);mkdirSync(output,{recursive:false});
+ for(const c of cases){
+- const policy=JSON.parse(readFileSync(join(root,'inputs/policies',c.id+'.json'),'utf8'));
+- const a=policy.expected_issuer,b='htt<recorded-local-path>'+(c.portBase+1);
++ const policy=JSON.parse(readFileSync(join(root,'policies',c.id+'.json'),'utf8'));
++ const a=policy.expected_issuer,b='http://127.0.0.1:'+(c.portBase+1);
+  for(const [kind,expected]of [['positive','PASS'],['negative','FAIL'],['fault','INCONCLUSIVE']]){
+   const fields=Object.fromEntries(['client_secret','refresh_token','device_code','code','code_verifier','access_token'].map(k=>[k,k==='client_secret'&&kind==='negative']));
+   const events=[{type:'request',address:(kind==='negative'?b:a)+'/token',method:'POST',context_id:'fixture-owner-A',authorization_present:kind!=='negative',authorization_scheme:kind==='negative'?null:'Basic',credential_fields:fields,credential_observation_complete:kind!=='fault',fixture_matches:{client_auth:kind!=='negative',client_secret:kind==='negative'}}];
+--- recorded/components/runner.mjs
++++ components/runner.mjs
+@@ -1,13 +1,15 @@
+ import {createServer} from 'node:http';
+ import {readFileSync,writeFileSync,existsSync,mkdirSync} from 'node:fs';
+-import {join,dirname} from 'node:path';
++import {join,dirname,resolve} from 'node:path';
+ import {fileURLToPath,pathToFileURL} from 'node:url';
+ import crypto from 'node:crypto';
+ import assert from 'node:assert/strict';
+ import {run as extras} from './extras.mjs';
+ import {evaluate} from './criterion.mjs';
+-const root=dirname(dirname(fileURLToPath(import.meta.url)));
+-const dist=join(root,'runtime/dist'),bundle=join(dist,'chunk-MKB2ICYW.js');
++assert.ok(process.env.MCP_COMPONENT_OUTPUT&&process.env.MCP_RUNTIME_DIST,'Explicit runtime and fresh output required');
++const root=resolve(process.env.MCP_COMPONENT_OUTPUT);
++assert.ok(!existsSync(root),'Output must be fresh');
++const dist=resolve(process.env.MCP_RUNTIME_DIST),bundle=join(dist,'chunk-MKB2ICYW.js');
+ process.env.MCP_RUNTIME_DIST=dist;
+ assert.equal(process.version,'v24.20.0');
+ const mod=await import(pathToFileURL(bundle).href),source=readFileSync(bundle,'utf8');
+@@ -17,19 +19,19 @@
+  const start=source.indexOf('function getServerUrlHash('),end=source.indexOf('\nfunction patternToRegex',start);
+  assert.ok(start>0&&end>start);const code=source.slice(start,end);
+  const fn=new Function('crypto2',code+'; return getServerUrlHash;')(crypto);
+- const a=['http<recorded-local-path>','http<recorded-local-path>'];
+- const b=['http<recorded-local-path>','http<recorded-local-path>'];
++ const a=['https://own.invalid/a|https://own.invalid/b','https://own.invalid/c'];
++ const b=['https://own.invalid/a','https://own.invalid/b|https://own.invalid/c'];
+  for(const x of [...a,...b])assert.equal(new URL(x).protocol,'https:');
+- const same=fn(...a)===fn(...b),different=fn('http<recorded-local-path>')!==fn(a[0],a[1]);
+- const headerOrder=fn('http<recorded-local-path>',undefined,{a:'1',b:'2'})===fn('http<recorded-local-path>',undefined,{b:'2',a:'1'});
++ const same=fn(...a)===fn(...b),different=fn('https://own.invalid/other')!==fn(a[0],a[1]);
++ const headerOrder=fn('https://own.invalid/a',undefined,{a:'1',b:'2'})===fn('https://own.invalid/a',undefined,{b:'2',a:'1'});
+  return {checks:[{id:'ambiguous_tuple',passed:same},{id:'distinct_control',passed:different},{id:'header_order_control',passed:headerOrder}],effects:[{outcome:same?'forbidden':'none',property:'namespace serialization ambiguity, not second-preimage or cache takeover'}],hashes:[fn(...a),fn(...b)],extracted_sha256:digest(code),completed:true,forced:false};
+ }
+ async function f08(){
+  const provider={inTokenStorm:()=>false,ownsPendingFlow:()=>true,useDeviceCode:false,useClientCredentials:false,getAuthorizationServerMetadata:async()=>({}),applyScope:()=>{},applyAuthorizeParams:()=>{},preflightCachedDynamicClientRegistration:async()=>{},guardAgainstAuthorizationStorm:()=>{}};
+- const tests=[['https-positive','http<recorded-local-path>'],['loopback-http','htt<recorded-local-path>'],['link-local-http','htt<recorded-local-path>'],['script-negative','javascript:alert(1)'],['mapped-ipv6-negative','htt<recorded-local-path>']];
++ const tests=[['https-positive','https://own.invalid/authorize'],['loopback-http','http://127.0.0.1:37331/authorize'],['link-local-http','http://169.254.169.254/latest/meta-data'],['script-negative','javascript:alert(1)'],['mapped-ipv6-negative','http://[::ffff:127.0.0.1]/authorize']];
+  const rows=[];const old=process.env.SYSTEMROOT;
+  try{for(const [id,url]of tests){
+-  const capture=join(root,'output',id+'.argv.txt');process.env.SYSTEMROOT=join(root,'fake-systemroot');process.env.MCP_RECORDER_OUTPUT=capture;
++  const capture=join(root,'output',id+'.argv.txt');assert.ok(process.env.MCP_FAKE_SYSTEMROOT,'MCP_FAKE_SYSTEMROOT required for F08');process.env.SYSTEMROOT=process.env.MCP_FAKE_SYSTEMROOT;process.env.MCP_RECORDER_OUTPUT=capture;
+   const alive=setInterval(()=>{},100);let error=null;
+   try{await mod.NodeOAuthClientProvider.prototype.redirectToAuthorization.call(provider,new URL(url));}catch(e){error=String(e);}finally{clearInterval(alive);}
+   const captured=existsSync(capture),argv=captured?readFileSync(capture,'utf8').split(/\r?\n/):[];
+@@ -39,7 +41,7 @@
+  const reached=rows.filter(x=>['loopback-http','link-local-http'].includes(x.id)).some(x=>x.captured);
+  return {checks:rows.map(x=>({id:x.id,passed:x.id.includes('negative')?!x.captured&&!!x.error:x.captured})),effects:[{outcome:reached?'forbidden':'none',property:'internal-address URL reached inert opener boundary; browser not executed'}],rows,completed:true,forced:false};
+ }
+-const listen=s=>new Promise((ok,no)=>{s.once('error',no);s.listen(0,'127.0.0.1',()=>ok('htt<recorded-local-path>'+s.address().port));});
++const listen=s=>new Promise((ok,no)=>{s.once('error',no);s.listen(0,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+ async function f11(){
+  const rows=[];
+  for(const mode of ['redirect-cross','redirect-same','endpoint-cross','no-token']){
+--- recorded/legacy/collector.py
++++ legacy/collector.py
+@@ -1,22 +1,26 @@
+ from pathlib import Path
+ import hashlib,json,subprocess,os,sys
+ C=Path(__file__).resolve().parent
+-NODE=Path('<recorded-local-path>')
++if not os.environ.get('MCP_NODE_BINARY'):
++ raise RuntimeError('MCP_NODE_BINARY required')
++NODE=Path(os.environ['MCP_NODE_BINARY']).resolve()
+ GROUPS=['f11-old','f11-current','f08-current']
+ def artifact(i):
+- return 'runtime0138/0.1.38/dist/chunk-65X3S4HB.js' if i=='f11-old' else 'runtime0166/0.16.6/dist/chunk-MKB2ICYW.js'
++ return Path(os.environ['MCP_RUNTIME_0138'])/'0.1.38/dist/chunk-65X3S4HB.js' if i=='f11-old' else Path(os.environ['MCP_RUNTIME_0166'])/'0.16.6/dist/chunk-MKB2ICYW.js'
+ def context(i):
+  v='0.1.38' if i=='f11-old' else '0.16.6'
+  return dict(entry_point='original F08 proxy.js subprocess procedure' if i=='f08-current' else 'original F11 connectToRemoteServer procedure',variant=i,validated_field='SSE token origin or full CLI browser destination',effective_resource='owned HTTP receivers and inert recorder',auth_profile='synthetic provider tokens' if i.startswith('f11') else 'synthetic static client registration',principal='test process under current OS principal',grants='own fixture only',consumer='local SSE servers or inert recorder',state='fresh isolated fixture',component='mcp-remote '+v,backend='Windows local filesystem and loopback HTTP',platform='win32 / Node v24.20.0')
+ def execute(i):
+- out=C/'output'/i
++ if not os.environ.get('MCP_LEGACY_OUTPUT'):
++  raise RuntimeError('MCP_LEGACY_OUTPUT required')
++ out=Path(os.environ['MCP_LEGACY_OUTPUT']).resolve()/i
+  assert not out.exists(),'Fresh directory required'
+  out.mkdir(parents=True)
+- old=i=='f11-old';version='0.1.38' if old else '0.16.6';runtime=C/('runtime0138' if old else 'runtime0166')
+- env=dict(os.environ,MCP_CASE_ROOT=str(out),MCP_RUNTIME_ROOT=str(runtime),MCP_NODE_BINARY=str(NODE),MCP_FAKE_SYSTEMROOT=str(C/'fake-systemroot'),MCP_TEST_VERSION=version,MCP_TEST_CHUNK='chunk-65X3S4HB.js' if old else 'chunk-MKB2ICYW.js')
++ old=i=='f11-old';version='0.1.38' if old else '0.16.6';runtime=Path(os.environ['MCP_RUNTIME_0138' if old else 'MCP_RUNTIME_0166']).resolve()
++ env=dict(os.environ,MCP_CASE_ROOT=str(out),MCP_RUNTIME_ROOT=str(runtime),MCP_NODE_BINARY=str(NODE),MCP_FAKE_SYSTEMROOT=os.environ['MCP_FAKE_SYSTEMROOT'],MCP_TEST_VERSION=version,MCP_TEST_CHUNK='chunk-65X3S4HB.js' if old else 'chunk-MKB2ICYW.js')
+  name='f08-cli.mjs' if i=='f08-current' else 'f11.mjs'
+  (out/'runs').mkdir()
+- p=subprocess.run([str(NODE),str(C/'procedure'/name)],env=env,cwd=C,capture_output=True,timeout=100)
++ p=subprocess.run([str(NODE),str(C/name)],env=env,cwd=C,capture_output=True,timeout=100)
+  (out/'stdout.log').write_bytes(p.stdout);(out/'stderr.log').write_bytes(p.stderr)
+  rawfile=out/'runs'/('F08-CLI-RESULTS.json' if i=='f08-current' else 'F11-RESULTS.json')
+  rows=json.loads(rawfile.read_bytes())['results'] if rawfile.exists() else []
+@@ -32,7 +36,7 @@
+   complete=p.returncode==0 and len(rows)==3 and all(not r['stop'].get('timeout') for r in rows)
+   forced=any(r['stop'].get('signal') is not None or r['stop'].get('code') not in [0,None] for r in rows)
+  result=dict(id=i,checks=checks,effects=effects,completed=complete,forced=forced,procedure_exit=p.returncode,rows=rows,measurement_context=context(i),artifact_sha256=hashlib.sha256((C/artifact(i)).read_bytes()).hexdigest(),observer_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+- path=C/'output'/(i+'.json');path.write_text(json.dumps(result,indent=2))
++ path=Path(os.environ['MCP_LEGACY_OUTPUT']).resolve()/(i+'.json');path.write_text(json.dumps(result,indent=2))
+  print(json.dumps({'id':i,'exit':p.returncode,'completed':complete,'forced_child_stop':forced,'checks':checks}))
+  if p.returncode:raise SystemExit(p.returncode)
+ if __name__=='__main__':

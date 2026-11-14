@@ -1,0 +1,49 @@
+{
+  "version": "0.16.6",
+  "date": "2026-11-14",
+  "original_findings": 7,
+  "published_cve_records": 5,
+  "reserved_ids": 2,
+  "oauth_scenarios": 11,
+  "oauth_0166": {
+    "PASS": 9,
+    "FAIL": 2,
+    "INCONCLUSIVE": 0
+  },
+  "oauth_0165": {
+    "PASS": 7,
+    "FAIL": 4,
+    "INCONCLUSIVE": 0
+  },
+  "initial_18": {
+    "PASS": 13,
+    "FAIL": 2,
+    "INCONCLUSIVE": 3
+  },
+  "cache_r2": {
+    "PASS": 0,
+    "FAIL": 2,
+    "INCONCLUSIVE": 1
+  },
+  "cache_r3": {
+    "PASS": 1,
+    "FAIL": 2,
+    "INCONCLUSIVE": 0
+  },
+  "physical_attempts": 24,
+  "current_selection_18": {
+    "PASS": 14,
+    "FAIL": 4,
+    "INCONCLUSIVE": 0
+  },
+  "criterion_unit_controls": 35,
+  "named_detector_controls": {
+    "initial": 54,
+    "cache-r2": 9,
+    "cache-r3": 9
+  },
+  "seven_findings_conditions": 19,
+  "f11_paired_conditions": 8,
+  "f08_cli_cases": 3,
+  "projection": "Captured credential values including synthetic values replaced by <redacted>; local filesystem roots normalized. Booleans, integers, verdicts and HTTP origins preserved."
+}

@@ -1,0 +1,13 @@
+[20972] [20972] Connecting to remote server: http://127.0.0.1:27123/mcp
+[20972] Using transport strategy: http-only
+[20972] Connection error: OAuthError2: HTTP 307: Invalid OAuth error response: SyntaxError: Unexpected end of JSON input. Raw body: 
+    at parseErrorResponse (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33206:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeTokenRequest (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33652:27)
+    at async authInternal (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33343:22)
+    at async auth (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:37373:15) {
+  code: 'server_error',
+  errorUri: undefined
+}

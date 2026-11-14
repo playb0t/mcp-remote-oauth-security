@@ -1,0 +1,41 @@
+[14700] Using transport strategy: http-only
+[14700] Using static OAuth client information from file: <issuer-cache-case>\runtime-results\runs\resource-bearer-legitimate\state-G7hZjc\static.json
+[14700] Using the OAuth device grant; no browser will be opened on this machine
+[14700] Using callback port derived from the server URL: 19847
+[14700] Discovering OAuth server configuration...
+[14700] Discovered authorization server: http://127.0.0.1:27130
+[14700] [14700] Connecting to remote server: http://127.0.0.1:27132/mcp
+[14700] Using transport strategy: http-only
+[14700] 
+[14700] To authorize this client, visit:
+[14700]   http://127.0.0.1:27130/fixture-verification
+[14700] 
+[14700] And enter the code: <redacted>
+[14700] 
+[14700] Waiting for approval...
+[14700] Authorized.
+[14700] Authentication required. Initializing auth...
+[14700] Signed in without a browser - reconnecting with the tokens it produced
+[14700] [14700] Connecting to remote server: http://127.0.0.1:27132/mcp
+[14700] Using transport strategy: http-only
+[14700] Connected to remote server using StreamableHTTPClientTransport
+[14700] Local STDIO server running
+[14700] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[14700] Press Ctrl+C to exit
+[14700] [Local→Remote] initialize
+[14700] {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {},
+    "clientInfo": {
+      "name": "own-wrapper-fixture (via mcp-remote 0.16.6)",
+      "version": "1"
+    }
+  }
+}
+[14700] [Remote→Local] 1
+[14700] 
+Shutting down...

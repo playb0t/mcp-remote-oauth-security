@@ -1,0 +1,71 @@
+{
+  "id": "resource-bearer-legitimate-positive",
+  "detector_only": true,
+  "events": [
+    {
+      "type": "request",
+      "address": "http://127.0.0.1:27130/token",
+      "method": "POST",
+      "context_id": "fixture-owner-A",
+      "authorization_present": true,
+      "authorization_scheme": "Basic",
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "credential_observation_complete": true,
+      "fixture_matches": {
+        "client_auth": true,
+        "client_secret": false
+      }
+    }
+  ],
+  "security": {
+    "criterion": "oauth-credential-destination-v2",
+    "verdict": "PASS",
+    "policy_id": "predeclared-resource-bearer-legitimate",
+    "policy_sha256": "6d00c247dccb2619026a49e9a6e77f078e18b605c6dbe68343e080ccdfdd79b6",
+    "expected_issuer": "http://127.0.0.1:27130",
+    "coverage_healthy": true,
+    "coverage": {
+      "target_started": true,
+      "observation_complete": true,
+      "stimulus_observed": true
+    },
+    "unknown": [],
+    "audit": [
+      {
+        "event": 0,
+        "recipient": "http://127.0.0.1:27130/token",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": true,
+        "authorization_scheme": "Basic",
+        "credential_kinds": [
+          "client_auth"
+        ],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": true,
+          "client_secret": false
+        }
+      }
+    ],
+    "violations": [],
+    "redirects": [],
+    "limits": "PASS applies only to observed credential destination rules. A cross-origin request without credentials is recorded, not called credential disclosure. Policy provenance and observer health are caller responsibilities; hash is not authority."
+  },
+  "coverage": {
+    "target_started": true,
+    "observation_complete": true,
+    "stimulus_observed": true
+  },
+  "effect_outcome": "allowed"
+}

@@ -1,0 +1,35 @@
+[9280] Using transport strategy: http-only
+[9280] Using static OAuth client information from file: <issuer-cache-case>\runtime-results\runs\device-code-body307-basic\state-5rYrGP\static.json
+[9280] Using the OAuth device grant; no browser will be opened on this machine
+[9280] Using callback port derived from the server URL: 11729
+[9280] Discovering OAuth server configuration...
+[9280] Discovered authorization server: http://127.0.0.1:27127
+[9280] [9280] Connecting to remote server: http://127.0.0.1:27129/mcp
+[9280] Using transport strategy: http-only
+[9280] 
+[9280] To authorize this client, visit:
+[9280]   http://127.0.0.1:27127/fixture-verification
+[9280] 
+[9280] And enter the code: <redacted>
+[9280] 
+[9280] Waiting for approval...
+[9280] Connection error: Error: The token endpoint at http://127.0.0.1:27127 answered HTTP 307 with a redirect to http://127.0.0.1:27128/receipt-token, which was not followed. A request that carries credentials follows a redirect only when it is a 307 or 308 within the same origin.
+    at postWithinOrigin (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:38228:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async pollForTokens (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:40279:22)
+    at async NodeOAuthClientProvider.authorizeWithDeviceCode (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41539:20)
+    at async NodeOAuthClientProvider.redirectToAuthorization (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41496:7)
+    at async authInternal (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33402:3)
+    at async auth (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:37373:15)
+[9280] Fatal error: Error: The token endpoint at http://127.0.0.1:27127 answered HTTP 307 with a redirect to http://127.0.0.1:27128/receipt-token, which was not followed. A request that carries credentials follows a redirect only when it is a 307 or 308 within the same origin.
+    at postWithinOrigin (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:38228:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async pollForTokens (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:40279:22)
+    at async NodeOAuthClientProvider.authorizeWithDeviceCode (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41539:20)
+    at async NodeOAuthClientProvider.redirectToAuthorization (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41496:7)
+    at async authInternal (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33402:3)
+    at async auth (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:37373:15)

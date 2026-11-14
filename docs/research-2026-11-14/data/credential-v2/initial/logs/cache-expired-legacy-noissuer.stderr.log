@@ -1,0 +1,33 @@
+[9588] Error reading client_info.json: ZodError: [
+  {
+    "expected": "array",
+    "code": "invalid_type",
+    "path": [
+      "redirect_uris"
+    ],
+    "message": "Invalid input: expected array, received undefined"
+  }
+]
+    at readJsonFile (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:37818:33)
+    at async NodeOAuthClientProvider.clientInformation (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:40861:24)
+    at async NodeOAuthClientProvider.tokens (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:40951:7)
+    at async runCache (file:///<issuer-cache-case>/procedure/cache-child.mjs:19:14)
+    at async file:///<issuer-cache-case>/procedure/driver.mjs:11:67
+[9588] Error reading client_info.json: ZodError: [
+  {
+    "expected": "array",
+    "code": "invalid_type",
+    "path": [
+      "redirect_uris"
+    ],
+    "message": "Invalid input: expected array, received undefined"
+  }
+]
+    at readJsonFile (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:37818:33)
+    at async NodeOAuthClientProvider.clientInformation (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:40861:24)
+    at async NodeOAuthClientProvider.doRefreshTokens (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41177:33)
+    at async NodeOAuthClientProvider.refreshOncePerHost (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41132:14)
+    at async NodeOAuthClientProvider.tokens (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41000:27)
+    at async runCache (file:///<issuer-cache-case>/procedure/cache-child.mjs:19:14)
+    at async file:///<issuer-cache-case>/procedure/driver.mjs:11:67
+[9588] Proactive token refresh failed, falling back to the stored token

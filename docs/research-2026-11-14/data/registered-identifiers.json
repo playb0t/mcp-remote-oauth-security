@@ -1,0 +1,18 @@
+{
+  "observed_date": "2026-11-14",
+  "records": [
+    {
+      "id": "CVE-2026-51998",
+      "url": "https://cveawg.mitre.org/api/cve-id/CVE-2026-51998",
+      "http_status": 200,
+      "state": "RESERVED"
+    },
+    {
+      "id": "CVE-2026-51999",
+      "url": "https://cveawg.mitre.org/api/cve-id/CVE-2026-51999",
+      "http_status": 200,
+      "state": "RESERVED"
+    }
+  ],
+  "advisory_mapping": "Not confirmed for F-09 or F-10."
+}

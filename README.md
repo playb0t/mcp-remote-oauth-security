@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#advisory-index"><img alt="CVE records" src="https://img.shields.io/badge/CVE_records-5-b91c1c"></a>
   <a href="#advisory-index"><img alt="CISA-ADP score" src="https://img.shields.io/badge/CISA--ADP-up_to_9.8_Critical-f59e0b"></a>
-  <a href="docs/research-2026-11-07/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.16.5_(7_Nov_2026)-8b5cf6"></a>
+  <a href="docs/research-2026-11-14/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.16.6_(14_Nov_2026)-8b5cf6"></a>
   <a href="CORRECTIONS.md"><img alt="Latest release" src="https://img.shields.io/badge/release-v1.0.2-58a6ff"></a>
   <a href="https://playb0t.com"><img alt="Impact record" src="https://img.shields.io/badge/impact_record-playb0t.com-0f766e"></a>
 </p>
@@ -26,6 +26,10 @@
   <a href="#advisory-index">Advisory index</a> ·
   <a href="https://playb0t.com">Impact ledger</a>
 </p>
+
+## Research update: 14 November 2026
+
+All seven original findings remain present in mcp-remote 0.16.6. The release constrains cross-origin credential POST redirects, while the full CLI still sends client credentials configured for one authorization server to the authorization server selected by MCP discovery. The eleven OAuth scenarios record 9 PASS / 2 FAIL, compared with 7 PASS / 4 FAIL on 0.16.5. Paired F-11 transport checks on 0.1.38 and 0.16.6 observe no cross-origin Bearer transfer; F-11 retains its corrected hardening classification. Still open: the selected discovery paths, legacy-cache credential binding and the original source/component observations remain in the states documented by the [0.16.6 results, traces and limits](docs/research-2026-11-14/README.md).
 
 ## Static-header update: 9 November 2026
 

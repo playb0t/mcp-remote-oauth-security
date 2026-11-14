@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "path": "components/criterion.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "components/extras.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "components/runner.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r2/auth-destination-v2.cjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r2/cache-child.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r2/detector-controls.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r2/driver.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r2/harness-v2.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r2/test-criterion-v2.cjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r3/auth-destination-v2.cjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r3/cache-child.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r3/detector-controls.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r3/driver.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r3/harness-v2.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/cache-r3/test-criterion-v2.cjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/initial/auth-destination-v2.cjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/initial/cache-child.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/initial/detector-controls.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/initial/driver.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/initial/harness-v2.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "credential-v2/initial/test-criterion-v2.cjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "legacy/collector.py",
+      "check": "Python ast.parse",
+      "exit_code": 0
+    },
+    {
+      "path": "legacy/f08-cli.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "legacy/f08-preload.cjs",
+      "check": "node --check",
+      "exit_code": 0
+    },
+    {
+      "path": "legacy/f11.mjs",
+      "check": "node --check",
+      "exit_code": 0
+    }
+  ],
+  "syntax_passed": true,
+  "privacy_pattern_matches": [],
+  "target_runs": 0
+}

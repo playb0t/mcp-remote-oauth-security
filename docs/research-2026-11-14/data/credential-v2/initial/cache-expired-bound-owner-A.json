@@ -1,0 +1,107 @@
+{
+  "measurement_context": {
+    "entry_point": "cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens",
+    "variant": "cache-expired-bound-owner-A",
+    "state": "seeded persisted mcp-remote-v1 cache in isolated profile",
+    "auth_profile": "client_secret_post / cache-component",
+    "principal": "fixture-client",
+    "grants": "synthetic fixture credentials only",
+    "consumer": "owned loopback A/B token or device endpoint",
+    "backend": "isolated temporary auth files and owned HTTP fixtures",
+    "platform": "win32 / Node v24.20.0",
+    "component": "mcp-remote 0.16.6",
+    "validated_field": "selected authorization server and credential receiver",
+    "effective_resource": "B advertised token/device endpoint"
+  },
+  "artifact_sha256": "8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638",
+  "forced_stop": false,
+  "server_close_callbacks": [
+    {
+      "role": "A",
+      "error": null
+    },
+    {
+      "role": "B",
+      "error": null
+    },
+    {
+      "role": "MCP",
+      "error": null
+    }
+  ],
+  "case": {
+    "id": "cache-expired-bound-owner-A",
+    "selectB": true,
+    "cache": {
+      "expired": true,
+      "bound": true
+    },
+    "expected": "FAIL",
+    "facts": {
+      "tokens_returned": true,
+      "old_access_returned": false
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27139,
+    "gateProfile": "credential_destination"
+  },
+  "security": {
+    "criterion": "oauth-credential-destination-v2",
+    "verdict": "INCONCLUSIVE",
+    "policy_id": "predeclared-cache-expired-bound-owner-A",
+    "policy_sha256": "d2d38b2c6737c9ee12d45e734b407c96798d56c0275814fa04b2bac476b669d9",
+    "expected_issuer": "http://127.0.0.1:27139",
+    "coverage_healthy": false,
+    "coverage": {
+      "target_started": true,
+      "observation_complete": true,
+      "stimulus_observed": false
+    },
+    "unknown": [],
+    "audit": [],
+    "violations": [],
+    "redirects": [],
+    "limits": "PASS applies only to observed credential destination rules. A cross-origin request without credentials is recorded, not called credential disclosure. Policy provenance and observer health are caller responsibilities; hash is not authority."
+  },
+  "coverage": {
+    "target_started": true,
+    "observation_complete": true,
+    "stimulus_observed": false
+  },
+  "scenario_postcondition_observed": false,
+  "policy_sha256": "d2d38b2c6737c9ee12d45e734b407c96798d56c0275814fa04b2bac476b669d9",
+  "untrusted_discovery_issuer": "http://127.0.0.1:27140",
+  "expected_issuer": "http://127.0.0.1:27139",
+  "environment": {
+    "node": "v24.20.0",
+    "scope": "loopback-only",
+    "synthetic_credentials": true
+  },
+  "origins": {
+    "A": "http://127.0.0.1:27139",
+    "B": "http://127.0.0.1:27140",
+    "MCP": "http://127.0.0.1:27141/mcp"
+  },
+  "events": [],
+  "driver": {
+    "mode": "cache-component",
+    "module_loaded": true,
+    "cache": {
+      "seeded_old_shape": true,
+      "seeded_issuer": "owner-A",
+      "tokens_returned": true,
+      "old_access_returned": true,
+      "refresh_retained": true,
+      "issuer_matches_owner": true,
+      "cached_client_exists": true,
+      "token_file_unchanged": true
+    },
+    "returned": true
+  },
+  "child": {
+    "code": 0,
+    "signal": null
+  },
+  "child_close_observed": true
+}

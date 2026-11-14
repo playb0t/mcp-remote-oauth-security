@@ -1,0 +1,210 @@
+[
+  {
+    "id": "expected-token-basic",
+    "mode": "cli",
+    "method": "client_secret_basic",
+    "expected": "PASS",
+    "portBase": 27100,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "foreign-issuer-basic",
+    "mode": "cli",
+    "method": "client_secret_basic",
+    "selectB": true,
+    "expected": "FAIL",
+    "portBase": 27103,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "foreign-issuer-post",
+    "mode": "cli",
+    "selectB": true,
+    "expected": "FAIL",
+    "portBase": 27106,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "redirect-secret-post307",
+    "mode": "cli",
+    "redirect": 307,
+    "cross": true,
+    "expected": "FAIL",
+    "portBase": 27109,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "redirect-basic-header-stripped",
+    "mode": "cli",
+    "method": "client_secret_basic",
+    "redirect": 307,
+    "cross": true,
+    "expected": "PASS",
+    "portBase": 27112,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "redirect-post302-no-body",
+    "mode": "cli",
+    "redirect": 302,
+    "cross": true,
+    "expected": "PASS",
+    "portBase": 27115,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "SDK-issuer-block",
+    "mode": "sdk",
+    "selectB": true,
+    "expected": "PASS",
+    "portBase": 27118,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "SDK-redirect-block",
+    "mode": "sdk",
+    "redirect": 307,
+    "cross": true,
+    "expected": "PASS",
+    "portBase": 27121,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "same-origin-basic307",
+    "mode": "cli",
+    "method": "client_secret_basic",
+    "redirect": 307,
+    "cross": false,
+    "expected": "PASS",
+    "portBase": 27124,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "device-code-body307-basic",
+    "mode": "cli-device",
+    "method": "client_secret_basic",
+    "redirect": 307,
+    "cross": true,
+    "expected": "FAIL",
+    "portBase": 27127,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "resource-bearer-legitimate",
+    "mode": "cli-device",
+    "method": "client_secret_basic",
+    "requireResource": true,
+    "expected": "PASS",
+    "portBase": 27130,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "cache-valid-legacy-noissuer",
+    "selectB": true,
+    "cache": {
+      "expired": false
+    },
+    "expected": "PASS",
+    "facts": {
+      "old_access_returned": true,
+      "token_file_unchanged": true
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27133,
+    "gateProfile": "runtime_effect"
+  },
+  {
+    "id": "cache-expired-legacy-noissuer",
+    "selectB": true,
+    "cache": {
+      "expired": true
+    },
+    "expected": "FAIL",
+    "facts": {
+      "tokens_returned": true,
+      "old_access_returned": false
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27136,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "cache-expired-bound-owner-A",
+    "selectB": true,
+    "cache": {
+      "expired": true,
+      "bound": true
+    },
+    "expected": "FAIL",
+    "facts": {
+      "tokens_returned": true,
+      "old_access_returned": false
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27139,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "cache-expired-same-issuer-control",
+    "cache": {
+      "expired": true,
+      "bound": true
+    },
+    "expected": "PASS",
+    "facts": {
+      "tokens_returned": true,
+      "old_access_returned": false
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27142,
+    "gateProfile": "credential_destination"
+  },
+  {
+    "id": "cache-static-old-sameclient",
+    "selectB": true,
+    "cache": {
+      "static": true
+    },
+    "expected": "PASS",
+    "facts": {
+      "cached_client_exists": false,
+      "returned_issuer_is_selected": true,
+      "returned_issuer_is_owner": false
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27145,
+    "gateProfile": "runtime_effect"
+  },
+  {
+    "id": "cache-static-otherclient-control",
+    "selectB": true,
+    "cache": {
+      "static": true,
+      "otherClient": true
+    },
+    "expected": "PASS",
+    "facts": {
+      "cached_client_exists": true,
+      "returned_issuer_is_selected": true
+    },
+    "mode": "cache-component",
+    "success": true,
+    "portBase": 27148,
+    "gateProfile": "runtime_effect"
+  },
+  {
+    "id": "explicit-token-endpoint-control",
+    "mode": "cli",
+    "selectB": true,
+    "explicitToken": true,
+    "method": "client_secret_basic",
+    "expected": "PASS",
+    "portBase": 27151,
+    "gateProfile": "credential_destination"
+  }
+]

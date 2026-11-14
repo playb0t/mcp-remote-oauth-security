@@ -1,0 +1,688 @@
+{
+  "measurement_context": {
+    "entry_point": "proxy.js initialize over stdio, HTTP OAuth leg",
+    "variant": "resource-bearer-legitimate",
+    "state": "fresh isolated filesystem profile",
+    "auth_profile": "client_secret_basic / cli-device",
+    "principal": "fixture-client",
+    "grants": "synthetic fixture credentials only",
+    "consumer": "owned loopback A/B token or device endpoint",
+    "backend": "isolated temporary auth files and owned HTTP fixtures",
+    "platform": "win32 / Node v24.20.0",
+    "component": "mcp-remote 0.16.6",
+    "validated_field": "selected authorization server and credential receiver",
+    "effective_resource": "A token/device endpoint and controlled redirects"
+  },
+  "artifact_sha256": "8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638",
+  "forced_stop": false,
+  "server_close_callbacks": [
+    {
+      "role": "A",
+      "error": null
+    },
+    {
+      "role": "B",
+      "error": null
+    },
+    {
+      "role": "MCP",
+      "error": null
+    }
+  ],
+  "case": {
+    "id": "resource-bearer-legitimate",
+    "mode": "cli-device",
+    "method": "client_secret_basic",
+    "requireResource": true,
+    "expected": "PASS",
+    "portBase": 27130,
+    "gateProfile": "credential_destination"
+  },
+  "security": {
+    "criterion": "oauth-credential-destination-v2",
+    "verdict": "PASS",
+    "policy_id": "predeclared-resource-bearer-legitimate",
+    "policy_sha256": "6d00c247dccb2619026a49e9a6e77f078e18b605c6dbe68343e080ccdfdd79b6",
+    "expected_issuer": "http://127.0.0.1:27130",
+    "coverage_healthy": true,
+    "coverage": {
+      "target_started": true,
+      "observation_complete": true,
+      "stimulus_observed": true
+    },
+    "unknown": [],
+    "audit": [
+      {
+        "event": 0,
+        "recipient": "http://127.0.0.1:27132/mcp",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "GET",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_kinds": [],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      },
+      {
+        "event": 1,
+        "recipient": "http://127.0.0.1:27130/prm",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "GET",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_kinds": [],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      },
+      {
+        "event": 2,
+        "recipient": "http://127.0.0.1:27130/.well-known/oauth-authorization-server",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "GET",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_kinds": [],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      },
+      {
+        "event": 3,
+        "recipient": "http://127.0.0.1:27132/mcp",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_kinds": [],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      },
+      {
+        "event": 4,
+        "recipient": "http://127.0.0.1:27130/prm",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "GET",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_kinds": [],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      },
+      {
+        "event": 5,
+        "recipient": "http://127.0.0.1:27130/.well-known/oauth-authorization-server",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "GET",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_kinds": [],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      },
+      {
+        "event": 6,
+        "recipient": "http://127.0.0.1:27130/device",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": true,
+        "authorization_scheme": "Basic",
+        "credential_kinds": [
+          "client_auth"
+        ],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": true,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      },
+      {
+        "event": 7,
+        "recipient": "http://127.0.0.1:27130/token",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": true,
+        "authorization_scheme": "Basic",
+        "credential_kinds": [
+          "client_auth",
+          "device_code"
+        ],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": true,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": true,
+          "access_token": false
+        }
+      },
+      {
+        "event": 8,
+        "recipient": "http://127.0.0.1:27132/mcp",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": true,
+        "authorization_scheme": "Bearer",
+        "credential_kinds": [
+          "access_token"
+        ],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": true
+        }
+      },
+      {
+        "event": 9,
+        "recipient": "http://127.0.0.1:27132/mcp",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": true,
+        "authorization_scheme": "Bearer",
+        "credential_kinds": [
+          "access_token"
+        ],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": true
+        }
+      },
+      {
+        "event": 10,
+        "recipient": "http://127.0.0.1:27132/mcp",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "GET",
+        "authorization_present": true,
+        "authorization_scheme": "Bearer",
+        "credential_kinds": [
+          "access_token"
+        ],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": true
+        }
+      },
+      {
+        "event": 11,
+        "recipient": "http://127.0.0.1:27132/mcp",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": true,
+        "authorization_scheme": "Bearer",
+        "credential_kinds": [
+          "access_token"
+        ],
+        "expected_issuer": "http://127.0.0.1:27130",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": true
+        }
+      }
+    ],
+    "violations": [],
+    "redirects": [],
+    "limits": "PASS applies only to observed credential destination rules. A cross-origin request without credentials is recorded, not called credential disclosure. Policy provenance and observer health are caller responsibilities; hash is not authority."
+  },
+  "coverage": {
+    "target_started": true,
+    "observation_complete": true,
+    "stimulus_observed": true
+  },
+  "scenario_postcondition_observed": true,
+  "policy_sha256": "6d00c247dccb2619026a49e9a6e77f078e18b605c6dbe68343e080ccdfdd79b6",
+  "untrusted_discovery_issuer": "http://127.0.0.1:27130",
+  "expected_issuer": "http://127.0.0.1:27130",
+  "environment": {
+    "node": "v24.20.0",
+    "scope": "loopback-only",
+    "synthetic_credentials": true
+  },
+  "origins": {
+    "A": "http://127.0.0.1:27130",
+    "B": "http://127.0.0.1:27131",
+    "MCP": "http://127.0.0.1:27132/mcp"
+  },
+  "events": [
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27132/mcp",
+      "role": "MCP",
+      "method": "GET",
+      "path": "/mcp",
+      "authorization_present": false,
+      "authorization_scheme": null,
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "fixture_bearer": false
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27130/prm",
+      "authorization_scheme": null,
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "role": "A",
+      "path": "/prm",
+      "method": "GET",
+      "secret_in_body": false,
+      "refresh_in_body": false,
+      "device_in_body": false,
+      "authorization_present": false,
+      "fixture_basic": false,
+      "grant": null
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27130/.well-known/oauth-authorization-server",
+      "authorization_scheme": null,
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "role": "A",
+      "path": "/.well-known/oauth-authorization-server",
+      "method": "GET",
+      "secret_in_body": false,
+      "refresh_in_body": false,
+      "device_in_body": false,
+      "authorization_present": false,
+      "fixture_basic": false,
+      "grant": null
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27132/mcp",
+      "role": "MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "authorization_scheme": null,
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "fixture_bearer": false
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27130/prm",
+      "authorization_scheme": null,
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "role": "A",
+      "path": "/prm",
+      "method": "GET",
+      "secret_in_body": false,
+      "refresh_in_body": false,
+      "device_in_body": false,
+      "authorization_present": false,
+      "fixture_basic": false,
+      "grant": null
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27130/.well-known/oauth-authorization-server",
+      "authorization_scheme": null,
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "role": "A",
+      "path": "/.well-known/oauth-authorization-server",
+      "method": "GET",
+      "secret_in_body": false,
+      "refresh_in_body": false,
+      "device_in_body": false,
+      "authorization_present": false,
+      "fixture_basic": false,
+      "grant": null
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27130/device",
+      "authorization_scheme": "Basic",
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": true,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "role": "A",
+      "path": "/device",
+      "method": "POST",
+      "secret_in_body": false,
+      "refresh_in_body": false,
+      "device_in_body": false,
+      "authorization_present": true,
+      "fixture_basic": true,
+      "grant": null
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27130/token",
+      "authorization_scheme": "Basic",
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": true,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": true,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": true,
+        "access_token": false
+      },
+      "role": "A",
+      "path": "/token",
+      "method": "POST",
+      "secret_in_body": false,
+      "refresh_in_body": false,
+      "device_in_body": true,
+      "authorization_present": true,
+      "fixture_basic": true,
+      "grant": "urn:ietf:params:oauth:grant-type:device_code"
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27132/mcp",
+      "role": "MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": true,
+      "authorization_scheme": "Bearer",
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": true
+      },
+      "fixture_bearer": true
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27132/mcp",
+      "role": "MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": true,
+      "authorization_scheme": "Bearer",
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": true
+      },
+      "fixture_bearer": true
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27132/mcp",
+      "role": "MCP",
+      "method": "GET",
+      "path": "/mcp",
+      "authorization_present": true,
+      "authorization_scheme": "Bearer",
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": true
+      },
+      "fixture_bearer": true
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27132/mcp",
+      "role": "MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": true,
+      "authorization_scheme": "Bearer",
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": true
+      },
+      "fixture_bearer": true
+    }
+  ],
+  "driver": null,
+  "child": {
+    "code": 0,
+    "signal": null
+  },
+  "child_close_observed": true
+}

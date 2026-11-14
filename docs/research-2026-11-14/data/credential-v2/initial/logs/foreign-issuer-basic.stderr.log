@@ -1,0 +1,27 @@
+[16068] Using transport strategy: http-only
+[16068] Using static OAuth client information from file: <issuer-cache-case>\runtime-results\runs\foreign-issuer-basic\state-Qtx2EH\static.json
+[16068] Using the OAuth client_credentials grant; no browser will be opened and no user will be asked
+[16068] Using callback port derived from the server URL: 42275
+[16068] Discovering OAuth server configuration...
+[16068] Discovered authorization server: http://127.0.0.1:27104
+[16068] [16068] Connecting to remote server: http://127.0.0.1:27105/mcp
+[16068] Using transport strategy: http-only
+[16068] Requesting a token from http://127.0.0.1:27104 with the client_credentials grant
+[16068] Connection error: Error: The client_credentials token request failed (HTTP 400): fixture terminal refusal
+    at authorizeWithClientCredentials (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:40364:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async NodeOAuthClientProvider.authorizeWithClientCredentials (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41578:20)
+    at async NodeOAuthClientProvider.redirectToAuthorization (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41500:7)
+    at async authInternal (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33402:3)
+    at async auth (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:37373:15)
+[16068] Fatal error: Error: The client_credentials token request failed (HTTP 400): fixture terminal refusal
+    at authorizeWithClientCredentials (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:40364:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async NodeOAuthClientProvider.authorizeWithClientCredentials (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41578:20)
+    at async NodeOAuthClientProvider.redirectToAuthorization (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:41500:7)
+    at async authInternal (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33402:3)
+    at async auth (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<issuer-cache-case>/runtime/dist/chunk-MKB2ICYW.js:37373:15)

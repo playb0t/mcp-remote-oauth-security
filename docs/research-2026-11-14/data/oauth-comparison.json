@@ -1,0 +1,70 @@
+{
+  "scenarios": [
+    {
+      "id": "expected-token-basic",
+      "0165": "PASS",
+      "0166": "PASS",
+      "source": "credential-v2/initial/expected-token-basic.json"
+    },
+    {
+      "id": "foreign-issuer-basic",
+      "0165": "FAIL",
+      "0166": "FAIL",
+      "source": "credential-v2/initial/foreign-issuer-basic.json"
+    },
+    {
+      "id": "foreign-issuer-post",
+      "0165": "FAIL",
+      "0166": "FAIL",
+      "source": "credential-v2/initial/foreign-issuer-post.json"
+    },
+    {
+      "id": "redirect-secret-post307",
+      "0165": "FAIL",
+      "0166": "PASS",
+      "source": "credential-v2/initial/redirect-secret-post307.json"
+    },
+    {
+      "id": "redirect-basic-header-stripped",
+      "0165": "PASS",
+      "0166": "PASS",
+      "source": "credential-v2/initial/redirect-basic-header-stripped.json"
+    },
+    {
+      "id": "redirect-post302-no-body",
+      "0165": "PASS",
+      "0166": "PASS",
+      "source": "credential-v2/initial/redirect-post302-no-body.json"
+    },
+    {
+      "id": "SDK-issuer-block",
+      "0165": "PASS",
+      "0166": "PASS",
+      "source": "credential-v2/initial/SDK-issuer-block.json"
+    },
+    {
+      "id": "SDK-redirect-block",
+      "0165": "PASS",
+      "0166": "PASS",
+      "source": "credential-v2/initial/SDK-redirect-block.json"
+    },
+    {
+      "id": "same-origin-basic307",
+      "0165": "PASS",
+      "0166": "PASS",
+      "source": "credential-v2/initial/same-origin-basic307.json"
+    },
+    {
+      "id": "device-code-body307-basic",
+      "0165": "FAIL",
+      "0166": "PASS",
+      "source": "credential-v2/initial/device-code-body307-basic.json"
+    },
+    {
+      "id": "resource-bearer-legitimate",
+      "0165": "PASS",
+      "0166": "PASS",
+      "source": "credential-v2/initial/resource-bearer-legitimate.json"
+    }
+  ]
+}

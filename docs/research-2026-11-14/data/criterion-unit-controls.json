@@ -1,0 +1,185 @@
+{
+  "tests": 35,
+  "all_passed": true,
+  "old_criterion_counterexamples": {
+    "expected_A_Authorization_old_result": false,
+    "foreign_body_secret_old_result": true
+  },
+  "results": [
+    {
+      "id": "expected client Authorization allowed",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "id": "foreign Authorization rejected",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "id": "body secret rejected even without Authorization",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "id": "refresh body rejected",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "id": "device code rejected",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "id": "resource bearer allowed at distinct resource origin",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "id": "client authentication cannot be sent to resource receiver",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "id": "same issuer origin wrong endpoint rejected",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "id": "unknown issuer does not become green",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "missing positive observation coverage does not become green",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "unknown credential context does not become green",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "unknown Authorization kind not silently accepted",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "trusted issuer may explicitly delegate token endpoint to other origin",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "id": "changed receiver policy after pinned config is rejected",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "redirect transfer detected from actual final receipt",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "id": "redirect blocked or stripped without credential receipt is not called disclosure",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "id": "unrelated event metadata is not copied",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "id": "malformed scheme is not echoed",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "query value omitted from address audit",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "id": "malformed credential-presence field cannot become green",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "unknown event schema cannot become green",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "missing or malformed credential observation undefined",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "missing or malformed credential observation null",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "missing or malformed credential observation unobserved",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "missing or malformed credential observation ",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "missing or malformed credential observation [object Object]",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "explicit incomplete credential observation cannot become green",
+      "expected": "INCONCLUSIVE",
+      "observed": "INCONCLUSIVE"
+    },
+    {
+      "id": "client secret sent to MCP body is detected",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "id": "discovery alone not CLI completion",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "id": "token receipt reaches CLI stimulus",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "id": "redirect stimulus requires actual redirect",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "id": "resource control requires bearer receipt",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "id": "SDK unrelated error not guarded completion",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "id": "SDK owner mismatch guard recognized",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "id": "SDK redirect refusal requires observed redirect",
+      "expected": true,
+      "observed": true
+    }
+  ]
+}

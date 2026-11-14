@@ -1,0 +1,16 @@
+{
+  "release_version": "0.16.6",
+  "release_url": "https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.6",
+  "release_published_at": "2026-11-11T05:52:58Z",
+  "commit": "e4dc3713b0d6a727cbeb21f38324d20a6692dc5f",
+  "commit_url": "https://github.com/punkpeye/mcp-remote/commit/e4dc3713b0d6a727cbeb21f38324d20a6692dc5f",
+  "commit_count_from_0.16.5": 1,
+  "advisories_named_in_notes": [
+    "CVE-2026-108716"
+  ],
+  "five_research_cve_ids_named_in_notes": [],
+  "sdk_component": "@modelcontextprotocol/client 2.4.0",
+  "endpoint_scheme_requirement": "HTTPS for credential-bearing token and device authorization endpoints, except HTTP loopback. The MCP --allow-http option does not relax this requirement.",
+  "scheme_requirement_evidence": "upstream source/release, no new device endpoint experiment in packaging",
+  "redirect_requirement": "method-preserving within-origin redirects; helper also accepts same-host HTTP-to-HTTPS upgrade on default ports"
+}
