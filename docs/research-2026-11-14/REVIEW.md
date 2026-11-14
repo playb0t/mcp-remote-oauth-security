@@ -13,3 +13,16 @@ Upstream release and source records support the single-commit comparison, the re
 Captured credential fields and decoded OAuth query values were inspected in the public projections. They use `<redacted>`; local machine paths use placeholders. Presence flags, fixture-match booleans, counts and verdicts remain. The data are edited projections of retained originals, not raw observations from a new run.
 
 Portable procedure paths and the two runtime layouts were reviewed. The recorded 25 syntax checks pass. Packaging and this review did not repeat target measurements or establish that every reproduction environment is ready. The manifest must cover the final reviewed bytes, including this file. Preparation, publication and any subsequent independent reproduction remain separate states.
+
+
+## Procedure correction review — 14 November 2026
+
+**Result: accepted for the bounded procedure corrections.**
+
+The three credential-destination harnesses now mark forced child shutdown as incomplete before evaluating the observation. Complete permitted capture remains PASS, forced capture without an observed violation is INCONCLUSIVE, and a positively observed forbidden receipt remains FAIL.
+
+The legacy collector preserves both partial output streams and a timeout diagnostic before propagating TimeoutExpired. Empty streams and the ordinary nonzero-exit path are covered. The tests run the actual collector function with benign Python children; they do not launch the product.
+
+The new regression suite contains eight test methods: nine caller-health subcases across three harness families, three collector cases and two controls of the older settlement path. The same suite exposes the defects on the baseline and passes on the candidate. Existing 35 evaluator controls and 54/9/9 policy controls also pass. The older settlement implementation already rejects forced shutdown and is retained unchanged.
+
+Recorded target data remain byte-identical. The source-projection metadata retains earlier hashes and names the procedure correction. Documentation distinguishes the updated replay behavior from the original observations. These tests do not establish target behavior, real child-tree cleanup after a product timeout or a new assessment of the cache observations. No target scenario was rerun for this correction.

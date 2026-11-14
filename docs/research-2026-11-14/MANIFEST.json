@@ -909,8 +909,8 @@
     },
     {
       "path": "procedures/credential-v2/cache-r2/harness-v2.mjs",
-      "bytes": 14620,
-      "sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af"
+      "bytes": 14633,
+      "sha256": "7ce99ce1a213697b272a3344f78a2402b070a35b0fc55013610180f13e0cf09d"
     },
     {
       "path": "procedures/credential-v2/cache-r2/inputs/cases.json",
@@ -1034,8 +1034,8 @@
     },
     {
       "path": "procedures/credential-v2/cache-r3/harness-v2.mjs",
-      "bytes": 14620,
-      "sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af"
+      "bytes": 14633,
+      "sha256": "7ce99ce1a213697b272a3344f78a2402b070a35b0fc55013610180f13e0cf09d"
     },
     {
       "path": "procedures/credential-v2/cache-r3/inputs/cases.json",
@@ -1159,8 +1159,8 @@
     },
     {
       "path": "procedures/credential-v2/initial/harness-v2.mjs",
-      "bytes": 14620,
-      "sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af"
+      "bytes": 14633,
+      "sha256": "7ce99ce1a213697b272a3344f78a2402b070a35b0fc55013610180f13e0cf09d"
     },
     {
       "path": "procedures/credential-v2/initial/inputs/cases.json",
@@ -1264,8 +1264,8 @@
     },
     {
       "path": "procedures/legacy/collector.py",
-      "bytes": 4320,
-      "sha256": "81244649c655d58e8ed5c8c5609fafbe4ee4a66d8aef769fed12773f9b6b84ae"
+      "bytes": 4615,
+      "sha256": "d9af3a91281e0805db36d54a7cf84054bb6773e9c26f5f7e1bc2097d765ed4de"
     },
     {
       "path": "procedures/legacy/f08-cli.mjs",
@@ -1289,8 +1289,8 @@
     },
     {
       "path": "procedures/README.md",
-      "bytes": 7044,
-      "sha256": "0130765331adfb2314109238bab529d2393cd3c1083561f9170f5dd0e22ca1a0"
+      "bytes": 8035,
+      "sha256": "ef3836535d9ad8a7b0bfb95137898b4ae0254999e6f2714831a64426382743a3"
     },
     {
       "path": "procedures/runtime/0.1.38/pnpm-lock.yaml",
@@ -1309,23 +1309,28 @@
     },
     {
       "path": "procedures/SOURCE-PROJECTIONS.json",
-      "bytes": 29689,
-      "sha256": "68bec71a4283c610d52d575fc6e3b40fbe151c8a75f2e0c665336eb9f1a8ffbb"
+      "bytes": 30787,
+      "sha256": "d0aa8430b64d3abf4d1bb0979a34215495784f63d8b23ecd76edf03d15ea2f36"
     },
     {
       "path": "procedures/SYNTAX-CHECKS.json",
-      "bytes": 3169,
-      "sha256": "2ce0d2e63175d3bba38965dbbbed02f924eb5377095be60264eb682e458b7825"
+      "bytes": 3246,
+      "sha256": "e5b7dbe4ca125977bc95a79505b5451f78e4b95e935a812d999b9d4793641b34"
+    },
+    {
+      "path": "procedures/tests/test_failure_paths.py",
+      "bytes": 14020,
+      "sha256": "c57ffa9624c5f872d47635f1c72a863a7aa4d0b7c3e0f931f30cc60ffa6b1997"
     },
     {
       "path": "README.md",
-      "bytes": 11537,
-      "sha256": "7d6cbcf1a66bc919cec5b450c7fe921671982697e5e2aee428ad26d3e7b552a8"
+      "bytes": 11887,
+      "sha256": "e03391873f84fad5c6cc64da499038bf59f40716f9dba9953f06fdb3314b63ed"
     },
     {
       "path": "REVIEW.md",
-      "bytes": 2207,
-      "sha256": "c964697e30e24184889e0e7b1e751fee3a4e73ad3715f2631dc24e2984729238"
+      "bytes": 3744,
+      "sha256": "20656159a8ac9512cee0cd3294b05cd1633146e619fdda0ce574f969f74497c6"
     }
   ]
 }

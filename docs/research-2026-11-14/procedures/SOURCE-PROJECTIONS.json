@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Portable configuration projections. Recorded source hashes identify private preserved inputs. No target execution during packaging.",
+  "scope": "Portable projections and explicit failure-path corrections; recorded source hashes and target data retained",
   "files": [
     {
       "path": "credential-v2/initial/auth-destination-v2.cjs",
@@ -29,8 +29,9 @@
     {
       "path": "credential-v2/initial/harness-v2.mjs",
       "recorded_source_sha256": "085989e0ff96e175a648078d5363cc9f6e742e2c82d8b536b91fda0edd6c3c16",
-      "projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
-      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>"
+      "projection_sha256": "7ce99ce1a213697b272a3344f78a2402b070a35b0fc55013610180f13e0cf09d",
+      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>; post-publication failure-path correctness correction, recorded target data unchanged",
+      "previous_projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af"
     },
     {
       "path": "credential-v2/initial/detector-controls.mjs",
@@ -179,8 +180,9 @@
     {
       "path": "credential-v2/cache-r2/harness-v2.mjs",
       "recorded_source_sha256": "085989e0ff96e175a648078d5363cc9f6e742e2c82d8b536b91fda0edd6c3c16",
-      "projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
-      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>"
+      "projection_sha256": "7ce99ce1a213697b272a3344f78a2402b070a35b0fc55013610180f13e0cf09d",
+      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>; post-publication failure-path correctness correction, recorded target data unchanged",
+      "previous_projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af"
     },
     {
       "path": "credential-v2/cache-r2/detector-controls.mjs",
@@ -329,8 +331,9 @@
     {
       "path": "credential-v2/cache-r3/harness-v2.mjs",
       "recorded_source_sha256": "085989e0ff96e175a648078d5363cc9f6e742e2c82d8b536b91fda0edd6c3c16",
-      "projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
-      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>"
+      "projection_sha256": "7ce99ce1a213697b272a3344f78a2402b070a35b0fc55013610180f13e0cf09d",
+      "transformations": "Explicit MCP_SECURITY_INPUTS with portable sibling default; captured credential placeholder is <redacted>; post-publication failure-path correctness correction, recorded target data unchanged",
+      "previous_projection_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af"
     },
     {
       "path": "credential-v2/cache-r3/detector-controls.mjs",
@@ -497,8 +500,9 @@
     {
       "path": "legacy/collector.py",
       "recorded_source_sha256": "3608eb87a1e38cacc56b43ebfaf54a7144873d5b2a7ab36dff54057995bba9b0",
-      "projection_sha256": "81244649c655d58e8ed5c8c5609fafbe4ee4a66d8aef769fed12773f9b6b84ae",
-      "transformations": "Absolute host Node/runtime/output/recorder paths replaced by explicit environment bindings; original F08/F11 predicates and partial states retained"
+      "projection_sha256": "d9af3a91281e0805db36d54a7cf84054bb6773e9c26f5f7e1bc2097d765ed4de",
+      "transformations": "Absolute host Node/runtime/output/recorder paths replaced by explicit environment bindings; original F08/F11 predicates and partial states retained; post-publication failure-path correctness correction, recorded target data unchanged",
+      "previous_projection_sha256": "81244649c655d58e8ed5c8c5609fafbe4ee4a66d8aef769fed12773f9b6b84ae"
     },
     {
       "path": "runtime/0.16.6/package.json",
@@ -517,6 +521,12 @@
       "recorded_source_sha256": "598f60becf15b3197fce5c4e38e8158f3db2f774d218a443e50b3b5e2b098542",
       "projection_sha256": "598f60becf15b3197fce5c4e38e8158f3db2f774d218a443e50b3b5e2b098542",
       "transformations": "Exact procedure bytes"
+    },
+    {
+      "path": "tests/test_failure_paths.py",
+      "recorded_source_sha256": "c57ffa9624c5f872d47635f1c72a863a7aa4d0b7c3e0f931f30cc60ffa6b1997",
+      "projection_sha256": "c57ffa9624c5f872d47635f1c72a863a7aa4d0b7c3e0f931f30cc60ffa6b1997",
+      "transformations": "New stdlib regression tests, evaluator calls and benign subprocess only"
     }
   ]
 }

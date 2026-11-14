@@ -100,7 +100,7 @@ async function run(c){
   for(const [role,server] of [['A',sa],['B',sb],['MCP',sm]]){server.closeAllConnections();if(server.listening)await new Promise((ok,no)=>server.close(error=>{closeCallbacks.push({role,error:error?.message??null});error?no(error):ok();}));}
   const line=stdout.split('\n').find(x=>x.startsWith('DRIVER_RESULT '));const driver=line?JSON.parse(line.slice(14)):null;
   const scenarioReached=c.explicitToken?events.some(x=>x.role==='A'&&x.path==='/token'):c.cache?!!driver?.returned&&Object.entries(c.facts).every(([k,v])=>driver.cache?.[k]===v):oracle.scenarioObserved(c,events,driver);
-  const coverage={target_started:typeof child.pid==='number',observation_complete:closedEvent&&captureErrors===0&&!sa.listening&&!sb.listening&&!sm.listening,stimulus_observed:(c.cache||c.explicitToken)?scenarioReached:scenarioReached&&events.some(x=>x.role==='MCP')&&events.some(x=>x.path==='/prm'||x.path?.startsWith('/.well-known/'))};
+  const coverage={target_started:typeof child.pid==='number',observation_complete:!forcedStop&&closedEvent&&captureErrors===0&&!sa.listening&&!sb.listening&&!sm.listening,stimulus_observed:(c.cache||c.explicitToken)?scenarioReached:scenarioReached&&events.some(x=>x.role==='MCP')&&events.some(x=>x.path==='/prm'||x.path?.startsWith('/.well-known/'))};
   const security=oracle.evaluate(trustedPolicy,events,coverage,pinnedPolicyHash);
   const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('<redacted>'),s);
   writeFileSync(join(d,'stdout.log'),sanitize(stdout));writeFileSync(join(d,'stderr.log'),sanitize(stderr));

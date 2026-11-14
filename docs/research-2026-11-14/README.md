@@ -93,6 +93,8 @@ These are edited projections of retained local evidence. Fixture-match booleans 
 
 [0.16.6 acquisition](data/acquisition.json), [0.1.38 acquisition](data/acquisition-0.1.38.json), [summary](data/summary.json), [portable procedures](procedures/README.md). Portable projections were syntax-checked during packaging. No target scenario was rerun for this export. Separate code families preserve the initial cache fixture and both correction stages.
 
+The supplied procedures now mark forced child shutdown as incomplete and preserve partial stdout/stderr with an incomplete diagnostic on collector timeout. [Failure-path regression tests](procedures/tests/test_failure_paths.py) exercise these branches with pure evaluator calls and a benign subprocess; recorded target observations are unchanged.
+
 ## Not verified here
 
 Production/cloud endpoints, TLS/DNS/rebinding, real account access, cryptographic issuer/audience, actual browser navigation, practical namespace takeover, cross-user filesystem isolation, all grant/transport profiles and full reconnect lifetimes remain outside these measurements. The old F-11 procedure suppresses transport-close errors and does not retain typed callback errors. Its absence result is limited to the recorded startup/redirect/endpoint window. A detached recorder child-close callback was not separately captured.

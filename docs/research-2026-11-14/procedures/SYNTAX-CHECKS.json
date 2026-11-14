@@ -107,7 +107,7 @@
     },
     {
       "path": "legacy/collector.py",
-      "check": "Python ast.parse",
+      "check": "ast.parse",
       "exit_code": 0
     },
     {
@@ -124,9 +124,13 @@
       "path": "legacy/f11.mjs",
       "check": "node --check",
       "exit_code": 0
+    },
+    {
+      "path": "tests/test_failure_paths.py",
+      "check": "ast.parse",
+      "exit_code": 0
     }
   ],
-  "syntax_passed": true,
-  "privacy_pattern_matches": [],
-  "target_runs": 0
+  "all_passed": true,
+  "target_execution": false
 }

@@ -98,4 +98,15 @@ F08 stops the two recorder-reaching CLI processes while they await an OAuth call
 
 SOURCE-PROJECTIONS.json records source and portable file hashes and their configuration transformations. CONFIGURATION.diff shows differences after normalizing private absolute paths in its recorded side. The preserved private sources remain in the local research cases. Syntax results are in SYNTAX-CHECKS.json.
 
-The copied procedures retain their observations and error handling. Portable copies were not target-run during preparation. Local output from a new reproduction can contain its own filesystem paths, generated credentials and callback values. Apply the public data projection and replace captured values with `<redacted>` before sharing those results.
+Recorded observations are retained. The two post-publication failure-path corrections are described in the run README and tested separately. Portable copies were not target-run during preparation. Local output from a new reproduction can contain its own filesystem paths, generated credentials and callback values. Apply the public data projection and replace captured values with `<redacted>` before sharing those results.
+
+
+## Failure-path regression checks
+
+From the run-package root in a checkout containing the sibling research-2026-11-07-v2 procedures, run:
+
+    python -B procedures/tests/test_failure_paths.py -v
+
+MCP_NODE_BINARY optionally selects the Node executable. RESEARCH_PACKAGE_ROOT can select another package root. RESEARCH_OLD_V2_PROCEDURES can select the older settlement procedures explicitly. Tests use temporary files, actual evaluator functions and a benign Python subprocess, without importing mcp-remote or making network requests.
+
+The tests distinguish permitted complete capture, forced capture and positively observed forbidden receipt. Collector checks cover partial output, empty output and ordinary nonzero exit. The older oauth-controls-v2 intermediate coverage field is not the final oracle: settlement.finalize already rejects forced shutdown. Those historical procedure bytes remain unchanged.

@@ -75,3 +75,13 @@ Later on 29 September 2026 the README gained a dated «Registry status» section
 7 October 2026: CISA-ADP scored CVE-2026-52001 on 6 October (CVSS 3.1 7.5 High, CWE-200). The README «Registry status» section is re-dated and records the score; its «four scored records» wording is withdrawn, since all five records now carry a CISA score. The F-11 Classification block takes the CVE-line wording the other advisories use. No evidence class, version range or correction text changed.
 
 9 to 15 October 2026: README.md gained two dated research sections (`docs/research-2026-10-09/`, the published `0.14.3` CLI and the release history; `docs/research-2026-10-15/`, the same procedure on `0.15.1`), a new hero line and badges naming the release tested through, a «Picked up» line (agent-audit-kit, UltraRAG, Supabase) and the disclosure summary's release text moved from `0.14.3` to `0.15.1`; TIMELINE.md gained rows for 8, 9, 13, 14 and 15 October; METHODOLOGY.md and SECURITY.md note the repository move to `punkpeye/mcp-remote`. No evidence class, version range or correction text of the tagged advisory package changed; the `v1.0.1` paths the CVE records cite are unchanged.
+
+## 14 November 2026 — research procedure failure paths
+
+The procedures accompanying `docs/research-2026-11-14` omitted forced child shutdown from the v2 caller's observation-completeness flag. They now mark that capture incomplete, so a permitted receipt cannot produce PASS after forced shutdown. A positively observed forbidden receipt retains FAIL. All 24 recorded credential-v2 attempts have forced_stop=false, and their records remain unchanged.
+
+The legacy collector now preserves partial stdout/stderr and writes an INCOMPLETE.json diagnostic before propagating TimeoutExpired. Empty streams are retained as empty files, and the ordinary nonzero-exit path is preserved.
+
+New failure-path regression tests cover these branches and the older oauth-controls-v2 finalization path. In the older procedure, settlement.finalize already receives the sticky forced-shutdown flag, rejects incomplete finalization and supplies the exported coverage. That procedure requires no corresponding code change.
+
+These are corrections to future research replays. The existing observations, evidence classes and CVE records are unchanged. The test controls use evaluator calls and a benign subprocess.

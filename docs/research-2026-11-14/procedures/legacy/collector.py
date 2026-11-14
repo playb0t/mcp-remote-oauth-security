@@ -20,7 +20,13 @@ def execute(i):
  env=dict(os.environ,MCP_CASE_ROOT=str(out),MCP_RUNTIME_ROOT=str(runtime),MCP_NODE_BINARY=str(NODE),MCP_FAKE_SYSTEMROOT=os.environ['MCP_FAKE_SYSTEMROOT'],MCP_TEST_VERSION=version,MCP_TEST_CHUNK='chunk-65X3S4HB.js' if old else 'chunk-MKB2ICYW.js')
  name='f08-cli.mjs' if i=='f08-current' else 'f11.mjs'
  (out/'runs').mkdir()
- p=subprocess.run([str(NODE),str(C/name)],env=env,cwd=C,capture_output=True,timeout=100)
+ try:
+  p=subprocess.run([str(NODE),str(C/name)],env=env,cwd=C,capture_output=True,timeout=100)
+ except subprocess.TimeoutExpired as error:
+  (out/'stdout.log').write_bytes(error.stdout or b'')
+  (out/'stderr.log').write_bytes(error.stderr or b'')
+  (out/'INCOMPLETE.json').write_text(json.dumps({'execution':'timed_out','timeout_seconds':error.timeout},indent=2)+'\n')
+  raise
  (out/'stdout.log').write_bytes(p.stdout);(out/'stderr.log').write_bytes(p.stderr)
  rawfile=out/'runs'/('F08-CLI-RESULTS.json' if i=='f08-current' else 'F11-RESULTS.json')
  rows=json.loads(rawfile.read_bytes())['results'] if rawfile.exists() else []
