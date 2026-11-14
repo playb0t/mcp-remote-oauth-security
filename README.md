@@ -8,7 +8,7 @@
 
 <p align="center">
   <strong>Five published CVE records, all scored by CISA-ADP, up to 9.8 Critical.<br>
-  In the 7 November 2026 loopback runs, published CLI <code>0.16.3</code>, <code>0.16.4</code> and <code>0.16.5</code> reach the server-selected metadata paths of CVE-2026-51994 and CVE-2026-51995.</strong>
+  In the 14 November 2026 loopback runs, published CLI <code>0.16.6</code> reaches the server-selected metadata paths of CVE-2026-51994 and CVE-2026-51995; all seven original findings remain present.</strong>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 
 <p align="center">
   <a href="docs/research-2026-10-09/RESEARCH_DOSSIER.md">Research dossier, 9 October 2026</a> ·
-  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> · <a href="docs/research-2026-11-03/README.md">0.15.2 / 0.16.0 follow-up, 3 November 2026</a> · <a href="docs/research-2026-11-07/README.md">0.16.3 / 0.16.4 / 0.16.5 follow-up, 7 November 2026</a> · <a href="docs/research-2026-11-07-v2/README.md">Procedure v2 and seven-version backfill, 7 November 2026</a> ·
+  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> · <a href="docs/research-2026-11-03/README.md">0.15.2 / 0.16.0 follow-up, 3 November 2026</a> · <a href="docs/research-2026-11-07/README.md">0.16.3 / 0.16.4 / 0.16.5 follow-up, 7 November 2026</a> · <a href="docs/research-2026-11-14/README.md">0.16.6 assessment, 14 November 2026</a> · <a href="docs/research-2026-11-07-v2/README.md">Procedure v2 and seven-version backfill, 7 November 2026</a> ·
   <a href="https://github.com/playb0t/mcp-host-matrix">MCP Host Matrix, 25 October 2026</a> ·
   <a href="#advisory-index">Advisory index</a> ·
   <a href="https://playb0t.com">Impact ledger</a>
