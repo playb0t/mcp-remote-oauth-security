@@ -864,8 +864,8 @@
     },
     {
       "path": "data/upstream.json",
-      "bytes": 977,
-      "sha256": "05ff50bf190097f4da4fafb254a63a8225c6b7f7e2a926e3a8d78c2bc7d0c63b"
+      "bytes": 914,
+      "sha256": "a979955dfe4e1d61e020dd8062d54210cdd3fb61b360f6b8ecd442d86cc0f79b"
     },
     {
       "path": "procedures/components/criterion.mjs",
@@ -1324,8 +1324,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11887,
-      "sha256": "e03391873f84fad5c6cc64da499038bf59f40716f9dba9953f06fdb3314b63ed"
+      "bytes": 11867,
+      "sha256": "1aceddff4572bbcdd324750ba55638c634e8e5ef84a59efeb08d904afe72d406"
     },
     {
       "path": "REVIEW.md",

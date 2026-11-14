@@ -6,7 +6,7 @@ Research by **Alex Gercog (playb0t)**. Measurements dated **14 November 2026**. 
 
 ## Upstream changes
 
-The comparison from 0.16.5 to 0.16.6 contains one commit, [e4dc3713b0d6a727cbeb21f38324d20a6692dc5f](https://github.com/punkpeye/mcp-remote/commit/e4dc3713b0d6a727cbeb21f38324d20a6692dc5f). The [release notes](https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.6) name CVE-2026-108716 and none of the five research CVE IDs. The bundled client remains 2.4.0. [Structured source observations](data/upstream.json).
+The comparison from 0.16.5 to 0.16.6 contains one commit, [e4dc3713b0d6a727cbeb21f38324d20a6692dc5f](https://github.com/punkpeye/mcp-remote/commit/e4dc3713b0d6a727cbeb21f38324d20a6692dc5f). The [release notes](https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.6) name none of the five research CVE IDs. The bundled client remains 2.4.0. [Structured source observations](data/upstream.json).
 
 Upstream requires HTTPS for credential-bearing device authorization and token endpoints, except HTTP loopback. Its `--allow-http` option concerns the MCP endpoint. This change does not establish a new HTTPS check on the displayed `verification_uri` or `verification_uri_complete` response fields. The scheme requirement is source/release evidence. Packaging added no device-network experiment.
 
