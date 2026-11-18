@@ -32,6 +32,7 @@ issuance; it did not demonstrate response exfiltration.
 - Evidence: localhost PoC, reverified
 - CVSS: not assigned by the researcher; CISA's assessment is on the CVE line
 - CVE: CVE-2026-51994 (published 2026-09-24; CISA-ADP CVSS 3.1 9.1 Critical)
+- Impact record: [playb0t.com](https://playb0t.com)
 
 ## Remediation
 

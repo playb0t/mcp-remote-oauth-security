@@ -26,6 +26,7 @@ demonstrated.
 - Evidence: defense-in-depth / corrected claim
 - CVSS: not assigned by the researcher; CISA's assessment is on the CVE line
 - CVE: CVE-2026-52001 (published 2026-09-24; CISA-ADP CVSS 3.1 7.5 High, added 2026-10-06)
+- Impact record: [playb0t.com](https://playb0t.com)
 
 ## Remediation
 

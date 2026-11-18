@@ -30,6 +30,7 @@ requests during both initial probing and transport setup.
 - Evidence: localhost PoC, reverified
 - CVSS: not assigned by the researcher; CISA's assessment is on the CVE line
 - CVE: CVE-2026-51995 (published 2026-09-24; CISA-ADP CVSS 3.1 7.5 High)
+- Impact record: [playb0t.com](https://playb0t.com)
 
 ## Remediation
 
