@@ -1,0 +1,30 @@
+[9172] Using transport strategy: http-only
+[9172] Using callback hostname: 127.0.0.1
+[9172] Using auth callback timeout: 3 seconds
+[9172] Using specified callback port: 18001
+[9172] Discovering OAuth server configuration...
+[9172] Discovered authorization server: http://127.0.0.1:25110
+[9172] [9172] Connecting to remote server: http://127.0.0.1:25111/mcp
+[9172] Using transport strategy: http-only
+[9172] Refreshed the access token before it expired
+[9172] Connected to remote server using StreamableHTTPClientTransport
+[9172] Local STDIO server running
+[9172] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[9172] Press Ctrl+C to exit
+[9172] [Local→Remote] initialize
+[9172] {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {},
+    "clientInfo": {
+      "name": "owned-cli-observer (via mcp-remote 0.16.7)",
+      "version": "1"
+    }
+  }
+}
+[9172] [Remote→Local] 1
+[9172] 
+Shutting down...

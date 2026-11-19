@@ -1,0 +1,8 @@
+{
+  "id": "v0167-exact-port-B",
+  "raw_harness_verdict": "FAIL",
+  "channel_verdict": "FAIL",
+  "body_and_header_observed": true,
+  "original_query_observed": false,
+  "reason": "Direct forbidden body receipts remain FAIL; missing query observations preclude complete no-credential PASS."
+}

@@ -782,6 +782,191 @@
       "sha256": "90f4a62e7fa072ed10ea307cef37c57e890261d982565c394d6b5c9ba2169850"
     },
     {
+      "path": "data/full-cli/assessments/v0166-exact-port-B.json",
+      "bytes": 299,
+      "sha256": "3d968ee657d1083369f943b5a30af9c53564392ef1784639e8ce65587820e2f2"
+    },
+    {
+      "path": "data/full-cli/assessments/v0166-portless-B.json",
+      "bytes": 305,
+      "sha256": "4e8ed964c5e2ee4887003ada7a9a3d8c718cae3364a3cfa5a1da4c118c596e2f"
+    },
+    {
+      "path": "data/full-cli/assessments/v0166-wrong-port-B.json",
+      "bytes": 307,
+      "sha256": "b8626cd4af8311235e6cf1eee48e6435e645a82c0ba0211727c568b1cf8efd9a"
+    },
+    {
+      "path": "data/full-cli/assessments/v0167-exact-port-B.json",
+      "bytes": 299,
+      "sha256": "a348ea1cb010c819e7ceeb92e7aae2f69966840be283e820892f618a01b7ea24"
+    },
+    {
+      "path": "data/full-cli/assessments/v0167-portless-A.json",
+      "bytes": 305,
+      "sha256": "3079cea8ce6a9658ac454734f3d2d66135c0f8c6a3c6041a5eabe3f5aa8fc635"
+    },
+    {
+      "path": "data/full-cli/assessments/v0167-portless-B.json",
+      "bytes": 297,
+      "sha256": "6b1a7fa2d29b9e8c0870e2aef5aa4b0b5f75888b10d50f14a5da5ce5c41e4179"
+    },
+    {
+      "path": "data/full-cli/assessments/v0167-wrong-port-B.json",
+      "bytes": 307,
+      "sha256": "8c4ed2c34f5ec4a3fcd88ab520d1ebc77e4b05bd435b73e8fd989be908f1a242"
+    },
+    {
+      "path": "data/full-cli/launch/v0166-exact-port-B.json",
+      "bytes": 358,
+      "sha256": "2ab0832e4d611b22f1b68c91c3941f41ddf69e11c6f98cf609595b7c4abfd6a9"
+    },
+    {
+      "path": "data/full-cli/launch/v0166-portless-B.json",
+      "bytes": 358,
+      "sha256": "713c04c19b0ed83a4ef53faf025e0bd09de0dc974fe286567fdd780ea34ccd8a"
+    },
+    {
+      "path": "data/full-cli/launch/v0166-wrong-port-B.json",
+      "bytes": 358,
+      "sha256": "0b062fbe602ab3eac28f18d7d5905737f0194cac70c3691ff221862cfda7626c"
+    },
+    {
+      "path": "data/full-cli/launch/v0167-exact-port-B.json",
+      "bytes": 358,
+      "sha256": "7a568060023234fed75267bbabf80d3466626c5eb354a2663363a83305698df8"
+    },
+    {
+      "path": "data/full-cli/launch/v0167-portless-A.json",
+      "bytes": 358,
+      "sha256": "bff63d20151f04628bd3d133ab7c927a4fefeba466bad901aa91bb3aeef25e4b"
+    },
+    {
+      "path": "data/full-cli/launch/v0167-portless-B.json",
+      "bytes": 358,
+      "sha256": "c05c7a58699c1ee7fd7f5baf4cb23b2a80199d175991c14eef9d458917538868"
+    },
+    {
+      "path": "data/full-cli/launch/v0167-wrong-port-B.json",
+      "bytes": 358,
+      "sha256": "b123ccda23652a1b8a0b8830384bff1b370851ad950fa817d50ab9a133977fd5"
+    },
+    {
+      "path": "data/full-cli/logs/v0166-exact-port-B.stderr.log",
+      "bytes": 1071,
+      "sha256": "471a593b28f9eb5a658a7e8449a2ae374c7e4974e5bbf07f095ddf22d3443e4a"
+    },
+    {
+      "path": "data/full-cli/logs/v0166-exact-port-B.stdout.log",
+      "bytes": 144,
+      "sha256": "33c2764598811d6c80c2b16fbfd3f2e1d31cf68545c1aa0cc23ca2fe32087f4e"
+    },
+    {
+      "path": "data/full-cli/logs/v0166-portless-B.stderr.log",
+      "bytes": 3606,
+      "sha256": "2be1765c702ea12ff18eb08665a07074a1e7eb395d9c7d93563c940452f8bc51"
+    },
+    {
+      "path": "data/full-cli/logs/v0166-portless-B.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/full-cli/logs/v0166-wrong-port-B.stderr.log",
+      "bytes": 3612,
+      "sha256": "84419fc0f45d7acaf53bab950c231ede173938a29bf8783f1ba574e1125e2f54"
+    },
+    {
+      "path": "data/full-cli/logs/v0166-wrong-port-B.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/full-cli/logs/v0167-exact-port-B.stderr.log",
+      "bytes": 1053,
+      "sha256": "b20829ea2bed7ae1ecf8b266744918f7a5d5198da168733926f62284f65af700"
+    },
+    {
+      "path": "data/full-cli/logs/v0167-exact-port-B.stdout.log",
+      "bytes": 144,
+      "sha256": "33c2764598811d6c80c2b16fbfd3f2e1d31cf68545c1aa0cc23ca2fe32087f4e"
+    },
+    {
+      "path": "data/full-cli/logs/v0167-portless-A.stderr.log",
+      "bytes": 1071,
+      "sha256": "a75d4fee77a984015f4f90a2ebfcb8b38b13e94e54e52f78854c221fea2fec37"
+    },
+    {
+      "path": "data/full-cli/logs/v0167-portless-A.stdout.log",
+      "bytes": 144,
+      "sha256": "33c2764598811d6c80c2b16fbfd3f2e1d31cf68545c1aa0cc23ca2fe32087f4e"
+    },
+    {
+      "path": "data/full-cli/logs/v0167-portless-B.stderr.log",
+      "bytes": 1053,
+      "sha256": "edd16db13f28b23311ab4ee659e5e724ec2c2835195053c6616511ec38f3e705"
+    },
+    {
+      "path": "data/full-cli/logs/v0167-portless-B.stdout.log",
+      "bytes": 144,
+      "sha256": "33c2764598811d6c80c2b16fbfd3f2e1d31cf68545c1aa0cc23ca2fe32087f4e"
+    },
+    {
+      "path": "data/full-cli/logs/v0167-wrong-port-B.stderr.log",
+      "bytes": 3612,
+      "sha256": "41847b5b07426f1573b704a32fff92c7a3292233c3117f94ee0294081a625078"
+    },
+    {
+      "path": "data/full-cli/logs/v0167-wrong-port-B.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/full-cli/summary.json",
+      "bytes": 579,
+      "sha256": "ea6c901f6f3d987e68389f3c8532d473a41ed50213ff1a2a0328befa99d8721a"
+    },
+    {
+      "path": "data/full-cli/v0166-exact-port-B.json",
+      "bytes": 15557,
+      "sha256": "c1afdf52ec684dd4088e76a558d863f51f0bd0fb1fb8ed507f20e68e6191408a"
+    },
+    {
+      "path": "data/full-cli/v0166-portless-B.json",
+      "bytes": 13333,
+      "sha256": "478371bf66a170002669361529205397ce6d69ae37167bf002e61f12942a2e30"
+    },
+    {
+      "path": "data/full-cli/v0166-wrong-port-B.json",
+      "bytes": 13345,
+      "sha256": "6b1e2ad2c5d2d5fbd69afe5971205ac934088e1b469673f7fa682a26d9b5a96a"
+    },
+    {
+      "path": "data/full-cli/v0167-exact-port-B.json",
+      "bytes": 15556,
+      "sha256": "48c79a2c765f1006412cd7c835ecab3c8e0e591d7c4a2dcd1968c0a842894c0c"
+    },
+    {
+      "path": "data/full-cli/v0167-portless-A.json",
+      "bytes": 14988,
+      "sha256": "93a13e3b79639d6e9068d20333ae94d54d0b1950aa7b5d780e61d2eac3f8d408"
+    },
+    {
+      "path": "data/full-cli/v0167-portless-B.json",
+      "bytes": 15544,
+      "sha256": "c3c3527c5c4a6673df85baceaa5e356848f13fbdb0d7407be55ed51dfe33a5ad"
+    },
+    {
+      "path": "data/full-cli/v0167-wrong-port-B.json",
+      "bytes": 13345,
+      "sha256": "84d22dc84c430a7bba2f2e58bce724cf009ac4b15d8be9ac21570a36c25ecc2c"
+    },
+    {
+      "path": "data/full-cli/validation.json",
+      "bytes": 1290,
+      "sha256": "9ae8746a9658bde047839e0054ff1ade8398c04d162e05a98fd3ccfa4bc7518c"
+    },
+    {
       "path": "data/legacy-procedure/f08-current.json",
       "bytes": 9887,
       "sha256": "c96c9abe029ca86aed7fac4f41f09adb0dc466c9148f5ca877c758322624e9d8"
@@ -890,6 +1075,11 @@
       "path": "data/upstream.json",
       "bytes": 1612,
       "sha256": "5baaa469182576fc70f496c7e7b5d992d8a52bdab7f1c45c75ef558e3d3452c1"
+    },
+    {
+      "path": "FULL-CLI-ADDENDUM.md",
+      "bytes": 6987,
+      "sha256": "8a208266e869f39e7ba54d6ea1197fa89d77035601d44c54ddf5ae982dfe9f6d"
     },
     {
       "path": "procedures/components/criterion.mjs",
@@ -1292,6 +1482,76 @@
       "sha256": "1ad3aa44ca733c80bebfc0127b1274232733cb0d7b36da0ff5968ebd29cd9dbf"
     },
     {
+      "path": "procedures/full-cli/auth-destination-v2.cjs",
+      "bytes": 9789,
+      "sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c"
+    },
+    {
+      "path": "procedures/full-cli/harness.mjs",
+      "bytes": 14598,
+      "sha256": "2fa0e386bd990652d1d35468574a1accfc2b424dfe1e2d175074b255465ce377"
+    },
+    {
+      "path": "procedures/full-cli/inputs/cases.json",
+      "bytes": 1236,
+      "sha256": "f826ac602a5948bce20f656b34e9541bbf7a3ce5849c345f3543711cb14d5590"
+    },
+    {
+      "path": "procedures/full-cli/inputs/IDENTITY.json",
+      "bytes": 1111,
+      "sha256": "36484bf7b32ae6c859f9d8f926337e4375789bb1a448181e0702aa8443a90c78"
+    },
+    {
+      "path": "procedures/full-cli/inputs/policies/v0166-exact-port-B.json",
+      "bytes": 890,
+      "sha256": "b545ff47ac0dd911fc3304150c7972028a7243f11e82d70b8ab0388248c257cf"
+    },
+    {
+      "path": "procedures/full-cli/inputs/policies/v0166-portless-B.json",
+      "bytes": 888,
+      "sha256": "703c4b1fee612af0bebf2927bee4a2c05435ad9d095ad85c0109840f7d8d81b9"
+    },
+    {
+      "path": "procedures/full-cli/inputs/policies/v0166-wrong-port-B.json",
+      "bytes": 890,
+      "sha256": "0a6454630af0afec962ee0ccee0b74b6e8a93ef898eef8c1351685fe6a92f5ef"
+    },
+    {
+      "path": "procedures/full-cli/inputs/policies/v0167-exact-port-B.json",
+      "bytes": 890,
+      "sha256": "2778b4fbccd01d70081ab0ce92e0d631e505d6944ed1a7edcc6aa5348f0c5d0f"
+    },
+    {
+      "path": "procedures/full-cli/inputs/policies/v0167-portless-A.json",
+      "bytes": 888,
+      "sha256": "34677dce9b65de6db3c82494781a36eacb7b10e5290bbe69b0958b619f7ed782"
+    },
+    {
+      "path": "procedures/full-cli/inputs/policies/v0167-portless-B.json",
+      "bytes": 888,
+      "sha256": "51e73bcd754519714428ccd3bdadfb1fe6e59bf1f02c89c78a96be2d547784e8"
+    },
+    {
+      "path": "procedures/full-cli/inputs/policies/v0167-wrong-port-B.json",
+      "bytes": 890,
+      "sha256": "559e71764bcb55b9ac89422638e7fe9bef04a3372da177b890f68b5c960b129c"
+    },
+    {
+      "path": "procedures/full-cli/opener-preload.cjs",
+      "bytes": 188,
+      "sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648"
+    },
+    {
+      "path": "procedures/full-cli/qualify.mjs",
+      "bytes": 461,
+      "sha256": "775a19b99295852f657b1e899bb00c6fbe41b0bd47baea4876eb64f7f7c7d5c4"
+    },
+    {
+      "path": "procedures/full-cli/SOURCE-PROJECTION.json",
+      "bytes": 441,
+      "sha256": "dc94dfff329dc1c36e8d34261907d0bb2cbb4fd6af6392f38dd81031597089df"
+    },
+    {
       "path": "procedures/legacy/collector.py",
       "bytes": 4314,
       "sha256": "9cd5244fbc56e72a081e967b607b944a2cb8c0e5fc4e0afc675f7586508cec90"
@@ -1318,8 +1578,8 @@
     },
     {
       "path": "procedures/README.md",
-      "bytes": 6901,
-      "sha256": "f94f9f82733a4fb43891037c9ae124df6dd19fc7a9cc7b4cf0b918acee6b3c04"
+      "bytes": 8288,
+      "sha256": "c9732f662d6b551b024b1cdab15e101e5436125f37323c2f6c50e85d83059ded"
     },
     {
       "path": "procedures/runtime/0.16.7/package-lock.json",
@@ -1343,8 +1603,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15086,
-      "sha256": "146e637a5175b76e37a6bf2760efca933495f0d1e772cc9ae39805e0022ee4ac"
+      "bytes": 16508,
+      "sha256": "93764aa18b8d48e5bb5f190f672d9b0457d63fac74b24024456bc084f533bfba"
     }
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "id": "v0166-wrong-port-B",
+  "raw_harness_verdict": "PASS",
+  "channel_verdict": "INCONCLUSIVE",
+  "body_and_header_observed": true,
+  "original_query_observed": false,
+  "reason": "Direct forbidden body receipts remain FAIL; missing query observations preclude complete no-credential PASS."
+}

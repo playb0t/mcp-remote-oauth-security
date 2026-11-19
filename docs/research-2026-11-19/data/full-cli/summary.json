@@ -1,0 +1,22 @@
+{
+  "cases": 7,
+  "raw_harness_verdicts": {
+    "FAIL": 3,
+    "PASS": 4
+  },
+  "channel_qualified_verdicts": {
+    "FAIL": 3,
+    "INCONCLUSIVE": 4
+  },
+  "native_child_closes": 7,
+  "server_close_callbacks": 21,
+  "forced_stops": 0,
+  "child_exit_codes": {
+    "0": 4,
+    "1": 3
+  },
+  "unit_controls": 35,
+  "detector_controls": 21,
+  "query_observed": false,
+  "scope": "Full published CLI with preseeded synthetic registration/token files, actual HTTP metadata discovery, refresh and subsequent MCP initialize; not a new successful DCR enrollment."
+}

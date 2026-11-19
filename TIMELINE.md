@@ -49,3 +49,7 @@ WinCC OA states that notification 236904 maps to CVE-2026-51995 and no longer tr
 ## 14 November 2026 — mcp-remote 0.16.6 assessment
 
 All seven original findings remain in their recorded states and evidence classes. The eleven OAuth cases record 9 PASS / 2 FAIL, compared with 7 / 4 on 0.16.5, with two cross-origin 307 credential-body cases now stopped before the foreign recipient. Separate synthetic legacy-cache observations and retained fixture/postcondition errors accompany the series. Paired F-11 transport checks observe no Bearer transfer on 0.1.38 or 0.16.6; the F-08 full-CLI repeat reaches the inert recorder for internal HTTP destinations and records earlier SDK scheme rejection. [Results, redacted traces and limits](docs/research-2026-11-14/README.md).
+
+## 19 November 2026 — full CLI follow-up
+
+The [0.16.7 full-CLI addendum](docs/research-2026-11-19/FULL-CLI-ADDENDUM.md) records seven cases with actual HTTP discovery and saved-registration reuse. Portless 0.16.7 sends matched synthetic issuer-A client secret and refresh token to B and returns MCP initialize; portless 0.16.6 removes the registration and reaches controlled DCR refusal. Exact-port cases reach B on both versions. Original raw 3 FAIL / 4 PASS are retained; absent query-string observations give a channel-qualified 3 FAIL / 4 INCONCLUSIVE. This is additional local evidence and does not change official CVE ranges.

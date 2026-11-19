@@ -91,3 +91,11 @@ Also invoke registration with wrong-port and exact-port for each version, using 
 ## Projection provenance
 
 SOURCE-PROJECTIONS.json binds source and projected procedure hashes. CONFIGURATION.diff records the configuration and fresh-canary adaptations. Original unredacted observations are retained locally. Syntax checks are recorded in SYNTAX-CHECKS.json. No target measurement was rerun during packaging. New reproduction outputs can contain freshly generated values and local paths; project captured values to <redacted> before sharing them.
+
+## Full CLI follow-up
+
+`full-cli/harness.mjs` is a portable configuration projection of the recorded seven-case full-CLI procedure. Copy procedures to an isolated writable path without spaces. Supply verified 0.16.6/0.16.7 runtime directories (each containing dist/proxy.js, its bundle and the retained dependency graph), and compile the existing legacy/opener-recorder.rs into the dedicated inert recorder layout.
+
+Set `MCP_CLI_OUTPUT` to a fresh absent absolute directory, `MCP_CLI_RUNTIME_0166` and `MCP_CLI_RUNTIME_0167` to those version roots, and `MCP_FAKE_SYSTEMROOT` to the recorder root. Run `node full-cli/harness.mjs run` with Node 24.20.0. Cases and predeclared receiver policies live under full-cli/inputs. Run cases sequentially with their declared free loopback ports. Generated cache/state contains fresh synthetic values; apply the redacted public projection before sharing it.
+
+The harness preserves its historical query omission and raw criterion and separately emits `channel_assessment`. For retained public results, `node full-cli/qualify.mjs <saved-result.json>` emits the channel-qualified assessment offline. Query strings cannot be reconstructed from these data. Full-CLI portable copies were syntax-checked during packaging; the target was not rerun. DCR in removal controls is deliberately refused; successful new enrollment is outside the evidence.

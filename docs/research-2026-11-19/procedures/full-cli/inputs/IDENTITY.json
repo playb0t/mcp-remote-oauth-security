@@ -1,0 +1,21 @@
+{
+  "node_sha256": "5c976096e04e5c2c1f091938926234cc9fbebfe9787ddd149351b3b0ecc707b5",
+  "versions": {
+    "0.16.6": {
+      "runtime": "<runtime-0.16.6>",
+      "chunk": "chunk-MKB2ICYW.js",
+      "bundle_sha256": "8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638",
+      "proxy_sha256": "e8b0fdaedfb3655714b4ad7f6c95790224059e22765ce854ea057f8c7225b619",
+      "archive_sha256": "9b701b6522d3a513db99eeb7fc4f04cb261fbb08487645209482eef4408a529e",
+      "dist_integrity": "sha512-QqlBqut/oeDUFwrB/Igs5vGikWSn6h5iM+7TCmiTGJAIuS3OJjzThWGjKLLtAz+NnLozvs2c2wGDkAXpzHepqw=="
+    },
+    "0.16.7": {
+      "runtime": "<runtime-0.16.7>",
+      "chunk": "chunk-M3H22C2S.js",
+      "bundle_sha256": "f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4",
+      "proxy_sha256": "ac8b8bebcdd8a45c7712853632ea2ef7cece59bb882bf72dc708260483e4a6e5",
+      "archive_sha256": "5886c7cabf92199e4dfe9aa0f7cc5518d16e7907dc4b3bfcd7882874f9934582",
+      "dist_integrity": "sha512-mKYcD/mkD5yGlyc2fwU7zFkgGRxzEzBplPcLhoykgaqnQxW/IVC4ol6VHEqIhJkKDdmSNToI9MXiOXCsrsTjxA=="
+    }
+  }
+}

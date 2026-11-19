@@ -1,0 +1,10 @@
+{
+  "source_sha256": "e2c77f4a0c3ab0fb48577d87b5b3e0a4d94a5b140e9899616518ee5dc5596678",
+  "output_sha256": "2fa0e386bd990652d1d35468574a1accfc2b424dfe1e2d175074b255465ce377",
+  "configuration_changes": [
+    "External fresh output/runtime/recorder paths",
+    "Public inputs use neutral provenance",
+    "Added separate channel_assessment; original raw criterion/events and query omission retained"
+  ],
+  "target_rerun": false
+}

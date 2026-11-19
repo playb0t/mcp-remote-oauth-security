@@ -1,0 +1,47 @@
+{
+  "schema": "mcp-portless-full-cli-validation/1",
+  "case_id": "mcp-portless-full-cli-20261119",
+  "input_hashes_match": true,
+  "runtime_files_checked": 1796,
+  "runtime_hash_mismatches": [],
+  "unit_controls": {
+    "count": 35,
+    "all_passed": true
+  },
+  "detector_controls": {
+    "count": 21,
+    "verdicts": {
+      "INCONCLUSIVE": 7,
+      "FAIL": 7,
+      "PASS": 7
+    },
+    "expected_dispositions_match": true
+  },
+  "target_runs": {
+    "count": 7,
+    "raw_harness_verdicts": {
+      "PASS": 4,
+      "FAIL": 3
+    },
+    "protocol_normalized_verdicts": {
+      "INCONCLUSIVE": 4,
+      "FAIL": 3
+    },
+    "completed": 7,
+    "forced_stops": 0,
+    "natural_child_exit_codes": {
+      "1": 3,
+      "0": 4
+    },
+    "server_close_callbacks": 21,
+    "callback_port_refused_after_each": true,
+    "post_run_owned_processes": 0,
+    "post_run_predeclared_listeners": 0
+  },
+  "query_coverage": {
+    "target_queries_observed": false,
+    "reason": "The target observer reconstructs request address as origin+pathname and discards q.url; normalization sets query_observed=false. No-receipt target rows remain INCONCLUSIVE."
+  },
+  "target_execution_repeated_during_reconstruction": false,
+  "outer_harness_command_exit": 0
+}

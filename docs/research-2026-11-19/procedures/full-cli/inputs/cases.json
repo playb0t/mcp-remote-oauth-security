@@ -1,0 +1,58 @@
+[
+  {
+    "id": "v0166-portless-B",
+    "version": "0.16.6",
+    "variant": "portless",
+    "selectB": true,
+    "portBase": 25100,
+    "expected_retained": false
+  },
+  {
+    "id": "v0166-wrong-port-B",
+    "version": "0.16.6",
+    "variant": "wrong-port",
+    "selectB": true,
+    "portBase": 25103,
+    "expected_retained": false
+  },
+  {
+    "id": "v0166-exact-port-B",
+    "version": "0.16.6",
+    "variant": "exact-port",
+    "selectB": true,
+    "portBase": 25106,
+    "expected_retained": true
+  },
+  {
+    "id": "v0167-portless-B",
+    "version": "0.16.7",
+    "variant": "portless",
+    "selectB": true,
+    "portBase": 25109,
+    "expected_retained": true
+  },
+  {
+    "id": "v0167-wrong-port-B",
+    "version": "0.16.7",
+    "variant": "wrong-port",
+    "selectB": true,
+    "portBase": 25112,
+    "expected_retained": false
+  },
+  {
+    "id": "v0167-exact-port-B",
+    "version": "0.16.7",
+    "variant": "exact-port",
+    "selectB": true,
+    "portBase": 25115,
+    "expected_retained": true
+  },
+  {
+    "id": "v0167-portless-A",
+    "version": "0.16.7",
+    "variant": "portless",
+    "selectB": false,
+    "portBase": 25118,
+    "expected_retained": true
+  }
+]

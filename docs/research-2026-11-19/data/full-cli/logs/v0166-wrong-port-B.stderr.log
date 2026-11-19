@@ -1,0 +1,54 @@
+[32288] Using transport strategy: http-only
+[32288] Using callback hostname: 127.0.0.1
+[32288] Using auth callback timeout: 3 seconds
+[32288] Using specified callback port: 18001
+[32288] Cached client registration is for http://127.0.0.1:18002/oauth/callback but this session will use http://127.0.0.1:18001/oauth/callback. Deleting it so the client re-registers.
+[32288] Discovering OAuth server configuration...
+[32288] Discovered authorization server: http://127.0.0.1:25104
+[32288] [32288] Connecting to remote server: http://127.0.0.1:25105/mcp
+[32288] Using transport strategy: http-only
+[32288] Proactive token refresh failed, falling back to the stored token
+[32288] Connection error: RegistrationRejectedError: Dynamic Client Registration rejected (HTTP 400): {"error":"invalid_client_metadata","error_description":"controlled terminal DCR refusal; no new client issued"}
+    at registerClient (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:33730:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async authInternal (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:33325:12)
+    at async auth (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:37373:15) {
+  status: 400,
+  body: '{"error":"invalid_client_metadata","error_description":"controlled terminal DCR refusal; no new client issued"}',
+  submittedMetadata: {
+    redirect_uris: [ 'http://127.0.0.1:18001/oauth/callback' ],
+    token_endpoint_auth_method: 'client_secret_post',
+    grant_types: [ 'authorization_code', 'refresh_token' ],
+    response_types: [ 'code' ],
+    client_name: 'MCP CLI Proxy',
+    client_uri: 'https://github.com/modelcontextprotocol/mcp-cli',
+    software_id: '2e6dc280-f3c3-4e01-99a7-8181dbd1d23d',
+    software_version: '0.16.6',
+    scope: 'openid email profile',
+    application_type: 'native'
+  }
+}
+[32288] Fatal error: RegistrationRejectedError: Dynamic Client Registration rejected (HTTP 400): {"error":"invalid_client_metadata","error_description":"controlled terminal DCR refusal; no new client issued"}
+    at registerClient (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:33730:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async authInternal (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:33325:12)
+    at async auth (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<full-cli-case>/runtime/0.16.6/dist/chunk-MKB2ICYW.js:37373:15) {
+  status: 400,
+  body: '{"error":"invalid_client_metadata","error_description":"controlled terminal DCR refusal; no new client issued"}',
+  submittedMetadata: {
+    redirect_uris: [ 'http://127.0.0.1:18001/oauth/callback' ],
+    token_endpoint_auth_method: 'client_secret_post',
+    grant_types: [ 'authorization_code', 'refresh_token' ],
+    response_types: [ 'code' ],
+    client_name: 'MCP CLI Proxy',
+    client_uri: 'https://github.com/modelcontextprotocol/mcp-cli',
+    software_id: '2e6dc280-f3c3-4e01-99a7-8181dbd1d23d',
+    software_version: '0.16.6',
+    scope: 'openid email profile',
+    application_type: 'native'
+  }
+}

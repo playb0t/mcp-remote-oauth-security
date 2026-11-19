@@ -2,7 +2,7 @@
 
 All seven original findings remain in their recorded states and evidence classes on mcp-remote 0.16.7, measured on 19 November 2026. The eleven credential-destination scenarios record 9 PASS / 2 FAIL / 0 INCONCLUSIVE; those counts and the three cache-series counts match 0.16.6. The release changes cache behavior in two places. One extends the old-cache path recorded on 14 November: a saved client registration with a portless loopback callback is removed by 0.16.6 but retained by 0.16.7, and in the component control the second authorization server receives the client secret and refresh token assigned to the first.
 
-Research by **Alex Gercog (playb0t)**. F-04 and F-11 remain corrected hardening records. No cross-origin Bearer transfer was observed in either F-11 repeat. The portless control calls the published parser and provider with second-server metadata supplied directly; its boundary is detailed below. This is a local Windows/loopback assessment, with official CVE ranges unchanged by these measurements.
+Research by **Alex Gercog (playb0t)**. F-04 and F-11 remain corrected hardening records. No cross-origin Bearer transfer was observed in either F-11 repeat. The initial portless control calls the published parser and provider with second-server metadata supplied directly; its boundary is detailed below. A separate [full-CLI follow-up](FULL-CLI-ADDENDUM.md) now records actual discovery, matched refresh credentials at B and a returned MCP initialize result, with an explicit query-observation correction. This is a local Windows/loopback assessment, with official CVE ranges unchanged by these measurements.
 
 ## Upstream changes
 
@@ -96,6 +96,12 @@ Each fixture seeds a dynamic `client_info` record and expired tokens naming issu
 
 This control executes **parser to provider**. Discovery, dynamic client registration and the full CLI were not executed in this control. Only `127.0.0.1` was measured among loopback names. Removal of the registration stops the later path before the refresh recipient; the empty B trace in those rows is not evidence of an issuer-binding check. The retained portless registration in 0.16.7 extends the observed old-cache path, as the exact-port and `cache-r3` controls show. Each of the six registration groups records two successful server-close callbacks. [All eight additional groups](data/cache-changes/) retain their original checks and errors.
 
+## Full CLI follow-up and query qualification
+
+The [same-day addendum](FULL-CLI-ADDENDUM.md) records seven full published CLI cases. Portless 0.16.7 follows actual MCP401/PRM/AS discovery to B, sends matched issuer-A client secret and refresh token there, persists the returned access token and completes initialize. Exact-port controls reach B on both versions; portless 0.16.6 and wrong-port controls remove the registration and reach a controlled DCR refusal. A same-issuer-A control completes permitted refresh.
+
+The new full-CLI observer omits original query strings. Its original 3 FAIL / 4 PASS are retained, while the channel-qualified assessment is 3 FAIL / 4 INCONCLUSIVE. Positive forbidden body receipts remain directly observed; no-receipt cases do not prove absence in unrecorded query fields. This is separate from the original eleven-case/cache-series counts above. [Data](data/full-cli/) and [qualification details](FULL-CLI-ADDENDUM.md#query-observation-correction).
+
 ## Supply, redaction and reproduction
 
 The [official 0.16.7 archive](https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.16.7.tgz) has SHA-256 `5886c7cabf92199e4dfe9aa0f7cc5518d16e7907dc4b3bfcd7882874f9934582`; SHA-512 matches the saved npm registry integrity. Bundle `chunk-M3H22C2S.js` has SHA-256 `f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4`. [Acquisition](data/acquisition.json), [runtime identity](data/runtime-identity.json), [manifest](MANIFEST.json).
@@ -110,6 +116,6 @@ The original internal environment-variable name is replaced consistently with ne
 
 ## Not verified here
 
-Production/cloud endpoints, TLS/DNS/rebinding, real accounts, cryptographic issuer/audience validation, actual browser navigation, practical namespace takeover, cross-user filesystem isolation, other grant/transport configurations and full reconnect lifetimes are outside these measurements. F-09 same-principal reads do not establish ACL bypass. The portless control does not establish a complete discovery/DCR/CLI path, and `localhost`, `[::1]` and other callback paths were not measured.
+Production/cloud endpoints, TLS/DNS/rebinding, real accounts, cryptographic issuer/audience validation, actual browser navigation, practical namespace takeover, cross-user filesystem isolation, other grant/transport configurations and full reconnect lifetimes are outside these measurements. F-09 same-principal reads do not establish ACL bypass. The initial parser/provider control alone does not establish a full client path. The separate full-CLI follow-up covers actual discovery, reuse, refresh and initialize with a preseeded registration; successful new DCR enrollment remains unmeasured. `localhost`, `[::1]` and other callback paths were not measured. Its original URL query strings were not retained.
 
 The original F-11 helper suppresses transport-close errors and does not retain the typed server-close callback error. Its absence result concerns the recorded startup/redirect/endpoint window. The component F-08 recorder's detached child-close callback was not separately captured. F-08 planned SIGTERM and diagnostic-predicate mismatch, initial/cache-r2 fixture defects and their incomplete outcomes remain explicit. These observations do not alter official CVE descriptions, ranges or scores. No current CVE-registry status or upstream deployment was measured in this pass.

@@ -1,0 +1,17 @@
+{
+  "executable": "<node-24.20.0>",
+  "argv": [
+    "<runtime-0.16.7>/dist/proxy.js",
+    "http://127.0.0.1:25111/mcp",
+    "18001",
+    "--host",
+    "127.0.0.1",
+    "--transport",
+    "http-only",
+    "--auth-timeout",
+    "3"
+  ],
+  "metadata_injected": false,
+  "target_source_modified": false,
+  "policy_recorded_before_spawn": true
+}
