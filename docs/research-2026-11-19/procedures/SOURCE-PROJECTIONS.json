@@ -1,0 +1,593 @@
+{
+  "files": [
+    {
+      "path": "procedures/credential-v2/initial/auth-destination-v2.cjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/auth-destination-v2.cjs",
+      "source_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/cache-child.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/cache-child.mjs",
+      "source_sha256": "df204e661832aeb6f555588618baba8a41b49f0710f1cdac39134eb04eac182d",
+      "sha256": "df204e661832aeb6f555588618baba8a41b49f0710f1cdac39134eb04eac182d",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/detector-controls.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/detector-controls.mjs",
+      "source_sha256": "d95df9bba7fb10eb61b9662e8ae9c3c5df2ef21e38bd62dd88635af1b55184b3",
+      "sha256": "a9c0029a92bcb6cc4e4aa28d53b6529640b68e739bb3d22e46c5d038a40ae8da",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/driver.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/driver.mjs",
+      "source_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/harness-v2.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/harness-v2.mjs",
+      "source_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
+      "sha256": "3f0371614be117d25a3f3bc25d47459e8caae10ee1c1964a2c988572f2af7980",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/cases.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/cases.json",
+      "source_sha256": "2d601d0c56327f61179234c8a08f14aecfe6d0c79f5ebb54e332091cc96aab09",
+      "sha256": "2d601d0c56327f61179234c8a08f14aecfe6d0c79f5ebb54e332091cc96aab09",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/cache-expired-bound-owner-A.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/cache-expired-bound-owner-A.json",
+      "source_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/cache-expired-legacy-noissuer.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/cache-expired-legacy-noissuer.json",
+      "source_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/cache-expired-same-issuer-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/cache-expired-same-issuer-control.json",
+      "source_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/cache-static-old-sameclient.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/cache-static-old-sameclient.json",
+      "source_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/cache-static-otherclient-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/cache-static-otherclient-control.json",
+      "source_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/cache-valid-legacy-noissuer.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/cache-valid-legacy-noissuer.json",
+      "source_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/device-code-body307-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/device-code-body307-basic.json",
+      "source_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/expected-token-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/expected-token-basic.json",
+      "source_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/explicit-token-endpoint-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/explicit-token-endpoint-control.json",
+      "source_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/foreign-issuer-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/foreign-issuer-basic.json",
+      "source_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/foreign-issuer-post.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/foreign-issuer-post.json",
+      "source_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/redirect-basic-header-stripped.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/redirect-basic-header-stripped.json",
+      "source_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/redirect-post302-no-body.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/redirect-post302-no-body.json",
+      "source_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/redirect-secret-post307.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/redirect-secret-post307.json",
+      "source_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/resource-bearer-legitimate.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/resource-bearer-legitimate.json",
+      "source_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/same-origin-basic307.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/same-origin-basic307.json",
+      "source_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/SDK-issuer-block.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/SDK-issuer-block.json",
+      "source_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/inputs/policies/SDK-redirect-block.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/inputs/policies/SDK-redirect-block.json",
+      "source_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/initial/test-criterion-v2.cjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/initial/test-criterion-v2.cjs",
+      "source_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/auth-destination-v2.cjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/auth-destination-v2.cjs",
+      "source_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/cache-child.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/cache-child.mjs",
+      "source_sha256": "6f380688af578c62c780ca024431752be39d27d478cce5ba04d9360a28eb66ee",
+      "sha256": "6f380688af578c62c780ca024431752be39d27d478cce5ba04d9360a28eb66ee",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/detector-controls.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/detector-controls.mjs",
+      "source_sha256": "d95df9bba7fb10eb61b9662e8ae9c3c5df2ef21e38bd62dd88635af1b55184b3",
+      "sha256": "a9c0029a92bcb6cc4e4aa28d53b6529640b68e739bb3d22e46c5d038a40ae8da",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/driver.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/driver.mjs",
+      "source_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/harness-v2.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/harness-v2.mjs",
+      "source_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
+      "sha256": "3f0371614be117d25a3f3bc25d47459e8caae10ee1c1964a2c988572f2af7980",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/cases.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/cases.json",
+      "source_sha256": "9f6dc393bcdad0589da2194f864d0f21d3c92558d30d770727c2d421d9ac2a92",
+      "sha256": "9f6dc393bcdad0589da2194f864d0f21d3c92558d30d770727c2d421d9ac2a92",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/cache-expired-bound-owner-A.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/cache-expired-bound-owner-A.json",
+      "source_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/cache-expired-legacy-noissuer.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/cache-expired-legacy-noissuer.json",
+      "source_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/cache-expired-same-issuer-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/cache-expired-same-issuer-control.json",
+      "source_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/cache-static-old-sameclient.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/cache-static-old-sameclient.json",
+      "source_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/cache-static-otherclient-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/cache-static-otherclient-control.json",
+      "source_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/cache-valid-legacy-noissuer.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/cache-valid-legacy-noissuer.json",
+      "source_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/device-code-body307-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/device-code-body307-basic.json",
+      "source_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/expected-token-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/expected-token-basic.json",
+      "source_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/explicit-token-endpoint-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/explicit-token-endpoint-control.json",
+      "source_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/foreign-issuer-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/foreign-issuer-basic.json",
+      "source_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/foreign-issuer-post.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/foreign-issuer-post.json",
+      "source_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/redirect-basic-header-stripped.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/redirect-basic-header-stripped.json",
+      "source_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/redirect-post302-no-body.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/redirect-post302-no-body.json",
+      "source_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/redirect-secret-post307.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/redirect-secret-post307.json",
+      "source_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/resource-bearer-legitimate.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/resource-bearer-legitimate.json",
+      "source_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/same-origin-basic307.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/same-origin-basic307.json",
+      "source_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/SDK-issuer-block.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/SDK-issuer-block.json",
+      "source_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/inputs/policies/SDK-redirect-block.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/inputs/policies/SDK-redirect-block.json",
+      "source_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/test-criterion-v2.cjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r2/test-criterion-v2.cjs",
+      "source_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/auth-destination-v2.cjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/auth-destination-v2.cjs",
+      "source_sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "sha256": "7b049392d7b2fea5d9bd554982dc4eb2ec9289e47841c1747ea2258074281d0c",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/cache-child.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/cache-child.mjs",
+      "source_sha256": "6f380688af578c62c780ca024431752be39d27d478cce5ba04d9360a28eb66ee",
+      "sha256": "6f380688af578c62c780ca024431752be39d27d478cce5ba04d9360a28eb66ee",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/detector-controls.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/detector-controls.mjs",
+      "source_sha256": "d95df9bba7fb10eb61b9662e8ae9c3c5df2ef21e38bd62dd88635af1b55184b3",
+      "sha256": "a9c0029a92bcb6cc4e4aa28d53b6529640b68e739bb3d22e46c5d038a40ae8da",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/driver.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/driver.mjs",
+      "source_sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "sha256": "dca6d44cf39c05fe5dba0162efa5250d529bc20111862a8d664f06fcfd0fdf27",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/harness-v2.mjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/harness-v2.mjs",
+      "source_sha256": "e1f575eb4a205bc9322874a36b297ec44a37a4324946caf81f57fc19bebb14af",
+      "sha256": "3f0371614be117d25a3f3bc25d47459e8caae10ee1c1964a2c988572f2af7980",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/cases.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/cases.json",
+      "source_sha256": "10fdcab9f2078c0162f225262ef3a0dd1c744c15e7c54fb2eea94230d6ce5f79",
+      "sha256": "10fdcab9f2078c0162f225262ef3a0dd1c744c15e7c54fb2eea94230d6ce5f79",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/cache-expired-bound-owner-A.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/cache-expired-bound-owner-A.json",
+      "source_sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "sha256": "1704d3d41fb20b7a04dea7f6eba2224abe856864ce28d36568b7c8159d2b989f",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/cache-expired-legacy-noissuer.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/cache-expired-legacy-noissuer.json",
+      "source_sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "sha256": "a0ee651b46f198d62747611ba2c6d324bf57bc0d16ca8a74dc305387127ce495",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/cache-expired-same-issuer-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/cache-expired-same-issuer-control.json",
+      "source_sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "sha256": "ca871938a5274578a8a2b99674134c2dbb4377f6f26368c104174f62e22c5e12",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/cache-static-old-sameclient.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/cache-static-old-sameclient.json",
+      "source_sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "sha256": "a1bfddbc46086ed949f44b35c73922b53afd6e622dac5a74b94fa59138ca71fe",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/cache-static-otherclient-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/cache-static-otherclient-control.json",
+      "source_sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "sha256": "5c7fc1ac8c7dd01d4e8b1d65020dcec7869f949a09a7950ce315a64c096a0789",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/cache-valid-legacy-noissuer.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/cache-valid-legacy-noissuer.json",
+      "source_sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "sha256": "316c42816c4d4d2f182bddd5aa55ba9a9dcdb879fe91c7b307d46c5c945d03e0",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/device-code-body307-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/device-code-body307-basic.json",
+      "source_sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "sha256": "c031659df5a0ec9ff9783eb982efab3c16ae08c016862c9308386960d09a9d36",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/expected-token-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/expected-token-basic.json",
+      "source_sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "sha256": "95fd817d8d083e5071e3216456e36769e0cd22fe6ec26d0b9a15853315f5b342",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/explicit-token-endpoint-control.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/explicit-token-endpoint-control.json",
+      "source_sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "sha256": "0c53df2604b86b280e35aaf9ceb968e1869231dfd0bdaf3b58cf9fc79d1c7d1c",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/foreign-issuer-basic.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/foreign-issuer-basic.json",
+      "source_sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "sha256": "45d7f4bc716c5db3b885994d961303659a842c64cb473601e4d201f13b6c6fd9",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/foreign-issuer-post.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/foreign-issuer-post.json",
+      "source_sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "sha256": "15b574a691a86f6f3f9092c4cd57ec49a1e4566aab247bd2746fdec37f58d5d5",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/redirect-basic-header-stripped.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/redirect-basic-header-stripped.json",
+      "source_sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "sha256": "e25e87eef166a2090b2ff1143ac09810da469d08aa95ae517f40e25fc8446980",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/redirect-post302-no-body.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/redirect-post302-no-body.json",
+      "source_sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "sha256": "d67f5cba0047816f71f310d6cefcd837a1e57c415a157a3473138c39d0dc90cb",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/redirect-secret-post307.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/redirect-secret-post307.json",
+      "source_sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "sha256": "f2a26861e7370b13a64d575e481e5416e48bdad648c4a848b042e1f6c625b45e",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/resource-bearer-legitimate.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/resource-bearer-legitimate.json",
+      "source_sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "sha256": "72737e445119c54f0fa6036900369a10db20b44c842c04617be1baae48fd4ec4",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/same-origin-basic307.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/same-origin-basic307.json",
+      "source_sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "sha256": "3f8e8911cf32f71d134321862fddf1420669e468a08becdf78e6b8559f11e5d0",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/SDK-issuer-block.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/SDK-issuer-block.json",
+      "source_sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "sha256": "7404f385b35ad49b69b13cedb0183e7fec14464b2315414bdb400b0070ce3056",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/inputs/policies/SDK-redirect-block.json",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/inputs/policies/SDK-redirect-block.json",
+      "source_sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "sha256": "437d3ebb6698385f1972df3566d09761a29fd3ace9d2bd34e393a100b1e41140",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/test-criterion-v2.cjs",
+      "source": "prior-reviewed-public-procedures/credential-v2/cache-r3/test-criterion-v2.cjs",
+      "source_sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "sha256": "02268bdd67a7b9fdd4206889c776741d412b2064351dc16b40b73d8ccf7559d9",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/components/criterion.mjs",
+      "source": "prior-reviewed-public-procedures/components/criterion.mjs",
+      "source_sha256": "447b49b4a9b94f810575c2e4a802df3a940ffa8343a69431460789369c9f2e92",
+      "sha256": "447b49b4a9b94f810575c2e4a802df3a940ffa8343a69431460789369c9f2e92",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/components/extras.mjs",
+      "source": "prior-reviewed-public-procedures/components/extras.mjs",
+      "source_sha256": "d2fbead21949ab380c32e128f35a25ca006b1d4ff4a513a905dbcd82cd7dfd33",
+      "sha256": "cf01c89a7dfdf9127d9f15bf678c2b584d6e6ad28194eb5a82d15512659acf1c",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/components/runner.mjs",
+      "source": "prior-reviewed-public-procedures/components/runner.mjs",
+      "source_sha256": "8189d44d8743af19f5ae5f7f288408a405335c140548781f5babd8810529b030",
+      "sha256": "d199993c5eb5a0f3ac80368045b05cb2ff85066b50e0740f518e57ad0076dd6f",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/legacy/collector.py",
+      "source": "prior-reviewed-public-procedures/legacy/collector.py",
+      "source_sha256": "81244649c655d58e8ed5c8c5609fafbe4ee4a66d8aef769fed12773f9b6b84ae",
+      "sha256": "9cd5244fbc56e72a081e967b607b944a2cb8c0e5fc4e0afc675f7586508cec90",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/legacy/f08-cli.mjs",
+      "source": "prior-reviewed-public-procedures/legacy/f08-cli.mjs",
+      "source_sha256": "506c3818dc3cac82526afa9baf440b5da479b998065f4175fff5f02b0410bc74",
+      "sha256": "506c3818dc3cac82526afa9baf440b5da479b998065f4175fff5f02b0410bc74",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/legacy/f08-preload.cjs",
+      "source": "prior-reviewed-public-procedures/legacy/f08-preload.cjs",
+      "source_sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648",
+      "sha256": "97c682c99e4c376ed04caa2d1be85fe429b4482fd3cac75c8f565335bae1f648",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/legacy/f11.mjs",
+      "source": "prior-reviewed-public-procedures/legacy/f11.mjs",
+      "source_sha256": "b153ef3d3b7400a2771837ba1ad2b78cba15f8ad619c9ed0d95b84ccfe2f7c85",
+      "sha256": "c5f9ceab99875a403cb5bbdcdd0d5b7f984e4062ebdf11e23b68642034c8b6c0",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/legacy/opener-recorder.rs",
+      "source": "prior-reviewed-public-procedures/legacy/opener-recorder.rs",
+      "source_sha256": "9dd39519d2e904a0628b0712506c63e02391500c57db5091967cb3f9ed0083e4",
+      "sha256": "45985346ef9ddaf3f98e755abac2b78f54744503d900a6db67d07b6bdd445aab",
+      "changes": "Version/bundle pins, external runtime binding; legacy current-only selection and fresh generated bearer instead of fixed canary"
+    },
+    {
+      "path": "procedures/extra.mjs",
+      "source": "<retained-local-case>/extra/extra.mjs",
+      "source_sha256": "2fb77596c33bebfbd2ecd9aad79701ab783fd959cf0c7c08cba0cddbdb1dea0d",
+      "sha256": "1ad3aa44ca733c80bebfc0127b1274232733cb0d7b36da0ff5968ebd29cd9dbf",
+      "changes": "Neutral TEST_HEADER name, external runtime/output paths, fresh synthetic values, explicit Node/fresh-output prerequisites; result checks unchanged"
+    }
+  ],
+  "target_rerun": false
+}

@@ -1,0 +1,1 @@
+{"id":"f11","assessment":"PASS","completed":true,"checks":[{"id":"redirect-cross","passed":true},{"id":"redirect-same","passed":true},{"id":"endpoint-cross","passed":true},{"id":"no-token","passed":true}]}

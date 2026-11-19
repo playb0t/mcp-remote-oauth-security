@@ -1,0 +1,9 @@
+{
+  "url": "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.16.7.tgz",
+  "registry_url": "https://registry.npmjs.org/mcp-remote/0.16.7",
+  "archive_sha256": "5886c7cabf92199e4dfe9aa0f7cc5518d16e7907dc4b3bfcd7882874f9934582",
+  "integrity": "sha512-mKYcD/mkD5yGlyc2fwU7zFkgGRxzEzBplPcLhoykgaqnQxW/IVC4ol6VHEqIhJkKDdmSNToI9MXiOXCsrsTjxA==",
+  "integrity_matches": true,
+  "gitHead": "aa0c219b19e9f299fba599fe14df88b14d1e21a8",
+  "acquired_utc": "2026-11-19T08:16:48.559261+00:00"
+}

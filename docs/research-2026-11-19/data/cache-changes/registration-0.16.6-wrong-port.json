@@ -1,0 +1,57 @@
+{
+  "events": [],
+  "closes": [
+    {
+      "role": "A",
+      "error": null
+    },
+    {
+      "role": "B",
+      "error": null
+    }
+  ],
+  "registration_after_parse": false,
+  "registration_after_refresh": false,
+  "tokens_returned": true,
+  "error": null,
+  "expected_survival": false,
+  "checks": [
+    {
+      "id": "registration_survival",
+      "passed": true
+    },
+    {
+      "id": "recipient_observation",
+      "passed": true
+    },
+    {
+      "id": "resource_close",
+      "passed": true
+    }
+  ],
+  "effects": [
+    {
+      "outcome": "none",
+      "property": "owner-A synthetic client secret and refresh token reached B"
+    }
+  ],
+  "completed": true,
+  "forced": false,
+  "id": "registration-0.16.6-wrong-port",
+  "measurement_context": {
+    "entry_point": "published parseCommandLineArgs then NodeOAuthClientProvider.tokens proactive refresh",
+    "variant": "registration-0.16.6-wrong-port",
+    "auth_profile": "synthetic dynamic client / same OS principal",
+    "principal": "owned fixture client",
+    "grants": "synthetic fixture only",
+    "consumer": "owned filesystem and loopback HTTP receiver",
+    "state": "expired issuer-A tokens; cached wrong-port callback registration",
+    "backend": "Windows files and loopback HTTP",
+    "platform": "win32 / Node v24.20.0",
+    "component": "mcp-remote 0.16.6",
+    "validated_field": "callback redirect URI; cached registration survival; refresh recipient",
+    "effective_resource": "selected B token endpoint"
+  },
+  "artifact_sha256": "8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638",
+  "observer_sha256": "2fb77596c33bebfbd2ecd9aad79701ab783fd959cf0c7c08cba0cddbdb1dea0d"
+}

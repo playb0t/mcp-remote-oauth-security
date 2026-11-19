@@ -1,0 +1,60 @@
+--- 0.16.6/chunk-MKB2ICYW.js
+
++++ 0.16.7/chunk-M3H22C2S.js
+
+@@ -37509,7 +37509,7 @@
+
+ };
+ 
+ // package.json
+-var version2 = "0.16.6";
++var version2 = "0.16.7";
+ 
+ // src/lib/protocol-era.ts
+ var FIRST_MODERN_PROTOCOL_VERSION2 = "2026-07-28";
+@@ -39640,9 +39640,12 @@
+
+ function buildRedirectUrl(host, port, callbackPath = DEFAULT_CALLBACK_PATH) {
+   return `http://${host}:${port}${callbackPath}`;
+ }
+-async function invalidateMismatchedClientRegistration(serverUrlHash, redirectUrl) {
++var LOOPBACK_CALLBACK_HOSTS = /* @__PURE__ */ new Set(["localhost", "127.0.0.1", "[::1]"]);
++async function invalidateMismatchedClientRegistration(serverUrlHash, host, port, callbackPath) {
++  const redirectUrl = buildRedirectUrl(host, port, callbackPath);
++  const portlessRedirectUrl = LOOPBACK_CALLBACK_HOSTS.has(host) ? `http://${host}${callbackPath}` : void 0;
+   const clientInfo = await readJsonFile(serverUrlHash, "client_info.json", OAuthClientInformationFullSchema);
+-  if (!clientInfo || clientInfo.redirect_uris.includes(redirectUrl)) {
++  if (!clientInfo || clientInfo.redirect_uris.some((uri) => uri === redirectUrl || uri === portlessRedirectUrl)) {
+     return;
+   }
+   log(
+@@ -40025,6 +40028,12 @@
+
+     log(usage);
+     process.exit(1);
+   }
++  if (Object.keys(headers).length > 0) {
++    log(`Using custom headers: ${Object.keys(headers).join(", ")}`);
++  }
++  for (const [key, value] of Object.entries(headers)) {
++    headers[key] = substituteEnvVars(value, `header '${key}'`);
++  }
+   const serverUrlHash = getServerUrlHash(serverUrl, authorizeResource, headers, authorizeParams, clientMetadataUrl, tokenEndpoint);
+   global.currentServerUrlHash = serverUrlHash;
+   debugLog(`Starting mcp-remote with server URL: ${serverUrl}`);
+@@ -40038,13 +40047,7 @@
+
+     callbackPort = defaultPort;
+   }
+   if (!staticOAuthClientInfo) {
+-    await invalidateMismatchedClientRegistration(serverUrlHash, buildRedirectUrl(host, callbackPort, callbackPath));
+-  }
+-  if (Object.keys(headers).length > 0) {
+-    log(`Using custom headers: ${Object.keys(headers).join(", ")}`);
+-  }
+-  for (const [key, value] of Object.entries(headers)) {
+-    headers[key] = substituteEnvVars(value, `header '${key}'`);
++    await invalidateMismatchedClientRegistration(serverUrlHash, host, callbackPort, callbackPath);
+   }
+   return {
+     serverUrl,

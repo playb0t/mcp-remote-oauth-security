@@ -1,0 +1,123 @@
+{
+  "id": "original-f11",
+  "rows": [
+    {
+      "version": "0.16.7",
+      "mode": "redirect-cross",
+      "resource_origin": "http://127.0.0.1:53592",
+      "canary_origin": "http://127.0.0.1:53591",
+      "result": "rejected",
+      "error": "Error: SSE error: Redirect to http://127.0.0.1:53591/sse not followed; use that URL as the endpoint if it is the intended server (redirectPolicy: 'same-origin')",
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.7",
+      "mode": "redirect-same",
+      "resource_origin": "http://127.0.0.1:53595",
+      "canary_origin": "http://127.0.0.1:53594",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        },
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/stream",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.7",
+      "mode": "endpoint-cross",
+      "resource_origin": "http://127.0.0.1:53599",
+      "canary_origin": "http://127.0.0.1:53598",
+      "result": "rejected",
+      "error": "Error: Endpoint origin does not match connection origin: http://127.0.0.1:53598",
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": true,
+          "synthetic_bearer_received": true
+        }
+      ]
+    },
+    {
+      "version": "0.16.7",
+      "mode": "no-token",
+      "resource_origin": "http://127.0.0.1:53603",
+      "canary_origin": "http://127.0.0.1:53602",
+      "result": "connected",
+      "error": null,
+      "events": [
+        {
+          "role": "resource",
+          "method": "GET",
+          "path": "/sse",
+          "authorization_present": false,
+          "synthetic_bearer_received": false
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "redirect-cross",
+      "passed": true
+    },
+    {
+      "id": "redirect-same",
+      "passed": true
+    },
+    {
+      "id": "endpoint-cross",
+      "passed": true
+    },
+    {
+      "id": "no-token",
+      "passed": true
+    }
+  ],
+  "effects": [
+    {
+      "outcome": "none",
+      "property": "cross-origin bearer receipt"
+    }
+  ],
+  "completed": true,
+  "forced": false,
+  "procedure_exit": 0,
+  "measurement_context": {
+    "entry_point": "original F11 connectToRemoteServer procedure",
+    "variant": "original-f11",
+    "validated_field": "SSE token origin or full CLI browser destination",
+    "effective_resource": "owned HTTP receivers and inert recorder",
+    "auth_profile": "synthetic provider tokens",
+    "principal": "test process under current OS principal",
+    "grants": "own fixture only",
+    "consumer": "local SSE servers or inert recorder",
+    "state": "fresh isolated fixture",
+    "component": "mcp-remote 0.16.7",
+    "backend": "Windows local filesystem and loopback HTTP",
+    "platform": "win32 / Node v24.20.0"
+  },
+  "artifact_sha256": "f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4",
+  "observer_sha256": "b153ef3d3b7400a2771837ba1ad2b78cba15f8ad619c9ed0d95b84ccfe2f7c85"
+}

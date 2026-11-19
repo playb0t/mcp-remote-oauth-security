@@ -1,0 +1,27 @@
+[25144] Using transport strategy: http-only
+[25144] Using static OAuth client information from file: <local-case>\v2\runtime-results\runs\expected-token-basic\state-Txb73L\static.json
+[25144] Using the OAuth client_credentials grant; no browser will be opened and no user will be asked
+[25144] Using callback port derived from the server URL: 34597
+[25144] Discovering OAuth server configuration...
+[25144] Discovered authorization server: http://127.0.0.1:27100
+[25144] [25144] Connecting to remote server: http://127.0.0.1:27102/mcp
+[25144] Using transport strategy: http-only
+[25144] Requesting a token from http://127.0.0.1:27100 with the client_credentials grant
+[25144] Connection error: Error: The client_credentials token request failed (HTTP 400): fixture terminal refusal
+    at authorizeWithClientCredentials (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:40367:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async NodeOAuthClientProvider.authorizeWithClientCredentials (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:41581:20)
+    at async NodeOAuthClientProvider.redirectToAuthorization (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:41503:7)
+    at async authInternal (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33402:3)
+    at async auth (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:37373:15)
+[25144] Fatal error: Error: The client_credentials token request failed (HTTP 400): fixture terminal refusal
+    at authorizeWithClientCredentials (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:40367:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async NodeOAuthClientProvider.authorizeWithClientCredentials (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:41581:20)
+    at async NodeOAuthClientProvider.redirectToAuthorization (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:41503:7)
+    at async authInternal (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33402:3)
+    at async auth (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:37373:15)

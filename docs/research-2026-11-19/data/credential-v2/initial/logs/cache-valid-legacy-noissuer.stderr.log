@@ -1,0 +1,15 @@
+[10920] Error reading client_info.json: ZodError: [
+  {
+    "expected": "array",
+    "code": "invalid_type",
+    "path": [
+      "redirect_uris"
+    ],
+    "message": "Invalid input: expected array, received undefined"
+  }
+]
+    at readJsonFile (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:37818:33)
+    at async NodeOAuthClientProvider.clientInformation (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:40864:24)
+    at async NodeOAuthClientProvider.tokens (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:40954:7)
+    at async runCache (file:///<local-case>/v2/procedure/cache-child.mjs:19:14)
+    at async file:///<local-case>/v2/procedure/driver.mjs:11:67

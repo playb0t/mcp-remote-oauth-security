@@ -1,0 +1,161 @@
+{
+  "checks": [
+    {
+      "path": "procedures/components/criterion.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/components/extras.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/components/runner.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/auth-destination-v2.cjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/cache-child.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/detector-controls.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/driver.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/harness-v2.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r2/test-criterion-v2.cjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/auth-destination-v2.cjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/cache-child.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/detector-controls.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/driver.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/harness-v2.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/cache-r3/test-criterion-v2.cjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/initial/auth-destination-v2.cjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/initial/cache-child.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/initial/detector-controls.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/initial/driver.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/initial/harness-v2.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/credential-v2/initial/test-criterion-v2.cjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/extra.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/legacy/collector.py",
+      "kind": "ast.parse",
+      "exit_code": 0
+    },
+    {
+      "path": "procedures/legacy/f08-cli.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/legacy/f08-preload.cjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "procedures/legacy/f11.mjs",
+      "kind": "node --check",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "target_executed": false,
+  "scope": "Syntax only; no imports or fixture execution"
+}

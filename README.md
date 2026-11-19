@@ -8,28 +8,28 @@
 
 <p align="center">
   <strong>Five published CVE records, all scored by CISA-ADP, up to 9.8 Critical.<br>
-  In the 14 November 2026 loopback runs, published CLI <code>0.16.6</code> reaches the server-selected metadata paths of CVE-2026-51994 and CVE-2026-51995; all seven original findings remain present.</strong>
+  In the 19 November 2026 loopback runs, published CLI <code>0.16.7</code> reaches the server-selected metadata paths of CVE-2026-51994 and CVE-2026-51995; all seven original findings remain present.</strong>
 </p>
 
 <p align="center">
   <a href="#advisory-index"><img alt="CVE records" src="https://img.shields.io/badge/CVE_records-5-b91c1c"></a>
   <a href="#advisory-index"><img alt="CISA-ADP score" src="https://img.shields.io/badge/CISA--ADP-up_to_9.8_Critical-f59e0b"></a>
-  <a href="docs/research-2026-11-14/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.16.6_(14_Nov_2026)-8b5cf6"></a>
+  <a href="docs/research-2026-11-19/README.md"><img alt="Tested through" src="https://img.shields.io/badge/tested_through-0.16.7_(19_Nov_2026)-8b5cf6"></a>
   <a href="CORRECTIONS.md"><img alt="Latest release" src="https://img.shields.io/badge/release-v1.0.2-58a6ff"></a>
   <a href="https://playb0t.com"><img alt="Impact record" src="https://img.shields.io/badge/impact_record-playb0t.com-0f766e"></a>
 </p>
 
 <p align="center">
   <a href="docs/research-2026-10-09/RESEARCH_DOSSIER.md">Research dossier, 9 October 2026</a> ·
-  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> · <a href="docs/research-2026-11-03/README.md">0.15.2 / 0.16.0 follow-up, 3 November 2026</a> · <a href="docs/research-2026-11-07/README.md">0.16.3 / 0.16.4 / 0.16.5 follow-up, 7 November 2026</a> · <a href="docs/research-2026-11-14/README.md">0.16.6 assessment, 14 November 2026</a> · <a href="docs/research-2026-11-07-v2/README.md">Procedure v2 and seven-version backfill, 7 November 2026</a> ·
+  <a href="docs/research-2026-10-15/README.md">0.15.1 follow-up, 15 October 2026</a> · <a href="docs/research-2026-11-03/README.md">0.15.2 / 0.16.0 follow-up, 3 November 2026</a> · <a href="docs/research-2026-11-07/README.md">0.16.3 / 0.16.4 / 0.16.5 follow-up, 7 November 2026</a> · <a href="docs/research-2026-11-14/README.md">0.16.6 assessment, 14 November 2026</a> · <a href="docs/research-2026-11-19/README.md">0.16.7 assessment, 19 November 2026</a> · <a href="docs/research-2026-11-07-v2/README.md">Procedure v2 and seven-version backfill, 7 November 2026</a> ·
   <a href="https://github.com/playb0t/mcp-host-matrix">MCP Host Matrix, 25 October 2026</a> ·
   <a href="#advisory-index">Advisory index</a> ·
   <a href="https://playb0t.com">Impact ledger</a>
 </p>
 
-## Research update: 14 November 2026
+## Research update: 19 November 2026
 
-All seven original findings remain present in mcp-remote 0.16.6. The release constrains cross-origin credential POST redirects, while the full CLI still sends client credentials configured for one authorization server to the authorization server selected by MCP discovery. The eleven OAuth scenarios record 9 PASS / 2 FAIL, compared with 7 PASS / 4 FAIL on 0.16.5. Paired F-11 transport checks on 0.1.38 and 0.16.6 observe no cross-origin Bearer transfer; F-11 retains its corrected hardening classification. Still open: the selected discovery paths, legacy-cache credential binding and the original source/component observations remain in the states documented by the [0.16.6 results, traces and limits](docs/research-2026-11-14/README.md).
+All seven original findings remain in their recorded states and evidence classes on mcp-remote 0.16.7. The eleven credential-destination scenarios retain 9 PASS / 2 FAIL, and the initial/cache-r2/cache-r3 counts match 0.16.6, including the known fixture/postcondition errors. The release separates cache namespaces by expanded header value and retains portless loopback registrations. In a parser-to-provider control with B metadata supplied directly, the retained registration permits B to receive the client secret and refresh token assigned to A; the wrong-port control removes it on both versions. Both F-11 transport repeats observe no cross-origin Bearer transfer; F-04 and F-11 retain their hardening classifications. [Results, redacted traces and limits](docs/research-2026-11-19/README.md).
 
 ## Static-header update: 9 November 2026
 
@@ -43,7 +43,7 @@ WinCC OA revised its assessment of CVE-2026-51995, published v1.5.3 documentatio
 
 `mcp-remote` bridges stdio-only MCP clients to remote MCP servers and runs OAuth discovery on their behalf. That makes remote-server metadata a security boundary: a server-selected URL, redirect or credential destination must not become trusted because it appeared during discovery.
 
-Seven advisories document the review of the release current at disclosure, `0.1.38`: two localhost-canary reproductions, three bounded source reviews, two hardening records corrected in `v1.0.1`. The private report went to the maintainer on 17 February 2026; the public disclosure followed on 31 July after no acknowledgement; MITRE published five CVE records on 24 September 2026, and CISA-ADP scored all five. On 9 October 2026 the published `0.14.3` CLI, run in full in three local stdio scenarios, reproduced the F-01 / F-02 request path, HTTP 302 redirect included, and the discovery helpers executed in all 58 stable releases from `0.1.32` to `0.14.3`. Between the private report and 7 October 2026 npm served 19,060,907 downloads of the package. The five follow-up releases `0.16.1` to `0.16.5` do not name the five records or announce a release addressing them; the ten selected first-party helpers are unchanged in the source comparisons, and `0.16.5` was compared in source/distribution and run through the original procedure, with all three CLI attempts stopping at its unchanged assertion. Release `0.16.6` of 11 November 2026 names none of the five records; in the 14 November runs all seven original findings remain present. On 14 October 2026 the maintainer published four releases, `0.14.4` through `0.15.1`; none of them names a record. On 15 October the 9 October procedure was repeated on `0.15.1`. It recorded the same F-01 / F-02 request paths. In the full trace it also recorded a token request, carrying an Authorization header, to the authorization server named by the server's own metadata, as it does in `0.14.3` runs under the same environment.
+Seven advisories document the review of the release current at disclosure, `0.1.38`: two localhost-canary reproductions, three bounded source reviews, two hardening records corrected in `v1.0.1`. The private report went to the maintainer on 17 February 2026; the public disclosure followed on 31 July after no acknowledgement; MITRE published five CVE records on 24 September 2026, and CISA-ADP scored all five. On 9 October 2026 the published `0.14.3` CLI, run in full in three local stdio scenarios, reproduced the F-01 / F-02 request path, HTTP 302 redirect included, and the discovery helpers executed in all 58 stable releases from `0.1.32` to `0.14.3`. Between the private report and 7 October 2026 npm served 19,060,907 downloads of the package. The five follow-up releases `0.16.1` to `0.16.5` do not name the five records or announce a release addressing them; the ten selected first-party helpers are unchanged in the source comparisons, and `0.16.5` was compared in source/distribution and run through the original procedure, with all three CLI attempts stopping at its unchanged assertion. Release `0.16.6` of 11 November constrained credential-bearing grant redirects. Release `0.16.7` of 19 November names none of the five research records; in the 19 November runs all seven original findings remain in their recorded evidence classes. Its two cache changes are measured in the [0.16.7 assessment](docs/research-2026-11-19/README.md), including the separately bounded portless-registration path. On 14 October 2026 the maintainer published four releases, `0.14.4` through `0.15.1`; none of them names a record. On 15 October the 9 October procedure was repeated on `0.15.1`. It recorded the same F-01 / F-02 request paths. In the full trace it also recorded a token request, carrying an Authorization header, to the authorization server named by the server's own metadata, as it does in `0.14.3` runs under the same environment.
 
 From 7 November 2026, [procedure v2](docs/research-2026-11-07-v2/README.md) is the primary local regression procedure. It checks credentials against a predeclared issuer and receiver policy after the trace is settled, with OAuth client authentication separate from resource Bearer. The seven-version backfill preserves the original procedure and its stops, and records execution outcomes separately from credential-destination verdicts.
 
@@ -126,6 +126,8 @@ Picked up: [agent-audit-kit v0.6.18](https://github.com/sattyamjjain/agent-audit
 ## Responsible-disclosure summary
 
 The private advisory was submitted on 17 February 2026 and the findings revalidated on 3 May 2026 after no maintainer response or new release; the reviewed and revalidated commit is `02619aff36e79803d7c894e8c8ae7b34b2d11f8c` (`0.1.38`). Public disclosure on 31 July 2026 followed an extended coordination period. Since disclosure, releases `0.1.39` (21 August 2026) through `0.16.6` (11 November 2026) were published from `punkpeye/mcp-remote`, where the repository moved; the CVE records name it `geelen mcp-remote`, and the `geelen` URLs redirect. The earlier [CVE-2025-6514](https://nvd.nist.gov/vuln/detail/CVE-2025-6514) fixed command injection in the browser-launch path in `0.1.16`; this repository documents the adjacent trust-boundary findings.
+
+The latest assessed upstream release is `0.16.7`, published on 19 November 2026. Its measured states, two cache changes and unchanged evidence limits are documented in the [19 November assessment](docs/research-2026-11-19/README.md).
 
 [Full timeline](TIMELINE.md) · [Scope and version corrections](CORRECTIONS.md) · [Publication corrections and upstream routing](SECURITY.md)
 

@@ -1,0 +1,11 @@
+{
+  "name": "mcp-remote-local-reproduction",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "express": "4.22.3",
+    "open": "10.2.0",
+    "strict-url-sanitise": "0.0.1",
+    "undici": "7.30.0"
+  }
+}

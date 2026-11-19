@@ -1,0 +1,66 @@
+{
+  "events": [
+    {
+      "role": "B",
+      "method": "POST",
+      "path": "/token",
+      "client_secret_match": true,
+      "refresh_token_match": true,
+      "authorization_present": false
+    }
+  ],
+  "closes": [
+    {
+      "role": "A",
+      "error": null
+    },
+    {
+      "role": "B",
+      "error": null
+    }
+  ],
+  "registration_after_parse": true,
+  "registration_after_refresh": true,
+  "tokens_returned": true,
+  "error": null,
+  "expected_survival": true,
+  "checks": [
+    {
+      "id": "registration_survival",
+      "passed": true
+    },
+    {
+      "id": "recipient_observation",
+      "passed": true
+    },
+    {
+      "id": "resource_close",
+      "passed": true
+    }
+  ],
+  "effects": [
+    {
+      "outcome": "forbidden",
+      "property": "owner-A synthetic client secret and refresh token reached B"
+    }
+  ],
+  "completed": true,
+  "forced": false,
+  "id": "registration-0.16.7-exact-port",
+  "measurement_context": {
+    "entry_point": "published parseCommandLineArgs then NodeOAuthClientProvider.tokens proactive refresh",
+    "variant": "registration-0.16.7-exact-port",
+    "auth_profile": "synthetic dynamic client / same OS principal",
+    "principal": "owned fixture client",
+    "grants": "synthetic fixture only",
+    "consumer": "owned filesystem and loopback HTTP receiver",
+    "state": "expired issuer-A tokens; cached exact-port callback registration",
+    "backend": "Windows files and loopback HTTP",
+    "platform": "win32 / Node v24.20.0",
+    "component": "mcp-remote 0.16.7",
+    "validated_field": "callback redirect URI; cached registration survival; refresh recipient",
+    "effective_resource": "selected B token endpoint"
+  },
+  "artifact_sha256": "f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4",
+  "observer_sha256": "2fb77596c33bebfbd2ecd9aad79701ab783fd959cf0c7c08cba0cddbdb1dea0d"
+}

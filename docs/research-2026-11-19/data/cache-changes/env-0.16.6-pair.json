@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "hash": "4b9e09bb31b54ccbcac36306c05845e7",
+      "header_expanded": true,
+      "derived_from_expanded": false
+    },
+    {
+      "hash": "4b9e09bb31b54ccbcac36306c05845e7",
+      "header_expanded": true,
+      "derived_from_expanded": false
+    }
+  ],
+  "files": [
+    "4b9e09bb31b54ccbcac36306c05845e7_tokens.json"
+  ],
+  "distinct": false,
+  "checks": [
+    {
+      "id": "expanded_headers",
+      "passed": true
+    },
+    {
+      "id": "namespace_diff_expected",
+      "passed": true
+    },
+    {
+      "id": "materialized_prefix_count",
+      "passed": true
+    }
+  ],
+  "effects": [
+    {
+      "outcome": "none",
+      "property": "descriptive header expansion namespace comparison"
+    }
+  ],
+  "completed": true,
+  "forced": false,
+  "id": "env-0.16.6-pair",
+  "measurement_context": {
+    "entry_point": "published parseCommandLineArgs then NodeOAuthClientProvider.saveTokens",
+    "variant": "env-0.16.6-pair",
+    "auth_profile": "synthetic dynamic client / same OS principal",
+    "principal": "owned fixture client",
+    "grants": "synthetic fixture only",
+    "consumer": "owned filesystem and loopback HTTP receiver",
+    "state": "same header template; two synthetic environment values",
+    "backend": "Windows files and loopback HTTP",
+    "platform": "win32 / Node v24.20.0",
+    "component": "mcp-remote 0.16.6",
+    "validated_field": "resolved header value and resulting cache prefix",
+    "effective_resource": "two actual token cache file prefixes"
+  },
+  "artifact_sha256": "8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638",
+  "observer_sha256": "2fb77596c33bebfbd2ecd9aad79701ab783fd959cf0c7c08cba0cddbdb1dea0d"
+}

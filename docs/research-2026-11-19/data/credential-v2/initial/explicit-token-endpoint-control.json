@@ -1,0 +1,188 @@
+{
+  "measurement_context": {
+    "entry_point": "proxy.js initialize over stdio, HTTP OAuth leg",
+    "variant": "explicit-token-endpoint-control",
+    "state": "fresh isolated filesystem profile",
+    "auth_profile": "client_secret_basic / cli",
+    "principal": "fixture-client",
+    "grants": "synthetic fixture credentials only",
+    "consumer": "owned loopback A/B token or device endpoint",
+    "backend": "isolated temporary auth files and owned HTTP fixtures",
+    "platform": "win32 / Node v24.20.0",
+    "component": "mcp-remote 0.16.7",
+    "validated_field": "selected authorization server and credential receiver",
+    "effective_resource": "B advertised token/device endpoint"
+  },
+  "artifact_sha256": "f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4",
+  "forced_stop": false,
+  "server_close_callbacks": [
+    {
+      "role": "A",
+      "error": null
+    },
+    {
+      "role": "B",
+      "error": null
+    },
+    {
+      "role": "MCP",
+      "error": null
+    }
+  ],
+  "case": {
+    "id": "explicit-token-endpoint-control",
+    "mode": "cli",
+    "selectB": true,
+    "explicitToken": true,
+    "method": "client_secret_basic",
+    "expected": "PASS",
+    "portBase": 27151,
+    "gateProfile": "credential_destination"
+  },
+  "security": {
+    "criterion": "oauth-credential-destination-v2",
+    "verdict": "PASS",
+    "policy_id": "predeclared-explicit-token-endpoint-control",
+    "policy_sha256": "692becefd95fcfc6315e3dd58e32735f7e134792d2c79d5d120dad52170fda99",
+    "expected_issuer": "http://127.0.0.1:27151",
+    "coverage_healthy": true,
+    "coverage": {
+      "target_started": true,
+      "observation_complete": true,
+      "stimulus_observed": true
+    },
+    "unknown": [],
+    "audit": [
+      {
+        "event": 0,
+        "recipient": "http://127.0.0.1:27153/mcp",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": false,
+        "authorization_scheme": null,
+        "credential_kinds": [],
+        "expected_issuer": "http://127.0.0.1:27151",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": false,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      },
+      {
+        "event": 1,
+        "recipient": "http://127.0.0.1:27151/token",
+        "query_count": 0,
+        "sensitive_query_fields": [],
+        "method": "POST",
+        "authorization_present": true,
+        "authorization_scheme": "Basic",
+        "credential_kinds": [
+          "client_auth"
+        ],
+        "expected_issuer": "http://127.0.0.1:27151",
+        "context_id": "fixture-owner-A",
+        "context_matches_policy": true,
+        "fixture_matches": {
+          "client_auth": true,
+          "client_secret": false,
+          "refresh_token": false,
+          "device_code": false,
+          "access_token": false
+        }
+      }
+    ],
+    "violations": [],
+    "redirects": [],
+    "limits": "PASS applies only to observed credential destination rules. A cross-origin request without credentials is recorded, not called credential disclosure. Policy provenance and observer health are caller responsibilities; hash is not authority."
+  },
+  "coverage": {
+    "target_started": true,
+    "observation_complete": true,
+    "stimulus_observed": true
+  },
+  "scenario_postcondition_observed": true,
+  "policy_sha256": "692becefd95fcfc6315e3dd58e32735f7e134792d2c79d5d120dad52170fda99",
+  "untrusted_discovery_issuer": "http://127.0.0.1:27152",
+  "expected_issuer": "http://127.0.0.1:27151",
+  "environment": {
+    "node": "v24.20.0",
+    "scope": "loopback-only",
+    "synthetic_credentials": true
+  },
+  "origins": {
+    "A": "http://127.0.0.1:27151",
+    "B": "http://127.0.0.1:27152",
+    "MCP": "http://127.0.0.1:27153/mcp"
+  },
+  "events": [
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27153/mcp",
+      "role": "MCP",
+      "method": "POST",
+      "path": "/mcp",
+      "authorization_present": false,
+      "authorization_scheme": null,
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": false,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "fixture_bearer": false
+    },
+    {
+      "type": "request",
+      "context_id": "fixture-owner-A",
+      "address": "http://127.0.0.1:27151/token",
+      "authorization_scheme": "Basic",
+      "credential_observation_complete": true,
+      "credential_fields": {
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "code": false,
+        "code_verifier": false,
+        "access_token": false
+      },
+      "fixture_matches": {
+        "client_auth": true,
+        "client_secret": false,
+        "refresh_token": false,
+        "device_code": false,
+        "access_token": false
+      },
+      "role": "A",
+      "path": "/token",
+      "method": "POST",
+      "secret_in_body": false,
+      "refresh_in_body": false,
+      "device_in_body": false,
+      "authorization_present": true,
+      "fixture_basic": true,
+      "grant": "client_credentials"
+    }
+  ],
+  "driver": null,
+  "child": {
+    "code": 1,
+    "signal": null
+  },
+  "child_close_observed": true
+}

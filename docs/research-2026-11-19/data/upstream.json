@@ -1,0 +1,30 @@
+{
+  "source_urls": [
+    "https://api.github.com/repos/punkpeye/mcp-remote/releases/tags/v0.16.7",
+    "https://api.github.com/repos/punkpeye/mcp-remote/compare/v0.16.6...v0.16.7",
+    "https://api.github.com/repos/punkpeye/mcp-remote/pulls/394",
+    "https://api.github.com/repos/punkpeye/mcp-remote/pulls/395"
+  ],
+  "compared_tags": [
+    "v0.16.6",
+    "v0.16.7"
+  ],
+  "commits": [
+    {
+      "sha": "83a7f7087d060a2230ff64f76a7205b61e6f1f4b",
+      "subject": "fix: keep a loopback client registration the authorization server stored without a port (#394)"
+    },
+    {
+      "sha": "aa0c219b19e9f299fba599fe14df88b14d1e21a8",
+      "subject": "fix: expand header environment variables before computing serverUrlHash (#395)"
+    }
+  ],
+  "changed_files": [
+    "src/lib/utils.test.ts",
+    "src/lib/utils.ts"
+  ],
+  "release_url": "https://github.com/punkpeye/mcp-remote/releases/tag/v0.16.7",
+  "release_body": "## [0.16.7](https://github.com/punkpeye/mcp-remote/compare/v0.16.6...v0.16.7) (2026-11-19)\n\n\n### Bug Fixes\n\n* expand header environment variables before computing serverUrlHash ([#395](https://github.com/punkpeye/mcp-remote/issues/395)) ([aa0c219](https://github.com/punkpeye/mcp-remote/commit/aa0c219b19e9f299fba599fe14df88b14d1e21a8))\n* keep a loopback client registration the authorization server stored without a port ([#394](https://github.com/punkpeye/mcp-remote/issues/394)) ([83a7f70](https://github.com/punkpeye/mcp-remote/commit/83a7f7087d060a2230ff64f76a7205b61e6f1f4b))\n",
+  "five_research_cves_named": false,
+  "sdk_marker_unchanged": true
+}

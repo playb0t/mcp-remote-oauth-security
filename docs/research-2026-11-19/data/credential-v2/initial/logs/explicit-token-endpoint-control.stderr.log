@@ -1,0 +1,33 @@
+[31232] Using transport strategy: http-only
+[31232] Using static OAuth client information from file: <local-case>\v2\runtime-results\runs\explicit-token-endpoint-control\state-yyBbCv\static.json
+[31232] Using the OAuth client_credentials grant; no browser will be opened and no user will be asked
+[31232] Using an explicit OAuth token endpoint at http://127.0.0.1:27151
+[31232] Using callback port derived from the server URL: 22898
+[31232] Discovering OAuth server configuration...
+[31232] [31232] Connecting to remote server: http://127.0.0.1:27153/mcp
+[31232] Using transport strategy: http-only
+[31232] Requesting a token from http://127.0.0.1:27151 with the client_credentials grant
+[31232] Connection error: OAuthError2: fixture terminal refusal
+    at OAuthError2.fromResponse (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:20814:12)
+    at parseErrorResponse (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33203:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeTokenRequest (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33652:27)
+    at async authInternal (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33343:22)
+    at async auth (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:37373:15) {
+  code: 'invalid_request',
+  errorUri: undefined
+}
+[31232] Fatal error: OAuthError2: fixture terminal refusal
+    at OAuthError2.fromResponse (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:20814:12)
+    at parseErrorResponse (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33203:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeTokenRequest (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33652:27)
+    at async authInternal (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33343:22)
+    at async auth (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:37373:15) {
+  code: 'invalid_request',
+  errorUri: undefined
+}

@@ -1,0 +1,222 @@
+--- prior-public/procedures/credential-v2/initial/harness-v2.mjs
+
++++ procedures/credential-v2/initial/harness-v2.mjs
+
+@@ -13,8 +13,8 @@
+
+ assert.ok(process.env.MCP_SECURITY_RUNTIME_DIST&&process.env.MCP_SECURITY_OUTPUT,'Explicit verified runtime dist and fresh output required');
+ const root=resolve(process.env.MCP_SECURITY_OUTPUT),runtimeDist=resolve(process.env.MCP_SECURITY_RUNTIME_DIST);
+ assert.ok(!existsSync(root),'Output must be a fresh directory');mkdirSync(root,{recursive:true});
+-const node=process.execPath,bundle=join(runtimeDist,'chunk-MKB2ICYW.js'),cli=join(runtimeDist,'proxy.js');
+-for(const [file,wanted]of [[bundle,'8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638'],[cli,'e8b0fdaedfb3655714b4ad7f6c95790224059e22765ce854ea057f8c7225b619']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
++const node=process.execPath,bundle=join(runtimeDist,'chunk-M3H22C2S.js'),cli=join(runtimeDist,'proxy.js');
++for(const [file,wanted]of [[bundle,'f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4'],[cli,'ac8b8bebcdd8a45c7712853632ea2ef7cece59bb882bf72dc708260483e4a6e5']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
+ const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+ const send=(s,o,status=200)=>s.writeHead(status,{'Content-Type':'application/json'}).end(JSON.stringify(o));
+ const save=(p,o)=>writeFileSync(p,JSON.stringify(o,null,2)+'\n');
+@@ -104,7 +104,7 @@
+
+   const security=oracle.evaluate(trustedPolicy,events,coverage,pinnedPolicyHash);
+   const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('<redacted>'),s);
+   writeFileSync(join(d,'stdout.log'),sanitize(stdout));writeFileSync(join(d,'stderr.log'),sanitize(stderr));
+-  const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.6',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
++  const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.7',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
+   save(join(d,'RESULT.json'),result);
+   return result;
+  }finally{
+--- prior-public/procedures/credential-v2/cache-r2/harness-v2.mjs
+
++++ procedures/credential-v2/cache-r2/harness-v2.mjs
+
+@@ -13,8 +13,8 @@
+
+ assert.ok(process.env.MCP_SECURITY_RUNTIME_DIST&&process.env.MCP_SECURITY_OUTPUT,'Explicit verified runtime dist and fresh output required');
+ const root=resolve(process.env.MCP_SECURITY_OUTPUT),runtimeDist=resolve(process.env.MCP_SECURITY_RUNTIME_DIST);
+ assert.ok(!existsSync(root),'Output must be a fresh directory');mkdirSync(root,{recursive:true});
+-const node=process.execPath,bundle=join(runtimeDist,'chunk-MKB2ICYW.js'),cli=join(runtimeDist,'proxy.js');
+-for(const [file,wanted]of [[bundle,'8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638'],[cli,'e8b0fdaedfb3655714b4ad7f6c95790224059e22765ce854ea057f8c7225b619']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
++const node=process.execPath,bundle=join(runtimeDist,'chunk-M3H22C2S.js'),cli=join(runtimeDist,'proxy.js');
++for(const [file,wanted]of [[bundle,'f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4'],[cli,'ac8b8bebcdd8a45c7712853632ea2ef7cece59bb882bf72dc708260483e4a6e5']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
+ const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+ const send=(s,o,status=200)=>s.writeHead(status,{'Content-Type':'application/json'}).end(JSON.stringify(o));
+ const save=(p,o)=>writeFileSync(p,JSON.stringify(o,null,2)+'\n');
+@@ -104,7 +104,7 @@
+
+   const security=oracle.evaluate(trustedPolicy,events,coverage,pinnedPolicyHash);
+   const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('<redacted>'),s);
+   writeFileSync(join(d,'stdout.log'),sanitize(stdout));writeFileSync(join(d,'stderr.log'),sanitize(stderr));
+-  const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.6',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
++  const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.7',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
+   save(join(d,'RESULT.json'),result);
+   return result;
+  }finally{
+--- prior-public/procedures/credential-v2/cache-r3/harness-v2.mjs
+
++++ procedures/credential-v2/cache-r3/harness-v2.mjs
+
+@@ -13,8 +13,8 @@
+
+ assert.ok(process.env.MCP_SECURITY_RUNTIME_DIST&&process.env.MCP_SECURITY_OUTPUT,'Explicit verified runtime dist and fresh output required');
+ const root=resolve(process.env.MCP_SECURITY_OUTPUT),runtimeDist=resolve(process.env.MCP_SECURITY_RUNTIME_DIST);
+ assert.ok(!existsSync(root),'Output must be a fresh directory');mkdirSync(root,{recursive:true});
+-const node=process.execPath,bundle=join(runtimeDist,'chunk-MKB2ICYW.js'),cli=join(runtimeDist,'proxy.js');
+-for(const [file,wanted]of [[bundle,'8e4e647f0b25dc52a28a6d1cbbb6727851ae0e5ae74a6f2ea23cb4acb7b47638'],[cli,'e8b0fdaedfb3655714b4ad7f6c95790224059e22765ce854ea057f8c7225b619']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
++const node=process.execPath,bundle=join(runtimeDist,'chunk-M3H22C2S.js'),cli=join(runtimeDist,'proxy.js');
++for(const [file,wanted]of [[bundle,'f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4'],[cli,'ac8b8bebcdd8a45c7712853632ea2ef7cece59bb882bf72dc708260483e4a6e5']])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),wanted);
+ const listen=(s,port)=>new Promise((ok,no)=>{s.once('error',no);s.listen(port,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+ const send=(s,o,status=200)=>s.writeHead(status,{'Content-Type':'application/json'}).end(JSON.stringify(o));
+ const save=(p,o)=>writeFileSync(p,JSON.stringify(o,null,2)+'\n');
+@@ -104,7 +104,7 @@
+
+   const security=oracle.evaluate(trustedPolicy,events,coverage,pinnedPolicyHash);
+   const sanitize=s=>[secret,rt,dc,at,Buffer.from('fixture-client:'+secret).toString('base64'),... [secret,rt,dc,at].map(encodeURIComponent)].reduce((x,v)=>x.split(v).join('<redacted>'),s);
+   writeFileSync(join(d,'stdout.log'),sanitize(stdout));writeFileSync(join(d,'stderr.log'),sanitize(stderr));
+-  const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.6',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
++  const result={measurement_context:{entry_point:['cli','cli-device'].includes(c.mode)?'proxy.js initialize over stdio, HTTP OAuth leg': c.cache?'cache-child.mjs NodeOAuthClientProvider constructor/clientInformation/tokens':'driver.mjs connectToRemoteServer SDK control',variant:c.id,state:c.cache?'seeded persisted mcp-remote-v1 cache in isolated profile':'fresh isolated filesystem profile',auth_profile:(c.method??'client_secret_post')+' / '+c.mode,principal:'fixture-client',grants:'synthetic fixture credentials only',consumer:'owned loopback A/B token or device endpoint',backend:'isolated temporary auth files and owned HTTP fixtures',platform:process.platform+' / Node '+process.version,component:'mcp-remote 0.16.7',validated_field:'selected authorization server and credential receiver',effective_resource:c.selectB?'B advertised token/device endpoint':'A token/device endpoint and controlled redirects'},artifact_sha256:createHash('sha256').update(readFileSync(bundle)).digest('hex'),forced_stop:forcedStop,server_close_callbacks:closeCallbacks,case:c,security,coverage,scenario_postcondition_observed:scenarioReached,policy_sha256:pinnedPolicyHash,untrusted_discovery_issuer:c.selectB?b:a,expected_issuer:a,environment:{node:process.version,scope:'loopback-only',synthetic_credentials:true},origins:{A:a,B:b,MCP:resource},events,driver,child:stop,child_close_observed:closedEvent};
+   save(join(d,'RESULT.json'),result);
+   return result;
+  }finally{
+--- prior-public/procedures/components/extras.mjs
+
++++ procedures/components/extras.mjs
+
+@@ -3,7 +3,7 @@
+
+ import {join} from 'node:path';
+ import {pathToFileURL} from 'node:url';
+ import {randomBytes,createHash} from 'node:crypto';
+-const bundle=join(process.env.MCP_RUNTIME_DIST,'chunk-MKB2ICYW.js');
++const bundle=join(process.env.MCP_RUNTIME_DIST,'chunk-M3H22C2S.js');
+ const mod=await import(pathToFileURL(bundle).href);
+ const hash=s=>createHash('sha256').update(s).digest('hex');
+ const listen=s=>new Promise((ok,no)=>{s.once('error',no);s.listen(0,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+--- prior-public/procedures/components/runner.mjs
+
++++ procedures/components/runner.mjs
+
+@@ -9,12 +9,12 @@
+
+ assert.ok(process.env.MCP_COMPONENT_OUTPUT&&process.env.MCP_RUNTIME_DIST,'Explicit runtime and fresh output required');
+ const root=resolve(process.env.MCP_COMPONENT_OUTPUT);
+ assert.ok(!existsSync(root),'Output must be fresh');
+-const dist=resolve(process.env.MCP_RUNTIME_DIST),bundle=join(dist,'chunk-MKB2ICYW.js');
++const dist=resolve(process.env.MCP_RUNTIME_DIST),bundle=join(dist,'chunk-M3H22C2S.js');
+ process.env.MCP_RUNTIME_DIST=dist;
+ assert.equal(process.version,'v24.20.0');
+ const mod=await import(pathToFileURL(bundle).href),source=readFileSync(bundle,'utf8');
+ const digest=x=>crypto.createHash('sha256').update(x).digest('hex');
+-export function context(id){return {entry_point:id==='f04'?'exact getServerUrlHash extracted from official bundle':id==='f08'?'official redirectToAuthorization with own method receiver, installed open and inert recorder':id==='f11'?'official connectToRemoteServer with controlled provider and local SSE':'official NodeOAuthClientProvider store methods / discoverOAuthServerInfo',variant:id,validated_field:'original advisory property',effective_resource:'owned fixture files, recorder or HTTP receivers',auth_profile:'synthetic local fixture',principal:'test process under current OS principal',grants:'own fixture only',consumer:'controlled recorder, local filesystem or loopback server',state:'fresh isolated fixture',component:'mcp-remote 0.16.6',backend:'Windows local filesystem and loopback HTTP',platform:'win32 / Node v24.20.0'};}
++export function context(id){return {entry_point:id==='f04'?'exact getServerUrlHash extracted from official bundle':id==='f08'?'official redirectToAuthorization with own method receiver, installed open and inert recorder':id==='f11'?'official connectToRemoteServer with controlled provider and local SSE':'official NodeOAuthClientProvider store methods / discoverOAuthServerInfo',variant:id,validated_field:'original advisory property',effective_resource:'owned fixture files, recorder or HTTP receivers',auth_profile:'synthetic local fixture',principal:'test process under current OS principal',grants:'own fixture only',consumer:'controlled recorder, local filesystem or loopback server',state:'fresh isolated fixture',component:'mcp-remote 0.16.7',backend:'Windows local filesystem and loopback HTTP',platform:'win32 / Node v24.20.0'};}
+ async function f04(){
+  const start=source.indexOf('function getServerUrlHash('),end=source.indexOf('\nfunction patternToRegex',start);
+  assert.ok(start>0&&end>start);const code=source.slice(start,end);
+--- prior-public/procedures/legacy/collector.py
+
++++ procedures/legacy/collector.py
+
+@@ -4,11 +4,11 @@
+
+ if not os.environ.get('MCP_NODE_BINARY'):
+  raise RuntimeError('MCP_NODE_BINARY required')
+ NODE=Path(os.environ['MCP_NODE_BINARY']).resolve()
+-GROUPS=['f11-old','f11-current','f08-current']
++GROUPS=['f11-current','f08-current']
+ def artifact(i):
+- return Path(os.environ['MCP_RUNTIME_0138'])/'0.1.38/dist/chunk-65X3S4HB.js' if i=='f11-old' else Path(os.environ['MCP_RUNTIME_0166'])/'0.16.6/dist/chunk-MKB2ICYW.js'
++ return Path(os.environ['MCP_RUNTIME_0138'])/'0.1.38/dist/chunk-65X3S4HB.js' if i=='f11-old' else Path(os.environ['MCP_RUNTIME_0167'])/'0.16.7/dist/chunk-M3H22C2S.js'
+ def context(i):
+- v='0.1.38' if i=='f11-old' else '0.16.6'
++ v='0.1.38' if i=='f11-old' else '0.16.7'
+  return dict(entry_point='original F08 proxy.js subprocess procedure' if i=='f08-current' else 'original F11 connectToRemoteServer procedure',variant=i,validated_field='SSE token origin or full CLI browser destination',effective_resource='owned HTTP receivers and inert recorder',auth_profile='synthetic provider tokens' if i.startswith('f11') else 'synthetic static client registration',principal='test process under current OS principal',grants='own fixture only',consumer='local SSE servers or inert recorder',state='fresh isolated fixture',component='mcp-remote '+v,backend='Windows local filesystem and loopback HTTP',platform='win32 / Node v24.20.0')
+ def execute(i):
+  if not os.environ.get('MCP_LEGACY_OUTPUT'):
+@@ -16,8 +16,8 @@
+
+  out=Path(os.environ['MCP_LEGACY_OUTPUT']).resolve()/i
+  assert not out.exists(),'Fresh directory required'
+  out.mkdir(parents=True)
+- old=i=='f11-old';version='0.1.38' if old else '0.16.6';runtime=Path(os.environ['MCP_RUNTIME_0138' if old else 'MCP_RUNTIME_0166']).resolve()
+- env=dict(os.environ,MCP_CASE_ROOT=str(out),MCP_RUNTIME_ROOT=str(runtime),MCP_NODE_BINARY=str(NODE),MCP_FAKE_SYSTEMROOT=os.environ['MCP_FAKE_SYSTEMROOT'],MCP_TEST_VERSION=version,MCP_TEST_CHUNK='chunk-65X3S4HB.js' if old else 'chunk-MKB2ICYW.js')
++ old=i=='f11-old';version='0.1.38' if old else '0.16.7';runtime=Path(os.environ['MCP_RUNTIME_0138' if old else 'MCP_RUNTIME_0167']).resolve()
++ env=dict(os.environ,MCP_CASE_ROOT=str(out),MCP_RUNTIME_ROOT=str(runtime),MCP_NODE_BINARY=str(NODE),MCP_FAKE_SYSTEMROOT=os.environ['MCP_FAKE_SYSTEMROOT'],MCP_TEST_VERSION=version,MCP_TEST_CHUNK='chunk-65X3S4HB.js' if old else 'chunk-M3H22C2S.js')
+  name='f08-cli.mjs' if i=='f08-current' else 'f11.mjs'
+  (out/'runs').mkdir()
+  p=subprocess.run([str(NODE),str(C/name)],env=env,cwd=C,capture_output=True,timeout=100)
+--- prior-public/procedures/legacy/f11.mjs
+
++++ procedures/legacy/f11.mjs
+
+@@ -3,12 +3,13 @@
+
+ import {resolve,dirname,join} from 'node:path';
+ import {fileURLToPath,pathToFileURL} from 'node:url';
+ import assert from 'node:assert/strict';
++import {randomBytes} from 'node:crypto';
+ const required=(name)=>{const value=process.env[name];if(!value)throw Error(`Missing ${name}`);return resolve(value);};
+ const root=required('MCP_CASE_ROOT');
+ const runtime=required('MCP_RUNTIME_ROOT');
+ const listen=(s)=>new Promise((ok,no)=>{s.once('error',no);s.listen(0,'127.0.0.1',()=>ok(`http://127.0.0.1:${s.address().port}`));});
+ async function caseRun(connect,version,mode){
+- const events=[];let resourceOrigin,canaryOrigin;const token='<redacted>'+version;
++ const events=[];let resourceOrigin,canaryOrigin;const token=randomBytes(24).toString('hex');
+  const record=(role,q)=>events.push({role,method:q.method,path:q.url,authorization_present:!!q.headers.authorization,synthetic_bearer_received:q.headers.authorization===`Bearer ${token}`});
+  const serveSSE=(s,endpoint)=>{s.writeHead(200,{'Content-Type':'text/event-stream','Cache-Control':'no-cache','Connection':'keep-alive'});s.write(`event: endpoint\ndata: ${endpoint}\n\n`);};
+  const canary=createServer((q,s)=>{record('canary',q);if(q.url==='/sse'){serveSSE(s,'/messages');return}s.writeHead(404).end()});
+--- <retained-local-case>/extra/extra.mjs
+
++++ procedures/extra.mjs
+
+@@ -4,9 +4,13 @@
+
+ import {join,resolve} from 'node:path';
+ import {pathToFileURL,fileURLToPath} from 'node:url';
+ import assert from 'node:assert/strict';
+-const root=resolve(fileURLToPath(new URL('..',import.meta.url)));
++assert.ok(process.env.MCP_EXTRA_OUTPUT,'Explicit fresh MCP_EXTRA_OUTPUT required');
++const root=resolve(process.env.MCP_EXTRA_OUTPUT);assert.ok(!existsSync(root),'Fresh output required');mkdirSync(root,{recursive:true});
++assert.equal(process.version,'v24.20.0');
+ const [mode,version,variant='pair']=process.argv.slice(2);
+-const dist=version==='0.16.7'?join(root,'runtime/dist'):join(root,'../mcp-remote-0166-20261114/runtime/dist');
++assert.ok(['0.16.6','0.16.7'].includes(version),'Choose recorded version');
++const variable=version==='0.16.7'?'MCP_RUNTIME_0167_DIST':'MCP_RUNTIME_0166_DIST';assert.ok(process.env[variable],variable+' required');
++const dist=resolve(process.env[variable]);
+ const chunk=version==='0.16.7'?'chunk-M3H22C2S.js':'chunk-MKB2ICYW.js';
+ const artifact=join(dist,chunk),source=readFileSync(artifact,'utf8');
+ const mod=await import(pathToFileURL(artifact).href);
+@@ -19,11 +23,11 @@
+
+ let result;
+ if(mode==='env'){
+  const rows=[],url='http://127.0.0.1:1/mcp';
+- for(const value of ['<redacted>','<redacted>']){
+-  process.env.TEST_HEADER=value;
+-  const parsed=await mod.parseCommandLineArgs([url,'18001','--host','127.0.0.1','--header','Authorization: Bearer ${TEST_HEADER}'],'fixture');
++ for(const value of [randomBytes(24).toString('hex'),randomBytes(24).toString('hex')]){
++  process.env.TEST_HEADER=value;
++  const parsed=await mod.parseCommandLineArgs([url,'18001','--host','127.0.0.1','--header','Authorization: Bearer ${TEST_HEADER}'],'fixture');
+   const provider=new mod.NodeOAuthClientProvider({serverUrl:url,serverUrlHash:parsed.serverUrlHash,host:parsed.host,callbackPort:parsed.callbackPort});
+-  await provider.saveTokens({access_token:'<redacted>',token_type:'Bearer',expires_in:3600});
++  await provider.saveTokens({access_token:randomBytes(24).toString('hex'),token_type:'Bearer',expires_in:3600});
+   rows.push({hash:parsed.serverUrlHash,header_expanded:parsed.headers.Authorization==='Bearer '+value,derived_from_expanded:getHash(url,undefined,{Authorization:'Bearer '+value})===parsed.serverUrlHash});
+  }
+  const files=readdirSync(join(process.env.MCP_REMOTE_CONFIG_DIR,'mcp-remote-v1')).filter(x=>x.endsWith('_tokens.json'));
+@@ -33,7 +37,7 @@
+
+  assert.equal(mode,'registration');
+  const secret=randomBytes(24).toString('hex'),refresh=randomBytes(24).toString('hex'),events=[],closes=[];let a,b;
+  const reply=(s,v)=>s.writeHead(200,{'Content-Type':'application/json'}).end(JSON.stringify(v));
+- const endpoint=role=>async(q,s)=>{let body='';for await(const c of q){body+=c;assert.ok(body.length<16384);}const p=new URLSearchParams(body);events.push({role,method:q.method,path:q.url,client_secret_match:p.get('client_secret')===secret,refresh_token_match:p.get('refresh_token')===refresh,authorization_present:!!q.headers.authorization});reply(s,{access_token:'<redacted>',token_type:'Bearer',expires_in:3600});};
++ const endpoint=role=>async(q,s)=>{let body='';for await(const c of q){body+=c;assert.ok(body.length<16384);}const p=new URLSearchParams(body);events.push({role,method:q.method,path:q.url,client_secret_match:p.get('client_secret')===secret,refresh_token_match:p.get('refresh_token')===refresh,authorization_present:!!q.headers.authorization});reply(s,{access_token:randomBytes(24).toString('hex'),token_type:'Bearer',expires_in:3600});};
+  const sa=createServer(endpoint('A')),sb=createServer(endpoint('B'));
+  const listen=s=>new Promise((ok,no)=>{s.once('error',no);s.listen(0,'127.0.0.1',()=>ok('http://127.0.0.1:'+s.address().port));});
+  let parsed,registration_after_parse,tokens_returned=false,error=null,hash,clientFile;
+@@ -42,7 +46,7 @@
+
+   const dir=join(process.env.MCP_REMOTE_CONFIG_DIR,'mcp-remote-v1');mkdirSync(dir,{recursive:true});clientFile=join(dir,hash+'_client_info.json');
+   const redirect=variant==='portless'?'http://127.0.0.1/oauth/callback':variant==='exact-port'?'http://127.0.0.1:18001/oauth/callback':'http://127.0.0.1:18002/oauth/callback';
+   writeFileSync(clientFile,JSON.stringify({client_id:'fixture-client',client_secret:secret,token_endpoint_auth_method:'client_secret_post',redirect_uris:[redirect],issuer:a}));
+-  writeFileSync(join(dir,hash+'_tokens.json'),JSON.stringify({access_token:'<redacted>',refresh_token:refresh,token_type:'Bearer',expires_in:1,expires_at:Date.now()-1000,issuer:a}));
++  writeFileSync(join(dir,hash+'_tokens.json'),JSON.stringify({access_token:randomBytes(24).toString('hex'),refresh_token:refresh,token_type:'Bearer',expires_in:1,expires_at:Date.now()-1000,issuer:a}));
+   parsed=await mod.parseCommandLineArgs([resource,'18001','--host','127.0.0.1'],'fixture');assert.equal(parsed.serverUrlHash,hash);
+   registration_after_parse=existsSync(clientFile);
+   const provider=new mod.NodeOAuthClientProvider({serverUrl:b,resourceServerUrl:resource,serverUrlHash:hash,host:parsed.host,callbackPort:parsed.callbackPort,authorizationServerMetadata:{issuer:b,token_endpoint:b+'/token',token_endpoint_auth_methods_supported:['client_secret_post']},protectedResourceMetadata:{resource,authorization_servers:[b]},staticOAuthClientMetadata:{token_endpoint_auth_method:'client_secret_post'}});

@@ -1,0 +1,29 @@
+[5468] Using transport strategy: http-only
+[5468] Using static OAuth client information from file: <local-case>\v2\runtime-results\runs\redirect-basic-header-stripped\state-sRvn3K\static.json
+[5468] Using the OAuth client_credentials grant; no browser will be opened and no user will be asked
+[5468] Using callback port derived from the server URL: 8066
+[5468] Discovering OAuth server configuration...
+[5468] Discovered authorization server: http://127.0.0.1:27112
+[5468] [5468] Connecting to remote server: http://127.0.0.1:27114/mcp
+[5468] Using transport strategy: http-only
+[5468] Requesting a token from http://127.0.0.1:27112 with the client_credentials grant
+[5468] Connection error: Error: The token endpoint at http://127.0.0.1:27112 answered HTTP 307 with a redirect to http://127.0.0.1:27113/receipt-token, which was not followed. A request that carries credentials follows a redirect only when it is a 307 or 308 within the same origin.
+    at postWithinOrigin (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:38228:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async authorizeWithClientCredentials (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:40363:20)
+    at async NodeOAuthClientProvider.authorizeWithClientCredentials (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:41581:20)
+    at async NodeOAuthClientProvider.redirectToAuthorization (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:41503:7)
+    at async authInternal (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33402:3)
+    at async auth (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:37373:15)
+[5468] Fatal error: Error: The token endpoint at http://127.0.0.1:27112 answered HTTP 307 with a redirect to http://127.0.0.1:27113/receipt-token, which was not followed. A request that carries credentials follows a redirect only when it is a 307 or 308 within the same origin.
+    at postWithinOrigin (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:38228:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async authorizeWithClientCredentials (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:40363:20)
+    at async NodeOAuthClientProvider.authorizeWithClientCredentials (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:41581:20)
+    at async NodeOAuthClientProvider.redirectToAuthorization (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:41503:7)
+    at async authInternal (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33402:3)
+    at async auth (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:37373:15)

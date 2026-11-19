@@ -1,0 +1,20 @@
+{
+  "version": "0.16.7",
+  "sdk_marker": "@modelcontextprotocol/client 2.4.0",
+  "sdk_identity_limit": "Emitted marker, not a complete standalone SDK byte comparison",
+  "bundle": "chunk-M3H22C2S.js",
+  "bundle_sha256": "f199a4b8c42b23a6bdbf88274426464c70f11dde7edce6accd1ca8bf26bdceb4",
+  "proxy_sha256": "ac8b8bebcdd8a45c7712853632ea2ef7cece59bb882bf72dc708260483e4a6e5",
+  "archive_sha256": "5886c7cabf92199e4dfe9aa0f7cc5518d16e7907dc4b3bfcd7882874f9934582",
+  "node_version": "24.20.0",
+  "node_sha256": "5c976096e04e5c2c1f091938926234cc9fbebfe9787ddd149351b3b0ecc707b5",
+  "runtime_files": 898,
+  "dependency_files_equal_baseline": 889,
+  "graph": {
+    "express": "4.22.3",
+    "open": "10.2.0",
+    "strict_url_sanitise": "0.0.1",
+    "undici": "7.30.0"
+  },
+  "lockfile_sha256": "f51dc31b3648ab34675a1944770adb4118ecf29a0677d95e7c32e2f76d7b0677"
+}

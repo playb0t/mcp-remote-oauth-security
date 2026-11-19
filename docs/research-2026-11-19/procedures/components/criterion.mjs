@@ -1,0 +1,1 @@
+export function evaluate(raw){if(raw.effects?.some(e=>e.outcome==='forbidden'))return 'FAIL';if(!raw.completed||raw.forced||raw.effects?.some(e=>e.outcome==='unknown')||!raw.checks?.length||raw.checks.some(x=>x.passed!==true))return 'INCONCLUSIVE';return 'PASS';}

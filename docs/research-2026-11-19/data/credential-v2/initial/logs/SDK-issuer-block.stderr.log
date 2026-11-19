@@ -1,0 +1,11 @@
+[5748] [5748] Connecting to remote server: http://127.0.0.1:27120/mcp
+[5748] Using transport strategy: http-only
+[5748] Connection error: AuthorizationServerMismatchError: Authorization server mismatch: credentials are bound to "http://127.0.0.1:27118" but this call resolved "http://127.0.0.1:27119"; refusing to present them to a different authorization server
+    at authInternal (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33303:113)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async auth (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33215:12)
+    at async handleOAuthUnauthorized (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:33029:7)
+    at async StreamableHTTPClientTransport._send (file:///<local-case>/runtime/dist/chunk-M3H22C2S.js:37373:15) {
+  recordedIssuer: 'http://127.0.0.1:27118',
+  currentIssuer: 'http://127.0.0.1:27119'
+}
